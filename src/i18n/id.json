@@ -1,0 +1,142 @@
+{
+  "brand": {
+    "name": "JalanITku",
+    "tagline": "Platform untuk membantu teman-teman IT menemukan arah karier kerja impian",
+    "highlight": "IT"
+  },
+  "nav": {
+    "features": "Fitur",
+    "howItWorks": "Cara Kerja",
+    "mascot": "Maskot",
+    "faq": "FAQ",
+    "login": "Masuk dengan Google",
+    "dashboard": "Dashboard",
+    "profile": "Profil",
+    "logout": "Keluar"
+  },
+  "hero": {
+    "badge": "UNTUK MAHASISWA IT, FRESH GRADUATE & CAREER SWITCHER",
+    "titlePrefix": "Bingung mau jadi apa di",
+    "titleHighlight": "dunia IT",
+    "titleSuffix": "?",
+    "subtitle": "Jawab pertanyaan singkat, temukan role IT yang paling cocok untukmu, lalu uji kecocokannya lewat tes teknis. Gratis.",
+    "ctaStart": "Mulai Cari Jalanmu →",
+    "ctaHow": "Lihat cara kerjanya",
+    "metaNote": "Masuk dengan Google · Tanpa batas waktu · Tanpa jawaban salah",
+    "mascotBubble": "Halo! Aku JalanMin."
+  },
+  "problem": {
+    "title": "Dunia IT luas banget. Kamu cocoknya di mana?",
+    "subtitle": "Dari Software Engineer sampai Digital Forensics, semuanya kelihatan keren. Wajar kalau kamu bingung memilih.",
+    "points": [
+      {
+        "num": "01",
+        "title": "Pilihannya terlalu banyak",
+        "desc": "Ada 19 role IT yang bisa kamu tuju. Mana yang benar-benar cocok dengan minat dan gaya kerjamu?"
+      },
+      {
+        "num": "02",
+        "title": "Tidak tahu mulai dari mana",
+        "desc": "Roadmap ada di mana-mana, tapi belum tentu sesuai denganmu. Kamu butuh titik awal yang jelas."
+      },
+      {
+        "num": "03",
+        "title": "Takut salah pilih jalur",
+        "desc": "Karier pertama terasa menentukan segalanya. Padahal kamu bisa mengenal dan menguji dulu sebelum memutuskan."
+      }
+    ]
+  },
+  "features": {
+    "badge": "3 FITUR UTAMA",
+    "title": "Dari bingung sampai siap melamar",
+    "karir": {
+      "badge": "FITUR A · JALANKARIR",
+      "title": "Temukan role IT yang cocok",
+      "desc": "Jawab pertanyaan seputar minat, gaya kerja, dan cara berpikirmu. Tanpa ada jawaban salah.",
+      "output": "Keluaran: JalanID (kartu nama digital role kamu)",
+      "cta": "Mulai JalanKarir →"
+    },
+    "rapor": {
+      "badge": "FITUR B · JALANRAPOR",
+      "title": "Uji seberapa cocok kamu",
+      "desc": "Tes kecocokanmu dengan role pilihan lewat soal teknis bertingkat. Ketahui gap skill yang perlu diasah.",
+      "output": "Keluaran: Cocoklogiku (rapor nilai & radar chart kompetensi)",
+      "cta": "Uji di JalanRapor →"
+    },
+    "loker": {
+      "badge": "FITUR C · JALANLOKER",
+      "status": "Segera Hadir",
+      "title": "Cari lowongan yang relevan",
+      "desc": "Temukan lowongan kerja yang sesuai role dan hasil tesmu, lalu apply langsung ke situs perusahaan.",
+      "output": "Keluaran: Rekomendasi loker terkurasi",
+      "cta": "Segera Hadir"
+    }
+  },
+  "steps": {
+    "badge": "CARA KERJA",
+    "title": "4 langkah menuju kepastian karier",
+    "list": [
+      {
+        "step": "1",
+        "title": "Login dengan Google",
+        "desc": "Masuk satu klik dan tentukan username unikmu."
+      },
+      {
+        "step": "2",
+        "title": "Ikuti JalanKarir",
+        "desc": "Jawab tes minat dan preferensi untuk dapatkan kartu JalanID."
+      },
+      {
+        "step": "3",
+        "title": "Coba JalanRapor",
+        "desc": "Uji pemahaman teknis role incaranmu dan terima rapor Cocoklogiku."
+      },
+      {
+        "step": "4",
+        "title": "Bagikan & Asah Skill",
+        "desc": "Unduh kartu dan rapor dalam format PNG/PDF untuk dipamerkan atau dijadikan panduan belajar."
+      }
+    ]
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Pertanyaan yang sering ditanyakan",
+    "items": [
+      {
+        "q": "Apakah JalanITku benar-benar gratis?",
+        "a": "Ya, 100% gratis penuh untuk seluruh fitur tanpa ada biaya tersembunyi."
+      },
+      {
+        "q": "Apakah ada batasan waktu saat mengerjakan tes?",
+        "a": "Tidak ada timer maupun batasan waktu. Kamu bisa berpikir santai dan tenang."
+      },
+      {
+        "q": "Bolehkah saya mengulang tes jika hasilnya kurang sesuai?",
+        "a": "Boleh kapan saja! Namun harap diingat bahwa setiap pengguna hanya memiliki satu JalanID dan satu Cocoklogiku aktif, sehingga tes ulang akan menimpa hasil sebelumnya."
+      },
+      {
+        "q": "Apakah hasil tes saya bisa dilihat orang lain melalui tautan publik?",
+        "a": "Tidak ada halaman profil publik. Hasil JalanID dan Cocoklogiku milikmu dibagikan langsung sebagai file gambar PNG atau PDF."
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2026 JalanITku. Hak cipta dilindungi.",
+    "privacy": "Kebijakan Privasi",
+    "terms": "Syarat & Ketentuan",
+    "tagline": "Membantu calon talenta digital Indonesia melangkah dengan pasti."
+  },
+  "common": {
+    "loading": "Memuat...",
+    "back": "Kembali",
+    "next": "Lanjut",
+    "finish": "Selesai",
+    "submit": "Kirim",
+    "download": "Unduh",
+    "share": "Bagikan",
+    "warning": "Peringatan",
+    "overwriteWarning": "Mengulang tes ini akan menggantikan hasil sebelumnya. Lanjutkan?",
+    "cancel": "Batal",
+    "confirm": "Lanjutkan"
+  }
+}
