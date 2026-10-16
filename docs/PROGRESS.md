@@ -11,7 +11,7 @@
 | **T0** | Fondasi Proyek & Dokumen Konteks | Selesai | 2026-10-16 | Setup Next.js 15, Tailwind, TypeScript, i18n, docs/* lengkap |
 | **T1** | Design System & Komponen UI | Selesai | 2026-10-16 | Komponen Neo-brutalism, Logo, JalanMin Mascot & /dev/components |
 | **T2** | Landing Page | Selesai | 2026-10-16 | Landing page publik lengkap, responsif, i18n & neo-brutalism |
-| **T3** | Autentikasi & Profil | Pending | - | Google OAuth & username unik |
+| **T3** | Autentikasi & Profil | Selesai | 2026-10-16 | Auth flow, onboarding username unik, dashboard & profil settings |
 | **T4** | Data Layer & Seed Role | Pending | - | 19 role & kompetensi |
 | **T5** | Bank Soal JalanKarir | Pending | - | 5 level × 25 soal + validator |
 | **T6** | Engine & UI JalanKarir | Pending | - | Flow tes, scoring engine & tie-breaker |
