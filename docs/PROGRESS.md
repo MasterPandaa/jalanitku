@@ -9,7 +9,7 @@
 | Tahap | Deskripsi | Status | Tanggal | Catatan |
 |---|---|---|---|---|
 | **T0** | Fondasi Proyek & Dokumen Konteks | Selesai | 2026-10-16 | Setup Next.js 15, Tailwind, TypeScript, i18n, docs/* lengkap |
-| **T1** | Design System & Komponen UI | Pending | - | Komponen Neo-brutalism & /dev/components |
+| **T1** | Design System & Komponen UI | Selesai | 2026-10-16 | Komponen Neo-brutalism, Logo, JalanMin Mascot & /dev/components |
 | **T2** | Landing Page | Pending | - | Halaman publik responsif & ramah anak IT |
 | **T3** | Autentikasi & Profil | Pending | - | Google OAuth & username unik |
 | **T4** | Data Layer & Seed Role | Pending | - | 19 role & kompetensi |
