@@ -1,0 +1,404 @@
+[
+  {
+    "id": "cq_l1_01",
+    "level": 1,
+    "theme": "Minat Umum",
+    "type": "likert",
+    "text": { "id": "Saya merasa tertantang dan bersemangat ketika harus memecahkan teka-teki logika yang rumit." },
+    "tag": "logic_problem_solving",
+    "weights": {
+      "software-engineer": 3,
+      "data-scientist": 3,
+      "aiml-engineer": 3,
+      "data-engineer": 2,
+      "digital-forensics": 2,
+      "quality-assurance": 1,
+      "uiux-designer": -1
+    }
+  },
+  {
+    "id": "cq_l1_02",
+    "level": 1,
+    "theme": "Minat Umum",
+    "type": "likert",
+    "text": { "id": "Saya sangat peduli pada tampilan visual, keselarasan warna, dan kenyamanan pengguna saat memakai aplikasi." },
+    "tag": "visual_user_empathy",
+    "weights": {
+      "uiux-designer": 3,
+      "mobile-developer": 2,
+      "software-engineer": 1,
+      "game-developer": 2,
+      "data-engineer": -1,
+      "network-engineer": -1
+    }
+  },
+  {
+    "id": "cq_l1_03",
+    "level": 1,
+    "theme": "Minat Umum",
+    "type": "likert",
+    "text": { "id": "Saya senang mencari celah kesalahan, bug, atau kekurangan yang luput dari perhatian orang lain." },
+    "tag": "investigative_bug_finding",
+    "weights": {
+      "quality-assurance": 3,
+      "security-analyst": 3,
+      "digital-forensics": 3,
+      "software-engineer": 1,
+      "it-support": 1
+    }
+  },
+  {
+    "id": "cq_l1_04",
+    "level": 1,
+    "theme": "Minat Umum",
+    "type": "likert",
+    "text": { "id": "Saya antusias mengotak-atik perangkat keras (hardware), kabel, router, dan memastikan jaringan internet berjalan lancar." },
+    "tag": "hardware_network",
+    "weights": {
+      "network-engineer": 3,
+      "it-support": 3,
+      "cloud-engineer": 1,
+      "devops-engineer": 1,
+      "uiux-designer": -1
+    }
+  },
+  {
+    "id": "cq_l1_05",
+    "level": 1,
+    "theme": "Minat Umum",
+    "type": "likert",
+    "text": { "id": "Saya suka menggali grafik, mencari pola tersembunyi dari tabel angka, dan menyajikan kesimpulannya ke orang lain." },
+    "tag": "data_insight",
+    "weights": {
+      "data-analyst": 3,
+      "data-scientist": 3,
+      "business-analyst": 2,
+      "data-entry": 1,
+      "it-consultant": 1
+    }
+  },
+  {
+    "id": "cq_l1_06",
+    "level": 1,
+    "theme": "Minat Umum",
+    "type": "likert",
+    "text": { "id": "Saya senang mengorganisir jadwal tugas, membagi peran tim, dan memantau agar proyek selesai tepat waktu." },
+    "tag": "leadership_management",
+    "weights": {
+      "project-manager": 3,
+      "it-consultant": 2,
+      "business-analyst": 2,
+      "software-engineer": -1,
+      "game-developer": 0
+    }
+  },
+  {
+    "id": "cq_l1_07",
+    "level": 1,
+    "theme": "Minat Umum",
+    "type": "preference",
+    "text": { "id": "Jika kamu diberi kebebasan memilih proyek akhir kuliah/portofolio, proyek mana yang paling ingin kamu kerjakan?" },
+    "tag": "project_preference",
+    "options": [
+      {
+        "id": "opt_a",
+        "key": "A",
+        "text": { "id": "Membangun aplikasi web sistem e-commerce berskala besar dengan database terdistribusi." },
+        "weights": { "software-engineer": 3, "data-engineer": 2, "cloud-engineer": 2 }
+      },
+      {
+        "id": "opt_b",
+        "key": "B",
+        "text": { "id": "Membuat prototipe aplikasi mobile interaktif dengan animasi visual yang memukau pengguna." },
+        "weights": { "mobile-developer": 3, "uiux-designer": 3, "software-engineer": 1 }
+      },
+      {
+        "id": "opt_c",
+        "key": "C",
+        "text": { "id": "Merancang pipeline otomasi deployment cloud menggunakan Docker, Kubernetes, dan CI/CD." },
+        "weights": { "devops-engineer": 3, "cloud-engineer": 3, "network-engineer": 1 }
+      },
+      {
+        "id": "opt_d",
+        "key": "D",
+        "text": { "id": "Membangun model deteksi kecurangan transaksi keuangan menggunakan algoritma Machine Learning." },
+        "weights": { "aiml-engineer": 3, "data-scientist": 3, "data-analyst": 2 }
+      },
+      {
+        "id": "opt_e",
+        "key": "E",
+        "text": { "id": "Melakukan uji penetrasi (pentest) dan simulasi peretasan untuk mengamankan server perusahaan." },
+        "weights": { "security-analyst": 3, "digital-forensics": 2, "network-engineer": 1 }
+      }
+    ]
+  },
+  {
+    "id": "cq_l2_01",
+    "level": 2,
+    "theme": "Gaya Kerja",
+    "type": "likert",
+    "text": { "id": "Saya lebih menikmati bekerja dalam keheningan fokus menulis kode berjam-jam daripada harus sering berinteraksi dengan klien." },
+    "tag": "deep_focus_vs_client",
+    "weights": {
+      "software-engineer": 3,
+      "game-developer": 3,
+      "data-engineer": 2,
+      "aiml-engineer": 2,
+      "it-consultant": -2,
+      "project-manager": -2
+    }
+  },
+  {
+    "id": "cq_l2_02",
+    "level": 2,
+    "theme": "Gaya Kerja",
+    "type": "likert",
+    "text": { "id": "Saya senang berkomunikasi, mendengarkan keluhan pengguna/klien, dan menerjemahkannya menjadi solusi nyata." },
+    "tag": "client_facing_empathy",
+    "weights": {
+      "business-analyst": 3,
+      "it-consultant": 3,
+      "it-support": 2,
+      "project-manager": 2,
+      "uiux-designer": 2,
+      "software-engineer": -1
+    }
+  },
+  {
+    "id": "cq_l2_03",
+    "level": 2,
+    "theme": "Gaya Kerja",
+    "type": "likert",
+    "text": { "id": "Saya orang yang sangat teliti, menyukai keteraturan data berulang, dan jarang membuat kesalahan ketik." },
+    "tag": "detail_orientation_accuracy",
+    "weights": {
+      "data-entry": 3,
+      "quality-assurance": 2,
+      "digital-forensics": 2,
+      "data-analyst": 1
+    }
+  },
+  {
+    "id": "cq_l2_04",
+    "level": 2,
+    "theme": "Gaya Kerja",
+    "type": "preference",
+    "text": { "id": "Bagaimana caramu paling nyaman saat menghadapi suatu instruksi pekerjaan baru?" },
+    "tag": "work_preference_style",
+    "options": [
+      {
+        "id": "opt_2a",
+        "key": "A",
+        "text": { "id": "Diberi arsitektur teknis yang jelas lalu saya langsung eksekusi ke baris kode." },
+        "weights": { "software-engineer": 3, "mobile-developer": 2, "game-developer": 2 }
+      },
+      {
+        "id": "opt_2b",
+        "key": "B",
+        "text": { "id": "Diberi dataset mentah lalu saya cari insight dan buat dashboard laporannya." },
+        "weights": { "data-analyst": 3, "data-scientist": 2, "data-entry": 2 }
+      },
+      {
+        "id": "opt_2c",
+        "key": "C",
+        "text": { "id": "Membedah masalah bisnis klien, membuat diagram alur, dan menyusun dokumen spesifikasi." },
+        "weights": { "business-analyst": 3, "it-consultant": 3, "project-manager": 2 }
+      },
+      {
+        "id": "opt_2d",
+        "key": "D",
+        "text": { "id": "Diberi aplikasi jadi untuk saya 'rusak' dan uji semua skenario ekstrimnya." },
+        "weights": { "quality-assurance": 3, "security-analyst": 2 }
+      },
+      {
+        "id": "opt_2e",
+        "key": "E",
+        "text": { "id": "Membantu orang lain secara langsung yang sedang kesulitan dengan laptop atau jaringannya." },
+        "weights": { "it-support": 3, "network-engineer": 2 }
+      }
+    ]
+  },
+  {
+    "id": "cq_l3_01",
+    "level": 3,
+    "theme": "Skenario Kasus",
+    "type": "preference",
+    "text": { "id": "Sebuah aplikasi startup mendadak down saat pengguna melonjak 10x lipat. Peran mana yang paling kamu ingin ambil?" },
+    "tag": "traffic_surge_incident",
+    "options": [
+      {
+        "id": "opt_3a",
+        "key": "A",
+        "text": { "id": "Menambah kapasitas server secara otomatis dan mengatur load balancer cloud." },
+        "weights": { "cloud-engineer": 3, "devops-engineer": 3, "network-engineer": 1 }
+      },
+      {
+        "id": "opt_3b",
+        "key": "B",
+        "text": { "id": "Memeriksa log error aplikasi dan mengoptimasi query database yang macet." },
+        "weights": { "software-engineer": 3, "data-engineer": 2 }
+      },
+      {
+        "id": "opt_3c",
+        "key": "C",
+        "text": { "id": "Memeriksa apakah lonjakan ini adalah serangan DDoS siber atau trafik asli." },
+        "weights": { "security-analyst": 3, "digital-forensics": 2 }
+      },
+      {
+        "id": "opt_3d",
+        "key": "D",
+        "text": { "id": "Mengoordinasikan tim developer dan menginformasikan status ke manajemen." },
+        "weights": { "project-manager": 3, "it-consultant": 2 }
+      },
+      {
+        "id": "opt_3e",
+        "key": "E",
+        "text": { "id": "Menganalisis dampak finansial dan tingkat retensi user akibat insiden ini." },
+        "weights": { "business-analyst": 3, "data-analyst": 2 }
+      }
+    ]
+  },
+  {
+    "id": "cq_l3_02",
+    "level": 3,
+    "theme": "Skenario Kasus",
+    "type": "preference",
+    "text": { "id": "Perusahaan ingin meluncurkan fitur baru. Bagian pekerjaan mana yang paling membuatmu bersemangat?" },
+    "tag": "feature_launch_role",
+    "options": [
+      {
+        "id": "opt_32a",
+        "key": "A",
+        "text": { "id": "Mewawancarai calon user dan membuat mockup prototipe interaktif di Figma." },
+        "weights": { "uiux-designer": 3, "business-analyst": 1 }
+      },
+      {
+        "id": "opt_32b",
+        "key": "B",
+        "text": { "id": "Mengembangkan algoritma rekomendasi otomatis berbasis perilaku pengguna." },
+        "weights": { "aiml-engineer": 3, "data-scientist": 3 }
+      },
+      {
+        "id": "opt_32c",
+        "key": "C",
+        "text": { "id": "Menulis kode fitur di sisi aplikasi mobile agar responsif di semua tipe smartphone." },
+        "weights": { "mobile-developer": 3, "software-engineer": 2 }
+      },
+      {
+        "id": "opt_32d",
+        "key": "D",
+        "text": { "id": "Membuat skrip otomatisasi pengujian fitur untuk memastikan tidak merusak fitur lama." },
+        "weights": { "quality-assurance": 3, "devops-engineer": 1 }
+      },
+      {
+        "id": "opt_32e",
+        "key": "E",
+        "text": { "id": "Menyusun timeline sprint mingguan dan mengawal delivery fitur tepat waktu." },
+        "weights": { "project-manager": 3, "it-consultant": 1 }
+      }
+    ]
+  },
+  {
+    "id": "cq_l4_01",
+    "level": 4,
+    "theme": "Ketertarikan Teknis",
+    "type": "likert",
+    "text": { "id": "Saya tertarik mempelajari cara kerja neural network, model bahasa besar (LLM), dan kecerdasan buatan generatif." },
+    "tag": "ai_tech_interest",
+    "weights": {
+      "aiml-engineer": 3,
+      "data-scientist": 3,
+      "software-engineer": 1,
+      "it-support": -1,
+      "data-entry": -1
+    }
+  },
+  {
+    "id": "cq_l4_02",
+    "level": 4,
+    "theme": "Ketertarikan Teknis",
+    "type": "likert",
+    "text": { "id": "Saya tertarik dengan dunia game 3D, physics engine, grafika komputer shader, dan controller permainan." },
+    "tag": "game_tech_interest",
+    "weights": {
+      "game-developer": 3,
+      "mobile-developer": 1,
+      "uiux-designer": 1,
+      "data-analyst": -1
+    }
+  },
+  {
+    "id": "cq_l4_03",
+    "level": 4,
+    "theme": "Ketertarikan Teknis",
+    "type": "likert",
+    "text": { "id": "Saya tertarik menyelidiki kasus peretasan, mencari bukti digital di hard drive, dan merekonstruksi serangan." },
+    "tag": "forensic_tech_interest",
+    "weights": {
+      "digital-forensics": 3,
+      "security-analyst": 3,
+      "network-engineer": 1
+    }
+  },
+  {
+    "id": "cq_l4_04",
+    "level": 4,
+    "theme": "Ketertarikan Teknis",
+    "type": "likert",
+    "text": { "id": "Saya tertarik mengonfigurasi arsitektur cloud server multi-region, Terraform, dan pipeline continuous delivery." },
+    "tag": "infra_tech_interest",
+    "weights": {
+      "devops-engineer": 3,
+      "cloud-engineer": 3,
+      "network-engineer": 2,
+      "uiux-designer": -1
+    }
+  },
+  {
+    "id": "cq_l5_01",
+    "level": 5,
+    "theme": "Prioritas Karier",
+    "type": "likert",
+    "text": { "id": "Dalam karier, saya lebih ingin diakui sebagai spesialis teknis mendalam yang ahli daripada manajer tim." },
+    "tag": "specialist_vs_generalist",
+    "weights": {
+      "software-engineer": 2,
+      "data-scientist": 2,
+      "security-analyst": 2,
+      "digital-forensics": 2,
+      "aiml-engineer": 2,
+      "project-manager": -3,
+      "business-analyst": -1
+    }
+  },
+  {
+    "id": "cq_l5_02",
+    "level": 5,
+    "theme": "Prioritas Karier",
+    "type": "likert",
+    "text": { "id": "Saya berambisi untuk menjadi penasihat strategis perusahaan yang memadukan teknologi dan pertumbuhan bisnis." },
+    "tag": "strategic_business_leader",
+    "weights": {
+      "it-consultant": 3,
+      "business-analyst": 3,
+      "project-manager": 2,
+      "data-entry": -2,
+      "game-developer": -1
+    }
+  },
+  {
+    "id": "cq_l5_03",
+    "level": 5,
+    "theme": "Prioritas Karier",
+    "type": "likert",
+    "text": { "id": "Saya menyukai pekerjaan yang langsung berdampak pada kenyamanan hidup sehari-hari orang banyak melalui aplikasi di ponsel mereka." },
+    "tag": "consumer_product_impact",
+    "weights": {
+      "mobile-developer": 3,
+      "uiux-designer": 3,
+      "software-engineer": 2,
+      "game-developer": 2,
+      "network-engineer": 0
+    }
+  }
+]

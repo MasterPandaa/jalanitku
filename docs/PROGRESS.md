@@ -13,9 +13,9 @@
 | **T2** | Landing Page | Selesai | 2026-10-16 | Landing page publik lengkap, responsif, i18n & neo-brutalism |
 | **T3** | Autentikasi & Profil | Selesai | 2026-10-16 | Auth flow, onboarding username unik, dashboard & profil settings |
 | **T4** | Data Layer & Seed Role | Selesai | 2026-10-16 | Seed 19 role IT, kompetensi radar chart & halaman /dev/roles |
-| **T5** | Bank Soal JalanKarir | Pending | - | 5 level × 25 soal + validator |
-| **T6** | Engine & UI JalanKarir | Pending | - | Flow tes, scoring engine & tie-breaker |
-| **T7** | JalanID | Pending | - | Kartu hasil, render PNG/PDF, Web Share API |
+| **T5** | Bank Soal JalanKarir | Selesai | 2026-10-16 | Bank soal 5 level terkalibrasi ke 19 role + validator script |
+| **T6** | Engine & UI JalanKarir | Selesai | 2026-10-16 | Scoring engine vektor role, flow tes 5 level & tie-breaker |
+| **T7** | JalanID (Kartu, Unduh, Bagikan) | Selesai | 2026-10-16 | Kartu JalanID, render PNG 3 rasio, Web Share API & /karir/hasil |
 | **T8** | Sistem Mascot | Pending | - | 19 mascot role SVG + animasi 5 state |
 | **T9** | Bank Soal JalanRapor | Pending | - | Soal pilihan ganda per role |
 | **T10** | Engine & UI JalanRapor | Pending | - | Flow 5 level tanpa timer |
