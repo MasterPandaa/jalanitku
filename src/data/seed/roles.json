@@ -1,0 +1,211 @@
+[
+  {
+    "id": "role_se",
+    "slug": "software-engineer",
+    "nama": { "id": "Software Engineer" },
+    "tagline": { "id": "Merancang, menulis kode, dan membangun sistem digital dunia nyata." },
+    "deskripsi": { "id": "Fokus pada pembuatan aplikasi web dan sistem backend yang andal, scalable, dan berperforma tinggi." },
+    "warna": "#FFD60A",
+    "mascot_key": "software-engineer",
+    "urutan": 1,
+    "aktif": true
+  },
+  {
+    "id": "role_mobile",
+    "slug": "mobile-developer",
+    "nama": { "id": "Mobile Developer" },
+    "tagline": { "id": "Membawa pengalaman aplikasi canggih langsung ke genggaman tangan pengguna." },
+    "deskripsi": { "id": "Membangun aplikasi Android dan iOS yang responsif, mulus, dan terintegrasi dengan sensor gawai." },
+    "warna": "#FF5C8A",
+    "mascot_key": "mobile-developer",
+    "urutan": 2,
+    "aktif": true
+  },
+  {
+    "id": "role_game",
+    "slug": "game-developer",
+    "nama": { "id": "Game Developer" },
+    "tagline": { "id": "Menciptakan dunia virtual interaktif yang seru dan memikat pemain." },
+    "deskripsi": { "id": "Mengembangkan mekanika permainan, grafika 2D/3D, audio, dan sistem gameplay interaktif." },
+    "warna": "#2EE59D",
+    "mascot_key": "game-developer",
+    "urutan": 3,
+    "aktif": true
+  },
+  {
+    "id": "role_qa",
+    "slug": "quality-assurance",
+    "nama": { "id": "Quality Assurance" },
+    "tagline": { "id": "Garda terdepan penjaga keandalan sistem dari bug dan celah kegagalan." },
+    "deskripsi": { "id": "Menguji fungsionalitas, performa, otomatisasi pengujian, dan menjamin rilis bebas cacat." },
+    "warna": "#FF8A3D",
+    "mascot_key": "quality-assurance",
+    "urutan": 4,
+    "aktif": true
+  },
+  {
+    "id": "role_itsup",
+    "slug": "it-support",
+    "nama": { "id": "IT Support" },
+    "tagline": { "id": "Penyelamat operasional harian perangkat keras, lunak, dan pengguna." },
+    "deskripsi": { "id": "Menangani troubleshooting perangkat, instalasi sistem, jaringan kantor, dan bantuan teknis pengguna." },
+    "warna": "#FFFFFF",
+    "mascot_key": "it-support",
+    "urutan": 5,
+    "aktif": true
+  },
+  {
+    "id": "role_net",
+    "slug": "network-engineer",
+    "nama": { "id": "Network Engineer" },
+    "tagline": { "id": "Menghubungkan dunia lewat infrastruktur routing, switching, dan transmisi sinyal." },
+    "deskripsi": { "id": "Merancang topologi jaringan komputer, konfigurasi router/switch, firewall, dan bandwidth management." },
+    "warna": "#FFD60A",
+    "mascot_key": "network-engineer",
+    "urutan": 6,
+    "aktif": true
+  },
+  {
+    "id": "role_cloud",
+    "slug": "cloud-engineer",
+    "nama": { "id": "Cloud Engineer" },
+    "tagline": { "id": "Membangun dan mengelola arsitektur server di atas ekosistem awan modern." },
+    "deskripsi": { "id": "Mengelola infrastruktur cloud (AWS/GCP/Azure), auto-scaling, serverless, dan penyimpanan awan." },
+    "warna": "#FF5C8A",
+    "mascot_key": "cloud-engineer",
+    "urutan": 7,
+    "aktif": true
+  },
+  {
+    "id": "role_devops",
+    "slug": "devops-engineer",
+    "nama": { "id": "DevOps Engineer" },
+    "tagline": { "id": "Menjembatani kode developer dengan operasional server tanpa jeda." },
+    "deskripsi": { "id": "Otomasi pipeline CI/CD, orkestrasi container (Docker/K8s), monitoring, dan infrastructure-as-code." },
+    "warna": "#2EE59D",
+    "mascot_key": "devops-engineer",
+    "urutan": 8,
+    "aktif": true
+  },
+  {
+    "id": "role_da",
+    "slug": "data-analyst",
+    "nama": { "id": "Data Analyst" },
+    "tagline": { "id": "Mengubah lautan angka mentah menjadi wawasan bisnis yang tajam dan bernilai." },
+    "deskripsi": { "id": "Eksplorasi SQL, pembersihan data, visualisasi dashboard (Tableau/PowerBI), dan analisis tren bisnis." },
+    "warna": "#FF8A3D",
+    "mascot_key": "data-analyst",
+    "urutan": 9,
+    "aktif": true
+  },
+  {
+    "id": "role_ds",
+    "slug": "data-scientist",
+    "nama": { "id": "Data Scientist" },
+    "tagline": { "id": "Menggabungkan matematika, statistika, dan algoritma prediktif masa depan." },
+    "deskripsi": { "id": "Membuat model prediktif machine learning, eksperimen A/B testing, dan pemodelan statistik mendalam." },
+    "warna": "#FFFFFF",
+    "mascot_key": "data-scientist",
+    "urutan": 10,
+    "aktif": true
+  },
+  {
+    "id": "role_de",
+    "slug": "data-engineer",
+    "nama": { "id": "Data Engineer" },
+    "tagline": { "id": "Membangun saluran pipa data raksasa yang mengalir cepat, bersih, dan stabil." },
+    "deskripsi": { "id": "Merancang arsitektur pipeline ETL/ELT, data warehouse, data lake, dan pengolahan data streaming." },
+    "warna": "#FFD60A",
+    "mascot_key": "data-engineer",
+    "urutan": 11,
+    "aktif": true
+  },
+  {
+    "id": "role_aiml",
+    "slug": "aiml-engineer",
+    "nama": { "id": "AI/ML Engineer" },
+    "tagline": { "id": "Menghidupkan kecerdasan buatan dan neural network ke dalam aplikasi nyata." },
+    "deskripsi": { "id": "Melatih dan mengoptimasi model Deep Learning, NLP, Computer Vision, LLM, dan deployment model AI." },
+    "warna": "#FF5C8A",
+    "mascot_key": "aiml-engineer",
+    "urutan": 12,
+    "aktif": true
+  },
+  {
+    "id": "role_sec",
+    "slug": "security-analyst",
+    "nama": { "id": "Security Analyst" },
+    "tagline": { "id": "Mendeteksi ancaman siber dan memperkuat pertahanan benteng digital." },
+    "deskripsi": { "id": "Penetration testing, analisis insiden keamanan SOC, audit vulnerability, dan hardening sistem." },
+    "warna": "#2EE59D",
+    "mascot_key": "security-analyst",
+    "urutan": 13,
+    "aktif": true
+  },
+  {
+    "id": "role_uiux",
+    "slug": "uiux-designer",
+    "nama": { "id": "UI/UX Designer" },
+    "tagline": { "id": "Menghubungkan empati manusia dengan keindahan visual produk digital." },
+    "deskripsi": { "id": "Riset pengguna, pembuatan wireframe, user flow, prototyping interaktif, dan design system Figma." },
+    "warna": "#FF8A3D",
+    "mascot_key": "uiux-designer",
+    "urutan": 14,
+    "aktif": true
+  },
+  {
+    "id": "role_forensics",
+    "slug": "digital-forensics",
+    "nama": { "id": "Digital Forensics" },
+    "tagline": { "id": "Detektif jejak digital yang menguak bukti kejahatan dan insiden siber." },
+    "deskripsi": { "id": "Analisis artefak memori, pemulihan data terhapus, reverse engineering malware, dan rantai bukti hukum." },
+    "warna": "#FFFFFF",
+    "mascot_key": "digital-forensics",
+    "urutan": 15,
+    "aktif": true
+  },
+  {
+    "id": "role_pm",
+    "slug": "project-manager",
+    "nama": { "id": "Project Manager" },
+    "tagline": { "id": "Nahkoda proyek yang memastikan target, tim, dan jadwal sampai di tujuan." },
+    "deskripsi": { "id": "Manajemen sprint Agile/Scrum, alokasi sumber daya, mitigasi risiko, dan komunikasi lintas divisi." },
+    "warna": "#FFD60A",
+    "mascot_key": "project-manager",
+    "urutan": 16,
+    "aktif": true
+  },
+  {
+    "id": "role_ba",
+    "slug": "business-analyst",
+    "nama": { "id": "Business Analyst" },
+    "tagline": { "id": "Penerjemah kebutuhan bisnis menjadi spesifikasi teknis yang siap dieksekusi." },
+    "deskripsi": { "id": "Penyusunan BRD/SRS, pemodelan proses bisnis BPMN, analisis gap sistem, dan user acceptance testing." },
+    "warna": "#FF5C8A",
+    "mascot_key": "business-analyst",
+    "urutan": 17,
+    "aktif": true
+  },
+  {
+    "id": "role_dataentry",
+    "slug": "data-entry",
+    "nama": { "id": "Data Entry" },
+    "tagline": { "id": "Ketelitian tinggi dalam input, validasi, dan pengelolaan basis data operasional." },
+    "deskripsi": { "id": "Penginputan data massal, verifikasi akurasi informasi, pengarsipan digital, dan rekonsiliasi berkas." },
+    "warna": "#2EE59D",
+    "mascot_key": "data-entry",
+    "urutan": 18,
+    "aktif": true
+  },
+  {
+    "id": "role_consultant",
+    "slug": "it-consultant",
+    "nama": { "id": "IT Consultant" },
+    "tagline": { "id": "Penasihat strategis transformasi teknologi untuk akselerasi pertumbuhan bisnis." },
+    "deskripsi": { "id": "Audit arsitektur enterprise, evaluasi vendor software, formulasi roadmap TI, dan tata kelola teknologi." },
+    "warna": "#FF8A3D",
+    "mascot_key": "it-consultant",
+    "urutan": 19,
+    "aktif": true
+  }
+]
