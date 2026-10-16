@@ -1,52 +1,570 @@
+"use client";
+
+import React, { useState } from "react";
+import Link from "next/link";
+import { Navbar } from "@/components/ui/Navbar";
+import { Footer } from "@/components/ui/Footer";
+import { Button } from "@/components/ui/Button";
+import { Badge } from "@/components/ui/Badge";
+import { JalanMin } from "@/components/mascot/JalanMin";
 import { getDictionary } from "@/lib/i18n";
 
-export default function Home() {
+export default function LandingPage() {
   const dict = getDictionary();
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
+
+  const roles = [
+    { name: "Software Engineer", bg: "bg-[#FFD60A]" },
+    { name: "Mobile Developer", bg: "bg-[#FF5C8A]" },
+    { name: "Game Developer", bg: "bg-[#2EE59D]" },
+    { name: "Quality Assurance", bg: "bg-[#FF8A3D]" },
+    { name: "IT Support", bg: "bg-[#FFFFFF]" },
+    { name: "Network Engineer", bg: "bg-[#FFD60A]" },
+    { name: "Cloud Engineer", bg: "bg-[#FF5C8A]" },
+    { name: "DevOps Engineer", bg: "bg-[#2EE59D]" },
+    { name: "Data Analyst", bg: "bg-[#FF8A3D]" },
+    { name: "Data Scientist", bg: "bg-[#FFFFFF]" },
+    { name: "Data Engineer", bg: "bg-[#FFD60A]" },
+    { name: "AI/ML Engineer", bg: "bg-[#FF5C8A]" },
+    { name: "Security Analyst", bg: "bg-[#2EE59D]" },
+    { name: "UI/UX Designer", bg: "bg-[#FF8A3D]" },
+    { name: "Digital Forensics", bg: "bg-[#FFFFFF]" },
+    { name: "Project Manager", bg: "bg-[#FFD60A]" },
+    { name: "Business Analyst", bg: "bg-[#FF5C8A]" },
+    { name: "Data Entry", bg: "bg-[#2EE59D]" },
+    { name: "IT Consultant", bg: "bg-[#FF8A3D]" },
+  ];
 
   return (
-    <main className="min-h-screen p-6 md:p-12 flex flex-col items-center justify-center">
-      <div className="w-full max-w-2xl bg-surface border-4 border-ink shadow-nb-lg p-8 md:p-10 flex flex-col items-center text-center gap-6">
-        {/* Logo Text */}
-        <div className="flex items-center gap-2 font-heading text-4xl md:text-5xl leading-none text-ink">
-          <span>Jalan</span>
-          <span className="inline-block bg-accent-yellow text-ink border-3 md:border-4 border-ink shadow-nb-sm px-3 py-1 -rotate-3 text-[1.12em]">
-            {dict.brand.highlight}
-          </span>
-          <span>ku</span>
-        </div>
+    <div className="min-h-screen bg-paper text-ink font-sans selection:bg-accent-yellow selection:text-ink">
+      <Navbar onLoginClick={() => (window.location.href = "/login")} />
 
-        <div className="inline-block bg-ink text-paper px-3 py-1 text-xs font-mono font-bold tracking-widest uppercase">
-          Tahap 0: Fondasi Proyek
-        </div>
-
-        <p className="font-sans text-lg md:text-xl text-ink max-w-lg leading-relaxed">
-          {dict.brand.tagline}
-        </p>
-
-        <div className="w-full border-t-3 border-ink pt-6 flex flex-col gap-3 text-left font-mono text-sm">
-          <div className="flex items-center gap-2 text-accent-green font-bold bg-ink p-3">
-            <span>✓</span>
-            <span>Next.js 15 + TypeScript + Tailwind CSS Neo-brutalism</span>
+      {/* Hero Section */}
+      <section id="atas" className="py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+          <div className="flex-1 flex flex-col items-start text-left">
+            <div className="inline-block bg-surface border-3 border-ink px-3 py-1 font-mono font-bold text-xs tracking-wider uppercase shadow-nb-sm">
+              {dict.hero.badge}
+            </div>
+            <h1 className="mt-6 font-display font-bold text-4xl sm:text-5xl md:text-7xl leading-[1.08] tracking-tight text-ink">
+              {dict.hero.titlePrefix}{" "}
+              <span className="inline-block bg-accent-yellow border-4 md:border-5 border-ink shadow-nb-md px-3 md:px-4 py-0.5 -rotate-2">
+                {dict.hero.titleHighlight}
+              </span>
+              {dict.hero.titleSuffix}
+            </h1>
+            <p className="mt-6 text-xl md:text-2xl text-ink max-w-xl leading-relaxed">
+              {dict.hero.subtitle}
+            </p>
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <Link href="/login">
+                <Button variant="primary" size="lg">
+                  {dict.hero.ctaStart}
+                </Button>
+              </Link>
+              <a href="#cara">
+                <Button variant="white" size="lg">
+                  {dict.hero.ctaHow}
+                </Button>
+              </a>
+            </div>
+            <div className="mt-5 font-mono text-xs md:text-sm text-ink/75 font-semibold">
+              {dict.hero.metaNote}
+            </div>
           </div>
-          <div className="flex items-center gap-2 text-accent-green font-bold bg-ink p-3">
-            <span>✓</span>
-            <span>i18n Multi-bahasa (Default: Bahasa Indonesia dari id.json)</span>
-          </div>
-          <div className="flex items-center gap-2 text-accent-green font-bold bg-ink p-3">
-            <span>✓</span>
-            <span>Dokumentasi docs/* lengkap (Brief, Design System, Data Schema, API Contract)</span>
-          </div>
-        </div>
 
-        <div className="pt-2">
-          <a
-            href="/dev/components"
-            className="nb-btn inline-block bg-accent-blue text-surface font-display font-bold text-lg px-6 py-3 border-4 border-ink shadow-nb-md"
-          >
-            Lanjut ke T1 (Galeri Komponen) →
-          </a>
+          {/* Hero Visual Mascot Box */}
+          <div className="w-full lg:w-auto flex-1 max-w-md relative pt-6 pb-2">
+            {/* Background geometric accents */}
+            <div className="absolute -left-3 top-2 w-16 h-16 bg-accent-blue border-4 border-ink shadow-nb-sm rotate-12 -z-0" />
+            <div className="absolute -right-3 bottom-10 w-24 h-24 rounded-full bg-accent-pink border-4 border-ink -z-0" />
+
+            <div className="relative bg-surface border-4 md:border-5 border-ink shadow-nb-lg p-6 flex flex-col items-center z-10">
+              <div className="absolute -right-2 -top-5 bg-accent-pink text-ink border-3 md:border-4 border-ink px-3 py-1 font-display font-bold text-sm md:text-base rotate-3 shadow-nb-sm">
+                {dict.hero.mascotBubble}
+              </div>
+              <JalanMin state="idle" size={240} />
+            </div>
+
+            {/* Example JalanID floating badge */}
+            <div className="relative -mt-10 ml-6 bg-surface border-4 border-ink shadow-nb-md p-4 flex flex-col gap-2 -rotate-3 z-20">
+              <div className="flex items-center justify-between gap-4">
+                <span className="bg-accent-yellow border-2 border-ink px-2 py-0.5 font-heading text-xs">
+                  JalanID
+                </span>
+                <span className="font-mono text-[11px] font-bold tracking-widest text-ink/60">
+                  CONTOH
+                </span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-accent-yellow border-2 border-ink flex items-end justify-center gap-1 pb-1.5 flex-none">
+                  <div className="w-2 h-3.5 bg-ink" />
+                  <div className="w-2 h-6 bg-ink" />
+                  <div className="w-2 h-4.5 bg-ink" />
+                </div>
+                <div>
+                  <div className="font-display font-bold text-lg md:text-xl leading-none">
+                    Data Analyst
+                  </div>
+                  <div className="font-mono text-xs text-ink/70 mt-1">@usernamekamu</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </main>
+      </section>
+
+      {/* Problem Section */}
+      <section className="bg-accent-yellow border-y-4 md:border-y-5 border-ink py-20 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <h2 className="max-w-3xl font-display font-bold text-3xl md:text-5xl leading-tight tracking-tight">
+            {dict.problem.title}
+          </h2>
+          <p className="mt-4 max-w-2xl text-lg md:text-xl text-ink leading-relaxed">
+            {dict.problem.subtitle}
+          </p>
+
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            {dict.problem.points.map((pt) => (
+              <div
+                key={pt.num}
+                className="bg-surface border-4 border-ink shadow-nb-md p-6 md:p-8 flex flex-col items-start gap-3"
+              >
+                <div className="inline-block bg-accent-pink border-3 border-ink px-3 py-1 font-heading text-2xl md:text-3xl">
+                  {pt.num}
+                </div>
+                <h3 className="font-display font-bold text-xl md:text-2xl mt-2 leading-snug">
+                  {pt.title}
+                </h3>
+                <p className="font-sans text-base text-ink/80 leading-relaxed">{pt.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 3 Main Features Section */}
+      <section id="fitur" className="py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="inline-block bg-ink text-paper px-3 py-1 font-mono font-bold text-xs uppercase tracking-widest">
+            {dict.features.badge}
+          </div>
+          <h2 className="mt-4 max-w-3xl font-display font-bold text-3xl md:text-5xl leading-tight tracking-tight">
+            {dict.features.title}
+          </h2>
+
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Fitur A — JalanKarir */}
+            <div className="bg-accent-yellow border-4 md:border-5 border-ink shadow-nb-lg p-6 md:p-8 flex flex-col justify-between items-start gap-6">
+              <div className="space-y-3">
+                <div className="inline-block bg-ink text-paper px-2.5 py-0.5 font-mono font-bold text-xs">
+                  FITUR A
+                </div>
+                <h3 className="font-heading text-3xl md:text-4xl leading-none">JalanKarir</h3>
+                <p className="font-sans font-medium text-lg leading-snug">
+                  {dict.features.karir.title}
+                </p>
+                <ul className="space-y-2 text-sm md:text-base font-sans pt-2">
+                  <li className="flex items-start gap-2">
+                    <span className="w-2.5 h-2.5 bg-ink mt-1.5 flex-none" />
+                    <span>5 level pertanyaan, tanpa ada jawaban benar atau salah</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-2.5 h-2.5 bg-ink mt-1.5 flex-none" />
+                    <span>Bank soal acak di setiap sesi</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-2.5 h-2.5 bg-ink mt-1.5 flex-none" />
+                    <span>Hasil kartu digital JalanID yang bisa dibagikan</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="w-full flex items-center justify-between pt-4 border-t-2 border-ink/20">
+                <Link href="/login" className="nb-btn inline-block bg-surface border-3 border-ink shadow-nb-sm px-4 py-2 font-display font-bold text-base hover:bg-white">
+                  → JalanID
+                </Link>
+                {/* 3 steps illustration */}
+                <svg width="80" height="70" viewBox="0 0 200 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="4" y="104" width="56" height="62" fill="#FFFFFF" stroke="#0A0A0A" strokeWidth="6" />
+                  <rect x="72" y="64" width="56" height="102" fill="#FF5C8A" stroke="#0A0A0A" strokeWidth="6" />
+                  <rect x="140" y="24" width="56" height="142" fill="#3D5AFE" stroke="#0A0A0A" strokeWidth="6" />
+                </svg>
+              </div>
+            </div>
+
+            {/* Fitur B — JalanRapor */}
+            <div className="bg-accent-pink text-ink border-4 md:border-5 border-ink shadow-nb-lg p-6 md:p-8 flex flex-col justify-between items-start gap-6">
+              <div className="space-y-3">
+                <div className="inline-block bg-ink text-paper px-2.5 py-0.5 font-mono font-bold text-xs">
+                  FITUR B
+                </div>
+                <h3 className="font-heading text-3xl md:text-4xl leading-none">JalanRapor</h3>
+                <p className="font-sans font-medium text-lg leading-snug">
+                  {dict.features.rapor.title}
+                </p>
+                <ul className="space-y-2 text-sm md:text-base font-sans pt-2">
+                  <li className="flex items-start gap-2">
+                    <span className="w-2.5 h-2.5 bg-ink mt-1.5 flex-none" />
+                    <span>Soal teknis 5 level kesulitan, 10 soal acak per level</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-2.5 h-2.5 bg-ink mt-1.5 flex-none" />
+                    <span>Tanpa batas waktu, kerjakan santai dan tenang</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-2.5 h-2.5 bg-ink mt-1.5 flex-none" />
+                    <span>Rapor nilai, radar chart kompetensi & alasan di Cocoklogiku</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="w-full flex items-center justify-between pt-4 border-t-2 border-ink/20">
+                <Link href="/login" className="nb-btn inline-block bg-surface border-3 border-ink shadow-nb-sm px-4 py-2 font-display font-bold text-base hover:bg-white">
+                  → Cocoklogiku
+                </Link>
+                {/* Radar chart icon */}
+                <svg width="75" height="75" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <polygon points="100,10 185.6,72.2 153,172.8 47,172.8 14.4,72.2" fill="#FFFFFF" stroke="#0A0A0A" strokeWidth="6" strokeLinejoin="round" />
+                  <polygon points="100,28 147.1,84.7 147.6,165.5 73.5,136.4 40.1,80.5" fill="#FFD60A" stroke="#0A0A0A" strokeWidth="5" strokeLinejoin="round" />
+                </svg>
+              </div>
+            </div>
+
+            {/* Fitur C — JalanLoker */}
+            <div className="bg-accent-green text-ink border-4 md:border-5 border-ink shadow-nb-lg p-6 md:p-8 flex flex-col justify-between items-start gap-6">
+              <div className="space-y-3">
+                <div className="inline-block bg-ink text-paper px-2.5 py-0.5 font-mono font-bold text-xs">
+                  FITUR C
+                </div>
+                <h3 className="font-heading text-3xl md:text-4xl leading-none">JalanLoker</h3>
+                <p className="font-sans font-medium text-lg leading-snug">
+                  {dict.features.loker.title}
+                </p>
+                <ul className="space-y-2 text-sm md:text-base font-sans pt-2">
+                  <li className="flex items-start gap-2">
+                    <span className="w-2.5 h-2.5 bg-ink mt-1.5 flex-none" />
+                    <span>Kurasi lowongan kerja IT sesuai role dan hasil tesmu</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-2.5 h-2.5 bg-ink mt-1.5 flex-none" />
+                    <span>Tombol Apply langsung ke situs karier perusahaan</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-2.5 h-2.5 bg-ink mt-1.5 flex-none" />
+                    <span>Fitur sedang dalam tahap perencanaan</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="w-full flex items-center justify-between pt-4 border-t-2 border-ink/20">
+                <Badge variant="orange" size="md">
+                  Segera Hadir
+                </Badge>
+                {/* Job cards icon */}
+                <svg width="75" height="75" viewBox="0 0 200 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="6" y="6" width="176" height="50" fill="#FFFFFF" stroke="#0A0A0A" strokeWidth="6" />
+                  <rect x="18" y="18" width="26" height="26" fill="#FFD60A" stroke="#0A0A0A" strokeWidth="4" />
+                  <line x1="58" y1="24" x2="164" y2="24" stroke="#0A0A0A" strokeWidth="6" />
+                  <rect x="16" y="68" width="176" height="50" fill="#FFFFFF" stroke="#0A0A0A" strokeWidth="6" />
+                  <rect x="28" y="80" width="26" height="26" fill="#FF5C8A" stroke="#0A0A0A" strokeWidth="4" />
+                  <line x1="68" y1="86" x2="174" y2="86" stroke="#0A0A0A" strokeWidth="6" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works Section */}
+      <section id="cara" className="bg-surface border-y-4 md:border-y-5 border-ink py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="inline-block bg-ink text-paper px-3 py-1 font-mono font-bold text-xs uppercase tracking-widest">
+            {dict.steps.badge}
+          </div>
+          <h2 className="mt-4 max-w-3xl font-display font-bold text-3xl md:text-5xl leading-tight tracking-tight">
+            {dict.steps.title}
+          </h2>
+
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {dict.steps.list.map((st, idx) => {
+              const bgColors = ["bg-[#FFD60A]", "bg-[#FF5C8A]", "bg-[#2EE59D]", "bg-[#FF8A3D]"];
+              return (
+                <div
+                  key={st.step}
+                  className="bg-paper border-4 border-ink shadow-nb-md p-6 flex flex-col gap-4"
+                >
+                  <div
+                    className={`w-14 h-14 ${bgColors[idx % 4]} border-3 border-ink flex items-center justify-center font-heading text-3xl text-ink shadow-nb-sm`}
+                  >
+                    {st.step}
+                  </div>
+                  <h3 className="font-display font-bold text-xl leading-snug">{st.title}</h3>
+                  <p className="font-sans text-sm md:text-base text-ink/80 leading-relaxed">
+                    {st.desc}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Mascot & 19 Roles Gallery */}
+      <section id="maskot" className="bg-ink text-paper py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+          <div className="w-full lg:w-auto flex-1 max-w-md relative pt-6">
+            <div className="absolute left-0 top-0 bg-accent-yellow text-ink border-3 border-paper px-3 py-1 font-display font-bold text-sm md:text-base -rotate-3 z-10">
+              Yuk, cari jalanmu!
+            </div>
+            <div className="bg-paper border-4 border-paper shadow-[8px_8px_0_#FF5C8A] p-6 flex justify-center">
+              <JalanMin state="hover" size={260} />
+            </div>
+          </div>
+
+          <div className="flex-1 space-y-4">
+            <div className="inline-block bg-accent-yellow text-ink px-3 py-1 font-mono font-bold text-xs uppercase tracking-widest">
+              MASKOT &amp; 19 ROLE IT
+            </div>
+            <h2 className="font-display font-bold text-3xl md:text-5xl leading-tight text-paper">
+              Kenalan dengan JalanMin &amp; 19 Role IT
+            </h2>
+            <p className="font-sans text-lg text-paper/80 max-w-xl leading-relaxed">
+              JalanMin menemanimu dari awal. Setelah tahu role yang cocok, kamu akan menemukan
+              karakteristik khas untuk setiap role IT berikut:
+            </p>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 pt-4">
+              {roles.map((r) => (
+                <div
+                  key={r.name}
+                  className={`${r.bg} text-ink border-2 md:border-3 border-paper p-3 font-display font-bold text-xs md:text-sm leading-tight transition-transform hover:-translate-y-1 hover:rotate-1`}
+                >
+                  {r.name}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Example JalanID & Cocoklogiku */}
+      <section id="contoh" className="py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="inline-block bg-ink text-paper px-3 py-1 font-mono font-bold text-xs uppercase tracking-widest">
+            CONTOH HASIL
+          </div>
+          <h2 className="mt-4 max-w-3xl font-display font-bold text-3xl md:text-5xl leading-tight tracking-tight">
+            Hasil yang bisa kamu simpan dan banggakan
+          </h2>
+          <p className="mt-4 max-w-2xl text-lg md:text-xl text-ink leading-relaxed">
+            Unduh JalanID dan Cocoklogiku sebagai gambar PNG atau PDF, lalu bagikan ke media sosial
+            atau jadikan acuan belajar.
+          </p>
+
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+            {/* Example JalanID */}
+            <div className="bg-surface border-4 md:border-5 border-ink shadow-nb-lg p-6 md:p-8 flex flex-col justify-between gap-6">
+              <div className="flex items-center justify-between">
+                <span className="bg-accent-yellow border-3 border-ink px-3 py-1 font-heading text-base">
+                  JalanID
+                </span>
+                <span className="font-mono text-xs font-bold tracking-widest text-ink/60">
+                  CONTOH KARTU
+                </span>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="w-20 h-20 bg-accent-yellow border-3 border-ink flex items-end justify-center gap-1.5 pb-2 flex-none shadow-nb-sm">
+                  <div className="w-3 h-5 bg-ink" />
+                  <div className="w-3 h-10 bg-ink" />
+                  <div className="w-3 h-7 bg-ink" />
+                </div>
+                <div>
+                  <div className="font-heading text-2xl md:text-3xl text-ink leading-none">
+                    Data Analyst
+                  </div>
+                  <div className="font-mono text-sm text-ink/70 mt-1">@calontalenta</div>
+                </div>
+              </div>
+
+              <div className="space-y-3 font-mono text-xs md:text-sm">
+                <div>
+                  <div className="flex justify-between font-bold mb-1">
+                    <span>1. Data Analyst (Top 1)</span>
+                    <span>92%</span>
+                  </div>
+                  <div className="h-5 border-2 border-ink bg-white overflow-hidden">
+                    <div className="h-full bg-accent-green border-r-2 border-ink w-[92%]" />
+                  </div>
+                </div>
+                <div>
+                  <div className="flex justify-between font-bold mb-1">
+                    <span>2. Business Analyst</span>
+                    <span>85%</span>
+                  </div>
+                  <div className="h-5 border-2 border-ink bg-white overflow-hidden">
+                    <div className="h-full bg-accent-yellow border-r-2 border-ink w-[85%]" />
+                  </div>
+                </div>
+                <div>
+                  <div className="flex justify-between font-bold mb-1">
+                    <span>3. Data Scientist</span>
+                    <span>78%</span>
+                  </div>
+                  <div className="h-5 border-2 border-ink bg-white overflow-hidden">
+                    <div className="h-full bg-accent-pink border-r-2 border-ink w-[78%]" />
+                  </div>
+                </div>
+              </div>
+
+              <div className="border-t-2 border-ink/20 pt-4 font-mono text-xs text-ink/60 flex justify-between">
+                <span>Diterbitkan oleh JalanITku</span>
+                <span>Kode: JID-892401</span>
+              </div>
+            </div>
+
+            {/* Example Cocoklogiku */}
+            <div className="bg-surface border-4 md:border-5 border-ink shadow-nb-lg p-6 md:p-8 flex flex-col justify-between gap-6">
+              <div className="flex items-center justify-between">
+                <span className="bg-accent-pink text-ink border-3 border-ink px-3 py-1 font-heading text-base">
+                  Cocoklogiku
+                </span>
+                <span className="font-mono text-xs font-bold tracking-widest text-ink/60">
+                  CONTOH RAPOR
+                </span>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-6">
+                {/* SVG Radar graphic */}
+                <svg
+                  width="130"
+                  height="130"
+                  viewBox="0 0 200 200"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="flex-none"
+                >
+                  <polygon
+                    points="100,10 185.6,72.2 153,172.8 47,172.8 14.4,72.2"
+                    fill="#FFFFFF"
+                    stroke="#0A0A0A"
+                    strokeWidth="5"
+                    strokeLinejoin="round"
+                  />
+                  <line x1="100" y1="100" x2="100" y2="10" stroke="#0A0A0A" strokeWidth="2" />
+                  <line x1="100" y1="100" x2="185.6" y2="72.2" stroke="#0A0A0A" strokeWidth="2" />
+                  <line x1="100" y1="100" x2="153" y2="172.8" stroke="#0A0A0A" strokeWidth="2" />
+                  <line x1="100" y1="100" x2="47" y2="172.8" stroke="#0A0A0A" strokeWidth="2" />
+                  <line x1="100" y1="100" x2="14.4" y2="72.2" stroke="#0A0A0A" strokeWidth="2" />
+                  <polygon
+                    points="100,28 147.1,84.7 147.6,165.5 73.5,136.4 40.1,80.5"
+                    fill="#FFD60A"
+                    stroke="#0A0A0A"
+                    strokeWidth="4"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+
+                <div className="flex flex-col gap-1">
+                  <span className="font-display font-bold text-xl">Data Analyst</span>
+                  <div className="font-heading text-5xl md:text-6xl text-ink leading-none">
+                    78<span className="text-2xl text-ink/60">/100</span>
+                  </div>
+                  <Badge variant="green" size="sm" className="mt-1 self-start">
+                    Cocok
+                  </Badge>
+                </div>
+              </div>
+
+              <div className="space-y-2 text-sm">
+                <div className="font-display font-bold text-base text-ink">Alasan Evaluasi:</div>
+                <p className="font-sans text-ink/80 leading-snug">
+                  Kuat di SQL dan visualisasi data bisnis. Pemahaman statistik inferensial masih
+                  dapat ditingkatkan untuk role level menengah ke atas.
+                </p>
+              </div>
+
+              <div className="border-t-2 border-ink/20 pt-4 space-y-1 font-mono text-xs text-ink/75">
+                <div className="font-bold text-ink">Rekomendasi Belajar:</div>
+                <div>Statistik dasar, A/B Testing, dan Dashboard visualisasi bisnis.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section id="faq" className="bg-surface border-y-4 md:border-y-5 border-ink py-20 md:py-28">
+        <div className="max-w-4xl mx-auto px-4 md:px-8">
+          <div className="inline-block bg-ink text-paper px-3 py-1 font-mono font-bold text-xs uppercase tracking-widest">
+            {dict.faq.badge}
+          </div>
+          <h2 className="mt-4 font-display font-bold text-3xl md:text-5xl leading-tight tracking-tight">
+            {dict.faq.title}
+          </h2>
+
+          <div className="mt-12 space-y-4">
+            {dict.faq.items.map((item, idx) => {
+              const isOpen = openFaq === idx;
+              return (
+                <div
+                  key={item.q}
+                  className="bg-paper border-3 md:border-4 border-ink shadow-nb-sm transition-all"
+                >
+                  <button
+                    type="button"
+                    onClick={() => setOpenFaq(isOpen ? null : idx)}
+                    className="w-full p-5 md:p-6 flex items-center justify-between gap-4 text-left font-display font-bold text-lg md:text-xl text-ink cursor-pointer"
+                    aria-expanded={isOpen}
+                  >
+                    <span>{item.q}</span>
+                    <span
+                      className={`font-heading text-2xl transition-transform duration-200 ${
+                        isOpen ? "rotate-45" : ""
+                      }`}
+                    >
+                      +
+                    </span>
+                  </button>
+                  {isOpen && (
+                    <div className="px-5 md:px-6 pb-6 pt-1 font-sans text-base text-ink/85 border-t-2 border-ink/15 leading-relaxed">
+                      {item.a}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Final Call to Action */}
+      <section id="mulai" className="bg-accent-pink border-b-4 md:border-b-5 border-ink py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-12">
+          <div className="flex-1 space-y-4 text-left">
+            <h2 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl text-ink leading-tight tracking-tight">
+              Siap cari jalanmu?
+            </h2>
+            <p className="font-sans text-xl md:text-2xl text-ink max-w-lg leading-relaxed">
+              Masuk dengan Google, tentukan username unikmu, dan mulai JalanKarir sekarang juga. Gratis.
+            </p>
+            <div className="pt-4">
+              <Link href="/login">
+                <Button variant="white" size="lg" className="text-xl">
+                  Masuk dengan Google →
+                </Button>
+              </Link>
+            </div>
+          </div>
+
+          <div className="w-full md:w-auto flex justify-center">
+            <JalanMin state="happy" size={240} />
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
   );
 }
