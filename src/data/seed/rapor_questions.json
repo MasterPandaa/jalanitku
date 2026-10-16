@@ -1,0 +1,856 @@
+[
+  {
+    "id": "rq_se_l1_01",
+    "role_slug": "software-engineer",
+    "level": 1,
+    "level_name": "Dasar",
+    "competency_id": "comp_se_1",
+    "competency_name": "Algoritma & Struktur Data",
+    "text": { "id": "Struktur data mana yang beroperasi berdasarkan prinsip First-In, First-Out (FIFO)?" },
+    "options": [
+      { "key": "a", "text": { "id": "Stack (Tumpukan)" } },
+      { "key": "b", "text": { "id": "Queue (Antrean)" } },
+      { "key": "c", "text": { "id": "Binary Search Tree" } },
+      { "key": "d", "text": { "id": "Hash Map" } }
+    ],
+    "correct_key": "b",
+    "explanation": { "id": "Queue mengikuti prinsip FIFO di mana elemen yang pertama kali dimasukkan adalah yang pertama kali diproses/dikeluarkan." }
+  },
+  {
+    "id": "rq_se_l1_02",
+    "role_slug": "software-engineer",
+    "level": 1,
+    "level_name": "Dasar",
+    "competency_id": "comp_se_2",
+    "competency_name": "OOP & Clean Architecture",
+    "text": { "id": "Prinsip dasar OOP yang membungkus data bersama method-nya serta membatasi akses langsung dari luar disebut..." },
+    "options": [
+      { "key": "a", "text": { "id": "Polymorphism" } },
+      { "key": "b", "text": { "id": "Inheritance" } },
+      { "key": "c", "text": { "id": "Encapsulation" } },
+      { "key": "d", "text": { "id": "Abstraction" } }
+    ],
+    "correct_key": "c",
+    "explanation": { "id": "Encapsulation (enkapsulasi) menyembunyikan detail internal objek dan hanya mengekspos antarmuka publik yang aman." }
+  },
+  {
+    "id": "rq_se_l2_01",
+    "role_slug": "software-engineer",
+    "level": 2,
+    "level_name": "Pemula",
+    "competency_id": "comp_se_3",
+    "competency_name": "REST API & Backend",
+    "text": { "id": "HTTP method manakah yang bersifat idempotent dan lazim digunakan untuk mengganti seluruh isi resource target?" },
+    "options": [
+      { "key": "a", "text": { "id": "POST" } },
+      { "key": "b", "text": { "id": "PUT" } },
+      { "key": "c", "text": { "id": "PATCH" } },
+      { "key": "d", "text": { "id": "OPTIONS" } }
+    ],
+    "correct_key": "b",
+    "explanation": { "id": "PUT bersifat idempotent (dieksekusi berkali-kali menghasilkan state server yang sama) dan me-replace resource seutuhnya." }
+  },
+  {
+    "id": "rq_se_l2_02",
+    "role_slug": "software-engineer",
+    "level": 2,
+    "level_name": "Pemula",
+    "competency_id": "comp_se_5",
+    "competency_name": "Git & Kolaborasi Kode",
+    "text": { "id": "Perintah Git yang digunakan untuk memindahkan perubahan yang belum di-commit ke area simpan sementara yang bersih adalah..." },
+    "options": [
+      { "key": "a", "text": { "id": "git stash" } },
+      { "key": "b", "text": { "id": "git checkout -b" } },
+      { "key": "c", "text": { "id": "git rebase" } },
+      { "key": "d", "text": { "id": "git revert" } }
+    ],
+    "correct_key": "a",
+    "explanation": { "id": "git stash menyimpan working directory yang kotor ke stack sementara agar cabang dapat dibersihkan tanpa kehilangan kode." }
+  },
+  {
+    "id": "rq_se_l3_01",
+    "role_slug": "software-engineer",
+    "level": 3,
+    "level_name": "Menengah",
+    "competency_id": "comp_se_4",
+    "competency_name": "Basis Data SQL/NoSQL",
+    "text": { "id": "Apa dampak negatif utama dari pembuatan indeks (B-Tree Index) yang berlebihan pada tabel database yang aktif menerima transaksi tulis?" },
+    "options": [
+      { "key": "a", "text": { "id": "Query SELECT menjadi berkali-kali lipat lebih lambat." } },
+      { "key": "b", "text": { "id": "Performa operasi INSERT, UPDATE, dan DELETE melambat karena struktur pohon indeks harus di-rebalance." } },
+      { "key": "c", "text": { "id": "Data otomatis terfragmentasi dan menyebabkan kebocoran memori RAM." } },
+      { "key": "d", "text": { "id": "Database secara otomatis mengonversi tipe data tabel menjadi string." } }
+    ],
+    "correct_key": "b",
+    "explanation": { "id": "Setiap operasi tulis (INSERT/UPDATE/DELETE) mewajibkan database memperbarui indeks terkait di storage disk." }
+  },
+  {
+    "id": "rq_se_l3_02",
+    "role_slug": "software-engineer",
+    "level": 3,
+    "level_name": "Menengah",
+    "competency_id": "comp_se_6",
+    "competency_name": "Debugging & Testing",
+    "text": { "id": "Dalam pengujian perangkat lunak, apa perbedaan mendasar antara Stub dan Mock?" },
+    "options": [
+      { "key": "a", "text": { "id": "Stub memverifikasi pemanggilan fungsi, sedangkan Mock hanya mengembalikan nilai tetap." } },
+      { "key": "b", "text": { "id": "Stub menyediakan jawaban yang telah disiapkan sebelumnya, sedangkan Mock memverifikasi perilaku dan interaksi pemanggilan." } },
+      { "key": "c", "text": { "id": "Stub hanya digunakan untuk database, Mock untuk API eksternal." } },
+      { "key": "d", "text": { "id": "Tidak ada perbedaan, keduanya istilah identik." } }
+    ],
+    "correct_key": "b",
+    "explanation": { "id": "Stub fokus pada 'state verification' (memberikan dummy response), sedangkan Mock fokus pada 'behavior verification' (memastikan method dipanggil dengan argumen yang benar)." }
+  },
+  {
+    "id": "rq_se_l4_01",
+    "role_slug": "software-engineer",
+    "level": 4,
+    "level_name": "Lanjut",
+    "competency_id": "comp_se_2",
+    "competency_name": "OOP & Clean Architecture",
+    "text": { "id": "Dalam Clean Architecture oleh Robert C. Martin, 'Dependency Rule' mewajibkan bahwa..." },
+    "options": [
+      { "key": "a", "text": { "id": "Dependensi kode sumber hanya boleh mengarah ke dalam, menuju entitas kebijakan tingkat tinggi." } },
+      { "key": "b", "text": { "id": "Entitas domain inti harus selalu mengimpor pustaka database atau framework HTTP." } },
+      { "key": "c", "text": { "id": "Setiap layer boleh saling mengimpor asalkan menggunakan dependency injection container." } },
+      { "key": "d", "text": { "id": "UI boleh mengakses langsung database tanpa melewati Use Case." } }
+    ],
+    "correct_key": "a",
+    "explanation": { "id": "Aturan dependensi mutlak menyatakan layer dalam tidak boleh tahu apa pun tentang layer luar (UI, DB, Framework)." }
+  },
+  {
+    "id": "rq_se_l4_02",
+    "role_slug": "software-engineer",
+    "level": 4,
+    "level_name": "Lanjut",
+    "competency_id": "comp_se_1",
+    "competency_name": "Algoritma & Struktur Data",
+    "text": { "id": "Kompleksitas waktu (Time Complexity) rata-rata dari pencarian elemen pada Hash Table yang terdistribusi baik adalah..." },
+    "options": [
+      { "key": "a", "text": { "id": "O(log n)" } },
+      { "key": "b", "text": { "id": "O(1)" } },
+      { "key": "c", "text": { "id": "O(n)" } },
+      { "key": "d", "text": { "id": "O(n log n)" } }
+    ],
+    "correct_key": "b",
+    "explanation": { "id": "Hash Table menghitung indeks langsung dari hash function sehingga pencarian rata-rata beroperasi dalam waktu konstan O(1)." }
+  },
+  {
+    "id": "rq_se_l5_01",
+    "role_slug": "software-engineer",
+    "level": 5,
+    "level_name": "Ahli",
+    "competency_id": "comp_se_1",
+    "competency_name": "Algoritma & Struktur Data",
+    "text": { "id": "Dalam sistem terdistribusi skala besar, bagaimana Teorema CAP menangani kondisi kegagalan partisi jaringan (Network Partition)?" },
+    "options": [
+      { "key": "a", "text": { "id": "Sistem dapat mempertahankan ketiga sifat (Consistency, Availability, Partition tolerance) secara bersamaan." } },
+      { "key": "b", "text": { "id": "Sistem dipaksa memilih antara konsistensi data absolut (CP) atau ketersediaan respons (AP)." } },
+      { "key": "c", "text": { "id": "Sistem otomatis beralih ke arsitektur monolitik lokal." } },
+      { "key": "d", "text": { "id": "Partisi jaringan dapat dieliminasi seutuhnya menggunakan protokol TCP terbaru." } }
+    ],
+    "correct_key": "b",
+    "explanation": { "id": "Karena partisi jaringan di dunia nyata tidak bisa dihindari (P), sistem harus memilih trade-off antara Consistency (CP) atau Availability (AP)." }
+  },
+  {
+    "id": "rq_se_l5_02",
+    "role_slug": "software-engineer",
+    "level": 5,
+    "level_name": "Ahli",
+    "competency_id": "comp_se_3",
+    "competency_name": "REST API & Backend",
+    "text": { "id": "Ketika mendesain sistem idempotent payment webhook yang rentan duplikasi jaringan dari payment gateway, strategi apa yang paling tepat diterapkan?" },
+    "options": [
+      { "key": "a", "text": { "id": "Mengabaikan request yang datang setelah 5 detik." } },
+      { "key": "b", "text": { "id": "Menggunakan Idempotency Key unik yang disimpan dalam status atomik (misal Redis/DB unique constraint) sebelum memproses mutasi saldo." } },
+      { "key": "c", "text": { "id": "Menggunakan metode HTTP GET agar tidak terjadi perubahan data." } },
+      { "key": "d", "text": { "id": "Mematikan fitur retry webhook pada payment gateway." } }
+    ],
+    "correct_key": "b",
+    "explanation": { "id": "Penyimpanan Idempotency Key dengan operasi atomik memastikan satu event transaksi hanya dieksekusi tepat satu kali (exactly-once processing semantics)." }
+  },
+
+  {
+    "id": "rq_da_l1_01",
+    "role_slug": "data-analyst",
+    "level": 1,
+    "level_name": "Dasar",
+    "competency_id": "comp_da_1",
+    "competency_name": "SQL & Querying Kompleks",
+    "text": { "id": "Klausa SQL mana yang digunakan untuk memfilter baris data setelah operasi pengelompokan (GROUP BY) dilakukan?" },
+    "options": [
+      { "key": "a", "text": { "id": "WHERE" } },
+      { "key": "b", "text": { "id": "HAVING" } },
+      { "key": "c", "text": { "id": "LIMIT" } },
+      { "key": "d", "text": { "id": "FILTER BY" } }
+    ],
+    "correct_key": "b",
+    "explanation": { "id": "Klausa HAVING digunakan untuk menyaring baris hasil agregasi, sedangkan WHERE menyaring baris sebelum proses agregasi dimulai." }
+  },
+  {
+    "id": "rq_da_l1_02",
+    "role_slug": "data-analyst",
+    "level": 1,
+    "level_name": "Dasar",
+    "competency_id": "comp_da_3",
+    "competency_name": "Statistika Deskriptif",
+    "text": { "id": "Ukuran tendensi sentral mana yang paling kebal terhadap pengaruh data pencilan (outlier) ekstrem?" },
+    "options": [
+      { "key": "a", "text": { "id": "Mean (Rata-rata)" } },
+      { "key": "b", "text": { "id": "Median (Nilai Tengah)" } },
+      { "key": "c", "text": { "id": "Rentang (Range)" } },
+      { "key": "d", "text": { "id": "Standar Deviasi" } }
+    ],
+    "correct_key": "b",
+    "explanation": { "id": "Median tidak dipengaruhi oleh nilai pencilan yang amat besar atau amat kecil karena hanya melihat posisi urutan tengah." }
+  },
+  {
+    "id": "rq_da_l2_01",
+    "role_slug": "data-analyst",
+    "level": 2,
+    "level_name": "Pemula",
+    "competency_id": "comp_da_2",
+    "competency_name": "Dashboard & Visualisasi Data",
+    "text": { "id": "Jenis grafik manakah yang paling efektif untuk membandingkan proporsi komposisi dari sebuah metrik total yang dibagi ke dalam 3 kategori utama?" },
+    "options": [
+      { "key": "a", "text": { "id": "Donut Chart atau Stacked Bar Chart" } },
+      { "key": "b", "text": { "id": "Scatter Plot" } },
+      { "key": "c", "text": { "id": "Line Chart time-series" } },
+      { "key": "d", "text": { "id": "Candlestick Chart" } }
+    ],
+    "correct_key": "a",
+    "explanation": { "id": "Donut Chart atau 100% Stacked Bar Chart dirancang untuk memperlihatkan kontribusi bagian terhadap keseluruhan (part-to-whole ratio)." }
+  },
+  {
+    "id": "rq_da_l2_02",
+    "role_slug": "data-analyst",
+    "level": 2,
+    "level_name": "Pemula",
+    "competency_id": "comp_da_4",
+    "competency_name": "Pembersihan Data (Pandas/Excel)",
+    "text": { "id": "Saat menangani data hilang (Missing Values) pada kolom angka pendapatan yang berdistribusi sangat miring (skewed), metode imputasi mana yang paling dianjurkan?" },
+    "options": [
+      { "key": "a", "text": { "id": "Mengisi dengan nilai rata-rata (Mean)" } },
+      { "key": "b", "text": { "id": "Mengisi dengan nilai median atau modus" } },
+      { "key": "c", "text": { "id": "Mengisi selalu dengan angka nol" } },
+      { "key": "d", "text": { "id": "Menggandakan seluruh baris yang ada" } }
+    ],
+    "correct_key": "b",
+    "explanation": { "id": "Pada distribusi yang miring (skewed), median mempertahankan karakteristik distribusi data tanpa terbiaskan oleh kemiringan ekor." }
+  },
+  {
+    "id": "rq_da_l3_01",
+    "role_slug": "data-analyst",
+    "level": 3,
+    "level_name": "Menengah",
+    "competency_id": "comp_da_1",
+    "competency_name": "SQL & Querying Kompleks",
+    "text": { "id": "Kapan penggunaan Common Table Expression (CTE) dengan klausa 'WITH' lebih direkomendasikan dibanding subquery bertingkat?" },
+    "options": [
+      { "key": "a", "text": { "id": "Hanya saat database tidak mendukung perintah JOIN." } },
+      { "key": "b", "text": { "id": "Untuk menyusun logika kueri kompleks secara modular, mudah dibaca, dan dapat dirujuk berulang kali dalam satu kueri." } },
+      { "key": "c", "text": { "id": "Hanya untuk melakukan backup tabel database secara otomatis." } },
+      { "key": "d", "text": { "id": "Kala mengekspor data ke format file CSV." } }
+    ],
+    "correct_key": "b",
+    "explanation": { "id": "CTE meningkatkan keterbacaan kode SQL (readability) dan memungkinkan kueri rekursif maupun rujukan berulang." }
+  },
+  {
+    "id": "rq_da_l3_02",
+    "role_slug": "data-analyst",
+    "level": 3,
+    "level_name": "Menengah",
+    "competency_id": "comp_da_5",
+    "competency_name": "Wawasan Bisnis & Reporting",
+    "text": { "id": "Sebuah e-commerce mencatat penurunan Conversion Rate dari 4% menjadi 2% setelah perombakan halaman checkout. Apa langkah analisis diagnostik pertama yang tepat?" },
+    "options": [
+      { "key": "a", "text": { "id": "Langsung menyimpulkan bahwa semua pengguna membenci warna tema baru." } },
+      { "key": "b", "text": { "id": "Melakukan analisis funnel drop-off per langkah checkout, menguji error log perangkat, dan meneliti segmentasi browser pengguna." } },
+      { "key": "c", "text": { "id": "Menaikkan anggaran iklan promosi dua kali lipat." } },
+      { "key": "d", "text": { "id": "Menghapus kolom kupon diskon tanpa pengecekan." } }
+    ],
+    "correct_key": "b",
+    "explanation": { "id": "Analisis diagnostik funnel mengungkap titik persis di mana calon pembeli berhenti melangkah dan apa kendala teknis/UX yang mendasarinya." }
+  },
+  {
+    "id": "rq_da_l4_01",
+    "role_slug": "data-analyst",
+    "level": 4,
+    "level_name": "Lanjut",
+    "competency_id": "comp_da_1",
+    "competency_name": "SQL & Querying Kompleks",
+    "text": { "id": "Dalam SQL Window Function, apa perbedaan antara 'ROW_NUMBER()', 'RANK()', dan 'DENSE_RANK()' pada baris dengan nilai seri?" },
+    "options": [
+      { "key": "a", "text": { "id": "ROW_NUMBER() memberikan nomor urut unik tanpa seri, RANK() melewati nomor urut setelah seri, dan DENSE_RANK() tidak melewati nomor urut." } },
+      { "key": "b", "text": { "id": "Ketiganya menghasilkan nomor yang sama persis dalam semua kondisi." } },
+      { "key": "c", "text": { "id": "DENSE_RANK() hanya bekerja pada nilai bertipe float." } },
+      { "key": "d", "text": { "id": "RANK() mengabaikan pengelompokan PARTITION BY." } }
+    ],
+    "correct_key": "a",
+    "explanation": { "id": "Jika dua baris teratas bernilai sama (peringkat 1), ROW_NUMBER memberi (1, 2), RANK memberi (1, 1, 3), dan DENSE_RANK memberi (1, 1, 2)." }
+  },
+  {
+    "id": "rq_da_l4_02",
+    "role_slug": "data-analyst",
+    "level": 4,
+    "level_name": "Lanjut",
+    "competency_id": "comp_da_6",
+    "competency_name": "Uji Hipotesis & A/B Test",
+    "text": { "id": "Dalam eksperimen A/B testing, apa arti dari 'p-value < 0.05' yang lazim dipakai sebagai batas signifikansi statistik?" },
+    "options": [
+      { "key": "a", "text": { "id": "Peluang varian B gagal adalah 5%." } },
+      { "key": "b", "text": { "id": "Peluang mengamati perbedaan hasil sebesar ini murni karena kebetulan acak (under null hypothesis) kurang dari 5%." } },
+      { "key": "c", "text": { "id": "Tingkat konversi pasti meningkat sebesar 95% di masa depan." } },
+      { "key": "d", "text": { "id": "Hanya 5% pengguna yang menyukai varian B." } }
+    ],
+    "correct_key": "b",
+    "explanation": { "id": "Nilai p-value yang rendah memberikan bukti kuat untuk menolak hipotesis nol (bahwa tidak ada perbedaan efek antar varian)." }
+  },
+  {
+    "id": "rq_da_l5_01",
+    "role_slug": "data-analyst",
+    "level": 5,
+    "level_name": "Ahli",
+    "competency_id": "comp_da_6",
+    "competency_name": "Uji Hipotesis & A/B Test",
+    "text": { "id": "Fenomena statistik di mana tren atau hubungan yang muncul pada beberapa kelompok data terpisah justru berbalik arah ketika seluruh data digabungkan dikenal sebagai..." },
+    "options": [
+      { "key": "a", "text": { "id": "Central Limit Theorem" } },
+      { "key": "b", "text": { "id": "Simpson's Paradox" } },
+      { "key": "c", "text": { "id": "Hawthorne Effect" } },
+      { "key": "d", "text": { "id": "Survivorship Bias" } }
+    ],
+    "correct_key": "b",
+    "explanation": { "id": "Simpson's Paradox terjadi akibat adanya variabel perancu (confounding variable) tersembunyi yang mendistorsi agregasi data total." }
+  },
+  {
+    "id": "rq_da_l5_02",
+    "role_slug": "data-analyst",
+    "level": 5,
+    "level_name": "Ahli",
+    "competency_id": "comp_da_5",
+    "competency_name": "Wawasan Bisnis & Reporting",
+    "text": { "id": "Jika Customer Acquisition Cost (CAC) perusahaan adalah Rp 500.000 dan Customer Lifetime Value (LTV) adalah Rp 400.000, interpretasi bisnis strategisnya adalah..." },
+    "options": [
+      { "key": "a", "text": { "id": "Unit economics bisnis sangat sehat dan siap untuk ekspansi agresif." } },
+      { "key": "b", "text": { "id": "Model bisnis merugi pada level unit pelanggan (LTV/CAC < 1); perlu optimasi retensi atau efisiensi biaya akuisisi." } },
+      { "key": "c", "text": { "id": "Margin keuntungan bersih dipastikan di atas 80%." } },
+      { "key": "d", "text": { "id": "Tingkat churn pelanggan otomatis 0%." } }
+    ],
+    "correct_key": "b",
+    "explanation": { "id": "Rasio LTV:CAC yang sehat secara industri adalah minimal 3:1. Nilai di bawah 1 menunjukkan setiap pelanggan baru menambah kerugian finansial perusahaan." }
+  },
+
+  {
+    "id": "rq_ui_l1_01",
+    "role_slug": "uiux-designer",
+    "level": 1,
+    "level_name": "Dasar",
+    "competency_id": "comp_uiux_3",
+    "competency_name": "Visual UI & Design System",
+    "text": { "id": "Tujuan utama dari penerapan hierarki visual dalam antarmuka aplikasi adalah..." },
+    "options": [
+      { "key": "a", "text": { "id": "Membuat setiap elemen grafis memiliki kontras dan ukuran yang persis sama." } },
+      { "key": "b", "text": { "id": "Membimbing pandangan mata pengguna untuk memprioritaskan informasi penting melalui kontras, ukuran, dan jarak." } },
+      { "key": "c", "text": { "id": "Mengisi semua ruang kosong di layar agar tidak ada ruang sisa (negative space)." } },
+      { "key": "d", "text": { "id": "Menggantikan seluruh teks penjelasan dengan ikon tanpa label." } }
+    ],
+    "correct_key": "b",
+    "explanation": { "id": "Hierarki visual menentukan urutan persepsi pengguna sehingga konten primer langsung dikenali dibanding konten sekunder." }
+  },
+  {
+    "id": "rq_ui_l1_02",
+    "role_slug": "uiux-designer",
+    "level": 1,
+    "level_name": "Dasar",
+    "competency_id": "comp_uiux_1",
+    "competency_name": "Riset Pengguna & Persona",
+    "text": { "id": "Profil representatif fiktif yang merangkum karakteristik, tujuan, dan kendala dari kelompok pengguna nyata target produk disebut..." },
+    "options": [
+      { "key": "a", "text": { "id": "User Persona" } },
+      { "key": "b", "text": { "id": "Storyboard" } },
+      { "key": "c", "text": { "id": "Site Map" } },
+      { "key": "d", "text": { "id": "Style Guide" } }
+    ],
+    "correct_key": "a",
+    "explanation": { "id": "User Persona adalah artefak riset UX yang membantu tim menyelaraskan keputusan desain dengan kebutuhan pengguna yang nyata." }
+  },
+  {
+    "id": "rq_ui_l2_01",
+    "role_slug": "uiux-designer",
+    "level": 2,
+    "level_name": "Pemula",
+    "competency_id": "comp_uiux_2",
+    "competency_name": "Wireframing & Information Architecture",
+    "text": { "id": "Apa keuntungan utama membuat Wireframe Low-Fidelity sebelum melangkah ke desain High-Fidelity?" },
+    "options": [
+      { "key": "a", "text": { "id": "Memastikan pilihan warna palet dan ilustrasi sudah final." } },
+      { "key": "b", "text": { "id": "Fokus pada struktur tata letak, alur informasi, dan fungsionalitas tanpa terdistraksi elemen visual detail." } },
+      { "key": "c", "text": { "id": "Menghasilkan kode CSS secara otomatis." } },
+      { "key": "d", "text": { "id": "Menghemat biaya hosting database aplikasi." } }
+    ],
+    "correct_key": "b",
+    "explanation": { "id": "Wireframe low-fi memungkinkan iterasi cepat terhadap struktur dan layout mendasar tanpa membuang waktu pada detail visual dekoratif." }
+  },
+  {
+    "id": "rq_ui_l2_02",
+    "role_slug": "uiux-designer",
+    "level": 2,
+    "level_name": "Pemula",
+    "competency_id": "comp_uiux_4",
+    "competency_name": "Prototyping Interaktif Figma",
+    "text": { "id": "Fitur di Figma yang memungkinkan tata letak komponen menyesuaikan ukurannya secara dinamis mengikuti panjang teks atau ukuran kontainer adalah..." },
+    "options": [
+      { "key": "a", "text": { "id": "Smart Animate" } },
+      { "key": "b", "text": { "id": "Auto Layout" } },
+      { "key": "c", "text": { "id": "Boolean Groups" } },
+      { "key": "d", "text": { "id": "Masking" } }
+    ],
+    "correct_key": "b",
+    "explanation": { "id": "Auto Layout di Figma bekerja mirip CSS Flexbox untuk membuat komponen tombol, kartu, dan list yang adaptif." }
+  },
+  {
+    "id": "rq_ui_l3_01",
+    "role_slug": "uiux-designer",
+    "level": 3,
+    "level_name": "Menengah",
+    "competency_id": "comp_uiux_3",
+    "competency_name": "Visual UI & Design System",
+    "text": { "id": "Menurut pedoman aksesibilitas WCAG 2.1 Level AA, rasio kontras minimum yang disyaratkan antara teks standar dengan latar belakangnya adalah..." },
+    "options": [
+      { "key": "a", "text": { "id": "2 : 1" } },
+      { "key": "b", "text": { "id": "3 : 1" } },
+      { "key": "c", "text": { "id": "4.5 : 1" } },
+      { "key": "d", "text": { "id": "7 : 1" } }
+    ],
+    "correct_key": "c",
+    "explanation": { "id": "WCAG AA mewajibkan rasio kontras minimal 4.5:1 untuk teks biasa dan 3:1 untuk teks berukuran besar (18pt/14pt bold)." }
+  },
+  {
+    "id": "rq_ui_l3_02",
+    "role_slug": "uiux-designer",
+    "level": 3,
+    "level_name": "Menengah",
+    "competency_id": "comp_uiux_5",
+    "competency_name": "Usability Testing & Evaluasi",
+    "text": { "id": "Hukum Jakob (Jakob's Law) dalam prinsip UX menyatakan bahwa..." },
+    "options": [
+      { "key": "a", "text": { "id": "Pengguna menghabiskan sebagian besar waktu mereka di situs lain, sehingga mereka mengharapkan produk Anda beroperasi dengan konvensi serupa." } },
+      { "key": "b", "text": { "id": "Semakin banyak opsi yang disajikan, semakin cepat pengguna mengambil keputusan." } },
+      { "key": "c", "text": { "id": "Pengguna selalu membaca seluruh isi teks dari awal hingga akhir kata." } },
+      { "key": "d", "text": { "id": "Animasi micro-interaction harus selalu berdurasi minimal 2 detik." } }
+    ],
+    "correct_key": "a",
+    "explanation": { "id": "Jakob Nielsen merumuskan bahwa memanfaatkan pola antarmuka yang sudah familiar mengurangi beban kognitif pengguna." }
+  },
+  {
+    "id": "rq_ui_l4_01",
+    "role_slug": "uiux-designer",
+    "level": 4,
+    "level_name": "Lanjut",
+    "competency_id": "comp_uiux_3",
+    "competency_name": "Visual UI & Design System",
+    "text": { "id": "Dalam arsitektur Design Tokens modern, apa perbedaan antara 'Global/Primitive Tokens' dan 'Semantic/Alias Tokens'?" },
+    "options": [
+      { "key": "a", "text": { "id": "Primitive menyimpan nilai mentah (misal: color-blue-500: #3b82f6), sedangkan Semantic memberi arti konteks (misal: color-action-primary: color-blue-500)." } },
+      { "key": "b", "text": { "id": "Primitive hanya untuk format desktop, sedangkan Semantic untuk mobile." } },
+      { "key": "c", "text": { "id": "Semantic token tidak dapat diubah setelah dibuat." } },
+      { "key": "d", "text": { "id": "Primitive token hanya boleh ditulis dalam bahasa pemrograman C++." } }
+    ],
+    "correct_key": "a",
+    "explanation": { "id": "Semantic tokens mengabstraksi primitive tokens sehingga sistem desain mudah mendukung theming (dark mode, brand variants) tanpa merusak nilai dasar." }
+  },
+  {
+    "id": "rq_ui_l4_02",
+    "role_slug": "uiux-designer",
+    "level": 4,
+    "level_name": "Lanjut",
+    "competency_id": "comp_uiux_6",
+    "competency_name": "Micro-interaction & Animasi UI",
+    "text": { "id": "Untuk transisi navigasi antarmuka layar ponsel, kurva easing mana yang paling alami meniru pergerakan fisik objek di dunia nyata?" },
+    "options": [
+      { "key": "a", "text": { "id": "Linear (kecepatan konstan tanpa akselerasi)" } },
+      { "key": "b", "text": { "id": "Ease-out atau Cubic-bezier yang berakselerasi halus dan melambat saat mendekati titik berhenti" } },
+      { "key": "c", "text": { "id": "Step-end (perubahan instan tanpa animasi)" } },
+      { "key": "d", "text": { "id": "Infinite bounce berulang tiada henti" } }
+    ],
+    "correct_key": "b",
+    "explanation": { "id": "Ease-out terasa paling responsif bagi pengguna karena elemen langsung bergerak seketika disentuh lalu melambat secara anggun." }
+  },
+  {
+    "id": "rq_ui_l5_01",
+    "role_slug": "uiux-designer",
+    "level": 5,
+    "level_name": "Ahli",
+    "competency_id": "comp_uiux_5",
+    "competency_name": "Usability Testing & Evaluasi",
+    "text": { "id": "Metode evaluasi Heuristik menurut 10 Prinsip Nielsen yang relevan saat sistem menampilkan pesan konfirmasi 'Apakah Anda yakin ingin menghapus akun?' adalah..." },
+    "options": [
+      { "key": "a", "text": { "id": "Error Prevention dan User Control & Freedom" } },
+      { "key": "b", "text": { "id": "Aesthetic and Minimalist Design" } },
+      { "key": "c", "text": { "id": "Flexibility and Efficiency of Use" } },
+      { "key": "d", "text": { "id": "Recognition rather than Recall" } }
+    ],
+    "correct_key": "a",
+    "explanation": { "id": "Dialog konfirmasi destruktif mencegah kesalahan fatal (Error Prevention) serta memberi kendali pembatalan aman (User Control & Freedom)." }
+  },
+  {
+    "id": "rq_ui_l5_02",
+    "role_slug": "uiux-designer",
+    "level": 5,
+    "level_name": "Ahli",
+    "competency_id": "comp_uiux_1",
+    "competency_name": "Riset Pengguna & Persona",
+    "text": { "id": "Dalam metodologi Jobs-To-Be-Done (JTBD), bagaimana rumusan mental model pengguna didefinisikan secara fundamental?" },
+    "options": [
+      { "key": "a", "text": { "id": "Pengguna tidak membeli produk semata, melainkan 'menyewa' produk untuk membantu mereka mencapai kemajuan hidup dalam situasi spesifik." } },
+      { "key": "b", "text": { "id": "Pengguna selalu memilih produk dengan jumlah fitur paling banyak di pasaran." } },
+      { "key": "c", "text": { "id": "Pengguna diklasifikasikan semata-mata berdasarkan rentang usia dan domisili geografis." } },
+      { "key": "d", "text": { "id": "Pengguna tidak peduli pada hasil akhir selama aplikasi terlihat estetik." } }
+    ],
+    "correct_key": "a",
+    "explanation": { "id": "Konsep inti JTBD adalah 'When [situation], I want to [motivation], so I can [expected outcome]', fokus pada kemajuan fungsional dan emosional." }
+  },
+
+  {
+    "id": "rq_net_l1_01",
+    "role_slug": "network-engineer",
+    "level": 1,
+    "level_name": "Dasar",
+    "competency_id": "comp_net_1",
+    "competency_name": "Routing & Switching",
+    "text": { "id": "Di lapisan (layer) berapakah perangkat Switch bekerja pada model referensi OSI standar?" },
+    "options": [
+      { "key": "a", "text": { "id": "Layer 1 (Physical)" } },
+      { "key": "b", "text": { "id": "Layer 2 (Data Link)" } },
+      { "key": "c", "text": { "id": "Layer 3 (Network)" } },
+      { "key": "d", "text": { "id": "Layer 4 (Transport)" } }
+    ],
+    "correct_key": "b",
+    "explanation": { "id": "Switch standar beroperasi pada Layer 2 menggunakan MAC Address untuk meneruskan frame data ke port tujuan." }
+  },
+  {
+    "id": "rq_net_l1_02",
+    "role_slug": "network-engineer",
+    "level": 1,
+    "level_name": "Dasar",
+    "competency_id": "comp_net_2",
+    "competency_name": "Subnetting & Alamat IP",
+    "text": { "id": "Berapa jumlah alamat IP host yang dapat digunakan (usable host) pada subnet mask /24 (255.255.255.0)?" },
+    "options": [
+      { "key": "a", "text": { "id": "256 host" } },
+      { "key": "b", "text": { "id": "254 host" } },
+      { "key": "c", "text": { "id": "255 host" } },
+      { "key": "d", "text": { "id": "128 host" } }
+    ],
+    "correct_key": "b",
+    "explanation": { "id": "Total alamat adalah 2^8 = 256. Dua alamat dialokasikan untuk Network ID (pertama) dan Broadcast Address (terakhir), menyisakan 254 usable host." }
+  },
+  {
+    "id": "rq_net_l2_01",
+    "role_slug": "network-engineer",
+    "level": 2,
+    "level_name": "Pemula",
+    "competency_id": "comp_net_3",
+    "competency_name": "Firewall, NAT & VPN",
+    "text": { "id": "Teknologi NAT (Network Address Translation) tipe PAT (Port Address Translation) memungkinkan..." },
+    "options": [
+      { "key": "a", "text": { "id": "Banyak perangkat IP privat berbagi satu alamat IP publik dengan memanfaatkan nomor port yang berbeda." } },
+      { "key": "b", "text": { "id": "Setiap IP privat wajib memiliki pasangan tepat satu IP publik permanen." } },
+      { "key": "c", "text": { "id": "Menonaktifkan enkripsi paket di router." } },
+      { "key": "d", "text": { "id": "Menggantikan fungsi DHCP server kantor." } }
+    ],
+    "correct_key": "a",
+    "explanation": { "id": "PAT (juga dikenal sebagai NAT Overload) memetakan ribuan sesi internal ke satu IP publik menggunakan nomor port Layer 4." }
+  },
+  {
+    "id": "rq_net_l2_02",
+    "role_slug": "network-engineer",
+    "level": 2,
+    "level_name": "Pemula",
+    "competency_id": "comp_net_4",
+    "competency_name": "Analisis Paket (Wireshark)",
+    "text": { "id": "Proses jabat tangan 3 arah (Three-Way Handshake) pada protokol TCP terjadi dengan urutan bendera (flag)..." },
+    "options": [
+      { "key": "a", "text": { "id": "SYN -> SYN-ACK -> ACK" } },
+      { "key": "b", "text": { "id": "ACK -> SYN -> FIN" } },
+      { "key": "c", "text": { "id": "RST -> SYN -> ACK" } },
+      { "key": "d", "text": { "id": "SYN -> PSH -> FIN" } }
+    ],
+    "correct_key": "a",
+    "explanation": { "id": "Klien mengirim paket SYN, server membalas dengan SYN-ACK, dan klien menyelesaikannya dengan ACK sebelum transmisi data payload dimulai." }
+  },
+  {
+    "id": "rq_net_l3_01",
+    "role_slug": "network-engineer",
+    "level": 3,
+    "level_name": "Menengah",
+    "competency_id": "comp_net_1",
+    "competency_name": "Routing & Switching",
+    "text": { "id": "Protokol Spanning Tree Protocol (STP / 802.1D) dirancang di lingkungan switch LAN untuk mencegah..." },
+    "options": [
+      { "key": "a", "text": { "id": "Pencurian bandwidth internet oleh karyawan." } },
+      { "key": "b", "text": { "id": "Looping Layer 2 dan badai siaran (broadcast storm) pada topologi switch yang memiliki jalur redundan." } },
+      { "key": "c", "text": { "id": "Kabel serat optik terputus secara fisik." } },
+      { "key": "d", "text": { "id": "Serangan malware ransomware pada workstation." } }
+    ],
+    "correct_key": "b",
+    "explanation": { "id": "STP secara cerdas memblokir port cadangan untuk memutus siklus loop tanpa menghilangkan kemampuan failover otomatis jika link utama putus." }
+  },
+  {
+    "id": "rq_net_l3_02",
+    "role_slug": "network-engineer",
+    "level": 3,
+    "level_name": "Menengah",
+    "competency_id": "comp_net_5",
+    "competency_name": "Topologi & Redundansi Jaringan",
+    "text": { "id": "Protokol First Hop Redundancy Protocol (FHRP) seperti HSRP atau VRRP berfungsi untuk..." },
+    "options": [
+      { "key": "a", "text": { "id": "Menyediakan virtual default gateway bersama dari dua atau lebih router fisik sehingga koneksi klien tidak terputus saat satu router down." } },
+      { "key": "b", "text": { "id": "Membagi sinyal Wi-Fi kantor menjadi dua frekuensi 2.4 GHz dan 5 GHz." } },
+      { "key": "c", "text": { "id": "Menghitung pemakaian kuota data bulanan ISP." } },
+      { "key": "d", "text": { "id": "Melakukan enkripsi file di server NAS." } }
+    ],
+    "correct_key": "a",
+    "explanation": { "id": "HSRP/VRRP menyajikan Virtual IP sebagai default gateway klien; bila router master bermasalah, router backup mengambil alih seketika." }
+  },
+  {
+    "id": "rq_net_l4_01",
+    "role_slug": "network-engineer",
+    "level": 4,
+    "level_name": "Lanjut",
+    "competency_id": "comp_net_1",
+    "competency_name": "Routing & Switching",
+    "text": { "id": "Dalam routing dinamis OSPF (Open Shortest Path First), metrik cost jalur tautan dihitung berdasarkan..." },
+    "options": [
+      { "key": "a", "text": { "id": "Jumlah lompatan router (Hop Count)." } },
+      { "key": "b", "text": { "id": "Bandwidth referensi dibagi bandwidth aktual interface (Reference Bandwidth / Interface Bandwidth)." } },
+      { "key": "c", "text": { "id": "Tingkat penggunaan CPU router." } },
+      { "key": "d", "text": { "id": "Suhu ruangan rack server." } }
+    ],
+    "correct_key": "b",
+    "explanation": { "id": "OSPF adalah protokol link-state yang menggunakan algoritma Dijkstra dengan metrik biaya berbasis bandwidth (secara default ref 100 Mbps)." }
+  },
+  {
+    "id": "rq_net_l4_02",
+    "role_slug": "network-engineer",
+    "level": 4,
+    "level_name": "Lanjut",
+    "competency_id": "comp_net_6",
+    "competency_name": "Protokol Keamanan Jaringan",
+    "text": { "id": "Fitur switch 'DHCP Snooping' melindungi jaringan lokal dari ancaman..." },
+    "options": [
+      { "key": "a", "text": { "id": "Rogue DHCP Server yang menyebarkan konfigurasi gateway palsu untuk melancarkan serangan Man-in-the-Middle (MITM)." } },
+      { "key": "b", "text": { "id": "Kabel LAN terlepas dari port kejut listrik." } },
+      { "key": "c", "text": { "id": "Pencurian password admin lewat USB drive." } },
+      { "key": "d", "text": { "id": "Serangan DDOS volume 100 Terabit dari internet global." } }
+    ],
+    "correct_key": "a",
+    "explanation": { "id": "DHCP Snooping membedakan Trusted Port (hanya terhubung ke server DHCP sah) dan Untrusted Port yang diblokir bila mengirim respons DHCP Offer." }
+  },
+  {
+    "id": "rq_net_l5_01",
+    "role_slug": "network-engineer",
+    "level": 5,
+    "level_name": "Ahli",
+    "competency_id": "comp_net_1",
+    "competency_name": "Routing & Switching",
+    "text": { "id": "BGP (Border Gateway Protocol) mendeteksi dan mencegah terjadinya routing loop antarsistem otonom (AS) melalui atribut..." },
+    "options": [
+      { "key": "a", "text": { "id": "AS_PATH (jika AS lokal sudah tercantum di dalam AS_PATH update, rute tersebut akan diabaikan)." } },
+      { "key": "b", "text": { "id": "Time To Live (TTL) paket IP selalu di-reset ke 255." } },
+      { "key": "c", "text": { "id": "Nilai MAC Address pada header frame Ethernet." } },
+      { "key": "d", "text": { "id": "Pengiriman pesan ICMP Echo Request periodik." } }
+    ],
+    "correct_key": "a",
+    "explanation": { "id": "AS_PATH adalah atribut wajib BGP yang mencatat urutan AS yang dilalui rute. Jika sebuah AS melihat nomor AS-nya sendiri dalam daftar, rute ditolak untuk mencegah loop." }
+  },
+  {
+    "id": "rq_net_l5_02",
+    "role_slug": "network-engineer",
+    "level": 5,
+    "level_name": "Ahli",
+    "competency_id": "comp_net_3",
+    "competency_name": "Firewall, NAT & VPN",
+    "text": { "id": "Pada IPsec VPN fase 1 (IKE Main Mode vs Aggressive Mode), keunggulan utama Main Mode adalah..." },
+    "options": [
+      { "key": "a", "text": { "id": "Main Mode melindungi identitas kedua pihak dengan mengenkripsinya sebelum identitas dipertukarkan (menggunakan 6 paket handshake)." } },
+      { "key": "b", "text": { "id": "Main Mode hanya membutuhkan 3 paket sehingga jauh lebih kencang." } },
+      { "key": "c", "text": { "id": "Main Mode tidak memerlukan Pre-Shared Key." } },
+      { "key": "d", "text": { "id": "Main Mode bekerja tanpa memerlukan protokol internet (IP)." } }
+    ],
+    "correct_key": "a",
+    "explanation": { "id": "Main Mode menggunakan 6 pertukaran paket di mana negosiasi DH dan enkripsi dibangun terlebih dahulu sehingga identitas peer terlindungi dari sniffing." }
+  },
+
+  {
+    "id": "rq_qa_l1_01",
+    "role_slug": "quality-assurance",
+    "level": 1,
+    "level_name": "Dasar",
+    "competency_id": "comp_qa_1",
+    "competency_name": "Manual Testing & Test Case",
+    "text": { "id": "Apa perbedaan mendasar antara pengujian fungsional (Functional Testing) dan non-fungsional (Non-Functional Testing)?" },
+    "options": [
+      { "key": "a", "text": { "id": "Functional menguji apa yang sistem lakukan (sesuai spesifikasi fitur), sedangkan Non-Functional menguji bagaimana sistem bekerja (kecepatan, keamanan, keandalan)." } },
+      { "key": "b", "text": { "id": "Functional dilakukan oleh programmer, Non-Functional dilakukan oleh pengguna akhir." } },
+      { "key": "c", "text": { "id": "Non-Functional hanya dilakukan setelah aplikasi dirilis 1 tahun." } },
+      { "key": "d", "text": { "id": "Tidak ada perbedaan, keduanya menguji kode yang sama." } }
+    ],
+    "correct_key": "a",
+    "explanation": { "id": "Uji fungsional memastikan perilaku fitur berjalan sesuai kebutuhan bisnis, sedangkan non-fungsional menilai aspek kinerja, skalabilitas, dan keandalan." }
+  },
+  {
+    "id": "rq_qa_l1_02",
+    "role_slug": "quality-assurance",
+    "level": 1,
+    "level_name": "Dasar",
+    "competency_id": "comp_qa_3",
+    "competency_name": "Pelaporan Bug & Analisis Severity",
+    "text": { "id": "Komponen informasi apa yang paling krusial dicantumkan dalam sebuah Bug Report agar developer dapat segera memperbaikinya?" },
+    "options": [
+      { "key": "a", "text": { "id": "Langkah reproduksi (Steps to Reproduce), hasil yang diharapkan, hasil aktual, dan log/screenshot." } },
+      { "key": "b", "text": { "id": "Opini pribadi QA mengenai kecerdasan tim programmer." } },
+      { "key": "c", "text": { "id": "Hanya satu baris judul 'Aplikasi error' tanpa screenshot." } },
+      { "key": "d", "text": { "id": "Estimasi harga jual aplikasi di pasar saham." } }
+    ],
+    "correct_key": "a",
+    "explanation": { "id": "Langkah reproduksi yang jelas, terurut, dan dilengkapi bukti visual adalah kunci agar developer dapat mereplikasi dan memperbaiki bug tanpa asumsi spekulatif." }
+  },
+  {
+    "id": "rq_qa_l2_01",
+    "role_slug": "quality-assurance",
+    "level": 2,
+    "level_name": "Pemula",
+    "competency_id": "comp_qa_5",
+    "competency_name": "Regression & Edge Cases",
+    "text": { "id": "Sebuah input formulir hanya menerima umur pengguna antara 18 hingga 65 tahun. Dengan teknik Boundary Value Analysis (BVA), nilai uji minimum yang wajib diuji adalah..." },
+    "options": [
+      { "key": "a", "text": { "id": "17, 18, 19 dan 64, 65, 66" } },
+      { "key": "b", "text": { "id": "0, 50, 100" } },
+      { "key": "c", "text": { "id": "25, 30, 40" } },
+      { "key": "d", "text": { "id": "-100 dan +1000 saja" } }
+    ],
+    "correct_key": "a",
+    "explanation": { "id": "Boundary Value Analysis menguji titik batas tepat pada batas, tepat sebelum batas, dan tepat sesudah batas nilai yang valid (min-1, min, min+1, max-1, max, max+1)." }
+  },
+  {
+    "id": "rq_qa_l2_02",
+    "role_slug": "quality-assurance",
+    "level": 2,
+    "level_name": "Pemula",
+    "competency_id": "comp_qa_2",
+    "competency_name": "Otomasi Uji (E2E/API)",
+    "text": { "id": "Dalam pengujian otomatis web berbasis Playwright atau Cypress, mengapa selector berbasis atribut aksesibilitas (role, label, test-id) lebih disarankan daripada XPath absolut atau class CSS dekoratif?" },
+    "options": [
+      { "key": "a", "text": { "id": "Karena XPath absolut dan class styling CSS sangat rentan rusak (flaky/brittle) jika terjadi refactor visual UI." } },
+      { "key": "b", "text": { "id": "Karena browser tidak mendukung class CSS pada mode otomasi." } },
+      { "key": "c", "text": { "id": "Karena XPath memakan lisensi berbayar bulanan." } },
+      { "key": "d", "text": { "id": "Karena test-id membuat ukuran file JavaScript bundle berkurang drastis." } }
+    ],
+    "correct_key": "a",
+    "explanation": { "id": "Selector berbasis role atau data-testid tahan terhadap perubahan desain estetika dan mencerminkan cara pengguna/layar pembaca berinteraksi dengan DOM." }
+  },
+  {
+    "id": "rq_qa_l3_01",
+    "role_slug": "quality-assurance",
+    "level": 3,
+    "level_name": "Menengah",
+    "competency_id": "comp_qa_1",
+    "competency_name": "Manual Testing & Test Case",
+    "text": { "id": "Apa perbedaan antara Severity dan Priority dari sebuah bug dalam manajemen kualitas?" },
+    "options": [
+      { "key": "a", "text": { "id": "Severity mengukur dampak teknis bug pada sistem, sedangkan Priority menentukan seberapa cepat bug harus diperbaiki dari kacamata bisnis." } },
+      { "key": "b", "text": { "id": "Severity ditentukan oleh manajer produk, Priority oleh tester pemula." } },
+      { "key": "c", "text": { "id": "Keduanya mengukur hal yang sama persis dan tidak perlu dibedakan." } },
+      { "key": "d", "text": { "id": "Priority selalu lebih tinggi dari Severity dalam setiap kasus." } }
+    ],
+    "correct_key": "a",
+    "explanation": { "id": "Contoh: Typo pada logo perusahaan di halaman depan memiliki Severity Rendah (tidak merusak sistem) tetapi Priority Sangat Tinggi (merusak citra brand perusahaan)." }
+  },
+  {
+    "id": "rq_qa_l3_02",
+    "role_slug": "quality-assurance",
+    "level": 3,
+    "level_name": "Menengah",
+    "competency_id": "comp_qa_2",
+    "competency_name": "Otomasi Uji (E2E/API)",
+    "text": { "id": "Saat menguji endpoint REST API POST /checkout, respons manakah yang menunjukkan pengujian validasi input negatif berhasil menangani payload yang salah?" },
+    "options": [
+      { "key": "a", "text": { "id": "HTTP 500 Internal Server Error dengan database stack trace lengkap." } },
+      { "key": "b", "text": { "id": "HTTP 400 Bad Request atau 422 Unprocessable Entity dengan rincian pesan kesalahan validasi yang jelas." } },
+      { "key": "c", "text": { "id": "HTTP 200 OK dengan data kosong." } },
+      { "key": "d", "text": { "id": "Koneksi time out tanpa respons." } }
+    ],
+    "correct_key": "b",
+    "explanation": { "id": "Input invalid tidak boleh menyebabkan server crash (500), melainkan harus ditolak secara anggun oleh layer validasi dengan kode status 4xx." }
+  },
+  {
+    "id": "rq_qa_l4_01",
+    "role_slug": "quality-assurance",
+    "level": 4,
+    "level_name": "Lanjut",
+    "competency_id": "comp_qa_4",
+    "competency_name": "Load & Performance Testing",
+    "text": { "id": "Dalam uji beban (Performance Load Testing menggunakan k6 atau JMeter), apa perbedaan antara Stress Testing dan Spike Testing?" },
+    "options": [
+      { "key": "a", "text": { "id": "Stress Testing menaikkan beban bertahap hingga sistem mencapai titik batas hancur (breaking point), sedangkan Spike Testing menguji lonjakan beban ekstrem seketika dalam waktu singkat." } },
+      { "key": "b", "text": { "id": "Stress Testing hanya untuk frontend, Spike Testing untuk database." } },
+      { "key": "c", "text": { "id": "Spike Testing dijalankan terus-menerus selama 30 hari tanpa henti." } },
+      { "key": "d", "text": { "id": "Tidak ada perbedaan, keduanya mengukur waktu ping jaringan." } }
+    ],
+    "correct_key": "a",
+    "explanation": { "id": "Spike testing mensimulasikan situasi seperti pembukaan tiket konser (flash sale), sedangkan stress testing mencari batas kapasitas maksimum arsitektur." }
+  },
+  {
+    "id": "rq_qa_l4_02",
+    "role_slug": "quality-assurance",
+    "level": 4,
+    "level_name": "Lanjut",
+    "competency_id": "comp_qa_6",
+    "competency_name": "Integrasi CI/CD Quality Gate",
+    "text": { "id": "Bagaimana konsep 'Shift-Left Testing' diterapkan dalam siklus hidup pengembangan perangkat lunak (SDLC)?" },
+    "options": [
+      { "key": "a", "text": { "id": "Memindahkan aktivitas pengujian ke tahap awal (review spesifikasi, unit test, linter, dan kontrak API) sebelum kode masuk tahap produksi." } },
+      { "key": "b", "text": { "id": "Menyerahkan seluruh pengujian ke pengguna akhir setelah aplikasi rilis." } },
+      { "key": "c", "text": { "id": "Mematikan automated test di pipeline CI untuk mempercepat deploy." } },
+      { "key": "d", "text": { "id": "Hanya menguji tombol yang berada di sisi kiri layar." } }
+    ],
+    "correct_key": "a",
+    "explanation": { "id": "Shift-Left mengurangi biaya perbaikan bug secara eksponensial karena cacat logika dicegah sejak tahap requirement dan coding dini." }
+  },
+  {
+    "id": "rq_qa_l5_01",
+    "role_slug": "quality-assurance",
+    "level": 5,
+    "level_name": "Ahli",
+    "competency_id": "comp_qa_5",
+    "competency_name": "Regression & Edge Cases",
+    "text": { "id": "Apa yang dimaksud dengan 'Flaky Test' dalam rangkaian pengujian otomatis, dan apa pendekatan mitigasi teknik terbaik untuk mengatasinya?" },
+    "options": [
+      { "key": "a", "text": { "id": "Test yang menghasilkan pass dan fail bergantian tanpa ada perubahan kode; dimitigasi dengan menghilangkan hard-wait (sleep), memastikan isolasi data uji (fresh state), dan sinkronisasi network/DOM async." } },
+      { "key": "b", "text": { "id": "Test yang berjalan terlalu cepat sehingga perlu ditambahkan sleep(10000)." } },
+      { "key": "c", "text": { "id": "Test yang selalu gagal 100% dari waktu pengujian." } },
+      { "key": "d", "text": { "id": "Test yang hanya dijalankan pada hari libur nasional." } }
+    ],
+    "correct_key": "a",
+    "explanation": { "id": "Flaky test merusak kepercayaan tim pada test suite. Menghilangkan race condition, dependensi data antar-test, dan polling eksplisit adalah solusi sejati dibanding auto-retry buta." }
+  },
+  {
+    "id": "rq_qa_l5_02",
+    "role_slug": "quality-assurance",
+    "level": 5,
+    "level_name": "Ahli",
+    "competency_id": "comp_qa_6",
+    "competency_name": "Integrasi CI/CD Quality Gate",
+    "text": { "id": "Dalam arsitektur Microservices, mengapa Consumer-Driven Contract Testing (misal menggunakan Pact) jauh lebih efisien dibanding pengujian E2E terintegrasi penuh di lingkungan staging?" },
+    "options": [
+      { "key": "a", "text": { "id": "Contract testing memvalidasi kesepakatan payload antarlayanan secara independen dan cepat tanpa perlu menyalakan seluruh puluhan microservice di staging yang lambat dan rapuh." } },
+      { "key": "b", "text": { "id": "Contract testing otomatis menulis kode aplikasi backend tanpa programmer." } },
+      { "key": "c", "text": { "id": "Pengujian E2E tidak bisa dijalankan pada sistem cloud." } },
+      { "key": "d", "text": { "id": "Consumer-Driven testing meniadakan kebutuhan unit test sama sekali." } }
+    ],
+    "correct_key": "a",
+    "explanation": { "id": "Contract testing mengisolasi pengujian komunikasi API antar-layanan melalui mock yang diverifikasi dua arah, menghindarkan ketergantungan deployment bersama yang kompleks." }
+  }
+]

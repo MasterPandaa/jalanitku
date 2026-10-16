@@ -83,3 +83,14 @@ export function isUsernameAvailable(username: string, currentUserId?: string): b
   }
   return true;
 }
+
+/**
+ * Mendapatkan user yang sedang aktif dari session cookie
+ */
+export async function getSessionUser(): Promise<User | null> {
+  const { cookies } = await import("next/headers");
+  const cookieStore = await cookies();
+  const sessionId = cookieStore.get("jalanitku_session")?.value;
+  if (!sessionId) return null;
+  return usersStore.get(sessionId) || null;
+}

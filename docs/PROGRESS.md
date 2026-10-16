@@ -17,12 +17,12 @@
 | **T6** | Engine & UI JalanKarir | Selesai | 2026-10-16 | Scoring engine vektor role, flow tes 5 level & tie-breaker |
 | **T7** | JalanID (Kartu, Unduh, Bagikan) | Selesai | 2026-10-16 | Kartu JalanID, render PNG 3 rasio, Web Share API & /karir/hasil |
 | **T8** | Sistem Mascot | Pending | - | 19 mascot role SVG + animasi 5 state |
-| **T9** | Bank Soal JalanRapor | Pending | - | Soal pilihan ganda per role |
-| **T10** | Engine & UI JalanRapor | Pending | - | Flow 5 level tanpa timer |
-| **T11** | Cocoklogiku | Pending | - | Rapor hasil, radar chart, reason & rekomendasi |
-| **T12** | Anti-Bot & Keamanan | Pending | - | Rate limit, captcha, randomisasi |
+| **T9** | Bank Soal JalanRapor | Selesai | 2026-10-16 | Bank soal Batch R1 (5 role x 5 level) pilihan ganda + validator |
+| **T10** | Engine & UI JalanRapor | Selesai | 2026-10-16 | Engine penilaian berbobot L1-L5, sanitasi soal, session store server |
+| **T11** | Cocoklogiku | Selesai | 2026-10-16 | Rapor hasil, radar chart SVG, reason deterministik, canvas PNG & review |
+| **T12** | Anti-Bot & Keamanan | In Progress | - | Zero-leak keys, rate limit, sanitasi respons |
 | **T13** | Polish, QA & Verifikasi | Pending | - | Audit visual, aksesibilitas, end-to-end test |
-| **T14** | JalanLoker | Pending | - | Ditunda (tahap lanjut) |
+| **T14** | JalanLoker | Ditunda | - | Segera Hadir sesuai brief |
 | **T15** | Bahasa Inggris | Pending | - | Menyusul setelah versi Indonesia stabil |
 
 ---
@@ -40,3 +40,20 @@
   - `docs/CONTENT_GUIDE.md`
   - `docs/PROGRESS.md`
 - **Setup Kerangka**: Instalasi dependensi Next.js, React 19, TypeScript, Tailwind CSS.
+
+### [2026-10-16] Milestone MVP 2 — JalanRapor & Cocoklogiku (T9, T10, T11)
+- **T9: Bank Soal JalanRapor**:
+  - Penyusunan bank soal teknis Batch R1 (5 role prioritas: Software Engineer, Data Analyst, UI/UX Designer, Network Engineer, Quality Assurance) dengan 5 level (Level 1: Dasar s/d Level 5: Ahli).
+  - Skrip verifikator `scripts/validate-rapor-questions.ts` memastikan konsistensi relasi pilar kompetensi, kunci jawaban, dan zero error.
+- **T10: Engine JalanRapor**:
+  - Penilaian berbobot server-side (Level 1=1x, Level 2=1.5x, Level 3=2x, Level 4=2.5x, Level 5=3x).
+  - Sanitasi respons network tanpa membocorkan kunci jawaban atau pembahasan sebelum tes usai.
+  - Alur 5 level tanpa timer, pengacakan opsi deterministik, dan session store server.
+  - Aturan mutlak: Tepat 1 Cocoklogiku aktif per pengguna (upsert menimpa hasil lama dengan konfirmasi dialog peringatan).
+- **T11: Cocoklogiku**:
+  - Visualisasi Radar Chart SVG responsif untuk memetakan kekuatan kompetensi teknis pengguna.
+  - Level Bar Chart pencapaian 5 level dengan warna token neo-brutalism.
+  - Deterministik "Reason" generator yang menganalisis kekuatan, kelemahan, dan batas performa.
+  - Rekomendasi belajar terarah dan saran alternatif role.
+  - Kartu Cocoklogiku neo-brutalism dengan ekspor PNG (3 rasio: card, square 1:1, story 9:16) dan integrasi Web Share API (tanpa link publik).
+  - Fitur peninjauan pembahasan soal pasca-tes dengan rincian penjelasan teknis.
