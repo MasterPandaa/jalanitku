@@ -1,0 +1,82 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Detektif JalanMin, maskot IT detective state hover">
+          <g class="jm-bob">
+            <!-- 1. KAKI & HARD SHADOW SEPATU -->
+            <rect x="66" y="154" width="22" height="26" fill="#0A0A0A" />
+            <rect x="120" y="154" width="22" height="26" fill="#0A0A0A" />
+            <rect x="62" y="150" width="22" height="26" fill="#0A0A0A" rx="2" />
+            <rect x="116" y="150" width="22" height="26" fill="#0A0A0A" rx="2" />
+            <line x1="62" y1="172" x2="84" y2="172" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square" />
+            <line x1="116" y1="172" x2="138" y2="172" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square" />
+        
+            <!-- 2. LENGAN KIRI -->
+            <line x1="40" y1="104" x2="18" y2="124" stroke="#0A0A0A" stroke-width="6" stroke-linecap="round" />
+                <circle cx="16" cy="126" r="6" fill="#FFD60A" stroke="#0A0A0A" stroke-width="4" />
+        
+            <!-- 3. LENGAN KANAN KE GAGANG -->
+            <line x1="150" y1="104" x2="148" y2="114" stroke="#0A0A0A" stroke-width="6" stroke-linecap="round" />
+        
+            <!-- 4. BADAN RAMBU KUNING & HARD SHADOW -->
+            <rect x="48" y="58" width="110" height="96" fill="#0A0A0A" />
+            <rect x="40" y="50" width="110" height="96" fill="#FFD60A" stroke="#0A0A0A" stroke-width="5" />
+            <line x1="52" y1="134" x2="138" y2="134" stroke="#0A0A0A" stroke-width="4" stroke-dasharray="10 8" />
+            <rect x="54" y="104" width="12" height="8" rx="2" fill="#FF5C8A" />
+            <rect x="124" y="104" width="12" height="8" rx="2" fill="#FF5C8A" />
+        
+            <!-- 5. KERAH MANTEL & DASI CYAN -->
+            <polygon points="74,146 88,146 82,132" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3" stroke-linejoin="round" />
+            <polygon points="116,146 102,146 108,132" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3" stroke-linejoin="round" />
+            <rect x="91" y="132" width="8" height="5" fill="#00F0FF" stroke="#0A0A0A" stroke-width="2.5" />
+            <polygon points="91,137 99,137 101,146 95,150 89,146" fill="#00F0FF" stroke="#0A0A0A" stroke-width="2.5" />
+        
+            <!-- 6. ALIS DETEKTIF -->
+            <line x1="64" y1="70" x2="84" y2="73" stroke="#0A0A0A" stroke-width="4" stroke-linecap="round" />
+                <line x1="104" y1="66" x2="128" y2="68" stroke="#0A0A0A" stroke-width="4" stroke-linecap="round" />
+        
+            <!-- 7. MATA KIRI (NORMAL) -->
+            <rect x="66" y="78" width="18" height="22" rx="4" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="4" />
+            <g class="jm-eye-left" style="transform: translate(var(--p-left-x, 0px), var(--p-left-y, 0px));">
+              <rect x="71" y="84" width="8" height="10" rx="2" fill="#0A0A0A" />
+              <circle cx="73.5" cy="86.5" r="1.5" fill="#FFFFFF" />
+            </g>
+        
+            <!-- 8. MATA KANAN (MEMBESAR 1.25x DI BALIK LENSA) -->
+            <rect x="104" y="74" width="24" height="28" rx="5" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="4" />
+            <g class="jm-eye-right" style="transform: translate(var(--p-right-x, 0px), var(--p-right-y, 0px));">
+              <rect x="110" y="81" width="11" height="13" rx="2.5" fill="#0A0A0A" />
+              <circle cx="113.5" cy="84" r="2.2" fill="#FFFFFF" />
+              <circle cx="117.5" cy="89" r="1.2" fill="#00F0FF" />
+            </g>
+        
+            <!-- 9. MULUT DETEKTIF -->
+            <path d="M76 114 Q94 136 112 114" fill="#0A0A0A" stroke="#0A0A0A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M85 125 Q94 120 103 125 Q94 132 85 125 Z" fill="#FF5C8A" />
+        
+            <!-- 10. KACA PEMBESAR NEO-BRUTALISM -->
+            <g id="jm-magnifier" style="transform: translate(var(--g-x, 0px), var(--g-y, 0px)) scale(1.08) rotate(var(--g-rot, 0deg)); transform-origin: 116px 88px;">
+              <circle cx="120" cy="92" r="23" fill="#0A0A0A" />
+              <rect x="138" y="106" width="12" height="32" rx="3" transform="rotate(-38 138 106)" fill="#0A0A0A" />
+              <rect x="134" y="102" width="12" height="32" rx="3" transform="rotate(-38 134 102)" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="4.5" />
+              <line x1="140" y1="112" x2="148" y2="106" stroke="#0A0A0A" stroke-width="3" stroke-linecap="round" />
+              <line x1="144" y1="117" x2="152" y2="111" stroke="#0A0A0A" stroke-width="3" stroke-linecap="round" />
+              <circle cx="116" cy="88" r="23" fill="#FFFFFF" fill-opacity="0.12" stroke="#0A0A0A" stroke-width="5" />
+              <circle cx="116" cy="88" r="19.5" fill="#00F0FF" fill-opacity="0.28" />
+              <path d="M103 78 A16 16 0 0 1 126 73" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" fill="none" />
+              <circle cx="124" cy="98" r="2" fill="#FFFFFF" />
+              <circle cx="146" cy="110" r="6.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="4" />
+            </g>
+        
+            <!-- 11. TOPI DEERSTALKER NEO-BRUTALISM -->
+            <g class="jm-hat" style="transform-origin: 95px 44px;">
+              <path d="M46 48 C46 22 70 12 95 12 C120 12 144 22 144 48 Z" fill="#0A0A0A" />
+              <path d="M42 44 C42 18 68 8 95 8 C122 8 148 18 148 44 Z" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="5" />
+              <path d="M142 40 L168 46 L142 50 Z" fill="#FFD60A" stroke="#0A0A0A" stroke-width="4.5" stroke-linejoin="miter" />
+              <path d="M48 40 L22 46 L48 50 Z" fill="#FFD60A" stroke="#0A0A0A" stroke-width="4.5" stroke-linejoin="miter" />
+              <rect x="42" y="38" width="106" height="8" fill="#00F0FF" stroke="#0A0A0A" stroke-width="3" />
+              <path d="M68 38 C68 22 80 14 93 11" stroke="#0A0A0A" stroke-width="4" fill="none" />
+              <path d="M122 38 C122 22 110 14 97 11" stroke="#0A0A0A" stroke-width="4" fill="none" />
+              <circle cx="95" cy="8" r="4.5" fill="#00F0FF" stroke="#0A0A0A" stroke-width="2.5" />
+              <path d="M92 8 Q86 3 88 12" stroke="#00F0FF" stroke-width="3" fill="none" />
+              <path d="M98 8 Q104 3 102 12" stroke="#00F0FF" stroke-width="3" fill="none" />
+            </g>
+          </g>
+        </svg>

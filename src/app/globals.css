@@ -137,8 +137,42 @@ summary:focus-visible {
   50% { transform: rotate(-26deg); }
 }
 
+
+        .jm-hat-happy {
+          transform-box: fill-box;
+          transform-origin: 50% 100%;
+          animation: jm-hat-happy 0.9s ease-in-out infinite;
+        }
+        
+        .jm-pump {
+          transform-box: fill-box;
+          transform-origin: 50% 100%;
+          animation: jm-pump 1.1s ease-in-out infinite;
+        }
+        
+        .jm-lens-glint {
+          transform-box: fill-box;
+          transform-origin: center;
+          animation: jm-lens-glint 3s ease-in-out infinite;
+        }
+        
+        @keyframes jm-hat-happy {
+          0%, 100% { transform: translateY(0) rotate(0deg); }
+          50% { transform: translateY(-14px) rotate(8deg); }
+        }
+        
+        @keyframes jm-pump {
+          0%, 100% { transform: translateY(0) rotate(0deg); }
+          50% { transform: translateY(-6px) rotate(2.5deg); }
+        }
+        
+        @keyframes jm-lens-glint {
+          0%, 100% { opacity: 0.85; transform: scale(1); }
+          50% { opacity: 1; transform: scale(1.08); }
+        }
+        
 @media (prefers-reduced-motion: reduce) {
-  .jm-bob, .jm-jump, .jm-eye, .jm-hat, .jm-wave, .nb-btn {
+  .jm-bob, .jm-jump, .jm-eye, .jm-hat, .jm-hat-happy, .jm-wave, .jm-pump, .jm-lens-glint, .nb-btn {
     animation: none !important;
     transition: none !important;
   }

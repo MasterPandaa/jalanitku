@@ -259,7 +259,7 @@ export default function ComponentsGalleryPage() {
         {/* 9. JalanMin Mascot */}
         <section className="space-y-4">
           <h2 className="font-display font-bold text-2xl border-b-3 border-ink pb-2">
-            9. Maskot Default: JalanMin (5 State Interaktif)
+            9. Maskot Baru: Detektif JalanMin (5 State & Mouse Tracking)
           </h2>
           <div className="bg-surface border-4 border-ink shadow-nb-md p-6 space-y-6">
             <div className="flex flex-wrap items-center gap-3">
