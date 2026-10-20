@@ -1,0 +1,125 @@
+{
+  "user_demo_1": {
+    "id": "cocok_1792519233882_6r3s2z",
+    "userId": "user_demo_1",
+    "username": "budidev",
+    "roleSlug": "software-engineer",
+    "roleName": "Software Engineer",
+    "finalScore": 0,
+    "matchLabel": "Belum Cocok",
+    "levelScores": [
+      {
+        "level": 1,
+        "levelName": "Dasar",
+        "weight": 1,
+        "totalQuestions": 2,
+        "correctQuestions": 0,
+        "percentage": 0
+      },
+      {
+        "level": 2,
+        "levelName": "Pemula",
+        "weight": 1.5,
+        "totalQuestions": 2,
+        "correctQuestions": 0,
+        "percentage": 0
+      },
+      {
+        "level": 3,
+        "levelName": "Menengah",
+        "weight": 2,
+        "totalQuestions": 2,
+        "correctQuestions": 0,
+        "percentage": 0
+      },
+      {
+        "level": 4,
+        "levelName": "Lanjut",
+        "weight": 2.5,
+        "totalQuestions": 2,
+        "correctQuestions": 0,
+        "percentage": 0
+      },
+      {
+        "level": 5,
+        "levelName": "Ahli",
+        "weight": 3,
+        "totalQuestions": 2,
+        "correctQuestions": 0,
+        "percentage": 0
+      }
+    ],
+    "competencyScores": [
+      {
+        "competencyId": "comp_se_1",
+        "competencyName": "Algoritma & Struktur Data",
+        "totalQuestions": 3,
+        "correctQuestions": 0,
+        "percentage": 0
+      },
+      {
+        "competencyId": "comp_se_2",
+        "competencyName": "OOP & Clean Architecture",
+        "totalQuestions": 2,
+        "correctQuestions": 0,
+        "percentage": 0
+      },
+      {
+        "competencyId": "comp_se_3",
+        "competencyName": "REST API & Backend",
+        "totalQuestions": 2,
+        "correctQuestions": 0,
+        "percentage": 0
+      },
+      {
+        "competencyId": "comp_se_4",
+        "competencyName": "Basis Data SQL/NoSQL",
+        "totalQuestions": 1,
+        "correctQuestions": 0,
+        "percentage": 0
+      },
+      {
+        "competencyId": "comp_se_5",
+        "competencyName": "Git & Kolaborasi Kode",
+        "totalQuestions": 1,
+        "correctQuestions": 0,
+        "percentage": 0
+      },
+      {
+        "competencyId": "comp_se_6",
+        "competencyName": "Debugging & Testing",
+        "totalQuestions": 1,
+        "correctQuestions": 0,
+        "percentage": 0
+      }
+    ],
+    "reason": {
+      "summary": "Berdasarkan pengujian teknis 5 level, kamu memperoleh skor akhir 0/100 dengan predikat Belum Cocok untuk role Software Engineer.",
+      "strengths": "Kekuatan terbesarmu berada pada pilar 'Algoritma & Struktur Data' dengan akurasi penguasaan mencapai 0%. Kamu menguasai fondasi konseptual bidang ini dengan sangat solid.",
+      "weaknesses": "Area yang paling membutuhkan akselerasi belajar adalah 'Debugging & Testing' (akurasi 0%). Mengasah aspek ini akan menjadi pengungkit terbesar peningkatan karirmu.",
+      "levelInsight": "Performa relatif stabil di setiap tahapan uji."
+    },
+    "recommendations": [
+      {
+        "topic": "Penguatan Debugging & Testing",
+        "action": "Pelajari konsep fundamental dan kerjakan 3 proyek hands-on kecil yang secara spesifik menantang pemahaman Debugging & Testing."
+      },
+      {
+        "topic": "Pendalaman Git & Kolaborasi Kode",
+        "action": "Bedah best practices industri dan arsitektur studi kasus nyata terkait Git & Kolaborasi Kode."
+      },
+      {
+        "topic": "Uji Skenario Kasus Nyata (Case Study)",
+        "action": "Praktikkan penyelesaian masalah dengan batasan trade-off riil, bukan sekadar teori ideal."
+      }
+    ],
+    "alternativeRoles": [
+      {
+        "roleSlug": "quality-assurance",
+        "roleName": "Quality Assurance",
+        "reason": "Ketelitianmu dalam mengidentifikasi error logika dapat menjadi modal kuat dalam otomatisasi uji dan verifikasi kualitas."
+      }
+    ],
+    "completedAt": "2026-10-20T18:00:33.882Z"
+  }
+}

@@ -1,6 +1,7 @@
 import questionsData from "@/data/seed/career_questions.json";
 import { getRoles, getRoleBySlug, Role } from "./roles";
 import { usersStore } from "./auth";
+        import { getOrCreatePersistentStore, PersistentStore } from "./storage";
 
 export interface CareerSession {
   id: string;
@@ -43,9 +44,30 @@ export interface CareerResult {
   issued_at: string;
 }
 
-// In-memory sessions and jalan_ids storage (one JalanID per user, upsert)
-export const careerSessions: Map<string, CareerSession> = new Map();
-export const jalanIdsStore: Map<string, CareerResult> = new Map();
+// Persistent sessions and jalan_ids storage (one JalanID per user, upsert)
+        export const careerSessions: PersistentStore<CareerSession> = getOrCreatePersistentStore<CareerSession>(
+          "career_sessions",
+          "career_sessions.json",
+          [],
+          {
+            serialize: (session: CareerSession) => ({
+              ...session,
+              answers: session.answers instanceof Map
+                ? Object.fromEntries(session.answers.entries())
+                : session.answers,
+            }),
+            deserialize: (raw: any): CareerSession => ({
+              ...raw,
+              answers: raw.answers
+                ? new Map(Object.entries(raw.answers))
+                : new Map(),
+            }),
+          }
+        );
+        export const jalanIdsStore: PersistentStore<CareerResult> = getOrCreatePersistentStore<CareerResult>(
+          "jalan_ids",
+          "jalan_ids.json"
+        );
 
 /**
  * Starts a new JalanKarir session for user.

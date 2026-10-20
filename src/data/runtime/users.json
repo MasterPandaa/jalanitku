@@ -1,0 +1,45 @@
+{
+  "user_demo_1": {
+    "id": "user_demo_1",
+    "google_sub": "google_sub_123456",
+    "email": "demo.student@gmail.com",
+    "name": "Budi Santoso",
+    "username": "budidev",
+    "avatar_url": "https://api.dicebear.com/7.x/bottts/svg?seed=budidev",
+    "has_jalan_id": true,
+    "has_cocoklogiku": true,
+    "active_role_slug": "software-engineer"
+  },
+  "user_1792518968018": {
+    "id": "user_1792518968018",
+    "google_sub": "google_sub_1792518968018",
+    "email": "test_1792518967@gmail.com",
+    "name": "Kokuo Test User",
+    "username": "kokuo_8968",
+    "avatar_url": "https://api.dicebear.com/7.x/bottts/svg?seed=user_1792518968018"
+  },
+  "user_1792519153322_cfckw": {
+    "id": "user_1792519153322_cfckw",
+    "google_sub": "google_sub_siti_rahmawati",
+    "email": "siti.rahmawati@gmail.com",
+    "name": "Siti Rahmawati",
+    "username": "siti_dev_153",
+    "avatar_url": "https://api.dicebear.com/7.x/bottts/svg?seed=user_1792519153322_cfckw"
+  },
+  "user_1792519305573_hh3hf": {
+    "id": "user_1792519305573_hh3hf",
+    "google_sub": "google_sub_custom_1792519305491",
+    "email": "rahadian.dev@gmail.com",
+    "name": "Rahadian Pratama",
+    "username": "rahadiandev",
+    "avatar_url": "https://api.dicebear.com/7.x/bottts/svg?seed=user_1792519305573_hh3hf"
+  },
+  "user_1792519915830_my9jj": {
+    "id": "user_1792519915830_my9jj",
+    "google_sub": "sub_tester_2026_abc",
+    "email": "tester.baru.2026@gmail.com",
+    "name": "Tester Baru",
+    "username": "tester_baru",
+    "avatar_url": "https://api.dicebear.com/7.x/bottts/svg?seed=user_1792519915830_my9jj"
+  }
+}

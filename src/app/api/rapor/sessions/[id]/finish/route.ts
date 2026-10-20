@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getSessionUser } from "@/lib/auth";
+import { getSessionUser, usersStore } from "@/lib/auth";
 import { getRaporSession, finishRaporSession } from "@/lib/rapor";
 import { getRoleBySlug } from "@/lib/roles";
 

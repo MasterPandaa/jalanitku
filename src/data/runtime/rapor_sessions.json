@@ -1,0 +1,1268 @@
+{
+  "rsess_1792519217363_klcw3g1": {
+    "sessionId": "rsess_1792519217363_klcw3g1",
+    "userId": "user_demo_1",
+    "roleSlug": "software-engineer",
+    "currentLevel": 1,
+    "totalLevels": 5,
+    "isFinished": false,
+    "answers": {},
+    "startedAt": "2026-10-20T18:00:17.363Z",
+    "assignedQuestions": [
+      {
+        "id": "rq_se_l1_02",
+        "role_slug": "software-engineer",
+        "level": 1,
+        "level_name": "Dasar",
+        "competency_id": "comp_se_2",
+        "competency_name": "OOP & Clean Architecture",
+        "text": {
+          "id": "Prinsip dasar OOP yang membungkus data bersama method-nya serta membatasi akses langsung dari luar disebut..."
+        },
+        "options": [
+          {
+            "key": "a",
+            "text": {
+              "id": "Polymorphism"
+            }
+          },
+          {
+            "key": "b",
+            "text": {
+              "id": "Inheritance"
+            }
+          },
+          {
+            "key": "c",
+            "text": {
+              "id": "Encapsulation"
+            }
+          },
+          {
+            "key": "d",
+            "text": {
+              "id": "Abstraction"
+            }
+          }
+        ],
+        "correct_key": "c",
+        "explanation": {
+          "id": "Encapsulation (enkapsulasi) menyembunyikan detail internal objek dan hanya mengekspos antarmuka publik yang aman."
+        }
+      },
+      {
+        "id": "rq_se_l1_01",
+        "role_slug": "software-engineer",
+        "level": 1,
+        "level_name": "Dasar",
+        "competency_id": "comp_se_1",
+        "competency_name": "Algoritma & Struktur Data",
+        "text": {
+          "id": "Struktur data mana yang beroperasi berdasarkan prinsip First-In, First-Out (FIFO)?"
+        },
+        "options": [
+          {
+            "key": "a",
+            "text": {
+              "id": "Stack (Tumpukan)"
+            }
+          },
+          {
+            "key": "b",
+            "text": {
+              "id": "Queue (Antrean)"
+            }
+          },
+          {
+            "key": "c",
+            "text": {
+              "id": "Binary Search Tree"
+            }
+          },
+          {
+            "key": "d",
+            "text": {
+              "id": "Hash Map"
+            }
+          }
+        ],
+        "correct_key": "b",
+        "explanation": {
+          "id": "Queue mengikuti prinsip FIFO di mana elemen yang pertama kali dimasukkan adalah yang pertama kali diproses/dikeluarkan."
+        }
+      },
+      {
+        "id": "rq_se_l2_01",
+        "role_slug": "software-engineer",
+        "level": 2,
+        "level_name": "Pemula",
+        "competency_id": "comp_se_3",
+        "competency_name": "REST API & Backend",
+        "text": {
+          "id": "HTTP method manakah yang bersifat idempotent dan lazim digunakan untuk mengganti seluruh isi resource target?"
+        },
+        "options": [
+          {
+            "key": "a",
+            "text": {
+              "id": "POST"
+            }
+          },
+          {
+            "key": "b",
+            "text": {
+              "id": "PUT"
+            }
+          },
+          {
+            "key": "c",
+            "text": {
+              "id": "PATCH"
+            }
+          },
+          {
+            "key": "d",
+            "text": {
+              "id": "OPTIONS"
+            }
+          }
+        ],
+        "correct_key": "b",
+        "explanation": {
+          "id": "PUT bersifat idempotent (dieksekusi berkali-kali menghasilkan state server yang sama) dan me-replace resource seutuhnya."
+        }
+      },
+      {
+        "id": "rq_se_l2_02",
+        "role_slug": "software-engineer",
+        "level": 2,
+        "level_name": "Pemula",
+        "competency_id": "comp_se_5",
+        "competency_name": "Git & Kolaborasi Kode",
+        "text": {
+          "id": "Perintah Git yang digunakan untuk memindahkan perubahan yang belum di-commit ke area simpan sementara yang bersih adalah..."
+        },
+        "options": [
+          {
+            "key": "a",
+            "text": {
+              "id": "git stash"
+            }
+          },
+          {
+            "key": "b",
+            "text": {
+              "id": "git checkout -b"
+            }
+          },
+          {
+            "key": "c",
+            "text": {
+              "id": "git rebase"
+            }
+          },
+          {
+            "key": "d",
+            "text": {
+              "id": "git revert"
+            }
+          }
+        ],
+        "correct_key": "a",
+        "explanation": {
+          "id": "git stash menyimpan working directory yang kotor ke stack sementara agar cabang dapat dibersihkan tanpa kehilangan kode."
+        }
+      },
+      {
+        "id": "rq_se_l3_01",
+        "role_slug": "software-engineer",
+        "level": 3,
+        "level_name": "Menengah",
+        "competency_id": "comp_se_4",
+        "competency_name": "Basis Data SQL/NoSQL",
+        "text": {
+          "id": "Apa dampak negatif utama dari pembuatan indeks (B-Tree Index) yang berlebihan pada tabel database yang aktif menerima transaksi tulis?"
+        },
+        "options": [
+          {
+            "key": "a",
+            "text": {
+              "id": "Query SELECT menjadi berkali-kali lipat lebih lambat."
+            }
+          },
+          {
+            "key": "b",
+            "text": {
+              "id": "Performa operasi INSERT, UPDATE, dan DELETE melambat karena struktur pohon indeks harus di-rebalance."
+            }
+          },
+          {
+            "key": "c",
+            "text": {
+              "id": "Data otomatis terfragmentasi dan menyebabkan kebocoran memori RAM."
+            }
+          },
+          {
+            "key": "d",
+            "text": {
+              "id": "Database secara otomatis mengonversi tipe data tabel menjadi string."
+            }
+          }
+        ],
+        "correct_key": "b",
+        "explanation": {
+          "id": "Setiap operasi tulis (INSERT/UPDATE/DELETE) mewajibkan database memperbarui indeks terkait di storage disk."
+        }
+      },
+      {
+        "id": "rq_se_l3_02",
+        "role_slug": "software-engineer",
+        "level": 3,
+        "level_name": "Menengah",
+        "competency_id": "comp_se_6",
+        "competency_name": "Debugging & Testing",
+        "text": {
+          "id": "Dalam pengujian perangkat lunak, apa perbedaan mendasar antara Stub dan Mock?"
+        },
+        "options": [
+          {
+            "key": "a",
+            "text": {
+              "id": "Stub memverifikasi pemanggilan fungsi, sedangkan Mock hanya mengembalikan nilai tetap."
+            }
+          },
+          {
+            "key": "b",
+            "text": {
+              "id": "Stub menyediakan jawaban yang telah disiapkan sebelumnya, sedangkan Mock memverifikasi perilaku dan interaksi pemanggilan."
+            }
+          },
+          {
+            "key": "c",
+            "text": {
+              "id": "Stub hanya digunakan untuk database, Mock untuk API eksternal."
+            }
+          },
+          {
+            "key": "d",
+            "text": {
+              "id": "Tidak ada perbedaan, keduanya istilah identik."
+            }
+          }
+        ],
+        "correct_key": "b",
+        "explanation": {
+          "id": "Stub fokus pada 'state verification' (memberikan dummy response), sedangkan Mock fokus pada 'behavior verification' (memastikan method dipanggil dengan argumen yang benar)."
+        }
+      },
+      {
+        "id": "rq_se_l4_01",
+        "role_slug": "software-engineer",
+        "level": 4,
+        "level_name": "Lanjut",
+        "competency_id": "comp_se_2",
+        "competency_name": "OOP & Clean Architecture",
+        "text": {
+          "id": "Dalam Clean Architecture oleh Robert C. Martin, 'Dependency Rule' mewajibkan bahwa..."
+        },
+        "options": [
+          {
+            "key": "a",
+            "text": {
+              "id": "Dependensi kode sumber hanya boleh mengarah ke dalam, menuju entitas kebijakan tingkat tinggi."
+            }
+          },
+          {
+            "key": "b",
+            "text": {
+              "id": "Entitas domain inti harus selalu mengimpor pustaka database atau framework HTTP."
+            }
+          },
+          {
+            "key": "c",
+            "text": {
+              "id": "Setiap layer boleh saling mengimpor asalkan menggunakan dependency injection container."
+            }
+          },
+          {
+            "key": "d",
+            "text": {
+              "id": "UI boleh mengakses langsung database tanpa melewati Use Case."
+            }
+          }
+        ],
+        "correct_key": "a",
+        "explanation": {
+          "id": "Aturan dependensi mutlak menyatakan layer dalam tidak boleh tahu apa pun tentang layer luar (UI, DB, Framework)."
+        }
+      },
+      {
+        "id": "rq_se_l4_02",
+        "role_slug": "software-engineer",
+        "level": 4,
+        "level_name": "Lanjut",
+        "competency_id": "comp_se_1",
+        "competency_name": "Algoritma & Struktur Data",
+        "text": {
+          "id": "Kompleksitas waktu (Time Complexity) rata-rata dari pencarian elemen pada Hash Table yang terdistribusi baik adalah..."
+        },
+        "options": [
+          {
+            "key": "a",
+            "text": {
+              "id": "O(log n)"
+            }
+          },
+          {
+            "key": "b",
+            "text": {
+              "id": "O(1)"
+            }
+          },
+          {
+            "key": "c",
+            "text": {
+              "id": "O(n)"
+            }
+          },
+          {
+            "key": "d",
+            "text": {
+              "id": "O(n log n)"
+            }
+          }
+        ],
+        "correct_key": "b",
+        "explanation": {
+          "id": "Hash Table menghitung indeks langsung dari hash function sehingga pencarian rata-rata beroperasi dalam waktu konstan O(1)."
+        }
+      },
+      {
+        "id": "rq_se_l5_02",
+        "role_slug": "software-engineer",
+        "level": 5,
+        "level_name": "Ahli",
+        "competency_id": "comp_se_3",
+        "competency_name": "REST API & Backend",
+        "text": {
+          "id": "Ketika mendesain sistem idempotent payment webhook yang rentan duplikasi jaringan dari payment gateway, strategi apa yang paling tepat diterapkan?"
+        },
+        "options": [
+          {
+            "key": "a",
+            "text": {
+              "id": "Mengabaikan request yang datang setelah 5 detik."
+            }
+          },
+          {
+            "key": "b",
+            "text": {
+              "id": "Menggunakan Idempotency Key unik yang disimpan dalam status atomik (misal Redis/DB unique constraint) sebelum memproses mutasi saldo."
+            }
+          },
+          {
+            "key": "c",
+            "text": {
+              "id": "Menggunakan metode HTTP GET agar tidak terjadi perubahan data."
+            }
+          },
+          {
+            "key": "d",
+            "text": {
+              "id": "Mematikan fitur retry webhook pada payment gateway."
+            }
+          }
+        ],
+        "correct_key": "b",
+        "explanation": {
+          "id": "Penyimpanan Idempotency Key dengan operasi atomik memastikan satu event transaksi hanya dieksekusi tepat satu kali (exactly-once processing semantics)."
+        }
+      },
+      {
+        "id": "rq_se_l5_01",
+        "role_slug": "software-engineer",
+        "level": 5,
+        "level_name": "Ahli",
+        "competency_id": "comp_se_1",
+        "competency_name": "Algoritma & Struktur Data",
+        "text": {
+          "id": "Dalam sistem terdistribusi skala besar, bagaimana Teorema CAP menangani kondisi kegagalan partisi jaringan (Network Partition)?"
+        },
+        "options": [
+          {
+            "key": "a",
+            "text": {
+              "id": "Sistem dapat mempertahankan ketiga sifat (Consistency, Availability, Partition tolerance) secara bersamaan."
+            }
+          },
+          {
+            "key": "b",
+            "text": {
+              "id": "Sistem dipaksa memilih antara konsistensi data absolut (CP) atau ketersediaan respons (AP)."
+            }
+          },
+          {
+            "key": "c",
+            "text": {
+              "id": "Sistem otomatis beralih ke arsitektur monolitik lokal."
+            }
+          },
+          {
+            "key": "d",
+            "text": {
+              "id": "Partisi jaringan dapat dieliminasi seutuhnya menggunakan protokol TCP terbaru."
+            }
+          }
+        ],
+        "correct_key": "b",
+        "explanation": {
+          "id": "Karena partisi jaringan di dunia nyata tidak bisa dihindari (P), sistem harus memilih trade-off antara Consistency (CP) atau Availability (AP)."
+        }
+      }
+    ]
+  },
+  "rsess_1792519222936_g2vvntn": {
+    "sessionId": "rsess_1792519222936_g2vvntn",
+    "userId": "user_demo_1",
+    "roleSlug": "software-engineer",
+    "currentLevel": 1,
+    "totalLevels": 5,
+    "isFinished": false,
+    "answers": {},
+    "startedAt": "2026-10-20T18:00:22.936Z",
+    "assignedQuestions": [
+      {
+        "id": "rq_se_l1_01",
+        "role_slug": "software-engineer",
+        "level": 1,
+        "level_name": "Dasar",
+        "competency_id": "comp_se_1",
+        "competency_name": "Algoritma & Struktur Data",
+        "text": {
+          "id": "Struktur data mana yang beroperasi berdasarkan prinsip First-In, First-Out (FIFO)?"
+        },
+        "options": [
+          {
+            "key": "a",
+            "text": {
+              "id": "Stack (Tumpukan)"
+            }
+          },
+          {
+            "key": "b",
+            "text": {
+              "id": "Queue (Antrean)"
+            }
+          },
+          {
+            "key": "c",
+            "text": {
+              "id": "Binary Search Tree"
+            }
+          },
+          {
+            "key": "d",
+            "text": {
+              "id": "Hash Map"
+            }
+          }
+        ],
+        "correct_key": "b",
+        "explanation": {
+          "id": "Queue mengikuti prinsip FIFO di mana elemen yang pertama kali dimasukkan adalah yang pertama kali diproses/dikeluarkan."
+        }
+      },
+      {
+        "id": "rq_se_l1_02",
+        "role_slug": "software-engineer",
+        "level": 1,
+        "level_name": "Dasar",
+        "competency_id": "comp_se_2",
+        "competency_name": "OOP & Clean Architecture",
+        "text": {
+          "id": "Prinsip dasar OOP yang membungkus data bersama method-nya serta membatasi akses langsung dari luar disebut..."
+        },
+        "options": [
+          {
+            "key": "a",
+            "text": {
+              "id": "Polymorphism"
+            }
+          },
+          {
+            "key": "b",
+            "text": {
+              "id": "Inheritance"
+            }
+          },
+          {
+            "key": "c",
+            "text": {
+              "id": "Encapsulation"
+            }
+          },
+          {
+            "key": "d",
+            "text": {
+              "id": "Abstraction"
+            }
+          }
+        ],
+        "correct_key": "c",
+        "explanation": {
+          "id": "Encapsulation (enkapsulasi) menyembunyikan detail internal objek dan hanya mengekspos antarmuka publik yang aman."
+        }
+      },
+      {
+        "id": "rq_se_l2_02",
+        "role_slug": "software-engineer",
+        "level": 2,
+        "level_name": "Pemula",
+        "competency_id": "comp_se_5",
+        "competency_name": "Git & Kolaborasi Kode",
+        "text": {
+          "id": "Perintah Git yang digunakan untuk memindahkan perubahan yang belum di-commit ke area simpan sementara yang bersih adalah..."
+        },
+        "options": [
+          {
+            "key": "a",
+            "text": {
+              "id": "git stash"
+            }
+          },
+          {
+            "key": "b",
+            "text": {
+              "id": "git checkout -b"
+            }
+          },
+          {
+            "key": "c",
+            "text": {
+              "id": "git rebase"
+            }
+          },
+          {
+            "key": "d",
+            "text": {
+              "id": "git revert"
+            }
+          }
+        ],
+        "correct_key": "a",
+        "explanation": {
+          "id": "git stash menyimpan working directory yang kotor ke stack sementara agar cabang dapat dibersihkan tanpa kehilangan kode."
+        }
+      },
+      {
+        "id": "rq_se_l2_01",
+        "role_slug": "software-engineer",
+        "level": 2,
+        "level_name": "Pemula",
+        "competency_id": "comp_se_3",
+        "competency_name": "REST API & Backend",
+        "text": {
+          "id": "HTTP method manakah yang bersifat idempotent dan lazim digunakan untuk mengganti seluruh isi resource target?"
+        },
+        "options": [
+          {
+            "key": "a",
+            "text": {
+              "id": "POST"
+            }
+          },
+          {
+            "key": "b",
+            "text": {
+              "id": "PUT"
+            }
+          },
+          {
+            "key": "c",
+            "text": {
+              "id": "PATCH"
+            }
+          },
+          {
+            "key": "d",
+            "text": {
+              "id": "OPTIONS"
+            }
+          }
+        ],
+        "correct_key": "b",
+        "explanation": {
+          "id": "PUT bersifat idempotent (dieksekusi berkali-kali menghasilkan state server yang sama) dan me-replace resource seutuhnya."
+        }
+      },
+      {
+        "id": "rq_se_l3_01",
+        "role_slug": "software-engineer",
+        "level": 3,
+        "level_name": "Menengah",
+        "competency_id": "comp_se_4",
+        "competency_name": "Basis Data SQL/NoSQL",
+        "text": {
+          "id": "Apa dampak negatif utama dari pembuatan indeks (B-Tree Index) yang berlebihan pada tabel database yang aktif menerima transaksi tulis?"
+        },
+        "options": [
+          {
+            "key": "a",
+            "text": {
+              "id": "Query SELECT menjadi berkali-kali lipat lebih lambat."
+            }
+          },
+          {
+            "key": "b",
+            "text": {
+              "id": "Performa operasi INSERT, UPDATE, dan DELETE melambat karena struktur pohon indeks harus di-rebalance."
+            }
+          },
+          {
+            "key": "c",
+            "text": {
+              "id": "Data otomatis terfragmentasi dan menyebabkan kebocoran memori RAM."
+            }
+          },
+          {
+            "key": "d",
+            "text": {
+              "id": "Database secara otomatis mengonversi tipe data tabel menjadi string."
+            }
+          }
+        ],
+        "correct_key": "b",
+        "explanation": {
+          "id": "Setiap operasi tulis (INSERT/UPDATE/DELETE) mewajibkan database memperbarui indeks terkait di storage disk."
+        }
+      },
+      {
+        "id": "rq_se_l3_02",
+        "role_slug": "software-engineer",
+        "level": 3,
+        "level_name": "Menengah",
+        "competency_id": "comp_se_6",
+        "competency_name": "Debugging & Testing",
+        "text": {
+          "id": "Dalam pengujian perangkat lunak, apa perbedaan mendasar antara Stub dan Mock?"
+        },
+        "options": [
+          {
+            "key": "a",
+            "text": {
+              "id": "Stub memverifikasi pemanggilan fungsi, sedangkan Mock hanya mengembalikan nilai tetap."
+            }
+          },
+          {
+            "key": "b",
+            "text": {
+              "id": "Stub menyediakan jawaban yang telah disiapkan sebelumnya, sedangkan Mock memverifikasi perilaku dan interaksi pemanggilan."
+            }
+          },
+          {
+            "key": "c",
+            "text": {
+              "id": "Stub hanya digunakan untuk database, Mock untuk API eksternal."
+            }
+          },
+          {
+            "key": "d",
+            "text": {
+              "id": "Tidak ada perbedaan, keduanya istilah identik."
+            }
+          }
+        ],
+        "correct_key": "b",
+        "explanation": {
+          "id": "Stub fokus pada 'state verification' (memberikan dummy response), sedangkan Mock fokus pada 'behavior verification' (memastikan method dipanggil dengan argumen yang benar)."
+        }
+      },
+      {
+        "id": "rq_se_l4_02",
+        "role_slug": "software-engineer",
+        "level": 4,
+        "level_name": "Lanjut",
+        "competency_id": "comp_se_1",
+        "competency_name": "Algoritma & Struktur Data",
+        "text": {
+          "id": "Kompleksitas waktu (Time Complexity) rata-rata dari pencarian elemen pada Hash Table yang terdistribusi baik adalah..."
+        },
+        "options": [
+          {
+            "key": "a",
+            "text": {
+              "id": "O(log n)"
+            }
+          },
+          {
+            "key": "b",
+            "text": {
+              "id": "O(1)"
+            }
+          },
+          {
+            "key": "c",
+            "text": {
+              "id": "O(n)"
+            }
+          },
+          {
+            "key": "d",
+            "text": {
+              "id": "O(n log n)"
+            }
+          }
+        ],
+        "correct_key": "b",
+        "explanation": {
+          "id": "Hash Table menghitung indeks langsung dari hash function sehingga pencarian rata-rata beroperasi dalam waktu konstan O(1)."
+        }
+      },
+      {
+        "id": "rq_se_l4_01",
+        "role_slug": "software-engineer",
+        "level": 4,
+        "level_name": "Lanjut",
+        "competency_id": "comp_se_2",
+        "competency_name": "OOP & Clean Architecture",
+        "text": {
+          "id": "Dalam Clean Architecture oleh Robert C. Martin, 'Dependency Rule' mewajibkan bahwa..."
+        },
+        "options": [
+          {
+            "key": "a",
+            "text": {
+              "id": "Dependensi kode sumber hanya boleh mengarah ke dalam, menuju entitas kebijakan tingkat tinggi."
+            }
+          },
+          {
+            "key": "b",
+            "text": {
+              "id": "Entitas domain inti harus selalu mengimpor pustaka database atau framework HTTP."
+            }
+          },
+          {
+            "key": "c",
+            "text": {
+              "id": "Setiap layer boleh saling mengimpor asalkan menggunakan dependency injection container."
+            }
+          },
+          {
+            "key": "d",
+            "text": {
+              "id": "UI boleh mengakses langsung database tanpa melewati Use Case."
+            }
+          }
+        ],
+        "correct_key": "a",
+        "explanation": {
+          "id": "Aturan dependensi mutlak menyatakan layer dalam tidak boleh tahu apa pun tentang layer luar (UI, DB, Framework)."
+        }
+      },
+      {
+        "id": "rq_se_l5_02",
+        "role_slug": "software-engineer",
+        "level": 5,
+        "level_name": "Ahli",
+        "competency_id": "comp_se_3",
+        "competency_name": "REST API & Backend",
+        "text": {
+          "id": "Ketika mendesain sistem idempotent payment webhook yang rentan duplikasi jaringan dari payment gateway, strategi apa yang paling tepat diterapkan?"
+        },
+        "options": [
+          {
+            "key": "a",
+            "text": {
+              "id": "Mengabaikan request yang datang setelah 5 detik."
+            }
+          },
+          {
+            "key": "b",
+            "text": {
+              "id": "Menggunakan Idempotency Key unik yang disimpan dalam status atomik (misal Redis/DB unique constraint) sebelum memproses mutasi saldo."
+            }
+          },
+          {
+            "key": "c",
+            "text": {
+              "id": "Menggunakan metode HTTP GET agar tidak terjadi perubahan data."
+            }
+          },
+          {
+            "key": "d",
+            "text": {
+              "id": "Mematikan fitur retry webhook pada payment gateway."
+            }
+          }
+        ],
+        "correct_key": "b",
+        "explanation": {
+          "id": "Penyimpanan Idempotency Key dengan operasi atomik memastikan satu event transaksi hanya dieksekusi tepat satu kali (exactly-once processing semantics)."
+        }
+      },
+      {
+        "id": "rq_se_l5_01",
+        "role_slug": "software-engineer",
+        "level": 5,
+        "level_name": "Ahli",
+        "competency_id": "comp_se_1",
+        "competency_name": "Algoritma & Struktur Data",
+        "text": {
+          "id": "Dalam sistem terdistribusi skala besar, bagaimana Teorema CAP menangani kondisi kegagalan partisi jaringan (Network Partition)?"
+        },
+        "options": [
+          {
+            "key": "a",
+            "text": {
+              "id": "Sistem dapat mempertahankan ketiga sifat (Consistency, Availability, Partition tolerance) secara bersamaan."
+            }
+          },
+          {
+            "key": "b",
+            "text": {
+              "id": "Sistem dipaksa memilih antara konsistensi data absolut (CP) atau ketersediaan respons (AP)."
+            }
+          },
+          {
+            "key": "c",
+            "text": {
+              "id": "Sistem otomatis beralih ke arsitektur monolitik lokal."
+            }
+          },
+          {
+            "key": "d",
+            "text": {
+              "id": "Partisi jaringan dapat dieliminasi seutuhnya menggunakan protokol TCP terbaru."
+            }
+          }
+        ],
+        "correct_key": "b",
+        "explanation": {
+          "id": "Karena partisi jaringan di dunia nyata tidak bisa dihindari (P), sistem harus memilih trade-off antara Consistency (CP) atau Availability (AP)."
+        }
+      }
+    ]
+  },
+  "rsess_1792519230416_ip5lj52": {
+    "sessionId": "rsess_1792519230416_ip5lj52",
+    "userId": "user_demo_1",
+    "roleSlug": "software-engineer",
+    "currentLevel": 1,
+    "totalLevels": 5,
+    "isFinished": false,
+    "answers": {},
+    "startedAt": "2026-10-20T18:00:30.416Z",
+    "assignedQuestions": [
+      {
+        "id": "rq_se_l1_02",
+        "role_slug": "software-engineer",
+        "level": 1,
+        "level_name": "Dasar",
+        "competency_id": "comp_se_2",
+        "competency_name": "OOP & Clean Architecture",
+        "text": {
+          "id": "Prinsip dasar OOP yang membungkus data bersama method-nya serta membatasi akses langsung dari luar disebut..."
+        },
+        "options": [
+          {
+            "key": "a",
+            "text": {
+              "id": "Polymorphism"
+            }
+          },
+          {
+            "key": "b",
+            "text": {
+              "id": "Inheritance"
+            }
+          },
+          {
+            "key": "c",
+            "text": {
+              "id": "Encapsulation"
+            }
+          },
+          {
+            "key": "d",
+            "text": {
+              "id": "Abstraction"
+            }
+          }
+        ],
+        "correct_key": "c",
+        "explanation": {
+          "id": "Encapsulation (enkapsulasi) menyembunyikan detail internal objek dan hanya mengekspos antarmuka publik yang aman."
+        }
+      },
+      {
+        "id": "rq_se_l1_01",
+        "role_slug": "software-engineer",
+        "level": 1,
+        "level_name": "Dasar",
+        "competency_id": "comp_se_1",
+        "competency_name": "Algoritma & Struktur Data",
+        "text": {
+          "id": "Struktur data mana yang beroperasi berdasarkan prinsip First-In, First-Out (FIFO)?"
+        },
+        "options": [
+          {
+            "key": "a",
+            "text": {
+              "id": "Stack (Tumpukan)"
+            }
+          },
+          {
+            "key": "b",
+            "text": {
+              "id": "Queue (Antrean)"
+            }
+          },
+          {
+            "key": "c",
+            "text": {
+              "id": "Binary Search Tree"
+            }
+          },
+          {
+            "key": "d",
+            "text": {
+              "id": "Hash Map"
+            }
+          }
+        ],
+        "correct_key": "b",
+        "explanation": {
+          "id": "Queue mengikuti prinsip FIFO di mana elemen yang pertama kali dimasukkan adalah yang pertama kali diproses/dikeluarkan."
+        }
+      },
+      {
+        "id": "rq_se_l2_01",
+        "role_slug": "software-engineer",
+        "level": 2,
+        "level_name": "Pemula",
+        "competency_id": "comp_se_3",
+        "competency_name": "REST API & Backend",
+        "text": {
+          "id": "HTTP method manakah yang bersifat idempotent dan lazim digunakan untuk mengganti seluruh isi resource target?"
+        },
+        "options": [
+          {
+            "key": "a",
+            "text": {
+              "id": "POST"
+            }
+          },
+          {
+            "key": "b",
+            "text": {
+              "id": "PUT"
+            }
+          },
+          {
+            "key": "c",
+            "text": {
+              "id": "PATCH"
+            }
+          },
+          {
+            "key": "d",
+            "text": {
+              "id": "OPTIONS"
+            }
+          }
+        ],
+        "correct_key": "b",
+        "explanation": {
+          "id": "PUT bersifat idempotent (dieksekusi berkali-kali menghasilkan state server yang sama) dan me-replace resource seutuhnya."
+        }
+      },
+      {
+        "id": "rq_se_l2_02",
+        "role_slug": "software-engineer",
+        "level": 2,
+        "level_name": "Pemula",
+        "competency_id": "comp_se_5",
+        "competency_name": "Git & Kolaborasi Kode",
+        "text": {
+          "id": "Perintah Git yang digunakan untuk memindahkan perubahan yang belum di-commit ke area simpan sementara yang bersih adalah..."
+        },
+        "options": [
+          {
+            "key": "a",
+            "text": {
+              "id": "git stash"
+            }
+          },
+          {
+            "key": "b",
+            "text": {
+              "id": "git checkout -b"
+            }
+          },
+          {
+            "key": "c",
+            "text": {
+              "id": "git rebase"
+            }
+          },
+          {
+            "key": "d",
+            "text": {
+              "id": "git revert"
+            }
+          }
+        ],
+        "correct_key": "a",
+        "explanation": {
+          "id": "git stash menyimpan working directory yang kotor ke stack sementara agar cabang dapat dibersihkan tanpa kehilangan kode."
+        }
+      },
+      {
+        "id": "rq_se_l3_01",
+        "role_slug": "software-engineer",
+        "level": 3,
+        "level_name": "Menengah",
+        "competency_id": "comp_se_4",
+        "competency_name": "Basis Data SQL/NoSQL",
+        "text": {
+          "id": "Apa dampak negatif utama dari pembuatan indeks (B-Tree Index) yang berlebihan pada tabel database yang aktif menerima transaksi tulis?"
+        },
+        "options": [
+          {
+            "key": "a",
+            "text": {
+              "id": "Query SELECT menjadi berkali-kali lipat lebih lambat."
+            }
+          },
+          {
+            "key": "b",
+            "text": {
+              "id": "Performa operasi INSERT, UPDATE, dan DELETE melambat karena struktur pohon indeks harus di-rebalance."
+            }
+          },
+          {
+            "key": "c",
+            "text": {
+              "id": "Data otomatis terfragmentasi dan menyebabkan kebocoran memori RAM."
+            }
+          },
+          {
+            "key": "d",
+            "text": {
+              "id": "Database secara otomatis mengonversi tipe data tabel menjadi string."
+            }
+          }
+        ],
+        "correct_key": "b",
+        "explanation": {
+          "id": "Setiap operasi tulis (INSERT/UPDATE/DELETE) mewajibkan database memperbarui indeks terkait di storage disk."
+        }
+      },
+      {
+        "id": "rq_se_l3_02",
+        "role_slug": "software-engineer",
+        "level": 3,
+        "level_name": "Menengah",
+        "competency_id": "comp_se_6",
+        "competency_name": "Debugging & Testing",
+        "text": {
+          "id": "Dalam pengujian perangkat lunak, apa perbedaan mendasar antara Stub dan Mock?"
+        },
+        "options": [
+          {
+            "key": "a",
+            "text": {
+              "id": "Stub memverifikasi pemanggilan fungsi, sedangkan Mock hanya mengembalikan nilai tetap."
+            }
+          },
+          {
+            "key": "b",
+            "text": {
+              "id": "Stub menyediakan jawaban yang telah disiapkan sebelumnya, sedangkan Mock memverifikasi perilaku dan interaksi pemanggilan."
+            }
+          },
+          {
+            "key": "c",
+            "text": {
+              "id": "Stub hanya digunakan untuk database, Mock untuk API eksternal."
+            }
+          },
+          {
+            "key": "d",
+            "text": {
+              "id": "Tidak ada perbedaan, keduanya istilah identik."
+            }
+          }
+        ],
+        "correct_key": "b",
+        "explanation": {
+          "id": "Stub fokus pada 'state verification' (memberikan dummy response), sedangkan Mock fokus pada 'behavior verification' (memastikan method dipanggil dengan argumen yang benar)."
+        }
+      },
+      {
+        "id": "rq_se_l4_02",
+        "role_slug": "software-engineer",
+        "level": 4,
+        "level_name": "Lanjut",
+        "competency_id": "comp_se_1",
+        "competency_name": "Algoritma & Struktur Data",
+        "text": {
+          "id": "Kompleksitas waktu (Time Complexity) rata-rata dari pencarian elemen pada Hash Table yang terdistribusi baik adalah..."
+        },
+        "options": [
+          {
+            "key": "a",
+            "text": {
+              "id": "O(log n)"
+            }
+          },
+          {
+            "key": "b",
+            "text": {
+              "id": "O(1)"
+            }
+          },
+          {
+            "key": "c",
+            "text": {
+              "id": "O(n)"
+            }
+          },
+          {
+            "key": "d",
+            "text": {
+              "id": "O(n log n)"
+            }
+          }
+        ],
+        "correct_key": "b",
+        "explanation": {
+          "id": "Hash Table menghitung indeks langsung dari hash function sehingga pencarian rata-rata beroperasi dalam waktu konstan O(1)."
+        }
+      },
+      {
+        "id": "rq_se_l4_01",
+        "role_slug": "software-engineer",
+        "level": 4,
+        "level_name": "Lanjut",
+        "competency_id": "comp_se_2",
+        "competency_name": "OOP & Clean Architecture",
+        "text": {
+          "id": "Dalam Clean Architecture oleh Robert C. Martin, 'Dependency Rule' mewajibkan bahwa..."
+        },
+        "options": [
+          {
+            "key": "a",
+            "text": {
+              "id": "Dependensi kode sumber hanya boleh mengarah ke dalam, menuju entitas kebijakan tingkat tinggi."
+            }
+          },
+          {
+            "key": "b",
+            "text": {
+              "id": "Entitas domain inti harus selalu mengimpor pustaka database atau framework HTTP."
+            }
+          },
+          {
+            "key": "c",
+            "text": {
+              "id": "Setiap layer boleh saling mengimpor asalkan menggunakan dependency injection container."
+            }
+          },
+          {
+            "key": "d",
+            "text": {
+              "id": "UI boleh mengakses langsung database tanpa melewati Use Case."
+            }
+          }
+        ],
+        "correct_key": "a",
+        "explanation": {
+          "id": "Aturan dependensi mutlak menyatakan layer dalam tidak boleh tahu apa pun tentang layer luar (UI, DB, Framework)."
+        }
+      },
+      {
+        "id": "rq_se_l5_02",
+        "role_slug": "software-engineer",
+        "level": 5,
+        "level_name": "Ahli",
+        "competency_id": "comp_se_3",
+        "competency_name": "REST API & Backend",
+        "text": {
+          "id": "Ketika mendesain sistem idempotent payment webhook yang rentan duplikasi jaringan dari payment gateway, strategi apa yang paling tepat diterapkan?"
+        },
+        "options": [
+          {
+            "key": "a",
+            "text": {
+              "id": "Mengabaikan request yang datang setelah 5 detik."
+            }
+          },
+          {
+            "key": "b",
+            "text": {
+              "id": "Menggunakan Idempotency Key unik yang disimpan dalam status atomik (misal Redis/DB unique constraint) sebelum memproses mutasi saldo."
+            }
+          },
+          {
+            "key": "c",
+            "text": {
+              "id": "Menggunakan metode HTTP GET agar tidak terjadi perubahan data."
+            }
+          },
+          {
+            "key": "d",
+            "text": {
+              "id": "Mematikan fitur retry webhook pada payment gateway."
+            }
+          }
+        ],
+        "correct_key": "b",
+        "explanation": {
+          "id": "Penyimpanan Idempotency Key dengan operasi atomik memastikan satu event transaksi hanya dieksekusi tepat satu kali (exactly-once processing semantics)."
+        }
+      },
+      {
+        "id": "rq_se_l5_01",
+        "role_slug": "software-engineer",
+        "level": 5,
+        "level_name": "Ahli",
+        "competency_id": "comp_se_1",
+        "competency_name": "Algoritma & Struktur Data",
+        "text": {
+          "id": "Dalam sistem terdistribusi skala besar, bagaimana Teorema CAP menangani kondisi kegagalan partisi jaringan (Network Partition)?"
+        },
+        "options": [
+          {
+            "key": "a",
+            "text": {
+              "id": "Sistem dapat mempertahankan ketiga sifat (Consistency, Availability, Partition tolerance) secara bersamaan."
+            }
+          },
+          {
+            "key": "b",
+            "text": {
+              "id": "Sistem dipaksa memilih antara konsistensi data absolut (CP) atau ketersediaan respons (AP)."
+            }
+          },
+          {
+            "key": "c",
+            "text": {
+              "id": "Sistem otomatis beralih ke arsitektur monolitik lokal."
+            }
+          },
+          {
+            "key": "d",
+            "text": {
+              "id": "Partisi jaringan dapat dieliminasi seutuhnya menggunakan protokol TCP terbaru."
+            }
+          }
+        ],
+        "correct_key": "b",
+        "explanation": {
+          "id": "Karena partisi jaringan di dunia nyata tidak bisa dihindari (P), sistem harus memilih trade-off antara Consistency (CP) atau Availability (AP)."
+        }
+      }
+    ]
+  }
+}

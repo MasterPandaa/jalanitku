@@ -1,45 +1,79 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { Logo } from "@/components/ui/Logo";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { JalanMin } from "@/components/mascot/JalanMin";
+import { GoogleAccountModal } from "@/components/auth/GoogleAccountModal";
 
-export default function LoginPage() {
+function LoginContent() {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [loading, setLoading] = useState(false);
-  const [customEmail, setCustomEmail] = useState("");
-  const [customName, setCustomName] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [realOAuthEnabled, setRealOAuthEnabled] = useState(false);
 
-  const handleGoogleLogin = async (e?: React.FormEvent) => {
-    if (e) e.preventDefault();
+  useEffect(() => {
+    // Check if real Google OAuth is configured via GCP env vars
+    fetch("/api/auth/google/config")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success && data.data?.realOAuthEnabled) {
+          setRealOAuthEnabled(true);
+        }
+      })
+      .catch(() => {});
+
+    // Check query params for error
+    const err = searchParams.get("error");
+    if (err === "invalid_state") {
+      setErrorMessage("Sesi autentikasi kedaluwarsa. Silakan coba lagi.");
+    } else if (err === "token_failed" || err === "oauth_error") {
+      setErrorMessage("Gagal menyinkronkan akun dengan Google.");
+    }
+  }, [searchParams]);
+
+  const handleStartLogin = () => {
+    setErrorMessage("");
+    if (realOAuthEnabled) {
+      window.location.href = "/api/auth/google";
+    } else {
+      setIsModalOpen(true);
+    }
+  };
+
+  const handleAccountSelected = async (account: { email: string; name: string; sub?: string }) => {
     setLoading(true);
+    setErrorMessage("");
 
     try {
       const res = await fetch("/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          email: customEmail || "user.it@gmail.com",
-          name: customName || "Calon Talenta IT",
+          email: account.email,
+          name: account.name,
+          sub: account.sub,
         }),
       });
 
       const data = await res.json();
       if (data.success) {
+        setIsModalOpen(false);
         if (data.data.needsOnboarding) {
           router.push("/onboarding");
         } else {
           router.push("/dashboard");
         }
       } else {
-        alert(data.error?.message || "Gagal masuk");
+        setErrorMessage(data.error?.message || "Gagal masuk.");
       }
     } catch {
-      alert("Terjadi kesalahan jaringan.");
+      setErrorMessage("Terjadi gangguan jaringan saat menghubungi server.");
     } finally {
       setLoading(false);
     }
@@ -49,7 +83,10 @@ export default function LoginPage() {
     <div className="min-h-screen bg-paper flex flex-col justify-between p-4 md:p-8">
       <div className="max-w-7xl mx-auto w-full flex items-center justify-between">
         <Logo size="md" />
-        <Link href="/" className="nb-link font-display font-bold text-sm md:text-base px-3 py-1.5 border-3 border-ink bg-surface">
+        <Link
+          href="/"
+          className="nb-link font-display font-bold text-sm md:text-base px-3 py-1.5 border-3 border-ink bg-surface"
+        >
           ← Kembali ke Beranda
         </Link>
       </div>
@@ -69,14 +106,20 @@ export default function LoginPage() {
             </p>
           </div>
 
+          {errorMessage && (
+            <div className="w-full bg-[#FF4B4B]/15 border-2 border-[#FF4B4B] p-3 text-left font-mono text-xs text-[#0A0A0A] font-bold">
+              ⚠️ {errorMessage}
+            </div>
+          )}
+
           <div className="w-full space-y-4">
             <Button
               variant="white"
               size="lg"
               fullWidth
               disabled={loading}
-              onClick={() => handleGoogleLogin()}
-              className="flex items-center justify-center gap-3 py-3 border-4"
+              onClick={handleStartLogin}
+              className="flex items-center justify-center gap-3 py-3 border-4 hover:bg-white"
             >
               {/* Google G Icon */}
               <svg width="24" height="24" viewBox="0 0 24 24" className="flex-none">
@@ -101,31 +144,17 @@ export default function LoginPage() {
             </Button>
           </div>
 
-          <div className="w-full border-t-2 border-ink/20 pt-4">
-            <details className="text-left font-mono text-xs text-ink/70">
-              <summary className="cursor-pointer hover:underline font-bold text-center">
-                ⚙️ Opsi Akun Uji Coba (Dev Simulation)
-              </summary>
-              <div className="mt-3 space-y-2 bg-paper p-3 border-2 border-ink">
-                <input
-                  type="email"
-                  placeholder="Email uji coba (opsional)"
-                  value={customEmail}
-                  onChange={(e) => setCustomEmail(e.target.value)}
-                  className="w-full p-1.5 border border-ink text-xs bg-white"
-                />
-                <input
-                  type="text"
-                  placeholder="Nama tampilan (opsional)"
-                  value={customName}
-                  onChange={(e) => setCustomName(e.target.value)}
-                  className="w-full p-1.5 border border-ink text-xs bg-white"
-                />
-                <p className="text-[10px] text-ink/60">
-                  Secara default otomatis membuat akun baru dan mengarahkan ke onboarding username.
-                </p>
-              </div>
-            </details>
+          <div className="w-full border-t-2 border-ink/20 pt-4 flex flex-col items-center gap-2">
+            <span className="font-mono text-xs text-ink/70">
+              💡 {realOAuthEnabled ? "Mode Google OAuth GCP Aktif" : "Mode Google Account Chooser Aktif"}
+            </span>
+            <button
+              type="button"
+              onClick={() => setIsModalOpen(true)}
+              className="text-xs font-mono font-bold text-ink underline hover:text-accent-blue cursor-pointer"
+            >
+              Pilih Profil Cepat (Demo &amp; Onboarding Baru)
+            </button>
           </div>
 
           <div className="font-mono text-xs text-ink/60">
@@ -137,6 +166,28 @@ export default function LoginPage() {
       <div className="text-center font-mono text-xs text-ink/60 pb-2">
         © 2026 JalanITku. Masuk dengan Google OAuth 2.0
       </div>
+
+      {/* Google Account Selector Dialog */}
+      <GoogleAccountModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        onSelectAccount={handleAccountSelected}
+        isProcessing={loading}
+      />
     </div>
+  );
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-paper flex items-center justify-center font-mono text-sm">
+          Menyiapkan Halaman Masuk...
+        </div>
+      }
+    >
+      <LoginContent />
+    </Suspense>
   );
 }

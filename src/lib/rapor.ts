@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { getCompetenciesByRoleSlug } from "./roles";
+        import { getOrCreatePersistentStore, PersistentStore } from "./storage";
 
 export interface RaporQuestion {
   id: string;
@@ -96,9 +97,15 @@ export interface QuestionReviewItem {
   explanation: string;
 }
 
-// In-Memory store untuk sesi tes dan hasil Cocoklogiku aktif pengguna
-const raporSessions = new Map<string, RaporSessionState>();
-const cocoklogikuByUser = new Map<string, CocoklogikuRecord>();
+// Persistent store untuk sesi tes dan hasil Cocoklogiku aktif pengguna
+        export const raporSessions: PersistentStore<RaporSessionState> = getOrCreatePersistentStore<RaporSessionState>(
+          "rapor_sessions",
+          "rapor_sessions.json"
+        );
+        export const cocoklogikuByUser: PersistentStore<CocoklogikuRecord> = getOrCreatePersistentStore<CocoklogikuRecord>(
+          "cocoklogiku",
+          "cocoklogiku.json"
+        );
 
 const LEVEL_WEIGHTS: Record<number, number> = {
   1: 1.0,

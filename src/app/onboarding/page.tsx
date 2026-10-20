@@ -16,6 +16,24 @@ export default function OnboardingPage() {
   const [errorMsg, setErrorMsg] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
+  // Verify user is authenticated and actually needs onboarding
+          useEffect(() => {
+            fetch("/api/me")
+              .then((res) => {
+                if (!res.ok) throw new Error("Unauthenticated");
+                return res.json();
+              })
+              .then((data) => {
+                if (data.success && data.data?.username) {
+                  router.push("/dashboard");
+                }
+              })
+              .catch(() => {
+                router.push("/login");
+              });
+          }, [router]);
+        
+
   // Debounced username availability check
   const checkUsername = useCallback(async (val: string) => {
     if (!val || val.length < 3) {
