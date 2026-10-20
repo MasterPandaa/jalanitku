@@ -219,7 +219,7 @@
         
         | State | Situasi / Trigger | Koreografi Tubuh | Koreografi Kaca Pembesar | Ekspresi Wajah & Topi |
         |---|---|---|---|---|
-        | **`idle`** | Halaman statis, menunggu interaksi pengguna | Melayang santai bernapas (`jm-bob`, $\pm 5	ext{px}$) | Bertengger stabil di depan mata kanan, bergerak halus mengikuti kursor | Senyum simpul santai, topi miring $-2^\circ$ hingga $+2^\circ$ |
+        | **`idle`** | Halaman statis, menunggu interaksi pengguna | Melayang santai bernapas (`jm-bob`, $\pm 5	ext{px}$) | Dipegang di samping kanan tubuh, mengamati jejak kursor di layar secara aktif (mata bebas) | Senyum simpul santai, topi miring $-2^\circ$ hingga $+2^\circ$ |
         | **`hover`** | Kursor mouse masuk ke card/tombol atau area maskot | Mencondongkan badan maju mendekat (`scale(1.03)`, translasi $-3	ext{px}$) | Kaca pembesar membesar mendekati pemirsa (`zoom-in`), kilau lensa berdenyut | Mata membelalak ingin tahu, mulut membentuk "O" kecil gembira |
         | **`happy`** | Kasus terpecahkan! Jawaban benar, hasil tes selesai | Melompat riang vertikal (`jm-jump`, $-16	ext{px}$) | Kaca pembesar diacungkan ke udara dengan bangga di tangan kanan | Topi terangkat ke udara (*hat pop* $-14	ext{px}$), mulut tertawa lebar dengan lidah pink, mata berbinar |
         | **`neutral`** | Menunggu waktu respon, berpikir menganalisis petunjuk | Diam tenang dan fokus | Kaca pembesar diturunkan sedikit ke dekat dagu bagai pipa pemikir | Satu alis terangkat tinggi, mulut garis datar horizontal cermat |
@@ -243,10 +243,11 @@
         
         ### 4.2 Pelacakan Pupil Mata
         Pupil dibatasi (*clamped*) dalam batas kelopak mata agar tidak melompat keluar dari sklera:
-        * **Radius Maksimal Pupil Kiri**: $R_{	ext{left}} = 6.0	ext{ px}$
-        * **Radius Maksimal Pupil Kanan (Mata Kaca Pembesar)**: $R_{	ext{right}} = 7.5	ext{ px}$
+        * **Radius Maksimal Pupil Kiri**: $R_{	ext{left}} = 5.0	ext{ px}$
+        * **Radius Maksimal Pupil Kanan (Mata Kaca Pembesar)**: $R_{	ext{right}} = 5.0	ext{ px} (simetris dengan mata kiri)$
         * **Fungsi Non-Linear Easing**:
-          $$	ext{dist}_{	ext{travel}} = \min\left(R_{	ext{max}}, rac{D}{45}ight)$$
+          $$	ext{dist}_{	ext{travel}} = \min\left(R_{	ext{max}}, rac{D}{45}
+ight)$$
           $$	ext{PupilX} = u_X 	imes 	ext{dist}_{	ext{travel}}$$
           $$	ext{PupilY} = u_Y 	imes 	ext{dist}_{	ext{travel}}$$
         * **Rentang Nilai Output**:
@@ -256,10 +257,15 @@
         ### 4.3 Parallax & Rotasi Kaca Pembesar
         Kaca pembesar bergeser dan berotasi halus ke arah datangnya kursor:
         * **Translasi Parallax**:
-          $$	ext{GlassX} = 	ext{clamp}\left(u_X 	imes \min\left(10, rac{D}{30}ight), -10	ext{px}, +10	ext{px}ight)$$
-          $$	ext{GlassY} = 	ext{clamp}\left(u_Y 	imes \min\left(8, rac{D}{35}ight), -8	ext{px}, +8	ext{px}ight)$$
+          $$	ext{GlassX} = 	ext{clamp}\left(u_X 	imes \min\left(10, rac{D}{30}
+ight), -10	ext{px}, +10	ext{px}
+ight)$$
+          $$	ext{GlassY} = 	ext{clamp}\left(u_Y 	imes \min\left(8, rac{D}{35}
+ight), -8	ext{px}, +8	ext{px}
+ight)$$
         * **Rotasi Sudut (Tilt Angle)**:
-          $$	ext{Angle}_{	ext{tilt}} = 	ext{clamp}\left(rac{\Delta X}{35}, -16^\circ, +16^\circight)$$
+          $$	ext{Angle}_{	ext{tilt}} = 	ext{clamp}\left(rac{\Delta X}{35}, -16^\circ, +16^\circ
+ight)$$
         * **Pusat Transformasi (*Transform Origin*)**: `116px 88px` (titik pusat lensa).
         * **Fisika Redaman (*Damping*)**: Menggunakan transisi CSS:
           `transition: transform 0.14s cubic-bezier(0.2, 0.8, 0.2, 1);`

@@ -12,8 +12,8 @@
             <line x1="40" y1="100" x2="16" y2="76" stroke="#0A0A0A" stroke-width="6" stroke-linecap="round" />
                 <circle cx="14" cy="74" r="6" fill="#FFD60A" stroke="#0A0A0A" stroke-width="4" />
         
-            <!-- 3. LENGAN KANAN KE GAGANG -->
-            <line x1="150" y1="104" x2="148" y2="114" stroke="#0A0A0A" stroke-width="6" stroke-linecap="round" />
+            <!-- 3. LENGAN KANAN KE GAGANG DI SAMPING -->
+            <line x1="144" y1="102" x2="162" y2="98" stroke="#0A0A0A" stroke-width="6" stroke-linecap="round" />
         
             <!-- 4. BADAN RAMBU KUNING & HARD SHADOW -->
             <rect x="48" y="58" width="110" height="96" fill="#0A0A0A" />
@@ -30,39 +30,39 @@
         
             <!-- 6. ALIS DETEKTIF -->
             <line x1="64" y1="68" x2="84" y2="72" stroke="#0A0A0A" stroke-width="4" stroke-linecap="round" />
-                <line x1="104" y1="64" x2="128" y2="68" stroke="#0A0A0A" stroke-width="4" stroke-linecap="round" />
+                <line x1="106" y1="72" x2="126" y2="68" stroke="#0A0A0A" stroke-width="4" stroke-linecap="round" />
         
-            <!-- 7. MATA KIRI (NORMAL) -->
+            <!-- 7. MATA KIRI (BEBAS TANPA HALANGAN) -->
             <rect x="66" y="78" width="18" height="22" rx="4" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="4" />
             <g class="jm-eye-left" style="transform: translate(var(--p-left-x, 0px), var(--p-left-y, 0px));">
               <rect x="71" y="84" width="8" height="10" rx="2" fill="#0A0A0A" />
               <circle cx="73.5" cy="86.5" r="1.5" fill="#FFFFFF" />
             </g>
         
-            <!-- 8. MATA KANAN (MEMBESAR 1.25x DI BALIK LENSA) -->
-            <rect x="104" y="74" width="24" height="28" rx="5" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="4" />
+            <!-- 8. MATA KANAN (BEBAS TANPA HALANGAN, SIMETRIS & EKSPRESIF) -->
+            <rect x="106" y="78" width="18" height="22" rx="4" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="4" />
             <g class="jm-eye-right" style="transform: translate(var(--p-right-x, 0px), var(--p-right-y, 0px));">
-              <rect x="110" y="81" width="11" height="13" rx="2.5" fill="#0A0A0A" />
-              <circle cx="113.5" cy="84" r="2.2" fill="#FFFFFF" />
-              <circle cx="117.5" cy="89" r="1.2" fill="#00F0FF" />
+              <rect x="111" y="84" width="8" height="10" rx="2" fill="#0A0A0A" />
+              <circle cx="113.5" cy="86.5" r="1.5" fill="#FFFFFF" />
+              <circle cx="116.5" cy="90.5" r="1.2" fill="#00F0FF" />
             </g>
         
             <!-- 9. MULUT DETEKTIF -->
             <path d="M72 112 Q94 142 116 112 Z" fill="#0A0A0A" stroke="#0A0A0A" stroke-width="3" stroke-linejoin="round" />
                 <path d="M84 124 Q94 118 104 124 Q94 132 84 124 Z" fill="#FF5C8A" />
         
-            <!-- 10. KACA PEMBESAR NEO-BRUTALISM -->
-            <g id="jm-magnifier" style="transform: translate(6px, -18px) rotate(-22deg); transform-origin: 116px 88px;">
-              <circle cx="120" cy="92" r="23" fill="#0A0A0A" />
-              <rect x="138" y="106" width="12" height="32" rx="3" transform="rotate(-38 138 106)" fill="#0A0A0A" />
-              <rect x="134" y="102" width="12" height="32" rx="3" transform="rotate(-38 134 102)" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="4.5" />
-              <line x1="140" y1="112" x2="148" y2="106" stroke="#0A0A0A" stroke-width="3" stroke-linecap="round" />
-              <line x1="144" y1="117" x2="152" y2="111" stroke="#0A0A0A" stroke-width="3" stroke-linecap="round" />
-              <circle cx="116" cy="88" r="23" fill="#FFFFFF" fill-opacity="0.12" stroke="#0A0A0A" stroke-width="5" />
-              <circle cx="116" cy="88" r="19.5" fill="#00F0FF" fill-opacity="0.28" />
-              <path d="M103 78 A16 16 0 0 1 126 73" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" fill="none" />
-              <circle cx="124" cy="98" r="2" fill="#FFFFFF" />
-              <circle cx="146" cy="110" r="6.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="4" />
+            <!-- 10. KACA PEMBESAR NEO-BRUTALISM DI SAMPING KANAN (TIDAK MENUTUPI MATA) -->
+            <g id="jm-magnifier" style="transform: translate(4px, -14px) rotate(-16deg); transform-origin: 158px 84px;">
+              <circle cx="162" cy="88" r="19" fill="#0A0A0A" />
+              <rect x="156" y="102" width="11" height="28" rx="3" transform="rotate(-25 156 102)" fill="#0A0A0A" />
+              <rect x="152" y="98" width="11" height="28" rx="3" transform="rotate(-25 152 98)" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="4" />
+              <line x1="155" y1="107" x2="164" y2="103" stroke="#0A0A0A" stroke-width="2.5" stroke-linecap="round" />
+              <line x1="158" y1="113" x2="167" y2="109" stroke="#0A0A0A" stroke-width="2.5" stroke-linecap="round" />
+              <circle cx="158" cy="84" r="19" fill="#FFFFFF" fill-opacity="0.12" stroke="#0A0A0A" stroke-width="4.5" />
+              <circle cx="158" cy="84" r="15.5" fill="#00F0FF" fill-opacity="0.28" />
+              <path d="M147 75 A13 13 0 0 1 167 72" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="none" />
+              <circle cx="166" cy="92" r="1.8" fill="#FFFFFF" />
+              <circle cx="158" cy="112" r="6" fill="#FFD60A" stroke="#0A0A0A" stroke-width="4" />
             </g>
         
             <!-- 11. TOPI DEERSTALKER NEO-BRUTALISM -->
