@@ -1,7 +1,8 @@
 import questionsData from "@/data/seed/career_questions.json";
 import { getRoles, getRoleBySlug, Role } from "./roles";
-import { usersStore } from "./auth";
-        import { getOrCreatePersistentStore, PersistentStore } from "./storage";
+import { usersStore, saveUser } from "./auth";
+import { getOrCreatePersistentStore, PersistentStore } from "./storage";
+import { safeSupabaseSync } from "./supabase";
 
 export interface CareerSession {
   id: string;
@@ -45,29 +46,74 @@ export interface CareerResult {
 }
 
 // Persistent sessions and jalan_ids storage (one JalanID per user, upsert)
-        export const careerSessions: PersistentStore<CareerSession> = getOrCreatePersistentStore<CareerSession>(
-          "career_sessions",
-          "career_sessions.json",
-          [],
-          {
-            serialize: (session: CareerSession) => ({
-              ...session,
-              answers: session.answers instanceof Map
-                ? Object.fromEntries(session.answers.entries())
-                : session.answers,
-            }),
-            deserialize: (raw: any): CareerSession => ({
-              ...raw,
-              answers: raw.answers
-                ? new Map(Object.entries(raw.answers))
-                : new Map(),
-            }),
-          }
-        );
-        export const jalanIdsStore: PersistentStore<CareerResult> = getOrCreatePersistentStore<CareerResult>(
-          "jalan_ids",
-          "jalan_ids.json"
-        );
+export const careerSessions: PersistentStore<CareerSession> = getOrCreatePersistentStore<CareerSession>(
+  "career_sessions",
+  "career_sessions.json",
+  [],
+  {
+    serialize: (session: CareerSession) => ({
+      ...session,
+      answers: session.answers instanceof Map
+        ? Object.fromEntries(session.answers.entries())
+        : session.answers,
+    }),
+    deserialize: (raw: any): CareerSession => ({
+      ...raw,
+      answers: raw.answers
+        ? new Map(Object.entries(raw.answers))
+        : new Map(),
+    }),
+  }
+);
+
+export const jalanIdsStore: PersistentStore<CareerResult> = getOrCreatePersistentStore<CareerResult>(
+  "jalan_ids",
+  "jalan_ids.json"
+);
+
+/**
+ * Sinkronisasi CareerSession ke Supabase
+ */
+export function syncCareerSessionToSupabase(session: CareerSession): void {
+  safeSupabaseSync("syncCareerSession", async (client) => {
+    const answersObj = session.answers instanceof Map
+      ? Object.fromEntries(session.answers.entries())
+      : (session.answers as any);
+
+    const { error } = await client.from("career_sessions").upsert({
+      id: session.id,
+      user_id: session.user_id,
+      status: session.status,
+      current_level: session.current_level,
+      seed: session.seed,
+      answers: answersObj,
+      result: session.result ? (session.result as any) : null,
+      created_at: session.created_at,
+      completed_at: session.completed_at || null,
+    });
+    if (error) console.warn("[Supabase] Upsert career_sessions error:", error.message);
+  });
+}
+
+/**
+ * Sinkronisasi JalanID ke Supabase
+ */
+export function syncJalanIdToSupabase(result: CareerResult): void {
+  safeSupabaseSync("syncJalanId", async (client) => {
+    const { error } = await client.from("jalan_ids").upsert({
+      id: result.user_id,
+      user_id: result.user_id,
+      card_code: result.card_code,
+      username: result.username,
+      top_role: result.top_role as any,
+      secondary_roles: result.secondary_roles as any,
+      all_scores: result.all_scores as any,
+      is_tie: result.is_tie,
+      issued_at: result.issued_at,
+    });
+    if (error) console.warn("[Supabase] Upsert jalan_ids error:", error.message);
+  });
+}
 
 /**
  * Starts a new JalanKarir session for user.
@@ -88,6 +134,7 @@ export function startCareerSession(userId: string): CareerSession {
   };
 
   careerSessions.set(sessionId, session);
+  syncCareerSessionToSupabase(session);
   return session;
 }
 
@@ -150,6 +197,9 @@ export function recordLevelAnswers(
   if (session.current_level < 5) {
     session.current_level += 1;
   }
+
+  careerSessions.set(sessionId, session);
+  syncCareerSessionToSupabase(session);
 }
 
 /**
@@ -292,12 +342,14 @@ export function calculateCareerResult(sessionId: string): CareerResult {
 
   // UPSERT into JalanID store (one JalanID per user)
   jalanIdsStore.set(session.user_id, result);
+  syncCareerSessionToSupabase(session);
+  syncJalanIdToSupabase(result);
 
   // Update user active role status
   if (user) {
     user.has_jalan_id = true;
     user.active_role_slug = top1.slug;
-    usersStore.set(user.id, user);
+    saveUser(user);
   }
 
   return result;

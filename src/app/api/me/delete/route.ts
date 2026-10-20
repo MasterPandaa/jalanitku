@@ -1,18 +1,29 @@
 import { NextRequest, NextResponse } from "next/server";
-import { usersStore } from "@/lib/auth";
+import { getSessionUser, usersStore } from "@/lib/auth";
+import { deleteUserCocoklogiku } from "@/lib/rapor";
+import { safeSupabaseSync } from "@/lib/supabase";
 
 export async function DELETE(req: NextRequest) {
-  const sessionId = req.cookies.get("jalanitku_session")?.value;
+  const user = await getSessionUser();
 
-  if (!sessionId || !usersStore.has(sessionId)) {
+  if (!user) {
     return NextResponse.json(
       { success: false, error: { message: "Belum terautentikasi" } },
       { status: 401 }
     );
   }
 
-  // Delete user from store
-  usersStore.delete(sessionId);
+  const userId = user.id;
+
+  // Hapus data terkait di Cocoklogiku & Supabase
+  deleteUserCocoklogiku(userId);
+
+  safeSupabaseSync("deleteUserData", async (client) => {
+    await client.from("users").delete().eq("id", userId);
+  });
+
+  // Delete user from local store
+  usersStore.delete(userId);
 
   const response = NextResponse.json({
     success: true,

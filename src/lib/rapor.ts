@@ -1,7 +1,8 @@
 import fs from "fs";
 import path from "path";
 import { getCompetenciesByRoleSlug } from "./roles";
-        import { getOrCreatePersistentStore, PersistentStore } from "./storage";
+import { getOrCreatePersistentStore, PersistentStore } from "./storage";
+import { safeSupabaseSync } from "./supabase";
 
 export interface RaporQuestion {
   id: string;
@@ -98,14 +99,58 @@ export interface QuestionReviewItem {
 }
 
 // Persistent store untuk sesi tes dan hasil Cocoklogiku aktif pengguna
-        export const raporSessions: PersistentStore<RaporSessionState> = getOrCreatePersistentStore<RaporSessionState>(
-          "rapor_sessions",
-          "rapor_sessions.json"
-        );
-        export const cocoklogikuByUser: PersistentStore<CocoklogikuRecord> = getOrCreatePersistentStore<CocoklogikuRecord>(
-          "cocoklogiku",
-          "cocoklogiku.json"
-        );
+export const raporSessions: PersistentStore<RaporSessionState> = getOrCreatePersistentStore<RaporSessionState>(
+  "rapor_sessions",
+  "rapor_sessions.json"
+);
+export const cocoklogikuByUser: PersistentStore<CocoklogikuRecord> = getOrCreatePersistentStore<CocoklogikuRecord>(
+  "cocoklogiku",
+  "cocoklogiku.json"
+);
+
+/**
+ * Sinkronisasi RaporSession ke Supabase
+ */
+export function syncRaporSessionToSupabase(session: RaporSessionState): void {
+  safeSupabaseSync("syncRaporSession", async (client) => {
+    const { error } = await client.from("rapor_sessions").upsert({
+      id: session.sessionId,
+      user_id: session.userId,
+      role_slug: session.roleSlug,
+      current_level: session.currentLevel,
+      total_levels: session.totalLevels,
+      is_finished: session.isFinished,
+      answers: session.answers as any,
+      assigned_questions: session.assignedQuestions as any,
+      started_at: session.startedAt,
+    });
+    if (error) console.warn("[Supabase] Upsert rapor_sessions error:", error.message);
+  });
+}
+
+/**
+ * Sinkronisasi Cocoklogiku ke Supabase
+ */
+export function syncCocoklogikuToSupabase(record: CocoklogikuRecord): void {
+  safeSupabaseSync("syncCocoklogiku", async (client) => {
+    const { error } = await client.from("cocoklogikus").upsert({
+      id: record.userId,
+      user_id: record.userId,
+      username: record.username,
+      role_slug: record.roleSlug,
+      role_name: record.roleName,
+      final_score: record.finalScore,
+      match_label: record.matchLabel,
+      level_scores: record.levelScores as any,
+      competency_scores: record.competencyScores as any,
+      reason: record.reason as any,
+      recommendations: record.recommendations as any,
+      alternative_roles: record.alternativeRoles as any,
+      completed_at: record.completedAt,
+    });
+    if (error) console.warn("[Supabase] Upsert cocoklogikus error:", error.message);
+  });
+}
 
 const LEVEL_WEIGHTS: Record<number, number> = {
   1: 1.0,
@@ -195,6 +240,7 @@ export function startRaporSession(userId: string, roleSlug: string): RaporSessio
   };
 
   raporSessions.set(sessionId, session);
+  syncRaporSessionToSupabase(session);
   return session;
 }
 
@@ -246,13 +292,18 @@ export function submitRaporLevelAnswers(
     ...answers,
   };
 
+  let nextLevel: number | null = null;
   if (level < 5) {
     session.currentLevel = level + 1;
-    return { nextLevel: session.currentLevel, isFinished: false };
+    nextLevel = session.currentLevel;
   } else {
     session.isFinished = true;
-    return { nextLevel: null, isFinished: true };
   }
+
+  raporSessions.set(sessionId, session);
+  syncRaporSessionToSupabase(session);
+
+  return { nextLevel, isFinished: session.isFinished };
 }
 
 /**
@@ -466,6 +517,12 @@ export function finishRaporSession(sessionId: string, username: string, roleName
 
   // Upsert: Satu user = Tepat 1 Cocoklogiku aktif (menimpa yang lama)
   cocoklogikuByUser.set(session.userId, record);
+  session.isFinished = true;
+  raporSessions.set(sessionId, session);
+
+  syncRaporSessionToSupabase(session);
+  syncCocoklogikuToSupabase(record);
+
   return record;
 }
 
@@ -480,6 +537,9 @@ export function getUserCocoklogiku(userId: string): CocoklogikuRecord | null {
  * Hapus Cocoklogiku pengguna (misal saat akun dihapus)
  */
 export function deleteUserCocoklogiku(userId: string): boolean {
+  safeSupabaseSync("deleteUserCocoklogiku", async (client) => {
+    await client.from("cocoklogikus").delete().eq("user_id", userId);
+  });
   return cocoklogikuByUser.delete(userId);
 }
 

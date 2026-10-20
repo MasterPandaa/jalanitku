@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getSessionUser, usersStore } from "@/lib/auth";
+import { getSessionUser, saveUser } from "@/lib/auth";
 import { getRaporSession, finishRaporSession } from "@/lib/rapor";
 import { getRoleBySlug } from "@/lib/roles";
 
@@ -25,9 +25,10 @@ export async function POST(
     const username = user.username || "pengguna";
     const cocoklogiku = finishRaporSession(id, username, roleName);
 
-    // Update session user di usersStore agar status dashboard sinkron
+    // Update session user di store & Supabase agar status dashboard sinkron
     user.has_cocoklogiku = true;
     user.active_role_slug = session.roleSlug;
+    saveUser(user);
 
     return NextResponse.json({
       success: true,

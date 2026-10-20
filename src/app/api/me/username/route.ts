@@ -1,17 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
-import { usersStore, validateUsername, isUsernameAvailable } from "@/lib/auth";
+import { getSessionUser, saveUser, validateUsername, isUsernameAvailable } from "@/lib/auth";
 
 export async function POST(req: NextRequest) {
-  const sessionId = req.cookies.get("jalanitku_session")?.value;
+  const user = await getSessionUser();
 
-  if (!sessionId || !usersStore.has(sessionId)) {
+  if (!user) {
     return NextResponse.json(
       { success: false, error: { message: "Belum terautentikasi" } },
       { status: 401 }
     );
   }
 
-  const user = usersStore.get(sessionId)!;
   const body = await req.json().catch(() => ({}));
   const username = body.username;
 
@@ -41,7 +40,7 @@ export async function POST(req: NextRequest) {
 
   // Update user username
   user.username = username.trim().toLowerCase();
-  usersStore.set(user.id, user);
+  saveUser(user);
 
   return NextResponse.json({
     success: true,

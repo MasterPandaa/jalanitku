@@ -6,6 +6,8 @@ const RUNTIME_DIR = path.join(process.cwd(), "src", "data", "runtime");
 export interface PersistentStoreOptions<V> {
   serialize?: (val: V) => any;
   deserialize?: (raw: any) => V;
+  onSet?: (key: string, val: V) => void;
+  onDelete?: (key: string) => void;
 }
 
 /**
@@ -19,6 +21,8 @@ export class PersistentStore<V> extends Map<string, V> {
   private lastMtime: number = 0;
   private serializer?: (val: V) => any;
   private deserializer?: (raw: any) => V;
+  private onSet?: (key: string, val: V) => void;
+  private onDelete?: (key: string) => void;
 
   constructor(
     filename: string,
@@ -31,6 +35,8 @@ export class PersistentStore<V> extends Map<string, V> {
     this.filePath = path.join(RUNTIME_DIR, filename);
     this.serializer = options?.serialize;
     this.deserializer = options?.deserialize;
+    this.onSet = options?.onSet;
+    this.onDelete = options?.onDelete;
 
     this.ensureDirectory();
     this.loadFromDisk();
@@ -140,6 +146,13 @@ export class PersistentStore<V> extends Map<string, V> {
   override set(key: string, value: V): this {
     super.set(key, value);
     this.saveToDisk();
+    if (this.onSet) {
+      try {
+        this.onSet(key, value);
+      } catch (err) {
+        console.warn(`[PersistentStore] onSet hook error for ${key}:`, err);
+      }
+    }
     return this;
   }
 
@@ -147,6 +160,13 @@ export class PersistentStore<V> extends Map<string, V> {
     const deleted = super.delete(key);
     if (deleted) {
       this.saveToDisk();
+      if (this.onDelete) {
+        try {
+          this.onDelete(key);
+        } catch (err) {
+          console.warn(`[PersistentStore] onDelete hook error for ${key}:`, err);
+        }
+      }
     }
     return deleted;
   }
