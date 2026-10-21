@@ -15,9 +15,9 @@ export interface NetworkEngineerMascotProps {
  * Identitas: Sang Penenun Jaringan & Penyambung Serat Kabel (Network Splicer)
  * Ciri Khas: Antena router kembar di kepala, kacamata visor serat optik HUD data stream 10G,
  * tangan kiri dan tangan kanan memegang dua ujung kabel terputus dengan serat tembaga mencuat yang
- * didekatkan di tengah, memicu efek GELOMBANG SHOCKWAVE RAKSASA (MEGA SHOCKWAVE) yang berdenyut ekspansif
- * hingga meluap keluar dari batas tubuh karakter (radius 48px, 72px, hingga 98px), dengan ray kilat radial
- * dan letupan percikan spark data reconnect di pusat pertemuan kedua ujung kabel.
+ * didekatkan di tengah, memicu efek GELOMBANG SHOCKWAVE MURNI (cincin impuls konsentris bersih tanpa garis-garis
+ * tambahan yang menutupi bodi karakter) yang memancar meluas hingga keluar dari tubuh karakter (radius 48px, 72px, hingga 94px),
+ * serta letupan percikan spark data reconnect di pusat pertemuan kabel.
  *
  * Base Anatomi: 100% konsisten dengan Base Model Batch 1 (kaki sol putih y=170, tubuh kuning rambu 106x94,
  * marka jalan putus-putus perut, pipi pink, mata ekspresif, mulut senyum, kepalan tangan kuning #FFD60A).
@@ -36,7 +36,7 @@ export function NetworkEngineerMascot({
       className={`relative inline-flex items-center justify-center select-none group ${className}`}
       style={{ width: size, height: size }}
       role="img"
-      aria-label="Maskot Network Engineer — The Connector: Papan penunjuk jalan neo-brutalism kuning dengan antena router, visor serat optik HUD 10G, kedua tangan menyatukan kabel terputus yang memicu gelombang mega shockwave raksasa meluas hingga keluar dari tubuh karakter"
+      aria-label="Maskot Network Engineer — The Connector: Papan penunjuk jalan neo-brutalism kuning dengan antena router, visor serat optik HUD 10G, kedua tangan menyatukan kabel terputus yang memicu cincin gelombang shockwave murni meluas keluar karakter tanpa garis penutup bodi"
     >
       <svg
         viewBox="0 0 200 200"
@@ -52,22 +52,22 @@ export function NetworkEngineerMascot({
               0%, 100% { transform: translateY(0px); }
               50% { transform: translateY(-3.5px); }
             }
-            @keyframes net-mega-shockwave-1 {
-              0% { r: 12px; opacity: 1; stroke-width: 4.5px; }
-              40% { r: 48px; opacity: 0.8; stroke-width: 3.5px; }
-              80% { r: 84px; opacity: 0.35; stroke-width: 2px; }
+            @keyframes net-pure-shockwave-1 {
+              0% { r: 12px; opacity: 1; stroke-width: 4px; }
+              40% { r: 48px; opacity: 0.8; stroke-width: 3px; }
+              80% { r: 84px; opacity: 0.35; stroke-width: 1.8px; }
               100% { r: 105px; opacity: 0; stroke-width: 0.8px; }
             }
-            @keyframes net-mega-shockwave-2 {
-              0% { r: 8px; opacity: 0; stroke-width: 4px; }
-              25% { r: 32px; opacity: 0.95; stroke-width: 3px; }
-              70% { r: 72px; opacity: 0.45; stroke-width: 2.2px; }
+            @keyframes net-pure-shockwave-2 {
+              0% { r: 8px; opacity: 0; stroke-width: 3.5px; }
+              25% { r: 32px; opacity: 0.95; stroke-width: 2.8px; }
+              70% { r: 72px; opacity: 0.45; stroke-width: 2px; }
               100% { r: 96px; opacity: 0; stroke-width: 0.8px; }
             }
-            @keyframes net-mega-shockwave-3 {
-              0% { r: 6px; opacity: 0; stroke-width: 3px; }
-              35% { r: 42px; opacity: 0.85; stroke-width: 2.5px; }
-              85% { r: 88px; opacity: 0.25; stroke-width: 1.5px; }
+            @keyframes net-pure-shockwave-3 {
+              0% { r: 6px; opacity: 0; stroke-width: 2.8px; }
+              35% { r: 42px; opacity: 0.85; stroke-width: 2.2px; }
+              85% { r: 88px; opacity: 0.25; stroke-width: 1.2px; }
               100% { r: 112px; opacity: 0; stroke-width: 0.5px; }
             }
             @keyframes net-cable-left {
@@ -80,22 +80,22 @@ export function NetworkEngineerMascot({
             }
             @keyframes net-spark-burst {
               0%, 100% { opacity: 0.85; transform: scale(0.9) rotate(0deg); }
-              50% { opacity: 1; transform: scale(1.4) rotate(25deg); }
+              50% { opacity: 1; transform: scale(1.35) rotate(20deg); }
             }
             .net-animated-body {
               animation: ${isAnimated ? "net-float 3.5s ease-in-out infinite" : "none"};
               transform-origin: center bottom;
             }
-            .net-mega-ring-1 {
-              animation: ${isAnimated ? "net-mega-shockwave-1 2s cubic-bezier(0.12, 0.75, 0.3, 1) infinite" : "none"};
+            .net-shockwave-circle-1 {
+              animation: ${isAnimated ? "net-pure-shockwave-1 2s cubic-bezier(0.12, 0.75, 0.3, 1) infinite" : "none"};
               transform-origin: 94px 123px;
             }
-            .net-mega-ring-2 {
-              animation: ${isAnimated ? "net-mega-shockwave-2 2s cubic-bezier(0.12, 0.75, 0.3, 1) 0.55s infinite" : "none"};
+            .net-shockwave-circle-2 {
+              animation: ${isAnimated ? "net-pure-shockwave-2 2s cubic-bezier(0.12, 0.75, 0.3, 1) 0.55s infinite" : "none"};
               transform-origin: 94px 123px;
             }
-            .net-mega-ring-3 {
-              animation: ${isAnimated ? "net-mega-shockwave-3 2s cubic-bezier(0.12, 0.75, 0.3, 1) 1.1s infinite" : "none"};
+            .net-shockwave-circle-3 {
+              animation: ${isAnimated ? "net-pure-shockwave-3 2s cubic-bezier(0.12, 0.75, 0.3, 1) 1.1s infinite" : "none"};
               transform-origin: 94px 123px;
             }
             .net-animated-cable-left {
@@ -258,7 +258,7 @@ export function NetworkEngineerMascot({
             strokeLinecap="round"
           />
 
-          {/* Mulut Senyum Percaya Diri (Mega Shockwave Splicing Ready) */}
+          {/* Mulut Senyum Percaya Diri (Shockwave Bersih Ready) */}
           <path
             d="M 87 114 Q 94 123 102 114"
             stroke="#0A0A0A"
@@ -400,33 +400,33 @@ export function NetworkEngineerMascot({
           />
 
           {/* ============================================================== */}
-          {/* LAYER 6: EFEK MEGA SHOCKWAVE RAKSASA KELUAR DARI KARAKTER      */}
+          {/* LAYER 6: EFEK SHOCKWAVE MURNI KELUAR DARI KARAKTER (TANPA GARIS LAIN) */}
           {/* ============================================================== */}
           <g>
-            {/* Mega Shockwave Ring 1: Gelombang Impuls Cyan Raksasa Meluap Keluar */}
+            {/* Shockwave Ring 1: Impuls Cyan Meluap Keluar */}
             <circle
-              className="net-mega-ring-1"
+              className="net-shockwave-circle-1"
               cx="94"
               cy="123"
               r="48"
               fill="none"
               stroke="#00F0FF"
-              strokeWidth="4"
+              strokeWidth="3.5"
             />
-            {/* Mega Shockwave Ring 2: Gelombang Mint Neon Putus-Putus Meluas */}
+            {/* Shockwave Ring 2: Impuls Mint Neon Meluas */}
             <circle
-              className="net-mega-ring-2"
+              className="net-shockwave-circle-2"
               cx="94"
               cy="123"
               r="72"
               fill="none"
               stroke="#2EE59D"
-              strokeWidth="3"
+              strokeWidth="2.8"
               strokeDasharray="6 4"
             />
-            {/* Mega Shockwave Ring 3: Gelombang Emas Luar Hingga Melewati Tepi */}
+            {/* Shockwave Ring 3: Impuls Emas Terluar Keluar Karakter */}
             <circle
-              className="net-mega-ring-3"
+              className="net-shockwave-circle-3"
               cx="94"
               cy="123"
               r="94"
@@ -435,20 +435,6 @@ export function NetworkEngineerMascot({
               strokeWidth="2"
               strokeDasharray="4 6"
             />
-
-            {/* Garis Kilat Shockwave Radial Panjang Meletup Melewati Tubuh */}
-            {/* Kiri Atas Meluas Keluar Karakter */}
-            <line x1="78" y1="107" x2="22" y2="51" stroke="#00F0FF" strokeWidth="2.5" strokeLinecap="round" />
-            {/* Kanan Atas Meluas Keluar Karakter */}
-            <line x1="110" y1="107" x2="166" y2="51" stroke="#00F0FF" strokeWidth="2.5" strokeLinecap="round" />
-            {/* Kiri Bawah Meluas Keluar Karakter */}
-            <line x1="78" y1="139" x2="26" y2="175" stroke="#2EE59D" strokeWidth="2.5" strokeLinecap="round" />
-            {/* Kanan Bawah Meluas Keluar Karakter */}
-            <line x1="110" y1="139" x2="162" y2="175" stroke="#2EE59D" strokeWidth="2.5" strokeLinecap="round" />
-
-            {/* Aksen Loncatan Petir Data Samping */}
-            <path d="M 38 123 L 26 117 L 32 129 L 20 123" stroke="#FFD60A" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M 150 123 L 162 117 L 156 129 L 168 123" stroke="#FFD60A" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
           </g>
 
           {/* ============================================================== */}

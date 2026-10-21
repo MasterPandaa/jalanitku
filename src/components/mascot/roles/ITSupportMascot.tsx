@@ -14,10 +14,11 @@ export interface ITSupportMascotProps {
  * Maskot Role: IT Support — "The Doctor" (The System Doctor / Medic)
  * Identitas: Sang Dokter IT / Sistem Medic Penyelamat Operasional
  * Ciri Khas: Cermin kepala medis (head mirror) dokter dengan tali kepala tebal kokoh, jas lab dokter putih
- * kotak melintang penuh hingga ke samping kanan dan kiri karakter (x=42 sampai x=148, y=120 sampai y=144),
- * nametag identitas rumah sakit IT di saku dada (tanpa teks nama), kotak P3K IT medis di tangan kiri dengan
- * lambang palang merah medis darurat (#FF3B30), tangan kanan memegang suntikan USB siber tanpa kabel,
- * serta partikel tanda palang "+" medis (mint & cyan) melayang naik ke atas berkilauan persis seperti efek HEAL di video game.
+ * kotak proporsional melintang ke samping kanan dan kiri karakter di bawah mulut (y=125 sampai y=144,
+ * memberi ruang lega bagi senyum mulut di y=114), nametag identitas rumah sakit IT di saku dada (tanpa teks nama),
+ * kotak P3K IT medis di tangan kiri dengan lambang palang merah medis darurat (#FF3B30), tangan kanan
+ * memegang suntikan USB siber tanpa kabel, serta partikel tanda palang "+" medis (mint & cyan) melayang
+ * naik ke atas berkilauan persis seperti efek HEAL di video game.
  *
  * Base Anatomi: 100% konsisten dengan Base Model Batch 1 (kaki sol putih y=170, tubuh kuning rambu 106x94,
  * marka jalan putus-putus perut, pipi pink, mata ekspresif, mulut senyum, kepalan tangan kuning #FFD60A).
@@ -36,7 +37,7 @@ export function ITSupportMascot({
       className={`relative inline-flex items-center justify-center select-none group ${className}`}
       style={{ width: size, height: size }}
       role="img"
-      aria-label="Maskot IT Support — The Doctor: Papan penunjuk jalan neo-brutalism kuning dengan jas dokter putih kotak penuh melintang ke samping, cermin dahi tebal, kotak P3K palang merah, suntikan USB tanpa kabel, dan partikel palang plus melayang naik efek heal game"
+      aria-label="Maskot IT Support — The Doctor: Papan penunjuk jalan neo-brutalism kuning dengan jas dokter putih kotak proporsional di bawah mulut, cermin dahi tebal, kotak P3K palang merah, suntikan USB tanpa kabel, dan partikel palang plus melayang naik efek heal game"
     >
       <svg
         viewBox="0 0 200 200"
@@ -262,7 +263,7 @@ export function ITSupportMascot({
             fill="none"
           />
 
-          {/* Mulut Senyum Hangat Ramah */}
+          {/* Mulut Senyum Hangat Ramah (y=114 - Bersih Tanpa Tertutup Baju) */}
           <path
             d="M 87 114 Q 94 123 102 114"
             stroke="#0A0A0A"
@@ -272,85 +273,85 @@ export function ITSupportMascot({
           />
 
           {/* ============================================================== */}
-          {/* LAYER 4: JAS LAB DOKTER PUTIH KOTAK PENUH HINGGA SAMPING KARAKTER */}
+          {/* LAYER 4: JAS LAB DOKTER PUTIH KOTAK (POSISI PROPORSIONAL y=125)*/}
           {/* ============================================================== */}
-          {/* Bodi Utama Jas Dokter Putih Kotak Penuh dari Sisi Kiri (42) hingga Kanan (148) */}
+          {/* Bodi Jas Lab Putih Kotak Melintang dari Kiri (42) ke Kanan (148) Dimulai di y=125 (Di Bawah Mulut) */}
           <path
-            d="M 42 120 L 148 120 L 148 144 L 42 144 Z"
+            d="M 42 125 L 148 125 L 148 144 L 42 144 Z"
             fill="#FFFFFF"
             stroke="#0A0A0A"
-            strokeWidth="4"
+            strokeWidth="3.5"
             strokeLinejoin="round"
           />
 
-          {/* Lapel Kerah Jas V-Neck Dokter Putih Menyilang di Dada */}
+          {/* Kerah Lapel V-Neck Jas Dokter Putih yang Rapi dan Proporsional */}
           <polygon
-            points="66,144 94,144 80,120"
+            points="68,144 94,144 82,125"
             fill="#F4F4F5"
             stroke="#0A0A0A"
-            strokeWidth="2.5"
+            strokeWidth="2.2"
             strokeLinejoin="round"
           />
           <polygon
-            points="122,144 94,144 108,120"
+            points="120,144 94,144 106,125"
             fill="#F4F4F5"
             stroke="#0A0A0A"
-            strokeWidth="2.5"
+            strokeWidth="2.2"
             strokeLinejoin="round"
           />
 
-          {/* Garis Kancing Tengah & Kancing Dokter Cyan */}
-          <line x1="94" y1="120" x2="94" y2="144" stroke="#0A0A0A" strokeWidth="2.5" />
-          <circle cx="94" cy="128" r="1.8" fill="#00F0FF" stroke="#0A0A0A" strokeWidth="1" />
-          <circle cx="94" cy="136" r="1.8" fill="#00F0FF" stroke="#0A0A0A" strokeWidth="1" />
+          {/* Garis Tengah Lipatan Jas & Kancing Dokter Cyan */}
+          <line x1="94" y1="125" x2="94" y2="144" stroke="#0A0A0A" strokeWidth="2.2" />
+          <circle cx="94" cy="131" r="1.6" fill="#00F0FF" stroke="#0A0A0A" strokeWidth="1" />
+          <circle cx="94" cy="138" r="1.6" fill="#00F0FF" stroke="#0A0A0A" strokeWidth="1" />
 
           {/* Saku Samping Kiri Jas Dokter */}
           <rect
             x="46"
-            y="126"
-            width="18"
-            height="14"
+            y="129"
+            width="17"
+            height="12"
             rx="1.5"
             fill="#FFFFFF"
             stroke="#0A0A0A"
-            strokeWidth="2"
+            strokeWidth="1.8"
           />
-          <line x1="46" y1="126" x2="64" y2="126" stroke="#00F0FF" strokeWidth="2" />
+          <line x1="46" y1="129" x2="63" y2="129" stroke="#00F0FF" strokeWidth="1.8" />
 
           {/* Saku Dada Kanan Jas Dokter & Nametag ID (Tanpa Teks Nama) */}
           <rect
-            x="116"
-            y="124"
-            width="24"
-            height="16"
+            x="117"
+            y="127"
+            width="23"
+            height="14"
             rx="2"
             fill="#FFFFFF"
             stroke="#0A0A0A"
-            strokeWidth="2"
+            strokeWidth="1.8"
           />
-          <line x1="116" y1="124" x2="140" y2="124" stroke="#00F0FF" strokeWidth="2" />
+          <line x1="117" y1="127" x2="140" y2="127" stroke="#00F0FF" strokeWidth="1.8" />
 
           {/* Kartu Nametag ID Rumah Sakit IT */}
-          <rect x="122" y="128" width="14" height="9" rx="1.5" fill="#0A0A0A" />
+          <rect x="122.5" y="129.5" width="13" height="8.5" rx="1.2" fill="#0A0A0A" />
           <rect
-            x="121"
-            y="127"
-            width="14"
-            height="9"
-            rx="1.5"
+            x="121.5"
+            y="128.5"
+            width="13"
+            height="8.5"
+            rx="1.2"
             fill="#FFFFFF"
             stroke="#0A0A0A"
             strokeWidth="1.2"
           />
           {/* Header Cyan Nametag */}
-          <rect x="121" y="127" width="14" height="2.5" fill="#00F0FF" />
+          <rect x="121.5" y="128.5" width="13" height="2.2" fill="#00F0FF" />
           {/* Avatar Kotak Mini Foto ID */}
-          <rect x="122.5" y="130.5" width="3" height="4" rx="0.5" fill="#0A0A0A" />
+          <rect x="123" y="131.7" width="2.8" height="3.5" rx="0.4" fill="#0A0A0A" />
           {/* Garis-Garis Identitas Barcode (Tanpa Teks Nama) */}
-          <line x1="127" y1="131.5" x2="133" y2="131.5" stroke="#2EE59D" strokeWidth="1" />
-          <line x1="127" y1="133.5" x2="132" y2="133.5" stroke="#0A0A0A" strokeWidth="0.8" />
+          <line x1="127" y1="132.5" x2="132.5" y2="132.5" stroke="#2EE59D" strokeWidth="0.9" />
+          <line x1="127" y1="134.5" x2="131.5" y2="134.5" stroke="#0A0A0A" strokeWidth="0.8" />
           {/* Klip Gantungan Nametag Logam Emas */}
-          <rect x="126.5" y="125.5" width="3" height="2.5" fill="#FFD60A" stroke="#0A0A0A" strokeWidth="0.8" />
+          <rect x="125.8" y="127" width="2.8" height="2.2" fill="#FFD60A" stroke="#0A0A0A" strokeWidth="0.8" />
 
           {/* ============================================================== */}
           {/* LAYER 5: HEAD MIRROR DOKTER (IKAT KEPALA TEBAL KOKOH)          */}

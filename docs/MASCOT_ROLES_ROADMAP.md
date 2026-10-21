@@ -94,7 +94,7 @@ Ke-21 role IT dikelompokkan ke dalam 7 batch tematik yang masing-masing terdiri 
 #### 5. IT Support — "The Doctor"
 - **Metafora Karakter**: Sang Dokter IT / Sistem Medic penyelamat operasional harian yang selalu sigap mendiagnosis dan merehabilitasi kendala sistem dengan ramah.
 - **Atribut Visual & Props**:
-  - **Jas Lab Dokter Kotak Penuh Samping**: Jas dokter putih bersih kotak yang melintang penuh hingga ke batas samping kanan dan kiri karakter (`x=42` hingga `x=148`), lengkap dengan lapel kerah dokter, saku dada, dan nametag ID medis (tanpa nama teks).
+  - **Jas Lab Dokter Kotak Proporsional**: Jas dokter putih bersih kotak yang melintang rapi ke batas samping kanan dan kiri karakter di bawah mulut (`y=125` hingga `y=144`), memberi ruang senyum ramah yang bersih, lengkap dengan lapel kerah dokter, saku dada, dan nametag ID medis (tanpa nama teks).
   - **Cermin Kepala Medis Tebal (Head Mirror)**: Cermin bulat dokter reflektif dengan tali kepala tebal kokoh pemantau titik kendala perangkat keras dan lunak.
   - **Kotak P3K IT Medis (Palang Merah Darurat)**: Kotak koper pertolongan pertama putih dengan lambang palang merah medis darurat (`#FF3B30`).
   - **Suntikan USB Siber Tanpa Kabel**: Suntikan siber transparan berdosis serum pemulihan sistem hijau mint (`#2EE59D`) dengan konektor jarum probe USB langsung tanpa kabel di tangan kanan.
@@ -106,7 +106,7 @@ Ke-21 role IT dikelompokkan ke dalam 7 batch tematik yang masing-masing terdiri 
 - **Atribut Visual & Props**:
   - **Antena Router Kembar**: Sepasang antena di kepala sebagai pemancar sinyal perangkat jaringan.
   - **Penyambungan Kabel Terputus (Cable Splicing)**: Tangan kiri dan kanan memegang dua ujung kabel jaringan yang terputus dengan serat kawat tembaga emas dan cyan mencuat yang sedang didekatkan untuk disambung kembali.
-  - **Mega Shockwave Meluap Keluar**: Efek gelombang kejut raksasa (mega shockwave) berdenyut ekspansif meluas hingga keluar dari batas tubuh karakter (radius 48px, 72px, hingga 94px) dengan kilat petir radial saat kabel ingin disatukan.
+  - **Gelombang Shockwave Murni Meluas Keluar**: Cincin gelombang kejut bersih berdenyut ekspansif meluas hingga keluar dari batas tubuh karakter (radius 48px, 72px, hingga 94px) tanpa garis-garis tambahan yang menutupi karakter.
   - **Visor Serat Optik HUD**: Kacamata visor cyan futuristik pemantau bandwidth traffic 10G dan status data stream.
 - **Palet Warna**: Kuning Rambu `#FFD60A`, Cyan Jaringan `#00F0FF`, Hijau Link `#2EE59D`, Emas Tembaga `#FFD60A` / `#FF8A3D`, Tinta `#0A0A0A`.
 

@@ -1,7 +1,7 @@
 <svg viewBox="0 0 200 200" width="200" height="200" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- MASKOT IT SUPPORT — "THE DOCTOR / THE SYSTEM MEDIC" -->
   <!-- Proyek: JalanITku · Sutradara Visual: Matatabi -->
-  <!-- Standar: 100% Konsisten Base Model Batch 1 dengan Jas Lab Dokter Kotak Penuh ke Samping, Kotak P3K Palang Merah, dan Simbol Plus Efek Heal -->
+  <!-- Standar: 100% Konsisten Base Model Batch 1 dengan Jas Lab Dokter Kotak Proporsional di Bawah Mulut (y=125) -->
 
   <!-- LAYER 1: KAKI & SEPATU HITAM DENGAN SOL PUTIH (IDENTIK BATCH 1) -->
   <rect x="68" y="154" width="22" height="24" fill="#0A0A0A" />
@@ -38,33 +38,34 @@
   <path d="M 58 70 Q 69 66 79 70" stroke="#0A0A0A" stroke-width="3.5" stroke-linecap="round" fill="none" />
   <path d="M 103 70 Q 113 66 124 70" stroke="#0A0A0A" stroke-width="3.5" stroke-linecap="round" fill="none" />
 
+  <!-- Mulut Senyum (y=114 - Bersih Tanpa Tertutup Baju) -->
   <path d="M 87 114 Q 94 123 102 114" stroke="#0A0A0A" stroke-width="3.5" fill="none" stroke-linecap="round" />
 
-  <!-- LAYER 4: JAS LAB DOKTER PUTIH KOTAK PENUH HINGGA SAMPING KARAKTER -->
-  <path d="M 42 120 L 148 120 L 148 144 L 42 144 Z" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="4" stroke-linejoin="round" />
+  <!-- LAYER 4: JAS LAB DOKTER PUTIH KOTAK (POSISI PROPORSIONAL y=125) -->
+  <path d="M 42 125 L 148 125 L 148 144 L 42 144 Z" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3.5" stroke-linejoin="round" />
 
-  <polygon points="66,144 94,144 80,120" fill="#F4F4F5" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
-  <polygon points="122,144 94,144 108,120" fill="#F4F4F5" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
+  <polygon points="68,144 94,144 82,125" fill="#F4F4F5" stroke="#0A0A0A" stroke-width="2.2" stroke-linejoin="round" />
+  <polygon points="120,144 94,144 106,125" fill="#F4F4F5" stroke="#0A0A0A" stroke-width="2.2" stroke-linejoin="round" />
 
-  <line x1="94" y1="120" x2="94" y2="144" stroke="#0A0A0A" stroke-width="2.5" />
-  <circle cx="94" cy="128" r="1.8" fill="#00F0FF" stroke="#0A0A0A" stroke-width="1" />
-  <circle cx="94" cy="136" r="1.8" fill="#00F0FF" stroke="#0A0A0A" stroke-width="1" />
+  <line x1="94" y1="125" x2="94" y2="144" stroke="#0A0A0A" stroke-width="2.2" />
+  <circle cx="94" cy="131" r="1.6" fill="#00F0FF" stroke="#0A0A0A" stroke-width="1" />
+  <circle cx="94" cy="138" r="1.6" fill="#00F0FF" stroke="#0A0A0A" stroke-width="1" />
 
   <!-- Saku Samping Kiri Jas -->
-  <rect x="46" y="126" width="18" height="14" rx="1.5" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2" />
-  <line x1="46" y1="126" x2="64" y2="126" stroke="#00F0FF" stroke-width="2" />
+  <rect x="46" y="129" width="17" height="12" rx="1.5" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.8" />
+  <line x1="46" y1="129" x2="63" y2="129" stroke="#00F0FF" stroke-width="1.8" />
 
   <!-- Saku Dada Kanan Jas & Nametag ID -->
-  <rect x="116" y="124" width="24" height="16" rx="2" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2" />
-  <line x1="116" y1="124" x2="140" y2="124" stroke="#00F0FF" stroke-width="2" />
+  <rect x="117" y="127" width="23" height="14" rx="2" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.8" />
+  <line x1="117" y1="127" x2="140" y2="127" stroke="#00F0FF" stroke-width="1.8" />
 
-  <rect x="122" y="128" width="14" height="9" rx="1.5" fill="#0A0A0A" />
-  <rect x="121" y="127" width="14" height="9" rx="1.5" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.2" />
-  <rect x="121" y="127" width="14" height="2.5" fill="#00F0FF" />
-  <rect x="122.5" y="130.5" width="3" height="4" rx="0.5" fill="#0A0A0A" />
-  <line x1="127" y1="131.5" x2="133" y2="131.5" stroke="#2EE59D" stroke-width="1" />
-  <line x1="127" y1="133.5" x2="132" y2="133.5" stroke="#0A0A0A" stroke-width="0.8" />
-  <rect x="126.5" y="125.5" width="3" height="2.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="0.8" />
+  <rect x="122.5" y="129.5" width="13" height="8.5" rx="1.2" fill="#0A0A0A" />
+  <rect x="121.5" y="128.5" width="13" height="8.5" rx="1.2" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.2" />
+  <rect x="121.5" y="128.5" width="13" height="2.2" fill="#00F0FF" />
+  <rect x="123" y="131.7" width="2.8" height="3.5" rx="0.4" fill="#0A0A0A" />
+  <line x1="127" y1="132.5" x2="132.5" y2="132.5" stroke="#2EE59D" stroke-width="0.9" />
+  <line x1="127" y1="134.5" x2="131.5" y2="134.5" stroke="#0A0A0A" stroke-width="0.8" />
+  <rect x="125.8" y="127" width="2.8" height="2.2" fill="#FFD60A" stroke="#0A0A0A" stroke-width="0.8" />
 
   <!-- LAYER 5: HEAD MIRROR DOKTER (IKAT KEPALA TEBAL) -->
   <path d="M 42 56 Q 95 50 148 56" stroke="#0A0A0A" stroke-width="8" fill="none" stroke-linecap="round" />

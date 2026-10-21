@@ -1,7 +1,7 @@
 <svg viewBox="0 0 200 200" width="200" height="200" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- MASKOT NETWORK ENGINEER — "THE CONNECTOR / THE SPLICER" -->
   <!-- Proyek: JalanITku · Sutradara Visual: Matatabi -->
-  <!-- Standar: 100% Konsisten Base Model Batch 1 dengan Gelombang Mega Shockwave Meluas Keluar Karakter -->
+  <!-- Standar: 100% Konsisten Base Model Batch 1 dengan Gelombang Shockwave Murni Keluar Karakter Tanpa Garis-Garis Penutup -->
 
   <!-- LAYER 1: KAKI & SEPATU HITAM DENGAN SOL PUTIH (IDENTIK BATCH 1) -->
   <rect x="68" y="154" width="22" height="24" fill="#0A0A0A" />
@@ -70,18 +70,10 @@
   <polygon points="110,144 94,144 100,132" fill="#00F0FF" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
   <rect x="91" y="132" width="7" height="6" fill="#2EE59D" stroke="#0A0A0A" stroke-width="2" />
 
-  <!-- LAYER 6: EFEK MEGA SHOCKWAVE RAKSASA KELUAR DARI KARAKTER -->
-  <circle cx="94" cy="123" r="48" fill="none" stroke="#00F0FF" stroke-width="4" />
-  <circle cx="94" cy="123" r="72" fill="none" stroke="#2EE59D" stroke-width="3" stroke-dasharray="6 4" />
+  <!-- LAYER 6: EFEK SHOCKWAVE MURNI KELUAR DARI KARAKTER (TANPA GARIS LAIN) -->
+  <circle cx="94" cy="123" r="48" fill="none" stroke="#00F0FF" stroke-width="3.5" />
+  <circle cx="94" cy="123" r="72" fill="none" stroke="#2EE59D" stroke-width="2.8" stroke-dasharray="6 4" />
   <circle cx="94" cy="123" r="94" fill="none" stroke="#FFD60A" stroke-width="2" stroke-dasharray="4 6" />
-
-  <line x1="78" y1="107" x2="22" y2="51" stroke="#00F0FF" stroke-width="2.5" stroke-linecap="round" />
-  <line x1="110" y1="107" x2="166" y2="51" stroke="#00F0FF" stroke-width="2.5" stroke-linecap="round" />
-  <line x1="78" y1="139" x2="26" y2="175" stroke="#2EE59D" stroke-width="2.5" stroke-linecap="round" />
-  <line x1="110" y1="139" x2="162" y2="175" stroke="#2EE59D" stroke-width="2.5" stroke-linecap="round" />
-
-  <path d="M 38 123 L 26 117 L 32 129 L 20 123" stroke="#FFD60A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M 150 123 L 162 117 L 156 129 L 168 123" stroke="#FFD60A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
 
   <!-- LAYER 7: TANGAN KIRI & KABEL TERPUTUS SISI A -->
   <path d="M 44 136 C 30 136 28 126 62 122" stroke="#0A0A0A" stroke-width="7" fill="none" stroke-linecap="round" />
