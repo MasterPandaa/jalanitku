@@ -2,6 +2,13 @@
   <!-- MASKOT SOFTWARE ENGINEER — "THE ARCHITECT" -->
   <!-- Proyek: JalanITku · Sutradara Visual: Matatabi -->
 
+  <!-- Kubus Fondasi Modular 3D Isometrik Kanan Atas (Layer Belakang Karakter) -->
+  <polygon points="164,52 174,47 174,59 164,64" fill="#0A0A0A" />
+  <polygon points="160,36 172,30 184,36 172,42" fill="#2EE59D" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
+  <polygon points="160,36 172,42 172,54 160,48" fill="#00F0FF" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
+  <polygon points="172,42 184,36 184,48 172,54" fill="#FF8A3D" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
+  <circle cx="172" cy="36" r="2" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1" />
+
   <!-- Hard Shadow Kaki -->
   <rect x="68" y="154" width="22" height="24" fill="#0A0A0A" />
   <rect x="114" y="154" width="22" height="24" fill="#0A0A0A" />
@@ -32,6 +39,21 @@
   <polygon points="110,144 94,144 100,132" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
   <rect x="91" y="132" width="7" height="5" fill="#00F0FF" stroke="#0A0A0A" stroke-width="2" />
   <polygon points="91,137 98,137 100,145 94.5,148 89,145" fill="#00F0FF" stroke="#0A0A0A" stroke-width="2" />
+
+  <!-- Rompi Arsitektur / Safety Vest Hi-Vis (Oranye & Pita Neon) -->
+  <polygon points="42,126 84,126 78,144 42,144" fill="#FF8A3D" stroke="#0A0A0A" stroke-width="3.5" stroke-linejoin="round" />
+  <polygon points="54,126 68,126 64,144 50,144" fill="#2EE59D" stroke="#0A0A0A" stroke-width="2" stroke-linejoin="round" />
+  <rect x="45" y="133" width="8" height="9" rx="1" fill="#FF7722" stroke="#0A0A0A" stroke-width="1.5" />
+  <line x1="47" y1="130" x2="47" y2="134" stroke="#00F0FF" stroke-width="1.5" stroke-linecap="round" />
+
+  <polygon points="106,126 148,126 148,144 112,144" fill="#FF8A3D" stroke="#0A0A0A" stroke-width="3.5" stroke-linejoin="round" />
+  <polygon points="122,126 136,126 140,144 126,144" fill="#2EE59D" stroke="#0A0A0A" stroke-width="2" stroke-linejoin="round" />
+  <rect x="137" y="131" width="8" height="11" rx="1" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.5" />
+  <rect x="139" y="133" width="4" height="3" fill="#00F0FF" />
+  <line x1="138.5" y1="138" x2="143.5" y2="138" stroke="#0A0A0A" stroke-width="1" />
+
+  <line x1="84" y1="126" x2="78" y2="144" stroke="#0A0A0A" stroke-width="3" />
+  <line x1="106" y1="126" x2="112" y2="144" stroke="#0A0A0A" stroke-width="3" />
 
   <!-- Mulut Senyum Bangga -->
   <path d="M 88 114 Q 94.5 122 101 114" stroke="#0A0A0A" stroke-width="3.5" fill="none" stroke-linecap="round" />
@@ -70,50 +92,50 @@
   <circle cx="94" cy="32" r="3" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.5" />
   <line x1="94" y1="23" x2="94" y2="26" stroke="#0A0A0A" stroke-width="2" />
 
-  <!-- Lengan Kanan & Pensil Teknikal Arsitek -->
+  <!-- Lengan Kanan & Pensil Teknikal Arsitek (Ujung Atas Runcing) -->
   <path d="M 148 108 Q 164 106 172 100" stroke="#0A0A0A" stroke-width="6" stroke-linecap="round" fill="none" />
-  <g transform="rotate(-15 172 96)">
+  <g transform="rotate(15 170 96)">
     <rect x="171" y="55" width="8" height="66" rx="2" fill="#0A0A0A" />
-    <rect x="167" y="52" width="8" height="10" rx="2" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="2.5" />
-    <rect x="166.5" y="61" width="9" height="5" rx="1" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2" />
-    <line x1="168" y1="63.5" x2="174" y2="63.5" stroke="#0A0A0A" stroke-width="1" />
+    <polygon points="169.5,57 172.5,57 171,52" fill="#0A0A0A" />
+    <polygon points="167,66 175,66 171,52" fill="#FFE8A3" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
     <rect x="167" y="66" width="8" height="38" fill="#FF8A3D" stroke="#0A0A0A" stroke-width="2.5" />
     <line x1="171" y1="66" x2="171" y2="104" stroke="#FFD60A" stroke-width="2" />
-    <polygon points="167,104 175,104 171,118" fill="#FFE8A3" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
-    <polygon points="169.5,113 172.5,113 171,118" fill="#0A0A0A" />
+    <rect x="166.5" y="104" width="9" height="5" rx="1" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2" />
+    <line x1="168" y1="106.5" x2="174" y2="106.5" stroke="#0A0A0A" stroke-width="1" />
+    <rect x="167" y="109" width="8" height="9" rx="2" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="2.5" />
   </g>
   <circle cx="170" cy="100" r="7.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="3.5" />
 
-  <!-- Lengan Kiri & Blueprint Cetak Biru Sistem -->
-  <path d="M 42 110 Q 28 114 36 122" stroke="#0A0A0A" stroke-width="6" stroke-linecap="round" fill="none" />
-  <g transform="rotate(-8 30 99)">
-    <rect x="12" y="74" width="44" height="58" rx="2.5" fill="#0A0A0A" />
-    <rect x="8" y="70" width="44" height="58" rx="2.5" fill="#05B6D4" stroke="#0A0A0A" stroke-width="3.5" />
-    <rect x="12" y="74" width="36" height="6" fill="#0369A1" />
-    <line x1="14" y1="77" x2="28" y2="77" stroke="#FFFFFF" stroke-width="1.5" />
-    <rect x="22" y="84" width="16" height="8" rx="1" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.5" />
-    <line x1="30" y1="92" x2="30" y2="98" stroke="#FFFFFF" stroke-width="2" />
-    <line x1="18" y1="98" x2="42" y2="98" stroke="#FFFFFF" stroke-width="1.5" />
-    <line x1="18" y1="98" x2="18" y2="103" stroke="#FFFFFF" stroke-width="1.5" />
-    <line x1="42" y1="98" x2="42" y2="103" stroke="#FFFFFF" stroke-width="1.5" />
-    <rect x="12" y="103" width="12" height="7" rx="1" fill="#FFD60A" stroke="#0A0A0A" stroke-width="1.5" />
-    <rect x="36" y="103" width="12" height="7" rx="1" fill="#2EE59D" stroke="#0A0A0A" stroke-width="1.5" />
-    <line x1="24" y1="110" x2="30" y2="114" stroke="#FFFFFF" stroke-width="1.5" />
-    <line x1="36" y1="110" x2="30" y2="114" stroke="#FFFFFF" stroke-width="1.5" />
-    <rect x="23" y="114" width="14" height="8" rx="2" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="1.5" />
+  <!-- Lengan Kiri & Blueprint Cetak Biru Sistem Terbuka -->
+  <g>
+    <path d="M 42 110 Q 24 116 28 126" stroke="#0A0A0A" stroke-width="6" stroke-linecap="round" fill="none" />
+    <rect x="10" y="74" width="44" height="58" rx="2.5" fill="#0A0A0A" transform="rotate(-5 32 103)" />
+    <rect x="6" y="70" width="44" height="58" rx="2.5" fill="#05B6D4" stroke="#0A0A0A" stroke-width="3.5" transform="rotate(-5 28 99)" />
+
+    <g transform="rotate(-5 28 99)">
+      <rect x="10" y="74" width="36" height="6" fill="#0369A1" />
+      <line x1="12" y1="77" x2="26" y2="77" stroke="#FFFFFF" stroke-width="1.5" />
+      <rect x="20" y="84" width="16" height="8" rx="1" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.5" />
+      <line x1="28" y1="92" x2="28" y2="98" stroke="#FFFFFF" stroke-width="2" />
+      <line x1="16" y1="98" x2="40" y2="98" stroke="#FFFFFF" stroke-width="1.5" />
+      <line x1="16" y1="98" x2="16" y2="103" stroke="#FFFFFF" stroke-width="1.5" />
+      <line x1="40" y1="98" x2="40" y2="103" stroke="#FFFFFF" stroke-width="1.5" />
+      <rect x="10" y="103" width="12" height="7" rx="1" fill="#FFD60A" stroke="#0A0A0A" stroke-width="1.5" />
+      <rect x="34" y="103" width="12" height="7" rx="1" fill="#2EE59D" stroke="#0A0A0A" stroke-width="1.5" />
+      <line x1="22" y1="110" x2="28" y2="114" stroke="#FFFFFF" stroke-width="1.5" />
+      <line x1="34" y1="110" x2="28" y2="114" stroke="#FFFFFF" stroke-width="1.5" />
+      <rect x="21" y="114" width="14" height="8" rx="2" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="1.5" />
+    </g>
+
+    <path d="M 5 125 Q 26 128 47 125" stroke="#0369A1" stroke-width="3.5" stroke-linecap="round" fill="none" transform="rotate(-5 26 125)" />
+    <path d="M 34 128 Q 28 126 24 122" stroke="#0A0A0A" stroke-width="5" stroke-linecap="round" fill="none" />
+    <circle cx="27" cy="120" r="7.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="3.5" />
+    <ellipse cx="25" cy="116" rx="4.5" ry="3" transform="rotate(-20 25 116)" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
   </g>
-  <circle cx="38" cy="116" r="7.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="3.5" />
 
   <!-- Kubus Fondasi Modular 3D Isometrik (Kiri Atas) -->
   <polygon points="16,36 28,30 40,36 28,42" fill="#00F0FF" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
   <polygon points="16,36 28,42 28,54 16,48" fill="#FF8A3D" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
   <polygon points="28,42 40,36 40,48 28,54" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
   <circle cx="28" cy="36" r="2" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1" />
-
-  <!-- Kubus Fondasi Modular 3D Isometrik (Kanan Atas) -->
-  <polygon points="164,52 174,47 174,59 164,64" fill="#0A0A0A" />
-  <polygon points="160,36 172,30 184,36 172,42" fill="#2EE59D" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
-  <polygon points="160,36 172,42 172,54 160,48" fill="#00F0FF" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
-  <polygon points="172,42 184,36 184,48 172,54" fill="#FF8A3D" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
-  <circle cx="172" cy="36" r="2" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1" />
 </svg>

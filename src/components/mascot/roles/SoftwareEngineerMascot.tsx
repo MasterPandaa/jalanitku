@@ -65,7 +65,7 @@ export function SoftwareEngineerMascot({
             }
             .se-animated-blueprint {
               animation: ${animated ? "se-blueprint 3s ease-in-out infinite" : "none"};
-              transform-origin: 36px 116px;
+              transform-origin: 27px 120px;
             }
             .se-animated-cube {
               animation: ${animated ? "se-cube 4s ease-in-out infinite" : "none"};
@@ -80,6 +80,44 @@ export function SoftwareEngineerMascot({
 
         {/* CONTAINER UTAMA DENGAN ANIMASI FLOAT */}
         <g className="se-animated-body transition-transform duration-300 group-hover:scale-105">
+          {/* ============================================================== */}
+          {/* LAYER 0: KUBUS MODULAR 3D ISOMETRIK KANAN ATAS (LAYER BELAKANG) */}
+          {/* ============================================================== */}
+          <g className="se-animated-cube-right">
+            {/* Hard Shadow Kubus Kanan */}
+            <polygon
+              points="164,52 174,47 174,59 164,64"
+              fill="#0A0A0A"
+            />
+            {/* Kubus 3D Isometrik Sisi Kanan Atas */}
+            {/* Sisi Atas Kubus (Top Face - Mint Neon) */}
+            <polygon
+              points="160,36 172,30 184,36 172,42"
+              fill="#2EE59D"
+              stroke="#0A0A0A"
+              strokeWidth="2.5"
+              strokeLinejoin="round"
+            />
+            {/* Sisi Kiri Kubus (Left Face - Cyan) */}
+            <polygon
+              points="160,36 172,42 172,54 160,48"
+              fill="#00F0FF"
+              stroke="#0A0A0A"
+              strokeWidth="2.5"
+              strokeLinejoin="round"
+            />
+            {/* Sisi Kanan Kubus (Right Face - Oranye) */}
+            <polygon
+              points="172,42 184,36 184,48 172,54"
+              fill="#FF8A3D"
+              stroke="#0A0A0A"
+              strokeWidth="2.5"
+              strokeLinejoin="round"
+            />
+            {/* Titik Koneksi Fondasi Modular */}
+            <circle cx="172" cy="36" r="2" fill="#FFFFFF" stroke="#0A0A0A" strokeWidth="1" />
+          </g>
+
           {/* ============================================================== */}
           {/* LAYER 1: KAKI & SEPATU HITAM DENGAN SOL PUTIH                  */}
           {/* ============================================================== */}
@@ -203,6 +241,72 @@ export function SoftwareEngineerMascot({
             stroke="#0A0A0A"
             strokeWidth="2"
           />
+
+          {/* ============================================================== */}
+          {/* ROMPI ARSITEKTUR / SAFETY VEST HI-VIS (ORANYE & KUNING NEON)   */}
+          {/* ============================================================== */}
+          {/* Panel Rompi Sisi Kiri (Safety Vest Left Flap) */}
+          <polygon
+            points="42,126 84,126 78,144 42,144"
+            fill="#FF8A3D"
+            stroke="#0A0A0A"
+            strokeWidth="3.5"
+            strokeLinejoin="round"
+          />
+          {/* Pita Reflektif Hi-Vis Neon Sisi Kiri */}
+          <polygon
+            points="54,126 68,126 64,144 50,144"
+            fill="#2EE59D"
+            stroke="#0A0A0A"
+            strokeWidth="2"
+            strokeLinejoin="round"
+          />
+          {/* Saku Dada Rompi Kiri dengan Pena Arsitek */}
+          <rect
+            x="45"
+            y="133"
+            width="8"
+            height="9"
+            rx="1"
+            fill="#FF7722"
+            stroke="#0A0A0A"
+            strokeWidth="1.5"
+          />
+          <line x1="47" y1="130" x2="47" y2="134" stroke="#00F0FF" strokeWidth="1.5" strokeLinecap="round" />
+
+          {/* Panel Rompi Sisi Kanan (Safety Vest Right Flap) */}
+          <polygon
+            points="106,126 148,126 148,144 112,144"
+            fill="#FF8A3D"
+            stroke="#0A0A0A"
+            strokeWidth="3.5"
+            strokeLinejoin="round"
+          />
+          {/* Pita Reflektif Hi-Vis Neon Sisi Kanan */}
+          <polygon
+            points="122,126 136,126 140,144 126,144"
+            fill="#2EE59D"
+            stroke="#0A0A0A"
+            strokeWidth="2"
+            strokeLinejoin="round"
+          />
+          {/* ID Badge / Card Holder Rompi Kanan */}
+          <rect
+            x="137"
+            y="131"
+            width="8"
+            height="11"
+            rx="1"
+            fill="#FFFFFF"
+            stroke="#0A0A0A"
+            strokeWidth="1.5"
+          />
+          <rect x="139" y="133" width="4" height="3" fill="#00F0FF" />
+          <line x1="138.5" y1="138" x2="143.5" y2="138" stroke="#0A0A0A" strokeWidth="1" />
+
+          {/* Celah Bukaan Tengah Rompi dengan Ritsleting / Marka Sambungan */}
+          <line x1="84" y1="126" x2="78" y2="144" stroke="#0A0A0A" strokeWidth="3" />
+          <line x1="106" y1="126" x2="112" y2="144" stroke="#0A0A0A" strokeWidth="3" />
 
           {/* Mulut Senyum Bangga Arsitek */}
           <path
@@ -368,34 +472,25 @@ export function SoftwareEngineerMascot({
             fill="none"
           />
 
-          {/* Pensil Teknikal Arsitek Jumbo (Neo-Brutalism Drafting Pencil) */}
-          <g transform="rotate(-15 172 96)">
+          {/* Pensil Teknikal Arsitek Jumbo (Ujung Rautan Runcing Menghadap ke Atas) */}
+          <g transform="rotate(15 170 96)">
             {/* Hard Shadow Pensil */}
             <rect x="171" y="55" width="8" height="66" rx="2" fill="#0A0A0A" />
 
-            {/* Penghapus Pink di Pangkal Pensil */}
-            <rect
-              x="167"
-              y="52"
-              width="8"
-              height="10"
-              rx="2"
-              fill="#FF5C8A"
+            {/* Ujung Mata Timbal / Grafit Pensil Hitam Arsitek (Paling Atas) */}
+            <polygon
+              points="169.5,57 172.5,57 171,52"
+              fill="#0A0A0A"
+            />
+
+            {/* Bagian Rautan Kayu Kerucut (#FFE8A3 - Menghadap ke Atas) */}
+            <polygon
+              points="167,66 175,66 171,52"
+              fill="#FFE8A3"
               stroke="#0A0A0A"
               strokeWidth="2.5"
+              strokeLinejoin="round"
             />
-            {/* Cincin Logam Ferrule Penjepit Penghapus */}
-            <rect
-              x="166.5"
-              y="61"
-              width="9"
-              height="5"
-              rx="1"
-              fill="#FFFFFF"
-              stroke="#0A0A0A"
-              strokeWidth="2"
-            />
-            <line x1="168" y1="63.5" x2="174" y2="63.5" stroke="#0A0A0A" strokeWidth="1" />
 
             {/* Batang Kayu Pensil Hexagonal Oranye Arsitek (#FF8A3D) */}
             <rect
@@ -410,19 +505,29 @@ export function SoftwareEngineerMascot({
             {/* Garis Alur Belah Hexagonal Pensil */}
             <line x1="171" y1="66" x2="171" y2="104" stroke="#FFD60A" strokeWidth="2" />
 
-            {/* Bagian Rautan Kayu Kerucut (#FFE8A3) */}
-            <polygon
-              points="167,104 175,104 171,118"
-              fill="#FFE8A3"
+            {/* Cincin Logam Ferrule Penjepit Penghapus di Bawah */}
+            <rect
+              x="166.5"
+              y="104"
+              width="9"
+              height="5"
+              rx="1"
+              fill="#FFFFFF"
+              stroke="#0A0A0A"
+              strokeWidth="2"
+            />
+            <line x1="168" y1="106.5" x2="174" y2="106.5" stroke="#0A0A0A" strokeWidth="1" />
+
+            {/* Penghapus Pink di Pangkal Bawah Pensil */}
+            <rect
+              x="167"
+              y="109"
+              width="8"
+              height="9"
+              rx="2"
+              fill="#FF5C8A"
               stroke="#0A0A0A"
               strokeWidth="2.5"
-              strokeLinejoin="round"
-            />
-
-            {/* Ujung Mata Timbal / Grafit Pensil Hitam Arsitek */}
-            <polygon
-              points="169.5,113 172.5,113 171,118"
-              fill="#0A0A0A"
             />
           </g>
 
@@ -437,12 +542,12 @@ export function SoftwareEngineerMascot({
           />
 
           {/* ============================================================== */}
-          {/* LAYER 6: BLUEPRINT CETAK BIRU DIGITAL (TANGAN KIRI)            */}
+          {/* LAYER 6: BLUEPRINT CETAK BIRU DIGITAL (TANGAN KIRI MEMBENTANG) */}
           {/* ============================================================== */}
           <g className="se-animated-blueprint">
-            {/* Lengan Kiri */}
+            {/* Lengan Kiri Menopang & Memegang Blueprint dari Bawah-Samping */}
             <path
-              d="M 42 110 Q 28 114 36 122"
+              d="M 42 110 Q 24 116 28 126"
               stroke="#0A0A0A"
               strokeWidth="6"
               strokeLinecap="round"
@@ -451,17 +556,17 @@ export function SoftwareEngineerMascot({
 
             {/* Hard Shadow Blueprint */}
             <rect
-              x="12"
+              x="10"
               y="74"
               width="44"
               height="58"
               rx="2.5"
               fill="#0A0A0A"
-              transform="rotate(-8 34 103)"
+              transform="rotate(-5 32 103)"
             />
-            {/* Kertas Blueprint Cyan Pekat (#05B6D4 / #00C4EE) */}
+            {/* Kertas Blueprint Cyan Pekat (#05B6D4) Membentang Terbuka */}
             <rect
-              x="8"
+              x="6"
               y="70"
               width="44"
               height="58"
@@ -469,41 +574,71 @@ export function SoftwareEngineerMascot({
               fill="#05B6D4"
               stroke="#0A0A0A"
               strokeWidth="3.5"
-              transform="rotate(-8 30 99)"
+              transform="rotate(-5 28 99)"
             />
 
             {/* Diagram Arsitektur di dalam Blueprint */}
-            <g transform="rotate(-8 30 99)">
+            <g transform="rotate(-5 28 99)">
               {/* Header Tab Blueprint */}
-              <rect x="12" y="74" width="36" height="6" fill="#0369A1" />
-              <line x1="14" y1="77" x2="28" y2="77" stroke="#FFFFFF" strokeWidth="1.5" />
+              <rect x="10" y="74" width="36" height="6" fill="#0369A1" />
+              <line x1="12" y1="77" x2="26" y2="77" stroke="#FFFFFF" strokeWidth="1.5" />
 
               {/* Node Server 1 (Atas - Microservice Gateway) */}
-              <rect x="22" y="84" width="16" height="8" rx="1" fill="#FFFFFF" stroke="#0A0A0A" strokeWidth="1.5" />
+              <rect x="20" y="84" width="16" height="8" rx="1" fill="#FFFFFF" stroke="#0A0A0A" strokeWidth="1.5" />
               {/* Garis Bus Koneksi */}
-              <line x1="30" y1="92" x2="30" y2="98" stroke="#FFFFFF" strokeWidth="2" />
-              <line x1="18" y1="98" x2="42" y2="98" stroke="#FFFFFF" strokeWidth="1.5" />
-              <line x1="18" y1="98" x2="18" y2="103" stroke="#FFFFFF" strokeWidth="1.5" />
-              <line x1="42" y1="98" x2="42" y2="103" stroke="#FFFFFF" strokeWidth="1.5" />
+              <line x1="28" y1="92" x2="28" y2="98" stroke="#FFFFFF" strokeWidth="2" />
+              <line x1="16" y1="98" x2="40" y2="98" stroke="#FFFFFF" strokeWidth="1.5" />
+              <line x1="16" y1="98" x2="16" y2="103" stroke="#FFFFFF" strokeWidth="1.5" />
+              <line x1="40" y1="98" x2="40" y2="103" stroke="#FFFFFF" strokeWidth="1.5" />
 
               {/* Node Services 2 & 3 (Bawah) */}
-              <rect x="12" y="103" width="12" height="7" rx="1" fill="#FFD60A" stroke="#0A0A0A" strokeWidth="1.5" />
-              <rect x="36" y="103" width="12" height="7" rx="1" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="1.5" />
+              <rect x="10" y="103" width="12" height="7" rx="1" fill="#FFD60A" stroke="#0A0A0A" strokeWidth="1.5" />
+              <rect x="34" y="103" width="12" height="7" rx="1" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="1.5" />
 
               {/* Database Node (Silinder Bawah) */}
-              <line x1="24" y1="110" x2="30" y2="114" stroke="#FFFFFF" strokeWidth="1.5" />
-              <line x1="36" y1="110" x2="30" y2="114" stroke="#FFFFFF" strokeWidth="1.5" />
-              <rect x="23" y="114" width="14" height="8" rx="2" fill="#FF5C8A" stroke="#0A0A0A" strokeWidth="1.5" />
+              <line x1="22" y1="110" x2="28" y2="114" stroke="#FFFFFF" strokeWidth="1.5" />
+              <line x1="34" y1="110" x2="28" y2="114" stroke="#FFFFFF" strokeWidth="1.5" />
+              <rect x="21" y="114" width="14" height="8" rx="2" fill="#FF5C8A" stroke="#0A0A0A" strokeWidth="1.5" />
             </g>
 
-            {/* Kepalan Tangan Kiri Menjepit Lembar Blueprint */}
+            {/* Rol Kertas Blueprint di Sisi Bawah (Menegaskan Bentukan Lembaran Rencana) */}
+            <path
+              d="M 5 125 Q 26 128 47 125"
+              stroke="#0369A1"
+              strokeWidth="3.5"
+              strokeLinecap="round"
+              fill="none"
+              transform="rotate(-5 26 125)"
+            />
+
+            {/* Tangan Kiri Menjepit Lembar Bawah Blueprint (Jari Menjepit di Depan Lembar) */}
+            {/* Lengan Bawah Menopang */}
+            <path
+              d="M 34 128 Q 28 126 24 122"
+              stroke="#0A0A0A"
+              strokeWidth="5"
+              strokeLinecap="round"
+              fill="none"
+            />
+            {/* Kepalan Tangan Kiri di Depan Lembaran Kertas */}
             <circle
-              cx="38"
-              cy="116"
+              cx="27"
+              cy="120"
               r="7.5"
               fill="#FFD60A"
               stroke="#0A0A0A"
               strokeWidth="3.5"
+            />
+            {/* Ibu Jari Menjepit di Permukaan Depan Kertas */}
+            <ellipse
+              cx="25"
+              cy="116"
+              rx="4.5"
+              ry="3"
+              transform="rotate(-20 25 116)"
+              fill="#FFD60A"
+              stroke="#0A0A0A"
+              strokeWidth="2.5"
             />
           </g>
 
@@ -543,44 +678,6 @@ export function SoftwareEngineerMascot({
             />
             {/* Titik Koneksi Simbol Fondasi Modular */}
             <circle cx="28" cy="36" r="2" fill="#FFFFFF" stroke="#0A0A0A" strokeWidth="1" />
-          </g>
-
-          {/* ============================================================== */}
-          {/* LAYER 8: KUBUS MODULAR 3D ISOMETRIK (MELAYANG DI SUDUT KANAN)   */}
-          {/* ============================================================== */}
-          <g className="se-animated-cube-right">
-            {/* Hard Shadow Kubus Kanan */}
-            <polygon
-              points="164,52 174,47 174,59 164,64"
-              fill="#0A0A0A"
-            />
-            {/* Kubus 3D Isometrik Sisi Kanan Atas */}
-            {/* Sisi Atas Kubus (Top Face - Mint Neon) */}
-            <polygon
-              points="160,36 172,30 184,36 172,42"
-              fill="#2EE59D"
-              stroke="#0A0A0A"
-              strokeWidth="2.5"
-              strokeLinejoin="round"
-            />
-            {/* Sisi Kiri Kubus (Left Face - Cyan) */}
-            <polygon
-              points="160,36 172,42 172,54 160,48"
-              fill="#00F0FF"
-              stroke="#0A0A0A"
-              strokeWidth="2.5"
-              strokeLinejoin="round"
-            />
-            {/* Sisi Kanan Kubus (Right Face - Oranye) */}
-            <polygon
-              points="172,42 184,36 184,48 172,54"
-              fill="#FF8A3D"
-              stroke="#0A0A0A"
-              strokeWidth="2.5"
-              strokeLinejoin="round"
-            />
-            {/* Titik Koneksi Fondasi Modular */}
-            <circle cx="172" cy="36" r="2" fill="#FFFFFF" stroke="#0A0A0A" strokeWidth="1" />
           </g>
         </g>
       </svg>

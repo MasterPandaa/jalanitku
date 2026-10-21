@@ -26,11 +26,11 @@ const BATCH_1_ROLES = [
     mascotComponent: SoftwareEngineerMascot,
     svgPath: "/assets/mascot/roles/software-engineer.svg",
     anatomy: [
-      { name: "Blueprint Cetak Biru", desc: "Cetak biru digital cyan (#00F0FF) memuat skema microservices & node database" },
-      { name: "Kacamata Arsitek", desc: "Frame persegi teknikal tebal 3.5px dengan lensa reflektif cyan bergaris kilau" },
-      { name: "Pensil Drafting Arsitek", desc: "Pensil teknikal kayu hexagonal oranye dengan penghapus pink dan ferrule logam di tangan kanan untuk drafting kode & skema" },
-      { name: "Helm Arsitek Berkarakter", desc: "Helm konstruksi oranye berusuk ganda kokoh, ventilasi aerodinamis samping, brim pelindung tebal, dan emblem spotlight cyan" },
-      { name: "Kubus Modular 3D Kembar", desc: "Sepasang kubus fondasi 3D isometrik melayang di kiri dan kanan atas melambangkan arsitektur sistem modular berlapis" },
+      { name: "Blueprint Cetak Biru Terbuka", desc: "Cetak biru digital cyan (#00F0FF) dibentangkan dan digenggam erat tangan kiri menampilkan skema microservices" },
+      { name: "Rompi Safety Arsitektur", desc: "Rompi lapangan hi-vis oranye (#FF8A3D) dengan pita reflektif neon, saku pena, dan ID badge" },
+      { name: "Pensil Drafting Runcing Atas", desc: "Pensil kayu teknikal hexagonal oranye dengan mata timbal runcing menghadap ke atas siap membuat skema" },
+      { name: "Helm Arsitek Berkarakter", desc: "Helm konstruksi oranye berusuk ganda kokoh, ventilasi samping, brim pelindung tebal, dan emblem spotlight cyan" },
+      { name: "Kubus Modular 3D Latar Belakang", desc: "Kubus fondasi 3D isometrik kanan atas melayang di layer belakang karakter, menciptakan kedalaman depth arsitektur" },
     ],
   },
   {
