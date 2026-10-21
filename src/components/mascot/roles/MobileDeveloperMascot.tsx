@@ -16,9 +16,10 @@ export interface MobileDeveloperMascotProps {
  * Ciri Khas:
  * 1. Topi Snapback Miring Pink & Cyan dengan emblem smartphone (desain lama favorit).
  * 2. Jaket Jeans Keren (Denim Trucker Jacket) dengan kerah berlipat, saku dada berkancing perak, dan kaos putih di dalam.
- * 3. Pose menggenggam smartphone di kedua sisi: tangan kanan menggenggam sisi kanan HP (kanan POV user) dan tangan kiri menopang sisi kiri.
- * 4. Efek Tap Layar (Touch Ripple Konsentris) aktif di atas layar smartphone tanpa efek bintang 4 sisi.
- * 5. Push Notification Card bersih melayang di sisi kiri menggantikan wifi.
+ * 3. Tangan Kanan Menggenggam Mantap sisi kanan HP (kanan POV user).
+ * 4. Tangan Kiri Mengklik Layar Ponsel (Tapping Screen Gesture) dengan jari telunjuk presisi di atas layar.
+ * 5. Efek Tap Layar (Touch Ripple Konsentris) aktif di ujung jari telunjuk tangan kiri (tanpa bintang 4 sisi).
+ * 6. Push Notification Card bersih melayang di sisi kiri menggantikan wifi.
  */
 export function MobileDeveloperMascot({
   size = 200,
@@ -34,7 +35,7 @@ export function MobileDeveloperMascot({
       className={`relative inline-flex items-center justify-center select-none group ${className}`}
       style={{ width: size, height: size }}
       role="img"
-      aria-label="Maskot Mobile Developer — The Artisan: Papan penunjuk jalan neo-brutalism dengan topi snapback miring pink-cyan, jaket jeans denim keren, menggenggam smartphone di kedua sisi dengan efek tap layar touch ripple"
+      aria-label="Maskot Mobile Developer — The Artisan: Papan penunjuk jalan neo-brutalism dengan topi snapback miring pink-cyan, jaket jeans denim, tangan kanan menggenggam sisi kanan HP, dan tangan kiri mengklik layar ponsel dengan efek touch ripple"
     >
       <svg
         viewBox="0 0 200 200"
@@ -52,11 +53,15 @@ export function MobileDeveloperMascot({
             }
             @keyframes mob-phone-sway {
               0%, 100% { transform: rotate(0deg); }
-              50% { transform: rotate(2.5deg) translateY(-1px); }
+              50% { transform: rotate(2deg) translateY(-1px); }
             }
             @keyframes mob-notify-pop {
               0%, 100% { transform: translateY(0px) scale(1); }
               50% { transform: translateY(-4px) scale(1.05); }
+            }
+            @keyframes mob-left-click {
+              0%, 100% { transform: translateY(0px) scale(1); }
+              50% { transform: translateY(2px) scale(0.98); }
             }
             @keyframes mob-ripple-1 {
               0% { r: 4px; opacity: 1; stroke-width: 3px; }
@@ -79,13 +84,17 @@ export function MobileDeveloperMascot({
               animation: ${isAnimated ? "mob-notify-pop 2.8s ease-in-out infinite" : "none"};
               transform-origin: 28px 60px;
             }
+            .mob-animated-click {
+              animation: ${isAnimated ? "mob-left-click 1.6s ease-in-out infinite" : "none"};
+              transform-origin: 130px 115px;
+            }
             .mob-animated-ripple1 {
               animation: ${isAnimated ? "mob-ripple-1 1.6s cubic-bezier(0.1, 0.8, 0.3, 1) infinite" : "none"};
-              transform-origin: 156px 113px;
+              transform-origin: 154px 110px;
             }
             .mob-animated-ripple2 {
               animation: ${isAnimated ? "mob-ripple-2 1.6s cubic-bezier(0.1, 0.8, 0.3, 1) 0.35s infinite" : "none"};
-              transform-origin: 156px 113px;
+              transform-origin: 154px 110px;
             }
           `}</style>
         </defs>
@@ -165,7 +174,7 @@ export function MobileDeveloperMascot({
           <rect x="50" y="102" width="12" height="7" rx="2" fill="#FF5C8A" />
           <rect x="122" y="102" width="12" height="7" rx="2" fill="#FF5C8A" />
 
-          {/* Mata Kiri (Fokus Antusias Menatap Layar HP) */}
+          {/* Mata Kiri (Fokus Antusias Menatap Titik Tap di Layar) */}
           <rect
             x="58"
             y="74"
@@ -350,7 +359,7 @@ export function MobileDeveloperMascot({
           <circle cx="89" cy="35" r="1" fill="#0A0A0A" />
 
           {/* ============================================================== */}
-          {/* LAYER 5: SMARTPHONE MODERN DI SISI KANAN & DUAL-HAND GRIP       */}
+          {/* LAYER 5: SMARTPHONE MODERN DI SISI KANAN                        */}
           {/* ============================================================== */}
           <g className="mob-animated-phone">
             {/* Hard Shadow Smartphone */}
@@ -443,10 +452,10 @@ export function MobileDeveloperMascot({
               strokeLinecap="round"
             />
 
-            {/* EFEK TAP LAYAR: TOUCH RIPPLE SENTUHAN KONSENTRIS (TANPA BINTANG 4 SISI) */}
+            {/* EFEK TAP LAYAR: TOUCH RIPPLE DI TITIK KLIK JARI TELUNJUK TANGAN KIRI (x=154, y=110) */}
             <circle
-              cx="156"
-              cy="113"
+              cx="154"
+              cy="110"
               r="8"
               fill="none"
               stroke="#00F0FF"
@@ -454,8 +463,8 @@ export function MobileDeveloperMascot({
               className="mob-animated-ripple1"
             />
             <circle
-              cx="156"
-              cy="113"
+              cx="154"
+              cy="110"
               r="16"
               fill="none"
               stroke="#2EE59D"
@@ -463,30 +472,6 @@ export function MobileDeveloperMascot({
               strokeDasharray="4 3"
               className="mob-animated-ripple2"
             />
-
-            {/* ============================================================== */}
-            {/* TANGAN KIRI MASKOT MENOPANG SISI KIRI SMARTPHONE (x=124..132)  */}
-            {/* ============================================================== */}
-            {/* Lengan Jaket Jeans Kiri */}
-            <path
-              d="M 112 128 Q 120 134 126 126"
-              stroke="#0A0A0A"
-              strokeWidth="7"
-              strokeLinecap="round"
-              fill="none"
-            />
-            <path
-              d="M 112 128 Q 120 134 126 126"
-              stroke="#3A6B9B"
-              strokeWidth="4.5"
-              strokeLinecap="round"
-              fill="none"
-            />
-            {/* Manset Jaket Jeans Kiri */}
-            <rect x="123" y="121" width="5" height="10" rx="1.5" fill="#244265" stroke="#0A0A0A" strokeWidth="1.5" />
-            {/* Jemari Tangan Kiri Menggenggam Bezel Kiri HP */}
-            <ellipse cx="128" cy="116" rx="4" ry="7" fill="#FFD60A" stroke="#0A0A0A" strokeWidth="2.5" />
-            <ellipse cx="129" cy="126" rx="4" ry="6" fill="#FFD60A" stroke="#0A0A0A" strokeWidth="2.5" />
 
             {/* ============================================================== */}
             {/* TANGAN KANAN MENGGENGGAM SISI KANAN HP (KANAN POV USER)        */}
@@ -532,8 +517,72 @@ export function MobileDeveloperMascot({
               {/* Jari Kelingking */}
               <rect x="0" y="23" width="6.5" height="5.5" rx="2.5" fill="#FFD60A" stroke="#0A0A0A" strokeWidth="2.5" />
 
-              {/* Ujung Jempol di Depan Layar HP Mengetuk Titik Ripple Tap */}
-              <ellipse cx="-2" cy="15" rx="4" ry="5.5" fill="#FFD60A" stroke="#0A0A0A" strokeWidth="2.2" />
+              {/* Ibu Jari Menahan Sisi Depan Bezel HP */}
+              <ellipse cx="-1" cy="15" rx="3.5" ry="5.5" fill="#FFD60A" stroke="#0A0A0A" strokeWidth="2" />
+            </g>
+
+            {/* ============================================================== */}
+            {/* TANGAN KIRI MENGKLIK LAYAR PONSEL (TAPPING GESTURE)            */}
+            {/* ============================================================== */}
+            <g className="mob-animated-click">
+              {/* Lengan Jaket Jeans Kiri Menjulur ke Depan Layar Ponsel */}
+              <path
+                d="M 66 128 Q 106 136 134 118"
+                stroke="#0A0A0A"
+                strokeWidth="7"
+                strokeLinecap="round"
+                fill="none"
+              />
+              <path
+                d="M 66 128 Q 106 136 134 118"
+                stroke="#3A6B9B"
+                strokeWidth="4.5"
+                strokeLinecap="round"
+                fill="none"
+              />
+
+              {/* Manset Jaket Jeans Kiri */}
+              <rect
+                x="128"
+                y="112"
+                width="6"
+                height="11"
+                rx="1.5"
+                fill="#244265"
+                stroke="#0A0A0A"
+                strokeWidth="2"
+                transform="rotate(-15 128 112)"
+              />
+              {/* Kancing Manset Perak Kiri */}
+              <circle cx="131" cy="117" r="1.2" fill="#E2E8F0" />
+
+              {/* Kepalan Tangan Kiri Kuning di Depan Layar */}
+              <circle
+                cx="138"
+                cy="114"
+                r="7"
+                fill="#FFD60A"
+                stroke="#0A0A0A"
+                strokeWidth="3"
+              />
+
+              {/* Jari Telunjuk Kiri Mengklik Permukaan Layar Ponsel */}
+              <path
+                d="M 142 112 L 154 110 L 152 115 L 141 117 Z"
+                fill="#FFD60A"
+                stroke="#0A0A0A"
+                strokeWidth="2.5"
+                strokeLinejoin="round"
+              />
+
+              {/* Jempol Kiri Melengkung Santai di Atas Kepalan */}
+              <path
+                d="M 134 108 Q 138 103 144 106"
+                stroke="#0A0A0A"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                fill="none"
+              />
             </g>
           </g>
 

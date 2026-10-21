@@ -1,7 +1,7 @@
 <svg viewBox="0 0 200 200" width="200" height="200" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- MASKOT MOBILE DEVELOPER — "THE ARTISAN" -->
   <!-- Proyek: JalanITku · Sutradara Visual: Matatabi -->
-  <!-- Edisi: Topi Snapback Miring Pink-Cyan (Desain Lama), Jaket Jeans Denim Keren, Dual-Hand Grip HP, Efek Tap Layar (Touch Ripple), Tanpa Bintang 4 Sisi -->
+  <!-- Edisi: Topi Snapback Miring Pink-Cyan (Desain Lama), Jaket Jeans Denim Keren, Tangan Kanan Menggenggam Kanan HP, Tangan Kiri Mengklik Layar Ponsel dengan Efek Touch Ripple, Tanpa Bintang 4 Sisi -->
 
   <!-- LAYER 1: KAKI & SEPATU HITAM DENGAN SOL PUTIH -->
   <rect x="68" y="154" width="22" height="24" fill="#0A0A0A" />
@@ -21,7 +21,7 @@
   <rect x="50" y="102" width="12" height="7" rx="2" fill="#FF5C8A" />
   <rect x="122" y="102" width="12" height="7" rx="2" fill="#FF5C8A" />
 
-  <!-- Mata Kiri & Kanan (Fokus Antusias ke Smartphone) -->
+  <!-- Mata Kiri & Kanan (Fokus Antusias ke Titik Tap Layar) -->
   <rect x="58" y="74" width="20" height="24" rx="4" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3.5" />
   <rect x="66" y="80" width="9" height="12" rx="2" fill="#0A0A0A" />
   <circle cx="68.5" cy="82.5" r="1.5" fill="#FFFFFF" />
@@ -74,7 +74,7 @@
   <rect x="84" y="26" width="10" height="13" rx="2" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2" />
   <circle cx="89" cy="35" r="1" fill="#0A0A0A" />
 
-  <!-- LAYER 5: SMARTPHONE MODERN DI SISI KANAN & DUAL-HAND GRIP -->
+  <!-- LAYER 5: SMARTPHONE MODERN DI SISI KANAN -->
   <g>
     <rect x="134" y="58" width="52" height="94" rx="8" fill="#0A0A0A" />
     <rect x="128" y="52" width="52" height="94" rx="8" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="4" />
@@ -95,18 +95,11 @@
     <circle cx="163" cy="113" r="3.5" fill="#2EE59D" stroke="#0A0A0A" stroke-width="1" />
     <line x1="146" y1="136" x2="162" y2="136" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
 
-    <!-- EFEK TAP LAYAR: TOUCH RIPPLE SENTUHAN KONSENTRIS (TANPA BINTANG 4 SISI) -->
-    <circle cx="156" cy="113" r="8" fill="none" stroke="#00F0FF" stroke-width="2.5" />
-    <circle cx="156" cy="113" r="16" fill="none" stroke="#2EE59D" stroke-width="2" stroke-dasharray="4 3" />
+    <!-- EFEK TAP LAYAR: TOUCH RIPPLE DI TITIK KLIK JARI TELUNJUK TANGAN KIRI (x=154, y=110) -->
+    <circle cx="154" cy="110" r="8" fill="none" stroke="#00F0FF" stroke-width="2.5" />
+    <circle cx="154" cy="110" r="16" fill="none" stroke="#2EE59D" stroke-width="2" stroke-dasharray="4 3" />
 
-    <!-- Tangan Kiri Menopang Sisi Kiri Smartphone -->
-    <path d="M 112 128 Q 120 134 126 126" stroke="#0A0A0A" stroke-width="7" stroke-linecap="round" fill="none" />
-    <path d="M 112 128 Q 120 134 126 126" stroke="#3A6B9B" stroke-width="4.5" stroke-linecap="round" fill="none" />
-    <rect x="123" y="121" width="5" height="10" rx="1.5" fill="#244265" stroke="#0A0A0A" stroke-width="1.5" />
-    <ellipse cx="128" cy="116" rx="4" ry="7" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
-    <ellipse cx="129" cy="126" rx="4" ry="6" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
-
-    <!-- Tangan Kanan Menggenggam Sisi Kanan Smartphone (Kanan POV User x=180..184) -->
+    <!-- TANGAN KANAN MENGGENGGAM SISI KANAN HP (KANAN POV USER) -->
     <path d="M 136 142 Q 166 150 182 134" stroke="#0A0A0A" stroke-width="8" stroke-linecap="round" fill="none" />
     <path d="M 136 142 Q 166 150 182 134" stroke="#3A6B9B" stroke-width="5" stroke-linecap="round" fill="none" />
     <rect x="176" y="126" width="6" height="11" rx="1.5" fill="#244265" stroke="#0A0A0A" stroke-width="2" transform="rotate(-15 176 126)" />
@@ -117,7 +110,19 @@
       <rect x="0" y="9" width="7" height="6" rx="2.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
       <rect x="0" y="16" width="7" height="6" rx="2.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
       <rect x="0" y="23" width="6.5" height="5.5" rx="2.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
-      <ellipse cx="-2" cy="15" rx="4" ry="5.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.2" />
+      <ellipse cx="-1" cy="15" rx="3.5" ry="5.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2" />
+    </g>
+
+    <!-- TANGAN KIRI MENGKLIK LAYAR PONSEL (TAPPING GESTURE) -->
+    <g>
+      <path d="M 66 128 Q 106 136 134 118" stroke="#0A0A0A" stroke-width="7" stroke-linecap="round" fill="none" />
+      <path d="M 66 128 Q 106 136 134 118" stroke="#3A6B9B" stroke-width="4.5" stroke-linecap="round" fill="none" />
+      <rect x="128" y="112" width="6" height="11" rx="1.5" fill="#244265" stroke="#0A0A0A" stroke-width="2" transform="rotate(-15 128 112)" />
+      <circle cx="131" cy="117" r="1.2" fill="#E2E8F0" />
+
+      <circle cx="138" cy="114" r="7" fill="#FFD60A" stroke="#0A0A0A" stroke-width="3" />
+      <path d="M 142 112 L 154 110 L 152 115 L 141 117 Z" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
+      <path d="M 134 108 Q 138 103 144 106" stroke="#0A0A0A" stroke-width="2.5" stroke-linecap="round" fill="none" />
     </g>
   </g>
 

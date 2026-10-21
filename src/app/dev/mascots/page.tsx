@@ -47,8 +47,8 @@ const BATCH_1_ROLES = [
     anatomy: [
       { name: "Topi Snapback Miring Pink & Cyan", desc: "Topi kasual urban warna pink magenta dengan visor datar cyan elektrik dan emblem gawai smartphone (desain lama favorit)" },
       { name: "Jaket Jeans Denim Keren", desc: "Jaket denim trucker biru indigo wash dengan kerah berlipat, kaos putih di dalam, saku dada ganda berflap, dan kancing perak" },
-      { name: "Dual-Hand Smartphone Grip", desc: "Tangan kanan menggenggam mantap sisi kanan HP (kanan POV user) dan tangan kiri menopang sisi kiri gawai" },
-      { name: "Efek Tap Layar (Touch Ripple)", desc: "Gelombang sentuhan konsentris cyan dan mint di atas layar saat jempol berinteraksi, dipadu kartu push notification (tanpa bintang)" },
+      { name: "Tangan Kanan Genggam & Kiri Klik Layar", desc: "Tangan kanan menggenggam erat sisi kanan HP (kanan POV user) sementara tangan kiri aktif mengklik layar ponsel dengan jari telunjuk presisi" },
+      { name: "Efek Tap Layar (Touch Ripple)", desc: "Gelombang sentuhan konsentris cyan dan mint di ujung telunjuk tangan kiri yang mengklik layar, dipadu kartu push notification bersih (tanpa bintang)" },
     ],
   },
   {
