@@ -91,21 +91,22 @@ Ke-21 role IT dikelompokkan ke dalam 7 batch tematik yang masing-masing terdiri 
   - **Kerah Safari & Pin Badge TEST✓**: Kerah kemeja petualang oranye dengan pin badge checklist verifikasi sistem rilis bebas bug.
 - **Palet Warna**: Kuning Rambu `#FFD60A`, Oranye Safari `#FF8A3D`, Hijau Neon `#2EE59D`, Cyan `#00F0FF`, Tinta `#0A0A0A`.
 
-#### 5. IT Support — "The Fixer"
+#### 5. IT Support — "The Doctor"
 - **Metafora Karakter**: Sang Dokter IT / Sistem Medic penyelamat operasional harian yang selalu sigap mendiagnosis dan merehabilitasi kendala sistem dengan ramah.
 - **Atribut Visual & Props**:
-  - **Jas Lab Dokter Putih & Nametag ID**: Jas dokter putih bersih berkerah lebar dengan saku dada dan kartu nametag ID rumah sakit IT (tanpa teks nama) dengan header cyan dan kode identitas.
+  - **Jas Lab Dokter Kotak Penuh Samping**: Jas dokter putih bersih kotak yang melintang penuh hingga ke batas samping kanan dan kiri karakter (`x=42` hingga `x=148`), lengkap dengan lapel kerah dokter, saku dada, dan nametag ID medis (tanpa nama teks).
   - **Cermin Kepala Medis Tebal (Head Mirror)**: Cermin bulat dokter reflektif dengan tali kepala tebal kokoh pemantau titik kendala perangkat keras dan lunak.
+  - **Kotak P3K IT Medis (Palang Merah Darurat)**: Kotak koper pertolongan pertama putih dengan lambang palang merah medis darurat (`#FF3B30`).
   - **Suntikan USB Siber Tanpa Kabel**: Suntikan siber transparan berdosis serum pemulihan sistem hijau mint (`#2EE59D`) dengan konektor jarum probe USB langsung tanpa kabel di tangan kanan.
-  - **Kotak P3K IT Medis & Simbol Plus Kesehatan**: Kotak koper pertolongan pertama putih palang hijau neon di tangan kiri serta simbol palang '+' khas kesehatan yang berterbangan dan kedap-kedip lembut.
-- **Palet Warna**: Kuning Rambu `#FFD60A`, Cyan Medis `#00F0FF`, Putih Jas `#FFFFFF`, Hijau Neon `#2EE59D`, Oranye `#FF8A3D`, Tinta `#0A0A0A`.
+  - **Simbol Plus Efek Heal Game**: Partikel tanda palang '+' mint dan cyan yang melayang naik ke atas berdenyut persis seperti efek heal / pemulihan HP dalam video game.
+- **Palet Warna**: Kuning Rambu `#FFD60A`, Merah Medis `#FF3B30`, Cyan Medis `#00F0FF`, Putih Jas `#FFFFFF`, Hijau Neon `#2EE59D`, Oranye `#FF8A3D`, Tinta `#0A0A0A`.
 
 #### 6. Network Engineer — "The Connector"
 - **Metafora Karakter**: Penenun infrastruktur kabel dan penyambung serat data (*network splicer*) yang merekatkan kembali denyut paket data lintas benua yang terputus.
 - **Atribut Visual & Props**:
   - **Antena Router Kembar**: Sepasang antena di kepala sebagai pemancar sinyal perangkat jaringan.
   - **Penyambungan Kabel Terputus (Cable Splicing)**: Tangan kiri dan kanan memegang dua ujung kabel jaringan yang terputus dengan serat kawat tembaga emas dan cyan mencuat yang sedang didekatkan untuk disambung kembali.
-  - **Gelombang Shockwave Splicing**: Efek shockwave impuls konsentris berdenyut cepat saat kedua tangan ingin menyatukan kabel, disertai letupan percikan spark data reconnect di pusat pertemuan.
+  - **Mega Shockwave Meluap Keluar**: Efek gelombang kejut raksasa (mega shockwave) berdenyut ekspansif meluas hingga keluar dari batas tubuh karakter (radius 48px, 72px, hingga 94px) dengan kilat petir radial saat kabel ingin disatukan.
   - **Visor Serat Optik HUD**: Kacamata visor cyan futuristik pemantau bandwidth traffic 10G dan status data stream.
 - **Palet Warna**: Kuning Rambu `#FFD60A`, Cyan Jaringan `#00F0FF`, Hijau Link `#2EE59D`, Emas Tembaga `#FFD60A` / `#FF8A3D`, Tinta `#0A0A0A`.
 

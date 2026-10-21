@@ -11,13 +11,13 @@ export interface ITSupportMascotProps {
 }
 
 /**
- * Maskot Role: IT Support — "The Fixer"
+ * Maskot Role: IT Support — "The Doctor" (The System Doctor / Medic)
  * Identitas: Sang Dokter IT / Sistem Medic Penyelamat Operasional
- * Ciri Khas: Cermin kepala medis (head mirror) dokter dengan tali kepala kokoh/tebal, jas dokter putih
- * bersih berkerah lebar dengan saku dada dan nametag identitas rumah sakit IT (tanpa nama teks),
- * tangan kiri memegang kotak pertolongan pertama P3K IT (Medical Kit), tangan kanan memegang suntikan USB
- * siber tanpa kabel berdosis serum mint neon, serta partikel tanda palang "+" khas medis kesehatan yang
- * berterbangan dan berkedap-kedip lembut.
+ * Ciri Khas: Cermin kepala medis (head mirror) dokter dengan tali kepala tebal kokoh, jas lab dokter putih
+ * kotak melintang penuh hingga ke samping kanan dan kiri karakter (x=42 sampai x=148, y=120 sampai y=144),
+ * nametag identitas rumah sakit IT di saku dada (tanpa teks nama), kotak P3K IT medis di tangan kiri dengan
+ * lambang palang merah medis darurat (#FF3B30), tangan kanan memegang suntikan USB siber tanpa kabel,
+ * serta partikel tanda palang "+" medis (mint & cyan) melayang naik ke atas berkilauan persis seperti efek HEAL di video game.
  *
  * Base Anatomi: 100% konsisten dengan Base Model Batch 1 (kaki sol putih y=170, tubuh kuning rambu 106x94,
  * marka jalan putus-putus perut, pipi pink, mata ekspresif, mulut senyum, kepalan tangan kuning #FFD60A).
@@ -36,7 +36,7 @@ export function ITSupportMascot({
       className={`relative inline-flex items-center justify-center select-none group ${className}`}
       style={{ width: size, height: size }}
       role="img"
-      aria-label="Maskot IT Support — The Fixer: Papan penunjuk jalan neo-brutalism kuning bertema Dokter IT dengan cermin kepala dokter tebal, jas lab dokter putih bersih dengan nametag, kotak P3K IT medis, suntikan USB siber tanpa kabel, dan tanda tambah plus medis kedap-kedip"
+      aria-label="Maskot IT Support — The Doctor: Papan penunjuk jalan neo-brutalism kuning dengan jas dokter putih kotak penuh melintang ke samping, cermin dahi tebal, kotak P3K palang merah, suntikan USB tanpa kabel, dan partikel palang plus melayang naik efek heal game"
     >
       <svg
         viewBox="0 0 200 200"
@@ -60,13 +60,23 @@ export function ITSupportMascot({
               0%, 100% { transform: rotate(0deg); }
               50% { transform: rotate(5deg) translateY(-2px); }
             }
-            @keyframes its-cross-blink-1 {
-              0%, 100% { opacity: 0.3; transform: scale(0.85); }
-              50% { opacity: 1; transform: scale(1.15); }
+            @keyframes its-heal-float-1 {
+              0% { transform: translateY(10px) scale(0.6); opacity: 0; }
+              30% { transform: translateY(0px) scale(1.1); opacity: 0.95; }
+              70% { transform: translateY(-14px) scale(1); opacity: 0.8; }
+              100% { transform: translateY(-28px) scale(0.7); opacity: 0; }
             }
-            @keyframes its-cross-blink-2 {
-              0%, 100% { opacity: 1; transform: scale(1.15); }
-              50% { opacity: 0.25; transform: scale(0.8); }
+            @keyframes its-heal-float-2 {
+              0% { transform: translateY(12px) scale(0.5); opacity: 0; }
+              35% { transform: translateY(0px) scale(1.15); opacity: 1; }
+              75% { transform: translateY(-16px) scale(0.95); opacity: 0.75; }
+              100% { transform: translateY(-32px) scale(0.65); opacity: 0; }
+            }
+            @keyframes its-heal-float-3 {
+              0% { transform: translateY(8px) scale(0.6); opacity: 0; }
+              40% { transform: translateY(-2px) scale(1.2); opacity: 1; }
+              80% { transform: translateY(-18px) scale(0.9); opacity: 0.7; }
+              100% { transform: translateY(-30px) scale(0.6); opacity: 0; }
             }
             @keyframes its-sparkle {
               0%, 100% { transform: scale(1); opacity: 0.8; }
@@ -84,17 +94,25 @@ export function ITSupportMascot({
               animation: ${isAnimated ? "its-syringe 2.8s ease-in-out infinite" : "none"};
               transform-origin: 172px 120px;
             }
-            .its-cross-1 {
-              animation: ${isAnimated ? "its-cross-blink-1 1.6s ease-in-out infinite" : "none"};
-              transform-origin: 34px 42px;
+            .its-heal-cross-1 {
+              animation: ${isAnimated ? "its-heal-float-1 2.4s ease-out infinite" : "none"};
+              transform-origin: 32px 60px;
             }
-            .its-cross-2 {
-              animation: ${isAnimated ? "its-cross-blink-2 2s ease-in-out infinite" : "none"};
-              transform-origin: 168px 44px;
+            .its-heal-cross-2 {
+              animation: ${isAnimated ? "its-heal-float-2 2.7s ease-out 0.6s infinite" : "none"};
+              transform-origin: 168px 70px;
             }
-            .its-cross-3 {
-              animation: ${isAnimated ? "its-cross-blink-1 2.2s ease-in-out infinite" : "none"};
-              transform-origin: 162px 146px;
+            .its-heal-cross-3 {
+              animation: ${isAnimated ? "its-heal-float-3 2.2s ease-out 1.1s infinite" : "none"};
+              transform-origin: 94px 50px;
+            }
+            .its-heal-cross-4 {
+              animation: ${isAnimated ? "its-heal-float-1 2.5s ease-out 1.5s infinite" : "none"};
+              transform-origin: 154px 110px;
+            }
+            .its-heal-cross-5 {
+              animation: ${isAnimated ? "its-heal-float-2 2.3s ease-out 0.9s infinite" : "none"};
+              transform-origin: 28px 115px;
             }
             .its-animated-sparkle {
               animation: ${isAnimated ? "its-sparkle 1.8s ease-in-out infinite" : "none"};
@@ -254,73 +272,90 @@ export function ITSupportMascot({
           />
 
           {/* ============================================================== */}
-          {/* LAYER 4: JAS LAB DOKTER PUTIH DENGAN NAMETAG (TANPA STETOSKOP) */}
+          {/* LAYER 4: JAS LAB DOKTER PUTIH KOTAK PENUH HINGGA SAMPING KARAKTER */}
           {/* ============================================================== */}
-          {/* Jas Lab Lapel Kiri Putih Bersih */}
-          <polygon
-            points="68,144 94,144 82,126"
+          {/* Bodi Utama Jas Dokter Putih Kotak Penuh dari Sisi Kiri (42) hingga Kanan (148) */}
+          <path
+            d="M 42 120 L 148 120 L 148 144 L 42 144 Z"
             fill="#FFFFFF"
             stroke="#0A0A0A"
-            strokeWidth="3"
-            strokeLinejoin="round"
-          />
-          {/* Jas Lab Lapel Kanan Putih Bersih */}
-          <polygon
-            points="120,144 94,144 106,126"
-            fill="#FFFFFF"
-            stroke="#0A0A0A"
-            strokeWidth="3"
+            strokeWidth="4"
             strokeLinejoin="round"
           />
 
-          {/* Garis Lipatan Jas Tengah & Kancing Dokter */}
-          <line x1="94" y1="126" x2="94" y2="144" stroke="#0A0A0A" strokeWidth="2.5" />
-          <circle cx="94" cy="133" r="1.8" fill="#00F0FF" stroke="#0A0A0A" strokeWidth="1" />
-          <circle cx="94" cy="140" r="1.8" fill="#00F0FF" stroke="#0A0A0A" strokeWidth="1" />
-
-          {/* Saku Dada Kanan Jas Dokter */}
-          <rect
-            x="114"
-            y="124"
-            width="22"
-            height="18"
-            rx="2.5"
-            fill="#FFFFFF"
+          {/* Lapel Kerah Jas V-Neck Dokter Putih Menyilang di Dada */}
+          <polygon
+            points="66,144 94,144 80,120"
+            fill="#F4F4F5"
             stroke="#0A0A0A"
             strokeWidth="2.5"
+            strokeLinejoin="round"
           />
-          {/* Garis Aksen Bibir Saku Cyan */}
-          <line x1="114" y1="124" x2="136" y2="124" stroke="#00F0FF" strokeWidth="2.5" />
+          <polygon
+            points="122,144 94,144 108,120"
+            fill="#F4F4F5"
+            stroke="#0A0A0A"
+            strokeWidth="2.5"
+            strokeLinejoin="round"
+          />
 
-          {/* Nametag Rumah Sakit / Medic IT di Saku Dada (Tanpa Teks Nama) */}
-          {/* Hard Shadow Nametag */}
-          <rect x="119" y="129" width="14" height="10" rx="1.5" fill="#0A0A0A" />
-          {/* Bodi Kartu Nametag Putih Bersih */}
+          {/* Garis Kancing Tengah & Kancing Dokter Cyan */}
+          <line x1="94" y1="120" x2="94" y2="144" stroke="#0A0A0A" strokeWidth="2.5" />
+          <circle cx="94" cy="128" r="1.8" fill="#00F0FF" stroke="#0A0A0A" strokeWidth="1" />
+          <circle cx="94" cy="136" r="1.8" fill="#00F0FF" stroke="#0A0A0A" strokeWidth="1" />
+
+          {/* Saku Samping Kiri Jas Dokter */}
           <rect
-            x="118"
-            y="128"
-            width="14"
-            height="10"
+            x="46"
+            y="126"
+            width="18"
+            height="14"
             rx="1.5"
             fill="#FFFFFF"
             stroke="#0A0A0A"
-            strokeWidth="1.5"
+            strokeWidth="2"
           />
-          {/* Header Bar Nametag Cyan (#00F0FF) */}
-          <rect x="118" y="128" width="14" height="3" fill="#00F0FF" />
+          <line x1="46" y1="126" x2="64" y2="126" stroke="#00F0FF" strokeWidth="2" />
+
+          {/* Saku Dada Kanan Jas Dokter & Nametag ID (Tanpa Teks Nama) */}
+          <rect
+            x="116"
+            y="124"
+            width="24"
+            height="16"
+            rx="2"
+            fill="#FFFFFF"
+            stroke="#0A0A0A"
+            strokeWidth="2"
+          />
+          <line x1="116" y1="124" x2="140" y2="124" stroke="#00F0FF" strokeWidth="2" />
+
+          {/* Kartu Nametag ID Rumah Sakit IT */}
+          <rect x="122" y="128" width="14" height="9" rx="1.5" fill="#0A0A0A" />
+          <rect
+            x="121"
+            y="127"
+            width="14"
+            height="9"
+            rx="1.5"
+            fill="#FFFFFF"
+            stroke="#0A0A0A"
+            strokeWidth="1.2"
+          />
+          {/* Header Cyan Nametag */}
+          <rect x="121" y="127" width="14" height="2.5" fill="#00F0FF" />
           {/* Avatar Kotak Mini Foto ID */}
-          <rect x="119.5" y="132" width="3.5" height="4.5" rx="0.5" fill="#0A0A0A" />
-          {/* Garis-Garis Identitas Barcode / Info (Tanpa Teks) */}
-          <line x1="124.5" y1="133" x2="130" y2="133" stroke="#2EE59D" strokeWidth="1" />
-          <line x1="124.5" y1="135" x2="129" y2="135" stroke="#0A0A0A" strokeWidth="0.8" />
-
-          {/* Klip Jepitan Nametag Logam di Atas Saku */}
-          <rect x="123.5" y="126" width="3" height="3" fill="#FFD60A" stroke="#0A0A0A" strokeWidth="0.8" />
+          <rect x="122.5" y="130.5" width="3" height="4" rx="0.5" fill="#0A0A0A" />
+          {/* Garis-Garis Identitas Barcode (Tanpa Teks Nama) */}
+          <line x1="127" y1="131.5" x2="133" y2="131.5" stroke="#2EE59D" strokeWidth="1" />
+          <line x1="127" y1="133.5" x2="132" y2="133.5" stroke="#0A0A0A" strokeWidth="0.8" />
+          {/* Klip Gantungan Nametag Logam Emas */}
+          <rect x="126.5" y="125.5" width="3" height="2.5" fill="#FFD60A" stroke="#0A0A0A" strokeWidth="0.8" />
 
           {/* ============================================================== */}
-          {/* LAYER 5: HEAD MIRROR DOKTER (IKAT KEPALA DIPERTEBAL KOKOH)     */}
+          {/* LAYER 5: HEAD MIRROR DOKTER (IKAT KEPALA TEBAL KOKOH)          */}
           {/* ============================================================== */}
-          {/* Tali Ikat Kepala Elastis Hitam di Dahi — DIPERTEBAL LEBIH KOKOH */}
+          {/* Tali Ikat Kepala Elastis Hitam di Dahi — TEBAL & KOKOH */}
           <path
             d="M 42 56 Q 95 50 148 56"
             stroke="#0A0A0A"
@@ -328,7 +363,7 @@ export function ITSupportMascot({
             fill="none"
             strokeLinecap="round"
           />
-          {/* Strip Tengah Aksen Cyan Pada Ikat Kepala */}
+          {/* Strip Aksen Cyan Pada Tali Kepala */}
           <path
             d="M 42 56 Q 95 50 148 56"
             stroke="#00F0FF"
@@ -375,7 +410,7 @@ export function ITSupportMascot({
           <circle cx="75" cy="34" r="1.2" fill="#FFFFFF" />
 
           {/* ============================================================== */}
-          {/* LAYER 6: TANGAN KIRI & KOTAK PERKAKAS DARURAT P3K IT (MEDIC KIT)*/}
+          {/* LAYER 6: TANGAN KIRI & KOTAK P3K IT (PALANG MERAH DARURAT #FF3B30) */}
           {/* ============================================================== */}
           <g className="its-animated-toolbox">
             {/* Handle Toolbox Koper Logam */}
@@ -404,9 +439,9 @@ export function ITSupportMascot({
             {/* List Aksen Tutup Koper Cyan */}
             <rect x="5" y="116" width="32" height="6" fill="#00F0FF" stroke="#0A0A0A" strokeWidth="1" />
 
-            {/* Lambang Palang Hijau Neon (#2EE59D) First Aid IT */}
-            <rect x="18" y="124" width="6" height="12" fill="#2EE59D" />
-            <rect x="15" y="127" width="12" height="6" fill="#2EE59D" />
+            {/* Lambang Palang Merah Medis Darurat (#FF3B30) First Aid IT */}
+            <rect x="18" y="124" width="6" height="12" fill="#FF3B30" />
+            <rect x="15" y="127" width="12" height="6" fill="#FF3B30" />
             <rect x="18" y="124" width="6" height="12" stroke="#0A0A0A" strokeWidth="1" fill="none" />
             <rect x="15" y="127" width="12" height="6" stroke="#0A0A0A" strokeWidth="1" fill="none" />
 
@@ -447,7 +482,7 @@ export function ITSupportMascot({
               fill="none"
             />
 
-            {/* Hard Shadow Suntikan USB Siber (Tanpa Kabel Spiral) */}
+            {/* Hard Shadow Suntikan USB Siber */}
             <g transform="rotate(22 172 96)">
               <rect x="170" y="78" width="12" height="36" rx="2.5" fill="#0A0A0A" />
             </g>
@@ -539,30 +574,36 @@ export function ITSupportMascot({
           </g>
 
           {/* ============================================================== */}
-          {/* LAYER 8: SIMBOL PALANG '+' KHAS KESEHATAN KEDAP-KEDIP BERTERBANGAN */}
+          {/* LAYER 8: SIMBOL PALANG '+' MELAYANG NAIK SEPERTI EFEK HEAL GAME*/}
           {/* ============================================================== */}
-          {/* Simbol Plus Medis 1: Kiri Atas */}
-          <g className="its-cross-1">
-            <rect x="32" y="38" width="4" height="10" rx="1" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="1" />
-            <rect x="29" y="41" width="10" height="4" rx="1" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="1" />
+          {/* Heal Cross 1: Melayang Naik di Kiri Atas */}
+          <g className="its-heal-cross-1">
+            <rect x="32" y="60" width="4" height="11" rx="1" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="1.2" />
+            <rect x="28.5" y="63.5" width="11" height="4" rx="1" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="1.2" />
           </g>
 
-          {/* Simbol Plus Medis 2: Kanan Atas */}
-          <g className="its-cross-2">
-            <rect x="166" y="40" width="4.5" height="11" rx="1" fill="#00F0FF" stroke="#0A0A0A" strokeWidth="1" />
-            <rect x="162.7" y="43.2" width="11" height="4.5" rx="1" fill="#00F0FF" stroke="#0A0A0A" strokeWidth="1" />
+          {/* Heal Cross 2: Melayang Naik di Kanan Atas */}
+          <g className="its-heal-cross-2">
+            <rect x="168" y="70" width="4.5" height="12" rx="1.2" fill="#00F0FF" stroke="#0A0A0A" strokeWidth="1.2" />
+            <rect x="164.25" y="73.75" width="12" height="4.5" rx="1.2" fill="#00F0FF" stroke="#0A0A0A" strokeWidth="1.2" />
           </g>
 
-          {/* Simbol Plus Medis 3: Kanan Bawah Dekat Tangan */}
-          <g className="its-cross-3">
-            <rect x="160.5" y="142" width="3.5" height="9" rx="0.8" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="0.8" />
-            <rect x="157.7" y="144.7" width="9" height="3.5" rx="0.8" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="0.8" />
+          {/* Heal Cross 3: Melayang Naik di Tengah Atas Kepala */}
+          <g className="its-heal-cross-3">
+            <rect x="94" y="50" width="4" height="11" rx="1" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="1.2" />
+            <rect x="90.5" y="53.5" width="11" height="4" rx="1" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="1.2" />
           </g>
 
-          {/* Simbol Plus Medis 4: Kiri Tengah Mini */}
-          <g className="its-cross-2">
-            <rect x="24" y="98" width="3" height="7.5" rx="0.8" fill="#FFFFFF" stroke="#0A0A0A" strokeWidth="0.8" />
-            <rect x="21.7" y="100.2" width="7.5" height="3" rx="0.8" fill="#FFFFFF" stroke="#0A0A0A" strokeWidth="0.8" />
+          {/* Heal Cross 4: Melayang Naik di Kanan Bawah */}
+          <g className="its-heal-cross-4">
+            <rect x="154" y="110" width="3.5" height="9.5" rx="0.8" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="1" />
+            <rect x="151" y="113" width="9.5" height="3.5" rx="0.8" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="1" />
+          </g>
+
+          {/* Heal Cross 5: Melayang Naik di Kiri Bawah */}
+          <g className="its-heal-cross-5">
+            <rect x="28" y="115" width="3.5" height="9.5" rx="0.8" fill="#00F0FF" stroke="#0A0A0A" strokeWidth="1" />
+            <rect x="25" y="118" width="9.5" height="3.5" rx="0.8" fill="#00F0FF" stroke="#0A0A0A" strokeWidth="1" />
           </g>
         </g>
       </svg>

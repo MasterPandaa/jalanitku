@@ -89,7 +89,7 @@ const BATCH_2_ROLES = [
   {
     slug: "it-support",
     name: "IT Support",
-    julukan: "The Fixer",
+    julukan: "The Doctor",
     batch: 2,
     color: "#00F0FF",
     accentColor: "#2EE59D",
@@ -97,10 +97,10 @@ const BATCH_2_ROLES = [
     mascotComponent: ITSupportMascot,
     svgPath: "/assets/mascot/roles/it-support.svg",
     anatomy: [
-      { name: "Jas Dokter & Nametag", desc: "Jas lab dokter putih bersih dengan saku dada dan nametag ID medis (tanpa nama teks)" },
+      { name: "Jas Lab Kotak Samping Penuh", desc: "Jas lab dokter putih kotak melintang penuh hingga ke sisi kanan dan kiri tubuh karakter dengan nametag ID" },
       { name: "Cermin Kepala Tebal (Head Mirror)", desc: "Cermin bulat dokter reflektif dengan tali kepala tebal kokoh pemantau titik kendala" },
-      { name: "Suntikan USB Tanpa Kabel", desc: "Suntikan USB siber tanpa kabel berdosis serum pemulihan sistem mint neon" },
-      { name: "Kotak P3K & Plus Medis", desc: "Toolbox First Aid Kit putih palang hijau dan partikel simbol '+' kesehatan kedap-kedip" },
+      { name: "Kotak P3K Palang Merah", desc: "Toolbox First Aid Kit medis putih dengan simbol palang merah darurat (#FF3B30)" },
+      { name: "Efek Heal Game Melayang", desc: "Partikel tanda palang '+' mint dan cyan melayang naik ke atas berdenyut efek pemulihan game" },
     ],
   },
   {
@@ -116,7 +116,7 @@ const BATCH_2_ROLES = [
     anatomy: [
       { name: "Antena Router Kembar", desc: "Sepasang antena router di kepala sebagai pemancar sinyal perangkat jaringan" },
       { name: "Penyambungan Kabel Terputus", desc: "Kedua tangan memegang dua ujung kabel terputus dengan serat tembaga mencuat yang didekatkan" },
-      { name: "Shockwave Impuls Splicing", desc: "Gelombang kejut (shockwave) berdenyut konsentris memancar saat tangan ingin menyatukan kabel" },
+      { name: "Mega Shockwave Meluap Keluar", desc: "Gelombang kejut raksasa (mega shockwave) berdenyut ekspansif meluas hingga keluar dari tubuh karakter" },
       { name: "Visor Serat Optik HUD 10G", desc: "Kacamata visor cyan pemantau bandwidth traffic 10G dan status data stream" },
     ],
   },
