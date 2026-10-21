@@ -13,9 +13,12 @@ export interface QualityAssuranceMascotProps {
 /**
  * Maskot Role: Quality Assurance — "The Bug Hunter"
  * Identitas: Sang Pemburu Cacat Kode & Penjaga Standar Keandalan
- * Ciri Khas: Topi safari hunter oranye dengan lampu senter status hijau "PASS",
- * kaca pembesar scanner bug berlensa cyan, cyber bug kecil tertangkap di jaring,
- * kacamata monokel target crosshair, dan badge centang hijau 100% PASS.
+ * Ciri Khas: Topi safari hunter oranye dengan lampu senter status PASS hijau neon,
+ * kerah safari oranye dengan pin badge "TEST✓", tangan kiri memegang jaring serangga digital
+ * dengan robot kepik merah tertangkap, dan tangan kanan memegang kaca pembesar scanner bug cyan/oranye.
+ *
+ * Base Anatomi: 100% konsisten dengan Base Model Batch 1 (kaki sol putih, tubuh kuning rambu 106x94,
+ * marka jalan putus-putus, pipi pink, mata ekspresif, mulut senyum, tangan neo-brutalist).
  */
 export function QualityAssuranceMascot({
   size = 200,
@@ -31,7 +34,7 @@ export function QualityAssuranceMascot({
       className={`relative inline-flex items-center justify-center select-none group ${className}`}
       style={{ width: size, height: size }}
       role="img"
-      aria-label="Maskot Quality Assurance — The Bug Hunter: Papan rambu oranye berpetualang dengan topi safari hunter, lampu senter status PASS, kaca pembesar scanner bug, dan cyber bug tertangkap di jaring digital"
+      aria-label="Maskot Quality Assurance — The Bug Hunter: Papan penunjuk jalan neo-brutalism kuning dengan topi safari oranye, senter checklist PASS, jaring serangga digital memburu bug kepik merah, dan kaca pembesar scanner"
     >
       <svg
         viewBox="0 0 200 200"
@@ -45,157 +48,514 @@ export function QualityAssuranceMascot({
           <style>{`
             @keyframes qa-float {
               0%, 100% { transform: translateY(0px); }
-              50% { transform: translateY(-4px); }
+              50% { transform: translateY(-3.5px); }
             }
             @keyframes qa-net-swing {
               0%, 100% { transform: rotate(0deg); }
-              50% { transform: rotate(-6deg); }
+              50% { transform: rotate(-5deg) translateY(-1px); }
             }
             @keyframes qa-bug-wiggle {
               0%, 100% { transform: translate(0, 0) rotate(0deg); }
-              50% { transform: translate(2px, -2px) rotate(8deg); }
+              50% { transform: translate(1px, -1px) rotate(6deg); }
             }
-            .qa-animated {
-              animation: ${isAnimated ? "qa-float 3.8s ease-in-out infinite" : "none"};
+            @keyframes qa-magnifier {
+              0%, 100% { transform: rotate(0deg) scale(1); }
+              50% { transform: rotate(3deg) scale(1.03); }
+            }
+            @keyframes qa-beam-pulse {
+              0%, 100% { opacity: 0.25; }
+              50% { opacity: 0.45; }
+            }
+            .qa-animated-body {
+              animation: ${isAnimated ? "qa-float 3.5s ease-in-out infinite" : "none"};
               transform-origin: center bottom;
             }
-            .qa-net {
-              animation: ${isAnimated ? "qa-net-swing 2.2s ease-in-out infinite" : "none"};
-              transform-origin: 34px 115px;
+            .qa-animated-net {
+              animation: ${isAnimated ? "qa-net-swing 2.8s ease-in-out infinite" : "none"};
+              transform-origin: 18px 126px;
             }
-            .qa-bug {
+            .qa-animated-bug {
               animation: ${isAnimated ? "qa-bug-wiggle 1.2s ease-in-out infinite" : "none"};
-              transform-origin: center;
+              transform-origin: 13px 60px;
+            }
+            .qa-animated-magnifier {
+              animation: ${isAnimated ? "qa-magnifier 3.2s ease-in-out infinite" : "none"};
+              transform-origin: 174px 116px;
+            }
+            .qa-animated-beam {
+              animation: ${isAnimated ? "qa-beam-pulse 2s ease-in-out infinite" : "none"};
             }
           `}</style>
         </defs>
 
-        <g className="qa-animated transition-transform duration-300 group-hover:scale-105">
-          {/* 1. SEPATU BOOT PEMBURU SAFARI */}
-          <rect x="66" y="162" width="22" height="24" fill="#0A0A0A" />
-          <rect x="112" y="162" width="22" height="24" fill="#0A0A0A" />
-          <rect x="62" y="160" width="22" height="24" fill="#0A0A0A" rx="2" />
-          <rect x="108" y="160" width="22" height="24" fill="#0A0A0A" rx="2" />
-          <line x1="62" y1="180" x2="84" y2="180" stroke="#FFD60A" strokeWidth="3" />
-          <line x1="108" y1="180" x2="130" y2="180" stroke="#FFD60A" strokeWidth="3" />
+        {/* CONTAINER UTAMA DENGAN ANIMASI FLOAT */}
+        <g className="qa-animated-body transition-transform duration-300 group-hover:scale-105">
+          {/* ============================================================== */}
+          {/* LAYER 1: KAKI & SEPATU HITAM DENGAN SOL PUTIH (IDENTIK BATCH 1)*/}
+          {/* ============================================================== */}
+          {/* Hard Shadow Kaki */}
+          <rect x="68" y="154" width="22" height="24" fill="#0A0A0A" />
+          <rect x="114" y="154" width="22" height="24" fill="#0A0A0A" />
 
-          {/* 2. BAYANGAN BADAN KERAS (HARD DROP SHADOW) */}
-          <rect x="46" y="52" width="112" height="110" rx="10" fill="#0A0A0A" />
-
-          {/* 3. BADAN UTAMA RAMBU (ORANYE QA #FF8A3D) */}
+          {/* Kaki Kiri */}
           <rect
-            x="38"
-            y="44"
-            width="112"
-            height="110"
-            rx="10"
-            fill="#FF8A3D"
+            x="64"
+            y="148"
+            width="22"
+            height="26"
+            fill="#0A0A0A"
+            rx="2"
             stroke="#0A0A0A"
-            strokeWidth="5"
-            strokeLinejoin="round"
+            strokeWidth="3.5"
+          />
+          {/* Sol Sepatu Putih Kiri */}
+          <line
+            x1="64"
+            y1="170"
+            x2="86"
+            y2="170"
+            stroke="#FFFFFF"
+            strokeWidth="3.5"
+            strokeLinecap="square"
           />
 
-          {/* 4. GARIS DEKORATIF RAMBU */}
-          <line x1="48" y1="142" x2="140" y2="142" stroke="#0A0A0A" strokeWidth="4" strokeDasharray="8 6" />
+          {/* Kaki Kanan */}
+          <rect
+            x="110"
+            y="148"
+            width="22"
+            height="26"
+            fill="#0A0A0A"
+            rx="2"
+            stroke="#0A0A0A"
+            strokeWidth="3.5"
+          />
+          {/* Sol Sepatu Putih Kanan */}
+          <line
+            x1="110"
+            y1="170"
+            x2="132"
+            y2="170"
+            stroke="#FFFFFF"
+            strokeWidth="3.5"
+            strokeLinecap="square"
+          />
 
-          {/* 5. TOPI PEMBURU SAFARI / HUNTER HAT DENGAN LAMPU SENTER CHECKLIST */}
-          <g transform="translate(18, 6)">
-            {/* Shadow Topi */}
-            <polygon points="12,48 152,48 138,36 114,24 50,24 26,36" fill="#0A0A0A" />
-            {/* Brim Topi Safari */}
-            <path
-              d="M 6,44 L 158,44 L 140,34 L 116,22 L 48,22 L 24,34 Z"
-              fill="#FFD60A"
-              stroke="#0A0A0A"
-              strokeWidth="4"
-              strokeLinejoin="round"
-            />
-            {/* Crown Topi Kubah */}
-            <path
-              d="M 44,22 C 44,8 120,8 120,22 Z"
-              fill="#FFD60A"
-              stroke="#0A0A0A"
-              strokeWidth="4"
-              strokeLinejoin="round"
-            />
-            {/* Pita Topi Hitam */}
-            <rect x="44" y="16" width="76" height="6" fill="#0A0A0A" />
-            {/* Lampu Senter Kepala Status PASS Hijau */}
-            <g transform="translate(74, 8)">
-              <rect x="3" y="3" width="16" height="14" rx="3" fill="#0A0A0A" />
-              <rect x="0" y="0" width="16" height="14" rx="3" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="2.5" />
-              {/* Centang Pass Checklist */}
-              <path d="M 4,7 L 7,10 L 12,4" stroke="#0A0A0A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-            </g>
-          </g>
+          {/* ============================================================== */}
+          {/* LAYER 2: BADAN UTAMA PAPAN RAMBU (KUNING NEO-BRUTALISM BATCH 1)*/}
+          {/* ============================================================== */}
+          {/* Hard Shadow Badan */}
+          <rect
+            x="48"
+            y="56"
+            width="106"
+            height="94"
+            rx="4"
+            fill="#0A0A0A"
+          />
 
-          {/* 6. MATA: KIRI NORMAL JELI, KANAN MONOKEL RADAR SCANNER */}
+          {/* Badan Papan Rambu Kuning (#FFD60A) */}
+          <rect
+            x="42"
+            y="50"
+            width="106"
+            height="94"
+            rx="4"
+            fill="#FFD60A"
+            stroke="#0A0A0A"
+            strokeWidth="4"
+          />
+
+          {/* Marka Jalan Putus-Putus Perut (DNA Rambu Jalan) */}
+          <line
+            x1="54"
+            y1="134"
+            x2="136"
+            y2="134"
+            stroke="#0A0A0A"
+            strokeWidth="3.5"
+            strokeDasharray="8 6"
+          />
+
+          {/* Pipi Merona Pink (#FF5C8A) */}
+          <rect x="52" y="106" width="12" height="7" rx="2" fill="#FF5C8A" />
+          <rect x="124" y="106" width="12" height="7" rx="2" fill="#FF5C8A" />
+
+          {/* ============================================================== */}
+          {/* LAYER 3: MATA & EKSPRESI JELI PEMBURU KUTU (BATCH 1 BASE)     */}
+          {/* ============================================================== */}
           {/* Mata Kiri */}
-          <rect x="56" y="74" width="22" height="26" rx="5" fill="#FFFFFF" stroke="#0A0A0A" strokeWidth="4" />
-          <rect x="62" y="80" width="10" height="12" rx="2" fill="#0A0A0A" />
-          <circle cx="65" cy="83" r="2" fill="#FFFFFF" />
+          <rect
+            x="58"
+            y="76"
+            width="22"
+            height="24"
+            rx="4"
+            fill="#FFFFFF"
+            stroke="#0A0A0A"
+            strokeWidth="3.5"
+          />
+          {/* Pupil Hitam Kiri */}
+          <rect x="64" y="81" width="11" height="13" rx="2" fill="#0A0A0A" />
+          {/* Kilau Putih Sinar Mata */}
+          <circle cx="67" cy="84" r="1.5" fill="#FFFFFF" />
+          {/* Kilau Neon Mint Pemburu QA */}
+          <circle cx="70" cy="88" r="1.2" fill="#2EE59D" />
 
-          {/* Mata Kanan dengan Monokel Radar Scanner (Cyan) */}
-          <circle cx="120" cy="87" r="18" fill="#0A0A0A" />
-          <circle cx="118" cy="85" r="17" fill="#00F0FF" stroke="#0A0A0A" strokeWidth="4" />
-          {/* Crosshair Target */}
-          <line x1="105" y1="85" x2="131" y2="85" stroke="#0A0A0A" strokeWidth="2" strokeDasharray="3 2" />
-          <line x1="118" y1="72" x2="118" y2="98" stroke="#0A0A0A" strokeWidth="2" strokeDasharray="3 2" />
-          {/* Pupil Target */}
-          <circle cx="118" cy="85" r="5" fill="#0A0A0A" />
-          <circle cx="119.5" cy="83.5" r="1.5" fill="#FFFFFF" />
-          {/* Tangkai Monokel */}
-          <path d="M 134,80 C 142,82 144,95 142,106" stroke="#0A0A0A" strokeWidth="2.5" fill="none" />
+          {/* Mata Kanan */}
+          <rect
+            x="102"
+            y="76"
+            width="22"
+            height="24"
+            rx="4"
+            fill="#FFFFFF"
+            stroke="#0A0A0A"
+            strokeWidth="3.5"
+          />
+          {/* Pupil Hitam Kanan */}
+          <rect x="108" y="81" width="11" height="13" rx="2" fill="#0A0A0A" />
+          {/* Kilau Putih Sinar Mata */}
+          <circle cx="111" cy="84" r="1.5" fill="#FFFFFF" />
+          {/* Kilau Neon Mint Pemburu QA */}
+          <circle cx="114" cy="88" r="1.2" fill="#2EE59D" />
 
-          {/* 7. ALIS JELI & SENYUM DETEKSI */}
-          <line x1="56" y1="67" x2="80" y2="69" stroke="#0A0A0A" strokeWidth="4.5" strokeLinecap="round" />
-          <line x1="106" y1="65" x2="132" y2="63" stroke="#0A0A0A" strokeWidth="4.5" strokeLinecap="round" />
-          <path d="M84,116 Q94,124 104,116" stroke="#0A0A0A" strokeWidth="3.5" strokeLinecap="round" fill="none" />
-          <rect x="46" y="110" width="10" height="6" rx="2" fill="#FF5C8A" />
-          <rect x="132" y="110" width="10" height="6" rx="2" fill="#FF5C8A" />
+          {/* Alis Pemburu Fokus Jeli */}
+          <path
+            d="M 58 71 L 78 73"
+            stroke="#0A0A0A"
+            strokeWidth="3.5"
+            strokeLinecap="round"
+          />
+          <path
+            d="M 102 73 L 122 71"
+            stroke="#0A0A0A"
+            strokeWidth="3.5"
+            strokeLinecap="round"
+          />
 
-          {/* 8. TANGAN KIRI MEMEGANG JARING SIBER PENANGKAP BUG */}
-          <g className="qa-net">
-            <line x1="38" y1="110" x2="18" y2="124" stroke="#0A0A0A" strokeWidth="6" strokeLinecap="round" />
-            <circle cx="20" cy="124" r="6" fill="#FF8A3D" stroke="#0A0A0A" strokeWidth="3.5" />
-            {/* Gagang Jaring */}
-            <line x1="20" y1="124" x2="12" y2="60" stroke="#0A0A0A" strokeWidth="5" strokeLinecap="round" />
-            {/* Ring Jaring */}
-            <ellipse cx="12" cy="56" rx="18" ry="12" fill="#00F0FF" stroke="#0A0A0A" strokeWidth="3.5" />
-            {/* Kantong Jaring Mesh */}
-            <path d="M -6,56 Q 12,86 30,56" stroke="#0A0A0A" strokeWidth="3" fill="#00F0FF" fillOpacity="0.4" />
-            <line x1="2" y1="56" x2="14" y2="76" stroke="#0A0A0A" strokeWidth="1.5" strokeDasharray="3 2" />
-            <line x1="22" y1="56" x2="10" y2="76" stroke="#0A0A0A" strokeWidth="1.5" strokeDasharray="3 2" />
+          {/* Mulut Senyum Bangga & Teliti */}
+          <path
+            d="M 87 114 Q 94 123 102 114"
+            stroke="#0A0A0A"
+            strokeWidth="3.5"
+            fill="none"
+            strokeLinecap="round"
+          />
 
-            {/* BUG MERAH KECIL TERTANGKAP DI DALAM JARING */}
-            <g className="qa-bug" transform="translate(6, 60)">
-              <ellipse cx="6" cy="6" rx="6" ry="5" fill="#FF3B30" stroke="#0A0A0A" strokeWidth="1.5" />
-              <circle cx="4" cy="5" r="1" fill="#FFFFFF" />
-              <circle cx="8" cy="5" r="1" fill="#FFFFFF" />
-              <line x1="3" y1="2" x2="1" y2="0" stroke="#0A0A0A" strokeWidth="1.5" />
-              <line x1="9" y1="2" x2="11" y2="0" stroke="#0A0A0A" strokeWidth="1.5" />
-              <line x1="1" y1="6" x2="-2" y2="6" stroke="#0A0A0A" strokeWidth="1.5" />
-              <line x1="11" y1="6" x2="14" y2="6" stroke="#0A0A0A" strokeWidth="1.5" />
+          {/* ============================================================== */}
+          {/* LAYER 4: KERAH SAFARI ORANYE & BADGE "TEST✓"                   */}
+          {/* ============================================================== */}
+          <polygon
+            points="78,144 94,144 88,132"
+            fill="#FF8A3D"
+            stroke="#0A0A0A"
+            strokeWidth="2.5"
+            strokeLinejoin="round"
+          />
+          <polygon
+            points="110,144 94,144 100,132"
+            fill="#FF8A3D"
+            stroke="#0A0A0A"
+            strokeWidth="2.5"
+            strokeLinejoin="round"
+          />
+          {/* Pin Badge Checklist Hijau PASS */}
+          <rect
+            x="90"
+            y="131"
+            width="10"
+            height="10"
+            rx="2"
+            fill="#2EE59D"
+            stroke="#0A0A0A"
+            strokeWidth="2"
+          />
+          <path
+            d="M 92 136 L 94.5 138.5 L 98 134"
+            stroke="#0A0A0A"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            fill="none"
+          />
+
+          {/* ============================================================== */}
+          {/* LAYER 5: TOPI SAFARI HUNTER ORANYE & SENTER STATUS PASS HIJAU  */}
+          {/* ============================================================== */}
+          {/* Hard Shadow Topi */}
+          <path
+            d="M 38 48 C 38 24 152 24 152 48 Z"
+            fill="#0A0A0A"
+          />
+          {/* Kubah Crown Topi Safari Oranye (#FF8A3D) */}
+          <path
+            d="M 50 42 C 50 18 140 18 140 42 Z"
+            fill="#FF8A3D"
+            stroke="#0A0A0A"
+            strokeWidth="4"
+            strokeLinejoin="round"
+          />
+          {/* Brim Lebar Topi Safari */}
+          <path
+            d="M 30 48 L 160 48 L 148 40 L 42 40 Z"
+            fill="#FF8A3D"
+            stroke="#0A0A0A"
+            strokeWidth="4"
+            strokeLinejoin="round"
+          />
+          {/* Pita Topi Cokelat Safari (#8B4513) */}
+          <rect
+            x="50"
+            y="34"
+            width="90"
+            height="7"
+            fill="#8B4513"
+            stroke="#0A0A0A"
+            strokeWidth="2"
+          />
+          {/* Gesper Logam Emas pada Pita Topi */}
+          <rect
+            x="64"
+            y="33"
+            width="8"
+            height="9"
+            rx="1.5"
+            fill="#FFD60A"
+            stroke="#0A0A0A"
+            strokeWidth="1.5"
+          />
+
+          {/* Lampu Senter Kepala Status PASS Hijau Neon (#2EE59D) */}
+          {/* Hard Shadow Lampu */}
+          <rect x="88" y="16" width="16" height="15" rx="3" fill="#0A0A0A" />
+          {/* Bodi Lampu Senter Mint Neon */}
+          <rect
+            x="86"
+            y="14"
+            width="16"
+            height="15"
+            rx="3"
+            fill="#2EE59D"
+            stroke="#0A0A0A"
+            strokeWidth="2.5"
+          />
+          {/* Lensa Lampu */}
+          <circle cx="94" cy="21.5" r="4.5" fill="#FFFFFF" stroke="#0A0A0A" strokeWidth="1.5" />
+          {/* Tanda Centang Hijau PASS di Senter */}
+          <path
+            d="M 91.5 21.5 L 93.5 23.5 L 97 19.5"
+            stroke="#0A0A0A"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            fill="none"
+          />
+          {/* Pancaran Beam Sinar Neon Halus */}
+          <polygon
+            className="qa-animated-beam"
+            points="86,29 64,54 124,54 102,29"
+            fill="#2EE59D"
+            fillOpacity="0.25"
+          />
+
+          {/* ============================================================== */}
+          {/* LAYER 6: TANGAN KIRI & JARING SERANGGA DIGITAL (THE BUG NET)    */}
+          {/* ============================================================== */}
+          <g className="qa-animated-net">
+            {/* Gagang Kayu Jaring Menjulur Miring dari Tangan */}
+            <line
+              x1="18"
+              y1="126"
+              x2="10"
+              y2="46"
+              stroke="#8B4513"
+              strokeWidth="5"
+              strokeLinecap="round"
+            />
+            <line
+              x1="18"
+              y1="126"
+              x2="10"
+              y2="46"
+              stroke="#0A0A0A"
+              strokeWidth="5"
+              strokeLinecap="round"
+              strokeDasharray="4 8"
+            />
+
+            {/* Kantung Jaring Kawat Digital Cyan (#00F0FF) */}
+            <path
+              d="M 4 48 C -6 76 12 86 24 76 C 30 64 26 44 22 42"
+              fill="#00F0FF"
+              fillOpacity="0.2"
+              stroke="#0A0A0A"
+              strokeWidth="2.5"
+            />
+            {/* Garis-Garis Anyaman Jaring */}
+            <line x1="4" y1="56" x2="22" y2="54" stroke="#00F0FF" strokeWidth="1.5" strokeDasharray="2 2" />
+            <line x1="4" y1="64" x2="22" y2="62" stroke="#00F0FF" strokeWidth="1.5" strokeDasharray="2 2" />
+            <line x1="8" y1="72" x2="18" y2="70" stroke="#00F0FF" strokeWidth="1.5" strokeDasharray="2 2" />
+            <line x1="8" y1="46" x2="10" y2="76" stroke="#00F0FF" strokeWidth="1.5" strokeDasharray="2 2" />
+            <line x1="16" y1="44" x2="18" y2="72" stroke="#00F0FF" strokeWidth="1.5" strokeDasharray="2 2" />
+
+            {/* Ring Frame Jaring Besi */}
+            <ellipse
+              cx="13"
+              cy="45"
+              rx="13"
+              ry="17"
+              fill="none"
+              stroke="#0A0A0A"
+              strokeWidth="3.5"
+              transform="rotate(-15 13 45)"
+            />
+
+            {/* ROBOT BUG KEPIK MERAH TERTANGKAP DI DALAM JARING */}
+            <g className="qa-animated-bug">
+              {/* Hard Shadow Kepik */}
+              <ellipse cx="14" cy="62" rx="7" ry="6" fill="#0A0A0A" />
+              {/* Bodi Punggung Kepik Pink-Merah (#FF5C8A) */}
+              <ellipse cx="12" cy="60" rx="6.5" ry="5.5" fill="#FF5C8A" stroke="#0A0A0A" strokeWidth="2" />
+              {/* Garis Belah Sayap Kepik */}
+              <line x1="6" y1="60" x2="18" y2="60" stroke="#0A0A0A" strokeWidth="1.5" />
+              {/* Titik-Titik Kepik Digital */}
+              <circle cx="10" cy="58" r="1.2" fill="#0A0A0A" />
+              <circle cx="14" cy="58" r="1.2" fill="#0A0A0A" />
+              <circle cx="10" cy="62" r="1.2" fill="#0A0A0A" />
+              <circle cx="14" cy="62" r="1.2" fill="#0A0A0A" />
+              {/* Kepala Kepik Hitam */}
+              <circle cx="6" cy="60" r="3" fill="#0A0A0A" />
+              {/* Antena Kepik */}
+              <path d="M 4 58 Q 2 55 0 56" stroke="#0A0A0A" strokeWidth="1.2" fill="none" />
+              <path d="M 4 62 Q 2 65 0 64" stroke="#0A0A0A" strokeWidth="1.2" fill="none" />
+              {/* 6 Kaki Kepik Kecil */}
+              <line x1="8" y1="54" x2="6" y2="52" stroke="#0A0A0A" strokeWidth="1.2" />
+              <line x1="12" y1="54" x2="12" y2="51" stroke="#0A0A0A" strokeWidth="1.2" />
+              <line x1="16" y1="54" x2="18" y2="52" stroke="#0A0A0A" strokeWidth="1.2" />
+              <line x1="8" y1="66" x2="6" y2="68" stroke="#0A0A0A" strokeWidth="1.2" />
+              <line x1="12" y1="66" x2="12" y2="69" stroke="#0A0A0A" strokeWidth="1.2" />
+              <line x1="16" y1="66" x2="18" y2="68" stroke="#0A0A0A" strokeWidth="1.2" />
+              {/* Mata Pusing "X" Digital Kepik */}
+              <path d="M 5 59 L 7 61 M 7 59 L 5 61" stroke="#FFFFFF" strokeWidth="0.8" />
             </g>
+
+            {/* Lengan Kiri Neo-Brutalist */}
+            <path
+              d="M 42 110 Q 28 116 18 126"
+              stroke="#0A0A0A"
+              strokeWidth="6"
+              strokeLinecap="round"
+              fill="none"
+            />
+            {/* Kepalan Tangan Kiri Kuning (#FFD60A) */}
+            <circle
+              cx="18"
+              cy="126"
+              r="6.5"
+              fill="#FFD60A"
+              stroke="#0A0A0A"
+              strokeWidth="3.5"
+            />
           </g>
 
-          {/* 9. TANGAN KANAN MEMEGANG KACA PEMBESAR MINI SCANNER */}
-          <g transform="translate(150, 102)">
-            <line x1="-4" y1="8" x2="12" y2="20" stroke="#0A0A0A" strokeWidth="6" strokeLinecap="round" />
-            <circle cx="12" cy="20" r="6" fill="#FF8A3D" stroke="#0A0A0A" strokeWidth="3.5" />
-            {/* Lens Rim */}
-            <circle cx="26" cy="14" r="14" fill="#0A0A0A" />
-            <circle cx="24" cy="12" r="13" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="3" />
-            <text x="18" y="16" fontFamily="monospace" fontSize="9" fontWeight="900" fill="#0A0A0A">BUG</text>
-            <line x1="33" y1="21" x2="42" y2="30" stroke="#0A0A0A" strokeWidth="4.5" strokeLinecap="round" />
+          {/* ============================================================== */}
+          {/* LAYER 7: TANGAN KANAN & KACA PEMBESAR SCANNER BUG CYAN/ORANYE  */}
+          {/* ============================================================== */}
+          <g className="qa-animated-magnifier">
+            {/* Lengan Kanan Menjulur */}
+            <path
+              d="M 148 108 Q 164 114 174 116"
+              stroke="#0A0A0A"
+              strokeWidth="6"
+              strokeLinecap="round"
+              fill="none"
+            />
+
+            {/* Gagang Kaca Pembesar Oranye */}
+            <line
+              x1="174"
+              y1="116"
+              x2="182"
+              y2="92"
+              stroke="#FF8A3D"
+              strokeWidth="6"
+              strokeLinecap="round"
+            />
+            <line
+              x1="174"
+              y1="116"
+              x2="182"
+              y2="92"
+              stroke="#0A0A0A"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+            />
+
+            {/* Hard Shadow Frame Kaca Pembesar */}
+            <circle cx="186" cy="76" r="16" fill="#0A0A0A" />
+
+            {/* Ring Frame Oranye Kaca Pembesar */}
+            <circle
+              cx="183"
+              cy="73"
+              r="16"
+              fill="#FF8A3D"
+              stroke="#0A0A0A"
+              strokeWidth="3.5"
+            />
+
+            {/* Lensa Cyan Transparan (#00F0FF) */}
+            <circle
+              cx="183"
+              cy="73"
+              r="12"
+              fill="#00F0FF"
+              fillOpacity="0.4"
+              stroke="#0A0A0A"
+              strokeWidth="2"
+            />
+
+            {/* Garis Kilau Reflektif Putih */}
+            <line
+              x1="175"
+              y1="67"
+              x2="183"
+              y2="79"
+              stroke="#FFFFFF"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+            />
+
+            {/* Crosshair Target Scanner Hijau Neon (#2EE59D) */}
+            <circle
+              cx="183"
+              cy="73"
+              r="6"
+              stroke="#2EE59D"
+              strokeWidth="1.5"
+              strokeDasharray="2 2"
+              fill="none"
+            />
+            <line x1="174" y1="73" x2="192" y2="73" stroke="#2EE59D" strokeWidth="1.5" strokeLinecap="round" />
+            <line x1="183" y1="64" x2="183" y2="82" stroke="#2EE59D" strokeWidth="1.5" strokeLinecap="round" />
+            <circle cx="183" cy="73" r="1.5" fill="#2EE59D" />
+
+            {/* Kepalan Tangan Kanan Kuning (#FFD60A) */}
+            <circle
+              cx="174"
+              cy="116"
+              r="6.5"
+              fill="#FFD60A"
+              stroke="#0A0A0A"
+              strokeWidth="3.5"
+            />
           </g>
 
-          {/* 10. BADGE STATUS TEST: 100% PASS */}
-          <g transform="translate(144, 30)">
-            <rect x="3" y="3" width="34" height="18" rx="4" fill="#0A0A0A" />
-            <rect x="0" y="0" width="34" height="18" rx="4" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="2" />
-            <text x="4" y="13" fontFamily="monospace" fontSize="9" fontWeight="900" fill="#0A0A0A">TEST✓</text>
-          </g>
+          {/* Partikel Sparkle Status PASS Melayang */}
+          <circle cx="34" cy="38" r="2" fill="#2EE59D" />
+          <circle cx="170" cy="46" r="2" fill="#FFD60A" />
+          <circle cx="162" cy="38" r="1.5" fill="#00F0FF" />
         </g>
       </svg>
     </div>

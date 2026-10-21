@@ -77,34 +77,36 @@ Ke-21 role IT dikelompokkan ke dalam 7 batch tematik yang masing-masing terdiri 
 
 ---
 
-### 🚀 BATCH 2: Reliability, Support & Connectivity (Active Release)
+### 🚀 BATCH 2: Reliability, Support & Connectivity (Active Release — Revised to 100% Batch 1 Base Consistency)
+
+> **Catatan Revisi Batch 2**: Seluruh karakter Batch 2 kini 100% konsisten menggunakan Base Model Maskot Batch 1 (kanvas `viewBox="0 0 200 200"`, kaki hitam sol sepatu putih di y=170, badan papan rambu kuning `#FFD60A` ukuran 106x94, marka jalan putus-putus perut, pipi merona pink, ekspresi mata & senyum neo-brutalist, serta kepalan tangan kuning). Hanya aksesoris dan props khas role yang membedakan identitas profesi masing-masing.
 
 #### 4. Quality Assurance — "The Bug Hunter"
 - **Metafora Karakter**: Sang pemburu kutu teliti yang menjelajahi celah kode untuk memastikan kesempurnaan setiap rilis software.
 - **Atribut Visual & Props**:
-  - **Topi Safari Hunter & Lampu Senter PASS**: Topi petualang safari oranye/kuning dengan senter kepala berstatus hijau checklist PASS.
-  - **Kaca Pembesar Scanner**: Lensa pembesar cyan berkilau dengan target indikator deteksi bug digital.
-  - **Jaring Penangkap Cyber Bug**: Jaring kawat siber dengan seekor bug kepik merah mini yang berhasil dilumpuhkan.
-  - **Monokel Target Crosshair**: Lensa monokel bermata bidik crosshair presisi tinggi pada mata kanan.
-- **Palet Warna**: Oranye `#FF8A3D`, Hijau Neon `#2EE59D`, Cyan `#00F0FF`, Tinta `#0A0A0A`.
+  - **Topi Safari Hunter & Lampu Senter PASS**: Topi petualang safari oranye (`#FF8A3D`) dengan pita cokelat safari dan senter kepala berstatus hijau neon (`#2EE59D`) checklist PASS berpendar beam neon.
+  - **Kaca Pembesar Scanner**: Lensa pembesar cyan oranye berkilau dengan target crosshair indikator deteksi bug digital.
+  - **Jaring Penangkap Cyber Bug**: Jaring serangga kawat digital dengan seekor robot kepik merah tertangkap pusing di dalam jaring.
+  - **Kerah Safari & Pin Badge TEST✓**: Kerah kemeja petualang oranye dengan pin badge checklist verifikasi sistem rilis bebas bug.
+- **Palet Warna**: Kuning Rambu `#FFD60A`, Oranye Safari `#FF8A3D`, Hijau Neon `#2EE59D`, Cyan `#00F0FF`, Tinta `#0A0A0A`.
 
 #### 5. IT Support — "The Fixer"
 - **Metafora Karakter**: Penyelamat operasional harian yang selalu sigap menyelesaikan kendala hardware, software, dan konektivitas pengguna dengan ramah.
 - **Atribut Visual & Props**:
-  - **Headset Operator Ramah**: Headset komunikasi cyan dengan mic melengkung dan senyum ramah solutif.
-  - **Kotak Perkakas P3K IT**: Toolbox kuning darurat berlambang palang hijau pertolongan pertama sistem.
-  - **Obeng Multi-Bit Elektrik**: Obeng bermata multi-tool cyan perak siap membongkar perangkat.
-  - **Kabel USB-C Melilit**: Kabel fleksibel melilit rapi di selempang dada dengan colokan port.
-- **Palet Warna**: Putih Bersih `#FFFFFF`, Kuning `#FFD60A`, Cyan `#00F0FF`, Tinta `#0A0A0A`.
+  - **Headset Operator Ramah**: Headset komunikasi cyan (`#00F0FF`) dengan bantalan earpad empuk, mic melengkung ke mulut, dan senyum ramah solutif.
+  - **Kotak Perkakas P3K IT (First Aid Kit)**: Toolbox darurat putih bersih berlambang palang hijau neon (`#2EE59D`) pertolongan pertama gangguan sistem.
+  - **Obeng Multi-Bit Elektrik**: Obeng elektrik cyan bermata bit baja perak berkilau dengan lilitan kabel USB spiral.
+  - **Kerah Polo & Badge 24/7 FIX**: Kerah polo teknisi putih bersih dengan badge identitas layanan pemulihan 24/7.
+- **Palet Warna**: Kuning Rambu `#FFD60A`, Cyan Operator `#00F0FF`, Putih Bersih `#FFFFFF`, Hijau Neon `#2EE59D`, Tinta `#0A0A0A`.
 
 #### 6. Network Engineer — "The Connector"
 - **Metafora Karakter**: Penenun infrastruktur kabel dan pengatur jalur denyut paket data lintas benua tanpa jeda.
 - **Atribut Visual & Props**:
-  - **Antena Router Kembar**: Sepasang antena 5GHz di kepala dengan pancaran gelombang radio Wi-Fi konsentris.
-  - **Kabel LAN RJ45 Emas**: Kabel jaringan dengan kepala konektor transparan dan 8 pin tembaga emas.
-  - **Visor Serat Optik HUD**: Visor cyan pemantau bandwidth traffic, packet flow, dan link rate.
-  - **Sabuk Switch & Cable Tester**: Sabuk utilitas berjejer port switch LED hijau serta tester sinyal kabel.
-- **Palet Warna**: Kuning Kabel `#FFD60A`, Cyan `#00F0FF`, Hijau Link `#2EE59D`, Tinta `#0A0A0A`.
+  - **Antena Router Kembar**: Sepasang antena di kepala dengan pancaran gelombang radio sinyal Wi-Fi konsentris cyan (`#00F0FF`).
+  - **Kabel LAN RJ45 Emas**: Kabel jaringan fleksibel dengan kepala konektor transparan dan 8 pin tembaga emas bercahaya data link.
+  - **Visor Serat Optik HUD**: Kacamata visor cyan futuristik pemantau bandwidth traffic 10G dan status data stream.
+  - **Tester Kabel LAN 8-LED**: Alat penguji kabel jaringan di tangan kiri dengan deretan 8 LED indikator hijau mini yang menyala aktif.
+- **Palet Warna**: Kuning Rambu `#FFD60A`, Cyan Jaringan `#00F0FF`, Hijau Link `#2EE59D`, Emas Pin `#FFD60A` / `#FF8A3D`, Tinta `#0A0A0A`.
 
 ---
 
