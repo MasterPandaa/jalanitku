@@ -13,10 +13,10 @@ export interface NetworkEngineerMascotProps {
 /**
  * Maskot Role: Network Engineer — "The Connector"
  * Identitas: Sang Penenun Jaringan & Penyambung Serat Kabel (Network Splicer)
- * Ciri Khas: Antena router kembar di kepala dengan gelombang sinyal Wi-Fi konsentris cyan (#00F0FF),
- * kacamata visor serat optik HUD data stream 10G, tangan kiri dan tangan kanan memegang dua ujung kabel
- * yang terputus dengan serat tembaga mencuat dan percikan data spark kuning-cyan yang saling didekatkan
- * untuk disambung kembali (reconnect / network splicing).
+ * Ciri Khas: Antena router kembar di kepala, kacamata visor serat optik HUD data stream 10G,
+ * tangan kiri dan tangan kanan memegang dua ujung kabel terputus dengan serat tembaga mencuat yang
+ * didekatkan di tengah, memicu efek GELOMBANG SHOCKWAVE impuls berdenyut konsentris (menggantikan sinyal wifi)
+ * saat kedua tangan ingin menyatukan kabel, disertai letupan percikan spark data reconnect di pusat pertemuan.
  *
  * Base Anatomi: 100% konsisten dengan Base Model Batch 1 (kaki sol putih y=170, tubuh kuning rambu 106x94,
  * marka jalan putus-putus perut, pipi pink, mata ekspresif, mulut senyum, kepalan tangan kuning #FFD60A).
@@ -35,7 +35,7 @@ export function NetworkEngineerMascot({
       className={`relative inline-flex items-center justify-center select-none group ${className}`}
       style={{ width: size, height: size }}
       role="img"
-      aria-label="Maskot Network Engineer — The Connector: Papan penunjuk jalan neo-brutalism kuning dengan antena router sinyal Wi-Fi, visor serat optik HUD, dan kedua tangan memegang dua ujung kabel terputus yang sedang disambung kembali dengan percikan data spark"
+      aria-label="Maskot Network Engineer — The Connector: Papan penunjuk jalan neo-brutalism kuning dengan antena router, visor serat optik 10G HUD, kedua tangan memegang ujung kabel terputus yang saling didekatkan memicu efek gelombang shockwave impuls menyatukan kabel"
     >
       <svg
         viewBox="0 0 200 200"
@@ -51,41 +51,52 @@ export function NetworkEngineerMascot({
               0%, 100% { transform: translateY(0px); }
               50% { transform: translateY(-3.5px); }
             }
-            @keyframes net-signal-pulse {
-              0%, 100% { opacity: 0.35; transform: scale(0.96); }
-              50% { opacity: 1; transform: scale(1.04); }
+            @keyframes net-shockwave-1 {
+              0% { r: 6px; opacity: 1; stroke-width: 3.5px; }
+              50% { r: 24px; opacity: 0.6; stroke-width: 2.5px; }
+              100% { r: 42px; opacity: 0; stroke-width: 1px; }
+            }
+            @keyframes net-shockwave-2 {
+              0% { r: 4px; opacity: 0; stroke-width: 3px; }
+              30% { r: 12px; opacity: 0.9; stroke-width: 2.8px; }
+              80% { r: 32px; opacity: 0.3; stroke-width: 1.8px; }
+              100% { r: 48px; opacity: 0; stroke-width: 0.8px; }
             }
             @keyframes net-cable-left {
               0%, 100% { transform: translateX(0px) rotate(0deg); }
-              50% { transform: translateX(2.5px) rotate(2deg); }
+              50% { transform: translateX(3px) rotate(2deg); }
             }
             @keyframes net-cable-right {
               0%, 100% { transform: translateX(0px) rotate(0deg); }
-              50% { transform: translateX(-2.5px) rotate(-2deg); }
+              50% { transform: translateX(-3px) rotate(-2deg); }
             }
             @keyframes net-spark-burst {
               0%, 100% { opacity: 0.85; transform: scale(0.9) rotate(0deg); }
-              50% { opacity: 1; transform: scale(1.3) rotate(15deg); }
+              50% { opacity: 1; transform: scale(1.35) rotate(20deg); }
             }
             .net-animated-body {
               animation: ${isAnimated ? "net-float 3.5s ease-in-out infinite" : "none"};
               transform-origin: center bottom;
             }
-            .net-animated-signal {
-              animation: ${isAnimated ? "net-signal-pulse 2s ease-in-out infinite" : "none"};
-              transform-origin: 95px 24px;
+            .net-shockwave-ring-1 {
+              animation: ${isAnimated ? "net-shockwave-1 1.8s cubic-bezier(0.1, 0.8, 0.3, 1) infinite" : "none"};
+              transform-origin: 94px 123px;
+            }
+            .net-shockwave-ring-2 {
+              animation: ${isAnimated ? "net-shockwave-2 1.8s cubic-bezier(0.1, 0.8, 0.3, 1) 0.5s infinite" : "none"};
+              transform-origin: 94px 123px;
             }
             .net-animated-cable-left {
-              animation: ${isAnimated ? "net-cable-left 2.4s ease-in-out infinite" : "none"};
+              animation: ${isAnimated ? "net-cable-left 2s ease-in-out infinite" : "none"};
               transform-origin: 42px 110px;
             }
             .net-animated-cable-right {
-              animation: ${isAnimated ? "net-cable-right 2.4s ease-in-out infinite" : "none"};
+              animation: ${isAnimated ? "net-cable-right 2s ease-in-out infinite" : "none"};
               transform-origin: 148px 110px;
             }
             .net-animated-spark {
-              animation: ${isAnimated ? "net-spark-burst 1.2s ease-in-out infinite" : "none"};
-              transform-origin: 96px 124px;
+              animation: ${isAnimated ? "net-spark-burst 1s ease-in-out infinite" : "none"};
+              transform-origin: 94px 123px;
             }
           `}</style>
         </defs>
@@ -215,7 +226,7 @@ export function NetworkEngineerMascot({
           {/* Kilau Cyan Jaringan */}
           <circle cx="114" cy="88" r="1.2" fill="#00F0FF" />
 
-          {/* Alis Fokus Presisi */}
+          {/* Alis Fokus Presisi Menyatukan Kabel */}
           <line
             x1="58"
             y1="71"
@@ -235,7 +246,7 @@ export function NetworkEngineerMascot({
             strokeLinecap="round"
           />
 
-          {/* Mulut Senyum Percaya Diri (Reconnect Sukses!) */}
+          {/* Mulut Senyum Percaya Diri (Shockwave Splicing Ready) */}
           <path
             d="M 87 114 Q 94 123 102 114"
             stroke="#0A0A0A"
@@ -247,7 +258,6 @@ export function NetworkEngineerMascot({
           {/* ============================================================== */}
           {/* LAYER 4: KACAMATA VISOR SERAT OPTIK HUD DATA STREAM CYAN       */}
           {/* ============================================================== */}
-          {/* Tangkai Visor Samping */}
           <line x1="42" y1="84" x2="52" y2="84" stroke="#0A0A0A" strokeWidth="4" />
           <line x1="138" y1="84" x2="148" y2="84" stroke="#0A0A0A" strokeWidth="4" />
 
@@ -323,34 +333,8 @@ export function NetworkEngineerMascot({
           />
 
           {/* ============================================================== */}
-          {/* LAYER 5: ANTENA ROUTER KEMBAR & GELOMBANG SINYAL WI-FI CYAN    */}
+          {/* LAYER 5: ANTENA ROUTER KEMBAR DI KEPALA                        */}
           {/* ============================================================== */}
-          {/* Gelombang Sinyal Wi-Fi Konsentris Cyan */}
-          <g className="net-animated-signal">
-            <path
-              d="M 84 32 Q 95 24 106 32"
-              stroke="#00F0FF"
-              strokeWidth="3"
-              fill="none"
-              strokeLinecap="round"
-            />
-            <path
-              d="M 78 24 Q 95 12 112 24"
-              stroke="#00F0FF"
-              strokeWidth="3"
-              fill="none"
-              strokeLinecap="round"
-            />
-            <path
-              d="M 72 16 Q 95 0 118 16"
-              stroke="#00F0FF"
-              strokeWidth="2.5"
-              fill="none"
-              strokeLinecap="round"
-              strokeDasharray="3 3"
-            />
-          </g>
-
           {/* Antena Kiri Router */}
           <line
             x1="68"
@@ -404,7 +388,40 @@ export function NetworkEngineerMascot({
           />
 
           {/* ============================================================== */}
-          {/* LAYER 6: TANGAN KIRI & KABEL TERPUTUS SISI A (SPLICING LEFT)   */}
+          {/* LAYER 6: EFEK SHOCKWAVE SAAT KABEL INGIN DISATUKAN             */}
+          {/* ============================================================== */}
+          <g>
+            {/* Lingkaran Shockwave 1: Impuls Cyan */}
+            <circle
+              className="net-shockwave-ring-1"
+              cx="94"
+              cy="123"
+              r="18"
+              fill="none"
+              stroke="#00F0FF"
+              strokeWidth="3"
+            />
+            {/* Lingkaran Shockwave 2: Impuls Mint Neon */}
+            <circle
+              className="net-shockwave-ring-2"
+              cx="94"
+              cy="123"
+              r="28"
+              fill="none"
+              stroke="#2EE59D"
+              strokeWidth="2.5"
+              strokeDasharray="4 3"
+            />
+
+            {/* Garis Ray Vektor Shockwave Meletup Radial */}
+            <line x1="84" y1="113" x2="76" y2="105" stroke="#00F0FF" strokeWidth="2" strokeLinecap="round" />
+            <line x1="104" y1="113" x2="112" y2="105" stroke="#00F0FF" strokeWidth="2" strokeLinecap="round" />
+            <line x1="84" y1="133" x2="76" y2="141" stroke="#2EE59D" strokeWidth="2" strokeLinecap="round" />
+            <line x1="104" y1="133" x2="112" y2="141" stroke="#2EE59D" strokeWidth="2" strokeLinecap="round" />
+          </g>
+
+          {/* ============================================================== */}
+          {/* LAYER 7: TANGAN KIRI & KABEL TERPUTUS SISI A (SPLICING LEFT)   */}
           {/* ============================================================== */}
           <g className="net-animated-cable-left">
             {/* Kabel Melengkung dari Tubuh Kiri ke Tangan Kiri */}
@@ -438,11 +455,8 @@ export function NetworkEngineerMascot({
             />
 
             {/* Serat Kawat Tembaga / Serat Optik Mencar di Ujung Putus Kiri */}
-            {/* Kawat Tembaga 1 (Emas/Kuning) */}
             <line x1="80" y1="121" x2="88" y2="119" stroke="#FFD60A" strokeWidth="1.8" strokeLinecap="round" />
-            {/* Kawat Tembaga 2 (Oranye) */}
             <line x1="80" y1="123" x2="90" y2="123" stroke="#FF8A3D" strokeWidth="2" strokeLinecap="round" />
-            {/* Kawat Tembaga 3 (Cyan Data) */}
             <line x1="80" y1="125" x2="87" y2="127" stroke="#00F0FF" strokeWidth="1.8" strokeLinecap="round" />
 
             {/* Lengan Kiri Menjulur ke Tengah Memegang Kabel */}
@@ -466,7 +480,7 @@ export function NetworkEngineerMascot({
           </g>
 
           {/* ============================================================== */}
-          {/* LAYER 7: TANGAN KANAN & KABEL TERPUTUS SISI B (SPLICING RIGHT)  */}
+          {/* LAYER 8: TANGAN KANAN & KABEL TERPUTUS SISI B (SPLICING RIGHT)  */}
           {/* ============================================================== */}
           <g className="net-animated-cable-right">
             {/* Kabel Melengkung dari Tubuh Kanan ke Tangan Kanan */}
@@ -500,11 +514,8 @@ export function NetworkEngineerMascot({
             />
 
             {/* Serat Kawat Tembaga / Serat Optik Mencar di Ujung Putus Kanan */}
-            {/* Kawat Tembaga 1 (Emas/Kuning) */}
             <line x1="108" y1="121" x2="100" y2="119" stroke="#FFD60A" strokeWidth="1.8" strokeLinecap="round" />
-            {/* Kawat Tembaga 2 (Oranye) */}
             <line x1="108" y1="123" x2="98" y2="123" stroke="#FF8A3D" strokeWidth="2" strokeLinecap="round" />
-            {/* Kawat Tembaga 3 (Cyan Data) */}
             <line x1="108" y1="125" x2="101" y2="127" stroke="#00F0FF" strokeWidth="1.8" strokeLinecap="round" />
 
             {/* Lengan Kanan Menjulur ke Tengah Memegang Kabel */}
@@ -528,7 +539,7 @@ export function NetworkEngineerMascot({
           </g>
 
           {/* ============================================================== */}
-          {/* LAYER 8: PERCIKAN SPARK LISTRIK / DATA LINK DI CELAH KABEL     */}
+          {/* LAYER 9: PERCIKAN SPARK LISTRIK DI PUSAT SHOCKWAVE KABEL       */}
           {/* ============================================================== */}
           <g className="net-animated-spark">
             {/* Percikan Listrik Bintang Utama Kuning & Mint (#FFD60A / #2EE59D) */}
@@ -539,7 +550,7 @@ export function NetworkEngineerMascot({
               strokeWidth="1.2"
             />
             {/* Kilau Inti Putih */}
-            <circle cx="94" cy="123.5" r="2" fill="#FFFFFF" />
+            <circle cx="94" cy="123.5" r="2.2" fill="#FFFFFF" />
 
             {/* Spark Mini Cyan (#00F0FF) */}
             <polygon
@@ -552,11 +563,6 @@ export function NetworkEngineerMascot({
               fill="#FF8A3D"
             />
           </g>
-
-          {/* Partikel Sparkle Paket Data Melayang */}
-          <circle cx="34" cy="42" r="2" fill="#00F0FF" />
-          <circle cx="168" cy="40" r="2" fill="#FFD60A" />
-          <circle cx="158" cy="32" r="1.5" fill="#2EE59D" />
         </g>
       </svg>
     </div>

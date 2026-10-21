@@ -15,8 +15,8 @@ export interface QualityAssuranceMascotProps {
  * Identitas: Sang Pemburu Cacat Kode & Penjaga Standar Keandalan
  * Ciri Khas: Topi safari hunter oranye dengan lampu senter status PASS hijau neon,
  * kerah safari oranye dengan pin badge "TEST✓", tangan kiri memegang jaring serangga digital hunter,
- * dan tangan kanan memegang toples kaca spesimen transparan (specimen jar neo-brutalism) dengan tutup
- * ulir logam berisikan robot kepik siber tertangkap yang terkurung di dalamnya.
+ * tangan kanan menggenggam toples kaca spesimen transparan (specimen jar digenggam erat dengan jari tangan melingkar),
+ * dengan robot kepik siber tertangkap di dalamnya, dan partikel lalat/kutu kecil berterbangan kesana kemari di sekitarnya.
  *
  * Base Anatomi: 100% konsisten dengan Base Model Batch 1 (kaki sol putih y=170, tubuh kuning rambu 106x94,
  * marka jalan putus-putus perut, pipi pink, mata ekspresif, mulut senyum, kepalan tangan kuning #FFD60A).
@@ -35,7 +35,7 @@ export function QualityAssuranceMascot({
       className={`relative inline-flex items-center justify-center select-none group ${className}`}
       style={{ width: size, height: size }}
       role="img"
-      aria-label="Maskot Quality Assurance — The Bug Hunter: Papan penunjuk jalan neo-brutalism kuning dengan topi safari oranye, senter status PASS, jaring serangga digital, dan toples kaca spesimen berisi robot bug tertangkap"
+      aria-label="Maskot Quality Assurance — The Bug Hunter: Papan penunjuk jalan neo-brutalism kuning dengan topi safari oranye, senter status PASS, jaring serangga, toples kaca digenggam erat berisi robot bug, dan lalat-lalat bug beterbangan kesana-kemari"
     >
       <svg
         viewBox="0 0 200 200"
@@ -57,13 +57,32 @@ export function QualityAssuranceMascot({
             }
             @keyframes qa-jar-sway {
               0%, 100% { transform: rotate(0deg); }
-              50% { transform: rotate(4deg) translateY(-2px); }
+              50% { transform: rotate(3deg) translateY(-1.5px); }
             }
             @keyframes qa-bug-trap-flutter {
               0%, 100% { transform: translate(0, 0) rotate(0deg); }
               25% { transform: translate(1px, -2px) rotate(6deg); }
               50% { transform: translate(-1px, 1px) rotate(-5deg); }
               75% { transform: translate(1.5px, 0.5px) rotate(4deg); }
+            }
+            @keyframes qa-fly-1 {
+              0%, 100% { transform: translate(0px, 0px) rotate(0deg); }
+              20% { transform: translate(-4px, -6px) rotate(-15deg); }
+              40% { transform: translate(6px, -10px) rotate(20deg); }
+              60% { transform: translate(-2px, -4px) rotate(-8deg); }
+              80% { transform: translate(4px, 2px) rotate(12deg); }
+            }
+            @keyframes qa-fly-2 {
+              0%, 100% { transform: translate(0px, 0px) rotate(0deg); }
+              25% { transform: translate(7px, -4px) rotate(18deg); }
+              50% { transform: translate(2px, -9px) rotate(-12deg); }
+              75% { transform: translate(-5px, -3px) rotate(10deg); }
+            }
+            @keyframes qa-fly-3 {
+              0%, 100% { transform: translate(0px, 0px) rotate(0deg); }
+              30% { transform: translate(-6px, 5px) rotate(-22deg); }
+              60% { transform: translate(5px, -7px) rotate(16deg); }
+              90% { transform: translate(-3px, -2px) rotate(-10deg); }
             }
             @keyframes qa-beam-pulse {
               0%, 100% { opacity: 0.25; }
@@ -79,11 +98,23 @@ export function QualityAssuranceMascot({
             }
             .qa-animated-jar {
               animation: ${isAnimated ? "qa-jar-sway 3.2s ease-in-out infinite" : "none"};
-              transform-origin: 174px 116px;
+              transform-origin: 168px 116px;
             }
             .qa-animated-trapped-bug {
               animation: ${isAnimated ? "qa-bug-trap-flutter 1.1s ease-in-out infinite" : "none"};
-              transform-origin: 182px 90px;
+              transform-origin: 173px 92px;
+            }
+            .qa-fly-1-anim {
+              animation: ${isAnimated ? "qa-fly-1 2.2s ease-in-out infinite" : "none"};
+              transform-origin: 32px 42px;
+            }
+            .qa-fly-2-anim {
+              animation: ${isAnimated ? "qa-fly-2 2.6s ease-in-out infinite" : "none"};
+              transform-origin: 172px 40px;
+            }
+            .qa-fly-3-anim {
+              animation: ${isAnimated ? "qa-fly-3 1.9s ease-in-out infinite" : "none"};
+              transform-origin: 182px 138px;
             }
             .qa-animated-beam {
               animation: ${isAnimated ? "qa-beam-pulse 2s ease-in-out infinite" : "none"};
@@ -230,7 +261,7 @@ export function QualityAssuranceMascot({
             strokeLinecap="round"
           />
 
-          {/* Mulut Senyum Percaya Diri (Bug Ditemukan!) */}
+          {/* Mulut Senyum Percaya Diri (Bug Berhasil Ditangkap!) */}
           <path
             d="M 87 114 Q 94 123 102 114"
             stroke="#0A0A0A"
@@ -427,12 +458,12 @@ export function QualityAssuranceMascot({
           </g>
 
           {/* ============================================================== */}
-          {/* LAYER 7: TANGAN KANAN & TOPLES SPESIMEN KACA DENGAN ROBOT BUG  */}
+          {/* LAYER 7: TANGAN KANAN MENGGENGGAM TOPLES KACA SPESIMEN BUG     */}
           {/* ============================================================== */}
           <g className="qa-animated-jar">
-            {/* Lengan Kanan Menjulur */}
+            {/* Lengan Kanan Menjulur Membawa Toples ke Posisi Genggam */}
             <path
-              d="M 148 108 Q 164 114 174 116"
+              d="M 148 108 Q 160 114 168 114"
               stroke="#0A0A0A"
               strokeWidth="6"
               strokeLinecap="round"
@@ -440,87 +471,87 @@ export function QualityAssuranceMascot({
             />
 
             {/* Hard Shadow Toples Kaca Spesimen */}
-            <rect x="171" y="68" width="24" height="42" rx="4" fill="#0A0A0A" />
+            <rect x="163" y="70" width="23" height="38" rx="3.5" fill="#0A0A0A" />
 
             {/* Badan Toples Kaca Transparan Neo-Brutalism */}
             <rect
-              x="168"
-              y="65"
-              width="24"
-              height="42"
-              rx="4"
+              x="160"
+              y="67"
+              width="23"
+              height="38"
+              rx="3.5"
               fill="#00F0FF"
               fillOpacity="0.22"
               stroke="#0A0A0A"
-              strokeWidth="3"
+              strokeWidth="2.8"
             />
 
             {/* Leher Toples Kaca */}
             <rect
-              x="171"
-              y="60"
-              width="18"
+              x="163"
+              y="62"
+              width="17"
               height="6"
-              rx="1.5"
+              rx="1"
               fill="#00F0FF"
               fillOpacity="0.3"
               stroke="#0A0A0A"
-              strokeWidth="2"
+              strokeWidth="1.8"
             />
 
             {/* Tutup Toples Berulir Logam Oranye (#FF8A3D) */}
             <rect
-              x="169"
-              y="54"
-              width="22"
+              x="161"
+              y="56"
+              width="21"
               height="8"
               rx="2"
               fill="#FF8A3D"
               stroke="#0A0A0A"
-              strokeWidth="2.5"
+              strokeWidth="2.2"
             />
-            {/* Ulir Karet Tutup Toples */}
-            <line x1="171" y1="57" x2="189" y2="57" stroke="#0A0A0A" strokeWidth="1.2" />
-            <line x1="171" y1="60" x2="189" y2="60" stroke="#0A0A0A" strokeWidth="1.2" />
+            {/* Ulir Tutup Toples */}
+            <line x1="163" y1="59" x2="180" y2="59" stroke="#0A0A0A" strokeWidth="1.2" />
+            <line x1="163" y1="62" x2="180" y2="62" stroke="#0A0A0A" strokeWidth="1.2" />
 
-            {/* Garis Kilau Kaca Reflektif Putih */}
+            {/* Garis Kilau Reflektif Kaca Putih */}
             <line
-              x1="172"
-              y1="69"
-              x2="172"
-              y2="101"
+              x1="163"
+              y1="71"
+              x2="163"
+              y2="99"
               stroke="#FFFFFF"
-              strokeWidth="2"
+              strokeWidth="1.8"
               strokeLinecap="round"
               strokeOpacity="0.8"
             />
             <line
-              x1="175"
-              y1="71"
-              x2="175"
+              x1="166"
+              y1="73"
+              x2="166"
               y2="83"
               stroke="#FFFFFF"
-              strokeWidth="1.2"
+              strokeWidth="1"
               strokeLinecap="round"
               strokeOpacity="0.6"
             />
 
             {/* Label Neo-Brutalist "BUG" di Badan Toples */}
             <rect
-              x="172"
+              x="164"
               y="74"
-              width="16"
-              height="7"
+              width="15"
+              height="6.5"
               rx="1"
               fill="#FFD60A"
               stroke="#0A0A0A"
               strokeWidth="1"
             />
             <text
-              x="180"
-              y="79.5"
+              x="171.5"
+              y="79"
               fill="#0A0A0A"
-              fontSize="4.5"
+              fontSize="4"
               fontWeight="900"
               textAnchor="middle"
               fontFamily="monospace"
@@ -531,60 +562,145 @@ export function QualityAssuranceMascot({
             {/* ROBOT BUG KEPIK MERAH TERKURUNG DI DALAM TOPLES KACA */}
             <g className="qa-animated-trapped-bug">
               {/* Hard Shadow Kepik */}
-              <ellipse cx="181" cy="91" rx="5.5" ry="4.5" fill="#0A0A0A" />
+              <ellipse cx="173" cy="92" rx="5" ry="4" fill="#0A0A0A" />
               {/* Bodi Punggung Kepik Pink-Merah (#FF5C8A) */}
               <ellipse
-                cx="179.5"
-                cy="89.5"
-                rx="5"
-                ry="4"
+                cx="171.5"
+                cy="90.5"
+                rx="4.8"
+                ry="3.8"
                 fill="#FF5C8A"
                 stroke="#0A0A0A"
                 strokeWidth="1.5"
               />
               {/* Garis Belah Sayap Kepik */}
-              <line x1="175" y1="89.5" x2="184" y2="89.5" stroke="#0A0A0A" strokeWidth="1.2" />
+              <line x1="167" y1="90.5" x2="176" y2="90.5" stroke="#0A0A0A" strokeWidth="1.2" />
               {/* Titik Kepik Digital */}
-              <circle cx="178" cy="88" r="0.9" fill="#0A0A0A" />
-              <circle cx="181" cy="88" r="0.9" fill="#0A0A0A" />
-              <circle cx="178" cy="91" r="0.9" fill="#0A0A0A" />
-              <circle cx="181" cy="91" r="0.9" fill="#0A0A0A" />
+              <circle cx="170" cy="89" r="0.8" fill="#0A0A0A" />
+              <circle cx="173" cy="89" r="0.8" fill="#0A0A0A" />
+              <circle cx="170" cy="92" r="0.8" fill="#0A0A0A" />
+              <circle cx="173" cy="92" r="0.8" fill="#0A0A0A" />
               {/* Kepala Kepik Hitam */}
-              <circle cx="175" cy="89.5" r="2.2" fill="#0A0A0A" />
+              <circle cx="167" cy="90.5" r="2" fill="#0A0A0A" />
               {/* Antena Kepik */}
-              <path d="M 173.5 88 Q 172 86 170.5 86.5" stroke="#0A0A0A" strokeWidth="1" fill="none" />
-              <path d="M 173.5 91 Q 172 93 170.5 92.5" stroke="#0A0A0A" strokeWidth="1" fill="none" />
-              {/* Kaki Kepik Terkurung di Kaca */}
-              <line x1="177" y1="85.5" x2="175.5" y2="84" stroke="#0A0A0A" strokeWidth="1" />
-              <line x1="180" y1="85.5" x2="180" y2="83.5" stroke="#0A0A0A" strokeWidth="1" />
-              <line x1="183" y1="85.5" x2="184.5" y2="84" stroke="#0A0A0A" strokeWidth="1" />
-              <line x1="177" y1="93.5" x2="175.5" y2="95" stroke="#0A0A0A" strokeWidth="1" />
-              <line x1="180" y1="93.5" x2="180" y2="95.5" stroke="#0A0A0A" strokeWidth="1" />
-              <line x1="183" y1="93.5" x2="184.5" y2="95" stroke="#0A0A0A" strokeWidth="1" />
+              <path d="M 165.5 89 Q 164 87 163 87.5" stroke="#0A0A0A" strokeWidth="0.9" fill="none" />
+              <path d="M 165.5 92 Q 164 94 163 93.5" stroke="#0A0A0A" strokeWidth="0.9" fill="none" />
+              {/* Kaki Kepik */}
+              <line x1="169" y1="87" x2="167.5" y2="85.5" stroke="#0A0A0A" strokeWidth="0.9" />
+              <line x1="172" y1="87" x2="172" y2="85" stroke="#0A0A0A" strokeWidth="0.9" />
+              <line x1="174" y1="87" x2="175.5" y2="85.5" stroke="#0A0A0A" strokeWidth="0.9" />
+              <line x1="169" y1="94" x2="167.5" y2="95.5" stroke="#0A0A0A" strokeWidth="0.9" />
+              <line x1="172" y1="94" x2="172" y2="96" stroke="#0A0A0A" strokeWidth="0.9" />
+              <line x1="174" y1="94" x2="175.5" y2="95.5" stroke="#0A0A0A" strokeWidth="0.9" />
               {/* Mata Pusing "X" Digital Kepik */}
-              <path d="M 174 88.5 L 175.5 90 M 175.5 88.5 L 174 90" stroke="#FFFFFF" strokeWidth="0.8" />
+              <path d="M 166 89.5 L 167.5 91 M 167.5 89.5 L 166 91" stroke="#FFFFFF" strokeWidth="0.8" />
             </g>
 
-            {/* Cairan Pengawet / Gelembung Mikro Spesimen */}
-            <circle cx="174" cy="96" r="1" fill="#00F0FF" />
-            <circle cx="186" cy="98" r="1.2" fill="#00F0FF" />
-            <circle cx="184" cy="71" r="0.8" fill="#FFFFFF" />
+            {/* Gelembung Mikro Spesimen */}
+            <circle cx="165" cy="95" r="0.9" fill="#00F0FF" />
+            <circle cx="178" cy="97" r="1" fill="#00F0FF" />
 
-            {/* Kepalan Tangan Kanan Kuning (#FFD60A) Memegang Erat Samping Toples */}
+            {/* TANGAN KANAN MENGGENGGAM TOPLES (POSISI GENGGAM NYATA) */}
+            {/* Kepalan Tangan Utama Kuning (#FFD60A) */}
             <circle
-              cx="174"
-              cy="116"
-              r="6.5"
+              cx="164"
+              cy="104"
+              r="7"
               fill="#FFD60A"
               stroke="#0A0A0A"
               strokeWidth="3.5"
             />
+            {/* Jari-Jari Genggaman Melingkari Badan Toples */}
+            {/* Jari Telunjuk */}
+            <rect
+              x="167"
+              y="97"
+              width="10"
+              height="4.5"
+              rx="2.2"
+              fill="#FFD60A"
+              stroke="#0A0A0A"
+              strokeWidth="2"
+            />
+            {/* Jari Tengah */}
+            <rect
+              x="167"
+              y="102"
+              width="11"
+              height="4.5"
+              rx="2.2"
+              fill="#FFD60A"
+              stroke="#0A0A0A"
+              strokeWidth="2"
+            />
+            {/* Jari Manis */}
+            <rect
+              x="166"
+              y="107"
+              width="10"
+              height="4.5"
+              rx="2.2"
+              fill="#FFD60A"
+              stroke="#0A0A0A"
+              strokeWidth="2"
+            />
+            {/* Ibu Jari Menjepit di Depan */}
+            <ellipse
+              cx="162"
+              cy="100"
+              rx="3.5"
+              ry="4.5"
+              fill="#FFD60A"
+              stroke="#0A0A0A"
+              strokeWidth="2"
+              transform="rotate(-15 162 100)"
+            />
           </g>
 
-          {/* Partikel Sparkle Status PASS Melayang */}
-          <circle cx="34" cy="38" r="2" fill="#2EE59D" />
-          <circle cx="170" cy="46" r="2" fill="#FFD60A" />
-          <circle cx="162" cy="38" r="1.5" fill="#00F0FF" />
+          {/* ============================================================== */}
+          {/* LAYER 8: LALAT / CYBER BUGS BERTERBANGAN KESANA KEMARI         */}
+          {/* ============================================================== */}
+          {/* Lalat 1: Kiri Atas Dekat Jaring */}
+          <g className="qa-fly-1-anim">
+            {/* Sayap Lalat Cyan Semi-Transparan */}
+            <ellipse cx="30" cy="40" rx="3.5" ry="1.8" fill="#00F0FF" fillOpacity="0.7" stroke="#0A0A0A" strokeWidth="0.8" transform="rotate(-35 30 40)" />
+            <ellipse cx="34" cy="40" rx="3.5" ry="1.8" fill="#00F0FF" fillOpacity="0.7" stroke="#0A0A0A" strokeWidth="0.8" transform="rotate(35 34 40)" />
+            {/* Bodi Lalat Hitam */}
+            <ellipse cx="32" cy="42" rx="2.2" ry="1.6" fill="#0A0A0A" />
+            {/* Mata Lalat Pink */}
+            <circle cx="31" cy="41.5" r="0.6" fill="#FF5C8A" />
+            <circle cx="33" cy="41.5" r="0.6" fill="#FF5C8A" />
+            {/* Jejak Jalur Terbang Lalat Putus-Putus */}
+            <path d="M 24 47 Q 28 45 32 42" stroke="#0A0A0A" strokeWidth="0.8" strokeDasharray="1.5 1.5" fill="none" opacity="0.6" />
+          </g>
+
+          {/* Lalat 2: Kanan Atas Di Dekat Toples */}
+          <g className="qa-fly-2-anim">
+            {/* Sayap Lalat Mint Semi-Transparan */}
+            <ellipse cx="170" cy="38" rx="3.8" ry="1.8" fill="#2EE59D" fillOpacity="0.7" stroke="#0A0A0A" strokeWidth="0.8" transform="rotate(-25 170 38)" />
+            <ellipse cx="175" cy="38" rx="3.8" ry="1.8" fill="#2EE59D" fillOpacity="0.7" stroke="#0A0A0A" strokeWidth="0.8" transform="rotate(25 175 38)" />
+            {/* Bodi Lalat Hitam */}
+            <ellipse cx="172.5" cy="40" rx="2.4" ry="1.7" fill="#0A0A0A" />
+            {/* Mata Lalat Kuning */}
+            <circle cx="171.5" cy="39.5" r="0.6" fill="#FFD60A" />
+            <circle cx="173.5" cy="39.5" r="0.6" fill="#FFD60A" />
+            {/* Jejak Jalur Terbang */}
+            <path d="M 164 45 Q 168 41 172.5 40" stroke="#0A0A0A" strokeWidth="0.8" strokeDasharray="1.5 1.5" fill="none" opacity="0.6" />
+          </g>
+
+          {/* Lalat 3: Kanan Bawah Hendak Kabur */}
+          <g className="qa-fly-3-anim">
+            {/* Sayap Lalat Cyan */}
+            <ellipse cx="180" cy="136" rx="3.2" ry="1.6" fill="#00F0FF" fillOpacity="0.7" stroke="#0A0A0A" strokeWidth="0.8" transform="rotate(-40 180 136)" />
+            <ellipse cx="184" cy="136" rx="3.2" ry="1.6" fill="#00F0FF" fillOpacity="0.7" stroke="#0A0A0A" strokeWidth="0.8" transform="rotate(40 184 136)" />
+            {/* Bodi Lalat */}
+            <ellipse cx="182" cy="138" rx="2" ry="1.5" fill="#0A0A0A" />
+            {/* Mata Lalat Pink */}
+            <circle cx="181.2" cy="137.5" r="0.5" fill="#FF5C8A" />
+            <circle cx="182.8" cy="137.5" r="0.5" fill="#FF5C8A" />
+            {/* Jejak Jalur Terbang */}
+            <path d="M 174 142 Q 178 141 182 138" stroke="#0A0A0A" strokeWidth="0.8" strokeDasharray="1.5 1.5" fill="none" opacity="0.6" />
+          </g>
         </g>
       </svg>
     </div>

@@ -13,10 +13,11 @@ export interface ITSupportMascotProps {
 /**
  * Maskot Role: IT Support — "The Fixer"
  * Identitas: Sang Dokter IT / Sistem Medic Penyelamat Operasional
- * Ciri Khas: Head mirror dokter bulat dengan tali kepala hitam, stetoskop dokter IT melingkar di leher
- * dengan tabung cyan dan chest piece logam menempel di dada, jas lab dokter putih berpin palang hijau
- * P3K IT, tangan kiri memegang kotak pertolongan pertama P3K IT (Medical Kit), dan tangan kanan
- * memegang suntikan USB siber / termometer diagnostik digital berindikator status hijau OK.
+ * Ciri Khas: Cermin kepala medis (head mirror) dokter dengan tali kepala kokoh/tebal, jas dokter putih
+ * bersih berkerah lebar dengan saku dada dan nametag identitas rumah sakit IT (tanpa nama teks),
+ * tangan kiri memegang kotak pertolongan pertama P3K IT (Medical Kit), tangan kanan memegang suntikan USB
+ * siber tanpa kabel berdosis serum mint neon, serta partikel tanda palang "+" khas medis kesehatan yang
+ * berterbangan dan berkedap-kedip lembut.
  *
  * Base Anatomi: 100% konsisten dengan Base Model Batch 1 (kaki sol putih y=170, tubuh kuning rambu 106x94,
  * marka jalan putus-putus perut, pipi pink, mata ekspresif, mulut senyum, kepalan tangan kuning #FFD60A).
@@ -35,7 +36,7 @@ export function ITSupportMascot({
       className={`relative inline-flex items-center justify-center select-none group ${className}`}
       style={{ width: size, height: size }}
       role="img"
-      aria-label="Maskot IT Support — The Fixer: Papan penunjuk jalan neo-brutalism kuning bertema Dokter IT dengan cermin kepala dokter, stetoskop cyan, jas lab palang hijau, kotak P3K IT medis, dan suntikan USB diagnostik"
+      aria-label="Maskot IT Support — The Fixer: Papan penunjuk jalan neo-brutalism kuning bertema Dokter IT dengan cermin kepala dokter tebal, jas lab dokter putih bersih dengan nametag, kotak P3K IT medis, suntikan USB siber tanpa kabel, dan tanda tambah plus medis kedap-kedip"
     >
       <svg
         viewBox="0 0 200 200"
@@ -59,13 +60,17 @@ export function ITSupportMascot({
               0%, 100% { transform: rotate(0deg); }
               50% { transform: rotate(5deg) translateY(-2px); }
             }
-            @keyframes its-stetho-pulse {
-              0%, 100% { transform: scale(1); }
-              50% { transform: scale(1.08); }
+            @keyframes its-cross-blink-1 {
+              0%, 100% { opacity: 0.3; transform: scale(0.85); }
+              50% { opacity: 1; transform: scale(1.15); }
+            }
+            @keyframes its-cross-blink-2 {
+              0%, 100% { opacity: 1; transform: scale(1.15); }
+              50% { opacity: 0.25; transform: scale(0.8); }
             }
             @keyframes its-sparkle {
               0%, 100% { transform: scale(1); opacity: 0.8; }
-              50% { transform: scale(1.2); opacity: 1; }
+              50% { transform: scale(1.25); opacity: 1; }
             }
             .its-animated-body {
               animation: ${isAnimated ? "its-float 3.5s ease-in-out infinite" : "none"};
@@ -79,9 +84,17 @@ export function ITSupportMascot({
               animation: ${isAnimated ? "its-syringe 2.8s ease-in-out infinite" : "none"};
               transform-origin: 172px 120px;
             }
-            .its-animated-stetho {
-              animation: ${isAnimated ? "its-stetho-pulse 2s ease-in-out infinite" : "none"};
-              transform-origin: 94px 134px;
+            .its-cross-1 {
+              animation: ${isAnimated ? "its-cross-blink-1 1.6s ease-in-out infinite" : "none"};
+              transform-origin: 34px 42px;
+            }
+            .its-cross-2 {
+              animation: ${isAnimated ? "its-cross-blink-2 2s ease-in-out infinite" : "none"};
+              transform-origin: 168px 44px;
+            }
+            .its-cross-3 {
+              animation: ${isAnimated ? "its-cross-blink-1 2.2s ease-in-out infinite" : "none"};
+              transform-origin: 162px 146px;
             }
             .its-animated-sparkle {
               animation: ${isAnimated ? "its-sparkle 1.8s ease-in-out infinite" : "none"};
@@ -241,128 +254,125 @@ export function ITSupportMascot({
           />
 
           {/* ============================================================== */}
-          {/* LAYER 4: JAS LAB DOKTER PUTIH & STETOSKOP MELINGKAR DI DADA     */}
+          {/* LAYER 4: JAS LAB DOKTER PUTIH DENGAN NAMETAG (TANPA STETOSKOP) */}
           {/* ============================================================== */}
-          {/* Lapel Kerah Jas Lab Dokter Putih */}
+          {/* Jas Lab Lapel Kiri Putih Bersih */}
           <polygon
-            points="74,144 94,144 84,130"
+            points="68,144 94,144 82,126"
             fill="#FFFFFF"
             stroke="#0A0A0A"
-            strokeWidth="2.5"
+            strokeWidth="3"
             strokeLinejoin="round"
           />
+          {/* Jas Lab Lapel Kanan Putih Bersih */}
           <polygon
-            points="114,144 94,144 104,130"
+            points="120,144 94,144 106,126"
             fill="#FFFFFF"
             stroke="#0A0A0A"
-            strokeWidth="2.5"
+            strokeWidth="3"
             strokeLinejoin="round"
           />
 
-          {/* Pin Saku Jas Dokter: Palang Hijau P3K IT */}
+          {/* Garis Lipatan Jas Tengah & Kancing Dokter */}
+          <line x1="94" y1="126" x2="94" y2="144" stroke="#0A0A0A" strokeWidth="2.5" />
+          <circle cx="94" cy="133" r="1.8" fill="#00F0FF" stroke="#0A0A0A" strokeWidth="1" />
+          <circle cx="94" cy="140" r="1.8" fill="#00F0FF" stroke="#0A0A0A" strokeWidth="1" />
+
+          {/* Saku Dada Kanan Jas Dokter */}
           <rect
-            x="116"
-            y="126"
-            width="18"
-            height="14"
-            rx="2"
+            x="114"
+            y="124"
+            width="22"
+            height="18"
+            rx="2.5"
             fill="#FFFFFF"
             stroke="#0A0A0A"
-            strokeWidth="1.8"
+            strokeWidth="2.5"
           />
-          {/* Palang Hijau Neon (#2EE59D) di Saku Dokter */}
-          <rect x="123" y="128" width="4" height="10" fill="#2EE59D" />
-          <rect x="120" y="131" width="10" height="4" fill="#2EE59D" />
+          {/* Garis Aksen Bibir Saku Cyan */}
+          <line x1="114" y1="124" x2="136" y2="124" stroke="#00F0FF" strokeWidth="2.5" />
 
-          {/* Tabung Stetoskop Melingkar dari Leher ke Dada */}
-          {/* Bayangan Tabung */}
-          <path
-            d="M 64 64 C 44 98 72 136 94 134 C 116 136 144 98 126 64"
+          {/* Nametag Rumah Sakit / Medic IT di Saku Dada (Tanpa Teks Nama) */}
+          {/* Hard Shadow Nametag */}
+          <rect x="119" y="129" width="14" height="10" rx="1.5" fill="#0A0A0A" />
+          {/* Bodi Kartu Nametag Putih Bersih */}
+          <rect
+            x="118"
+            y="128"
+            width="14"
+            height="10"
+            rx="1.5"
+            fill="#FFFFFF"
             stroke="#0A0A0A"
-            strokeWidth="5"
+            strokeWidth="1.5"
+          />
+          {/* Header Bar Nametag Cyan (#00F0FF) */}
+          <rect x="118" y="128" width="14" height="3" fill="#00F0FF" />
+          {/* Avatar Kotak Mini Foto ID */}
+          <rect x="119.5" y="132" width="3.5" height="4.5" rx="0.5" fill="#0A0A0A" />
+          {/* Garis-Garis Identitas Barcode / Info (Tanpa Teks) */}
+          <line x1="124.5" y1="133" x2="130" y2="133" stroke="#2EE59D" strokeWidth="1" />
+          <line x1="124.5" y1="135" x2="129" y2="135" stroke="#0A0A0A" strokeWidth="0.8" />
+
+          {/* Klip Jepitan Nametag Logam di Atas Saku */}
+          <rect x="123.5" y="126" width="3" height="3" fill="#FFD60A" stroke="#0A0A0A" strokeWidth="0.8" />
+
+          {/* ============================================================== */}
+          {/* LAYER 5: HEAD MIRROR DOKTER (IKAT KEPALA DIPERTEBAL KOKOH)     */}
+          {/* ============================================================== */}
+          {/* Tali Ikat Kepala Elastis Hitam di Dahi — DIPERTEBAL LEBIH KOKOH */}
+          <path
+            d="M 42 56 Q 95 50 148 56"
+            stroke="#0A0A0A"
+            strokeWidth="8"
             fill="none"
             strokeLinecap="round"
           />
-          {/* Tabung Cyan (#00F0FF) Stetoskop */}
+          {/* Strip Tengah Aksen Cyan Pada Ikat Kepala */}
           <path
-            d="M 64 64 C 44 98 72 136 94 134 C 116 136 144 98 126 64"
+            d="M 42 56 Q 95 50 148 56"
             stroke="#00F0FF"
             strokeWidth="3"
             fill="none"
             strokeLinecap="round"
           />
 
-          {/* Chest Piece / Bell Stetoskop Menempel di Dada (Animated Pulse) */}
-          <g className="its-animated-stetho">
-            {/* Hard Shadow Bell Stetoskop */}
-            <circle cx="95" cy="135" r="7" fill="#0A0A0A" />
-            {/* Bell Logam Perak / Putih */}
-            <circle
-              cx="94"
-              cy="134"
-              r="7"
-              fill="#FFFFFF"
-              stroke="#0A0A0A"
-              strokeWidth="2.5"
-            />
-            {/* Ring Dalam Cyan */}
-            <circle cx="94" cy="134" r="4" fill="#00F0FF" stroke="#0A0A0A" strokeWidth="1.2" />
-            <circle cx="94" cy="134" r="1.5" fill="#FFFFFF" />
-          </g>
-
-          {/* ============================================================== */}
-          {/* LAYER 5: HEAD MIRROR DOKTER (CERMIN BULAT DOKTER DI DAHI)       */}
-          {/* ============================================================== */}
-          {/* Tali Ikat Kepala Elastis Hitam di Dahi */}
-          <path
-            d="M 42 56 Q 95 50 148 56"
-            stroke="#0A0A0A"
-            strokeWidth="4.5"
-            fill="none"
-          />
-          <path
-            d="M 42 56 Q 95 50 148 56"
-            stroke="#00F0FF"
-            strokeWidth="1.5"
-            fill="none"
-          />
-
-          {/* Gagang / Engsel Cermin Kepala */}
-          <rect x="74" y="44" width="6" height="12" rx="1" fill="#0A0A0A" />
+          {/* Gagang / Engsel Cermin Kepala Baja */}
+          <rect x="73" y="42" width="8" height="15" rx="1.5" fill="#0A0A0A" />
 
           {/* Hard Shadow Cermin Kepala */}
-          <circle cx="78" cy="38" r="14" fill="#0A0A0A" />
+          <circle cx="79" cy="38" r="15" fill="#0A0A0A" />
 
           {/* Piringan Cermin Kepala Logam Perak (#FFFFFF) */}
           <circle
             cx="76"
-            cy="36"
-            r="14"
+            cy="35"
+            r="15"
             fill="#FFFFFF"
             stroke="#0A0A0A"
-            strokeWidth="3"
+            strokeWidth="3.5"
           />
           {/* Ring Cermin Dalam Cyan Transparan */}
           <circle
             cx="76"
-            cy="36"
-            r="10.5"
+            cy="35"
+            r="11"
             fill="#00F0FF"
             fillOpacity="0.25"
             stroke="#0A0A0A"
-            strokeWidth="1.5"
+            strokeWidth="1.8"
           />
           {/* Garis Kilau Refleksi Cermin Putih */}
           <path
-            d="M 70 30 Q 76 33 80 42"
+            d="M 70 29 Q 76 32 80 41"
             stroke="#FFFFFF"
-            strokeWidth="2"
+            strokeWidth="2.5"
             strokeLinecap="round"
             fill="none"
           />
           {/* Lubang Intip Cermin Tengah Dokter Hitam */}
-          <circle cx="76" cy="36" r="3.5" fill="#0A0A0A" />
-          <circle cx="75" cy="35" r="1" fill="#FFFFFF" />
+          <circle cx="76" cy="35" r="4" fill="#0A0A0A" />
+          <circle cx="75" cy="34" r="1.2" fill="#FFFFFF" />
 
           {/* ============================================================== */}
           {/* LAYER 6: TANGAN KIRI & KOTAK PERKAKAS DARURAT P3K IT (MEDIC KIT)*/}
@@ -425,7 +435,7 @@ export function ITSupportMascot({
           </g>
 
           {/* ============================================================== */}
-          {/* LAYER 7: TANGAN KANAN & SUNTIKAN USB SIBER / TERMOMETER DOKTER IT*/}
+          {/* LAYER 7: TANGAN KANAN & SUNTIKAN USB SIBER (TANPA KABEL)        */}
           {/* ============================================================== */}
           <g className="its-animated-syringe">
             {/* Lengan Kanan Menjulur */}
@@ -437,22 +447,7 @@ export function ITSupportMascot({
               fill="none"
             />
 
-            {/* Kabel Spiral USB Cyan Melingkar dari Pangkal Suntikan */}
-            <path
-              d="M 182 126 Q 192 132 186 140 Q 180 148 188 154"
-              stroke="#0A0A0A"
-              strokeWidth="2.5"
-              fill="none"
-            />
-            <path
-              d="M 182 126 Q 192 132 186 140 Q 180 148 188 154"
-              stroke="#00F0FF"
-              strokeWidth="1.2"
-              fill="none"
-            />
-            <rect x="186" y="152" width="7" height="5" rx="1" fill="#FFFFFF" stroke="#0A0A0A" strokeWidth="1" />
-
-            {/* Hard Shadow Suntikan USB Siber */}
+            {/* Hard Shadow Suntikan USB Siber (Tanpa Kabel Spiral) */}
             <g transform="rotate(22 172 96)">
               <rect x="170" y="78" width="12" height="36" rx="2.5" fill="#0A0A0A" />
             </g>
@@ -467,7 +462,7 @@ export function ITSupportMascot({
                 height="36"
                 rx="2.5"
                 fill="#FFFFFF"
-                fillOpacity="0.8"
+                fillOpacity="0.85"
                 stroke="#0A0A0A"
                 strokeWidth="2.5"
               />
@@ -543,10 +538,32 @@ export function ITSupportMascot({
             />
           </g>
 
-          {/* Partikel Sparkle Pemulihan Sistem (Cyan & Mint) */}
-          <circle cx="36" cy="40" r="2" fill="#00F0FF" />
-          <circle cx="168" cy="44" r="2" fill="#2EE59D" />
-          <circle cx="160" cy="36" r="1.5" fill="#FFD60A" />
+          {/* ============================================================== */}
+          {/* LAYER 8: SIMBOL PALANG '+' KHAS KESEHATAN KEDAP-KEDIP BERTERBANGAN */}
+          {/* ============================================================== */}
+          {/* Simbol Plus Medis 1: Kiri Atas */}
+          <g className="its-cross-1">
+            <rect x="32" y="38" width="4" height="10" rx="1" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="1" />
+            <rect x="29" y="41" width="10" height="4" rx="1" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="1" />
+          </g>
+
+          {/* Simbol Plus Medis 2: Kanan Atas */}
+          <g className="its-cross-2">
+            <rect x="166" y="40" width="4.5" height="11" rx="1" fill="#00F0FF" stroke="#0A0A0A" strokeWidth="1" />
+            <rect x="162.7" y="43.2" width="11" height="4.5" rx="1" fill="#00F0FF" stroke="#0A0A0A" strokeWidth="1" />
+          </g>
+
+          {/* Simbol Plus Medis 3: Kanan Bawah Dekat Tangan */}
+          <g className="its-cross-3">
+            <rect x="160.5" y="142" width="3.5" height="9" rx="0.8" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="0.8" />
+            <rect x="157.7" y="144.7" width="9" height="3.5" rx="0.8" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="0.8" />
+          </g>
+
+          {/* Simbol Plus Medis 4: Kiri Tengah Mini */}
+          <g className="its-cross-2">
+            <rect x="24" y="98" width="3" height="7.5" rx="0.8" fill="#FFFFFF" stroke="#0A0A0A" strokeWidth="0.8" />
+            <rect x="21.7" y="100.2" width="7.5" height="3" rx="0.8" fill="#FFFFFF" stroke="#0A0A0A" strokeWidth="0.8" />
+          </g>
         </g>
       </svg>
     </div>

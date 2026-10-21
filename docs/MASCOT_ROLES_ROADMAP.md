@@ -85,7 +85,8 @@ Ke-21 role IT dikelompokkan ke dalam 7 batch tematik yang masing-masing terdiri 
 - **Metafora Karakter**: Sang pemburu kutu teliti yang menjelajahi celah kode untuk memastikan kesempurnaan setiap rilis software.
 - **Atribut Visual & Props**:
   - **Topi Safari Hunter & Lampu Senter PASS**: Topi petualang safari oranye (`#FF8A3D`) dengan pita cokelat safari dan senter kepala berstatus hijau neon (`#2EE59D`) checklist PASS berpendar beam neon.
-  - **Toples Kaca Spesimen Bug**: Toples kaca bening transparan neo-brutalism dengan tutup ulir oranye di tangan kanan, mengurung seekor robot kepik siber merah mini (`#FF5C8A`) yang berhasil ditangkap.
+  - **Toples Kaca Digenggam Erat**: Toples kaca bening transparan neo-brutalism dengan tutup ulir oranye yang digenggam erat oleh tangan kanan maskot, mengurung seekor robot kepik siber merah mini (`#FF5C8A`) yang berhasil ditangkap.
+  - **Lalat / Cyber Bugs Berterbangan**: Partikel lalat siber kecil bersayap neon berterbangan kesana kemari di sekeliling maskot dengan jejak putus-putus dinamis.
   - **Jaring Serangga Hunter Digital**: Jaring serangga bergagang kayu di tangan kiri siap menangkap bug baru di celah kode.
   - **Kerah Safari & Pin Badge TEST✓**: Kerah kemeja petualang oranye dengan pin badge checklist verifikasi sistem rilis bebas bug.
 - **Palet Warna**: Kuning Rambu `#FFD60A`, Oranye Safari `#FF8A3D`, Hijau Neon `#2EE59D`, Cyan `#00F0FF`, Tinta `#0A0A0A`.
@@ -93,18 +94,18 @@ Ke-21 role IT dikelompokkan ke dalam 7 batch tematik yang masing-masing terdiri 
 #### 5. IT Support — "The Fixer"
 - **Metafora Karakter**: Sang Dokter IT / Sistem Medic penyelamat operasional harian yang selalu sigap mendiagnosis dan merehabilitasi kendala sistem dengan ramah.
 - **Atribut Visual & Props**:
-  - **Stetoskop Dokter IT Melingkar**: Tabung stetoskop fleksibel cyan (`#00F0FF`) melingkar di leher dengan chest piece / bell logam perak menempel di dada untuk mendengar detak kesehatan sistem.
-  - **Cermin Kepala Medis (Head Mirror)**: Cermin bulat dokter reflektif dengan tali kepala pemantau titik kerusakan perangkat keras dan lunak.
-  - **Suntikan USB Siber / Diagnostic Probe**: Suntikan siber transparan berisi serum pemulihan sistem hijau mint (`#2EE59D`) dengan konektor jarum probe USB dan kabel spiral cyan di tangan kanan.
-  - **Kotak P3K IT Medis & Jas Lab Dokter**: Kotak pertolongan pertama koper putih berpalang hijau neon di tangan kiri serta kerah jas lab putih berpin saku medis.
+  - **Jas Lab Dokter Putih & Nametag ID**: Jas dokter putih bersih berkerah lebar dengan saku dada dan kartu nametag ID rumah sakit IT (tanpa teks nama) dengan header cyan dan kode identitas.
+  - **Cermin Kepala Medis Tebal (Head Mirror)**: Cermin bulat dokter reflektif dengan tali kepala tebal kokoh pemantau titik kendala perangkat keras dan lunak.
+  - **Suntikan USB Siber Tanpa Kabel**: Suntikan siber transparan berdosis serum pemulihan sistem hijau mint (`#2EE59D`) dengan konektor jarum probe USB langsung tanpa kabel di tangan kanan.
+  - **Kotak P3K IT Medis & Simbol Plus Kesehatan**: Kotak koper pertolongan pertama putih palang hijau neon di tangan kiri serta simbol palang '+' khas kesehatan yang berterbangan dan kedap-kedip lembut.
 - **Palet Warna**: Kuning Rambu `#FFD60A`, Cyan Medis `#00F0FF`, Putih Jas `#FFFFFF`, Hijau Neon `#2EE59D`, Oranye `#FF8A3D`, Tinta `#0A0A0A`.
 
 #### 6. Network Engineer — "The Connector"
 - **Metafora Karakter**: Penenun infrastruktur kabel dan penyambung serat data (*network splicer*) yang merekatkan kembali denyut paket data lintas benua yang terputus.
 - **Atribut Visual & Props**:
-  - **Antena Router Kembar**: Sepasang antena di kepala dengan pancaran gelombang radio sinyal Wi-Fi konsentris cyan (`#00F0FF`).
+  - **Antena Router Kembar**: Sepasang antena di kepala sebagai pemancar sinyal perangkat jaringan.
   - **Penyambungan Kabel Terputus (Cable Splicing)**: Tangan kiri dan kanan memegang dua ujung kabel jaringan yang terputus dengan serat kawat tembaga emas dan cyan mencuat yang sedang didekatkan untuk disambung kembali.
-  - **Percikan Data Spark Link**: Efek kilau loncatan listrik dan data spark kuning (`#FFD60A`) serta mint (`#2EE59D`) di antara kedua ujung kabel yang sedang disambung.
+  - **Gelombang Shockwave Splicing**: Efek shockwave impuls konsentris berdenyut cepat saat kedua tangan ingin menyatukan kabel, disertai letupan percikan spark data reconnect di pusat pertemuan.
   - **Visor Serat Optik HUD**: Kacamata visor cyan futuristik pemantau bandwidth traffic 10G dan status data stream.
 - **Palet Warna**: Kuning Rambu `#FFD60A`, Cyan Jaringan `#00F0FF`, Hijau Link `#2EE59D`, Emas Tembaga `#FFD60A` / `#FF8A3D`, Tinta `#0A0A0A`.
 

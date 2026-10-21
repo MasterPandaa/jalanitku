@@ -81,9 +81,9 @@ const BATCH_2_ROLES = [
     svgPath: "/assets/mascot/roles/quality-assurance.svg",
     anatomy: [
       { name: "Topi Safari & Senter PASS", desc: "Topi petualang safari oranye dengan senter kepala berstatus hijau checklist PASS" },
-      { name: "Toples Kaca Spesimen Bug", desc: "Toples kaca bening neo-brutalism berulir dengan robot kepik merah siber yang terkurung di dalamnya" },
-      { name: "Jaring Penangkap Serangga", desc: "Jaring kawat digital bergagang kayu hunter penjelajah celah kode sistem" },
-      { name: "Kerah Safari & Badge TEST✓", desc: "Kerah petualang safari oranye dengan pin badge checklist verifikasi sistem" },
+      { name: "Toples Kaca Digenggam Erat", desc: "Toples kaca bening berulir digenggam tangan kanan dengan robot kepik merah siber terkurung di dalamnya" },
+      { name: "Lalat Bug Berterbangan", desc: "Lalat-lalat siber kecil berterbangan kesana kemari di sekeliling maskot" },
+      { name: "Jaring Hunter & Badge TEST✓", desc: "Jaring kawat digital pemburu bug dan pin badge checklist verifikasi sistem" },
     ],
   },
   {
@@ -97,10 +97,10 @@ const BATCH_2_ROLES = [
     mascotComponent: ITSupportMascot,
     svgPath: "/assets/mascot/roles/it-support.svg",
     anatomy: [
-      { name: "Stetoskop Dokter IT Cyan", desc: "Stetoskop fleksibel cyan melingkar di leher dengan chest piece logam menempel di dada memonitor detak sistem" },
-      { name: "Cermin Kepala Medis (Head Mirror)", desc: "Cermin bulat dokter reflektif dengan tali kepala pemantau titik kerusakan perangkat" },
-      { name: "Suntikan USB Siber / Medic Probe", desc: "Suntikan USB siber berdosis serum pemulihan sistem mint neon dan kabel spiral" },
-      { name: "Kotak P3K IT & Jas Lab", desc: "Kotak pertolongan pertama putih palang hijau neon serta jas lab dokter putih" },
+      { name: "Jas Dokter & Nametag", desc: "Jas lab dokter putih bersih dengan saku dada dan nametag ID medis (tanpa nama teks)" },
+      { name: "Cermin Kepala Tebal (Head Mirror)", desc: "Cermin bulat dokter reflektif dengan tali kepala tebal kokoh pemantau titik kendala" },
+      { name: "Suntikan USB Tanpa Kabel", desc: "Suntikan USB siber tanpa kabel berdosis serum pemulihan sistem mint neon" },
+      { name: "Kotak P3K & Plus Medis", desc: "Toolbox First Aid Kit putih palang hijau dan partikel simbol '+' kesehatan kedap-kedip" },
     ],
   },
   {
@@ -114,10 +114,10 @@ const BATCH_2_ROLES = [
     mascotComponent: NetworkEngineerMascot,
     svgPath: "/assets/mascot/roles/network-engineer.svg",
     anatomy: [
-      { name: "Antena Router Kembar", desc: "Sepasang antena di kepala dengan pancaran gelombang radio sinyal Wi-Fi konsentris cyan" },
-      { name: "Penyambungan Kabel Terputus", desc: "Kedua tangan memegang dua ujung kabel terputus dengan serat tembaga mencuat yang didekatkan untuk disambung" },
-      { name: "Percikan Data Spark Link", desc: "Percikan kilau listrik data kuning dan mint di antara celah kedua ujung kabel yang sedang disambung" },
-      { name: "Visor Serat Optik HUD", desc: "Kacamata visor cyan pemantau bandwidth traffic 10G dan status data stream" },
+      { name: "Antena Router Kembar", desc: "Sepasang antena router di kepala sebagai pemancar sinyal perangkat jaringan" },
+      { name: "Penyambungan Kabel Terputus", desc: "Kedua tangan memegang dua ujung kabel terputus dengan serat tembaga mencuat yang didekatkan" },
+      { name: "Shockwave Impuls Splicing", desc: "Gelombang kejut (shockwave) berdenyut konsentris memancar saat tangan ingin menyatukan kabel" },
+      { name: "Visor Serat Optik HUD 10G", desc: "Kacamata visor cyan pemantau bandwidth traffic 10G dan status data stream" },
     ],
   },
 ];
