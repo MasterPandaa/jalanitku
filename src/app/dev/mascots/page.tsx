@@ -28,7 +28,8 @@ const BATCH_1_ROLES = [
     anatomy: [
       { name: "Blueprint Cetak Biru", desc: "Cetak biru digital cyan (#00F0FF) memuat skema microservices & node database" },
       { name: "Kacamata Arsitek", desc: "Frame persegi teknikal tebal 3.5px dengan lensa reflektif cyan bergaris kilau" },
-      { name: "Penggaris T & Stylus", desc: "Penggaris siku T di tangan kanan sebagai perlambang presisi rekayasa kode" },
+      { name: "Pensil Drafting Arsitek", desc: "Pensil teknikal kayu hexagonal oranye dengan penghapus pink dan ferrule logam di tangan kanan untuk drafting kode & skema" },
+      { name: "Helm Arsitek Berkarakter", desc: "Helm konstruksi oranye berusuk ganda kokoh, ventilasi aerodinamis samping, brim pelindung tebal, dan emblem spotlight cyan" },
       { name: "Kubus Modular 3D Kembar", desc: "Sepasang kubus fondasi 3D isometrik melayang di kiri dan kanan atas melambangkan arsitektur sistem modular berlapis" },
     ],
   },

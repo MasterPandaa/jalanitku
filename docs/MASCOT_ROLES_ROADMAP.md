@@ -54,7 +54,8 @@ Ke-21 role IT dikelompokkan ke dalam 7 batch tematik yang masing-masing terdiri 
 - **Atribut Visual & Props**:
   - **Kacamata Arsitek Persegi**: Frame hitam tebal dengan lensa cyan reflektif (`#00F0FF`).
   - **Blueprint Digital Cyan**: Cetak biru skema sistem dengan diagram blok microservices dan node database terhubung.
-  - **Penggaris T / Stylus Teknikal**: Dipegang tegak di tangan kanan sebagai simbol presisi teknis.
+  - **Pensil Drafting Arsitek**: Pensil kayu teknikal hexagonal oranye (`#FF8A3D`) lengkap dengan penghapus pink (`#FF5C8A`), ferrule logam, dan rautan kayu di tangan kanan untuk merancang kode dan arsitektur presisi.
+  - **Helm Konstruksi Arsitek Improved**: Helm oranye kokoh berusuk ganda penguat, alur ventilasi samping, brim pelindung tebal, dan emblem spotlight cyan (`#00F0FF`).
   - **Sepasang Kubus Modular 3D Isometrik**: Blok fondasi 3D melayang di sisi kiri atas dan kanan atas sebagai lambang arsitektur modular berlapis.
 - **Palet Warna**: Kuning `#FFD60A`, Cyan `#00F0FF`, Putih `#FFFFFF`, Tinta `#0A0A0A`.
 

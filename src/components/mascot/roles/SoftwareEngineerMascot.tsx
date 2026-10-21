@@ -13,8 +13,8 @@ export interface SoftwareEngineerMascotProps {
  * Maskot Role: Software Engineer — "The Architect"
  * Identitas: Sang Arsitek Kode & Fondasi Sistem Digital
  * Ciri Khas: Kacamata arsitek persegi cyan, blueprint digital dengan skema server node,
- * penggaris T teknikal, kubus fondasi modular 3D isometrik di sudut kiri, kubus modular 3D isometrik di sudut kanan atas,
- * dan helm konstruksi arsitek.
+ * pensil arsitek drafting, kubus fondasi modular 3D isometrik di sudut kiri, kubus modular 3D isometrik di sudut kanan atas,
+ * dan helm konstruksi arsitek berstruktur ventilasi, visor brim ganda & emblem spotlight.
  */
 export function SoftwareEngineerMascot({
   size = 200,
@@ -27,7 +27,7 @@ export function SoftwareEngineerMascot({
       className={`relative inline-flex items-center justify-center select-none group ${className}`}
       style={{ width: size, height: size }}
       role="img"
-      aria-label="Maskot Software Engineer — The Architect: Papan penunjuk jalan neo-brutalism dengan kacamata arsitek teknikal, cetak biru sistem, penggaris T, dan sepasang kubus modular 3D isometrik"
+      aria-label="Maskot Software Engineer — The Architect: Papan penunjuk jalan neo-brutalism dengan kacamata arsitek teknikal, cetak biru sistem, pensil drafting arsitek, dan sepasang kubus modular 3D isometrik"
     >
       <svg
         viewBox="0 0 200 200"
@@ -296,54 +296,68 @@ export function SoftwareEngineerMascot({
           />
 
           {/* ============================================================== */}
-          {/* LAYER 4: HELM KONSTRUKSI ARSITEK ORANYE (#FF8A3D)              */}
+          {/* LAYER 4: HELM KONSTRUKSI ARSITEK IMPROVED (#FF8A3D)            */}
           {/* ============================================================== */}
           {/* Hard Shadow Helm */}
           <path
-            d="M 44 48 C 44 24 146 24 146 48 Z"
+            d="M 44 48 C 44 22 146 22 146 48 Z"
             fill="#0A0A0A"
           />
           {/* Kubah Helm Utama Oranye (#FF8A3D) */}
           <path
-            d="M 44 44 C 44 20 144 20 144 44 Z"
+            d="M 44 44 C 44 18 144 18 144 44 Z"
             fill="#FF8A3D"
             stroke="#0A0A0A"
             strokeWidth="4"
           />
-          {/* Punggung Rusuk Penguat Tengah Helm */}
+
+          {/* Ventilasi Alur Samping Kiri & Kanan (Detail Arsitektur Industri) */}
+          <line x1="56" y1="36" x2="68" y2="36" stroke="#0A0A0A" strokeWidth="2.5" strokeLinecap="round" />
+          <line x1="120" y1="36" x2="132" y2="36" stroke="#0A0A0A" strokeWidth="2.5" strokeLinecap="round" />
+          <line x1="60" y1="30" x2="70" y2="30" stroke="#0A0A0A" strokeWidth="2" strokeLinecap="round" />
+          <line x1="118" y1="30" x2="128" y2="30" stroke="#0A0A0A" strokeWidth="2" strokeLinecap="round" />
+
+          {/* Punggung Rusuk Penguat Tengah Helm (Double Ridge Berjenjang) */}
           <path
-            d="M 90 21 C 90 19 99 19 99 21 L 100 44 L 89 44 Z"
+            d="M 88 19 C 88 17 100 17 100 19 L 102 44 L 86 44 Z"
             fill="#FFD60A"
             stroke="#0A0A0A"
             strokeWidth="2.5"
           />
-          {/* Bibir/Brim Pelindung Helm Bawah Kuning */}
+          {/* Garis Kilau Refleksi Rusuk */}
+          <line x1="91" y1="21" x2="91" y2="41" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" />
+
+          {/* Bibir/Brim Pelindung Helm Bawah Tebal Kokoh */}
           <rect
-            x="34"
-            y="42"
-            width="120"
-            height="10"
+            x="32"
+            y="41"
+            width="124"
+            height="11"
             rx="3"
             fill="#FFD60A"
             stroke="#0A0A0A"
             strokeWidth="4"
           />
-          {/* Badge Emblem Helm Arsitek */}
+          {/* Garis Aksen Bawah Visor Brim */}
+          <line x1="36" y1="48" x2="152" y2="48" stroke="#0A0A0A" strokeWidth="1.5" />
+
+          {/* Headlamp Mini / Emblem Arsitek Presisi */}
           <rect
-            x="89"
-            y="27"
-            width="10"
-            height="10"
-            rx="2"
+            x="87"
+            y="26"
+            width="14"
+            height="12"
+            rx="2.5"
             fill="#00F0FF"
             stroke="#0A0A0A"
-            strokeWidth="2"
+            strokeWidth="2.5"
           />
-          <line x1="91" y1="32" x2="97" y2="32" stroke="#0A0A0A" strokeWidth="1.5" />
-          <line x1="94" y1="29" x2="94" y2="35" stroke="#0A0A0A" strokeWidth="1.5" />
+          {/* Lensa Spotlight Senter Helm */}
+          <circle cx="94" cy="32" r="3" fill="#FFFFFF" stroke="#0A0A0A" strokeWidth="1.5" />
+          <line x1="94" y1="23" x2="94" y2="26" stroke="#0A0A0A" strokeWidth="2" />
 
           {/* ============================================================== */}
-          {/* LAYER 5: TANGAN KANAN & PENGGARIS T TEKNIKAL                    */}
+          {/* LAYER 5: TANGAN KANAN & PENSIL TEKNIKAL DRAFTING               */}
           {/* ============================================================== */}
           {/* Lengan Kanan Menjulur */}
           <path
@@ -354,36 +368,65 @@ export function SoftwareEngineerMascot({
             fill="none"
           />
 
-          {/* Penggaris T Vertikal di Belakang Tangan */}
-          {/* Batang Penggaris Pink Magenta (#FF5C8A) */}
-          <rect
-            x="172"
-            y="62"
-            width="6"
-            height="58"
-            rx="1"
-            fill="#FF5C8A"
-            stroke="#0A0A0A"
-            strokeWidth="3"
-          />
-          {/* Kepala Siku T Horizontal Kuning */}
-          <rect
-            x="162"
-            y="58"
-            width="26"
-            height="6"
-            rx="1.5"
-            fill="#FFD60A"
-            stroke="#0A0A0A"
-            strokeWidth="3"
-          />
-          {/* Skala Garis Ukur pada Penggaris */}
-          <line x1="174" y1="74" x2="177" y2="74" stroke="#0A0A0A" strokeWidth="1.5" />
-          <line x1="174" y1="82" x2="177" y2="82" stroke="#0A0A0A" strokeWidth="1.5" />
-          <line x1="174" y1="90" x2="177" y2="90" stroke="#0A0A0A" strokeWidth="1.5" />
-          <line x1="174" y1="108" x2="177" y2="108" stroke="#0A0A0A" strokeWidth="1.5" />
+          {/* Pensil Teknikal Arsitek Jumbo (Neo-Brutalism Drafting Pencil) */}
+          <g transform="rotate(-15 172 96)">
+            {/* Hard Shadow Pensil */}
+            <rect x="171" y="55" width="8" height="66" rx="2" fill="#0A0A0A" />
 
-          {/* Kepalan Tangan Kanan Mencengkeram Penggaris T */}
+            {/* Penghapus Pink di Pangkal Pensil */}
+            <rect
+              x="167"
+              y="52"
+              width="8"
+              height="10"
+              rx="2"
+              fill="#FF5C8A"
+              stroke="#0A0A0A"
+              strokeWidth="2.5"
+            />
+            {/* Cincin Logam Ferrule Penjepit Penghapus */}
+            <rect
+              x="166.5"
+              y="61"
+              width="9"
+              height="5"
+              rx="1"
+              fill="#FFFFFF"
+              stroke="#0A0A0A"
+              strokeWidth="2"
+            />
+            <line x1="168" y1="63.5" x2="174" y2="63.5" stroke="#0A0A0A" strokeWidth="1" />
+
+            {/* Batang Kayu Pensil Hexagonal Oranye Arsitek (#FF8A3D) */}
+            <rect
+              x="167"
+              y="66"
+              width="8"
+              height="38"
+              fill="#FF8A3D"
+              stroke="#0A0A0A"
+              strokeWidth="2.5"
+            />
+            {/* Garis Alur Belah Hexagonal Pensil */}
+            <line x1="171" y1="66" x2="171" y2="104" stroke="#FFD60A" strokeWidth="2" />
+
+            {/* Bagian Rautan Kayu Kerucut (#FFE8A3) */}
+            <polygon
+              points="167,104 175,104 171,118"
+              fill="#FFE8A3"
+              stroke="#0A0A0A"
+              strokeWidth="2.5"
+              strokeLinejoin="round"
+            />
+
+            {/* Ujung Mata Timbal / Grafit Pensil Hitam Arsitek */}
+            <polygon
+              points="169.5,113 172.5,113 171,118"
+              fill="#0A0A0A"
+            />
+          </g>
+
+          {/* Kepalan Tangan Kanan Mencengkeram Batang Pensil */}
           <circle
             cx="170"
             cy="100"
