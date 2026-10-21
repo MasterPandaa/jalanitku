@@ -30,6 +30,19 @@ export const metadata: Metadata = {
   title: "JalanITku — Temukan dan Uji Arah Karier IT Impianmu",
   description:
     "Platform untuk membantu teman-teman IT (mahasiswa, fresh graduate, career switcher) menemukan role IT yang cocok lewat JalanKarir dan menguji kecocokan lewat tes teknis di JalanRapor.",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon.ico" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: "/favicon.svg",
+  },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
