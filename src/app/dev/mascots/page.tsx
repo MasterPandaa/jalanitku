@@ -45,10 +45,10 @@ const BATCH_1_ROLES = [
     mascotComponent: MobileDeveloperMascot,
     svgPath: "/assets/mascot/roles/mobile-developer.svg",
     anatomy: [
+      { name: "Topi Snapback Miring Pink & Cyan", desc: "Topi kasual urban warna pink magenta dengan visor datar cyan elektrik dan emblem gawai smartphone (desain lama favorit)" },
       { name: "Jaket Jeans Denim Keren", desc: "Jaket denim trucker biru indigo wash dengan kerah berlipat, kaos putih di dalam, saku dada ganda berflap, dan kancing perak" },
-      { name: "Topi Denim Streetwear Patch", desc: "Topi baseball denim navy berstruktur dengan visor melengkung cyan, kancing emas, pin bintang pink, dan woven patch coding </>" },
       { name: "Dual-Hand Smartphone Grip", desc: "Tangan kanan menggenggam mantap sisi kanan HP (kanan POV user) dan tangan kiri menopang sisi kiri gawai" },
-      { name: "Push Notification & Sparkles", desc: "Pop-up card notifikasi aplikasi baru dengan badge counter merah +1 dan bintang kilau emas (menggantikan wifi)" },
+      { name: "Efek Tap Layar (Touch Ripple)", desc: "Gelombang sentuhan konsentris cyan dan mint di atas layar saat jempol berinteraksi, dipadu kartu push notification (tanpa bintang)" },
     ],
   },
   {

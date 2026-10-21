@@ -63,11 +63,11 @@ Ke-21 role IT dikelompokkan ke dalam 7 batch tematik yang masing-masing terdiri 
 #### 2. Mobile Developer — "The Screen Tapper"
 - **Metafora Karakter**: Sang penguasa layar sentuh dan gawai portabel yang menghadirkan kecanggihan komputasi langsung ke telapak tangan pengguna.
 - **Atribut Visual & Props**:
+  - **Topi Snapback Miring Pink & Cyan**: Topi kasual urban warna pink magenta (`#FF5C8A`) dengan visor datar cyan elektrik (`#00F0FF`), kancing atas emas, dan emblem smartphone putih di depan (desain lama favorit).
   - **Jaket Jeans Denim Keren (Trucker Denim Jacket)**: Jaket denim biru indigo wash (`#3A6B9B`) dengan kerah berlipat, kaos putih di dalam, saku dada ganda berflap dengan kancing perak, dan garis jahitan vertikal emas.
   - **Dual-Hand Smartphone Grip**: Tangan kanan menggenggam mantap sisi kanan HP (kanan POV user) dengan buku-buku jari melingkar di bingkai samping, sementara tangan kiri menopang sisi kiri gawai.
-  - **Topi Denim Streetwear Cap**: Topi baseball denim navy berstruktur dengan visor melengkung cyan elektrik, kancing atas kuningan, pin enamel bintang pink, dan woven patch coding `</>` di depan.
-  - **Push Notification Card & Sparkles Melayang (Pengganti Wifi)**: Pop-up kartu notifikasi aplikasi interaktif dengan badge counter merah `+1`, balon obrolan mini, dan partikel bintang kilau emas.
-- **Palet Warna**: Denim Blue `#3A6B9B`, Pink Magenta `#FF5C8A`, Kuning `#FFD60A`, Cyan `#00F0FF`, Tinta `#0A0A0A`.
+  - **Efek Tap Layar (Touch Ripple Konsentris)**: Gelombang lingkaran sentuhan cyan (`#00F0FF`) dan mint (`#2EE59D`) di atas layar smartphone saat jempol berinteraksi, dipadu push notification card bersih (tanpa efek bintang 4 sisi).
+- **Palet Warna**: Pink Magenta `#FF5C8A`, Denim Blue `#3A6B9B`, Cyan `#00F0FF`, Kuning `#FFD60A`, Tinta `#0A0A0A`.
 
 #### 3. Game Developer — "The Pixel Mage"
 - **Metafora Karakter**: Sang penyihir dunia virtual interaktif yang meracik logika dan matematika menjadi keajaiban visual dan fisika gameplay.

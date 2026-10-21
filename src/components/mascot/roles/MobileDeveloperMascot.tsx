@@ -14,10 +14,11 @@ export interface MobileDeveloperMascotProps {
  * Maskot Role: Mobile Developer — "The Artisan"
  * Identitas: Sang Perajin Aplikasi Saku & Pengalaman Sentuhan Presisi
  * Ciri Khas:
- * 1. Jaket Jeans Keren (Denim Trucker Jacket) dengan kerah berlipat, saku dada berkancing perak, dan kaos putih di dalam.
- * 2. Pose memegang smartphone kokoh: tangan kanan menggenggam sisi kanan HP (kanan POV user) dan tangan kiri menopang sisi kiri.
- * 3. Topi Denim Streetwear Cap keren dengan woven patch coding `</>` dan pin bintang pink enamel.
- * 4. Efek Push Notification Card & Sparkle melayang menggantikan simbol wifi.
+ * 1. Topi Snapback Miring Pink & Cyan dengan emblem smartphone (desain lama favorit).
+ * 2. Jaket Jeans Keren (Denim Trucker Jacket) dengan kerah berlipat, saku dada berkancing perak, dan kaos putih di dalam.
+ * 3. Pose menggenggam smartphone di kedua sisi: tangan kanan menggenggam sisi kanan HP (kanan POV user) dan tangan kiri menopang sisi kiri.
+ * 4. Efek Tap Layar (Touch Ripple Konsentris) aktif di atas layar smartphone tanpa efek bintang 4 sisi.
+ * 5. Push Notification Card bersih melayang di sisi kiri menggantikan wifi.
  */
 export function MobileDeveloperMascot({
   size = 200,
@@ -33,7 +34,7 @@ export function MobileDeveloperMascot({
       className={`relative inline-flex items-center justify-center select-none group ${className}`}
       style={{ width: size, height: size }}
       role="img"
-      aria-label="Maskot Mobile Developer — The Artisan: Papan penunjuk jalan neo-brutalism berjaket jeans denim keren, topi streetwear patch coding, menggenggam smartphone di kedua sisi dengan notifikasi aplikasi melayang"
+      aria-label="Maskot Mobile Developer — The Artisan: Papan penunjuk jalan neo-brutalism dengan topi snapback miring pink-cyan, jaket jeans denim keren, menggenggam smartphone di kedua sisi dengan efek tap layar touch ripple"
     >
       <svg
         viewBox="0 0 200 200"
@@ -57,13 +58,14 @@ export function MobileDeveloperMascot({
               0%, 100% { transform: translateY(0px) scale(1); }
               50% { transform: translateY(-4px) scale(1.05); }
             }
-            @keyframes mob-sparkle-blink {
-              0%, 100% { opacity: 0.3; transform: scale(0.8); }
-              50% { opacity: 1; transform: scale(1.2); }
+            @keyframes mob-ripple-1 {
+              0% { r: 4px; opacity: 1; stroke-width: 3px; }
+              100% { r: 20px; opacity: 0; stroke-width: 0.5px; }
             }
-            @keyframes mob-screen-glow {
-              0%, 100% { filter: drop-shadow(0 0 2px #00F0FF); }
-              50% { filter: drop-shadow(0 0 7px #00F0FF); }
+            @keyframes mob-ripple-2 {
+              0% { r: 4px; opacity: 0; stroke-width: 2.5px; }
+              30% { opacity: 0.8; stroke-width: 2px; }
+              100% { r: 28px; opacity: 0; stroke-width: 0.5px; }
             }
             .mob-animated-body {
               animation: ${isAnimated ? "mob-float 3.5s ease-in-out infinite" : "none"};
@@ -77,12 +79,13 @@ export function MobileDeveloperMascot({
               animation: ${isAnimated ? "mob-notify-pop 2.8s ease-in-out infinite" : "none"};
               transform-origin: 28px 60px;
             }
-            .mob-animated-sparkle {
-              animation: ${isAnimated ? "mob-sparkle-blink 2s ease-in-out infinite" : "none"};
-              transform-origin: 18px 46px;
+            .mob-animated-ripple1 {
+              animation: ${isAnimated ? "mob-ripple-1 1.6s cubic-bezier(0.1, 0.8, 0.3, 1) infinite" : "none"};
+              transform-origin: 156px 113px;
             }
-            .mob-screen-pulse {
-              animation: ${isAnimated ? "mob-screen-glow 3s ease-in-out infinite" : "none"};
+            .mob-animated-ripple2 {
+              animation: ${isAnimated ? "mob-ripple-2 1.6s cubic-bezier(0.1, 0.8, 0.3, 1) 0.35s infinite" : "none"};
+              transform-origin: 156px 113px;
             }
           `}</style>
         </defs>
@@ -162,7 +165,7 @@ export function MobileDeveloperMascot({
           <rect x="50" y="102" width="12" height="7" rx="2" fill="#FF5C8A" />
           <rect x="122" y="102" width="12" height="7" rx="2" fill="#FF5C8A" />
 
-          {/* Mata Kiri (Fokus Antusias Menatap Smartphone) */}
+          {/* Mata Kiri (Fokus Antusias Menatap Layar HP) */}
           <rect
             x="58"
             y="74"
@@ -302,79 +305,49 @@ export function MobileDeveloperMascot({
           <rect x="42" y="140" width="106" height="4" fill="#2D547C" stroke="#0A0A0A" strokeWidth="1.5" />
 
           {/* ============================================================== */}
-          {/* LAYER 4: IMPROVISASI TOPI STREETWEAR CAP (DENIM & CYAN)         */}
+          {/* LAYER 4: TOPI SNAPBACK MIRING PINK & CYAN (DESAIN LAMA FAVORIT)*/}
           {/* ============================================================== */}
           {/* Hard Shadow Topi */}
           <path
-            d="M 40 48 C 40 20 140 20 140 48 Z"
+            d="M 44 46 C 44 22 136 22 136 46 Z"
             fill="#0A0A0A"
           />
-          {/* Kubah Topi Denim Biru Navy Berstruktur (#244265) */}
+          {/* Kubah Topi Pink Magenta (#FF5C8A) */}
           <path
-            d="M 42 44 C 42 16 138 16 138 44 Z"
-            fill="#244265"
+            d="M 44 42 C 44 18 134 18 134 42 Z"
+            fill="#FF5C8A"
             stroke="#0A0A0A"
             strokeWidth="4"
           />
-
-          {/* Visor / Brim Melengkung Keren (Aksen Cyan Elektrik #00F0FF) */}
-          <path
-            d="M 28 44 C 44 40 120 40 152 44 C 146 50 34 50 28 44 Z"
+          {/* Visor Datar Snapback Miring ke Kiri (Cyan #00F0FF) */}
+          <polygon
+            points="24,38 92,38 88,46 20,46"
             fill="#00F0FF"
             stroke="#0A0A0A"
             strokeWidth="3.5"
             strokeLinejoin="round"
           />
-
-          {/* Jahitan Garis Panel Topi Denim (Emas Halus) */}
-          <path d="M 90 16 Q 89 30 89 44" stroke="#FFD60A" strokeWidth="1.5" strokeDasharray="3 2" />
-
-          {/* Kancing Logam Atas Topi (Eyelet Button) */}
+          {/* Kancing Atas Topi Kuning Emas */}
           <circle
             cx="89"
-            cy="16"
+            cy="18"
             r="4.5"
             fill="#FFD60A"
             stroke="#0A0A0A"
             strokeWidth="2.5"
           />
-
-          {/* Woven Patch Persegi Coding `</>` di Depan Topi */}
-          <g transform="translate(76, 24)">
-            {/* Shadow Patch */}
-            <rect x="1.5" y="1.5" width="26" height="15" rx="2" fill="#0A0A0A" />
-            {/* Bodi Patch Putih Bersih */}
-            <rect
-              x="0"
-              y="0"
-              width="26"
-              height="15"
-              rx="2"
-              fill="#FFFFFF"
-              stroke="#0A0A0A"
-              strokeWidth="2.2"
-            />
-            {/* Simbol Kode `</>` */}
-            <text
-              x="3"
-              y="11.5"
-              fontFamily="monospace"
-              fontSize="10"
-              fontWeight="900"
-              fill="#244265"
-              letterSpacing="0.5"
-            >
-              &lt;/&gt;
-            </text>
-          </g>
-
-          {/* Pin Enamel Bintang Pink di Sisi Kanan Topi (Streetwear Detail) */}
-          <polygon
-            points="120,28 122,32 126,32 123,34 124,38 120,35 116,38 117,34 114,32 118,32"
-            fill="#FF5C8A"
+          {/* Emblem Mobile Phone di Depan Topi */}
+          <rect
+            x="84"
+            y="26"
+            width="10"
+            height="13"
+            rx="2"
+            fill="#FFFFFF"
             stroke="#0A0A0A"
-            strokeWidth="1.2"
+            strokeWidth="2"
           />
+          <circle cx="89" cy="35" r="1" fill="#0A0A0A" />
 
           {/* ============================================================== */}
           {/* LAYER 5: SMARTPHONE MODERN DI SISI KANAN & DUAL-HAND GRIP       */}
@@ -445,7 +418,7 @@ export function MobileDeveloperMascot({
             <rect x="150" y="89" width="10" height="10" rx="2.5" fill="#00F0FF" stroke="#0A0A0A" strokeWidth="1.5" />
             <rect x="164" y="89" width="8" height="10" rx="2.5" fill="#FF8A3D" stroke="#0A0A0A" strokeWidth="1.5" />
 
-            {/* Feed Card Interaktif dengan Tombol Aksi */}
+            {/* Feed Card Interaktif Tempat Tap Terjadi */}
             <rect
               x="136"
               y="104"
@@ -455,7 +428,6 @@ export function MobileDeveloperMascot({
               fill="#00F0FF"
               stroke="#0A0A0A"
               strokeWidth="1.5"
-              className="mob-screen-pulse"
             />
             <rect x="139" y="108" width="16" height="4" rx="1" fill="#0A0A0A" />
             <circle cx="163" cy="113" r="3.5" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="1" />
@@ -469,6 +441,27 @@ export function MobileDeveloperMascot({
               stroke="#FFFFFF"
               strokeWidth="2.5"
               strokeLinecap="round"
+            />
+
+            {/* EFEK TAP LAYAR: TOUCH RIPPLE SENTUHAN KONSENTRIS (TANPA BINTANG 4 SISI) */}
+            <circle
+              cx="156"
+              cy="113"
+              r="8"
+              fill="none"
+              stroke="#00F0FF"
+              strokeWidth="2.5"
+              className="mob-animated-ripple1"
+            />
+            <circle
+              cx="156"
+              cy="113"
+              r="16"
+              fill="none"
+              stroke="#2EE59D"
+              strokeWidth="2"
+              strokeDasharray="4 3"
+              className="mob-animated-ripple2"
             />
 
             {/* ============================================================== */}
@@ -529,7 +522,6 @@ export function MobileDeveloperMascot({
             <circle cx="180" cy="130" r="1.2" fill="#E2E8F0" />
 
             {/* Kepalan Tangan Kanan Menggenggam Sisi Kanan HP (Kanan POV User x=180..184) */}
-            {/* Jari-Jari Menggenggam Tepi Bezel Kanan HP */}
             <g transform="translate(177, 98)">
               {/* Jari Telunjuk */}
               <rect x="0" y="2" width="7" height="6" rx="2.5" fill="#FFD60A" stroke="#0A0A0A" strokeWidth="2.5" />
@@ -540,13 +532,13 @@ export function MobileDeveloperMascot({
               {/* Jari Kelingking */}
               <rect x="0" y="23" width="6.5" height="5.5" rx="2.5" fill="#FFD60A" stroke="#0A0A0A" strokeWidth="2.5" />
 
-              {/* Ujung Jempol di Depan Layar HP (Interactive Thumb Grip) */}
-              <ellipse cx="-2" cy="15" rx="3.5" ry="5" fill="#FFD60A" stroke="#0A0A0A" strokeWidth="2" />
+              {/* Ujung Jempol di Depan Layar HP Mengetuk Titik Ripple Tap */}
+              <ellipse cx="-2" cy="15" rx="4" ry="5.5" fill="#FFD60A" stroke="#0A0A0A" strokeWidth="2.2" />
             </g>
           </g>
 
           {/* ============================================================== */}
-          {/* LAYER 6: PUSH NOTIFICATION CARD & SPARKLE (PENGGANTI WIFI)     */}
+          {/* LAYER 6: PUSH NOTIFICATION CARD (BERSIH, TANPA BINTANG 4 SISI) */}
           {/* ============================================================== */}
           <g className="mob-animated-notify" transform="translate(14, 52)">
             {/* Hard Shadow Pop-up Card */}
@@ -586,24 +578,6 @@ export function MobileDeveloperMascot({
             </text>
             {/* Tanda Ekor Balon Pop-up Card */}
             <polygon points="14,24 20,24 16,28" fill="#FFFFFF" stroke="#0A0A0A" strokeWidth="1.5" />
-          </g>
-
-          {/* Partikel Sparkle Bintang 4-Point Melayang */}
-          <g className="mob-animated-sparkle" transform="translate(12, 34)">
-            <polygon
-              points="10,0 12,7 19,10 12,13 10,20 8,13 1,10 8,7"
-              fill="#FFD60A"
-              stroke="#0A0A0A"
-              strokeWidth="1.5"
-            />
-          </g>
-          <g transform="translate(42, 40)">
-            <polygon
-              points="4,0 5,3 8,4 5,5 4,8 3,5 0,4 3,3"
-              fill="#00F0FF"
-              stroke="#0A0A0A"
-              strokeWidth="1"
-            />
           </g>
         </g>
       </svg>

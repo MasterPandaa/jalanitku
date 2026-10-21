@@ -1,7 +1,7 @@
 <svg viewBox="0 0 200 200" width="200" height="200" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- MASKOT MOBILE DEVELOPER — "THE ARTISAN" -->
   <!-- Proyek: JalanITku · Sutradara Visual: Matatabi -->
-  <!-- Edisi: Jaket Jeans Trucker Denim Keren, Topi Streetwear Patch </>, Dual-Hand Grip Smartphone, dan Push Notification Card -->
+  <!-- Edisi: Topi Snapback Miring Pink-Cyan (Desain Lama), Jaket Jeans Denim Keren, Dual-Hand Grip HP, Efek Tap Layar (Touch Ripple), Tanpa Bintang 4 Sisi -->
 
   <!-- LAYER 1: KAKI & SEPATU HITAM DENGAN SOL PUTIH -->
   <rect x="68" y="154" width="22" height="24" fill="#0A0A0A" />
@@ -66,20 +66,13 @@
   <circle cx="87.5" cy="136" r="2.2" fill="#E2E8F0" stroke="#0A0A0A" stroke-width="1.2" />
   <rect x="42" y="140" width="106" height="4" fill="#2D547C" stroke="#0A0A0A" stroke-width="1.5" />
 
-  <!-- LAYER 4: IMPROVISASI TOPI STREETWEAR CAP (DENIM & CYAN) -->
-  <path d="M 40 48 C 40 20 140 20 140 48 Z" fill="#0A0A0A" />
-  <path d="M 42 44 C 42 16 138 16 138 44 Z" fill="#244265" stroke="#0A0A0A" stroke-width="4" />
-  <path d="M 28 44 C 44 40 120 40 152 44 C 146 50 34 50 28 44 Z" fill="#00F0FF" stroke="#0A0A0A" stroke-width="3.5" stroke-linejoin="round" />
-  <path d="M 90 16 Q 89 30 89 44" stroke="#FFD60A" stroke-width="1.5" stroke-dasharray="3 2" />
-  <circle cx="89" cy="16" r="4.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
-
-  <!-- Woven Patch Coding </> di Topi -->
-  <g transform="translate(76, 24)">
-    <rect x="1.5" y="1.5" width="26" height="15" rx="2" fill="#0A0A0A" />
-    <rect x="0" y="0" width="26" height="15" rx="2" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.2" />
-    <text x="3" y="11.5" font-family="monospace" font-size="10" font-weight="900" fill="#244265" letter-spacing="0.5">&lt;/&gt;</text>
-  </g>
-  <polygon points="120,28 122,32 126,32 123,34 124,38 120,35 116,38 117,34 114,32 118,32" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="1.2" />
+  <!-- LAYER 4: TOPI SNAPBACK MIRING PINK & CYAN (DESAIN LAMA FAVORIT USER) -->
+  <path d="M 44 46 C 44 22 136 22 136 46 Z" fill="#0A0A0A" />
+  <path d="M 44 42 C 44 18 134 18 134 42 Z" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="4" />
+  <polygon points="24,38 92,38 88,46 20,46" fill="#00F0FF" stroke="#0A0A0A" stroke-width="3.5" stroke-linejoin="round" />
+  <circle cx="89" cy="18" r="4.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
+  <rect x="84" y="26" width="10" height="13" rx="2" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2" />
+  <circle cx="89" cy="35" r="1" fill="#0A0A0A" />
 
   <!-- LAYER 5: SMARTPHONE MODERN DI SISI KANAN & DUAL-HAND GRIP -->
   <g>
@@ -102,6 +95,10 @@
     <circle cx="163" cy="113" r="3.5" fill="#2EE59D" stroke="#0A0A0A" stroke-width="1" />
     <line x1="146" y1="136" x2="162" y2="136" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
 
+    <!-- EFEK TAP LAYAR: TOUCH RIPPLE SENTUHAN KONSENTRIS (TANPA BINTANG 4 SISI) -->
+    <circle cx="156" cy="113" r="8" fill="none" stroke="#00F0FF" stroke-width="2.5" />
+    <circle cx="156" cy="113" r="16" fill="none" stroke="#2EE59D" stroke-width="2" stroke-dasharray="4 3" />
+
     <!-- Tangan Kiri Menopang Sisi Kiri Smartphone -->
     <path d="M 112 128 Q 120 134 126 126" stroke="#0A0A0A" stroke-width="7" stroke-linecap="round" fill="none" />
     <path d="M 112 128 Q 120 134 126 126" stroke="#3A6B9B" stroke-width="4.5" stroke-linecap="round" fill="none" />
@@ -120,11 +117,11 @@
       <rect x="0" y="9" width="7" height="6" rx="2.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
       <rect x="0" y="16" width="7" height="6" rx="2.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
       <rect x="0" y="23" width="6.5" height="5.5" rx="2.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
-      <ellipse cx="-2" cy="15" rx="3.5" ry="5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2" />
+      <ellipse cx="-2" cy="15" rx="4" ry="5.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.2" />
     </g>
   </g>
 
-  <!-- LAYER 6: PUSH NOTIFICATION CARD & SPARKLE (PENGGANTI WIFI) -->
+  <!-- LAYER 6: PUSH NOTIFICATION CARD (BERSIH, TANPA BINTANG 4 SISI) -->
   <g transform="translate(14, 52)">
     <rect x="3" y="3" width="34" height="24" rx="4" fill="#0A0A0A" />
     <rect x="0" y="0" width="34" height="24" rx="4" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.5" />
@@ -133,12 +130,5 @@
     <circle cx="25" cy="12" r="5.5" fill="#F43F5E" stroke="#0A0A0A" stroke-width="1.5" />
     <text x="22" y="14.5" font-family="monospace" font-size="6.5" font-weight="900" fill="#FFFFFF">1</text>
     <polygon points="14,24 20,24 16,28" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.5" />
-  </g>
-
-  <g transform="translate(12, 34)">
-    <polygon points="10,0 12,7 19,10 12,13 10,20 8,13 1,10 8,7" fill="#FFD60A" stroke="#0A0A0A" stroke-width="1.5" />
-  </g>
-  <g transform="translate(42, 40)">
-    <polygon points="4,0 5,3 8,4 5,5 4,8 3,5 0,4 3,3" fill="#00F0FF" stroke="#0A0A0A" stroke-width="1" />
   </g>
 </svg>
