@@ -12,13 +12,14 @@ export interface ITSupportMascotProps {
 
 /**
  * Maskot Role: IT Support — "The Fixer"
- * Identitas: Sang Penyelamat Operasional Harian & Pemecah Masalah Sistem
- * Ciri Khas: Headset operator melengkung dengan bantalan telinga cyan (#00F0FF) & mic ke mulut,
- * kerah polo teknisi putih-cyan dengan badge "24/7 FIX", tangan kiri memegang kotak perkakas P3K IT
- * berpalang hijau neon (#2EE59D), dan tangan kanan memegang obeng elektrik multi-bit dengan kabel spiral.
+ * Identitas: Sang Dokter IT / Sistem Medic Penyelamat Operasional
+ * Ciri Khas: Head mirror dokter bulat dengan tali kepala hitam, stetoskop dokter IT melingkar di leher
+ * dengan tabung cyan dan chest piece logam menempel di dada, jas lab dokter putih berpin palang hijau
+ * P3K IT, tangan kiri memegang kotak pertolongan pertama P3K IT (Medical Kit), dan tangan kanan
+ * memegang suntikan USB siber / termometer diagnostik digital berindikator status hijau OK.
  *
- * Base Anatomi: 100% konsisten dengan Base Model Batch 1 (kaki sol putih, tubuh kuning rambu 106x94,
- * marka jalan putus-putus, pipi pink, mata ekspresif, mulut senyum, tangan neo-brutalist).
+ * Base Anatomi: 100% konsisten dengan Base Model Batch 1 (kaki sol putih y=170, tubuh kuning rambu 106x94,
+ * marka jalan putus-putus perut, pipi pink, mata ekspresif, mulut senyum, kepalan tangan kuning #FFD60A).
  */
 export function ITSupportMascot({
   size = 200,
@@ -34,7 +35,7 @@ export function ITSupportMascot({
       className={`relative inline-flex items-center justify-center select-none group ${className}`}
       style={{ width: size, height: size }}
       role="img"
-      aria-label="Maskot IT Support — The Fixer: Papan penunjuk jalan neo-brutalism kuning dengan headset operator cyan, kotak perkakas P3K IT palang hijau, obeng elektrik multi-bit, dan senyum ramah solutif 24/7"
+      aria-label="Maskot IT Support — The Fixer: Papan penunjuk jalan neo-brutalism kuning bertema Dokter IT dengan cermin kepala dokter, stetoskop cyan, jas lab palang hijau, kotak P3K IT medis, dan suntikan USB diagnostik"
     >
       <svg
         viewBox="0 0 200 200"
@@ -54,9 +55,13 @@ export function ITSupportMascot({
               0%, 100% { transform: rotate(0deg); }
               50% { transform: rotate(-4deg) translateY(-1px); }
             }
-            @keyframes its-screwdriver {
+            @keyframes its-syringe {
               0%, 100% { transform: rotate(0deg); }
               50% { transform: rotate(5deg) translateY(-2px); }
+            }
+            @keyframes its-stetho-pulse {
+              0%, 100% { transform: scale(1); }
+              50% { transform: scale(1.08); }
             }
             @keyframes its-sparkle {
               0%, 100% { transform: scale(1); opacity: 0.8; }
@@ -70,9 +75,13 @@ export function ITSupportMascot({
               animation: ${isAnimated ? "its-toolbox 3s ease-in-out infinite" : "none"};
               transform-origin: 20px 124px;
             }
-            .its-animated-screwdriver {
-              animation: ${isAnimated ? "its-screwdriver 2.8s ease-in-out infinite" : "none"};
+            .its-animated-syringe {
+              animation: ${isAnimated ? "its-syringe 2.8s ease-in-out infinite" : "none"};
               transform-origin: 172px 120px;
+            }
+            .its-animated-stetho {
+              animation: ${isAnimated ? "its-stetho-pulse 2s ease-in-out infinite" : "none"};
+              transform-origin: 94px 134px;
             }
             .its-animated-sparkle {
               animation: ${isAnimated ? "its-sparkle 1.8s ease-in-out infinite" : "none"};
@@ -135,19 +144,12 @@ export function ITSupportMascot({
           />
 
           {/* ============================================================== */}
-          {/* LAYER 2: BADAN UTAMA PAPAN RAMBU (KUNING NEO-BRUTALISM BATCH 1)*/}
+          {/* LAYER 2: BADAN PAPAN RAMBU KUNING NEO-BRUTALISM (IDENTIK BATCH 1)*/}
           {/* ============================================================== */}
-          {/* Hard Shadow Badan */}
-          <rect
-            x="48"
-            y="56"
-            width="106"
-            height="94"
-            rx="4"
-            fill="#0A0A0A"
-          />
+          {/* Hard Shadow Badan Kotak Hitam Pekat */}
+          <rect x="48" y="56" width="106" height="94" rx="4" fill="#0A0A0A" />
 
-          {/* Badan Papan Rambu Kuning (#FFD60A) */}
+          {/* Badan Rambu Utama Kuning #FFD60A */}
           <rect
             x="42"
             y="50"
@@ -159,7 +161,7 @@ export function ITSupportMascot({
             strokeWidth="4"
           />
 
-          {/* Marka Jalan Putus-Putus Perut (DNA Rambu Jalan) */}
+          {/* Marka Jalan Putus-Putus Perut */}
           <line
             x1="54"
             y1="134"
@@ -175,7 +177,7 @@ export function ITSupportMascot({
           <rect x="124" y="106" width="12" height="7" rx="2" fill="#FF5C8A" />
 
           {/* ============================================================== */}
-          {/* LAYER 3: MATA & EKSPRESI RAMAH BERSAHABAT (BATCH 1 BASE)      */}
+          {/* LAYER 3: MATA & EKSPRESI RAMAH DOKTER IT (IDENTIK BATCH 1)     */}
           {/* ============================================================== */}
           {/* Mata Kiri */}
           <rect
@@ -239,132 +241,131 @@ export function ITSupportMascot({
           />
 
           {/* ============================================================== */}
-          {/* LAYER 4: KERAH POLO TEKNISI PUTIH & BADGE "24/7 FIX"          */}
+          {/* LAYER 4: JAS LAB DOKTER PUTIH & STETOSKOP MELINGKAR DI DADA     */}
           {/* ============================================================== */}
+          {/* Lapel Kerah Jas Lab Dokter Putih */}
           <polygon
-            points="76,144 94,144 86,132"
+            points="74,144 94,144 84,130"
             fill="#FFFFFF"
             stroke="#0A0A0A"
             strokeWidth="2.5"
             strokeLinejoin="round"
           />
           <polygon
-            points="112,144 94,144 102,132"
+            points="114,144 94,144 104,130"
             fill="#FFFFFF"
             stroke="#0A0A0A"
             strokeWidth="2.5"
             strokeLinejoin="round"
-          />
-          {/* Kancing Kerah Polo Cyan */}
-          <rect
-            x="91"
-            y="132"
-            width="7"
-            height="6"
-            fill="#00F0FF"
-            stroke="#0A0A0A"
-            strokeWidth="2"
           />
 
-          {/* Badge "24/7 FIX" di Dada Kanan */}
+          {/* Pin Saku Jas Dokter: Palang Hijau P3K IT */}
           <rect
-            x="112"
+            x="116"
             y="126"
-            width="26"
-            height="13"
-            rx="2.5"
-            fill="#00F0FF"
+            width="18"
+            height="14"
+            rx="2"
+            fill="#FFFFFF"
             stroke="#0A0A0A"
-            strokeWidth="2"
+            strokeWidth="1.8"
           />
-          <text
-            x="125"
-            y="135"
-            fill="#0A0A0A"
-            fontSize="6.5"
-            fontWeight="900"
-            textAnchor="middle"
-            fontFamily="monospace"
-          >
-            24/7
-          </text>
+          {/* Palang Hijau Neon (#2EE59D) di Saku Dokter */}
+          <rect x="123" y="128" width="4" height="10" fill="#2EE59D" />
+          <rect x="120" y="131" width="10" height="4" fill="#2EE59D" />
 
-          {/* Selempang Tali Kabel USB-C Melingkar di Dada */}
+          {/* Tabung Stetoskop Melingkar dari Leher ke Dada */}
+          {/* Bayangan Tabung */}
           <path
-            d="M 46 66 Q 74 96 98 138"
+            d="M 64 64 C 44 98 72 136 94 134 C 116 136 144 98 126 64"
             stroke="#0A0A0A"
-            strokeWidth="4"
-            fill="none"
-          />
-          <path
-            d="M 46 66 Q 74 96 98 138"
-            stroke="#00F0FF"
-            strokeWidth="2"
-            fill="none"
-            strokeDasharray="4 3"
-          />
-
-          {/* ============================================================== */}
-          {/* LAYER 5: HEADSET OPERATOR IT MELENGKUNG DI KEPALA              */}
-          {/* ============================================================== */}
-          {/* Bando Headset Atas Melengkung Kuat */}
-          <path
-            d="M 38 72 C 34 22 156 22 152 72"
-            stroke="#0A0A0A"
-            strokeWidth="6"
+            strokeWidth="5"
             fill="none"
             strokeLinecap="round"
           />
+          {/* Tabung Cyan (#00F0FF) Stetoskop */}
           <path
-            d="M 38 72 C 34 24 156 24 152 72"
+            d="M 64 64 C 44 98 72 136 94 134 C 116 136 144 98 126 64"
+            stroke="#00F0FF"
+            strokeWidth="3"
+            fill="none"
+            strokeLinecap="round"
+          />
+
+          {/* Chest Piece / Bell Stetoskop Menempel di Dada (Animated Pulse) */}
+          <g className="its-animated-stetho">
+            {/* Hard Shadow Bell Stetoskop */}
+            <circle cx="95" cy="135" r="7" fill="#0A0A0A" />
+            {/* Bell Logam Perak / Putih */}
+            <circle
+              cx="94"
+              cy="134"
+              r="7"
+              fill="#FFFFFF"
+              stroke="#0A0A0A"
+              strokeWidth="2.5"
+            />
+            {/* Ring Dalam Cyan */}
+            <circle cx="94" cy="134" r="4" fill="#00F0FF" stroke="#0A0A0A" strokeWidth="1.2" />
+            <circle cx="94" cy="134" r="1.5" fill="#FFFFFF" />
+          </g>
+
+          {/* ============================================================== */}
+          {/* LAYER 5: HEAD MIRROR DOKTER (CERMIN BULAT DOKTER DI DAHI)       */}
+          {/* ============================================================== */}
+          {/* Tali Ikat Kepala Elastis Hitam di Dahi */}
+          <path
+            d="M 42 56 Q 95 50 148 56"
+            stroke="#0A0A0A"
+            strokeWidth="4.5"
+            fill="none"
+          />
+          <path
+            d="M 42 56 Q 95 50 148 56"
+            stroke="#00F0FF"
+            strokeWidth="1.5"
+            fill="none"
+          />
+
+          {/* Gagang / Engsel Cermin Kepala */}
+          <rect x="74" y="44" width="6" height="12" rx="1" fill="#0A0A0A" />
+
+          {/* Hard Shadow Cermin Kepala */}
+          <circle cx="78" cy="38" r="14" fill="#0A0A0A" />
+
+          {/* Piringan Cermin Kepala Logam Perak (#FFFFFF) */}
+          <circle
+            cx="76"
+            cy="36"
+            r="14"
+            fill="#FFFFFF"
+            stroke="#0A0A0A"
+            strokeWidth="3"
+          />
+          {/* Ring Cermin Dalam Cyan Transparan */}
+          <circle
+            cx="76"
+            cy="36"
+            r="10.5"
+            fill="#00F0FF"
+            fillOpacity="0.25"
+            stroke="#0A0A0A"
+            strokeWidth="1.5"
+          />
+          {/* Garis Kilau Refleksi Cermin Putih */}
+          <path
+            d="M 70 30 Q 76 33 80 42"
             stroke="#FFFFFF"
             strokeWidth="2"
-            fill="none"
             strokeLinecap="round"
-          />
-
-          {/* Earpad Kiri Cyan (#00F0FF) */}
-          <rect x="29" y="66" width="13" height="22" rx="4" fill="#0A0A0A" />
-          <rect
-            x="26"
-            y="63"
-            width="13"
-            height="22"
-            rx="4"
-            fill="#00F0FF"
-            stroke="#0A0A0A"
-            strokeWidth="3"
-          />
-          <rect x="28" y="67" width="4" height="14" rx="2" fill="#FFFFFF" />
-
-          {/* Earpad Kanan Cyan (#00F0FF) */}
-          <rect x="151" y="66" width="13" height="22" rx="4" fill="#0A0A0A" />
-          <rect
-            x="148"
-            y="63"
-            width="13"
-            height="22"
-            rx="4"
-            fill="#00F0FF"
-            stroke="#0A0A0A"
-            strokeWidth="3"
-          />
-          <rect x="155" y="67" width="4" height="14" rx="2" fill="#FFFFFF" />
-
-          {/* Tangkai Mikrofon Fleksibel Melengkung ke Mulut */}
-          <path
-            d="M 150 82 Q 138 114 112 114"
-            stroke="#0A0A0A"
-            strokeWidth="3.5"
             fill="none"
-            strokeLinecap="round"
           />
-          {/* Spons Kepala Mic Pink (#FF5C8A) */}
-          <circle cx="110" cy="114" r="4.5" fill="#FF5C8A" stroke="#0A0A0A" strokeWidth="2" />
-          <circle cx="111.5" cy="112.5" r="1.5" fill="#FFFFFF" />
+          {/* Lubang Intip Cermin Tengah Dokter Hitam */}
+          <circle cx="76" cy="36" r="3.5" fill="#0A0A0A" />
+          <circle cx="75" cy="35" r="1" fill="#FFFFFF" />
 
           {/* ============================================================== */}
-          {/* LAYER 6: TANGAN KIRI & KOTAK PERKAKAS DARURAT P3K IT (TOOLBOX) */}
+          {/* LAYER 6: TANGAN KIRI & KOTAK PERKAKAS DARURAT P3K IT (MEDIC KIT)*/}
           {/* ============================================================== */}
           <g className="its-animated-toolbox">
             {/* Handle Toolbox Koper Logam */}
@@ -424,9 +425,9 @@ export function ITSupportMascot({
           </g>
 
           {/* ============================================================== */}
-          {/* LAYER 7: TANGAN KANAN & OBENG ELEKTRIK MULTI-BIT DENGAN KABEL   */}
+          {/* LAYER 7: TANGAN KANAN & SUNTIKAN USB SIBER / TERMOMETER DOKTER IT*/}
           {/* ============================================================== */}
-          <g className="its-animated-screwdriver">
+          <g className="its-animated-syringe">
             {/* Lengan Kanan Menjulur */}
             <path
               d="M 148 110 Q 164 114 172 120"
@@ -436,69 +437,97 @@ export function ITSupportMascot({
               fill="none"
             />
 
-            {/* Kabel Spiral USB Melingkar dari Pangkal Obeng */}
+            {/* Kabel Spiral USB Cyan Melingkar dari Pangkal Suntikan */}
             <path
-              d="M 182 124 Q 192 130 186 138 Q 180 146 188 152"
+              d="M 182 126 Q 192 132 186 140 Q 180 148 188 154"
               stroke="#0A0A0A"
               strokeWidth="2.5"
               fill="none"
             />
             <path
-              d="M 182 124 Q 192 130 186 138 Q 180 146 188 152"
+              d="M 182 126 Q 192 132 186 140 Q 180 148 188 154"
               stroke="#00F0FF"
               strokeWidth="1.2"
               fill="none"
             />
-            <rect x="186" y="150" width="7" height="5" rx="1" fill="#FFFFFF" stroke="#0A0A0A" strokeWidth="1" />
+            <rect x="186" y="152" width="7" height="5" rx="1" fill="#FFFFFF" stroke="#0A0A0A" strokeWidth="1" />
 
-            {/* Hard Shadow Obeng Elektrik */}
+            {/* Hard Shadow Suntikan USB Siber */}
             <g transform="rotate(22 172 96)">
-              <rect x="171" y="82" width="11" height="34" rx="2.5" fill="#0A0A0A" />
+              <rect x="170" y="78" width="12" height="36" rx="2.5" fill="#0A0A0A" />
             </g>
 
-            {/* Handle Obeng Elektrik Cyan (#00F0FF) */}
+            {/* Bodi Silinder Kaca Suntikan USB Siber Transparan */}
             <g transform="rotate(22 172 96)">
+              {/* Tabung Silinder Kaca Transparan */}
               <rect
-                x="168"
-                y="80"
-                width="11"
-                height="34"
+                x="167"
+                y="76"
+                width="12"
+                height="36"
                 rx="2.5"
-                fill="#00F0FF"
+                fill="#FFFFFF"
+                fillOpacity="0.8"
                 stroke="#0A0A0A"
                 strokeWidth="2.5"
               />
-              {/* Grip Karet Hitam Ergonomis */}
-              <line x1="168" y1="90" x2="179" y2="90" stroke="#0A0A0A" strokeWidth="2" />
-              <line x1="168" y1="96" x2="179" y2="96" stroke="#0A0A0A" strokeWidth="2" />
-              <line x1="168" y1="102" x2="179" y2="102" stroke="#0A0A0A" strokeWidth="2" />
 
-              {/* Collet / Chuck Kepala Logam Kuning */}
-              <polygon
-                points="168,80 179,80 177,73 170,73"
-                fill="#FFD60A"
-                stroke="#0A0A0A"
-                strokeWidth="2"
-              />
-              {/* Mata Bit Obeng Baja Perak */}
+              {/* Cairan Serum Pemulihan Sistem Cyber Mint (#2EE59D) di Tabung */}
               <rect
-                x="171.5"
-                y="59"
-                width="4"
-                height="14"
+                x="169"
+                y="85"
+                width="8"
+                height="22"
+                rx="1"
+                fill="#2EE59D"
+                fillOpacity="0.75"
+              />
+
+              {/* Garis Skala Dosis / Indikator mL Digital */}
+              <line x1="167" y1="88" x2="171" y2="88" stroke="#0A0A0A" strokeWidth="1.2" />
+              <line x1="167" y1="94" x2="173" y2="94" stroke="#0A0A0A" strokeWidth="1.5" />
+              <line x1="167" y1="100" x2="171" y2="100" stroke="#0A0A0A" strokeWidth="1.2" />
+
+              {/* Plunger / Pendorong Suntikan Atas Oranye (#FF8A3D) */}
+              <rect
+                x="170.5"
+                y="112"
+                width="5"
+                height="8"
+                fill="#FF8A3D"
+                stroke="#0A0A0A"
+                strokeWidth="1.5"
+              />
+              <rect
+                x="166"
+                y="120"
+                width="14"
+                height="4"
+                rx="1"
+                fill="#FF8A3D"
+                stroke="#0A0A0A"
+                strokeWidth="1.5"
+              />
+
+              {/* Konektor Jarum USB / Probe Diagnostik Perak */}
+              <rect
+                x="170.5"
+                y="63"
+                width="5"
+                height="13"
                 fill="#FFFFFF"
                 stroke="#0A0A0A"
                 strokeWidth="1.5"
               />
-              {/* Ujung Bit Obeng Philips Cross (+) */}
-              <polygon points="171.5,59 175.5,59 173.5,55" fill="#0A0A0A" />
+              {/* Ujung Jarum Probe Tirus / Pin Emas */}
+              <polygon points="170.5,63 175.5,63 173,56" fill="#FFD60A" stroke="#0A0A0A" strokeWidth="1" />
             </g>
 
-            {/* Sparkle Kilau Servis di Ujung Obeng */}
+            {/* Sparkle Kilau Penyembuhan di Ujung Probe Jarum */}
             <g className="its-animated-sparkle">
               <polygon
                 points="156,54 158,58 162,59 158,61 156,65 154,61 150,59 154,58"
-                fill="#00F0FF"
+                fill="#2EE59D"
               />
               <circle cx="156" cy="59" r="1.5" fill="#FFFFFF" />
             </g>

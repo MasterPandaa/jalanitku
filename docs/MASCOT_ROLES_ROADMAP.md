@@ -85,28 +85,28 @@ Ke-21 role IT dikelompokkan ke dalam 7 batch tematik yang masing-masing terdiri 
 - **Metafora Karakter**: Sang pemburu kutu teliti yang menjelajahi celah kode untuk memastikan kesempurnaan setiap rilis software.
 - **Atribut Visual & Props**:
   - **Topi Safari Hunter & Lampu Senter PASS**: Topi petualang safari oranye (`#FF8A3D`) dengan pita cokelat safari dan senter kepala berstatus hijau neon (`#2EE59D`) checklist PASS berpendar beam neon.
-  - **Kaca Pembesar Scanner**: Lensa pembesar cyan oranye berkilau dengan target crosshair indikator deteksi bug digital.
-  - **Jaring Penangkap Cyber Bug**: Jaring serangga kawat digital dengan seekor robot kepik merah tertangkap pusing di dalam jaring.
+  - **Toples Kaca Spesimen Bug**: Toples kaca bening transparan neo-brutalism dengan tutup ulir oranye di tangan kanan, mengurung seekor robot kepik siber merah mini (`#FF5C8A`) yang berhasil ditangkap.
+  - **Jaring Serangga Hunter Digital**: Jaring serangga bergagang kayu di tangan kiri siap menangkap bug baru di celah kode.
   - **Kerah Safari & Pin Badge TEST✓**: Kerah kemeja petualang oranye dengan pin badge checklist verifikasi sistem rilis bebas bug.
 - **Palet Warna**: Kuning Rambu `#FFD60A`, Oranye Safari `#FF8A3D`, Hijau Neon `#2EE59D`, Cyan `#00F0FF`, Tinta `#0A0A0A`.
 
 #### 5. IT Support — "The Fixer"
-- **Metafora Karakter**: Penyelamat operasional harian yang selalu sigap menyelesaikan kendala hardware, software, dan konektivitas pengguna dengan ramah.
+- **Metafora Karakter**: Sang Dokter IT / Sistem Medic penyelamat operasional harian yang selalu sigap mendiagnosis dan merehabilitasi kendala sistem dengan ramah.
 - **Atribut Visual & Props**:
-  - **Headset Operator Ramah**: Headset komunikasi cyan (`#00F0FF`) dengan bantalan earpad empuk, mic melengkung ke mulut, dan senyum ramah solutif.
-  - **Kotak Perkakas P3K IT (First Aid Kit)**: Toolbox darurat putih bersih berlambang palang hijau neon (`#2EE59D`) pertolongan pertama gangguan sistem.
-  - **Obeng Multi-Bit Elektrik**: Obeng elektrik cyan bermata bit baja perak berkilau dengan lilitan kabel USB spiral.
-  - **Kerah Polo & Badge 24/7 FIX**: Kerah polo teknisi putih bersih dengan badge identitas layanan pemulihan 24/7.
-- **Palet Warna**: Kuning Rambu `#FFD60A`, Cyan Operator `#00F0FF`, Putih Bersih `#FFFFFF`, Hijau Neon `#2EE59D`, Tinta `#0A0A0A`.
+  - **Stetoskop Dokter IT Melingkar**: Tabung stetoskop fleksibel cyan (`#00F0FF`) melingkar di leher dengan chest piece / bell logam perak menempel di dada untuk mendengar detak kesehatan sistem.
+  - **Cermin Kepala Medis (Head Mirror)**: Cermin bulat dokter reflektif dengan tali kepala pemantau titik kerusakan perangkat keras dan lunak.
+  - **Suntikan USB Siber / Diagnostic Probe**: Suntikan siber transparan berisi serum pemulihan sistem hijau mint (`#2EE59D`) dengan konektor jarum probe USB dan kabel spiral cyan di tangan kanan.
+  - **Kotak P3K IT Medis & Jas Lab Dokter**: Kotak pertolongan pertama koper putih berpalang hijau neon di tangan kiri serta kerah jas lab putih berpin saku medis.
+- **Palet Warna**: Kuning Rambu `#FFD60A`, Cyan Medis `#00F0FF`, Putih Jas `#FFFFFF`, Hijau Neon `#2EE59D`, Oranye `#FF8A3D`, Tinta `#0A0A0A`.
 
 #### 6. Network Engineer — "The Connector"
-- **Metafora Karakter**: Penenun infrastruktur kabel dan pengatur jalur denyut paket data lintas benua tanpa jeda.
+- **Metafora Karakter**: Penenun infrastruktur kabel dan penyambung serat data (*network splicer*) yang merekatkan kembali denyut paket data lintas benua yang terputus.
 - **Atribut Visual & Props**:
   - **Antena Router Kembar**: Sepasang antena di kepala dengan pancaran gelombang radio sinyal Wi-Fi konsentris cyan (`#00F0FF`).
-  - **Kabel LAN RJ45 Emas**: Kabel jaringan fleksibel dengan kepala konektor transparan dan 8 pin tembaga emas bercahaya data link.
+  - **Penyambungan Kabel Terputus (Cable Splicing)**: Tangan kiri dan kanan memegang dua ujung kabel jaringan yang terputus dengan serat kawat tembaga emas dan cyan mencuat yang sedang didekatkan untuk disambung kembali.
+  - **Percikan Data Spark Link**: Efek kilau loncatan listrik dan data spark kuning (`#FFD60A`) serta mint (`#2EE59D`) di antara kedua ujung kabel yang sedang disambung.
   - **Visor Serat Optik HUD**: Kacamata visor cyan futuristik pemantau bandwidth traffic 10G dan status data stream.
-  - **Tester Kabel LAN 8-LED**: Alat penguji kabel jaringan di tangan kiri dengan deretan 8 LED indikator hijau mini yang menyala aktif.
-- **Palet Warna**: Kuning Rambu `#FFD60A`, Cyan Jaringan `#00F0FF`, Hijau Link `#2EE59D`, Emas Pin `#FFD60A` / `#FF8A3D`, Tinta `#0A0A0A`.
+- **Palet Warna**: Kuning Rambu `#FFD60A`, Cyan Jaringan `#00F0FF`, Hijau Link `#2EE59D`, Emas Tembaga `#FFD60A` / `#FF8A3D`, Tinta `#0A0A0A`.
 
 ---
 

@@ -1,7 +1,7 @@
 <svg viewBox="0 0 200 200" width="200" height="200" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- MASKOT NETWORK ENGINEER — "THE CONNECTOR" -->
+  <!-- MASKOT NETWORK ENGINEER — "THE CONNECTOR / THE SPLICER" -->
   <!-- Proyek: JalanITku · Sutradara Visual: Matatabi -->
-  <!-- Standar: 100% Konsisten Base Model Batch 1 dengan Aksesoris Khas Network Engineer -->
+  <!-- Standar: 100% Konsisten Base Model Batch 1 dengan Kedua Tangan Memegang Ujung Kabel Terputus yang Sedang Disambung Kembali (Splicing Sparks) -->
 
   <!-- LAYER 1: KAKI & SEPATU HITAM DENGAN SOL PUTIH (IDENTIK BATCH 1) -->
   <rect x="68" y="154" width="22" height="24" fill="#0A0A0A" />
@@ -69,54 +69,47 @@
   <circle cx="128" cy="22" r="5" fill="#00F0FF" stroke="#0A0A0A" stroke-width="2.5" />
   <circle cx="128" cy="22" r="1.5" fill="#FFFFFF" />
 
+  <!-- Kerah Kemeja Teknisi Cyan -->
   <polygon points="78,144 94,144 88,132" fill="#00F0FF" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
   <polygon points="110,144 94,144 100,132" fill="#00F0FF" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
   <rect x="91" y="132" width="7" height="6" fill="#2EE59D" stroke="#0A0A0A" stroke-width="2" />
 
-  <!-- LAYER 6: TANGAN KIRI & TESTER KABEL JARINGAN (CABLE TESTER) -->
-  <rect x="5" y="94" width="22" height="44" rx="3.5" fill="#0A0A0A" />
-  <rect x="2" y="91" width="22" height="44" rx="3.5" fill="#0A0A0A" stroke="#0A0A0A" stroke-width="2" />
-  <rect x="4" y="93" width="18" height="40" rx="2.5" fill="#FF8A3D" />
+  <!-- LAYER 6: TANGAN KIRI & KABEL TERPUTUS SISI A (SPLICING LEFT) -->
+  <path d="M 44 136 C 30 136 28 126 62 122" stroke="#0A0A0A" stroke-width="7" fill="none" stroke-linecap="round" />
+  <path d="M 44 136 C 30 136 28 126 62 122" stroke="#00F0FF" stroke-width="4.5" fill="none" stroke-linecap="round" />
 
-  <text x="13" y="100" fill="#0A0A0A" font-size="4.5" font-weight="bold" text-anchor="middle" font-family="monospace">LAN</text>
+  <path d="M 62 122 L 80 123" stroke="#0A0A0A" stroke-width="6" fill="none" />
+  <path d="M 62 122 L 80 123" stroke="#00F0FF" stroke-width="3.5" fill="none" />
 
-  <circle cx="9" cy="104" r="1.5" fill="#2EE59D" stroke="#0A0A0A" stroke-width="0.8" />
-  <circle cx="16" cy="104" r="1.5" fill="#2EE59D" stroke="#0A0A0A" stroke-width="0.8" />
-  <circle cx="9" cy="110" r="1.5" fill="#2EE59D" stroke="#0A0A0A" stroke-width="0.8" />
-  <circle cx="16" cy="110" r="1.5" fill="#2EE59D" stroke="#0A0A0A" stroke-width="0.8" />
-  <circle cx="9" cy="116" r="1.5" fill="#2EE59D" stroke="#0A0A0A" stroke-width="0.8" />
-  <circle cx="16" cy="116" r="1.5" fill="#2EE59D" stroke="#0A0A0A" stroke-width="0.8" />
-  <circle cx="9" cy="122" r="1.5" fill="#2EE59D" stroke="#0A0A0A" stroke-width="0.8" />
-  <circle cx="16" cy="122" r="1.5" fill="#2EE59D" stroke="#0A0A0A" stroke-width="0.8" />
+  <!-- Serat Kawat Tembaga / Serat Optik Mencar Kiri -->
+  <line x1="80" y1="121" x2="88" y2="119" stroke="#FFD60A" stroke-width="1.8" stroke-linecap="round" />
+  <line x1="80" y1="123" x2="90" y2="123" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" />
+  <line x1="80" y1="125" x2="87" y2="127" stroke="#00F0FF" stroke-width="1.8" stroke-linecap="round" />
 
-  <circle cx="12.5" cy="128" r="1.8" fill="#00F0FF" stroke="#0A0A0A" stroke-width="0.8" />
+  <path d="M 42 110 Q 52 116 68 122" stroke="#0A0A0A" stroke-width="6" stroke-linecap="round" fill="none" />
+  <circle cx="68" cy="122" r="6.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="3.5" />
 
-  <path d="M 42 108 Q 28 114 18 122" stroke="#0A0A0A" stroke-width="6" stroke-linecap="round" fill="none" />
-  <circle cx="18" cy="122" r="6.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="3.5" />
+  <!-- LAYER 7: TANGAN KANAN & KABEL TERPUTUS SISI B (SPLICING RIGHT) -->
+  <path d="M 144 136 C 158 136 160 126 126 122" stroke="#0A0A0A" stroke-width="7" fill="none" stroke-linecap="round" />
+  <path d="M 144 136 C 158 136 160 126 126 122" stroke="#00F0FF" stroke-width="4.5" fill="none" stroke-linecap="round" />
 
-  <!-- LAYER 7: TANGAN KANAN & KEPALA KABEL LAN RJ45 EMAS -->
-  <path d="M 144 136 C 160 136 166 126 174 122" stroke="#00F0FF" stroke-width="5" fill="none" stroke-linecap="round" />
-  <path d="M 144 136 C 160 136 166 126 174 122" stroke="#0A0A0A" stroke-width="1.2" fill="none" stroke-dasharray="4 3" />
+  <path d="M 126 122 L 108 123" stroke="#0A0A0A" stroke-width="6" fill="none" />
+  <path d="M 126 122 L 108 123" stroke="#00F0FF" stroke-width="3.5" fill="none" />
 
-  <path d="M 148 108 Q 164 114 174 122" stroke="#0A0A0A" stroke-width="6" stroke-linecap="round" fill="none" />
+  <!-- Serat Kawat Tembaga / Serat Optik Mencar Kanan -->
+  <line x1="108" y1="121" x2="100" y2="119" stroke="#FFD60A" stroke-width="1.8" stroke-linecap="round" />
+  <line x1="108" y1="123" x2="98" y2="123" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" />
+  <line x1="108" y1="125" x2="101" y2="127" stroke="#00F0FF" stroke-width="1.8" stroke-linecap="round" />
 
-  <rect x="174" y="96" width="18" height="22" rx="2.5" fill="#0A0A0A" />
-  <rect x="171" y="93" width="18" height="22" rx="2.5" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.5" />
-  <polygon points="189,97 195,103 189,107" fill="#00F0FF" stroke="#0A0A0A" stroke-width="2" />
+  <path d="M 148 110 Q 138 116 122 122" stroke="#0A0A0A" stroke-width="6" stroke-linecap="round" fill="none" />
+  <circle cx="122" cy="122" r="6.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="3.5" />
 
-  <line x1="173" y1="95" x2="173" y2="100" stroke="#FFD60A" stroke-width="1.2" />
-  <line x1="175" y1="95" x2="175" y2="100" stroke="#FF8A3D" stroke-width="1.2" />
-  <line x1="177" y1="95" x2="177" y2="100" stroke="#FFD60A" stroke-width="1.2" />
-  <line x1="179" y1="95" x2="179" y2="100" stroke="#FF8A3D" stroke-width="1.2" />
-  <line x1="181" y1="95" x2="181" y2="100" stroke="#FFD60A" stroke-width="1.2" />
-  <line x1="183" y1="95" x2="183" y2="100" stroke="#FF8A3D" stroke-width="1.2" />
-  <line x1="185" y1="95" x2="185" y2="100" stroke="#FFD60A" stroke-width="1.2" />
-  <line x1="187" y1="95" x2="187" y2="100" stroke="#FF8A3D" stroke-width="1.2" />
+  <!-- LAYER 8: PERCIKAN SPARK LISTRIK / DATA RECONNECT DI CELAH KABEL -->
+  <polygon points="94,116 96,122 102,123 96,125 94,131 92,125 86,123 92,122" fill="#FFD60A" stroke="#0A0A0A" stroke-width="1.2" />
+  <circle cx="94" cy="123.5" r="2" fill="#FFFFFF" />
 
-  <polygon points="180,85 182,88 186,89 182,90 180,94 178,90 174,89 178,88" fill="#2EE59D" />
-  <circle cx="180" cy="89" r="1.5" fill="#FFFFFF" />
-
-  <circle cx="174" cy="122" r="6.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="3.5" />
+  <polygon points="99,117 100,119 103,119.5 100,120.5 99,122.5 98,120.5 96,119.5 98,119" fill="#00F0FF" />
+  <polygon points="89,126 90,128 92,128.5 90,129.5 89,131.5 88,129.5 86,128.5 88,128" fill="#FF8A3D" />
 
   <!-- Aksesori Melayang Tambahan -->
   <circle cx="34" cy="42" r="2" fill="#00F0FF" />

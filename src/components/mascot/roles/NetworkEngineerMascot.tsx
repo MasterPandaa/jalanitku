@@ -12,13 +12,14 @@ export interface NetworkEngineerMascotProps {
 
 /**
  * Maskot Role: Network Engineer — "The Connector"
- * Identitas: Sang Penenun Infrastruktur Jaringan & Pengatur Arus Paket Data
+ * Identitas: Sang Penenun Jaringan & Penyambung Serat Kabel (Network Splicer)
  * Ciri Khas: Antena router kembar di kepala dengan gelombang sinyal Wi-Fi konsentris cyan (#00F0FF),
- * kacamata visor serat optik HUD data stream 10G, tangan kanan memegang kepala kabel LAN RJ45 transparan
- * dengan 8 pin tembaga emas berkilau, dan tangan kiri memegang alat tester kabel LAN dengan 8 LED hijau mini.
+ * kacamata visor serat optik HUD data stream 10G, tangan kiri dan tangan kanan memegang dua ujung kabel
+ * yang terputus dengan serat tembaga mencuat dan percikan data spark kuning-cyan yang saling didekatkan
+ * untuk disambung kembali (reconnect / network splicing).
  *
- * Base Anatomi: 100% konsisten dengan Base Model Batch 1 (kaki sol putih, tubuh kuning rambu 106x94,
- * marka jalan putus-putus, pipi pink, mata ekspresif, mulut senyum, tangan neo-brutalist).
+ * Base Anatomi: 100% konsisten dengan Base Model Batch 1 (kaki sol putih y=170, tubuh kuning rambu 106x94,
+ * marka jalan putus-putus perut, pipi pink, mata ekspresif, mulut senyum, kepalan tangan kuning #FFD60A).
  */
 export function NetworkEngineerMascot({
   size = 200,
@@ -34,7 +35,7 @@ export function NetworkEngineerMascot({
       className={`relative inline-flex items-center justify-center select-none group ${className}`}
       style={{ width: size, height: size }}
       role="img"
-      aria-label="Maskot Network Engineer — The Connector: Papan penunjuk jalan neo-brutalism kuning dengan antena router kembar sinyal Wi-Fi, visor serat optik HUD data stream, kabel LAN RJ45 emas bercahaya, dan tester kabel 8 LED hijau"
+      aria-label="Maskot Network Engineer — The Connector: Papan penunjuk jalan neo-brutalism kuning dengan antena router sinyal Wi-Fi, visor serat optik HUD, dan kedua tangan memegang dua ujung kabel terputus yang sedang disambung kembali dengan percikan data spark"
     >
       <svg
         viewBox="0 0 200 200"
@@ -54,17 +55,17 @@ export function NetworkEngineerMascot({
               0%, 100% { opacity: 0.35; transform: scale(0.96); }
               50% { opacity: 1; transform: scale(1.04); }
             }
-            @keyframes net-sparkle {
-              0%, 100% { opacity: 0.8; transform: scale(1) rotate(0deg); }
-              50% { opacity: 1; transform: scale(1.25) rotate(10deg); }
+            @keyframes net-cable-left {
+              0%, 100% { transform: translateX(0px) rotate(0deg); }
+              50% { transform: translateX(2.5px) rotate(2deg); }
             }
-            @keyframes net-rj45 {
-              0%, 100% { transform: rotate(0deg); }
-              50% { transform: rotate(4deg) translateY(-2px); }
+            @keyframes net-cable-right {
+              0%, 100% { transform: translateX(0px) rotate(0deg); }
+              50% { transform: translateX(-2.5px) rotate(-2deg); }
             }
-            @keyframes net-tester {
-              0%, 100% { transform: rotate(0deg); }
-              50% { transform: rotate(-3deg) translateY(-1px); }
+            @keyframes net-spark-burst {
+              0%, 100% { opacity: 0.85; transform: scale(0.9) rotate(0deg); }
+              50% { opacity: 1; transform: scale(1.3) rotate(15deg); }
             }
             .net-animated-body {
               animation: ${isAnimated ? "net-float 3.5s ease-in-out infinite" : "none"};
@@ -74,17 +75,17 @@ export function NetworkEngineerMascot({
               animation: ${isAnimated ? "net-signal-pulse 2s ease-in-out infinite" : "none"};
               transform-origin: 95px 24px;
             }
-            .net-animated-rj45 {
-              animation: ${isAnimated ? "net-rj45 3s ease-in-out infinite" : "none"};
-              transform-origin: 174px 122px;
+            .net-animated-cable-left {
+              animation: ${isAnimated ? "net-cable-left 2.4s ease-in-out infinite" : "none"};
+              transform-origin: 42px 110px;
             }
-            .net-animated-tester {
-              animation: ${isAnimated ? "net-tester 3.2s ease-in-out infinite" : "none"};
-              transform-origin: 18px 122px;
+            .net-animated-cable-right {
+              animation: ${isAnimated ? "net-cable-right 2.4s ease-in-out infinite" : "none"};
+              transform-origin: 148px 110px;
             }
-            .net-animated-sparkle {
-              animation: ${isAnimated ? "net-sparkle 1.8s ease-in-out infinite" : "none"};
-              transform-origin: 179px 85px;
+            .net-animated-spark {
+              animation: ${isAnimated ? "net-spark-burst 1.2s ease-in-out infinite" : "none"};
+              transform-origin: 96px 124px;
             }
           `}</style>
         </defs>
@@ -143,19 +144,12 @@ export function NetworkEngineerMascot({
           />
 
           {/* ============================================================== */}
-          {/* LAYER 2: BADAN UTAMA PAPAN RAMBU (KUNING NEO-BRUTALISM BATCH 1)*/}
+          {/* LAYER 2: BADAN PAPAN RAMBU KUNING NEO-BRUTALISM (IDENTIK BATCH 1)*/}
           {/* ============================================================== */}
-          {/* Hard Shadow Badan */}
-          <rect
-            x="48"
-            y="56"
-            width="106"
-            height="94"
-            rx="4"
-            fill="#0A0A0A"
-          />
+          {/* Hard Shadow Badan Kotak Hitam Pekat */}
+          <rect x="48" y="56" width="106" height="94" rx="4" fill="#0A0A0A" />
 
-          {/* Badan Papan Rambu Kuning (#FFD60A) */}
+          {/* Badan Rambu Utama Kuning #FFD60A */}
           <rect
             x="42"
             y="50"
@@ -167,7 +161,7 @@ export function NetworkEngineerMascot({
             strokeWidth="4"
           />
 
-          {/* Marka Jalan Putus-Putus Perut (DNA Rambu Jalan) */}
+          {/* Marka Jalan Putus-Putus Perut */}
           <line
             x1="54"
             y1="134"
@@ -183,7 +177,7 @@ export function NetworkEngineerMascot({
           <rect x="124" y="106" width="12" height="7" rx="2" fill="#FF5C8A" />
 
           {/* ============================================================== */}
-          {/* LAYER 3: MATA & MULUT DASAR (BATCH 1 BASE)                    */}
+          {/* LAYER 3: MATA & EKSPRESI FOKUS PENYAMBUNG KABEL (IDENTIK BATCH 1)*/}
           {/* ============================================================== */}
           {/* Mata Kiri */}
           <rect
@@ -200,7 +194,7 @@ export function NetworkEngineerMascot({
           <rect x="64" y="81" width="11" height="13" rx="2" fill="#0A0A0A" />
           {/* Kilau Putih Sinar Mata */}
           <circle cx="67" cy="84" r="1.5" fill="#FFFFFF" />
-          {/* Kilau Cyan Link Aktif */}
+          {/* Kilau Cyan Jaringan */}
           <circle cx="70" cy="88" r="1.2" fill="#00F0FF" />
 
           {/* Mata Kanan */}
@@ -218,10 +212,10 @@ export function NetworkEngineerMascot({
           <rect x="108" y="81" width="11" height="13" rx="2" fill="#0A0A0A" />
           {/* Kilau Putih Sinar Mata */}
           <circle cx="111" cy="84" r="1.5" fill="#FFFFFF" />
-          {/* Kilau Cyan Link Aktif */}
+          {/* Kilau Cyan Jaringan */}
           <circle cx="114" cy="88" r="1.2" fill="#00F0FF" />
 
-          {/* Alis Fokus Teknisi Jaringan */}
+          {/* Alis Fokus Presisi */}
           <line
             x1="58"
             y1="71"
@@ -241,7 +235,7 @@ export function NetworkEngineerMascot({
             strokeLinecap="round"
           />
 
-          {/* Mulut Senyum Percaya Diri */}
+          {/* Mulut Senyum Percaya Diri (Reconnect Sukses!) */}
           <path
             d="M 87 114 Q 94 123 102 114"
             stroke="#0A0A0A"
@@ -253,14 +247,21 @@ export function NetworkEngineerMascot({
           {/* ============================================================== */}
           {/* LAYER 4: KACAMATA VISOR SERAT OPTIK HUD DATA STREAM CYAN       */}
           {/* ============================================================== */}
-          {/* Tangkai Frame Kacamata Visor */}
+          {/* Tangkai Visor Samping */}
           <line x1="42" y1="84" x2="52" y2="84" stroke="#0A0A0A" strokeWidth="4" />
           <line x1="138" y1="84" x2="148" y2="84" stroke="#0A0A0A" strokeWidth="4" />
 
           {/* Hard Shadow Visor */}
-          <rect x="54" y="72" width="86" height="34" rx="4" fill="#0A0A0A" fillOpacity="0.4" />
-
-          {/* Frame Kaca Visor Cyan Semi-Transparan (#00F0FF) */}
+          <rect
+            x="54"
+            y="72"
+            width="86"
+            height="34"
+            rx="4"
+            fill="#0A0A0A"
+            fillOpacity="0.4"
+          />
+          {/* Kaca Lensa Visor Cyan Semi-Transparan */}
           <rect
             x="50"
             y="69"
@@ -272,8 +273,7 @@ export function NetworkEngineerMascot({
             stroke="#0A0A0A"
             strokeWidth="3.5"
           />
-
-          {/* Bar Atas Frame Visor Cyan Solid */}
+          {/* Frame Atas Visor Cyan Solid */}
           <rect
             x="50"
             y="69"
@@ -285,7 +285,7 @@ export function NetworkEngineerMascot({
             strokeWidth="2"
           />
 
-          {/* Indikator LED Data Traffic & Speed di Bar Visor */}
+          {/* Indikator Status HUD Visor */}
           <rect x="56" y="71" width="3" height="3" fill="#2EE59D" />
           <rect x="61" y="71" width="5" height="3" fill="#2EE59D" />
           <rect x="68" y="71" width="7" height="3" fill="#2EE59D" />
@@ -300,7 +300,7 @@ export function NetworkEngineerMascot({
             10G
           </text>
 
-          {/* Kilau Reflektif Serat Optik Putih Diagonal pada Visor */}
+          {/* Garis Kilau Reflektif HUD Visor */}
           <line
             x1="55"
             y1="75"
@@ -325,7 +325,7 @@ export function NetworkEngineerMascot({
           {/* ============================================================== */}
           {/* LAYER 5: ANTENA ROUTER KEMBAR & GELOMBANG SINYAL WI-FI CYAN    */}
           {/* ============================================================== */}
-          {/* Gelombang Radio Sinyal Wi-Fi Konsentris Cyan (#00F0FF) */}
+          {/* Gelombang Sinyal Wi-Fi Konsentris Cyan */}
           <g className="net-animated-signal">
             <path
               d="M 84 32 Q 95 24 106 32"
@@ -404,63 +404,50 @@ export function NetworkEngineerMascot({
           />
 
           {/* ============================================================== */}
-          {/* LAYER 6: TANGAN KIRI & TESTER KABEL JARINGAN (CABLE TESTER)    */}
+          {/* LAYER 6: TANGAN KIRI & KABEL TERPUTUS SISI A (SPLICING LEFT)   */}
           {/* ============================================================== */}
-          <g className="net-animated-tester">
-            {/* Hard Shadow Cable Tester */}
-            <rect x="5" y="94" width="22" height="44" rx="3.5" fill="#0A0A0A" />
-
-            {/* Bodi Alat Tester LAN Hitam */}
-            <rect
-              x="2"
-              y="91"
-              width="22"
-              height="44"
-              rx="3.5"
-              fill="#0A0A0A"
-              stroke="#0A0A0A"
-              strokeWidth="2"
-            />
-
-            {/* Panel Depan Oranye (#FF8A3D) */}
-            <rect
-              x="4"
-              y="93"
-              width="18"
-              height="40"
-              rx="2.5"
-              fill="#FF8A3D"
-            />
-
-            {/* Label LAN */}
-            <text
-              x="13"
-              y="100"
-              fill="#0A0A0A"
-              fontSize="4.5"
-              fontWeight="bold"
-              textAnchor="middle"
-              fontFamily="monospace"
-            >
-              LAN
-            </text>
-
-            {/* 8 LED Hijau Mini (#2EE59D) Berurutan Menunjukkan Sinyal 1-8 OK */}
-            <circle cx="9" cy="104" r="1.5" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="0.8" />
-            <circle cx="16" cy="104" r="1.5" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="0.8" />
-            <circle cx="9" cy="110" r="1.5" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="0.8" />
-            <circle cx="16" cy="110" r="1.5" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="0.8" />
-            <circle cx="9" cy="116" r="1.5" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="0.8" />
-            <circle cx="16" cy="116" r="1.5" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="0.8" />
-            <circle cx="9" cy="122" r="1.5" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="0.8" />
-            <circle cx="16" cy="122" r="1.5" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="0.8" />
-
-            {/* Power ON Indicator Cyan */}
-            <circle cx="12.5" cy="128" r="1.8" fill="#00F0FF" stroke="#0A0A0A" strokeWidth="0.8" />
-
-            {/* Lengan Kiri Menjulur */}
+          <g className="net-animated-cable-left">
+            {/* Kabel Melengkung dari Tubuh Kiri ke Tangan Kiri */}
             <path
-              d="M 42 108 Q 28 114 18 122"
+              d="M 44 136 C 30 136 28 126 62 122"
+              stroke="#0A0A0A"
+              strokeWidth="7"
+              fill="none"
+              strokeLinecap="round"
+            />
+            <path
+              d="M 44 136 C 30 136 28 126 62 122"
+              stroke="#00F0FF"
+              strokeWidth="4.5"
+              fill="none"
+              strokeLinecap="round"
+            />
+
+            {/* Ujung Selongsong Kabel Kiri (Jacket) */}
+            <path
+              d="M 62 122 L 80 123"
+              stroke="#0A0A0A"
+              strokeWidth="6"
+              fill="none"
+            />
+            <path
+              d="M 62 122 L 80 123"
+              stroke="#00F0FF"
+              strokeWidth="3.5"
+              fill="none"
+            />
+
+            {/* Serat Kawat Tembaga / Serat Optik Mencar di Ujung Putus Kiri */}
+            {/* Kawat Tembaga 1 (Emas/Kuning) */}
+            <line x1="80" y1="121" x2="88" y2="119" stroke="#FFD60A" strokeWidth="1.8" strokeLinecap="round" />
+            {/* Kawat Tembaga 2 (Oranye) */}
+            <line x1="80" y1="123" x2="90" y2="123" stroke="#FF8A3D" strokeWidth="2" strokeLinecap="round" />
+            {/* Kawat Tembaga 3 (Cyan Data) */}
+            <line x1="80" y1="125" x2="87" y2="127" stroke="#00F0FF" strokeWidth="1.8" strokeLinecap="round" />
+
+            {/* Lengan Kiri Menjulur ke Tengah Memegang Kabel */}
+            <path
+              d="M 42 110 Q 52 116 68 122"
               stroke="#0A0A0A"
               strokeWidth="6"
               strokeLinecap="round"
@@ -469,7 +456,7 @@ export function NetworkEngineerMascot({
 
             {/* Kepalan Tangan Kiri Kuning (#FFD60A) */}
             <circle
-              cx="18"
+              cx="68"
               cy="122"
               r="6.5"
               fill="#FFD60A"
@@ -479,84 +466,90 @@ export function NetworkEngineerMascot({
           </g>
 
           {/* ============================================================== */}
-          {/* LAYER 7: TANGAN KANAN & KEPALA KABEL LAN RJ45 EMAS BERCAHAYA   */}
+          {/* LAYER 7: TANGAN KANAN & KABEL TERPUTUS SISI B (SPLICING RIGHT)  */}
           {/* ============================================================== */}
-          <g className="net-animated-rj45">
-            {/* Kabel LAN Cyan Berkelok dari Samping Tubuh */}
+          <g className="net-animated-cable-right">
+            {/* Kabel Melengkung dari Tubuh Kanan ke Tangan Kanan */}
             <path
-              d="M 144 136 C 160 136 166 126 174 122"
-              stroke="#00F0FF"
-              strokeWidth="5"
+              d="M 144 136 C 158 136 160 126 126 122"
+              stroke="#0A0A0A"
+              strokeWidth="7"
               fill="none"
               strokeLinecap="round"
             />
             <path
-              d="M 144 136 C 160 136 166 126 174 122"
-              stroke="#0A0A0A"
-              strokeWidth="1.2"
+              d="M 144 136 C 158 136 160 126 126 122"
+              stroke="#00F0FF"
+              strokeWidth="4.5"
               fill="none"
-              strokeDasharray="4 3"
+              strokeLinecap="round"
             />
 
-            {/* Lengan Kanan Menjulur */}
+            {/* Ujung Selongsong Kabel Kanan (Jacket) */}
             <path
-              d="M 148 108 Q 164 114 174 122"
+              d="M 126 122 L 108 123"
+              stroke="#0A0A0A"
+              strokeWidth="6"
+              fill="none"
+            />
+            <path
+              d="M 126 122 L 108 123"
+              stroke="#00F0FF"
+              strokeWidth="3.5"
+              fill="none"
+            />
+
+            {/* Serat Kawat Tembaga / Serat Optik Mencar di Ujung Putus Kanan */}
+            {/* Kawat Tembaga 1 (Emas/Kuning) */}
+            <line x1="108" y1="121" x2="100" y2="119" stroke="#FFD60A" strokeWidth="1.8" strokeLinecap="round" />
+            {/* Kawat Tembaga 2 (Oranye) */}
+            <line x1="108" y1="123" x2="98" y2="123" stroke="#FF8A3D" strokeWidth="2" strokeLinecap="round" />
+            {/* Kawat Tembaga 3 (Cyan Data) */}
+            <line x1="108" y1="125" x2="101" y2="127" stroke="#00F0FF" strokeWidth="1.8" strokeLinecap="round" />
+
+            {/* Lengan Kanan Menjulur ke Tengah Memegang Kabel */}
+            <path
+              d="M 148 110 Q 138 116 122 122"
               stroke="#0A0A0A"
               strokeWidth="6"
               strokeLinecap="round"
               fill="none"
             />
 
-            {/* Hard Shadow Kepala RJ45 */}
-            <rect x="174" y="96" width="18" height="22" rx="2.5" fill="#0A0A0A" />
-
-            {/* Bodi Transparan RJ45 Connector Putih Translucent */}
-            <rect
-              x="171"
-              y="93"
-              width="18"
-              height="22"
-              rx="2.5"
-              fill="#FFFFFF"
-              stroke="#0A0A0A"
-              strokeWidth="2.5"
-            />
-
-            {/* Klip Pengunci Plastik Cyan di Samping */}
-            <polygon
-              points="189,97 195,103 189,107"
-              fill="#00F0FF"
-              stroke="#0A0A0A"
-              strokeWidth="2"
-            />
-
-            {/* 8 Pin Tembaga Emas RJ45 di Ujung Depan Konektor */}
-            <line x1="173" y1="95" x2="173" y2="100" stroke="#FFD60A" strokeWidth="1.2" />
-            <line x1="175" y1="95" x2="175" y2="100" stroke="#FF8A3D" strokeWidth="1.2" />
-            <line x1="177" y1="95" x2="177" y2="100" stroke="#FFD60A" strokeWidth="1.2" />
-            <line x1="179" y1="95" x2="179" y2="100" stroke="#FF8A3D" strokeWidth="1.2" />
-            <line x1="181" y1="95" x2="181" y2="100" stroke="#FFD60A" strokeWidth="1.2" />
-            <line x1="183" y1="95" x2="183" y2="100" stroke="#FF8A3D" strokeWidth="1.2" />
-            <line x1="185" y1="95" x2="185" y2="100" stroke="#FFD60A" strokeWidth="1.2" />
-            <line x1="187" y1="95" x2="187" y2="100" stroke="#FF8A3D" strokeWidth="1.2" />
-
-            {/* Sparkle Kilau Data Link Aktif Hijau Neon (#2EE59D) */}
-            <g className="net-animated-sparkle">
-              <polygon
-                points="180,85 182,88 186,89 182,90 180,94 178,90 174,89 178,88"
-                fill="#2EE59D"
-              />
-              <circle cx="180" cy="89" r="1.5" fill="#FFFFFF" />
-            </g>
-
             {/* Kepalan Tangan Kanan Kuning (#FFD60A) */}
             <circle
-              cx="174"
+              cx="122"
               cy="122"
               r="6.5"
               fill="#FFD60A"
               stroke="#0A0A0A"
               strokeWidth="3.5"
+            />
+          </g>
+
+          {/* ============================================================== */}
+          {/* LAYER 8: PERCIKAN SPARK LISTRIK / DATA LINK DI CELAH KABEL     */}
+          {/* ============================================================== */}
+          <g className="net-animated-spark">
+            {/* Percikan Listrik Bintang Utama Kuning & Mint (#FFD60A / #2EE59D) */}
+            <polygon
+              points="94,116 96,122 102,123 96,125 94,131 92,125 86,123 92,122"
+              fill="#FFD60A"
+              stroke="#0A0A0A"
+              strokeWidth="1.2"
+            />
+            {/* Kilau Inti Putih */}
+            <circle cx="94" cy="123.5" r="2" fill="#FFFFFF" />
+
+            {/* Spark Mini Cyan (#00F0FF) */}
+            <polygon
+              points="99,117 100,119 103,119.5 100,120.5 99,122.5 98,120.5 96,119.5 98,119"
+              fill="#00F0FF"
+            />
+            {/* Spark Mini Oranye (#FF8A3D) */}
+            <polygon
+              points="89,126 90,128 92,128.5 90,129.5 89,131.5 88,129.5 86,128.5 88,128"
+              fill="#FF8A3D"
             />
           </g>
 
