@@ -1,7 +1,7 @@
 <svg viewBox="0 0 200 200" width="200" height="200" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- MASKOT MOBILE DEVELOPER — "THE ARTISAN" -->
   <!-- Proyek: JalanITku · Sutradara Visual: Matatabi -->
-  <!-- Standar: 100% Konsisten Base Model Batch 1 dengan Smartphone Modern, Tangan Mengetuk di Atas Permukaan, dan Mulut Bersih -->
+  <!-- Edisi: Jaket Jeans Trucker Denim Keren, Topi Streetwear Patch </>, Dual-Hand Grip Smartphone, dan Push Notification Card -->
 
   <!-- LAYER 1: KAKI & SEPATU HITAM DENGAN SOL PUTIH -->
   <rect x="68" y="154" width="22" height="24" fill="#0A0A0A" />
@@ -17,80 +17,128 @@
   <rect x="48" y="56" width="106" height="94" rx="4" fill="#0A0A0A" />
   <rect x="42" y="50" width="106" height="94" rx="4" fill="#FFD60A" stroke="#0A0A0A" stroke-width="4" />
 
-  <!-- Marka Jalan Putus-Putus Perut -->
-  <line x1="54" y1="134" x2="136" y2="134" stroke="#0A0A0A" stroke-width="3.5" stroke-dasharray="8 6" />
-
   <!-- Pipi Merona Pink -->
-  <rect x="52" y="106" width="12" height="7" rx="2" fill="#FF5C8A" />
-  <rect x="122" y="106" width="12" height="7" rx="2" fill="#FF5C8A" />
+  <rect x="50" y="102" width="12" height="7" rx="2" fill="#FF5C8A" />
+  <rect x="122" y="102" width="12" height="7" rx="2" fill="#FF5C8A" />
 
-  <!-- Mata Kiri & Kanan -->
-  <rect x="58" y="76" width="20" height="24" rx="4" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3.5" />
-  <rect x="66" y="82" width="9" height="12" rx="2" fill="#0A0A0A" />
-  <circle cx="68.5" cy="84.5" r="1.5" fill="#FFFFFF" />
-  <circle cx="72" cy="89.5" r="1.2" fill="#00F0FF" />
+  <!-- Mata Kiri & Kanan (Fokus Antusias ke Smartphone) -->
+  <rect x="58" y="74" width="20" height="24" rx="4" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3.5" />
+  <rect x="66" y="80" width="9" height="12" rx="2" fill="#0A0A0A" />
+  <circle cx="68.5" cy="82.5" r="1.5" fill="#FFFFFF" />
+  <circle cx="72" cy="87.5" r="1.2" fill="#00F0FF" />
 
-  <rect x="96" y="76" width="20" height="24" rx="4" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3.5" />
-  <rect x="105" y="82" width="9" height="12" rx="2" fill="#0A0A0A" />
-  <circle cx="107.5" cy="84.5" r="1.5" fill="#FFFFFF" />
-  <circle cx="111" cy="89.5" r="1.2" fill="#00F0FF" />
+  <rect x="96" y="74" width="20" height="24" rx="4" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3.5" />
+  <rect x="105" y="80" width="9" height="12" rx="2" fill="#0A0A0A" />
+  <circle cx="107.5" cy="82.5" r="1.5" fill="#FFFFFF" />
+  <circle cx="111" cy="87.5" r="1.2" fill="#00F0FF" />
 
-  <path d="M 56 70 L 78 72" stroke="#0A0A0A" stroke-width="4" stroke-linecap="round" />
-  <path d="M 98 72 L 118 69" stroke="#0A0A0A" stroke-width="4" stroke-linecap="round" />
+  <path d="M 56 68 L 78 70" stroke="#0A0A0A" stroke-width="4" stroke-linecap="round" />
+  <path d="M 98 70 L 118 67" stroke="#0A0A0A" stroke-width="4" stroke-linecap="round" />
 
-  <!-- Mulut Senyum (y=112 - Bersih Tanpa Tertutup Tangan) -->
-  <path d="M 82 112 Q 90 122 98 112 Z" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="3" stroke-linejoin="round" />
-  <rect x="85" y="112" width="10" height="3" fill="#FFFFFF" />
+  <!-- Mulut Senyum Bahagia Terbuka -->
+  <path d="M 82 108 Q 90 118 98 108 Z" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="3" stroke-linejoin="round" />
+  <rect x="85" y="108" width="10" height="3" fill="#FFFFFF" />
 
-  <!-- LAYER 3: TOPI SNAPBACK PINK & CYAN -->
-  <path d="M 44 46 C 44 22 136 22 136 46 Z" fill="#0A0A0A" />
-  <path d="M 44 42 C 44 18 134 18 134 42 Z" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="4" />
-  <polygon points="24,38 92,38 88,46 20,46" fill="#00F0FF" stroke="#0A0A0A" stroke-width="3.5" stroke-linejoin="round" />
-  <circle cx="89" cy="18" r="4.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
-  <rect x="84" y="26" width="10" height="13" rx="2" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2" />
-  <circle cx="89" cy="35" r="1" fill="#0A0A0A" />
+  <!-- LAYER 3: JAKET JEANS KEREN (DENIM TRUCKER JACKET) -->
+  <polygon points="84,118 104,118 101,144 87,144" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
+  <line x1="94" y1="124" x2="94" y2="140" stroke="#E2E8F0" stroke-width="2" stroke-linecap="round" />
 
-  <!-- LAYER 4: SMARTPHONE MODERN DI SISI KANAN & TANGAN KIRI MENYANGGA DI BAWAH MULUT -->
-  <path d="M 126 126 Q 138 134 148 130" stroke="#0A0A0A" stroke-width="6" stroke-linecap="round" fill="none" />
+  <path d="M 42 118 L 84 120 L 87 144 L 42 144 Z" fill="#3A6B9B" stroke="#0A0A0A" stroke-width="3.5" stroke-linejoin="round" />
+  <path d="M 104 120 L 148 118 L 148 144 L 101 144 Z" fill="#3A6B9B" stroke="#0A0A0A" stroke-width="3.5" stroke-linejoin="round" />
 
-  <rect x="134" y="58" width="52" height="94" rx="8" fill="#0A0A0A" />
-  <rect x="128" y="52" width="52" height="94" rx="8" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="4" />
-  <rect x="132" y="56" width="44" height="86" rx="5" fill="#18181B" stroke="#0A0A0A" stroke-width="2" />
+  <!-- Kerah Jaket Jeans (Denim Collar) -->
+  <polygon points="68,114 88,118 84,129 66,124" fill="#4B7EAE" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
+  <polygon points="120,114 100,118 104,129 122,124" fill="#4B7EAE" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
 
-  <rect x="146" y="60" width="16" height="4.5" rx="2.2" fill="#0A0A0A" />
+  <!-- Saku Dada Jaket Jeans Kiri & Kanan -->
+  <polygon points="50,126 68,127 67,133 59,136 49,132" fill="#2D547C" stroke="#0A0A0A" stroke-width="2" stroke-linejoin="round" />
+  <circle cx="58" cy="131" r="1.6" fill="#E2E8F0" stroke="#0A0A0A" stroke-width="1" />
 
-  <!-- Antarmuka UI Smartphone -->
-  <rect x="135" y="68" width="38" height="16" rx="3" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="1.5" />
-  <line x1="139" y1="73" x2="155" y2="73" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
-  <line x1="139" y1="78" x2="163" y2="78" stroke="#FFD60A" stroke-width="1.5" stroke-linecap="round" />
+  <polygon points="122,127 140,126 141,132 131,136 123,133" fill="#2D547C" stroke="#0A0A0A" stroke-width="2" stroke-linejoin="round" />
+  <circle cx="132" cy="131" r="1.6" fill="#E2E8F0" stroke="#0A0A0A" stroke-width="1" />
 
-  <rect x="136" y="89" width="10" height="10" rx="2.5" fill="#2EE59D" stroke="#0A0A0A" stroke-width="1.5" />
-  <rect x="150" y="89" width="10" height="10" rx="2.5" fill="#00F0FF" stroke="#0A0A0A" stroke-width="1.5" />
-  <rect x="164" y="89" width="8" height="10" rx="2.5" fill="#FF8A3D" stroke="#0A0A0A" stroke-width="1.5" />
+  <!-- Jahitan Vertikal Emas Khas Jeans -->
+  <line x1="58" y1="136" x2="58" y2="144" stroke="#FFD60A" stroke-width="1.5" stroke-dasharray="3 2" />
+  <line x1="132" y1="136" x2="132" y2="144" stroke="#FFD60A" stroke-width="1.5" stroke-dasharray="3 2" />
 
-  <rect x="136" y="104" width="36" height="18" rx="3" fill="#00F0FF" stroke="#0A0A0A" stroke-width="1.5" />
-  <rect x="139" y="108" width="16" height="4" rx="1" fill="#0A0A0A" />
-  <circle cx="163" cy="113" r="3.5" fill="#2EE59D" stroke="#0A0A0A" stroke-width="1" />
-  <line x1="146" y1="136" x2="162" y2="136" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+  <!-- Kancing Logam Perak Depan & Keliman Jaket -->
+  <circle cx="86" cy="126" r="2.2" fill="#E2E8F0" stroke="#0A0A0A" stroke-width="1.2" />
+  <circle cx="87.5" cy="136" r="2.2" fill="#E2E8F0" stroke="#0A0A0A" stroke-width="1.2" />
+  <rect x="42" y="140" width="106" height="4" fill="#2D547C" stroke="#0A0A0A" stroke-width="1.5" />
 
-  <!-- Tangan Kiri Menyangga Smartphone di Bawah Mulut (y=130) -->
-  <circle cx="146" cy="130" r="7" fill="#FFD60A" stroke="#0A0A0A" stroke-width="3.5" />
+  <!-- LAYER 4: IMPROVISASI TOPI STREETWEAR CAP (DENIM & CYAN) -->
+  <path d="M 40 48 C 40 20 140 20 140 48 Z" fill="#0A0A0A" />
+  <path d="M 42 44 C 42 16 138 16 138 44 Z" fill="#244265" stroke="#0A0A0A" stroke-width="4" />
+  <path d="M 28 44 C 44 40 120 40 152 44 C 146 50 34 50 28 44 Z" fill="#00F0FF" stroke="#0A0A0A" stroke-width="3.5" stroke-linejoin="round" />
+  <path d="M 90 16 Q 89 30 89 44" stroke="#FFD60A" stroke-width="1.5" stroke-dasharray="3 2" />
+  <circle cx="89" cy="16" r="4.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
 
-  <!-- LAYER 5: TOUCH RIPPLE & SPARKLE -->
-  <circle cx="148" cy="106" r="8" fill="none" stroke="#00F0FF" stroke-width="2.5" />
-  <circle cx="148" cy="106" r="16" fill="none" stroke="#2EE59D" stroke-width="2" stroke-dasharray="4 3" />
-  <polygon points="148,100 150,105 155,106 150,107 148,112 146,107 141,106 146,105" fill="#FFD60A" stroke="#0A0A0A" stroke-width="1.5" />
+  <!-- Woven Patch Coding </> di Topi -->
+  <g transform="translate(76, 24)">
+    <rect x="1.5" y="1.5" width="26" height="15" rx="2" fill="#0A0A0A" />
+    <rect x="0" y="0" width="26" height="15" rx="2" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.2" />
+    <text x="3" y="11.5" font-family="monospace" font-size="10" font-weight="900" fill="#244265" letter-spacing="0.5">&lt;/&gt;</text>
+  </g>
+  <polygon points="120,28 122,32 126,32 123,34 124,38 120,35 116,38 117,34 114,32 118,32" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="1.2" />
 
-  <!-- LAYER 6: TANGAN KANAN MENGETUK LAYAR (DI ATAS PERMUKAAN TANPA MENEMBUS) -->
-  <path d="M 44 116 Q 88 126 128 112" stroke="#0A0A0A" stroke-width="6" stroke-linecap="round" fill="none" />
-  <circle cx="132" cy="110" r="7.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="3.5" />
-  <path d="M 136 108 L 148 106 L 146 111 L 135 113 Z" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
-  <path d="M 130 104 Q 134 98 140 100" stroke="#0A0A0A" stroke-width="2.5" stroke-linecap="round" fill="none" />
+  <!-- LAYER 5: SMARTPHONE MODERN DI SISI KANAN & DUAL-HAND GRIP -->
+  <g>
+    <rect x="134" y="58" width="52" height="94" rx="8" fill="#0A0A0A" />
+    <rect x="128" y="52" width="52" height="94" rx="8" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="4" />
+    <rect x="132" y="56" width="44" height="86" rx="5" fill="#18181B" stroke="#0A0A0A" stroke-width="2" />
 
-  <!-- LAYER 7: AKSEN SIMBOL 5G WIRELESS -->
-  <g transform="translate(18, 54)">
-    <path d="M 4 14 A 12 12 0 0 1 20 14" stroke="#0A0A0A" stroke-width="2.5" stroke-linecap="round" fill="none" />
-    <path d="M 8 18 A 6 6 0 0 1 16 18" stroke="#00F0FF" stroke-width="2.5" stroke-linecap="round" fill="none" />
-    <circle cx="12" cy="22" r="2" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="1.5" />
+    <rect x="146" y="60" width="16" height="4.5" rx="2.2" fill="#0A0A0A" />
+
+    <rect x="135" y="68" width="38" height="16" rx="3" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="1.5" />
+    <line x1="139" y1="73" x2="155" y2="73" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
+    <line x1="139" y1="78" x2="163" y2="78" stroke="#FFD60A" stroke-width="1.5" stroke-linecap="round" />
+
+    <rect x="136" y="89" width="10" height="10" rx="2.5" fill="#2EE59D" stroke="#0A0A0A" stroke-width="1.5" />
+    <rect x="150" y="89" width="10" height="10" rx="2.5" fill="#00F0FF" stroke="#0A0A0A" stroke-width="1.5" />
+    <rect x="164" y="89" width="8" height="10" rx="2.5" fill="#FF8A3D" stroke="#0A0A0A" stroke-width="1.5" />
+
+    <rect x="136" y="104" width="36" height="18" rx="3" fill="#00F0FF" stroke="#0A0A0A" stroke-width="1.5" />
+    <rect x="139" y="108" width="16" height="4" rx="1" fill="#0A0A0A" />
+    <circle cx="163" cy="113" r="3.5" fill="#2EE59D" stroke="#0A0A0A" stroke-width="1" />
+    <line x1="146" y1="136" x2="162" y2="136" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+
+    <!-- Tangan Kiri Menopang Sisi Kiri Smartphone -->
+    <path d="M 112 128 Q 120 134 126 126" stroke="#0A0A0A" stroke-width="7" stroke-linecap="round" fill="none" />
+    <path d="M 112 128 Q 120 134 126 126" stroke="#3A6B9B" stroke-width="4.5" stroke-linecap="round" fill="none" />
+    <rect x="123" y="121" width="5" height="10" rx="1.5" fill="#244265" stroke="#0A0A0A" stroke-width="1.5" />
+    <ellipse cx="128" cy="116" rx="4" ry="7" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
+    <ellipse cx="129" cy="126" rx="4" ry="6" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
+
+    <!-- Tangan Kanan Menggenggam Sisi Kanan Smartphone (Kanan POV User x=180..184) -->
+    <path d="M 136 142 Q 166 150 182 134" stroke="#0A0A0A" stroke-width="8" stroke-linecap="round" fill="none" />
+    <path d="M 136 142 Q 166 150 182 134" stroke="#3A6B9B" stroke-width="5" stroke-linecap="round" fill="none" />
+    <rect x="176" y="126" width="6" height="11" rx="1.5" fill="#244265" stroke="#0A0A0A" stroke-width="2" transform="rotate(-15 176 126)" />
+    <circle cx="180" cy="130" r="1.2" fill="#E2E8F0" />
+
+    <g transform="translate(177, 98)">
+      <rect x="0" y="2" width="7" height="6" rx="2.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
+      <rect x="0" y="9" width="7" height="6" rx="2.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
+      <rect x="0" y="16" width="7" height="6" rx="2.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
+      <rect x="0" y="23" width="6.5" height="5.5" rx="2.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
+      <ellipse cx="-2" cy="15" rx="3.5" ry="5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2" />
+    </g>
+  </g>
+
+  <!-- LAYER 6: PUSH NOTIFICATION CARD & SPARKLE (PENGGANTI WIFI) -->
+  <g transform="translate(14, 52)">
+    <rect x="3" y="3" width="34" height="24" rx="4" fill="#0A0A0A" />
+    <rect x="0" y="0" width="34" height="24" rx="4" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.5" />
+    <rect x="4" y="4" width="12" height="4" rx="1.5" fill="#FF5C8A" />
+    <path d="M 6 13 Q 6 10 10 10 Q 14 10 14 13 Q 14 15 12 16 L 13 18 L 10 16 Q 6 16 6 13 Z" fill="#2EE59D" stroke="#0A0A0A" stroke-width="1.2" stroke-linejoin="round" />
+    <circle cx="25" cy="12" r="5.5" fill="#F43F5E" stroke="#0A0A0A" stroke-width="1.5" />
+    <text x="22" y="14.5" font-family="monospace" font-size="6.5" font-weight="900" fill="#FFFFFF">1</text>
+    <polygon points="14,24 20,24 16,28" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.5" />
+  </g>
+
+  <g transform="translate(12, 34)">
+    <polygon points="10,0 12,7 19,10 12,13 10,20 8,13 1,10 8,7" fill="#FFD60A" stroke="#0A0A0A" stroke-width="1.5" />
+  </g>
+  <g transform="translate(42, 40)">
+    <polygon points="4,0 5,3 8,4 5,5 4,8 3,5 0,4 3,3" fill="#00F0FF" stroke="#0A0A0A" stroke-width="1" />
   </g>
 </svg>
