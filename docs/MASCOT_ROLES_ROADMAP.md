@@ -55,15 +55,15 @@ Ke-21 role IT dikelompokkan ke dalam 7 batch tematik yang masing-masing terdiri 
   - **Kacamata Arsitek Persegi**: Frame hitam tebal dengan lensa cyan reflektif (`#00F0FF`).
   - **Blueprint Digital Cyan**: Cetak biru skema sistem dengan diagram blok microservices dan node database terhubung.
   - **Penggaris T / Stylus Teknikal**: Dipegang tegak di tangan kanan sebagai simbol presisi teknis.
-  - **Kubus Modular Isometrik**: Blok fondasi 3D melayang di sisi kiri sebagai lambang arsitektur modular.
+  - **Sepasang Kubus Modular 3D Isometrik**: Blok fondasi 3D melayang di sisi kiri atas dan kanan atas sebagai lambang arsitektur modular berlapis.
 - **Palet Warna**: Kuning `#FFD60A`, Cyan `#00F0FF`, Putih `#FFFFFF`, Tinta `#0A0A0A`.
 
 #### 2. Mobile Developer — "The Screen Tapper"
 - **Metafora Karakter**: Sang penguasa layar sentuh dan gawai portabel yang menghadirkan kecanggihan komputasi langsung ke telapak tangan pengguna.
 - **Atribut Visual & Props**:
-  - **Smartphone Raksasa**: Layar modern dengan kartu antarmuka aplikasi mini berwarna pink-cyan.
-  - **Gestur Tapping Interaktif**: Jari telunjuk siap mengetuk layar dengan presisi tinggi.
-  - **Ripple Sentuhan Konsentris**: Lingkaran gelombang sentuh memancar dari titik layar.
+  - **Smartphone Raksasa Bersih**: Layar modern dipegang tangan kiri di bawah dagu (`y=130`), memastikan senyum mulut tidak terhalang, lengkap dengan kartu antarmuka aplikasi mini berwarna pink-cyan.
+  - **Gestur Tapping di Atas Layar**: Tangan kanan berada di lapisan terdepan di atas permukaan layar mengetuk tombol aksi dengan telunjuk presisi.
+  - **Ripple Sentuhan Konsentris**: Lingkaran gelombang sentuh memancar dari titik sentuhan layar di bawah jari.
   - **Topi Snapback Miring**: Gaya kasual urban khas developer mobile modern.
 - **Palet Warna**: Pink Magenta `#FF5C8A`, Kuning `#FFD60A`, Cyan `#00F0FF`, Tinta `#0A0A0A`.
 

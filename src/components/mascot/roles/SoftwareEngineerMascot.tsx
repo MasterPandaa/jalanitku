@@ -13,7 +13,8 @@ export interface SoftwareEngineerMascotProps {
  * Maskot Role: Software Engineer — "The Architect"
  * Identitas: Sang Arsitek Kode & Fondasi Sistem Digital
  * Ciri Khas: Kacamata arsitek persegi cyan, blueprint digital dengan skema server node,
- * penggaris T teknikal, kubus fondasi modular 3D isometrik, dan helm konstruksi arsitek.
+ * penggaris T teknikal, kubus fondasi modular 3D isometrik di sudut kiri, kubus modular 3D isometrik di sudut kanan atas,
+ * dan helm konstruksi arsitek.
  */
 export function SoftwareEngineerMascot({
   size = 200,
@@ -26,7 +27,7 @@ export function SoftwareEngineerMascot({
       className={`relative inline-flex items-center justify-center select-none group ${className}`}
       style={{ width: size, height: size }}
       role="img"
-      aria-label="Maskot Software Engineer — The Architect: Papan penunjuk jalan neo-brutalism dengan kacamata arsitek teknikal, cetak biru sistem, dan penggaris T"
+      aria-label="Maskot Software Engineer — The Architect: Papan penunjuk jalan neo-brutalism dengan kacamata arsitek teknikal, cetak biru sistem, penggaris T, dan sepasang kubus modular 3D isometrik"
     >
       <svg
         viewBox="0 0 200 200"
@@ -50,6 +51,10 @@ export function SoftwareEngineerMascot({
               0%, 100% { transform: translateY(0px) rotate(0deg); }
               50% { transform: translateY(-4px) rotate(3deg); }
             }
+            @keyframes se-cube-right {
+              0%, 100% { transform: translateY(0px) rotate(0deg); }
+              50% { transform: translateY(-3.5px) rotate(-3deg); }
+            }
             @keyframes se-glint {
               0%, 100% { opacity: 0.8; }
               50% { opacity: 1; transform: scale(1.05); }
@@ -64,7 +69,11 @@ export function SoftwareEngineerMascot({
             }
             .se-animated-cube {
               animation: ${animated ? "se-cube 4s ease-in-out infinite" : "none"};
-              transform-origin: 24px 62px;
+              transform-origin: 28px 42px;
+            }
+            .se-animated-cube-right {
+              animation: ${animated ? "se-cube-right 4s ease-in-out 0.8s infinite" : "none"};
+              transform-origin: 172px 42px;
             }
           `}</style>
         </defs>
@@ -147,7 +156,7 @@ export function SoftwareEngineerMascot({
             strokeWidth="4"
           />
 
-          {/* Marka Jalan Putus-Putus (DNA Rambu Jalan) */}
+          {/* Marka Jalan Putus-Putus Perut */}
           <line
             x1="54"
             y1="134"
@@ -162,7 +171,7 @@ export function SoftwareEngineerMascot({
           <rect x="52" y="106" width="12" height="7" rx="2" fill="#FF5C8A" />
           <rect x="124" y="106" width="12" height="7" rx="2" fill="#FF5C8A" />
 
-          {/* Kerah Mantel & Dasi Arsitek */}
+          {/* Kerah Kemeja Putih & Dasi Arsitek Cyan */}
           <polygon
             points="78,144 94,144 88,132"
             fill="#FFFFFF"
@@ -177,7 +186,7 @@ export function SoftwareEngineerMascot({
             strokeWidth="2.5"
             strokeLinejoin="round"
           />
-          {/* Simpul Dasi Cyan */}
+          {/* Simpul Dasi */}
           <rect
             x="91"
             y="132"
@@ -187,7 +196,7 @@ export function SoftwareEngineerMascot({
             stroke="#0A0A0A"
             strokeWidth="2"
           />
-          {/* Badan Dasi */}
+          {/* Ujung Dasi Persegi Runcing */}
           <polygon
             points="91,137 98,137 100,145 94.5,148 89,145"
             fill="#00F0FF"
@@ -195,7 +204,7 @@ export function SoftwareEngineerMascot({
             strokeWidth="2"
           />
 
-          {/* Mulut Senyum Bangga */}
+          {/* Mulut Senyum Bangga Arsitek */}
           <path
             d="M 88 114 Q 94.5 122 101 114"
             stroke="#0A0A0A"
@@ -205,15 +214,14 @@ export function SoftwareEngineerMascot({
           />
 
           {/* ============================================================== */}
-          {/* LAYER 3: KACAMATA ARSITEK PERSEGI TEKNIKAL CYAN (#00F0FF)      */}
+          {/* LAYER 3: KACAMATA ARSITEK PERSEGI CYAN (#00F0FF)               */}
           {/* ============================================================== */}
-          {/* Tangkai Kacamata Kiri & Kanan */}
+          {/* Tangkai Frame Kacamata */}
           <line x1="42" y1="84" x2="54" y2="84" stroke="#0A0A0A" strokeWidth="4" />
           <line x1="134" y1="84" x2="148" y2="84" stroke="#0A0A0A" strokeWidth="4" />
-          {/* Jembatan Hidung Frame */}
           <line x1="84" y1="84" x2="98" y2="84" stroke="#0A0A0A" strokeWidth="4" />
 
-          {/* Frame Kacamata Kiri */}
+          {/* Frame Lensa Kiri Persegi Tebal */}
           <rect
             x="54"
             y="72"
@@ -224,7 +232,7 @@ export function SoftwareEngineerMascot({
             stroke="#0A0A0A"
             strokeWidth="3.5"
           />
-          {/* Mata Kiri (Sklera Putih di dalam lensa) */}
+          {/* Kaca Lensa Putih Kiri */}
           <rect
             x="61"
             y="77"
@@ -235,12 +243,22 @@ export function SoftwareEngineerMascot({
             stroke="#0A0A0A"
             strokeWidth="2.5"
           />
-          {/* Pupil Hitam */}
+          {/* Pupil Hitam Kiri */}
           <rect x="66" y="81" width="7" height="9" rx="1.5" fill="#0A0A0A" />
-          {/* Kilau Sinar Pupil */}
+          {/* Kilau Cahaya Pupil */}
           <circle cx="68.5" cy="83.5" r="1.5" fill="#FFFFFF" />
+          {/* Garis Kilau Refleksi Kacamata Putih */}
+          <line
+            x1="57"
+            y1="75"
+            x2="65"
+            y2="92"
+            stroke="#FFFFFF"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
 
-          {/* Frame Kacamata Kanan */}
+          {/* Frame Lensa Kanan Persegi Tebal */}
           <rect
             x="98"
             y="72"
@@ -251,7 +269,7 @@ export function SoftwareEngineerMascot({
             stroke="#0A0A0A"
             strokeWidth="3.5"
           />
-          {/* Mata Kanan (Sklera Putih di dalam lensa) */}
+          {/* Kaca Lensa Putih Kanan */}
           <rect
             x="105"
             y="77"
@@ -262,21 +280,11 @@ export function SoftwareEngineerMascot({
             stroke="#0A0A0A"
             strokeWidth="2.5"
           />
-          {/* Pupil Hitam */}
+          {/* Pupil Hitam Kanan */}
           <rect x="110" y="81" width="7" height="9" rx="1.5" fill="#0A0A0A" />
-          {/* Kilau Sinar Pupil */}
+          {/* Kilau Cahaya Pupil */}
           <circle cx="112.5" cy="83.5" r="1.5" fill="#FFFFFF" />
-
-          {/* Kilau Reflektif Lensa Arsitek (Garis Putih Diagonal) */}
-          <line
-            x1="57"
-            y1="75"
-            x2="65"
-            y2="92"
-            stroke="#FFFFFF"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
+          {/* Garis Kilau Refleksi Kacamata Putih */}
           <line
             x1="101"
             y1="75"
@@ -288,28 +296,28 @@ export function SoftwareEngineerMascot({
           />
 
           {/* ============================================================== */}
-          {/* LAYER 4: HELM KONSTRUKSI / HARD HAT ARSITEK                    */}
+          {/* LAYER 4: HELM KONSTRUKSI ARSITEK ORANYE (#FF8A3D)              */}
           {/* ============================================================== */}
           {/* Hard Shadow Helm */}
           <path
             d="M 44 48 C 44 24 146 24 146 48 Z"
             fill="#0A0A0A"
           />
-          {/* Kubah Helm Oranye (#FF8A3D) */}
+          {/* Kubah Helm Utama Oranye (#FF8A3D) */}
           <path
             d="M 44 44 C 44 20 144 20 144 44 Z"
             fill="#FF8A3D"
             stroke="#0A0A0A"
             strokeWidth="4"
           />
-          {/* Tonjolan Garis Tengah Helm */}
+          {/* Punggung Rusuk Penguat Tengah Helm */}
           <path
             d="M 90 21 C 90 19 99 19 99 21 L 100 44 L 89 44 Z"
             fill="#FFD60A"
             stroke="#0A0A0A"
             strokeWidth="2.5"
           />
-          {/* Visor / Pelindung Datar Helm */}
+          {/* Bibir/Brim Pelindung Helm Bawah Kuning */}
           <rect
             x="34"
             y="42"
@@ -320,7 +328,7 @@ export function SoftwareEngineerMascot({
             stroke="#0A0A0A"
             strokeWidth="4"
           />
-          {/* Emblem Server Node di Helm */}
+          {/* Badge Emblem Helm Arsitek */}
           <rect
             x="89"
             y="27"
@@ -331,9 +339,11 @@ export function SoftwareEngineerMascot({
             stroke="#0A0A0A"
             strokeWidth="2"
           />
+          <line x1="91" y1="32" x2="97" y2="32" stroke="#0A0A0A" strokeWidth="1.5" />
+          <line x1="94" y1="29" x2="94" y2="35" stroke="#0A0A0A" strokeWidth="1.5" />
 
           {/* ============================================================== */}
-          {/* LAYER 5: TANGAN KANAN DENGAN PENGGARIS T / STYLUS TEKNIKAL     */}
+          {/* LAYER 5: TANGAN KANAN & PENGGARIS T TEKNIKAL                    */}
           {/* ============================================================== */}
           {/* Lengan Kanan Menjulur */}
           <path
@@ -433,7 +443,7 @@ export function SoftwareEngineerMascot({
               <line x1="18" y1="98" x2="18" y2="103" stroke="#FFFFFF" strokeWidth="1.5" />
               <line x1="42" y1="98" x2="42" y2="103" stroke="#FFFFFF" strokeWidth="1.5" />
 
-              {/* Node Service A & B */}
+              {/* Node Services 2 & 3 (Bawah) */}
               <rect x="12" y="103" width="12" height="7" rx="1" fill="#FFD60A" stroke="#0A0A0A" strokeWidth="1.5" />
               <rect x="36" y="103" width="12" height="7" rx="1" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="1.5" />
 
@@ -492,11 +502,43 @@ export function SoftwareEngineerMascot({
             <circle cx="28" cy="36" r="2" fill="#FFFFFF" stroke="#0A0A0A" strokeWidth="1" />
           </g>
 
-          {/* Simbol Arsitektur Tambahan: Grid Titik Koordinat Melayang */}
-          <circle cx="156" cy="36" r="2" fill="#0A0A0A" />
-          <circle cx="166" cy="36" r="2" fill="#0A0A0A" />
-          <circle cx="156" cy="46" r="2" fill="#0A0A0A" />
-          <circle cx="166" cy="46" r="2" fill="#0A0A0A" />
+          {/* ============================================================== */}
+          {/* LAYER 8: KUBUS MODULAR 3D ISOMETRIK (MELAYANG DI SUDUT KANAN)   */}
+          {/* ============================================================== */}
+          <g className="se-animated-cube-right">
+            {/* Hard Shadow Kubus Kanan */}
+            <polygon
+              points="164,52 174,47 174,59 164,64"
+              fill="#0A0A0A"
+            />
+            {/* Kubus 3D Isometrik Sisi Kanan Atas */}
+            {/* Sisi Atas Kubus (Top Face - Mint Neon) */}
+            <polygon
+              points="160,36 172,30 184,36 172,42"
+              fill="#2EE59D"
+              stroke="#0A0A0A"
+              strokeWidth="2.5"
+              strokeLinejoin="round"
+            />
+            {/* Sisi Kiri Kubus (Left Face - Cyan) */}
+            <polygon
+              points="160,36 172,42 172,54 160,48"
+              fill="#00F0FF"
+              stroke="#0A0A0A"
+              strokeWidth="2.5"
+              strokeLinejoin="round"
+            />
+            {/* Sisi Kanan Kubus (Right Face - Oranye) */}
+            <polygon
+              points="172,42 184,36 184,48 172,54"
+              fill="#FF8A3D"
+              stroke="#0A0A0A"
+              strokeWidth="2.5"
+              strokeLinejoin="round"
+            />
+            {/* Titik Koneksi Fondasi Modular */}
+            <circle cx="172" cy="36" r="2" fill="#FFFFFF" stroke="#0A0A0A" strokeWidth="1" />
+          </g>
         </g>
       </svg>
     </div>

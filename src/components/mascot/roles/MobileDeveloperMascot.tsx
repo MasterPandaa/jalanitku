@@ -3,30 +3,36 @@
 import React from "react";
 
 export interface MobileDeveloperMascotProps {
-  size?: number;
+  size?: number | string;
   className?: string;
   animated?: boolean;
+  animate?: boolean;
   state?: "idle" | "hover" | "happy";
 }
 
 /**
- * Maskot Role: Mobile Developer — "The Screen Tapper"
- * Identitas: Sang Pengetuk Layar & Penguasa Genggaman Gawai
- * Ciri Khas: Topi snapback miring pink-cyan, smartphone raksasa dengan antarmuka aplikasi hidup,
- * tangan tapping dengan ripple sentuhan konsentris, dan ikon gawai responsif.
+ * Maskot Role: Mobile Developer — "The Artisan"
+ * Identitas: Sang Perajin Aplikasi Saku & Pengalaman Sentuhan Presisi
+ * Ciri Khas: Topi snapback miring pink-cyan dengan emblem smartphone,
+ * smartphone raksasa modern dipegang erat oleh tangan kiri di samping tubuh (y=128, di bawah mulut sehingga senyum terlihat bersih),
+ * tangan kanan melakukan gestur tapping di atas permukaan layar (tampak depan/over-the-screen tanpa menembus bodi ponsel),
+ * serta efek touch ripple interaktif konsentris.
  */
 export function MobileDeveloperMascot({
   size = 200,
   className = "",
   animated = true,
+  animate,
   state = "idle",
 }: MobileDeveloperMascotProps) {
+  const isAnimated = animate !== undefined ? animate : animated;
+
   return (
     <div
       className={`relative inline-flex items-center justify-center select-none group ${className}`}
       style={{ width: size, height: size }}
       role="img"
-      aria-label="Maskot Mobile Developer — The Screen Tapper: Papan penunjuk jalan neo-brutalism dengan topi snapback keren, smartphone berlayar aplikasi, dan gestur tapping dengan ripple sentuh"
+      aria-label="Maskot Mobile Developer — The Artisan: Papan penunjuk jalan neo-brutalism dengan topi snapback miring, smartphone modern dipegang erat di samping, gestur tangan mengetuk layar di atas permukaan, dan gelombang touch ripple"
     >
       <svg
         viewBox="0 0 200 200"
@@ -42,40 +48,42 @@ export function MobileDeveloperMascot({
               0%, 100% { transform: translateY(0px); }
               50% { transform: translateY(-3.5px); }
             }
-            @keyframes mob-tap {
-              0%, 100% { transform: translateX(0px) translateY(0px) rotate(0deg); }
-              35% { transform: translateX(4px) translateY(-1px) rotate(2deg); }
-              45% { transform: translateX(6px) translateY(1px) rotate(-1deg); }
-              60% { transform: translateX(1px) translateY(0px) rotate(0deg); }
-            }
-            @keyframes mob-ripple {
-              0% { r: 4px; opacity: 1; stroke-width: 2.5px; }
-              50% { r: 14px; opacity: 0.8; stroke-width: 2px; }
-              100% { r: 24px; opacity: 0; stroke-width: 1px; }
-            }
-            @keyframes mob-phone {
+            @keyframes mob-phone-sway {
               0%, 100% { transform: rotate(0deg); }
-              50% { transform: rotate(-1.5deg) translateY(-1px); }
+              50% { transform: rotate(3deg) translateY(-1px); }
+            }
+            @keyframes mob-tap {
+              0%, 100% { transform: translateY(0px) scale(1); }
+              50% { transform: translateY(3px) scale(0.97); }
+            }
+            @keyframes mob-ripple-1 {
+              0% { r: 4px; opacity: 1; stroke-width: 3px; }
+              100% { r: 20px; opacity: 0; stroke-width: 0.5px; }
+            }
+            @keyframes mob-ripple-2 {
+              0% { r: 4px; opacity: 0; stroke-width: 2.5px; }
+              30% { opacity: 0.8; stroke-width: 2px; }
+              100% { r: 28px; opacity: 0; stroke-width: 0.5px; }
             }
             .mob-animated-body {
-              animation: ${animated ? "mob-float 3.2s ease-in-out infinite" : "none"};
+              animation: ${isAnimated ? "mob-float 3.5s ease-in-out infinite" : "none"};
               transform-origin: center bottom;
             }
+            .mob-animated-phone {
+              animation: ${isAnimated ? "mob-phone-sway 3s ease-in-out infinite" : "none"};
+              transform-origin: 154px 138px;
+            }
             .mob-animated-tapper {
-              animation: ${animated ? "mob-tap 2.4s ease-in-out infinite" : "none"};
-              transform-origin: 70px 110px;
+              animation: ${isAnimated ? "mob-tap 1.6s ease-in-out infinite" : "none"};
+              transform-origin: 44px 116px;
             }
             .mob-animated-ripple1 {
-              animation: ${animated ? "mob-ripple 2.4s ease-out infinite" : "none"};
-              transform-origin: 132px 100px;
+              animation: ${isAnimated ? "mob-ripple-1 1.6s cubic-bezier(0.1, 0.8, 0.3, 1) infinite" : "none"};
+              transform-origin: 148px 106px;
             }
             .mob-animated-ripple2 {
-              animation: ${animated ? "mob-ripple 2.4s ease-out infinite 0.4s" : "none"};
-              transform-origin: 132px 100px;
-            }
-            .mob-animated-phone {
-              animation: ${animated ? "mob-phone 3.2s ease-in-out infinite" : "none"};
-              transform-origin: 154px 110px;
+              animation: ${isAnimated ? "mob-ripple-2 1.6s cubic-bezier(0.1, 0.8, 0.3, 1) 0.35s infinite" : "none"};
+              transform-origin: 148px 106px;
             }
           `}</style>
         </defs>
@@ -83,7 +91,7 @@ export function MobileDeveloperMascot({
         {/* CONTAINER UTAMA DENGAN ANIMASI FLOAT */}
         <g className="mob-animated-body transition-transform duration-300 group-hover:scale-105">
           {/* ============================================================== */}
-          {/* LAYER 1: KAKI & SEPATU SNEAKERS HITAM SOL PUTIH                */}
+          {/* LAYER 1: KAKI & SEPATU HITAM DENGAN SOL PUTIH                  */}
           {/* ============================================================== */}
           {/* Hard Shadow Kaki */}
           <rect x="68" y="154" width="22" height="24" fill="#0A0A0A" />
@@ -100,7 +108,7 @@ export function MobileDeveloperMascot({
             stroke="#0A0A0A"
             strokeWidth="3.5"
           />
-          {/* Sol Sneakers Kiri */}
+          {/* Sol Sepatu Putih Kiri */}
           <line
             x1="64"
             y1="170"
@@ -122,7 +130,7 @@ export function MobileDeveloperMascot({
             stroke="#0A0A0A"
             strokeWidth="3.5"
           />
-          {/* Sol Sneakers Kanan */}
+          {/* Sol Sepatu Putih Kanan */}
           <line
             x1="110"
             y1="170"
@@ -134,19 +142,12 @@ export function MobileDeveloperMascot({
           />
 
           {/* ============================================================== */}
-          {/* LAYER 2: BADAN UTAMA PAPAN RAMBU (KUNING NEO-BRUTALISM)       */}
+          {/* LAYER 2: BADAN PAPAN RAMBU KUNING NEO-BRUTALISM                */}
           {/* ============================================================== */}
-          {/* Hard Shadow Badan */}
-          <rect
-            x="48"
-            y="56"
-            width="106"
-            height="94"
-            rx="4"
-            fill="#0A0A0A"
-          />
+          {/* Hard Shadow Badan Kotak Hitam Pekat */}
+          <rect x="48" y="56" width="106" height="94" rx="4" fill="#0A0A0A" />
 
-          {/* Badan Papan Rambu Kuning */}
+          {/* Badan Rambu Utama Kuning #FFD60A */}
           <rect
             x="42"
             y="50"
@@ -158,7 +159,7 @@ export function MobileDeveloperMascot({
             strokeWidth="4"
           />
 
-          {/* Marka Jalan Putus-Putus */}
+          {/* Marka Jalan Putus-Putus Perut */}
           <line
             x1="54"
             y1="134"
@@ -219,7 +220,7 @@ export function MobileDeveloperMascot({
             strokeLinecap="round"
           />
 
-          {/* Mulut Senyum Terbuka Antusias */}
+          {/* Mulut Senyum Terbuka Antusias (Bersih & Terlihat Jelas) */}
           <path
             d="M 82 112 Q 90 122 98 112 Z"
             fill="#FF5C8A"
@@ -276,12 +277,12 @@ export function MobileDeveloperMascot({
           <circle cx="89" cy="35" r="1" fill="#0A0A0A" />
 
           {/* ============================================================== */}
-          {/* LAYER 4: SMARTPHONE RAKSASA MODERN (SISI KANAN)               */}
+          {/* LAYER 4: SMARTPHONE MODERN DI SISI KANAN & TANGAN KIRI MENYANGGA*/}
           {/* ============================================================== */}
           <g className="mob-animated-phone">
-            {/* Lengan Kiri Menyangga Smartphone */}
+            {/* Lengan Kiri Berada di Bawah Mulut (y=124 ke 132), Menjulur ke Samping Tubuh */}
             <path
-              d="M 124 122 Q 138 132 144 120"
+              d="M 126 126 Q 138 134 148 130"
               stroke="#0A0A0A"
               strokeWidth="6"
               strokeLinecap="round"
@@ -290,19 +291,19 @@ export function MobileDeveloperMascot({
 
             {/* Hard Shadow Smartphone */}
             <rect
-              x="132"
+              x="134"
               y="58"
-              width="54"
-              height="96"
+              width="52"
+              height="94"
               rx="8"
               fill="#0A0A0A"
             />
             {/* Bodi Smartphone Putih Tegas */}
             <rect
-              x="126"
+              x="128"
               y="52"
-              width="54"
-              height="96"
+              width="52"
+              height="94"
               rx="8"
               fill="#FFFFFF"
               stroke="#0A0A0A"
@@ -311,10 +312,10 @@ export function MobileDeveloperMascot({
 
             {/* Layar OLED Gelap Smartphone */}
             <rect
-              x="130"
+              x="132"
               y="56"
-              width="46"
-              height="88"
+              width="44"
+              height="86"
               rx="5"
               fill="#18181B"
               stroke="#0A0A0A"
@@ -323,7 +324,7 @@ export function MobileDeveloperMascot({
 
             {/* Dynamic Island / Notch Speaker */}
             <rect
-              x="145"
+              x="146"
               y="60"
               width="16"
               height="4.5"
@@ -334,8 +335,8 @@ export function MobileDeveloperMascot({
             {/* UI Card di Layar Smartphone */}
             {/* App Header Banner Pink */}
             <rect
-              x="134"
-              y="69"
+              x="135"
+              y="68"
               width="38"
               height="16"
               rx="3"
@@ -344,21 +345,18 @@ export function MobileDeveloperMascot({
               strokeWidth="1.5"
             />
             {/* Teks Mini App Header */}
-            <line x1="138" y1="74" x2="154" y2="74" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" />
-            <line x1="138" y1="79" x2="162" y2="79" stroke="#FFD60A" strokeWidth="1.5" strokeLinecap="round" />
+            <line x1="139" y1="73" x2="155" y2="73" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" />
+            <line x1="139" y1="78" x2="163" y2="78" stroke="#FFD60A" strokeWidth="1.5" strokeLinecap="round" />
 
-            {/* Grid 4 App Icons Warna-Warni */}
-            {/* Icon 1: Hijau Mint */}
-            <rect x="135" y="90" width="10" height="10" rx="2.5" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="1.5" />
-            {/* Icon 2: Cyan */}
-            <rect x="149" y="90" width="10" height="10" rx="2.5" fill="#00F0FF" stroke="#0A0A0A" strokeWidth="1.5" />
-            {/* Icon 3: Oranye */}
-            <rect x="163" y="90" width="8" height="10" rx="2.5" fill="#FF8A3D" stroke="#0A0A0A" strokeWidth="1.5" />
+            {/* Grid App Icons Warna-Warni */}
+            <rect x="136" y="89" width="10" height="10" rx="2.5" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="1.5" />
+            <rect x="150" y="89" width="10" height="10" rx="2.5" fill="#00F0FF" stroke="#0A0A0A" strokeWidth="1.5" />
+            <rect x="164" y="89" width="8" height="10" rx="2.5" fill="#FF8A3D" stroke="#0A0A0A" strokeWidth="1.5" />
 
-            {/* Main Interactive Button Card (Target Tapping) */}
+            {/* Target Interactive Card (Target Tapping di Layar) */}
             <rect
-              x="135"
-              y="106"
+              x="136"
+              y="104"
               width="36"
               height="18"
               rx="3"
@@ -366,24 +364,24 @@ export function MobileDeveloperMascot({
               stroke="#0A0A0A"
               strokeWidth="1.5"
             />
-            <rect x="138" y="110" width="16" height="4" rx="1" fill="#0A0A0A" />
-            <circle cx="162" cy="115" r="3.5" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="1" />
+            <rect x="139" y="108" width="16" height="4" rx="1" fill="#0A0A0A" />
+            <circle cx="163" cy="113" r="3.5" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="1" />
 
             {/* Home Indicator Bar Putih */}
             <line
-              x1="145"
-              y1="138"
-              x2="161"
-              y2="138"
+              x1="146"
+              y1="136"
+              x2="162"
+              y2="136"
               stroke="#FFFFFF"
               strokeWidth="2.5"
               strokeLinecap="round"
             />
 
-            {/* Tangan Kiri Menyangga Smartphone */}
+            {/* Tangan Kiri Menyangga Smartphone dari Bawah/Samping (y=130 - Tidak Menutupi Mulut) */}
             <circle
-              cx="140"
-              cy="124"
+              cx="146"
+              cy="130"
               r="7"
               fill="#FFD60A"
               stroke="#0A0A0A"
@@ -394,73 +392,75 @@ export function MobileDeveloperMascot({
           {/* ============================================================== */}
           {/* LAYER 5: TOUCH RIPPLE EFES SENTUHAN KONSENTRIS                 */}
           {/* ============================================================== */}
-          {/* Gelombang Ripple 1 (Cyan) */}
-          <circle
-            cx="132"
-            cy="104"
-            r="8"
-            fill="none"
-            stroke="#00F0FF"
-            strokeWidth="2.5"
-            className="mob-animated-ripple1"
-          />
-          {/* Gelombang Ripple 2 (Hijau Mint Putus-Putus) */}
-          <circle
-            cx="132"
-            cy="104"
-            r="16"
-            fill="none"
-            stroke="#2EE59D"
-            strokeWidth="2"
-            strokeDasharray="4 3"
-            className="mob-animated-ripple2"
-          />
+          <g>
+            {/* Gelombang Ripple 1 (Cyan) */}
+            <circle
+              cx="148"
+              cy="106"
+              r="8"
+              fill="none"
+              stroke="#00F0FF"
+              strokeWidth="2.5"
+              className="mob-animated-ripple1"
+            />
+            {/* Gelombang Ripple 2 (Hijau Mint Putus-Putus) */}
+            <circle
+              cx="148"
+              cy="106"
+              r="16"
+              fill="none"
+              stroke="#2EE59D"
+              strokeWidth="2"
+              strokeDasharray="4 3"
+              className="mob-animated-ripple2"
+            />
 
-          {/* Sparkle Sentuhan Tapping (4-Point Star) */}
-          <polygon
-            points="132,98 134,103 139,104 134,105 132,110 130,105 125,104 130,103"
-            fill="#FFD60A"
-            stroke="#0A0A0A"
-            strokeWidth="1.5"
-          />
+            {/* Sparkle Sentuhan Tapping (4-Point Star) */}
+            <polygon
+              points="148,100 150,105 155,106 150,107 148,112 146,107 141,106 146,105"
+              fill="#FFD60A"
+              stroke="#0A0A0A"
+              strokeWidth="1.5"
+            />
+          </g>
 
           {/* ============================================================== */}
-          {/* LAYER 6: TANGAN KANAN DENGAN GESTUR TAPPING (JARI TELUNJUK)    */}
+          {/* LAYER 6: TANGAN KANAN MENGETUK LAYAR (DI ATAS PERMUKAAN TANPA MENEMBUS) */}
           {/* ============================================================== */}
           <g className="mob-animated-tapper">
-            {/* Lengan Kanan Menjulur dari Badan ke Layar */}
+            {/* Lengan Kanan Menjulur dari Sisi Kiri Tubuh Melintasi Dada Menuju Depan Layar */}
             <path
-              d="M 44 116 Q 80 114 116 106"
+              d="M 44 116 Q 88 126 128 112"
               stroke="#0A0A0A"
               strokeWidth="6"
               strokeLinecap="round"
               fill="none"
             />
 
-            {/* Kepalan Tangan Kuning */}
+            {/* Kepalan Tangan Kanan Kuning di Depan Layar */}
             <circle
-              cx="114"
-              cy="106"
-              r="8"
+              cx="132"
+              cy="110"
+              r="7.5"
               fill="#FFD60A"
               stroke="#0A0A0A"
               strokeWidth="3.5"
             />
 
-            {/* Jari Telunjuk Mengetuk Layar Smartphone */}
+            {/* Jari Telunjuk Mengetuk Permukaan Layar (Berada di Lapisan Teratas) */}
             <path
-              d="M 118 102 L 132 103 L 130 108 L 118 107 Z"
+              d="M 136 108 L 148 106 L 146 111 L 135 113 Z"
               fill="#FFD60A"
               stroke="#0A0A0A"
-              strokeWidth="3"
+              strokeWidth="2.5"
               strokeLinejoin="round"
             />
 
-            {/* Jempol Siap Tapping */}
+            {/* Jempol Siap Tapping Melengkung */}
             <path
-              d="M 112 100 Q 116 94 122 96"
+              d="M 130 104 Q 134 98 140 100"
               stroke="#0A0A0A"
-              strokeWidth="3"
+              strokeWidth="2.5"
               strokeLinecap="round"
               fill="none"
             />
@@ -469,13 +469,9 @@ export function MobileDeveloperMascot({
           {/* ============================================================== */}
           {/* LAYER 7: AKSEN SIMBOL WIRELESS / 5G SIGNAL MELAYANG            */}
           {/* ============================================================== */}
-          {/* Sinyal Wi-Fi di Kiri Atas */}
           <g transform="translate(18, 54)">
-            {/* Gelombang 1 */}
             <path d="M 4 14 A 12 12 0 0 1 20 14" stroke="#0A0A0A" strokeWidth="2.5" strokeLinecap="round" fill="none" />
-            {/* Gelombang 2 */}
             <path d="M 8 18 A 6 6 0 0 1 16 18" stroke="#00F0FF" strokeWidth="2.5" strokeLinecap="round" fill="none" />
-            {/* Titik Pemancar */}
             <circle cx="12" cy="22" r="2" fill="#FF5C8A" stroke="#0A0A0A" strokeWidth="1.5" />
           </g>
         </g>

@@ -29,7 +29,7 @@ const BATCH_1_ROLES = [
       { name: "Blueprint Cetak Biru", desc: "Cetak biru digital cyan (#00F0FF) memuat skema microservices & node database" },
       { name: "Kacamata Arsitek", desc: "Frame persegi teknikal tebal 3.5px dengan lensa reflektif cyan bergaris kilau" },
       { name: "Penggaris T & Stylus", desc: "Penggaris siku T di tangan kanan sebagai perlambang presisi rekayasa kode" },
-      { name: "Kubus Modular 3D", desc: "Fondasi 3D isometrik melayang melambangkan arsitektur sistem modular berlapis" },
+      { name: "Kubus Modular 3D Kembar", desc: "Sepasang kubus fondasi 3D isometrik melayang di kiri dan kanan atas melambangkan arsitektur sistem modular berlapis" },
     ],
   },
   {
@@ -43,9 +43,9 @@ const BATCH_1_ROLES = [
     mascotComponent: MobileDeveloperMascot,
     svgPath: "/assets/mascot/roles/mobile-developer.svg",
     anatomy: [
-      { name: "Smartphone Raksasa", desc: "Gawai berbingkai putih dengan antarmuka dinamis, card banner pink, dan grid ikon aplikasi" },
+      { name: "Smartphone Raksasa Bersih", desc: "Gawai berbingkai putih dipegang tangan kiri di bawah dagu dengan antarmuka card banner pink dan grid ikon aplikasi" },
       { name: "Topi Snapback Miring", desc: "Topi kasual urban warna pink magenta dengan visor datar cyan elektrik" },
-      { name: "Gestur Tapping Presisi", desc: "Jari telunjuk siap mengetuk dan mengoperasikan aplikasi di layar" },
+      { name: "Gestur Tapping di Atas Layar", desc: "Tangan kanan berada di layer terdepan dengan jari telunjuk mengetuk tombol aksi di permukaan layar" },
       { name: "Ripple Sentuh Konsentris", desc: "Cincin gelombang ripple cyan dan mint memancar dari titik sentuhan layar" },
     ],
   },

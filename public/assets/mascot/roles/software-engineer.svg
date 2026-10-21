@@ -92,9 +92,16 @@
   </g>
   <circle cx="38" cy="116" r="7.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="3.5" />
 
-  <!-- Kubus Fondasi Modular 3D Isometrik -->
+  <!-- Kubus Fondasi Modular 3D Isometrik (Kiri Atas) -->
   <polygon points="16,36 28,30 40,36 28,42" fill="#00F0FF" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
   <polygon points="16,36 28,42 28,54 16,48" fill="#FF8A3D" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
   <polygon points="28,42 40,36 40,48 28,54" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
   <circle cx="28" cy="36" r="2" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1" />
+
+  <!-- Kubus Fondasi Modular 3D Isometrik (Kanan Atas) -->
+  <polygon points="164,52 174,47 174,59 164,64" fill="#0A0A0A" />
+  <polygon points="160,36 172,30 184,36 172,42" fill="#2EE59D" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
+  <polygon points="160,36 172,42 172,54 160,48" fill="#00F0FF" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
+  <polygon points="172,42 184,36 184,48 172,54" fill="#FF8A3D" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
+  <circle cx="172" cy="36" r="2" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1" />
 </svg>
