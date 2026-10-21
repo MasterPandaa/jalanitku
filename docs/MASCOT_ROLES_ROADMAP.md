@@ -52,7 +52,7 @@ Ke-21 role IT dikelompokkan ke dalam 7 batch tematik yang masing-masing terdiri 
 #### 1. Software Engineer — "The Architect"
 - **Metafora Karakter**: Sang perancang dan pembangun fondasi sistem dunia nyata. Ia mendirikan pilar-pilar arsitektur digital yang kokoh dan scalable.
 - **Atribut Visual & Props**:
-  - **Kacamata Arsitek Persegi**: Frame hitam tebal dengan lensa cyan reflektif (`#00F0FF`).
+  - **Ekspresi Cerdas & Alis Percaya Diri (Tanpa Kacamata)**: Mata jernih ekspresif dengan pupil hitam, kilau putih, dan pantulan cyan elektrik `#00F0FF`, dipadukan dengan alis tegas melengkung yang percaya diri dan berwibawa, memancarkan visi arsitektur sistem yang tajam.
   - **Blueprint Digital Terbuka Digenggam Erat**: Cetak biru skema sistem dibentangkan dan digenggam tangan kiri dari samping-bawah lengkap dengan diagram blok microservices dan node database terhubung.
   - **Rompi Lapangan Arsitektur (Safety Vest Hi-Vis)**: Rompi oranye (`#FF8A3D`) dengan pita neon reflektif (`#2EE59D`), saku pena dada, dan slot ID card.
   - **Pensil Drafting Arsitek (Ujung Grafit Runcing ke Atas)**: Pensil kayu teknikal hexagonal oranye (`#FF8A3D`) lengkap dengan mata timbal hitam runcing menghadap ke atas, ferrule logam, dan penghapus pink (`#FF5C8A`) di pangkal bawah.

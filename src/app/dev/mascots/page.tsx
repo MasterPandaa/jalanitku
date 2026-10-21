@@ -26,6 +26,7 @@ const BATCH_1_ROLES = [
     mascotComponent: SoftwareEngineerMascot,
     svgPath: "/assets/mascot/roles/software-engineer.svg",
     anatomy: [
+      { name: "Ekspresi Cerdas & Alis Percaya Diri", desc: "Mata berbinar jernih dengan kilau cyan bersahabat dan alis tegas arsitek tanpa kacamata, menampilkan visi rekayasa sistem yang tajam" },
       { name: "Blueprint Cetak Biru Terbuka", desc: "Cetak biru digital cyan (#00F0FF) dibentangkan dan digenggam erat tangan kiri menampilkan skema microservices" },
       { name: "Rompi Safety Arsitektur", desc: "Rompi lapangan hi-vis oranye (#FF8A3D) dengan pita reflektif neon, saku pena, dan ID badge" },
       { name: "Pensil Drafting Runcing Atas", desc: "Pensil kayu teknikal hexagonal oranye dengan mata timbal runcing menghadap ke atas siap membuat skema" },

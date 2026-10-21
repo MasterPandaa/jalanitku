@@ -12,8 +12,8 @@ export interface SoftwareEngineerMascotProps {
 /**
  * Maskot Role: Software Engineer — "The Architect"
  * Identitas: Sang Arsitek Kode & Fondasi Sistem Digital
- * Ciri Khas: Kacamata arsitek persegi cyan, blueprint digital dengan skema server node,
- * pensil arsitek drafting, kubus fondasi modular 3D isometrik di sudut kiri, kubus modular 3D isometrik di sudut kanan atas,
+ * Ciri Khas: Mata ekspresif fokus berbinar arsitek dengan alis tegas cerdas, blueprint digital terbuka,
+ * rompi arsitektur safety hi-vis, pensil drafting arsitek runcing atas, kubus modular 3D isometrik latar belakang,
  * dan helm konstruksi arsitek berstruktur ventilasi, visor brim ganda & emblem spotlight.
  */
 export function SoftwareEngineerMascot({
@@ -27,7 +27,7 @@ export function SoftwareEngineerMascot({
       className={`relative inline-flex items-center justify-center select-none group ${className}`}
       style={{ width: size, height: size }}
       role="img"
-      aria-label="Maskot Software Engineer — The Architect: Papan penunjuk jalan neo-brutalism dengan kacamata arsitek teknikal, cetak biru sistem, pensil drafting arsitek, dan sepasang kubus modular 3D isometrik"
+      aria-label="Maskot Software Engineer — The Architect: Papan penunjuk jalan neo-brutalism dengan ekspresi arsitek cerdas percaya diri, cetak biru sistem, rompi safety hi-vis, pensil drafting, dan kubus modular 3D isometrik"
     >
       <svg
         viewBox="0 0 200 200"
@@ -308,9 +308,9 @@ export function SoftwareEngineerMascot({
           <line x1="84" y1="126" x2="78" y2="144" stroke="#0A0A0A" strokeWidth="3" />
           <line x1="106" y1="126" x2="112" y2="144" stroke="#0A0A0A" strokeWidth="3" />
 
-          {/* Mulut Senyum Bangga Arsitek */}
+          {/* Mulut Senyum Bangga Arsitek (Percaya Diri, Ramah & Berwibawa) */}
           <path
-            d="M 88 114 Q 94.5 122 101 114"
+            d="M 87 114 Q 94.5 123 102 114"
             stroke="#0A0A0A"
             strokeWidth="3.5"
             fill="none"
@@ -318,85 +318,58 @@ export function SoftwareEngineerMascot({
           />
 
           {/* ============================================================== */}
-          {/* LAYER 3: KACAMATA ARSITEK PERSEGI CYAN (#00F0FF)               */}
+          {/* LAYER 3: MATA & EKSPRESI CERDAS ARSITEK (TANPA KACAMATA)       */}
           {/* ============================================================== */}
-          {/* Tangkai Frame Kacamata */}
-          <line x1="42" y1="84" x2="54" y2="84" stroke="#0A0A0A" strokeWidth="4" />
-          <line x1="134" y1="84" x2="148" y2="84" stroke="#0A0A0A" strokeWidth="4" />
-          <line x1="84" y1="84" x2="98" y2="84" stroke="#0A0A0A" strokeWidth="4" />
-
-          {/* Frame Lensa Kiri Persegi Tebal */}
+          {/* Mata Kiri */}
           <rect
-            x="54"
-            y="72"
-            width="30"
-            height="26"
-            rx="3"
-            fill="#00F0FF"
-            stroke="#0A0A0A"
-            strokeWidth="3.5"
-          />
-          {/* Kaca Lensa Putih Kiri */}
-          <rect
-            x="61"
-            y="77"
-            width="16"
-            height="16"
-            rx="2"
+            x="58"
+            y="76"
+            width="22"
+            height="24"
+            rx="4"
             fill="#FFFFFF"
             stroke="#0A0A0A"
-            strokeWidth="2.5"
+            strokeWidth="3.5"
           />
           {/* Pupil Hitam Kiri */}
-          <rect x="66" y="81" width="7" height="9" rx="1.5" fill="#0A0A0A" />
-          {/* Kilau Cahaya Pupil */}
-          <circle cx="68.5" cy="83.5" r="1.5" fill="#FFFFFF" />
-          {/* Garis Kilau Refleksi Kacamata Putih */}
-          <line
-            x1="57"
-            y1="75"
-            x2="65"
-            y2="92"
-            stroke="#FFFFFF"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
+          <rect x="64" y="81" width="11" height="13" rx="2" fill="#0A0A0A" />
+          {/* Kilau Putih Sinar Mata Utama */}
+          <circle cx="67" cy="84" r="1.5" fill="#FFFFFF" />
+          {/* Kilau Refleksi Cyan Cerdas */}
+          <circle cx="70" cy="88" r="1.2" fill="#00F0FF" />
 
-          {/* Frame Lensa Kanan Persegi Tebal */}
+          {/* Mata Kanan */}
           <rect
-            x="98"
-            y="72"
-            width="30"
-            height="26"
-            rx="3"
-            fill="#00F0FF"
+            x="102"
+            y="76"
+            width="22"
+            height="24"
+            rx="4"
+            fill="#FFFFFF"
             stroke="#0A0A0A"
             strokeWidth="3.5"
           />
-          {/* Kaca Lensa Putih Kanan */}
-          <rect
-            x="105"
-            y="77"
-            width="16"
-            height="16"
-            rx="2"
-            fill="#FFFFFF"
-            stroke="#0A0A0A"
-            strokeWidth="2.5"
-          />
           {/* Pupil Hitam Kanan */}
-          <rect x="110" y="81" width="7" height="9" rx="1.5" fill="#0A0A0A" />
-          {/* Kilau Cahaya Pupil */}
-          <circle cx="112.5" cy="83.5" r="1.5" fill="#FFFFFF" />
-          {/* Garis Kilau Refleksi Kacamata Putih */}
-          <line
-            x1="101"
-            y1="75"
-            x2="109"
-            y2="92"
-            stroke="#FFFFFF"
-            strokeWidth="2"
+          <rect x="108" y="81" width="11" height="13" rx="2" fill="#0A0A0A" />
+          {/* Kilau Putih Sinar Mata Utama */}
+          <circle cx="111" cy="84" r="1.5" fill="#FFFFFF" />
+          {/* Kilau Refleksi Cyan Cerdas */}
+          <circle cx="114" cy="88" r="1.2" fill="#00F0FF" />
+
+          {/* Alis Tegas & Percaya Diri (Confident Architect Brow) */}
+          <path
+            d="M 57 69 Q 69 64 80 68"
+            stroke="#0A0A0A"
+            strokeWidth="3.5"
             strokeLinecap="round"
+            fill="none"
+          />
+          <path
+            d="M 102 68 Q 113 64 125 69"
+            stroke="#0A0A0A"
+            strokeWidth="3.5"
+            strokeLinecap="round"
+            fill="none"
           />
 
           {/* ============================================================== */}
