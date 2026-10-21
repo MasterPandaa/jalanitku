@@ -5,6 +5,7 @@ export interface Role {
   id: string;
   slug: string;
   nama: { id: string; en?: string };
+  julukan: string;
   tagline: { id: string; en?: string };
   deskripsi: { id: string; en?: string };
   warna: string;

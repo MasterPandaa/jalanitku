@@ -2,7 +2,7 @@ import questionsData from "@/data/seed/career_questions.json";
 import { getRoles, getRoleBySlug, Role } from "./roles";
 import { usersStore, saveUser } from "./auth";
 import { getOrCreatePersistentStore, PersistentStore } from "./storage";
-import { safeSupabaseSync } from "./supabase";
+import { safeSupabaseSync, supabase } from "./supabase";
 
 export interface CareerSession {
   id: string;
@@ -23,6 +23,7 @@ export interface CareerResult {
   top_role: {
     slug: string;
     name: string;
+    julukan?: string;
     match_percentage: number;
     tagline: string;
     description: string;
@@ -32,6 +33,7 @@ export interface CareerResult {
   secondary_roles: Array<{
     slug: string;
     name: string;
+    julukan?: string;
     match_percentage: number;
     color: string;
   }>;
@@ -44,32 +46,6 @@ export interface CareerResult {
   is_tie: boolean;
   issued_at: string;
 }
-
-// Persistent sessions and jalan_ids storage (one JalanID per user, upsert)
-export const careerSessions: PersistentStore<CareerSession> = getOrCreatePersistentStore<CareerSession>(
-  "career_sessions",
-  "career_sessions.json",
-  [],
-  {
-    serialize: (session: CareerSession) => ({
-      ...session,
-      answers: session.answers instanceof Map
-        ? Object.fromEntries(session.answers.entries())
-        : session.answers,
-    }),
-    deserialize: (raw: any): CareerSession => ({
-      ...raw,
-      answers: raw.answers
-        ? new Map(Object.entries(raw.answers))
-        : new Map(),
-    }),
-  }
-);
-
-export const jalanIdsStore: PersistentStore<CareerResult> = getOrCreatePersistentStore<CareerResult>(
-  "jalan_ids",
-  "jalan_ids.json"
-);
 
 /**
  * Sinkronisasi CareerSession ke Supabase
@@ -114,6 +90,51 @@ export function syncJalanIdToSupabase(result: CareerResult): void {
     if (error) console.warn("[Supabase] Upsert jalan_ids error:", error.message);
   });
 }
+
+// Persistent sessions and jalan_ids storage (one JalanID per user, upsert)
+export const careerSessions: PersistentStore<CareerSession> = getOrCreatePersistentStore<CareerSession>(
+  "career_sessions",
+  "career_sessions.json",
+  [],
+  {
+    serialize: (session: CareerSession) => ({
+      ...session,
+      answers: session.answers instanceof Map
+        ? Object.fromEntries(session.answers.entries())
+        : session.answers,
+    }),
+    deserialize: (raw: any): CareerSession => ({
+      ...raw,
+      answers: raw.answers
+        ? new Map(Object.entries(raw.answers))
+        : new Map(),
+    }),
+    onSet: (_key, session) => {
+      syncCareerSessionToSupabase(session);
+    },
+    onDelete: (key) => {
+      safeSupabaseSync("deleteCareerSession", async (client) => {
+        await client.from("career_sessions").delete().eq("id", key);
+      });
+    },
+  }
+);
+
+export const jalanIdsStore: PersistentStore<CareerResult> = getOrCreatePersistentStore<CareerResult>(
+  "jalan_ids",
+  "jalan_ids.json",
+  [],
+  {
+    onSet: (_key, result) => {
+      syncJalanIdToSupabase(result);
+    },
+    onDelete: (key) => {
+      safeSupabaseSync("deleteJalanId", async (client) => {
+        await client.from("jalan_ids").delete().eq("user_id", key);
+      });
+    },
+  }
+);
 
 /**
  * Starts a new JalanKarir session for user.
@@ -288,6 +309,7 @@ export function calculateCareerResult(sessionId: string): CareerResult {
     return {
       slug: role.slug,
       name: role.nama.id,
+      julukan: role.julukan,
       score: raw,
       percentage: Math.max(10, Math.min(99, percentage)),
       color: role.warna,
@@ -321,6 +343,7 @@ export function calculateCareerResult(sessionId: string): CareerResult {
     top_role: {
       slug: top1.slug,
       name: top1.name,
+      julukan: top1.julukan,
       match_percentage: top1.percentage,
       tagline: top1.tagline,
       description: top1.description,
@@ -328,8 +351,8 @@ export function calculateCareerResult(sessionId: string): CareerResult {
       mascot_key: top1.mascot_key,
     },
     secondary_roles: [
-      { slug: top2.slug, name: top2.name, match_percentage: top2.percentage, color: top2.color },
-      { slug: top3.slug, name: top3.name, match_percentage: top3.percentage, color: top3.color },
+      { slug: top2.slug, name: top2.name, julukan: top2.julukan, match_percentage: top2.percentage, color: top2.color },
+      { slug: top3.slug, name: top3.name, julukan: top3.julukan, match_percentage: top3.percentage, color: top3.color },
     ],
     all_scores: ranked,
     is_tie,
@@ -356,8 +379,86 @@ export function calculateCareerResult(sessionId: string): CareerResult {
 }
 
 /**
- * Gets user's active JalanID
+ * Gets user's active JalanID (synchronous local memory lookup)
  */
 export function getUserJalanID(userId: string): CareerResult | undefined {
   return jalanIdsStore.get(userId);
 }
+
+/**
+ * Gets user's active JalanID with fallback to Supabase if not in local store
+ */
+export async function getUserJalanIDAsync(userId: string): Promise<CareerResult | null> {
+  const local = jalanIdsStore.get(userId);
+  if (local) return local;
+
+  try {
+    const { data, error } = await supabase
+      .from("jalan_ids")
+      .select("*")
+      .eq("user_id", userId)
+      .maybeSingle();
+
+    if (!error && data) {
+      const result: CareerResult = {
+        card_code: data.card_code || "",
+        user_id: data.user_id || userId,
+        username: data.username || "",
+        top_role: (data.top_role as any) || { slug: "", name: "", match_percentage: 0, tagline: "", description: "", color: "", mascot_key: "" },
+        secondary_roles: (data.secondary_roles as any) || [],
+        all_scores: (data.all_scores as any) || [],
+        is_tie: Boolean(data.is_tie),
+        issued_at: data.issued_at || "",
+      };
+      jalanIdsStore.set(userId, result);
+      return result;
+    }
+  } catch (err) {
+    console.warn("[Supabase] Fetch jalan_id fallback error:", err);
+  }
+
+  return null;
+}
+
+/**
+ * Gets career session with fallback to Supabase if not in local store
+ */
+export async function getCareerSessionAsync(sessionId: string): Promise<CareerSession | null> {
+  const local = careerSessions.get(sessionId);
+  if (local) return local;
+
+  try {
+    const { data, error } = await supabase
+      .from("career_sessions")
+      .select("*")
+      .eq("id", sessionId)
+      .maybeSingle();
+
+    if (!error && data) {
+      const answersMap = new Map();
+      if (data.answers && typeof data.answers === "object") {
+        for (const [k, v] of Object.entries(data.answers)) {
+          answersMap.set(k, v);
+        }
+      }
+      const session: CareerSession = {
+        id: data.id,
+        user_id: data.user_id || "",
+        status: (data.status as any) || "in_progress",
+        current_level: data.current_level || 1,
+        seed: data.seed || "",
+        answers: answersMap,
+        created_at: data.created_at || "",
+        completed_at: data.completed_at || undefined,
+        result: (data.result as any) || undefined,
+      };
+      careerSessions.set(sessionId, session);
+      return session;
+    }
+  } catch (err) {
+    console.warn("[Supabase] Fetch career_session fallback error:", err);
+  }
+
+  return null;
+}
+

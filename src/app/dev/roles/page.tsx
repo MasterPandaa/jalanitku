@@ -16,14 +16,20 @@ export default function RolesGalleryPage() {
             Tahap 4 · Data Layer &amp; Seed Role
           </div>
           <h1 className="font-heading text-4xl md:text-5xl tracking-tight text-ink">
-            Katalog 19 Role IT JalanITku
+            Katalog 21 Role IT JalanITku
           </h1>
           <p className="font-sans text-base md:text-lg text-ink/80 mt-2 max-w-2xl leading-relaxed">
-            Daftar lengkap 19 role IT beserta deskripsi tugas harian dan 5–6 kompetensi teknis yang
+            Daftar lengkap 21 role IT beserta deskripsi tugas harian, julukan resmi, dan kompetensi teknis yang
             menjadi sumbu radar chart Cocoklogiku.
           </p>
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex flex-wrap items-center gap-4">
+          <Link
+            href="/dev/mascots"
+            className="nb-btn px-4 py-2 bg-accent-yellow border-3 border-ink font-display font-bold text-sm shadow-nb-sm hover:translate-x-[-2px] hover:translate-y-[-2px]"
+          >
+            🎭 Galeri Maskot (Batch 1) →
+          </Link>
           <Link
             href="/dev/components"
             className="nb-btn px-4 py-2 bg-surface border-3 border-ink font-display font-bold text-sm shadow-nb-sm"
@@ -62,6 +68,11 @@ export default function RolesGalleryPage() {
                   <h2 className="font-heading text-2xl text-ink leading-tight">
                     {role.nama.id}
                   </h2>
+                  {role.julukan && (
+                    <div className="font-mono text-xs font-black text-accent-pink uppercase mt-0.5">
+                      &quot;{role.julukan}&quot;
+                    </div>
+                  )}
                   <p className="font-display font-bold text-xs text-ink/70 mt-1 leading-snug">
                     &quot;{role.tagline.id}&quot;
                   </p>

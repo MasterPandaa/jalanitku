@@ -4,6 +4,7 @@ import React, { useRef, useState } from "react";
 import { Logo } from "@/components/ui/Logo";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
+import { RoleMascot } from "@/components/mascot/RoleMascot";
 import { CareerResult } from "@/lib/karir";
 
 export interface JalanIDCardProps {
@@ -60,13 +61,20 @@ export function JalanIDCard({ data, showActions = true }: JalanIDCardProps) {
         ctx.font = "bold 20px monospace";
         ctx.fillText(`@${data.username}`, 60, 120);
 
-        // Top Role Name
+        // Top Role Name & Julukan
         ctx.font = "bold 44px sans-serif";
         ctx.fillText(data.top_role.name, 60, ratio === "story" ? 380 : 250);
 
+        if (data.top_role.julukan) {
+          ctx.font = "italic bold 22px sans-serif";
+          ctx.fillStyle = "#FF5C8A";
+          ctx.fillText(`"${data.top_role.julukan}"`, 60, ratio === "story" ? 415 : 280);
+          ctx.fillStyle = "#0A0A0A";
+        }
+
         // Percentage
         ctx.font = "bold 28px monospace";
-        ctx.fillText(`Kecocokan: ${data.top_role.match_percentage}%`, 60, ratio === "story" ? 430 : 290);
+        ctx.fillText(`Kecocokan: ${data.top_role.match_percentage}%`, 60, ratio === "story" ? 460 : 315);
 
         // Secondary roles
         ctx.font = "18px sans-serif";
@@ -134,24 +142,34 @@ export function JalanIDCard({ data, showActions = true }: JalanIDCardProps) {
         </div>
 
         {/* User Identity & Top Role */}
-        <div className="flex items-start gap-5">
-          {/* Role Color Block Avatar */}
-          <div
-            className="w-20 h-20 md:w-24 md:h-24 border-4 border-ink shadow-nb-sm flex flex-col items-center justify-center p-2 flex-none"
-            style={{ backgroundColor: data.top_role.color }}
-          >
-            <div className="font-heading text-2xl md:text-3xl text-ink leading-none">
+        <div className="flex items-center gap-5">
+          {/* Official Role Mascot */}
+          <div className="relative flex-none">
+            <div
+              className="w-24 h-24 md:w-28 md:h-28 border-4 border-ink shadow-nb-sm flex items-center justify-center p-1 relative overflow-hidden rounded-xl"
+              style={{ backgroundColor: data.top_role.color || "#FFD60A" }}
+            >
+              <RoleMascot roleSlug={data.top_role.slug} size={105} animate={true} />
+            </div>
+            {/* Match Percentage Pill */}
+            <div className="absolute -bottom-2 -right-2 bg-ink text-paper font-heading text-xs md:text-sm font-bold px-2 py-0.5 border-2 border-paper shadow-[2px_2px_0_#0A0A0A] rounded-md">
               {data.top_role.match_percentage}%
             </div>
-            <span className="font-mono text-[10px] font-bold text-ink mt-1">COCOK</span>
           </div>
 
           <div className="flex-1 min-w-0">
-            <div className="font-mono text-xs md:text-sm font-bold text-ink/75">@{data.username}</div>
-            <h2 className="font-heading text-3xl md:text-4xl text-ink leading-tight truncate">
+            <div className="flex items-center gap-2 mb-1 flex-wrap">
+              <span className="font-mono text-xs md:text-sm font-bold text-ink/75">@{data.username}</span>
+              {data.top_role.julukan && (
+                <span className="inline-block bg-accent-yellow text-ink border-2 border-ink px-2 py-0.2 font-mono text-[11px] font-black uppercase shadow-[2px_2px_0_#0A0A0A]">
+                  &quot;{data.top_role.julukan}&quot;
+                </span>
+              )}
+            </div>
+            <h2 className="font-heading text-2xl md:text-4xl text-ink leading-tight truncate">
               {data.top_role.name}
             </h2>
-            <p className="font-sans text-xs md:text-sm font-medium text-ink/80 mt-1 italic">
+            <p className="font-sans text-xs md:text-sm font-medium text-ink/80 mt-1 italic line-clamp-2">
               &quot;{data.top_role.tagline}&quot;
             </p>
           </div>
