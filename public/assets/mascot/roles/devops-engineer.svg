@@ -1,0 +1,100 @@
+<svg viewBox="0 0 200 200" width="200" height="200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- MASKOT DEVOPS ENGINEER — "THE CYCLIST" -->
+  <!-- Proyek: JalanITku · Sutradara Visual: Matatabi -->
+
+  <!-- Sepatu Balap Sepeda Sol Neon Green -->
+  <rect x="66" y="162" width="22" height="24" fill="#0A0A0A" />
+  <rect x="112" y="162" width="22" height="24" fill="#0A0A0A" />
+  <rect x="62" y="160" width="22" height="24" fill="#0A0A0A" rx="2" />
+  <rect x="108" y="160" width="22" height="24" fill="#0A0A0A" rx="2" />
+  <line x1="62" y1="180" x2="84" y2="180" stroke="#2EE59D" stroke-width="3.5" />
+  <line x1="108" y1="180" x2="130" y2="180" stroke="#2EE59D" stroke-width="3.5" />
+
+  <!-- Hard Shadow Badan -->
+  <rect x="46" y="52" width="112" height="110" rx="10" fill="#0A0A0A" />
+
+  <!-- Badan Utama Rambu Merah Karmin CI/CD -->
+  <rect x="38" y="44" width="112" height="110" rx="10" fill="#F43F5E" stroke="#0A0A0A" stroke-width="5" stroke-linejoin="round" />
+
+  <!-- Garis Rambu Jalan Dashed -->
+  <line x1="48" y1="142" x2="140" y2="142" stroke="#0A0A0A" stroke-width="4" stroke-dasharray="8 6" />
+
+  <!-- Helm Sepeda Pembalap Aero Karmin & Neon Green -->
+  <g transform="translate(24, 6)">
+    <path d="M 16,42 C 16,14 130,10 144,38 L 152,48 L 10,48 Z" fill="#0A0A0A" />
+    <path d="M 14,38 C 14,10 126,8 140,34 L 146,44 L 8,44 Z" fill="#F43F5E" stroke="#0A0A0A" stroke-width="4" stroke-linejoin="round" />
+    <path d="M 32,24 C 60,18 100,18 124,28" stroke="#2EE59D" stroke-width="4" fill="none" stroke-linecap="round" />
+    <path d="M 44,14 C 70,10 94,10 112,18" stroke="#0A0A0A" stroke-width="3" fill="none" stroke-linecap="round" />
+    <polygon points="12,38 2,42 12,44" fill="#0A0A0A" />
+    <polygon points="10,36 0,40 10,42" fill="#2EE59D" stroke="#0A0A0A" stroke-width="2" stroke-linejoin="round" />
+  </g>
+
+  <!-- Kacamata Visor Balap Neon Green -->
+  <rect x="52" y="66" width="86" height="26" rx="6" fill="#0A0A0A" />
+  <rect x="50" y="64" width="86" height="26" rx="6" fill="#2EE59D" stroke="#0A0A0A" stroke-width="4" />
+  <line x1="58" y1="68" x2="72" y2="86" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+  <line x1="98" y1="68" x2="112" y2="86" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+  <circle cx="76" cy="77" r="4.5" fill="#0A0A0A" />
+  <circle cx="77.5" cy="75.5" r="1.5" fill="#FFFFFF" />
+  <circle cx="112" cy="77" r="4.5" fill="#0A0A0A" />
+  <circle cx="113.5" cy="75.5" r="1.5" fill="#FFFFFF" />
+
+  <!-- Alis & Senyum Enerjik -->
+  <line x1="56" y1="56" x2="80" y2="58" stroke="#0A0A0A" stroke-width="4.5" stroke-linecap="round" />
+  <line x1="108" y1="58" x2="132" y2="56" stroke="#0A0A0A" stroke-width="4.5" stroke-linecap="round" />
+  <path d="M84,110 Q94,120 104,110" stroke="#0A0A0A" stroke-width="3.5" stroke-linecap="round" fill="none" />
+  <rect x="46" y="104" width="10" height="6" rx="2" fill="#FFD60A" />
+  <rect x="132" y="104" width="10" height="6" rx="2" fill="#FFD60A" />
+
+  <!-- Pita Mobius Infinity Loop CI/CD di Dada -->
+  <path
+    d="M 68,134 C 68,124 80,122 94,132 C 108,142 120,140 120,130 C 120,120 108,118 94,128 C 80,138 68,136 68,126"
+    stroke="#0A0A0A"
+    stroke-width="9"
+    stroke-linecap="round"
+    fill="none"
+  />
+  <path
+    d="M 66,132 C 66,122 78,120 92,130 C 106,140 118,138 118,128 C 118,118 106,116 92,126 C 78,136 66,134 66,124"
+    stroke="#2EE59D"
+    stroke-width="6.5"
+    stroke-linecap="round"
+    fill="none"
+  />
+  <circle cx="66" cy="128" r="4" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2" />
+  <circle cx="92" cy="128" r="4.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2" />
+  <circle cx="118" cy="128" r="4" fill="#00F0FF" stroke="#0A0A0A" stroke-width="2" />
+
+  <!-- Tangan Kanan Memegang Roda Gir Otomasi Pipeline -->
+  <g transform="translate(148, 108)">
+    <line x1="-2" y1="12" x2="16" y2="20" stroke="#0A0A0A" stroke-width="6" stroke-linecap="round" />
+    <circle cx="16" cy="20" r="6" fill="#F43F5E" stroke="#0A0A0A" stroke-width="3.5" />
+    <g transform="translate(18, 16)">
+      <circle cx="2" cy="2" r="16" fill="#0A0A0A" />
+      <circle cx="0" cy="0" r="16" fill="#FFD60A" stroke="#0A0A0A" stroke-width="3" />
+      <rect x="-18" y="-3" width="36" height="6" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2" rx="1" />
+      <rect x="-3" y="-18" width="6" height="36" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2" rx="1" />
+      <rect x="-13" y="-13" width="26" height="6" transform="rotate(45)" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2" rx="1" />
+      <rect x="-13" y="-13" width="26" height="6" transform="rotate(-45)" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2" rx="1" />
+      <circle cx="0" cy="0" r="6" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.5" />
+    </g>
+  </g>
+
+  <!-- Tangan Kiri Memegang Kunci Pas Pit-Stop Mekanik -->
+  <g transform="translate(8, 98)">
+    <line x1="30" y1="22" x2="14" y2="28" stroke="#0A0A0A" stroke-width="6" stroke-linecap="round" />
+    <circle cx="14" cy="28" r="6" fill="#F43F5E" stroke="#0A0A0A" stroke-width="3.5" />
+    <g transform="translate(10, 10) rotate(-35)">
+      <rect x="2" y="2" width="7" height="32" rx="2" fill="#0A0A0A" />
+      <rect x="0" y="0" width="7" height="32" rx="2" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2" />
+      <path d="M -3,-2 C -3,-8 10,-8 10,-2 L 5,3 L 2,3 Z" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2" stroke-linejoin="round" />
+    </g>
+  </g>
+
+  <!-- Badge CI/CD🚀 -->
+  <g transform="translate(142, 28)">
+    <rect x="3" y="3" width="42" height="18" rx="4" fill="#0A0A0A" />
+    <rect x="0" y="0" width="42" height="18" rx="4" fill="#2EE59D" stroke="#0A0A0A" stroke-width="2" />
+    <text x="4" y="13" font-family="monospace" font-size="8" font-weight="900" fill="#0A0A0A">CI/CD🚀</text>
+  </g>
+</svg>

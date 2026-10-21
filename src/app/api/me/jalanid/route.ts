@@ -1,19 +1,21 @@
 import { NextRequest, NextResponse } from "next/server";
-import { usersStore } from "@/lib/auth";
-import { getUserJalanID } from "@/lib/karir";
+import { getSessionUser } from "@/lib/auth";
+import { getUserJalanID, getUserJalanIDAsync } from "@/lib/karir";
 
 export async function GET(req: NextRequest) {
-  const sessionId = req.cookies.get("jalanitku_session")?.value;
+  const user = await getSessionUser();
 
-  if (!sessionId || !usersStore.has(sessionId)) {
+  if (!user) {
     return NextResponse.json(
       { success: false, error: { message: "Belum terautentikasi" } },
       { status: 401 }
     );
   }
 
-  const user = usersStore.get(sessionId)!;
-  const jalanId = getUserJalanID(user.id);
+  let jalanId = getUserJalanID(user.id);
+  if (!jalanId) {
+    jalanId = (await getUserJalanIDAsync(user.id)) || undefined;
+  }
 
   if (!jalanId) {
     return NextResponse.json({

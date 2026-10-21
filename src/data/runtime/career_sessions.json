@@ -7,5 +7,95 @@
     "seed": "1792519206638-user_demo_1",
     "answers": {},
     "created_at": "2026-10-20T18:00:06.638Z"
+  },
+  "csess_1792524160585_coqd3": {
+    "id": "csess_1792524160585_coqd3",
+    "user_id": "user_demo_1",
+    "status": "in_progress",
+    "current_level": 5,
+    "seed": "1792524160585-user_demo_1",
+    "answers": {
+      "cq_l1_01": {
+        "value": 4,
+        "duration_ms": 1000
+      },
+      "cq_l1_02": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l1_03": {
+        "value": 3,
+        "duration_ms": 1000
+      },
+      "cq_l1_04": {
+        "value": 4,
+        "duration_ms": 1000
+      },
+      "cq_l1_05": {
+        "value": 2,
+        "duration_ms": 1000
+      },
+      "cq_l1_06": {
+        "value": 4,
+        "duration_ms": 1000
+      },
+      "cq_l1_07": {
+        "value": "opt_a",
+        "duration_ms": 1000
+      },
+      "cq_l2_01": {
+        "value": 2,
+        "duration_ms": 1000
+      },
+      "cq_l2_02": {
+        "value": 3,
+        "duration_ms": 1000
+      },
+      "cq_l2_03": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l2_04": {
+        "value": "opt_2a",
+        "duration_ms": 1000
+      },
+      "cq_l3_01": {
+        "value": "opt_3d",
+        "duration_ms": 1000
+      },
+      "cq_l3_02": {
+        "value": "opt_32b",
+        "duration_ms": 1000
+      },
+      "cq_l4_01": {
+        "value": 3,
+        "duration_ms": 1000
+      },
+      "cq_l4_02": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l4_03": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l4_04": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l5_01": {
+        "value": 4,
+        "duration_ms": 1000
+      },
+      "cq_l5_02": {
+        "value": 4,
+        "duration_ms": 1000
+      },
+      "cq_l5_03": {
+        "value": 4,
+        "duration_ms": 1000
+      }
+    },
+    "created_at": "2026-10-20T19:22:40.585Z"
   }
 }

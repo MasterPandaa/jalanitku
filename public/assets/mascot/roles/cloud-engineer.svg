@@ -1,0 +1,97 @@
+<svg viewBox="0 0 200 200" width="200" height="200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- MASKOT CLOUD ENGINEER — "THE ASCENDER" -->
+  <!-- Proyek: JalanITku · Sutradara Visual: Matatabi -->
+
+  <!-- Karpet Awan Komputasi Neo-Brutalism -->
+  <g transform="translate(14, 142)">
+    <path
+      d="M 28,24 C 14,24 8,36 18,48 C 12,56 20,66 32,64 L 140,64 C 152,66 160,56 154,48 C 164,36 158,24 144,24 C 136,12 118,10 106,18 C 96,8 76,8 66,18 C 54,10 36,12 28,24 Z"
+      fill="#0A0A0A"
+    />
+    <path
+      d="M 24,18 C 10,18 4,30 14,42 C 8,50 16,60 28,58 L 136,58 C 148,60 156,50 150,42 C 160,30 154,18 140,18 C 132,6 114,4 102,12 C 92,2 72,2 62,12 C 50,4 32,6 24,18 Z"
+      fill="#FFFFFF"
+      stroke="#0A0A0A"
+      stroke-width="4.5"
+      stroke-linejoin="round"
+    />
+    <path d="M 44,26 C 54,18 70,18 80,24" stroke="#38BDF8" stroke-width="3" fill="none" stroke-linecap="round" />
+    <path d="M 94,22 C 106,16 122,16 130,24" stroke="#38BDF8" stroke-width="3" fill="none" stroke-linecap="round" />
+  </g>
+
+  <!-- Hard Shadow Badan -->
+  <rect x="46" y="44" width="112" height="106" rx="10" fill="#0A0A0A" />
+
+  <!-- Badan Utama Rambu (Biru Awan Cerah #38BDF8) -->
+  <rect
+    x="38"
+    y="36"
+    width="112"
+    height="106"
+    rx="10"
+    fill="#38BDF8"
+    stroke="#0A0A0A"
+    stroke-width="5"
+    stroke-linejoin="round"
+  />
+
+  <!-- Garis Dashed Dekoratif -->
+  <line x1="48" y1="130" x2="140" y2="130" stroke="#0A0A0A" stroke-width="4" stroke-dasharray="8 6" />
+
+  <!-- Kacamata Aviator Penerbang Angkasa Emas -->
+  <ellipse cx="72" cy="74" rx="20" ry="16" fill="#0A0A0A" />
+  <ellipse cx="116" cy="74" rx="20" ry="16" fill="#0A0A0A" />
+  <line x1="90" y1="68" x2="98" y2="68" stroke="#0A0A0A" stroke-width="6" />
+
+  <ellipse cx="70" cy="72" rx="19" ry="15" fill="#FFD60A" stroke="#0A0A0A" stroke-width="4" />
+  <circle cx="74" cy="72" r="5" fill="#0A0A0A" />
+  <circle cx="75.5" cy="70.5" r="1.5" fill="#FFFFFF" />
+  <line x1="58" y1="66" x2="68" y2="78" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+
+  <ellipse cx="114" cy="72" rx="19" ry="15" fill="#FFD60A" stroke="#0A0A0A" stroke-width="4" />
+  <circle cx="118" cy="72" r="5" fill="#0A0A0A" />
+  <circle cx="119.5" cy="70.5" r="1.5" fill="#FFFFFF" />
+  <line x1="102" y1="66" x2="112" y2="78" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+
+  <!-- Alis & Senyum Optimis Angkasa -->
+  <line x1="52" y1="52" x2="84" y2="55" stroke="#0A0A0A" stroke-width="4.5" stroke-linecap="round" />
+  <line x1="104" y1="55" x2="136" y2="52" stroke="#0A0A0A" stroke-width="4.5" stroke-linecap="round" />
+  <path d="M84,106 Q94,116 104,106" stroke="#0A0A0A" stroke-width="3.5" stroke-linecap="round" fill="none" />
+  <rect x="46" y="98" width="10" height="6" rx="2" fill="#FF5C8A" />
+  <rect x="132" y="98" width="10" height="6" rx="2" fill="#FF5C8A" />
+
+  <!-- Tangan Kanan Mengacungkan Kunci Arsitektur Cloud Emas -->
+  <g transform="translate(148, 70) rotate(-15)">
+    <line x1="-2" y1="36" x2="18" y2="28" stroke="#0A0A0A" stroke-width="6" stroke-linecap="round" />
+    <circle cx="18" cy="28" r="6" fill="#38BDF8" stroke="#0A0A0A" stroke-width="3.5" />
+    <line x1="18" y1="28" x2="28" y2="-8" stroke="#0A0A0A" stroke-width="8" stroke-linecap="round" />
+    <line x1="18" y1="28" x2="28" y2="-8" stroke="#FFD60A" stroke-width="5" stroke-linecap="round" />
+    <g transform="translate(24, -20)">
+      <ellipse cx="6" cy="4" rx="10" ry="7" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
+      <circle cx="6" cy="4" r="3" fill="#0A0A0A" />
+      <line x1="14" y1="8" x2="18" y2="8" stroke="#0A0A0A" stroke-width="2.5" />
+      <line x1="14" y1="14" x2="20" y2="14" stroke="#0A0A0A" stroke-width="2.5" />
+    </g>
+  </g>
+
+  <!-- Tangan Kiri Memegang Server Pod Kubus Kontener Kubernetes -->
+  <g transform="translate(8, 72)">
+    <line x1="30" y1="32" x2="14" y2="26" stroke="#0A0A0A" stroke-width="6" stroke-linecap="round" />
+    <circle cx="14" cy="26" r="6" fill="#38BDF8" stroke="#0A0A0A" stroke-width="3.5" />
+    <g transform="translate(-4, 0)">
+      <rect x="3" y="3" width="24" height="24" rx="4" fill="#0A0A0A" />
+      <rect x="0" y="0" width="24" height="24" rx="4" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.5" />
+      <polygon points="12,4 20,8 12,12 4,8" fill="#38BDF8" stroke="#0A0A0A" stroke-width="1" />
+      <line x1="12" y1="12" x2="12" y2="20" stroke="#0A0A0A" stroke-width="1.5" />
+      <line x1="4" y1="8" x2="4" y2="16" stroke="#0A0A0A" stroke-width="1.5" />
+      <line x1="20" y1="8" x2="20" y2="16" stroke="#0A0A0A" stroke-width="1.5" />
+    </g>
+  </g>
+
+  <!-- Badge "99.99% UPTIME" -->
+  <g transform="translate(140, 20)">
+    <rect x="3" y="3" width="46" height="18" rx="4" fill="#0A0A0A" />
+    <rect x="0" y="0" width="46" height="18" rx="4" fill="#2EE59D" stroke="#0A0A0A" stroke-width="2" />
+    <text x="4" y="13" font-family="monospace" font-size="8" font-weight="900" fill="#0A0A0A">99.99%☁</text>
+  </g>
+</svg>

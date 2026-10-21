@@ -2,8 +2,8 @@
 
 > **Sutradara Visual & Creative Director**: Matatabi (Ekor Dua)  
 > **Gaya Desain**: Neo-Brutalism Kontemporer, Presisi Geometris, & Micro-Interactions Interaktif  
-> **Standar Kanvas**: SVG Ortogonal `viewBox="0 0 200 200"`, Stroke `3-4px #0A0A0A`, Hard Drop Shadow Offset  
-> **Status Produksi**: Batch 1 Dirilis (Active) · Batch 2–7 Terjadwal (Roadmap)
+> **Standar Kanvas**: SVG Ortogonal `viewBox="0 0 200 200"`, Stroke `3.5-5px #0A0A0A`, Hard Drop Shadow Offset  
+> **Status Produksi**: Batch 1, Batch 2 & Batch 3 Dirilis (9 of 21 Roles Active) · Batch 4–7 Terjadwal
 
 ---
 
@@ -12,17 +12,20 @@
 Seluruh maskot role IT JalanITku berakar pada DNA maskot utama **JalanMin**: sosok papan penunjuk jalan pintar (*smart signboard*) yang hidup, optimis, dan ekspresif. Jika JalanMin adalah sang penunjuk arah dan detektif penyelidik potensi, maka maskot ke-21 role adalah representasi dari para pahlawan dunia digital yang telah menemukan panggilannya.
 
 ### 1.1 Aturan Emas Visual Neo-Brutalism JalanITku
-1. **Bold Black Outline**: Seluruh garis luar (*stroke*) menggunakan warna pekat `#0A0A0A` dengan ketebalan `3px` hingga `4px`, `stroke-linecap="round"`, dan `stroke-linejoin="round"`.
+1. **Bold Black Outline**: Seluruh garis luar (*stroke*) menggunakan warna pekat `#0A0A0A` dengan ketebalan `3.5px` hingga `5px`, `stroke-linecap="round"`, dan `stroke-linejoin="round"`.
 2. **Pure Hard Shadow**: Efek bayangan tegas tanpa blur (*zero gaussian blur*) dengan translasi offset `+4px` s/d `+6px` sumbu X dan Y berwarna `#0A0A0A`.
 3. **Palet Warna Triadik Berani**:
    - Kuning Utama (*Yellow Sign*): `#FFD60A`
    - Pink Magenta (*Accent Pink*): `#FF5C8A`
-   - Hijau Neon (*Accent Green*): `#2EE59D`
+   - Hijau Neon (*Accent Green*): `#2EE59D` / `#10B981`
    - Cyan Elektrik (*Accent Cyan*): `#00F0FF`
    - Oranye Terang (*Accent Orange*): `#FF8A3D`
+   - Merah Karmin (*Carmine Red*): `#F43F5E`
+   - Ungu Cyber (*Cyber Violet*): `#7C3AED`
+   - Biru Awan (*Sky Blue*): `#38BDF8`
    - Kanvas Terang (*Paper/Surface*): `#FFFDF7` / `#FFF8E7`
-4. **Mata Persegi Humanis**: Mata berbentuk kotak rounded (`rx="3-4"`) dengan sklera putih tebal, pupil hitam pekat, dan pantulan kilau putih/cyan yang mencerminkan rasa ingin tahu dan kecerdasan.
-5. **Micro-Interactions**: Gerakan melayang (*float bobbing*), denyut sentuhan (*ripple pulse*), kilauan kristal, dan rotasi dinamis saat di-hover.
+4. **Mata Persegi Humanis & Visor Futuristik**: Mata berbentuk kotak rounded (`rx="3-5"`) dengan sklera putih tebal, pupil hitam pekat, atau kacamata visor fungsional yang mencerminkan spesialisasi profesi.
+5. **Micro-Interactions**: Gerakan melayang (*float bobbing*), denyut sentuhan (*ripple pulse*), putaran gir otomasi (*gear spin*), dan ayunan alat saat di-hover.
 
 ---
 
@@ -33,12 +36,12 @@ Ke-21 role IT dikelompokkan ke dalam 7 batch tematik yang masing-masing terdiri 
 | Batch | Fokus Domain | Role 1 | Role 2 | Role 3 | Status |
 |:---:|:---|:---|:---|:---|:---:|
 | **Batch 1** | **Core Engineering & Creators** | Software Engineer<br>*(The Architect)* | Mobile Developer<br>*(The Screen Tapper)* | Game Developer<br>*(The Pixel Mage)* | 🚀 **PRODUKSI SELESAI** |
-| **Batch 2** | **Infrastructure & Platforms** | DevOps Engineer<br>*(The Cyclist)* | Cloud Engineer<br>*(The Ascender)* | Network Engineer<br>*(The Connector)* | 📋 Terjadwal |
-| **Batch 3** | **Quality, Defense & Security** | Quality Assurance<br>*(The Bug Hunter)* | Security Analyst<br>*(The Warden)* | Digital Forensics<br>*(The Archaeologist)* | 📋 Terjadwal |
+| **Batch 2** | **Reliability, Support & Connectivity** | Quality Assurance<br>*(The Bug Hunter)* | IT Support<br>*(The Fixer)* | Network Engineer<br>*(The Connector)* | 🚀 **PRODUKSI SELESAI** |
+| **Batch 3** | **Cloud, Platform, CI/CD & Security** | Cloud Engineer<br>*(The Ascender)* | DevOps Engineer<br>*(The Cyclist)* | Security Analyst<br>*(The Warden)* | 🚀 **PRODUKSI SELESAI** |
 | **Batch 4** | **Data & Machine Intelligence** | Data Analyst<br>*(The Seer)* | Data Scientist<br>*(The Alchemist)* | AI/ML Engineer<br>*(The Puppeteer)* | 📋 Terjadwal |
-| **Batch 5** | **Data Engineering & Support** | Data Engineer<br>*(The Plumber)* | IT Support<br>*(The Fixer)* | Data Entry<br>*(The Scribe)* | 📋 Terjadwal |
+| **Batch 5** | **Data Foundation & Ops** | Data Engineer<br>*(The Plumber)* | Database Administrator<br>*(The Librarian)* | System Administrator<br>*(The Groundskeeper)* | 📋 Terjadwal |
 | **Batch 6** | **Product, Design & Delivery** | UI/UX Designer<br>*(The Sculptor)* | Project Manager<br>*(The Navigator)* | Business Analyst<br>*(The Translator)* | 📋 Terjadwal |
-| **Batch 7** | **Enterprise, Strategy & Ops** | IT Consultant<br>*(The Oracle)* | System Administrator<br>*(The Groundskeeper)* | Database Administrator<br>*(The Librarian)* | 📋 Terjadwal |
+| **Batch 7** | **Enterprise, Strategy & Forensics** | IT Consultant<br>*(The Tech Sage)* | Digital Forensics<br>*(The Archaeologist)* | Data Entry<br>*(The Scribe)* | 📋 Terjadwal |
 
 ---
 
@@ -47,69 +50,92 @@ Ke-21 role IT dikelompokkan ke dalam 7 batch tematik yang masing-masing terdiri 
 ### 🚀 BATCH 1: Core Engineering & Creators (Active Release)
 
 #### 1. Software Engineer — "The Architect"
-- **Metafora Karakter**: Sang perancang dan pembangun fondasi sistem dunia nyata. Ia tidak hanya menulis kode, melainkan mendirikan pilar-pilar arsitektur digital yang kokoh dan scalable.
+- **Metafora Karakter**: Sang perancang dan pembangun fondasi sistem dunia nyata. Ia mendirikan pilar-pilar arsitektur digital yang kokoh dan scalable.
 - **Atribut Visual & Props**:
   - **Kacamata Arsitek Persegi**: Frame hitam tebal dengan lensa cyan reflektif (`#00F0FF`).
-  - **Blueprint Digital Cyan**: Cetak biru skema sistem dengan diagram blok microservices, node terhubung, dan garis sirkuit putih.
+  - **Blueprint Digital Cyan**: Cetak biru skema sistem dengan diagram blok microservices dan node database terhubung.
   - **Penggaris T / Stylus Teknikal**: Dipegang tegak di tangan kanan sebagai simbol presisi teknis.
   - **Kubus Modular Isometrik**: Blok fondasi 3D melayang di sisi kiri sebagai lambang arsitektur modular.
 - **Palet Warna**: Kuning `#FFD60A`, Cyan `#00F0FF`, Putih `#FFFFFF`, Tinta `#0A0A0A`.
 
 #### 2. Mobile Developer — "The Screen Tapper"
-- **Metafora Karakter**: Sang penguasa layar sentuh dan gawai portabel. Menghadirkan kecanggihan komputasi langsung ke dalam telapak tangan dan saku jutaan pengguna.
+- **Metafora Karakter**: Sang penguasa layar sentuh dan gawai portabel yang menghadirkan kecanggihan komputasi langsung ke telapak tangan pengguna.
 - **Atribut Visual & Props**:
-  - **Smartphone Raksasa**: Layar modern dengan notch kamera, dynamic island, dan visual antarmuka kartu aplikasi mini berwarna pink-cyan.
+  - **Smartphone Raksasa**: Layar modern dengan kartu antarmuka aplikasi mini berwarna pink-cyan.
   - **Gestur Tapping Interaktif**: Jari telunjuk siap mengetuk layar dengan presisi tinggi.
-  - **Ripple Sentuhan Konsentris**: Lingkaran gelombang sentuh (*touch ripple*) yang memancar keluar dari layar saat interaksi terjadi.
+  - **Ripple Sentuhan Konsentris**: Lingkaran gelombang sentuh memancar dari titik layar.
   - **Topi Snapback Miring**: Gaya kasual urban khas developer mobile modern.
 - **Palet Warna**: Pink Magenta `#FF5C8A`, Kuning `#FFD60A`, Cyan `#00F0FF`, Tinta `#0A0A0A`.
 
 #### 3. Game Developer — "The Pixel Mage"
-- **Metafora Karakter**: Sang penyihir dunia virtual interaktif. Mengubah baris matematika dan logika menjadi keajaiban visual, fisika gameplay, dan kesenangan bermain.
+- **Metafora Karakter**: Sang penyihir dunia virtual interaktif yang meracik logika dan matematika menjadi keajaiban visual dan fisika gameplay.
 - **Atribut Visual & Props**:
-  - **Pixel Mage Hat**: Topi kerucut penyihir bergaya undakan pixel 8-bit retro arcade berwarna hijau tosca mint (`#2EE59D`) beraksen bintang pixel.
-  - **Tongkat Kristal Gamepad**: Tongkat sihir berkepala retro gamepad / joystick arcade dengan orb kristal bercahaya.
-  - **Pixel Magic Particles**: Partikel bintang 4-point dan kubus pixel 8-bit melayang memancarkan aura sihir gameplay.
-  - **Simbol D-Pad & Tombol A/B**: Terukir pada jubah dan tongkat sihir.
+  - **Pixel Mage Hat**: Topi kerucut undakan pixel 8-bit arcade hijau mint (`#2EE59D`) beraksen bintang pixel.
+  - **Tongkat Kristal Gamepad**: Tongkat berkepala retro gamepad dengan orb kristal bercahaya.
+  - **Pixel Magic Particles**: Partikel bintang 4-point dan kubus pixel 8-bit memancarkan aura sihir gameplay.
 - **Palet Warna**: Hijau Mint `#2EE59D`, Pink Magenta `#FF5C8A`, Kuning `#FFD60A`, Tinta `#0A0A0A`.
 
 ---
 
-### 📋 BATCH 2: Infrastructure & Platforms
+### 🚀 BATCH 2: Reliability, Support & Connectivity (Active Release)
 
-#### 4. DevOps Engineer — "The Cyclist"
-- **Metafora Karakter**: Pengemudi roda siklus tak terbatas (*infinite loop*) yang memastikan kode melaju dari commit hingga rilis tanpa hambatan.
-- **Props**: Sabuk roda *Infinity Loop* CI/CD, helm pit-stop mekanik, kunci inggris modular.
-- **Palet Warna**: Hijau `#2EE59D`, Hitam `#0A0A0A`, Putih `#FFFFFF`.
+#### 4. Quality Assurance — "The Bug Hunter"
+- **Metafora Karakter**: Sang pemburu kutu teliti yang menjelajahi celah kode untuk memastikan kesempurnaan setiap rilis software.
+- **Atribut Visual & Props**:
+  - **Topi Safari Hunter & Lampu Senter PASS**: Topi petualang safari oranye/kuning dengan senter kepala berstatus hijau checklist PASS.
+  - **Kaca Pembesar Scanner**: Lensa pembesar cyan berkilau dengan target indikator deteksi bug digital.
+  - **Jaring Penangkap Cyber Bug**: Jaring kawat siber dengan seekor bug kepik merah mini yang berhasil dilumpuhkan.
+  - **Monokel Target Crosshair**: Lensa monokel bermata bidik crosshair presisi tinggi pada mata kanan.
+- **Palet Warna**: Oranye `#FF8A3D`, Hijau Neon `#2EE59D`, Cyan `#00F0FF`, Tinta `#0A0A0A`.
 
-#### 5. Cloud Engineer — "The Ascender"
-- **Metafora Karakter**: Sang penakluk angkasa digital yang mendirikan klaster server di atas awan tanpa batas fisik.
-- **Props**: Jetpack tabung awan beruap, kacamata aviator, tablet konsol multi-region AWS/GCP/Azure.
-- **Palet Warna**: Biru Langit / Pink `#FF5C8A`, Cyan `#00F0FF`, Putih `#FFFFFF`.
+#### 5. IT Support — "The Fixer"
+- **Metafora Karakter**: Penyelamat operasional harian yang selalu sigap menyelesaikan kendala hardware, software, dan konektivitas pengguna dengan ramah.
+- **Atribut Visual & Props**:
+  - **Headset Operator Ramah**: Headset komunikasi cyan dengan mic melengkung dan senyum ramah solutif.
+  - **Kotak Perkakas P3K IT**: Toolbox kuning darurat berlambang palang hijau pertolongan pertama sistem.
+  - **Obeng Multi-Bit Elektrik**: Obeng bermata multi-tool cyan perak siap membongkar perangkat.
+  - **Kabel USB-C Melilit**: Kabel fleksibel melilit rapi di selempang dada dengan colokan port.
+- **Palet Warna**: Putih Bersih `#FFFFFF`, Kuning `#FFD60A`, Cyan `#00F0FF`, Tinta `#0A0A0A`.
 
 #### 6. Network Engineer — "The Connector"
-- **Metafora Karakter**: Penenun jalur serat optik dan penjaga denyut paket data lintas benua.
-- **Props**: Gulungan kabel patch cord RJ45 bercahaya, tester kabel LAN digital, antena transceiver di topi.
-- **Palet Warna**: Kuning `#FFD60A`, Biru Neon, Tinta `#0A0A0A`.
+- **Metafora Karakter**: Penenun infrastruktur kabel dan pengatur jalur denyut paket data lintas benua tanpa jeda.
+- **Atribut Visual & Props**:
+  - **Antena Router Kembar**: Sepasang antena 5GHz di kepala dengan pancaran gelombang radio Wi-Fi konsentris.
+  - **Kabel LAN RJ45 Emas**: Kabel jaringan dengan kepala konektor transparan dan 8 pin tembaga emas.
+  - **Visor Serat Optik HUD**: Visor cyan pemantau bandwidth traffic, packet flow, dan link rate.
+  - **Sabuk Switch & Cable Tester**: Sabuk utilitas berjejer port switch LED hijau serta tester sinyal kabel.
+- **Palet Warna**: Kuning Kabel `#FFD60A`, Cyan `#00F0FF`, Hijau Link `#2EE59D`, Tinta `#0A0A0A`.
 
 ---
 
-### 📋 BATCH 3: Quality, Defense & Security
+### 🚀 BATCH 3: Cloud, Platform, CI/CD & Security (Active Release)
 
-#### 7. Quality Assurance — "The Bug Hunter"
-- **Metafora Karakter**: Pemburu kutu teliti yang menjelajahi celah kode untuk memastikan kesempurnaan setiap rilis.
-- **Props**: Jaring penangkap serangga digital, toples berisi bug bercahaya lucu, kaca pembesar detektif mikro.
-- **Palet Warna**: Oranye `#FF8A3D`, Hijau `#2EE59D`, Tinta `#0A0A0A`.
+#### 7. Cloud Engineer — "The Ascender"
+- **Metafora Karakter**: Sang penakluk angkasa digital yang mendirikan dan mengelola arsitektur klaster server terapung di atas awan tanpa batas fisik.
+- **Atribut Visual & Props**:
+  - **Karpet Awan Komputasi**: Awan putih neo-brutalism terapung tempat maskot melayang dengan efek float stabil.
+  - **Kacamata Aviator Angkasa**: Frame kacamata penerbang pilot emas berefleksi cakrawala data.
+  - **Kunci Arsitektur Server**: Kunci emas berkepala awan simbol hak akses superuser infrastruktur.
+  - **Kubus Pod Kubernetes**: Mini kontener kontainerisasi terapung di tangan kiri dengan lampu pod running.
+- **Palet Warna**: Biru Awan `#38BDF8`, Putih `#FFFFFF`, Emas `#FFD60A`, Tinta `#0A0A0A`.
 
-#### 8. Security Analyst — "The Warden"
-- **Metafora Karakter**: Sipir benteng siber berwibawa yang menggagalkan upaya peretasan dan intrusi jahat.
-- **Props**: Perisai firewall berpola gembok baja, kunci kriptografi emas, visor pemindai ancaman merah-cyan.
-- **Palet Warna**: Hijau Tosca `#2EE59D`, Hitam Baja `#0A0A0A`, Kuning `#FFD60A`.
+#### 8. DevOps Engineer — "The Cyclist"
+- **Metafora Karakter**: Pengemudi roda siklus tak terbatas (*infinite loop*) yang memastikan kode melaju dari commit hingga rilis tanpa hambatan.
+- **Atribut Visual & Props**:
+  - **Pita Infinity Loop CI/CD**: Simbol pita mobius ∞ berputar dinamis memuat simpul build, test, dan deploy.
+  - **Helm Balap Sepeda Aero**: Helm aerodinamis merah karmin bergaris ventilasi neon green kecepatan tinggi.
+  - **Roda Gir Otomasi Rilis**: Roda gir bergerigi emas perak lambang otomasi pipeline tanpa intervensi manual.
+  - **Kunci Pas Hotfix Kilat**: Kunci mekanik di tangan kiri siap melakukan perbaikan zero-downtime.
+- **Palet Warna**: Merah Karmin `#F43F5E`, Neon Green `#2EE59D`, Kuning `#FFD60A`, Tinta `#0A0A0A`.
 
-#### 9. Digital Forensics — "The Archaeologist"
-- **Metafora Karakter**: Arkeolog digital yang merekonstruksi remah-remah bukti biner dari insiden masa lalu.
-- **Props**: Kuas debu heksadesimal, senter sinar UV forensik, sarung tangan anti-statis.
-- **Palet Warna**: Putih Abu `#E2E8F0`, Cyan `#00F0FF`, Tinta `#0A0A0A`.
+#### 9. Security Analyst — "The Warden"
+- **Metafora Karakter**: Sang benteng pertahanan terakhir yang menjaga aset dan integritas data dari serangan exploit, peretasan, dan malware.
+- **Atribut Visual & Props**:
+  - **Perisai Firewall Aegis**: Perisai heksagonal baja berlapis pelat ungu dengan gembok enkripsi AES berpijar.
+  - **Visor Terminal Ancaman**: HUD pemindai hijau terminal dengan radar status deteksi intrusi 0 THREAT.
+  - **Pedang Kunci Enkripsi**: Bilah pedang hijau bercahaya berulir kunci digital pemotong malware.
+  - **Helm Cyber Warden Bertanduk**: Pelindung kepala taktis baja beraksen tanduk hijau terminal tahan benturan.
+- **Palet Warna**: Ungu Cyber `#7C3AED`, Hijau Terminal `#10B981`, Emas `#FFD60A`, Tinta `#0A0A0A`.
 
 ---
 
@@ -132,22 +158,22 @@ Ke-21 role IT dikelompokkan ke dalam 7 batch tematik yang masing-masing terdiri 
 
 ---
 
-### 📋 BATCH 5: Data Engineering & Support
+### 📋 BATCH 5: Data Foundation & Ops
 
 #### 13. Data Engineer — "The Plumber"
 - **Metafora Karakter**: Teknisi pipa data raksasa yang merangkai aliran petabyte data tanpa bocor sedikit pun.
 - **Props**: Pipa data transparan dengan partikel data mengalir cepat, katup tekanan ETL, topi teknisi industri.
 - **Palet Warna**: Kuning `#FFD60A`, Oranye `#FF8A3D`, Tinta `#0A0A0A`.
 
-#### 14. IT Support — "The Fixer"
-- **Metafora Karakter**: Penyelamat garda depan yang mampu menyembuhkan kepanikan perangkat keras dan pengguna dalam hitungan menit.
-- **Props**: Kotak P3K komputer darurat (*First Aid Box*), kabel serbaguna di bahu, senyum ramah menenangkan.
-- **Palet Warna**: Putih Bersih `#FFFFFF`, Kuning `#FFD60A`, Merah Darurat.
+#### 14. Database Administrator — "The Librarian"
+- **Metafora Karakter**: Pustakawan kearsipan suci data yang menguasai indeks tercepat dan ruang brankas transaksi ACID teraman.
+- **Props**: Indeks kartu kueri heksagonal, brankas penyimpanan data berlapis kunci ganda, lentera baca malam.
+- **Palet Warna**: Biru Tua Perpustakaan `#1E3A8A`, Emas `#FFD60A`, Putih `#FFFFFF`.
 
-#### 15. Data Entry — "The Scribe"
-- **Metafora Karakter**: Juru tulis presisi tinggi dengan kecepatan jemari kilat dan akurasi 100%.
-- **Props**: Keyboard mekanikal mini bercahaya, kacamata baca berfokus tajam, stempel checklist hijau terverifikasi.
-- **Palet Warna**: Hijau Neon `#2EE59D`, Putih `#FFFFFF`, Tinta `#0A0A0A`.
+#### 15. System Administrator — "The Groundskeeper"
+- **Metafora Karakter**: Penjaga kebun server yang memastikan setiap akar sistem operasi dan patch keamanan tertata rapi tanpa cela.
+- **Props**: Gantungan ratusan kunci server baja, senter inspeksi rak server, celemek utilitas saku banyak.
+- **Palet Warna**: Hijau Hutan `#15803D`, Abu Metalik `#334155`, Tinta `#0A0A0A`.
 
 ---
 
@@ -170,22 +196,22 @@ Ke-21 role IT dikelompokkan ke dalam 7 batch tematik yang masing-masing terdiri 
 
 ---
 
-### 📋 BATCH 7: Enterprise, Strategy & Ops
+### 📋 BATCH 7: Enterprise, Strategy & Forensics
 
 #### 19. IT Consultant — "The Tech Sage"
 - **Metafora Karakter**: Resi penasihat strategis berwawasan tajam yang membimbing transformasi enterprise menghadapi masa depan.
 - **Props**: Gulungan naskah strategi TI emas, jubah berkerah tinggi elegan, tongkat kompas roadmap.
 - **Palet Warna**: Oranye Emas `#FF8A3D`, Hitam Formal `#0A0A0A`, Putih `#FFFFFF`.
 
-#### 20. System Administrator — "The Groundskeeper"
-- **Metafora Karakter**: Penjaga kebun server yang memastikan setiap akar sistem operasi dan patch keamanan tertata rapi tanpa cela.
-- **Props**: Gantungan ratusan kunci server baja, senter inspeksi rak server, celemek utilitas saku banyak.
-- **Palet Warna**: Hijau Hutan `#15803D`, Abu Metalik `#334155`, Tinta `#0A0A0A`.
+#### 20. Digital Forensics — "The Archaeologist"
+- **Metafora Karakter**: Arkeolog digital yang merekonstruksi remah-remah bukti biner dari insiden masa lalu.
+- **Props**: Kuas debu heksadesimal, senter sinar UV forensik, sarung tangan anti-statis.
+- **Palet Warna**: Putih Abu `#E2E8F0`, Cyan `#00F0FF`, Tinta `#0A0A0A`.
 
-#### 21. Database Administrator — "The Librarian"
-- **Metafora Karakter**: Pustakawan kearsipan suci data yang menguasai indeks tercepat dan ruang brankas transaksi ACID teraman.
-- **Props**: Indeks kartu kueri heksagonal, brankas penyimpanan data berlapis kunci ganda, lentera baca malam.
-- **Palet Warna**: Biru Tua Perpustakaan `#1E3A8A`, Emas `#FFD60A`, Putih `#FFFFFF`.
+#### 21. Data Entry — "The Scribe"
+- **Metafora Karakter**: Juru tulis presisi tinggi dengan kecepatan jemari kilat dan akurasi 100%.
+- **Props**: Keyboard mekanikal mini bercahaya, kacamata baca berfokus tajam, stempel checklist hijau terverifikasi.
+- **Palet Warna**: Hijau Neon `#2EE59D`, Putih `#FFFFFF`, Tinta `#0A0A0A`.
 
 ---
 
@@ -194,8 +220,8 @@ Ke-21 role IT dikelompokkan ke dalam 7 batch tematik yang masing-masing terdiri 
 Setiap maskot diimplementasikan dalam 2 format:
 1. **React SVG Component (`src/components/mascot/roles/[RoleName]Mascot.tsx`)**:
    - Komponen berbasis SVG murni dengan dukungan CSS micro-interactions bawaan.
-   - Props: `size?: number`, `className?: string`, `animated?: boolean`, `title?: string`.
+   - Props: `size?: number | string`, `className?: string`, `animated?: boolean`, `animate?: boolean`, `state?: "idle" | "hover" | "happy"`.
 2. **Standalone Asset SVG (`public/assets/mascot/roles/[role-slug].svg`)**:
    - Berkas SVG standalone yang siap disematkan langsung di `<img>`, metadata Open Graph, avatar, dan dokumen cetak kartu.
 3. **Universal Dispatcher (`src/components/mascot/RoleMascot.tsx`)**:
-   - Otomatis mencocokkan `roleSlug` ke komponen maskot terkait, atau menampilkan maskot adaptif JalanMin bila batch belum diimplementasikan.
+   - Otomatis mencocokkan `roleSlug` ke komponen maskot terkait (Batch 1–3 aktif), atau menampilkan maskot adaptif JalanMin bila batch belum diimplementasikan.

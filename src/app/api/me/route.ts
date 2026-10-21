@@ -1,17 +1,15 @@
 import { NextRequest, NextResponse } from "next/server";
-import { usersStore } from "@/lib/auth";
+import { getSessionUser } from "@/lib/auth";
 
 export async function GET(req: NextRequest) {
-  const sessionId = req.cookies.get("jalanitku_session")?.value;
+  const user = await getSessionUser();
 
-  if (!sessionId || !usersStore.has(sessionId)) {
+  if (!user) {
     return NextResponse.json(
       { success: false, error: { message: "Belum terautentikasi" } },
       { status: 401 }
     );
   }
-
-  const user = usersStore.get(sessionId)!;
 
   return NextResponse.json({
     success: true,

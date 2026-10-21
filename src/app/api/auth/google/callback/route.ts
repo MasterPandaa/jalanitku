@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-        import { usersStore, User } from "@/lib/auth";
+        import { findUserByGoogleSubOrEmail, saveUser, User } from "@/lib/auth";
         
         export async function GET(req: NextRequest) {
           const url = req.nextUrl;
@@ -41,13 +41,7 @@ import { NextRequest, NextResponse } from "next/server";
             const name = profile.name || "Google User";
             const picture = profile.picture || `https://api.dicebear.com/7.x/bottts/svg?seed=${sub}`;
         
-            let existingUser: User | undefined;
-            for (const u of usersStore.values()) {
-              if (u.google_sub === sub || (email && u.email === email)) {
-                existingUser = u;
-                break;
-              }
-            }
+            let existingUser: User | null = await findUserByGoogleSubOrEmail(sub, email);
         
             if (!existingUser) {
               const newId = `user_${Date.now()}`;
@@ -59,7 +53,7 @@ import { NextRequest, NextResponse } from "next/server";
                 username: null,
                 avatar_url: picture,
               };
-              usersStore.set(newId, existingUser);
+              saveUser(existingUser);
             }
         
             const targetUrl = existingUser.username ? "/dashboard" : "/onboarding";

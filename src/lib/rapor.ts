@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import { getCompetenciesByRoleSlug } from "./roles";
 import { getOrCreatePersistentStore, PersistentStore } from "./storage";
-import { safeSupabaseSync } from "./supabase";
+import { safeSupabaseSync, supabase } from "./supabase";
 
 export interface RaporQuestion {
   id: string;
@@ -98,16 +98,6 @@ export interface QuestionReviewItem {
   explanation: string;
 }
 
-// Persistent store untuk sesi tes dan hasil Cocoklogiku aktif pengguna
-export const raporSessions: PersistentStore<RaporSessionState> = getOrCreatePersistentStore<RaporSessionState>(
-  "rapor_sessions",
-  "rapor_sessions.json"
-);
-export const cocoklogikuByUser: PersistentStore<CocoklogikuRecord> = getOrCreatePersistentStore<CocoklogikuRecord>(
-  "cocoklogiku",
-  "cocoklogiku.json"
-);
-
 /**
  * Sinkronisasi RaporSession ke Supabase
  */
@@ -151,6 +141,39 @@ export function syncCocoklogikuToSupabase(record: CocoklogikuRecord): void {
     if (error) console.warn("[Supabase] Upsert cocoklogikus error:", error.message);
   });
 }
+
+// Persistent store untuk sesi tes dan hasil Cocoklogiku aktif pengguna
+export const raporSessions: PersistentStore<RaporSessionState> = getOrCreatePersistentStore<RaporSessionState>(
+  "rapor_sessions",
+  "rapor_sessions.json",
+  [],
+  {
+    onSet: (_key, session) => {
+      syncRaporSessionToSupabase(session);
+    },
+    onDelete: (key) => {
+      safeSupabaseSync("deleteRaporSession", async (client) => {
+        await client.from("rapor_sessions").delete().eq("id", key);
+      });
+    },
+  }
+);
+
+export const cocoklogikuByUser: PersistentStore<CocoklogikuRecord> = getOrCreatePersistentStore<CocoklogikuRecord>(
+  "cocoklogiku",
+  "cocoklogiku.json",
+  [],
+  {
+    onSet: (_key, record) => {
+      syncCocoklogikuToSupabase(record);
+    },
+    onDelete: (key) => {
+      safeSupabaseSync("deleteCocoklogiku", async (client) => {
+        await client.from("cocoklogikus").delete().eq("user_id", key);
+      });
+    },
+  }
+);
 
 const LEVEL_WEIGHTS: Record<number, number> = {
   1: 1.0,
@@ -527,10 +550,86 @@ export function finishRaporSession(sessionId: string, username: string, roleName
 }
 
 /**
- * Mendapatkan Cocoklogiku aktif pengguna
+ * Mendapatkan Cocoklogiku aktif pengguna (synchronous local memory lookup)
  */
 export function getUserCocoklogiku(userId: string): CocoklogikuRecord | null {
   return cocoklogikuByUser.get(userId) || null;
+}
+
+/**
+ * Mendapatkan Cocoklogiku aktif pengguna dengan fallback ke Supabase
+ */
+export async function getUserCocoklogikuAsync(userId: string): Promise<CocoklogikuRecord | null> {
+  const local = cocoklogikuByUser.get(userId);
+  if (local) return local;
+
+  try {
+    const { data, error } = await supabase
+      .from("cocoklogikus")
+      .select("*")
+      .eq("user_id", userId)
+      .maybeSingle();
+
+    if (!error && data) {
+      const record: CocoklogikuRecord = {
+        id: data.id,
+        userId: data.user_id || userId,
+        username: data.username || "",
+        roleSlug: data.role_slug || "",
+        roleName: data.role_name || "",
+        finalScore: data.final_score || 0,
+        matchLabel: (data.match_label as any) || "Cukup Cocok",
+        levelScores: (data.level_scores as any) || [],
+        competencyScores: (data.competency_scores as any) || [],
+        reason: (data.reason as any) || { summary: "", strengths: "", weaknesses: "", levelInsight: "" },
+        recommendations: (data.recommendations as any) || [],
+        alternativeRoles: (data.alternative_roles as any) || [],
+        completedAt: data.completed_at || "",
+      };
+      cocoklogikuByUser.set(userId, record);
+      return record;
+    }
+  } catch (err) {
+    console.warn("[Supabase] Fetch cocoklogikus fallback error:", err);
+  }
+
+  return null;
+}
+
+/**
+ * Mendapatkan sesi tes rapor dengan fallback ke Supabase
+ */
+export async function getRaporSessionAsync(sessionId: string): Promise<RaporSessionState | null> {
+  const local = raporSessions.get(sessionId);
+  if (local) return local;
+
+  try {
+    const { data, error } = await supabase
+      .from("rapor_sessions")
+      .select("*")
+      .eq("id", sessionId)
+      .maybeSingle();
+
+    if (!error && data) {
+      const session: RaporSessionState = {
+        sessionId: data.id,
+        userId: data.user_id || "",
+        roleSlug: data.role_slug || "",
+        currentLevel: data.current_level || 1,
+        totalLevels: data.total_levels || 5,
+        isFinished: Boolean(data.is_finished),
+        answers: (data.answers as any) || {},
+        startedAt: data.started_at || "",
+        assignedQuestions: (data.assigned_questions as any) || [],
+      };
+      raporSessions.set(sessionId, session);
+      return session;
+    }
+  } catch (err) {
+    console.warn("[Supabase] Fetch rapor_session fallback error:", err);
+  }
+
+  return null;
 }
 
 /**

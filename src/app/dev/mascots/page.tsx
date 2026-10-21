@@ -2,215 +2,550 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { Logo } from "@/components/ui/Logo";
-import { Button } from "@/components/ui/Button";
-import { Card } from "@/components/ui/Card";
+import { SoftwareEngineerMascot } from "@/components/mascot/roles/SoftwareEngineerMascot";
+import { MobileDeveloperMascot } from "@/components/mascot/roles/MobileDeveloperMascot";
+import { GameDeveloperMascot } from "@/components/mascot/roles/GameDeveloperMascot";
+import { QualityAssuranceMascot } from "@/components/mascot/roles/QualityAssuranceMascot";
+import { ITSupportMascot } from "@/components/mascot/roles/ITSupportMascot";
+import { NetworkEngineerMascot } from "@/components/mascot/roles/NetworkEngineerMascot";
+import { CloudEngineerMascot } from "@/components/mascot/roles/CloudEngineerMascot";
+import { DevOpsEngineerMascot } from "@/components/mascot/roles/DevOpsEngineerMascot";
+import { SecurityAnalystMascot } from "@/components/mascot/roles/SecurityAnalystMascot";
 import { RoleMascot } from "@/components/mascot/RoleMascot";
 import { getRoles } from "@/lib/roles";
 
-export default function MascotsDevPage() {
-  const [animate, setAnimate] = useState(true);
-  const [activeSize, setActiveSize] = useState<number>(180);
+const BATCH_1_ROLES = [
+  {
+    slug: "software-engineer",
+    name: "Software Engineer",
+    julukan: "The Architect",
+    batch: 1,
+    color: "#FFD60A",
+    accentColor: "#00F0FF",
+    desc: "Sang perancang fondasi sistem digital dan pembangun arsitektur scalable dunia nyata.",
+    mascotComponent: SoftwareEngineerMascot,
+    svgPath: "/assets/mascot/roles/software-engineer.svg",
+    anatomy: [
+      { name: "Blueprint Cetak Biru", desc: "Cetak biru digital cyan (#00F0FF) memuat skema microservices & node database" },
+      { name: "Kacamata Arsitek", desc: "Frame persegi teknikal tebal 3.5px dengan lensa reflektif cyan bergaris kilau" },
+      { name: "Penggaris T & Stylus", desc: "Penggaris siku T di tangan kanan sebagai perlambang presisi rekayasa kode" },
+      { name: "Kubus Modular 3D", desc: "Fondasi 3D isometrik melayang melambangkan arsitektur sistem modular berlapis" },
+    ],
+  },
+  {
+    slug: "mobile-developer",
+    name: "Mobile Developer",
+    julukan: "The Screen Tapper",
+    batch: 1,
+    color: "#FF5C8A",
+    accentColor: "#00F0FF",
+    desc: "Sang penguasa layar sentuh yang menghadirkan kecanggihan aplikasi ke dalam genggaman saku pengguna.",
+    mascotComponent: MobileDeveloperMascot,
+    svgPath: "/assets/mascot/roles/mobile-developer.svg",
+    anatomy: [
+      { name: "Smartphone Raksasa", desc: "Gawai berbingkai putih dengan antarmuka dinamis, card banner pink, dan grid ikon aplikasi" },
+      { name: "Topi Snapback Miring", desc: "Topi kasual urban warna pink magenta dengan visor datar cyan elektrik" },
+      { name: "Gestur Tapping Presisi", desc: "Jari telunjuk siap mengetuk dan mengoperasikan aplikasi di layar" },
+      { name: "Ripple Sentuh Konsentris", desc: "Cincin gelombang ripple cyan dan mint memancar dari titik sentuhan layar" },
+    ],
+  },
+  {
+    slug: "game-developer",
+    name: "Game Developer",
+    julukan: "The Pixel Mage",
+    batch: 1,
+    color: "#2EE59D",
+    accentColor: "#FF5C8A",
+    desc: "Sang penyihir pixel arcade yang meracik logika dan fisika gameplay menjadi keajaiban dunia virtual.",
+    mascotComponent: GameDeveloperMascot,
+    svgPath: "/assets/mascot/roles/game-developer.svg",
+    anatomy: [
+      { name: "Topi Pixel Mage", desc: "Topi kerucut bertingkat pixelated mint (#2EE59D) dengan pita pink & gesper pixel emas" },
+      { name: "Tongkat Retro Gamepad", desc: "Tongkat sihir berkepala konsol arcade retro lengkap dengan D-Pad dan tombol aksi A/B" },
+      { name: "Magic Orb Bercahaya", desc: "Bola kristal cyan elektrik dengan denyut aura sihir yang memancarkan partikel gameplay" },
+      { name: "Mata RPG & Pixel Stars", desc: "Mata berbinar bintang 4-point khas game RPG dengan kubus pixel 8-bit bertebaran" },
+    ],
+  },
+];
 
-  const roles = getRoles();
-  const batch1Roles = roles.slice(0, 3); // 1. Software Engineer, 2. Mobile Developer, 3. Game Developer
-  const upcomingRoles = roles.slice(3);
+const BATCH_2_ROLES = [
+  {
+    slug: "quality-assurance",
+    name: "Quality Assurance",
+    julukan: "The Bug Hunter",
+    batch: 2,
+    color: "#FF8A3D",
+    accentColor: "#00F0FF",
+    desc: "Sang pemburu cacat kode teliti yang menyisir setiap celah untuk memastikan standar kualitas dan rilis bebas kegagalan.",
+    mascotComponent: QualityAssuranceMascot,
+    svgPath: "/assets/mascot/roles/quality-assurance.svg",
+    anatomy: [
+      { name: "Topi Safari & Senter PASS", desc: "Topi petualang safari dengan senter kepala berstatus hijau checklist PASS" },
+      { name: "Kaca Pembesar Scanner", desc: "Lensa pembesar cyan berkilau dengan target indikator deteksi bug digital" },
+      { name: "Jaring Penangkap Cyber Bug", desc: "Jaring kawat siber dengan seekor bug kepik merah mini yang berhasil dilumpuhkan" },
+      { name: "Monokel Target Crosshair", desc: "Lensa monokel bermata bidik crosshair presisi tinggi pada mata kanan" },
+    ],
+  },
+  {
+    slug: "it-support",
+    name: "IT Support",
+    julukan: "The Fixer",
+    batch: 2,
+    color: "#FFFFFF",
+    accentColor: "#00F0FF",
+    desc: "Sang penyelamat operasional harian yang selalu sigap menyelesaikan kendala hardware, software, dan konektivitas.",
+    mascotComponent: ITSupportMascot,
+    svgPath: "/assets/mascot/roles/it-support.svg",
+    anatomy: [
+      { name: "Headset Operator Ramah", desc: "Headset komunikasi cyan dengan mic melengkung dan senyum ramah solutif" },
+      { name: "Kotak Perkakas P3K IT", desc: "Toolbox kuning darurat berlambang palang hijau pertolongan pertama sistem" },
+      { name: "Obeng Multi-Bit Elektrik", desc: "Obeng bermata multi-tool cyan perak siap bongkar-pasang perangkat" },
+      { name: "Kabel USB-C Melilit", desc: "Kabel fleksibel melilit rapi di selempang dada dengan colokan port" },
+    ],
+  },
+  {
+    slug: "network-engineer",
+    name: "Network Engineer",
+    julukan: "The Connector",
+    batch: 2,
+    color: "#FFD60A",
+    accentColor: "#00F0FF",
+    desc: "Sang penenun infrastruktur kabel dan pengatur jalur denyut paket data lintas benua tanpa putus.",
+    mascotComponent: NetworkEngineerMascot,
+    svgPath: "/assets/mascot/roles/network-engineer.svg",
+    anatomy: [
+      { name: "Antena Router Kembar", desc: "Sepasang antena 5GHz di kepala dengan pancaran gelombang radio Wi-Fi konsentris" },
+      { name: "Kabel LAN RJ45 Emas", desc: "Kabel jaringan dengan kepala konektor transparan dan 8 pin tembaga emas" },
+      { name: "Visor Serat Optik HUD", desc: "Visor cyan pemantau bandwidth traffic, packet flow, dan data link rate" },
+      { name: "Sabuk Switch & Cable Tester", desc: "Sabuk utilitas berjejer port switch LED hijau serta tester sinyal kabel" },
+    ],
+  },
+];
+
+const BATCH_3_ROLES = [
+  {
+    slug: "cloud-engineer",
+    name: "Cloud Engineer",
+    julukan: "The Ascender",
+    batch: 3,
+    color: "#38BDF8",
+    accentColor: "#FFD60A",
+    desc: "Sang penakluk angkasa digital yang mendirikan dan mengelola arsitektur klaster server terapung di atas awan.",
+    mascotComponent: CloudEngineerMascot,
+    svgPath: "/assets/mascot/roles/cloud-engineer.svg",
+    anatomy: [
+      { name: "Karpet Awan Komputasi", desc: "Awan putih neo-brutalism terapung tempat maskot melayang dengan efek float stabil" },
+      { name: "Kacamata Aviator Angkasa", desc: "Frame kacamata penerbang pilot emas berefleksi cakrawala data" },
+      { name: "Kunci Arsitektur Server", desc: "Kunci emas berkepala awan simbol hak akses superuser infrastruktur" },
+      { name: "Kubus Pod Kubernetes", desc: "Mini kontener kontainerisasi terapung di tangan kiri dengan lampu pod running" },
+    ],
+  },
+  {
+    slug: "devops-engineer",
+    name: "DevOps Engineer",
+    julukan: "The Cyclist",
+    batch: 3,
+    color: "#F43F5E",
+    accentColor: "#2EE59D",
+    desc: "Sang pembalap rilis berkecepatan tinggi yang menyatukan alur continuous integration & continuous delivery tanpa henti.",
+    mascotComponent: DevOpsEngineerMascot,
+    svgPath: "/assets/mascot/roles/devops-engineer.svg",
+    anatomy: [
+      { name: "Pita Infinity Loop CI/CD", desc: "Simbol pita mobius ∞ berputar dinamis memuat simpul build, test, dan deploy" },
+      { name: "Helm Balap Sepeda Aero", desc: "Helm aerodinamis merah karmin bergaris ventilasi neon green kecepatan tinggi" },
+      { name: "Roda Gir Otomasi Rilis", desc: "Roda gir bergerigi emas perak lambang otomasi pipeline tanpa intervensi manual" },
+      { name: "Kunci Pas Hotfix Kilat", desc: "Kunci mekanik di tangan kiri siap melakukan perbaikan zero-downtime" },
+    ],
+  },
+  {
+    slug: "security-analyst",
+    name: "Security Analyst",
+    julukan: "The Warden",
+    batch: 3,
+    color: "#7C3AED",
+    accentColor: "#10B981",
+    desc: "Sang benteng pertahanan terakhir yang menjaga aset dan integritas data dari serangan exploit, peretasan, dan malware.",
+    mascotComponent: SecurityAnalystMascot,
+    svgPath: "/assets/mascot/roles/security-analyst.svg",
+    anatomy: [
+      { name: "Perisai Firewall Aegis", desc: "Perisai heksagonal baja berlapis pelat ungu dengan gembok enkripsi AES berpijar" },
+      { name: "Visor Terminal Ancaman", desc: "HUD pemindai hijau terminal dengan radar status deteksi intrusi 0 THREAT" },
+      { name: "Pedang Kunci Enkripsi", desc: "Bilah pedang hijau bercahaya berulir kunci digital pemotong malware" },
+      { name: "Helm Cyber Warden Bertanduk", desc: "Pelindung kepala taktis baja beraksen tanduk hijau terminal tahan benturan" },
+    ],
+  },
+];
+
+const ROADMAP_BATCHES = [
+  { batch: 1, title: "Batch 1: Core Engineering & Creators", roles: "Software Engineer, Mobile Developer, Game Developer", status: "Active Release 🚀" },
+  { batch: 2, title: "Batch 2: Reliability, Support & Connectivity", roles: "Quality Assurance, IT Support, Network Engineer", status: "Active Release 🚀" },
+  { batch: 3, title: "Batch 3: Cloud, Platform, CI/CD & Security", roles: "Cloud Engineer, DevOps Engineer, Security Analyst", status: "Active Release 🚀" },
+  { batch: 4, title: "Batch 4: Data & Machine Intelligence", roles: "Data Analyst, Data Scientist, AI/ML Engineer", status: "Planned 📋" },
+  { batch: 5, title: "Batch 5: Data Foundation & Ops", roles: "Data Engineer, Database Administrator, System Administrator", status: "Planned 📋" },
+  { batch: 6, title: "Batch 6: Product, Design & Delivery", roles: "UI/UX Designer, Project Manager, Business Analyst", status: "Planned 📋" },
+  { batch: 7, title: "Batch 7: Enterprise, Strategy & Forensics", roles: "IT Consultant, Digital Forensics, Enterprise Architect", status: "Planned 📋" },
+];
+
+export default function MascotsDevPage() {
+  const [mascotSize, setMascotSize] = useState<number>(200);
+  const [isAnimated, setIsAnimated] = useState<boolean>(true);
+  const [selectedRoleSlug, setSelectedRoleSlug] = useState<string>("software-engineer");
+  const allRoles = getRoles();
+
+  const releasedRoles = [...BATCH_1_ROLES, ...BATCH_2_ROLES, ...BATCH_3_ROLES];
+
+  const renderRoleCards = (roles: typeof BATCH_1_ROLES) => (
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      {roles.map((role) => {
+        const Mascot = role.mascotComponent;
+        return (
+          <div
+            key={role.slug}
+            className="bg-surface border-4 border-ink shadow-nb-lg flex flex-col justify-between overflow-hidden transition-transform hover:-translate-y-1"
+          >
+            {/* Card Header */}
+            <div
+              className="p-4 border-b-4 border-ink flex items-center justify-between"
+              style={{ backgroundColor: role.color }}
+            >
+              <div>
+                <div className="font-heading text-lg text-ink leading-tight">
+                  {role.name}
+                </div>
+                <div className="font-mono text-xs font-bold text-ink/80">
+                  &quot;{role.julukan}&quot;
+                </div>
+              </div>
+              <span className="px-2 py-0.5 bg-surface border-2 border-ink font-heading text-[10px] uppercase shadow-[2px_2px_0_#0A0A0A]">
+                Batch {role.batch}
+              </span>
+            </div>
+
+            {/* Maskot Stage Visual */}
+            <div className="p-6 bg-paper/50 border-b-3 border-ink flex items-center justify-center min-h-[260px] relative overflow-hidden group">
+              {/* Background Grid Pattern */}
+              <div
+                className="absolute inset-0 opacity-15 pointer-events-none"
+                style={{
+                  backgroundImage: "radial-gradient(#0A0A0A 1px, transparent 1px)",
+                  backgroundSize: "16px 16px",
+                }}
+              />
+
+              {/* Maskot Render */}
+              <div className="relative z-10 transition-transform duration-300 group-hover:scale-110">
+                <Mascot size={mascotSize} animated={isAnimated} />
+              </div>
+
+              {/* Hover Hint */}
+              <div className="absolute bottom-2 right-2 font-mono text-[10px] text-ink/40 pointer-events-none">
+                Hover to zoom
+              </div>
+            </div>
+
+            {/* Description & Anatomy Specs */}
+            <div className="p-5 space-y-4 flex-1 flex flex-col justify-between">
+              <div>
+                <p className="font-sans text-xs md:text-sm text-ink/80 leading-relaxed mb-4">
+                  {role.desc}
+                </p>
+
+                <div className="space-y-2 border-t-2 border-ink pt-3">
+                  <div className="font-mono text-[11px] font-bold uppercase text-ink/70">
+                    Anatomi Visual Karakter:
+                  </div>
+                  {role.anatomy.map((item, idx) => (
+                    <div key={idx} className="text-xs">
+                      <strong className="text-ink font-heading">{item.name}</strong>:{" "}
+                      <span className="text-ink/80 font-sans">{item.desc}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Card Footer Actions */}
+              <div className="pt-4 border-t-2 border-ink flex items-center justify-between gap-2">
+                <a
+                  href={role.svgPath}
+                  download={`${role.slug}.svg`}
+                  className="px-3 py-1.5 bg-surface border-2 border-ink font-heading text-xs uppercase shadow-[2px_2px_0_#0A0A0A] hover:bg-accent-yellow transition-all"
+                >
+                  Unduh SVG
+                </a>
+                <a
+                  href={role.svgPath}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-mono text-xs font-bold text-accent-pink hover:underline"
+                >
+                  Buka Standalone ↗
+                </a>
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
 
   return (
-    <div className="min-h-screen bg-paper text-ink p-6 md:p-12 space-y-12">
-      {/* Header */}
-      <header className="max-w-6xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border-b-5 border-ink pb-8">
-        <div>
-          <div className="inline-block bg-accent-yellow border-3 border-ink px-3 py-1 font-mono font-bold text-xs uppercase mb-3 shadow-nb-sm">
-            Showcase · Karakter Maskot Role IT (Batch 1)
-          </div>
-          <h1 className="font-heading text-4xl md:text-5xl tracking-tight text-ink">
-            Galeri Maskot Role JalanITku
-          </h1>
-          <p className="font-sans text-base md:text-lg text-ink/80 mt-2 max-w-2xl leading-relaxed">
-            Menghidupkan kepribadian dan julukan 21 Role IT ke dalam karakter Neo-brutalism
-            khas JalanITku secara bertahap.
-          </p>
-        </div>
-        <div className="flex flex-wrap items-center gap-4">
-          <Link
-            href="/dev/roles"
-            className="nb-btn px-4 py-2 bg-surface border-3 border-ink font-display font-bold text-sm shadow-nb-sm hover:translate-x-[-2px] hover:translate-y-[-2px]"
-          >
-            ← Katalog Role
-          </Link>
-          <Logo size="md" />
-        </div>
-      </header>
-
-      {/* Control Bar */}
-      <div className="max-w-6xl mx-auto bg-surface border-4 border-ink shadow-nb-md p-4 flex flex-wrap items-center justify-between gap-4">
-        <div className="flex items-center gap-3">
-          <span className="font-mono text-xs font-bold uppercase text-ink/70">Ukuran Pratinjau:</span>
-          {[120, 180, 240].map((s) => (
-            <button
-              key={s}
-              onClick={() => setActiveSize(s)}
-              className={`px-3 py-1 border-2 border-ink font-mono text-xs font-bold ${
-                activeSize === s
-                  ? "bg-accent-yellow text-ink shadow-[2px_2px_0_#0A0A0A]"
-                  : "bg-paper text-ink/70 hover:bg-paper/80"
-              }`}
-            >
-              {s}px
-            </button>
-          ))}
-        </div>
-
-        <div className="flex items-center gap-3">
-          <span className="font-mono text-xs font-bold uppercase text-ink/70">Animasi:</span>
-          <button
-            onClick={() => setAnimate(!animate)}
-            className={`px-3 py-1 border-2 border-ink font-mono text-xs font-bold shadow-[2px_2px_0_#0A0A0A] ${
-              animate ? "bg-accent-green text-ink" : "bg-paper text-ink/60"
-            }`}
-          >
-            {animate ? "ON (Aktif) ✨" : "OFF (Statis)"}
-          </button>
-        </div>
-      </div>
-
-      {/* BATCH 1 HERO SHOWCASE (3 ROLE PERTAMA) */}
-      <section className="max-w-6xl mx-auto space-y-6">
-        <div className="flex items-center justify-between border-b-3 border-ink pb-3">
+    <div className="min-h-screen bg-paper py-10 px-4 md:px-8">
+      <div className="max-w-6xl mx-auto space-y-12">
+        {/* Navigation Breadcrumb */}
+        <div className="flex items-center justify-between border-b-4 border-ink pb-4">
           <div className="flex items-center gap-3">
-            <span className="px-3 py-1 bg-accent-pink text-paper font-heading text-sm uppercase border-2 border-ink shadow-nb-sm">
-              Batch 1
-            </span>
-            <h2 className="font-heading text-2xl md:text-3xl text-ink">
-              Core Application &amp; Game Builders
-            </h2>
+            <Link
+              href="/"
+              className="px-3 py-1 bg-surface border-3 border-ink font-heading text-xs uppercase shadow-nb-sm hover:translate-x-0.5 hover:translate-y-0.5"
+            >
+              ← Beranda
+            </Link>
+            <span className="font-mono text-sm font-bold text-ink/70">/dev/mascots</span>
           </div>
-          <span className="font-mono text-xs font-bold text-accent-green bg-ink px-2.5 py-1">
-            Status: Rilis 100%
+          <span className="px-3 py-1 bg-accent-green border-3 border-ink font-heading text-xs uppercase shadow-nb-sm">
+            9 OF 21 ROLES COMPLETED 🚀
           </span>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {batch1Roles.map((role) => (
-            <Card
-              key={role.slug}
-              variant="white"
-              shadow="lg"
-              borderWidth="5"
-              className="flex flex-col items-center justify-between p-6 gap-6 relative group"
-            >
-              {/* Header Badges */}
-              <div className="w-full flex items-center justify-between">
-                <span
-                  className="px-2.5 py-0.5 border-2 border-ink font-mono text-xs font-black uppercase shadow-[2px_2px_0_#0A0A0A]"
-                  style={{ backgroundColor: role.warna }}
-                >
-                  Role #{role.urutan}
-                </span>
-                <span className="bg-ink text-paper font-heading text-xs font-bold px-2 py-0.5 border-2 border-ink shadow-[2px_2px_0_#FFD60A]">
-                  &quot;{role.julukan}&quot;
-                </span>
-              </div>
-
-              {/* Center Mascot Art */}
-              <div
-                className="w-full h-64 border-4 border-ink shadow-nb-sm flex items-center justify-center p-4 relative overflow-hidden rounded-2xl transition-transform group-hover:scale-[1.02]"
-                style={{ backgroundColor: `${role.warna}25` }}
-              >
-                <RoleMascot
-                  roleSlug={role.slug}
-                  size={activeSize}
-                  animate={animate}
-                />
-              </div>
-
-              {/* Content Description */}
-              <div className="w-full space-y-2 text-center">
-                <h3 className="font-heading text-2xl text-ink">
-                  {role.nama.id}
-                </h3>
-                <p className="font-sans text-xs text-ink/75 italic">
-                  &quot;{role.tagline.id}&quot;
-                </p>
-                <p className="font-sans text-xs text-ink/80 leading-relaxed pt-2">
-                  {role.deskripsi.id}
-                </p>
-              </div>
-
-              {/* Download Standalone SVG */}
-              <div className="w-full pt-2 border-t-2 border-ink">
-                <a
-                  href={`/assets/mascot/roles/${role.slug}.svg`}
-                  download={`${role.slug}-mascot.svg`}
-                  className="w-full inline-flex items-center justify-center gap-2 py-2 px-3 bg-surface border-2 border-ink font-mono text-xs font-bold text-ink shadow-[2px_2px_0_#0A0A0A] hover:bg-accent-yellow transition-all"
-                >
-                  Unduh SVG Vektor ↓
-                </a>
-              </div>
-            </Card>
-          ))}
-        </div>
-      </section>
-
-      {/* ROADMAP 21 ROLE TABEL PROGRESS */}
-      <section className="max-w-6xl mx-auto space-y-6 pt-8 border-t-4 border-ink">
-        <div className="flex items-center justify-between">
-          <div className="space-y-1">
-            <h3 className="font-heading text-2xl text-ink">
-              Rencana 21 Role &amp; Julukan Resmi
-            </h3>
-            <p className="font-sans text-sm text-ink/75">
-              Role berikutnya (Batch 2 s/d Batch 7) akan dirilis secara berkesinambungan.
+        {/* Header Hero */}
+        <div className="bg-surface border-4 border-ink p-6 md:p-8 shadow-nb-lg relative overflow-hidden">
+          <div className="max-w-3xl space-y-3">
+            <div className="inline-block px-3 py-1 bg-accent-yellow border-2 border-ink font-heading text-xs uppercase shadow-[2px_2px_0_#0A0A0A]">
+              Sistem Desain Karakter Neo-Brutalism
+            </div>
+            <h1 className="font-heading text-4xl md:text-5xl text-ink leading-tight">
+              Galeri Maskot Role IT JalanITku
+            </h1>
+            <p className="font-sans text-sm md:text-base text-ink/80 leading-relaxed">
+              Koleksi maskot karakter presisi geometris berbasis SVG untuk 21 role IT.
+              Mengadopsi DNA rambu pintar JalanMin dengan atribut profesi autentik,
+              garis batas tebal 3.5px #0A0A0A, hard drop shadow, dan mikro-interaksi responsif.
             </p>
           </div>
-          <Link
-            href="/docs/MASCOT_ROLES_ROADMAP.md"
-            className="font-mono text-xs font-bold underline hover:text-accent-pink"
-            target="_blank"
-          >
-            Buka Dokumen Spesifikasi ↗
-          </Link>
-        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {roles.map((r, idx) => {
-            const isBatch1 = idx < 3;
-            return (
-              <div
-                key={r.slug}
-                className={`p-4 border-3 border-ink shadow-nb-sm flex flex-col justify-between gap-3 ${
-                  isBatch1 ? "bg-accent-yellow/20" : "bg-surface"
+          {/* Interactive Controls Bar */}
+          <div className="mt-6 pt-6 border-t-3 border-ink flex flex-wrap items-center justify-between gap-4 bg-paper/60 p-4 border-2">
+            <div className="flex items-center gap-3">
+              <span className="font-heading text-xs uppercase text-ink">Ukuran Maskot:</span>
+              {[120, 160, 200, 240].map((sz) => (
+                <button
+                  key={sz}
+                  onClick={() => setMascotSize(sz)}
+                  className={`px-3 py-1 border-2 border-ink font-mono text-xs font-bold transition-all ${
+                    mascotSize === sz
+                      ? "bg-ink text-white shadow-[2px_2px_0_#FFD60A]"
+                      : "bg-surface text-ink shadow-[2px_2px_0_#0A0A0A] hover:bg-accent-yellow"
+                  }`}
+                >
+                  {sz}px
+                </button>
+              ))}
+            </div>
+
+            <div className="flex items-center gap-3">
+              <span className="font-heading text-xs uppercase text-ink">Animasi CSS:</span>
+              <button
+                onClick={() => setIsAnimated(!isAnimated)}
+                className={`px-4 py-1 border-2 border-ink font-heading text-xs uppercase transition-all shadow-[2px_2px_0_#0A0A0A] ${
+                  isAnimated ? "bg-accent-green text-ink" : "bg-surface text-ink/60"
                 }`}
               >
-                <div className="flex items-center justify-between">
-                  <span className="font-mono text-[11px] font-bold text-ink/60">#{r.urutan}</span>
-                  <span
-                    className={`font-mono text-[10px] font-bold px-2 py-0.5 border border-ink ${
-                      isBatch1 ? "bg-accent-green text-ink" : "bg-paper text-ink/60"
-                    }`}
-                  >
-                    {isBatch1 ? "BATCH 1 (AKTIF)" : "UPCOMING"}
-                  </span>
+                {isAnimated ? "● Aktif (Running)" : "○ Nonaktif (Paused)"}
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* SECTION BATCH 1 */}
+        <section className="space-y-6">
+          <div className="flex items-center justify-between border-b-3 border-ink pb-2">
+            <div>
+              <h2 className="font-heading text-2xl md:text-3xl text-ink">
+                Batch 1: Core Engineering & Creators
+              </h2>
+              <p className="font-mono text-xs text-ink/70">
+                The Architect (Software Engineer) · The Screen Tapper (Mobile Dev) · The Pixel Mage (Game Dev)
+              </p>
+            </div>
+            <span className="hidden md:inline-block font-mono text-xs font-bold text-accent-pink bg-surface border-2 border-ink px-3 py-1 shadow-nb-sm">
+              Batch 1 · 3 Roles Released
+            </span>
+          </div>
+          {renderRoleCards(BATCH_1_ROLES)}
+        </section>
+
+        {/* SECTION BATCH 2 */}
+        <section className="space-y-6">
+          <div className="flex items-center justify-between border-b-3 border-ink pb-2">
+            <div>
+              <h2 className="font-heading text-2xl md:text-3xl text-ink">
+                Batch 2: Reliability, Support & Connectivity
+              </h2>
+              <p className="font-mono text-xs text-ink/70">
+                The Bug Hunter (Quality Assurance) · The Fixer (IT Support) · The Connector (Network Engineer)
+              </p>
+            </div>
+            <span className="hidden md:inline-block font-mono text-xs font-bold text-accent-green bg-surface border-2 border-ink px-3 py-1 shadow-nb-sm">
+              Batch 2 · 3 Roles Released
+            </span>
+          </div>
+          {renderRoleCards(BATCH_2_ROLES)}
+        </section>
+
+        {/* SECTION BATCH 3 */}
+        <section className="space-y-6">
+          <div className="flex items-center justify-between border-b-3 border-ink pb-2">
+            <div>
+              <h2 className="font-heading text-2xl md:text-3xl text-ink">
+                Batch 3: Cloud, Platform, CI/CD & Security
+              </h2>
+              <p className="font-mono text-xs text-ink/70">
+                The Ascender (Cloud Engineer) · The Cyclist (DevOps Engineer) · The Warden (Security Analyst)
+              </p>
+            </div>
+            <span className="hidden md:inline-block font-mono text-xs font-bold text-accent-cyan bg-surface border-2 border-ink px-3 py-1 shadow-nb-sm">
+              Batch 3 · 3 Roles Released
+            </span>
+          </div>
+          {renderRoleCards(BATCH_3_ROLES)}
+        </section>
+
+        {/* Universal RoleMascot Dispatcher Tester */}
+        <div className="bg-surface border-4 border-ink p-6 md:p-8 shadow-nb-lg space-y-6">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b-3 border-ink pb-4">
+            <div>
+              <div className="inline-block px-2 py-0.5 bg-accent-cyan border-2 border-ink font-heading text-xs uppercase shadow-[2px_2px_0_#0A0A0A] mb-1">
+                Uji Coba Komponen Universal
+              </div>
+              <h2 className="font-heading text-2xl md:text-3xl text-ink">
+                Tester &lt;RoleMascot /&gt; Universal
+              </h2>
+            </div>
+
+            {/* Role Selector Dropdown */}
+            <div className="flex items-center gap-3">
+              <label htmlFor="role-select" className="font-heading text-xs uppercase text-ink">
+                Pilih Role IT:
+              </label>
+              <select
+                id="role-select"
+                value={selectedRoleSlug}
+                onChange={(e) => setSelectedRoleSlug(e.target.value)}
+                className="px-3 py-1.5 bg-white border-3 border-ink font-heading text-xs uppercase shadow-nb-sm focus:outline-none focus:bg-accent-yellow"
+              >
+                {allRoles.map((r) => (
+                  <option key={r.slug} value={r.slug}>
+                    {r.nama.id} — &quot;{r.julukan}&quot;
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+          {/* Test Render Area */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            {/* Mascot Preview Box */}
+            <div className="bg-paper border-3 border-ink p-6 shadow-nb-sm flex flex-col items-center justify-center min-h-[300px] relative">
+              <RoleMascot
+                roleSlug={selectedRoleSlug}
+                size={mascotSize}
+                showTitle={true}
+                showBadge={true}
+                animated={isAnimated}
+              />
+            </div>
+
+            {/* Code Snippet & Integration Details */}
+            <div className="space-y-4">
+              <div className="font-mono text-xs font-bold uppercase text-ink/70">
+                Snippet Pemanggilan React:
+              </div>
+              <pre className="bg-ink text-white p-4 border-3 border-ink shadow-nb-sm font-mono text-xs overflow-x-auto leading-relaxed">
+{`// Contoh pemanggilan komponen RoleMascot
+import { RoleMascot } from "@/components/mascot/RoleMascot";
+
+<RoleMascot
+  roleSlug="${selectedRoleSlug}"
+  size={${mascotSize}}
+  showTitle={true}
+  showBadge={true}
+  animated={${isAnimated}}
+/>`}
+              </pre>
+
+              <div className="bg-surface border-2 border-ink p-3 text-xs space-y-1 font-mono">
+                <div className="font-bold text-ink">
+                  Status Handler:{" "}
+                  {releasedRoles.some((r) => r.slug === selectedRoleSlug) ? (
+                    <span className="text-accent-green font-black">
+                      KOMPONEN ASLI PRODUKSI (AKTIF 🚀)
+                    </span>
+                  ) : (
+                    <span className="text-accent-pink font-black">
+                      ADAPTIVE FALLBACK ROADMAP (BATCH BERIKUTNYA)
+                    </span>
+                  )}
                 </div>
-                <div>
-                  <h4 className="font-heading text-base text-ink">{r.nama.id}</h4>
-                  <div className="font-mono text-xs font-bold text-accent-pink mt-0.5">
-                    &quot;{r.julukan || "The Specialist"}&quot;
-                  </div>
-                </div>
-                <div className="pt-2 border-t border-ink/20 flex items-center justify-between">
-                  <span className="font-mono text-[10px] text-ink/60">{r.slug}</span>
-                  <div
-                    className="w-4 h-4 border border-ink rounded-full"
-                    style={{ backgroundColor: r.warna }}
-                  />
+                <div className="text-ink/75">
+                  Universal wrapper otomatis mengarahkan ke SVG kustom bila sudah ada di batch rilis (9 role aktif saat ini),
+                  dan menampilkan placeholder adaptif neo-brutalist bila sedang dalam antrean batch.
                 </div>
               </div>
-            );
-          })}
+            </div>
+          </div>
         </div>
-      </section>
+
+        {/* 21 Roles Mascot Roadmap Status Board */}
+        <div className="bg-surface border-4 border-ink p-6 md:p-8 shadow-nb-lg space-y-6">
+          <div className="border-b-3 border-ink pb-4">
+            <h2 className="font-heading text-2xl md:text-3xl text-ink">
+              Roadmap Produksi Maskot 21 Role IT JalanITku
+            </h2>
+            <p className="font-mono text-xs text-ink/70">
+              Dokumentasi lengkap perencanaan 7 batch maskot sesuai dokumen docs/MASCOT_ROLES_ROADMAP.md
+            </p>
+          </div>
+
+          <div className="space-y-3">
+            {ROADMAP_BATCHES.map((b) => {
+              const isCompleted = b.batch <= 3;
+              return (
+                <div
+                  key={b.batch}
+                  className={`p-4 border-3 border-ink flex flex-col md:flex-row md:items-center justify-between gap-3 shadow-nb-sm transition-all ${
+                    isCompleted ? "bg-accent-yellow/20 border-ink" : "bg-paper/70"
+                  }`}
+                >
+                  <div>
+                    <div className="font-heading text-sm md:text-base text-ink">
+                      {b.title}
+                    </div>
+                    <div className="font-mono text-xs text-ink/75 mt-0.5">
+                      {b.roles}
+                    </div>
+                  </div>
+                  <div className="flex-none">
+                    <span
+                      className={`inline-block px-3 py-1 border-2 border-ink font-heading text-xs uppercase shadow-[2px_2px_0_#0A0A0A] ${
+                        isCompleted ? "bg-accent-green text-ink" : "bg-surface text-ink/70"
+                      }`}
+                    >
+                      {b.status}
+                    </span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="pt-2 flex justify-between items-center text-xs font-mono text-ink/70">
+            <span>Standar Desain: SVG Ortogonal 200x200 · Stroke 3.5-5px #0A0A0A · Neo-Brutalism</span>
+            <Link href="/dev/roles" className="text-accent-pink font-bold hover:underline">
+              Lihat Katalog 21 Role IT ↗
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,18 +1,17 @@
 import { NextRequest, NextResponse } from "next/server";
-import { usersStore } from "@/lib/auth";
-import { startCareerSession, getUserJalanID } from "@/lib/karir";
+import { getSessionUser } from "@/lib/auth";
+import { startCareerSession, getUserJalanID, getUserJalanIDAsync } from "@/lib/karir";
 
 export async function POST(req: NextRequest) {
-  const sessionId = req.cookies.get("jalanitku_session")?.value;
+  const user = await getSessionUser();
 
-  if (!sessionId || !usersStore.has(sessionId)) {
+  if (!user) {
     return NextResponse.json(
       { success: false, error: { message: "Harap masuk terlebih dahulu" } },
       { status: 401 }
     );
   }
 
-  const user = usersStore.get(sessionId)!;
   if (!user.username) {
     return NextResponse.json(
       { success: false, error: { message: "Pilih username terlebih dahulu", redirect: "/onboarding" } },
@@ -20,7 +19,7 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  const existingJalanId = getUserJalanID(user.id);
+  const existingJalanId = getUserJalanID(user.id) || (await getUserJalanIDAsync(user.id));
   const session = startCareerSession(user.id);
 
   return NextResponse.json({
