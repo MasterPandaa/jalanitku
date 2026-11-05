@@ -5,9 +5,10 @@ interface LogoProps {
   size?: "sm" | "md" | "lg" | "xl";
   className?: string;
   href?: string;
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
-export function Logo({ size = "md", className = "", href = "/" }: LogoProps) {
+export function Logo({ size = "md", className = "", href = "/", onClick }: LogoProps) {
   const sizeClasses = {
     sm: "text-2xl gap-1",
     md: "text-3xl md:text-4xl gap-1.5",
@@ -39,7 +40,11 @@ export function Logo({ size = "md", className = "", href = "/" }: LogoProps) {
 
   if (href) {
     return (
-      <Link href={href} className="inline-block transition-transform hover:-translate-y-0.5">
+      <Link
+        href={href}
+        onClick={onClick}
+        className="inline-block transition-transform hover:-translate-y-0.5"
+      >
         {content}
       </Link>
     );

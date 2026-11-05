@@ -11,15 +11,17 @@ export interface MobileDeveloperMascotProps {
 }
 
 /**
- * Maskot Role: Mobile Developer — "The Artisan"
- * Identitas: Sang Perajin Aplikasi Saku & Pengalaman Sentuhan Presisi
+ * Maskot Role: Mobile Developer — "The Screen Tapper"
+ * Identitas: Sang Pengembang Aplikasi Saku & Pengetuk Layar Presisi
  * Ciri Khas:
  * 1. Topi Snapback Miring Pink & Cyan dengan emblem smartphone (desain lama favorit).
  * 2. Jaket Jeans Keren (Denim Trucker Jacket) dengan kerah berlipat, saku dada berkancing perak, dan kaos putih di dalam.
  * 3. Tangan Kanan Menggenggam Mantap sisi kanan HP (kanan POV user).
  * 4. Tangan Kiri Mengklik Layar Ponsel (Tapping Screen Gesture) dengan jari telunjuk presisi di atas layar.
  * 5. Efek Tap Layar (Touch Ripple Konsentris) aktif di ujung jari telunjuk tangan kiri (tanpa bintang 4 sisi).
- * 6. Push Notification Card bersih melayang di sisi kiri menggantikan wifi.
+ * 6. Layar Ponsel Aktif Scrolling Feed dengan indikator scrollbar dinamis.
+ * 7. Animasi Kedipan Mata Natural (Eye Blink) fokus menatap interaksi layar.
+ * 8. Push Notification Card bersih melayang di atas smartphone menunjuk tepat ke notch/bezel atas HP.
  */
 export function MobileDeveloperMascot({
   size = 200,
@@ -35,7 +37,7 @@ export function MobileDeveloperMascot({
       className={`relative inline-flex items-center justify-center select-none group ${className}`}
       style={{ width: size, height: size }}
       role="img"
-      aria-label="Maskot Mobile Developer — The Artisan: Papan penunjuk jalan neo-brutalism dengan topi snapback miring pink-cyan, jaket jeans denim, tangan kanan menggenggam sisi kanan HP, dan tangan kiri mengklik layar ponsel dengan efek touch ripple"
+      aria-label="Maskot Mobile Developer — The Screen Tapper: Papan penunjuk jalan neo-brutalism dengan topi snapback miring pink-cyan, jaket jeans denim, mata berkedip fokus ke ponsel yang sedang aktif scrolling feed, dan push notifikasi melayang di atas ponsel"
     >
       <svg
         viewBox="0 0 200 200"
@@ -57,7 +59,7 @@ export function MobileDeveloperMascot({
             }
             @keyframes mob-notify-pop {
               0%, 100% { transform: translateY(0px) scale(1); }
-              50% { transform: translateY(-4px) scale(1.05); }
+              50% { transform: translateY(-3.5px) scale(1.04); }
             }
             @keyframes mob-left-click {
               0%, 100% { transform: translateY(0px) scale(1); }
@@ -72,6 +74,22 @@ export function MobileDeveloperMascot({
               30% { opacity: 0.8; stroke-width: 2px; }
               100% { r: 28px; opacity: 0; stroke-width: 0.5px; }
             }
+            @keyframes mob-eye-blink {
+              0%, 88%, 94%, 100% { transform: scaleY(1); }
+              91% { transform: scaleY(0.08); }
+            }
+            @keyframes mob-screen-scroll {
+              0%, 16% { transform: translateY(0px); }
+              30%, 48% { transform: translateY(-24px); }
+              62%, 80% { transform: translateY(-48px); }
+              94%, 100% { transform: translateY(-72px); }
+            }
+            @keyframes mob-scrollbar-glide {
+              0%, 16% { transform: translateY(0px); }
+              30%, 48% { transform: translateY(14px); }
+              62%, 80% { transform: translateY(28px); }
+              94%, 100% { transform: translateY(42px); }
+            }
             .mob-animated-body {
               animation: ${isAnimated ? "mob-float 3.5s ease-in-out infinite" : "none"};
               transform-origin: center bottom;
@@ -82,7 +100,7 @@ export function MobileDeveloperMascot({
             }
             .mob-animated-notify {
               animation: ${isAnimated ? "mob-notify-pop 2.8s ease-in-out infinite" : "none"};
-              transform-origin: 28px 60px;
+              transform-origin: 17px 12px;
             }
             .mob-animated-click {
               animation: ${isAnimated ? "mob-left-click 1.6s ease-in-out infinite" : "none"};
@@ -96,7 +114,26 @@ export function MobileDeveloperMascot({
               animation: ${isAnimated ? "mob-ripple-2 1.6s cubic-bezier(0.1, 0.8, 0.3, 1) 0.35s infinite" : "none"};
               transform-origin: 154px 110px;
             }
+            .mob-animated-eye-left {
+              animation: ${isAnimated ? "mob-eye-blink 4s ease-in-out infinite" : "none"};
+              transform-origin: 68px 86px;
+            }
+            .mob-animated-eye-right {
+              animation: ${isAnimated ? "mob-eye-blink 4s ease-in-out infinite" : "none"};
+              transform-origin: 106px 86px;
+            }
+            .mob-animated-feed {
+              animation: ${isAnimated ? "mob-screen-scroll 4.8s cubic-bezier(0.25, 1, 0.5, 1) infinite" : "none"};
+            }
+            .mob-animated-scrollbar {
+              animation: ${isAnimated ? "mob-scrollbar-glide 4.8s cubic-bezier(0.25, 1, 0.5, 1) infinite" : "none"};
+              transform-origin: 172px 68px;
+            }
           `}</style>
+          {/* Viewport Layar Ponsel untuk Scrolling Feed Mulus */}
+          <clipPath id="mob-screen-viewport">
+            <rect x="134" y="66" width="40" height="68" rx="3" />
+          </clipPath>
         </defs>
 
         {/* CONTAINER UTAMA DENGAN ANIMASI FLOAT */}
@@ -174,37 +211,41 @@ export function MobileDeveloperMascot({
           <rect x="50" y="102" width="12" height="7" rx="2" fill="#FF5C8A" />
           <rect x="122" y="102" width="12" height="7" rx="2" fill="#FF5C8A" />
 
-          {/* Mata Kiri (Fokus Antusias Menatap Titik Tap di Layar) */}
-          <rect
-            x="58"
-            y="74"
-            width="20"
-            height="24"
-            rx="4"
-            fill="#FFFFFF"
-            stroke="#0A0A0A"
-            strokeWidth="3.5"
-          />
-          {/* Pupil Kiri Melirik ke Kanan (Arah Layar HP) */}
-          <rect x="66" y="80" width="9" height="12" rx="2" fill="#0A0A0A" />
-          <circle cx="68.5" cy="82.5" r="1.5" fill="#FFFFFF" />
-          <circle cx="72" cy="87.5" r="1.2" fill="#00F0FF" />
+          {/* Mata Kiri (Fokus Antusias Menatap Titik Tap di Layar - Efek Kedip) */}
+          <g className="mob-animated-eye-left">
+            <rect
+              x="58"
+              y="74"
+              width="20"
+              height="24"
+              rx="4"
+              fill="#FFFFFF"
+              stroke="#0A0A0A"
+              strokeWidth="3.5"
+            />
+            {/* Pupil Kiri Melirik ke Kanan (Arah Layar HP) */}
+            <rect x="66" y="80" width="9" height="12" rx="2" fill="#0A0A0A" />
+            <circle cx="68.5" cy="82.5" r="1.5" fill="#FFFFFF" />
+            <circle cx="72" cy="87.5" r="1.2" fill="#00F0FF" />
+          </g>
 
-          {/* Mata Kanan (Melirik Semangat ke Smartphone) */}
-          <rect
-            x="96"
-            y="74"
-            width="20"
-            height="24"
-            rx="4"
-            fill="#FFFFFF"
-            stroke="#0A0A0A"
-            strokeWidth="3.5"
-          />
-          {/* Pupil Kanan Melirik Lebih Dekat ke Layar */}
-          <rect x="105" y="80" width="9" height="12" rx="2" fill="#0A0A0A" />
-          <circle cx="107.5" cy="82.5" r="1.5" fill="#FFFFFF" />
-          <circle cx="111" cy="87.5" r="1.2" fill="#00F0FF" />
+          {/* Mata Kanan (Melirik Semangat ke Smartphone - Efek Kedip) */}
+          <g className="mob-animated-eye-right">
+            <rect
+              x="96"
+              y="74"
+              width="20"
+              height="24"
+              rx="4"
+              fill="#FFFFFF"
+              stroke="#0A0A0A"
+              strokeWidth="3.5"
+            />
+            {/* Pupil Kanan Melirik Lebih Dekat ke Layar */}
+            <rect x="105" y="80" width="9" height="12" rx="2" fill="#0A0A0A" />
+            <circle cx="107.5" cy="82.5" r="1.5" fill="#FFFFFF" />
+            <circle cx="111" cy="87.5" r="1.2" fill="#00F0FF" />
+          </g>
 
           {/* Alis Energik Keren */}
           <path
@@ -406,40 +447,139 @@ export function MobileDeveloperMascot({
               fill="#0A0A0A"
             />
 
-            {/* UI Card di Layar Smartphone (Aplikasi Modern) */}
-            {/* App Header Banner Pink */}
+            {/* Scrollbar Indicator di Sisi Kanan Bezel Layar */}
             <rect
-              x="135"
+              x="171.5"
               y="68"
-              width="38"
-              height="16"
-              rx="3"
-              fill="#FF5C8A"
-              stroke="#0A0A0A"
-              strokeWidth="1.5"
+              width="1.5"
+              height="10"
+              rx="0.75"
+              fill="#FFFFFF"
+              opacity="0.6"
+              className="mob-animated-scrollbar"
             />
-            {/* Teks Mini App Header */}
-            <line x1="139" y1="73" x2="155" y2="73" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" />
-            <line x1="139" y1="78" x2="163" y2="78" stroke="#FFD60A" strokeWidth="1.5" strokeLinecap="round" />
 
-            {/* Grid App Icons Warna-Warni */}
-            <rect x="136" y="89" width="10" height="10" rx="2.5" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="1.5" />
-            <rect x="150" y="89" width="10" height="10" rx="2.5" fill="#00F0FF" stroke="#0A0A0A" strokeWidth="1.5" />
-            <rect x="164" y="89" width="8" height="10" rx="2.5" fill="#FF8A3D" stroke="#0A0A0A" strokeWidth="1.5" />
+            {/* Konten Feed Layar Interaktif yang Sedang Aktif Scrolling */}
+            <g clipPath="url(#mob-screen-viewport)">
+              <g className="mob-animated-feed">
+                {/* --- ITEM 1 (y=67..87): Hero / Story Header Card --- */}
+                <g id="mob-feed-item-1">
+                  <rect
+                    x="135"
+                    y="67"
+                    width="38"
+                    height="20"
+                    rx="3"
+                    fill="#FF5C8A"
+                    stroke="#0A0A0A"
+                    strokeWidth="1.2"
+                  />
+                  <circle cx="142" cy="74" r="3" fill="#FFFFFF" />
+                  <line x1="147" y1="73" x2="168" y2="73" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" />
+                  <line x1="147" y1="77" x2="162" y2="77" stroke="#FFD60A" strokeWidth="1.2" strokeLinecap="round" />
+                  <rect x="139" y="81" width="16" height="3.5" rx="1" fill="#0A0A0A" />
+                  <circle cx="166" cy="82" r="1.8" fill="#FFFFFF" />
+                </g>
 
-            {/* Feed Card Interaktif Tempat Tap Terjadi */}
-            <rect
-              x="136"
-              y="104"
-              width="36"
-              height="18"
-              rx="3"
-              fill="#00F0FF"
-              stroke="#0A0A0A"
-              strokeWidth="1.5"
-            />
-            <rect x="139" y="108" width="16" height="4" rx="1" fill="#0A0A0A" />
-            <circle cx="163" cy="113" r="3.5" fill="#2EE59D" stroke="#0A0A0A" strokeWidth="1" />
+                {/* --- ITEM 2 (y=91..111): Cyan Interactive Card (Titik Tap Terjadi x=154, y=106.5) --- */}
+                <g id="mob-feed-item-2">
+                  <rect
+                    x="135"
+                    y="91"
+                    width="38"
+                    height="20"
+                    rx="3"
+                    fill="#00F0FF"
+                    stroke="#0A0A0A"
+                    strokeWidth="1.2"
+                  />
+                  <rect x="138" y="94" width="6" height="6" rx="1.5" fill="#0A0A0A" />
+                  <line x1="147" y1="96" x2="168" y2="96" stroke="#0A0A0A" strokeWidth="1.5" strokeLinecap="round" />
+                  <line x1="147" y1="100" x2="160" y2="100" stroke="#0A0A0A" strokeWidth="1.2" strokeLinecap="round" />
+                  {/* Tombol Action Interaktif Tempat Ripple Beraksi */}
+                  <rect x="138" y="104" width="22" height="5" rx="1.5" fill="#0A0A0A" />
+                  <circle cx="154" cy="106.5" r="1.8" fill="#2EE59D" />
+                  <circle cx="166" cy="106" r="2.5" fill="#FF5C8A" stroke="#0A0A0A" strokeWidth="0.8" />
+                </g>
+
+                {/* --- ITEM 3 (y=115..135): Modern Code & Terminal Card --- */}
+                <g id="mob-feed-item-3">
+                  <rect
+                    x="135"
+                    y="115"
+                    width="38"
+                    height="20"
+                    rx="3"
+                    fill="#27272A"
+                    stroke="#0A0A0A"
+                    strokeWidth="1.2"
+                  />
+                  <text x="138" y="123" fill="#2EE59D" fontSize="6" fontFamily="monospace" fontWeight="bold">&gt;</text>
+                  <line x1="145" y1="121" x2="168" y2="121" stroke="#00F0FF" strokeWidth="1.5" strokeLinecap="round" />
+                  <line x1="138" y1="126" x2="158" y2="126" stroke="#FFD60A" strokeWidth="1.2" strokeLinecap="round" />
+                  <rect x="138" y="129" width="14" height="4" rx="1" fill="#FF8A3D" />
+                  <circle cx="166" cy="131" r="2" fill="#2EE59D" />
+                </g>
+
+                {/* --- ITEM 1 DUPLIKAT (y=139..159): Loop Mulus Tanpa Sambungan --- */}
+                <g id="mob-feed-item-1-dup">
+                  <rect
+                    x="135"
+                    y="139"
+                    width="38"
+                    height="20"
+                    rx="3"
+                    fill="#FF5C8A"
+                    stroke="#0A0A0A"
+                    strokeWidth="1.2"
+                  />
+                  <circle cx="142" cy="146" r="3" fill="#FFFFFF" />
+                  <line x1="147" y1="145" x2="168" y2="145" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" />
+                  <line x1="147" y1="149" x2="162" y2="149" stroke="#FFD60A" strokeWidth="1.2" strokeLinecap="round" />
+                  <rect x="139" y="153" width="16" height="3.5" rx="1" fill="#0A0A0A" />
+                  <circle cx="166" cy="154" r="1.8" fill="#FFFFFF" />
+                </g>
+
+                {/* --- ITEM 2 DUPLIKAT (y=163..183): Loop Mulus Tanpa Sambungan --- */}
+                <g id="mob-feed-item-2-dup">
+                  <rect
+                    x="135"
+                    y="163"
+                    width="38"
+                    height="20"
+                    rx="3"
+                    fill="#00F0FF"
+                    stroke="#0A0A0A"
+                    strokeWidth="1.2"
+                  />
+                  <rect x="138" y="166" width="6" height="6" rx="1.5" fill="#0A0A0A" />
+                  <line x1="147" y1="168" x2="168" y2="168" stroke="#0A0A0A" strokeWidth="1.5" strokeLinecap="round" />
+                  <line x1="147" y1="172" x2="160" y2="172" stroke="#0A0A0A" strokeWidth="1.2" strokeLinecap="round" />
+                  <rect x="138" y="176" width="22" height="5" rx="1.5" fill="#0A0A0A" />
+                  <circle cx="154" cy="178.5" r="1.8" fill="#2EE59D" />
+                  <circle cx="166" cy="178" r="2.5" fill="#FF5C8A" stroke="#0A0A0A" strokeWidth="0.8" />
+                </g>
+
+                {/* --- ITEM 3 DUPLIKAT (y=187..207): Loop Mulus Tanpa Sambungan --- */}
+                <g id="mob-feed-item-3-dup">
+                  <rect
+                    x="135"
+                    y="187"
+                    width="38"
+                    height="20"
+                    rx="3"
+                    fill="#27272A"
+                    stroke="#0A0A0A"
+                    strokeWidth="1.2"
+                  />
+                  <text x="138" y="195" fill="#2EE59D" fontSize="6" fontFamily="monospace" fontWeight="bold">&gt;</text>
+                  <line x1="145" y1="193" x2="168" y2="193" stroke="#00F0FF" strokeWidth="1.5" strokeLinecap="round" />
+                  <line x1="138" y1="198" x2="158" y2="198" stroke="#FFD60A" strokeWidth="1.2" strokeLinecap="round" />
+                  <rect x="138" y="201" width="14" height="4" rx="1" fill="#FF8A3D" />
+                  <circle cx="166" cy="203" r="2" fill="#2EE59D" />
+                </g>
+              </g>
+            </g>
 
             {/* Home Indicator Bar Putih */}
             <line
@@ -587,9 +727,10 @@ export function MobileDeveloperMascot({
           </g>
 
           {/* ============================================================== */}
-          {/* LAYER 6: PUSH NOTIFICATION CARD (BERSIH, TANPA BINTANG 4 SISI) */}
+          {/* LAYER 6: PUSH NOTIFICATION CARD DI ATAS PONSEL                 */}
           {/* ============================================================== */}
-          <g className="mob-animated-notify" transform="translate(14, 52)">
+          <g transform="translate(137, 16)">
+            <g className="mob-animated-notify">
             {/* Hard Shadow Pop-up Card */}
             <rect x="3" y="3" width="34" height="24" rx="4" fill="#0A0A0A" />
             {/* Kotak Pop-up Notifikasi Putih Neo-Brutalism */}
@@ -625,8 +766,9 @@ export function MobileDeveloperMascot({
             >
               1
             </text>
-            {/* Tanda Ekor Balon Pop-up Card */}
-            <polygon points="14,24 20,24 16,28" fill="#FFFFFF" stroke="#0A0A0A" strokeWidth="1.5" />
+            {/* Tanda Ekor Balon Pop-up Card Menunjuk Tepat ke Atas Bezel Ponsel */}
+            <polygon points="14,24 20,24 17,29" fill="#FFFFFF" stroke="#0A0A0A" strokeWidth="1.5" />
+            </g>
           </g>
         </g>
       </svg>

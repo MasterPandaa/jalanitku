@@ -1,7 +1,10 @@
 "use client";
 
 import React, { useEffect } from "react";
+import Link from "next/link";
 import { Button } from "@/components/ui/Button";
+import { Badge } from "@/components/ui/Badge";
+import { JalanMin } from "@/components/mascot/JalanMin";
 
 export default function ErrorBoundary({
   error,
@@ -30,28 +33,59 @@ export default function ErrorBoundary({
       : String(error));
 
   return (
-    <div className="min-h-[60vh] flex items-center justify-center p-6 bg-[#F4F0EA]">
-      <div className="max-w-md w-full bg-white border-4 border-[#0A0A0A] shadow-[8px_8px_0px_#0A0A0A] p-6 space-y-4">
-        <div className="inline-block bg-[#FF4B4B] text-white px-2.5 py-0.5 font-mono text-xs font-bold uppercase">
-          Terjadi Kendala
+    <main
+      id="main-content"
+      className="min-h-screen flex items-center justify-center p-6 bg-paper selection:bg-accent-yellow selection:text-ink"
+    >
+      <div className="max-w-lg w-full bg-surface border-4 md:border-5 border-ink shadow-nb-lg p-6 md:p-8 space-y-6 text-center">
+        {/* Header Badge */}
+        <div className="flex items-center justify-center gap-3">
+          <span className="font-heading font-black text-4xl md:text-5xl text-ink leading-none">
+            500
+          </span>
+          <div className="text-left">
+            <Badge variant="pink" size="sm">
+              5xx • SERVER ERROR
+            </Badge>
+            <div className="font-mono text-xs font-bold text-ink/70 uppercase mt-0.5">
+              Internal Error
+            </div>
+          </div>
         </div>
-        <h2 className="font-heading font-black text-2xl text-[#0A0A0A]">
-          Oops! Terjadi Gangguan Tampilan
-        </h2>
-        <p className="text-xs font-mono text-gray-700 bg-gray-100 p-3 border-2 border-[#0A0A0A] break-words">
+
+        {/* Maskot JalanMin */}
+        <div className="p-4 bg-paper border-3 border-ink shadow-nb-sm inline-block mx-auto">
+          <JalanMin state="neutral" size={110} />
+        </div>
+
+        <div className="space-y-2">
+          <h1 className="font-heading font-black text-2xl md:text-3xl text-ink">
+            Terjadi Gangguan Internal Sistem
+          </h1>
+          <p className="text-sm font-sans text-ink/80 leading-relaxed max-w-md mx-auto">
+            Sistem mendeteksi kendala runtime yang tak terduga saat memproses tampilan ini.
+          </p>
+        </div>
+
+        <div className="text-left p-3 bg-red-50 border-2 border-accent-danger font-mono text-xs text-accent-danger break-words max-h-32 overflow-y-auto">
+          <span className="font-bold block mb-0.5">Detail Kendala:</span>
           {displayMessage === "[object Event]"
             ? "Event browser tidak terduga terdeteksi. Silakan muat ulang halaman."
             : displayMessage}
-        </p>
-        <div className="pt-2 flex gap-3">
-          <Button variant="primary" onClick={() => reset()}>
-            Coba Lagi
+        </div>
+
+        <div className="pt-2 flex flex-wrap gap-3 justify-center">
+          <Button variant="primary" size="md" onClick={() => reset()}>
+            Coba Lagi ↺
           </Button>
-          <Button variant="white" onClick={() => window.location.reload()}>
+          <Button variant="white" size="md" onClick={() => window.location.reload()}>
             Muat Ulang Halaman
+          </Button>
+          <Button href="/status/500" variant="ghost" size="md">
+            Wawasan Error 500 ↗
           </Button>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

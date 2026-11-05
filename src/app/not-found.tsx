@@ -1,24 +1,54 @@
 import Link from "next/link";
+import { JalanMin } from "@/components/mascot/JalanMin";
+import { Button } from "@/components/ui/Button";
+import { Badge } from "@/components/ui/Badge";
 
 export default function NotFound() {
   return (
-    <main className="min-h-screen bg-paper flex flex-col items-center justify-center p-6 text-center">
-      <div className="w-full max-w-md p-8 bg-surface border-4 border-ink shadow-[8px_8px_0_#0A0A0A] rounded-2xl flex flex-col items-center gap-4">
-        <div className="w-16 h-16 bg-accent-yellow border-3 border-ink rounded-xl flex items-center justify-center font-display text-2xl font-black shadow-[4px_4px_0_#0A0A0A]">
-          404
+    <main
+      id="main-content"
+      className="min-h-screen bg-paper flex flex-col items-center justify-center p-6 text-center selection:bg-accent-yellow selection:text-ink"
+    >
+      <div className="w-full max-w-lg p-8 md:p-10 bg-surface border-4 md:border-5 border-ink shadow-nb-lg flex flex-col items-center gap-6">
+        {/* Header Badge */}
+        <div className="flex items-center gap-3">
+          <span className="font-heading font-black text-5xl md:text-6xl text-ink leading-none">
+            404
+          </span>
+          <div className="text-left">
+            <Badge variant="pink" size="sm">
+              4xx • CLIENT ERROR
+            </Badge>
+            <div className="font-mono text-xs font-bold text-ink/70 uppercase mt-0.5">
+              Not Found
+            </div>
+          </div>
         </div>
-        <h1 className="font-display text-2xl font-black text-ink uppercase tracking-tight">
-          Halaman Tidak Ditemukan
-        </h1>
-        <p className="text-ink-muted text-sm font-sans">
-          Detektif JalanMin sudah mencari ke setiap sudut, namun rute yang kamu tuju belum terdaftar di peta JalanITku.
-        </p>
-        <Link
-          href="/"
-          className="mt-2 inline-flex items-center justify-center px-6 py-3 bg-accent-yellow text-ink font-heading font-bold border-3 border-ink shadow-[4px_4px_0_#0A0A0A] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_#0A0A0A] transition-all rounded-xl uppercase text-sm"
-        >
-          Kembali ke Beranda
-        </Link>
+
+        {/* Maskot JalanMin */}
+        <div className="p-4 bg-paper border-3 border-ink shadow-nb-sm">
+          <JalanMin state="neutral" size={130} />
+        </div>
+
+        {/* Copy Penjelasan */}
+        <div className="space-y-2">
+          <h1 className="font-heading font-black text-2xl md:text-3xl text-ink uppercase tracking-tight">
+            Rute Tidak Ditemukan
+          </h1>
+          <p className="text-ink/80 text-sm md:text-base font-sans leading-relaxed max-w-sm mx-auto">
+            Detektif JalanMin sudah mencari ke setiap sudut, namun alamat URL yang kamu tuju belum terdaftar di peta JalanITku.
+          </p>
+        </div>
+
+        {/* Tombol Aksi */}
+        <div className="pt-2 flex flex-col sm:flex-row items-center gap-3 w-full justify-center">
+          <Button href="/" variant="primary" size="md" className="w-full sm:w-auto">
+            ← Kembali ke Beranda
+          </Button>
+          <Button href="/status" variant="white" size="md" className="w-full sm:w-auto">
+            Pusat Kode HTTP (3xx/4xx/5xx) →
+          </Button>
+        </div>
       </div>
     </main>
   );

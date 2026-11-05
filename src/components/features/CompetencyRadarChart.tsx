@@ -12,14 +12,32 @@ interface CompetencyRadarChartProps {
   size?: number;
 }
 
+// Memecah nama kompetensi menjadi 1-2 baris ringkas
+function formatCompetencyName(name: string): string[] {
+  if (name.length <= 13) return [name];
+
+  const words = name.split(" ");
+  if (words.length <= 1) {
+    return [name.substring(0, 13), name.substring(13)];
+  }
+
+  const half = Math.ceil(words.length / 2);
+  const line1 = words.slice(0, half).join(" ");
+  const line2 = words.slice(half).join(" ");
+  return [line1, line2];
+}
+
 export const CompetencyRadarChart: React.FC<CompetencyRadarChartProps> = ({
   scores,
-  size = 380,
 }) => {
   if (!scores || scores.length === 0) return null;
 
-  const center = size / 2;
-  const radius = (size / 2) - 60; // Margin untuk label teks
+  // Kanvas proposional yang pas mengisi kotak kartu secara optimal
+  const width = 420;
+  const height = 370;
+  const cx = width / 2; // 210
+  const cy = height / 2 + 5; // 190
+  const radius = 115; // Radius poligon dibesarkan agar grafik terlihat gagah dan dominan
   const totalAxes = scores.length;
   const angleStep = (Math.PI * 2) / totalAxes;
 
@@ -27,16 +45,15 @@ export const CompetencyRadarChart: React.FC<CompetencyRadarChartProps> = ({
   const gridLevels = [0.2, 0.4, 0.6, 0.8, 1.0];
 
   const getCoordinates = (index: number, factor: number) => {
-    // Mulai dari atas (-PI / 2)
     const angle = index * angleStep - Math.PI / 2;
-    const x = center + radius * factor * Math.cos(angle);
-    const y = center + radius * factor * Math.sin(angle);
+    const x = cx + radius * factor * Math.cos(angle);
+    const y = cy + radius * factor * Math.sin(angle);
     return { x, y };
   };
 
-  // Titik poligon data
+  // Titik poligon data pengguna
   const dataPoints = scores.map((item, index) => {
-    const factor = Math.max(0.08, item.percentage / 100);
+    const factor = Math.max(0.08, Math.min(1.0, item.percentage / 100));
     return getCoordinates(index, factor);
   });
 
@@ -45,15 +62,15 @@ export const CompetencyRadarChart: React.FC<CompetencyRadarChartProps> = ({
     .join(" ");
 
   return (
-    <div className="w-full flex flex-col items-center justify-center p-2">
+    <div className="w-full flex flex-col items-center justify-center overflow-hidden">
       <svg
-        width={size}
-        height={size}
-        viewBox={`0 0 ${size} ${size}`}
-        className="overflow-visible max-w-full h-auto drop-shadow-[2px_2px_0px_#0A0A0A]"
+        viewBox={`0 0 ${width} ${height}`}
+        className="w-full h-auto select-none"
+        style={{ filter: "none" }}
       >
         {/* Background Grid Polygons */}
         {gridLevels.map((lvl, lvlIdx) => {
+          const isOuter = lvlIdx === gridLevels.length - 1;
           const points = scores
             .map((_, i) => {
               const pt = getCoordinates(i, lvl);
@@ -65,29 +82,29 @@ export const CompetencyRadarChart: React.FC<CompetencyRadarChartProps> = ({
             <polygon
               key={`grid-${lvlIdx}`}
               points={points}
-              fill={lvlIdx === gridLevels.length - 1 ? "#F4F0EA" : "none"}
+              fill={isOuter ? "#FFF8E7" : "none"}
               stroke="#0A0A0A"
-              strokeWidth={lvlIdx === gridLevels.length - 1 ? "2.5" : "1.2"}
-              strokeDasharray={lvlIdx === gridLevels.length - 1 ? undefined : "3 3"}
-              opacity={0.6}
+              strokeWidth={isOuter ? "2.5" : "1"}
+              strokeDasharray={isOuter ? undefined : "3 3"}
+              opacity={isOuter ? 1 : 0.45}
             />
           );
         })}
 
-        {/* Axis Lines dari pusat */}
+        {/* Axis Spoke Lines dari pusat */}
         {scores.map((_, i) => {
           const outerPt = getCoordinates(i, 1.0);
           return (
             <line
               key={`axis-${i}`}
-              x1={center}
-              y1={center}
+              x1={cx}
+              y1={cy}
               x2={outerPt.x}
               y2={outerPt.y}
               stroke="#0A0A0A"
-              strokeWidth="1.5"
+              strokeWidth="1.2"
               strokeDasharray="2 2"
-              opacity={0.5}
+              opacity={0.35}
             />
           );
         })}
@@ -95,8 +112,8 @@ export const CompetencyRadarChart: React.FC<CompetencyRadarChartProps> = ({
         {/* User Data Polygon */}
         <polygon
           points={dataPolygonPoints}
-          fill="#FFE600"
-          fillOpacity="0.65"
+          fill="#FFD60A"
+          fillOpacity="0.75"
           stroke="#0A0A0A"
           strokeWidth="3.5"
           strokeLinejoin="round"
@@ -115,35 +132,76 @@ export const CompetencyRadarChart: React.FC<CompetencyRadarChartProps> = ({
           />
         ))}
 
-        {/* Axis Labels */}
+        {/* Axis Labels & Percentage */}
         {scores.map((item, i) => {
           const angle = i * angleStep - Math.PI / 2;
-          const labelDist = radius + 28;
-          const lx = center + labelDist * Math.cos(angle);
-          const ly = center + labelDist * Math.sin(angle);
+          const cos = Math.cos(angle);
+          const sin = Math.sin(angle);
 
-          // Penyesuaian anchor teks berdasarkan kuadran
+          // Jarak label dari titik simpul
+          const labelDist = radius + 15;
+          const lx = cx + labelDist * cos;
+          const ly = cy + labelDist * sin;
+
           let textAnchor: "middle" | "start" | "end" = "middle";
-          if (Math.cos(angle) > 0.3) textAnchor = "start";
-          else if (Math.cos(angle) < -0.3) textAnchor = "end";
+          let xOffset = 0;
+          let yBase = ly;
+
+          if (cos > 0.3) {
+            textAnchor = "start";
+            xOffset = 4;
+          } else if (cos < -0.3) {
+            textAnchor = "end";
+            xOffset = -4;
+          }
+
+          if (sin < -0.7) {
+            yBase = ly - 16;
+          } else if (sin > 0.7) {
+            yBase = ly + 14;
+          }
+
+          const lines = formatCompetencyName(item.competencyName);
+          const isTwoLines = lines.length > 1;
+
+          const scoreColor =
+            item.percentage >= 80
+              ? "#10B981"
+              : item.percentage >= 60
+              ? "#D97706"
+              : "#EF4444";
 
           return (
             <g key={`lbl-${i}`} className="select-none">
+              {/* Baris 1 Nama Kompetensi */}
               <text
-                x={lx}
-                y={ly - 4}
+                x={lx + xOffset}
+                y={isTwoLines ? yBase - 7 : yBase - 1}
                 textAnchor={textAnchor}
-                className="fill-[#0A0A0A] font-bold text-[11px] font-sans"
+                className="fill-[#0A0A0A] font-sans font-bold text-[12px]"
               >
-                {item.competencyName.length > 20
-                  ? item.competencyName.substring(0, 18) + "..."
-                  : item.competencyName}
+                {lines[0]}
               </text>
+
+              {/* Baris 2 Nama Kompetensi */}
+              {isTwoLines && (
+                <text
+                  x={lx + xOffset}
+                  y={yBase + 7}
+                  textAnchor={textAnchor}
+                  className="fill-[#0A0A0A] font-sans font-bold text-[12px]"
+                >
+                  {lines[1]}
+                </text>
+              )}
+
+              {/* Angka Persentase */}
               <text
-                x={lx}
-                y={ly + 10}
+                x={lx + xOffset}
+                y={isTwoLines ? yBase + 22 : yBase + 15}
                 textAnchor={textAnchor}
-                className="fill-[#FF4B4B] font-mono font-black text-[12px]"
+                className="font-mono font-black text-[12px]"
+                fill={scoreColor}
               >
                 {item.percentage}%
               </text>

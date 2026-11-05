@@ -53,11 +53,11 @@ Ke-21 role IT dikelompokkan ke dalam 7 batch tematik yang masing-masing terdiri 
 - **Metafora Karakter**: Sang perancang dan pembangun fondasi sistem dunia nyata. Ia mendirikan pilar-pilar arsitektur digital yang kokoh dan scalable.
 - **Atribut Visual & Props**:
   - **Ekspresi Cerdas & Alis Percaya Diri (Tanpa Kacamata)**: Mata jernih ekspresif dengan pupil hitam, kilau putih, dan pantulan cyan elektrik `#00F0FF`, dipadukan dengan alis tegas melengkung yang percaya diri dan berwibawa, memancarkan visi arsitektur sistem yang tajam.
-  - **Blueprint Digital Terbuka Digenggam Erat**: Cetak biru skema sistem dibentangkan dan digenggam tangan kiri dari samping-bawah lengkap dengan diagram blok microservices dan node database terhubung.
+  - **Blueprint Digital Terbuka & Genggaman Tangan Realistis**: Cetak biru skema sistem digenggam mantap oleh tangan kiri dengan anatomi realistis—4 buku jari melingkar dari bawah kertas dan ibu jari menekan kuat permukaan depan blueprint, lengkap dengan diagram microservices.
   - **Rompi Lapangan Arsitektur (Safety Vest Hi-Vis)**: Rompi oranye (`#FF8A3D`) dengan pita neon reflektif (`#2EE59D`), saku pena dada, dan slot ID card.
   - **Pensil Drafting Arsitek (Ujung Grafit Runcing ke Atas)**: Pensil kayu teknikal hexagonal oranye (`#FF8A3D`) lengkap dengan mata timbal hitam runcing menghadap ke atas, ferrule logam, dan penghapus pink (`#FF5C8A`) di pangkal bawah.
   - **Helm Konstruksi Arsitek Improved**: Helm oranye kokoh berusuk ganda penguat, alur ventilasi samping, brim pelindung tebal, dan emblem spotlight cyan (`#00F0FF`).
-  - **Kubus Modular 3D Latar Belakang & Sudut Kiri**: Blok fondasi 3D melayang di sisi kiri atas (depan) dan kanan atas (di layer latar belakang karakter), menciptakan kedalaman visual (depth of field).
+  - **Dua Kubus Modular 3D Dinamis (Berganti Warna)**: Blok fondasi 3D melayang di sisi kiri atas (depan) dan kanan atas (latar belakang) dengan animasi warna poligon berganti dinamis (Cyan, Mint, Pink, Yellow, Orange, Purple) secara bersilangan.
 - **Palet Warna**: Kuning `#FFD60A`, Cyan `#00F0FF`, Putih `#FFFFFF`, Tinta `#0A0A0A`.
 
 #### 2. Mobile Developer — "The Screen Tapper"
@@ -66,7 +66,8 @@ Ke-21 role IT dikelompokkan ke dalam 7 batch tematik yang masing-masing terdiri 
   - **Topi Snapback Miring Pink & Cyan**: Topi kasual urban warna pink magenta (`#FF5C8A`) dengan visor datar cyan elektrik (`#00F0FF`), kancing atas emas, dan emblem smartphone putih di depan (desain lama favorit).
   - **Jaket Jeans Denim Keren (Trucker Denim Jacket)**: Jaket denim biru indigo wash (`#3A6B9B`) dengan kerah berlipat, kaos putih di dalam, saku dada ganda berflap dengan kancing perak, dan garis jahitan vertikal emas.
   - **Tangan Kanan Genggam HP & Tangan Kiri Klik Layar**: Tangan kanan menggenggam erat sisi kanan HP (kanan POV user) dengan buku-buku jari melingkar di bingkai samping, sementara tangan kiri aktif mengklik / mengetuk layar ponsel dengan jari telunjuk presisi.
-  - **Efek Tap Layar (Touch Ripple Konsentris)**: Gelombang lingkaran sentuhan cyan (`#00F0FF`) dan mint (`#2EE59D`) di ujung telunjuk tangan kiri saat mengklik layar, dipadu push notification card bersih (tanpa efek bintang 4 sisi).
+  - **Efek Tap Layar (Touch Ripple) & Scrolling Feed**: Gelombang lingkaran sentuhan cyan (`#00F0FF`) dan mint (`#2EE59D`) di ujung telunjuk tangan kiri saat mengklik layar ponsel yang aktif scrolling feed (dengan indikator scrollbar dinamis).
+  - **Kedipan Mata & Notifikasi di Atas Ponsel**: Animasi kedipan mata berkala yang natural menatap interaksi gawai, serta push notification card bersih yang melayang tepat di atas bezel smartphone.
 - **Palet Warna**: Pink Magenta `#FF5C8A`, Denim Blue `#3A6B9B`, Cyan `#00F0FF`, Kuning `#FFD60A`, Tinta `#0A0A0A`.
 
 #### 3. Game Developer — "The Pixel Mage"
@@ -231,3 +232,20 @@ Setiap maskot diimplementasikan dalam 2 format:
    - Berkas SVG standalone yang siap disematkan langsung di `<img>`, metadata Open Graph, avatar, dan dokumen cetak kartu.
 3. **Universal Dispatcher (`src/components/mascot/RoleMascot.tsx`)**:
    - Otomatis mencocokkan `roleSlug` ke komponen maskot terkait (Batch 1–3 aktif), atau menampilkan maskot adaptif JalanMin bila batch belum diimplementasikan.
+
+
+---
+
+## 5. Log Dispensasi Pengguna & Penyelarasan Aturan Baku (User Dispensation Log)
+
+> **Status Verifikasi E2E (2026-10-27)**: Telah dikonfirmasi langsung oleh Pengguna (User Choice) melalui sesi evaluasi interaktif sistem JalanITku.
+
+1. **Dispensasi Aksesoris Melayang Khas Karakter (Rule 2 Exemption)**:
+   - Sesuai klausul Aturan 2 (*"KECUALI jika pengguna secara eksplisit menginstruksikannya"*), elemen visual signature yang melayang fungsional berikut telah disetujui secara resmi untuk dipertahankan:
+     * **Software Engineer**: Dua kubus modular 3D dinamis yang berganti warna poligon.
+     * **Mobile Developer**: Push notification card di atas layar smartphone dan tap ripple.
+     * **Quality Assurance**: Lalat/cyber bugs berterbangan dengan jejak putus-putus.
+     * **IT Support**: Salib medis / heartbeat pulse operasional.
+     * **DevOps Engineer**: Awan rendah sirkulasi penerbangan dan lampu navigasi sayap.
+2. **Proporsi Skala Kokpit DevOps Engineer (The System-Pilot)**:
+   - Skala pilot duduk di dalam kokpit pesawat baling-baling diakui sebagai kesatuan wahana kendaraan aerodinamis terpadu, mempertahankan konsistensi kanvas `viewBox="0 0 200 200"`, outline solid pekat `#0A0A0A`, dan mata baku berbinar JalanMin.

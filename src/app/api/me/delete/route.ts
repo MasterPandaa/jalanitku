@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getSessionUser, usersStore } from "@/lib/auth";
-import { deleteUserCocoklogiku } from "@/lib/rapor";
+import { deleteUserCocoklogiku, raporSessions } from "@/lib/rapor";
+import { jalanIdsStore, careerSessions } from "@/lib/karir";
 import { safeSupabaseSync } from "@/lib/supabase";
 
 export async function DELETE(req: NextRequest) {
@@ -15,19 +16,37 @@ export async function DELETE(req: NextRequest) {
 
   const userId = user.id;
 
-  // Hapus data terkait di Cocoklogiku & Supabase
+  // 1. Hapus Cocoklogiku & Sesi Rapor
   deleteUserCocoklogiku(userId);
+  for (const [sessId, sess] of raporSessions.entries()) {
+    if (sess.userId === userId) {
+      raporSessions.delete(sessId);
+    }
+  }
 
+  // 2. Hapus JalanID & Sesi Karir
+  jalanIdsStore.delete(userId);
+  for (const [sessId, sess] of careerSessions.entries()) {
+    if (sess.user_id === userId) {
+      careerSessions.delete(sessId);
+    }
+  }
+
+  // 3. Hapus data Supabase
   safeSupabaseSync("deleteUserData", async (client) => {
+    await client.from("cocoklogikus").delete().eq("user_id", userId);
+    await client.from("jalan_ids").delete().eq("user_id", userId);
+    await client.from("career_sessions").delete().eq("user_id", userId);
+    await client.from("rapor_sessions").delete().eq("user_id", userId);
     await client.from("users").delete().eq("id", userId);
   });
 
-  // Delete user from local store
+  // 4. Hapus user dari usersStore
   usersStore.delete(userId);
 
   const response = NextResponse.json({
     success: true,
-    message: "Akun dan semua data terkait berhasil dihapus.",
+    message: "Akun dan semua data terkait berhasil dihapus secara bersih.",
   });
 
   // Clear cookie

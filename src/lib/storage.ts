@@ -3,6 +3,14 @@ import path from "path";
 
 const RUNTIME_DIR = path.join(process.cwd(), "src", "data", "runtime");
 
+// Deteksi lingkungan serverless/read-only (misal Vercel, AWS Lambda, Cloudflare)
+const IS_SERVERLESS = Boolean(
+  process.env.VERCEL ||
+  process.env.AWS_LAMBDA_FUNCTION_NAME ||
+  process.env.NOW_REGION ||
+  process.env.DISABLE_DISK_PERSISTENCE === "true"
+);
+
 export interface PersistentStoreOptions<V> {
   serialize?: (val: V) => any;
   deserialize?: (raw: any) => V;
@@ -12,9 +20,10 @@ export interface PersistentStoreOptions<V> {
 
 /**
  * PersistentStore extends native Map<string, V> to provide:
- * 1. Synchronous disk persistence (atomic file writing in JSON)
- * 2. Cross-worker/re-evaluation staleness checks via mtime
- * 3. Custom serializer/deserializer for complex nested structures (e.g., inner Maps)
+ * 1. Resilient in-memory caching with high-speed synchronous access
+ * 2. Optional disk persistence in development/writable environments
+ * 3. Graceful degradation in serverless/read-only environments (prevents EROFS crashes)
+ * 4. Extensible onSet/onDelete hooks for real-time Supabase background synchronization
  */
 export class PersistentStore<V> extends Map<string, V> {
   public readonly filePath: string;
@@ -23,6 +32,7 @@ export class PersistentStore<V> extends Map<string, V> {
   private deserializer?: (raw: any) => V;
   private onSet?: (key: string, val: V) => void;
   private onDelete?: (key: string) => void;
+  private diskDisabled: boolean;
 
   constructor(
     filename: string,
@@ -37,32 +47,43 @@ export class PersistentStore<V> extends Map<string, V> {
     this.deserializer = options?.deserialize;
     this.onSet = options?.onSet;
     this.onDelete = options?.onDelete;
+    this.diskDisabled = IS_SERVERLESS;
 
-    this.ensureDirectory();
-    this.loadFromDisk();
+    if (!this.diskDisabled) {
+      this.ensureDirectory();
+      this.loadFromDisk();
+    }
 
     // Jika disk kosong dan disediakan initialEntries, inisialisasi data
     if (super.size === 0 && initialEntries && initialEntries.length > 0) {
       for (const [k, v] of initialEntries) {
         super.set(k, v);
       }
-      this.saveToDisk();
+      if (!this.diskDisabled) {
+        this.saveToDisk();
+      }
     }
   }
 
   private ensureDirectory() {
+    if (this.diskDisabled) return;
     try {
       if (!fs.existsSync(RUNTIME_DIR)) {
         fs.mkdirSync(RUNTIME_DIR, { recursive: true });
       }
-    } catch (err) {
-      console.error(`[PersistentStore] Gagal membuat direktori ${RUNTIME_DIR}:`, err);
+    } catch (err: any) {
+      // Jika sistem read-only (EROFS), nonaktifkan disk persistence tanpa melempar error
+      if (err?.code === "EROFS" || err?.code === "EACCES" || err?.code === "EPERM") {
+        this.diskDisabled = true;
+      } else {
+        console.warn(`[PersistentStore] Warning direktori ${RUNTIME_DIR}:`, err?.message || err);
+      }
     }
   }
 
   private loadFromDisk() {
+    if (this.diskDisabled || !this.filePath) return;
     try {
-      if (!this.filePath) return;
       if (fs.existsSync(this.filePath)) {
         const stat = fs.statSync(this.filePath);
         this.lastMtime = stat.mtimeMs;
@@ -80,14 +101,15 @@ export class PersistentStore<V> extends Map<string, V> {
           }
         }
       }
-    } catch (err) {
-      console.error(`[PersistentStore] Gagal memuat data dari ${this.filePath}:`, err);
+    } catch (err: any) {
+      // Non-fatal, tetap gunakan memory cache
+      console.warn(`[PersistentStore] Info: Fallback in-memory untuk ${path.basename(this.filePath)} (${err?.message || "read failed"})`);
     }
   }
 
   public syncCheck() {
+    if (this.diskDisabled || !this.filePath) return;
     try {
-      if (!this.filePath) return;
       if (fs.existsSync(this.filePath)) {
         const stat = fs.statSync(this.filePath);
         if (stat.mtimeMs > this.lastMtime) {
@@ -114,9 +136,11 @@ export class PersistentStore<V> extends Map<string, V> {
   }
 
   public saveToDisk() {
+    if (this.diskDisabled || !this.filePath) return;
     try {
-      if (!this.filePath) return;
       this.ensureDirectory();
+      if (this.diskDisabled) return;
+
       const obj: Record<string, any> = {};
       for (const [k, v] of super.entries()) {
         obj[k] = this.serializer ? this.serializer(v) : v;
@@ -128,8 +152,13 @@ export class PersistentStore<V> extends Map<string, V> {
 
       const stat = fs.statSync(this.filePath);
       this.lastMtime = stat.mtimeMs;
-    } catch (err) {
-      console.error(`[PersistentStore] Gagal menyimpan ke ${this.filePath}:`, err);
+    } catch (err: any) {
+      if (err?.code === "EROFS" || err?.code === "EACCES" || err?.code === "EPERM") {
+        this.diskDisabled = true;
+        console.warn(`[PersistentStore] Filesystem read-only terdeteksi. Beralih ke in-memory mode untuk ${path.basename(this.filePath)}.`);
+      } else {
+        console.warn(`[PersistentStore] Non-blocking write warning (${path.basename(this.filePath)}):`, err?.message || err);
+      }
     }
   }
 

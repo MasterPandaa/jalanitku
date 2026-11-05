@@ -1,3 +1,4 @@
+import crypto from "crypto";
 import { getOrCreatePersistentStore, PersistentStore } from "./storage";
         import { supabase, safeSupabaseSync } from "./supabase";
         
@@ -274,16 +275,55 @@ import { getOrCreatePersistentStore, PersistentStore } from "./storage";
           return null;
         }
         
-        /**
-         * Mendapatkan user yang sedang aktif dari session cookie
-         * Membaca dari in-memory cache/disk, dengan fallback ke Supabase jika belum ter-cache
-         */
-        export async function getSessionUser(): Promise<User | null> {
-          const { cookies } = await import("next/headers");
-          const cookieStore = await cookies();
-          const sessionId = cookieStore.get("jalanitku_session")?.value;
-          if (!sessionId) return null;
-        
-          return getUserById(sessionId);
-        }
-        
+        const SESSION_SECRET = process.env.SESSION_SECRET || "jalanitku_default_secret_hmac_sha256_key_2026";
+
+/**
+ * Tanda tangani User ID dengan HMAC SHA-256 untuk mencegah cookie tampering
+ */
+export function signSessionId(userId: string): string {
+  const signature = crypto.createHmac("sha256", SESSION_SECRET).update(userId).digest("hex");
+  return `${userId}.${signature}`;
+}
+
+/**
+ * Verifikasi tanda tangan cookie sesi dan ekstrak userId asli jika sah
+ */
+export function verifySessionId(rawToken: string): string | null {
+  if (!rawToken || typeof rawToken !== "string") return null;
+  const dotIndex = rawToken.indexOf(".");
+  if (dotIndex === -1) {
+    if (process.env.NODE_ENV !== "production") {
+      return rawToken;
+    }
+    return null;
+  }
+  const userId = rawToken.substring(0, dotIndex);
+  const signature = rawToken.substring(dotIndex + 1);
+
+  const expectedSignature = crypto.createHmac("sha256", SESSION_SECRET).update(userId).digest("hex");
+
+  try {
+    const sigBuffer = Buffer.from(signature, "hex");
+    const expBuffer = Buffer.from(expectedSignature, "hex");
+    if (sigBuffer.length !== expBuffer.length) return null;
+    return crypto.timingSafeEqual(sigBuffer, expBuffer) ? userId : null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Mendapatkan user yang sedang aktif dari session cookie
+ * Membaca dari in-memory cache/disk, dengan fallback ke Supabase jika belum ter-cache
+ */
+export async function getSessionUser(): Promise<User | null> {
+  const { cookies } = await import("next/headers");
+  const cookieStore = await cookies();
+  const rawToken = cookieStore.get("jalanitku_session")?.value;
+  if (!rawToken) return null;
+
+  const userId = verifySessionId(rawToken);
+  if (!userId) return null;
+
+  return getUserById(userId);
+}

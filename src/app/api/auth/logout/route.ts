@@ -7,5 +7,6 @@ export async function POST() {
   });
 
   response.cookies.delete("jalanitku_session");
+  response.cookies.delete("jalanitku_needs_onboarding");
   return response;
 }

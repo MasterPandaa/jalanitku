@@ -1,404 +1,682 @@
 [
   {
-    "id": "cq_l1_01",
+    "id": "cq_s1_01",
     "level": 1,
-    "theme": "Minat Umum",
+    "theme": "Kepo & Kebiasaan Sehari-hari",
     "type": "likert",
-    "text": { "id": "Saya merasa tertantang dan bersemangat ketika harus memecahkan teka-teki logika yang rumit." },
-    "tag": "logic_problem_solving",
-    "weights": {
-      "software-engineer": 3,
-      "data-scientist": 3,
-      "aiml-engineer": 3,
-      "data-engineer": 2,
-      "digital-forensics": 2,
-      "quality-assurance": 1,
-      "uiux-designer": -1
-    }
-  },
-  {
-    "id": "cq_l1_02",
-    "level": 1,
-    "theme": "Minat Umum",
-    "type": "likert",
-    "text": { "id": "Saya sangat peduli pada tampilan visual, keselarasan warna, dan kenyamanan pengguna saat memakai aplikasi." },
-    "tag": "visual_user_empathy",
+    "text": {
+      "id": "Pas lagi buka aplikasi baru (kayak TikTok atau Gojek), hal pertama yang paling bikin aku kepo adalah tampilannya: warnanya nyambung gak, animasinya mulus gak, dan tombolnya gampang dipencet apa bikin bingung."
+    },
+    "tag": "visual_user_curiosity",
     "weights": {
       "uiux-designer": 3,
       "mobile-developer": 2,
       "software-engineer": 1,
-      "game-developer": 2,
+      "game-developer": 1,
       "data-engineer": -1,
       "network-engineer": -1
     }
   },
   {
-    "id": "cq_l1_03",
+    "id": "cq_s1_02",
     "level": 1,
-    "theme": "Minat Umum",
+    "theme": "Kepo & Kebiasaan Sehari-hari",
     "type": "likert",
-    "text": { "id": "Saya senang mencari celah kesalahan, bug, atau kekurangan yang luput dari perhatian orang lain." },
-    "tag": "investigative_bug_finding",
+    "text": {
+      "id": "Kalau ada laptop atau HP temen yang mendadak lemot, gak bisa nyambung ke Wi-Fi kampus, atau layarnya aneh, aku paling antusias buat bantuin ngoprek sampai bener."
+    },
+    "tag": "troubleshoot_hardware_wifi",
+    "weights": {
+      "it-support": 3,
+      "network-engineer": 2,
+      "system-administrator": 2,
+      "security-analyst": 1,
+      "uiux-designer": -1,
+      "data-entry": -1
+    }
+  },
+  {
+    "id": "cq_s1_03",
+    "level": 1,
+    "theme": "Kepo & Kebiasaan Sehari-hari",
+    "type": "likert",
+    "text": {
+      "id": "Aku tipe orang yang penasaran 'gimana cara kerjanya di balik layar'—misal kok bisa ya Instagram tahu barang yang baru aja aku omongin tiba-tiba muncul di reels/timeline?"
+    },
+    "tag": "ai_data_curiosity",
+    "weights": {
+      "aiml-engineer": 3,
+      "data-scientist": 3,
+      "data-analyst": 2,
+      "software-engineer": 2,
+      "data-engineer": 2,
+      "data-entry": -1
+    }
+  },
+  {
+    "id": "cq_s1_04",
+    "level": 1,
+    "theme": "Kepo & Kebiasaan Sehari-hari",
+    "type": "likert",
+    "text": {
+      "id": "Pas lagi main game atau nyobain software, kalau nemu glitch, error aneh, atau celah yang bikin aplikasinya mogok, aku malah seneng dan penasaran nyari tahu kenapa itu bisa kejadian."
+    },
+    "tag": "curious_bug_finder",
     "weights": {
       "quality-assurance": 3,
       "security-analyst": 3,
-      "digital-forensics": 3,
+      "digital-forensics": 2,
+      "game-developer": 2,
       "software-engineer": 1,
       "it-support": 1
     }
   },
   {
-    "id": "cq_l1_04",
+    "id": "cq_s1_05",
     "level": 1,
-    "theme": "Minat Umum",
+    "theme": "Kepo & Kebiasaan Sehari-hari",
+    "type": "preference",
+    "text": {
+      "id": "Di waktu luang pas libur semester, kegiatan mana yang paling bikin kamu betah berjam-jam di depan laptop/komputer tanpa bosen?"
+    },
+    "tag": "semester_break_hobby",
+    "options": [
+      {
+        "id": "cq_s1_05_a",
+        "key": "a",
+        "text": {
+          "id": "Ngulik bikin game kecil-kecilan, animasi karakter, atau nyoba mainan engine 2D/3D."
+        },
+        "weights": {
+          "game-developer": 3,
+          "mobile-developer": 1,
+          "uiux-designer": 1
+        }
+      },
+      {
+        "id": "cq_s1_05_b",
+        "key": "b",
+        "text": {
+          "id": "Belajar bikin bot otomatis atau ngobrol sama AI buat bantu ngerjain sesuatu yang canggih."
+        },
+        "weights": {
+          "aiml-engineer": 3,
+          "data-scientist": 2,
+          "software-engineer": 1
+        }
+      },
+      {
+        "id": "cq_s1_05_c",
+        "key": "c",
+        "text": {
+          "id": "Nonton video bongkar kasus hacker, detektif siber, atau nyoba ngamanin akun dan password biar kebal retas."
+        },
+        "weights": {
+          "security-analyst": 3,
+          "digital-forensics": 3,
+          "system-administrator": 1
+        }
+      },
+      {
+        "id": "cq_s1_05_d",
+        "key": "d",
+        "text": {
+          "id": "Eksperimen ngumpulin data tren (misal harga tiket konser atau tren Spotify) terus dibikin grafik visual yang keren."
+        },
+        "weights": {
+          "data-analyst": 3,
+          "data-scientist": 2
+        }
+      },
+      {
+        "id": "cq_s1_05_e",
+        "key": "e",
+        "text": {
+          "id": "Nata folder, bikin template catatan kuliah Notion/Spreadsheet yang rapi banget dan terstruktur."
+        },
+        "weights": {
+          "data-entry": 3,
+          "database-administrator": 2,
+          "project-manager": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "cq_s2_01",
+    "level": 2,
+    "theme": "Gaya Saat Nugas Bareng",
     "type": "likert",
-    "text": { "id": "Saya antusias mengotak-atik perangkat keras (hardware), kabel, router, dan memastikan jaringan internet berjalan lancar." },
-    "tag": "hardware_network",
+    "text": {
+      "id": "Waktu ngerjain tugas kelompok, aku lebih suka jadi orang yang bagi-bagi tugas, bikin jadwal deadline, dan mastiin semua orang ngumpulin tepat waktu."
+    },
+    "tag": "team_leader_coordinator",
     "weights": {
-      "network-engineer": 3,
-      "it-support": 3,
-      "cloud-engineer": 1,
-      "devops-engineer": 1,
+      "project-manager": 3,
+      "business-analyst": 2,
+      "it-consultant": 2,
+      "quality-assurance": 1,
+      "data-entry": 1,
+      "software-engineer": -1,
+      "data-engineer": -1
+    }
+  },
+  {
+    "id": "cq_s2_02",
+    "level": 2,
+    "theme": "Gaya Saat Nugas Bareng",
+    "type": "likert",
+    "text": {
+      "id": "Aku paling nyaman kalau dikasih tugas yang butuh ketelitian ekstra tinggi—misal merapikan ratusan baris data di spreadsheet atau ngecek typo sampai bener-bener nol kesalahan."
+    },
+    "tag": "detail_accuracy_neat",
+    "weights": {
+      "data-entry": 3,
+      "database-administrator": 2,
+      "quality-assurance": 2,
+      "game-developer": -1,
       "uiux-designer": -1
     }
   },
   {
-    "id": "cq_l1_05",
-    "level": 1,
-    "theme": "Minat Umum",
+    "id": "cq_s2_03",
+    "level": 2,
+    "theme": "Gaya Saat Nugas Bareng",
     "type": "likert",
-    "text": { "id": "Saya suka menggali grafik, mencari pola tersembunyi dari tabel angka, dan menyajikan kesimpulannya ke orang lain." },
-    "tag": "data_insight",
+    "text": {
+      "id": "Daripada cuma ngurusin satu komputer sendiri, aku lebih takjub ngebayangin gimana ribuan komputer di seluruh dunia bisa saling terhubung lewat kabel bawah laut dan server internet."
+    },
+    "tag": "infra_network_cloud_awe",
+    "weights": {
+      "cloud-engineer": 3,
+      "network-engineer": 3,
+      "devops-engineer": 2,
+      "system-administrator": 2,
+      "uiux-designer": -1,
+      "data-entry": -1
+    }
+  },
+  {
+    "id": "cq_s2_04",
+    "level": 2,
+    "theme": "Gaya Saat Nugas Bareng",
+    "type": "likert",
+    "text": {
+      "id": "Aku lebih suka ngomong langsung sama orang buat dengerin keluh kesah mereka, terus bantuin nyari solusi teknologi yang pas, ketimbang seharian duduk diam ngetik codingan sendirian."
+    },
+    "tag": "client_facing_consultative",
+    "weights": {
+      "it-consultant": 3,
+      "business-analyst": 3,
+      "project-manager": 2,
+      "it-support": 1,
+      "software-engineer": -2,
+      "data-engineer": -2
+    }
+  },
+  {
+    "id": "cq_s2_05",
+    "level": 2,
+    "theme": "Gaya Saat Nugas Bareng",
+    "type": "preference",
+    "text": {
+      "id": "Kelompok tugas besarmu dapet proyek bikin aplikasi kampus. Posisi mana yang bakal kamu ambil dengan senang hati?"
+    },
+    "tag": "group_project_role",
+    "options": [
+      {
+        "id": "cq_s2_05_a",
+        "key": "a",
+        "text": {
+          "id": "Bikin tampilan aplikasi di Figma, milih warna estetik, dan nentuin alur halaman biar nyaman dipakai mahasiswa."
+        },
+        "weights": {
+          "uiux-designer": 3,
+          "mobile-developer": 1
+        }
+      },
+      {
+        "id": "cq_s2_05_b",
+        "key": "b",
+        "text": {
+          "id": "Nulis kode logika dan fungsi aplikasinya biar tombol dan fiturnya beneran jalan tanpa error."
+        },
+        "weights": {
+          "software-engineer": 3,
+          "mobile-developer": 2,
+          "game-developer": 1
+        }
+      },
+      {
+        "id": "cq_s2_05_c",
+        "key": "c",
+        "text": {
+          "id": "Nyiapin database tempat nyimpen data akun dan nilai mahasiswa biar aman dan gak gampang jebol."
+        },
+        "weights": {
+          "database-administrator": 3,
+          "data-engineer": 2,
+          "cloud-engineer": 1
+        }
+      },
+      {
+        "id": "cq_s2_05_d",
+        "key": "d",
+        "text": {
+          "id": "Jadi orang yang ngobrol sama perwakilan mahasiswa/dosen buat nentuin fitur apa aja yang beneran mereka butuhin."
+        },
+        "weights": {
+          "business-analyst": 3,
+          "it-consultant": 2,
+          "project-manager": 2
+        }
+      },
+      {
+        "id": "cq_s2_05_e",
+        "key": "e",
+        "text": {
+          "id": "Ngetes aplikasinya habis-habisan, nyoba login pake cara aneh biar nemu error sebelum dipresentasikan."
+        },
+        "weights": {
+          "quality-assurance": 3,
+          "security-analyst": 2
+        }
+      }
+    ]
+  },
+  {
+    "id": "cq_s3_01",
+    "level": 3,
+    "theme": "Drama Teknologi & Masalah Nyata",
+    "type": "preference",
+    "text": {
+      "id": "Website pengisian KRS / jadwal kuliah kampus mendadak down dan crash gara-gara diserbu ribuan mahasiswa sekaligus! Menurutmu, bagian mana yang paling menantang buat dibenerin?"
+    },
+    "tag": "campus_krs_crash_scenario",
+    "options": [
+      {
+        "id": "cq_s3_01_a",
+        "key": "a",
+        "text": {
+          "id": "Nata ulang arsitektur server awan dan sistem pembagi beban biar kuat nampung jutaan klik tanpa lemot."
+        },
+        "weights": {
+          "cloud-engineer": 3,
+          "devops-engineer": 3,
+          "system-administrator": 2
+        }
+      },
+      {
+        "id": "cq_s3_01_b",
+        "key": "b",
+        "text": {
+          "id": "Ngebut optimasi susunan database-nya biar query ribuan mahasiswa gak saling kunci dan macet."
+        },
+        "weights": {
+          "database-administrator": 3,
+          "data-engineer": 2,
+          "software-engineer": 2
+        }
+      },
+      {
+        "id": "cq_s3_01_c",
+        "key": "c",
+        "text": {
+          "id": "Ngecek jalur jaringan internet dan bandwidth server kampus, siapa tahu jalurnya yang tersumbat."
+        },
+        "weights": {
+          "network-engineer": 3,
+          "system-administrator": 2,
+          "it-support": 1
+        }
+      },
+      {
+        "id": "cq_s3_01_d",
+        "key": "d",
+        "text": {
+          "id": "Bikin antrean virtual dengan tampilan visual yang jelas dan ramah biar mahasiswa gak panik nge-refresh terus."
+        },
+        "weights": {
+          "uiux-designer": 3,
+          "mobile-developer": 2
+        }
+      },
+      {
+        "id": "cq_s3_01_e",
+        "key": "e",
+        "text": {
+          "id": "Nyelidiki log akses, jangan-jangan ada bot nakal yang lagi spam permintaan buat rebutan kelas."
+        },
+        "weights": {
+          "security-analyst": 3,
+          "digital-forensics": 3,
+          "quality-assurance": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "cq_s3_02",
+    "level": 3,
+    "theme": "Drama Teknologi & Masalah Nyata",
+    "type": "preference",
+    "text": {
+      "id": "Ada kabar heboh: akun media sosial organisasi kampus kena bajak hacker misterius! Langkah apa yang bikin kamu paling penasaran buat turun tangan?"
+    },
+    "tag": "campus_hack_incident",
+    "options": [
+      {
+        "id": "cq_s3_02_a",
+        "key": "a",
+        "text": {
+          "id": "Bongkar file log, riwayat login IP address, dan jejak digital buat nyari tahu siapa pelakunya dan dari mana asalnya."
+        },
+        "weights": {
+          "digital-forensics": 3,
+          "security-analyst": 2,
+          "system-administrator": 1
+        }
+      },
+      {
+        "id": "cq_s3_02_b",
+        "key": "b",
+        "text": {
+          "id": "Tutup celah keamanan sistem, pasang enkripsi dua arah, dan bikin benteng pertahanan biar gak bisa ditembus lagi."
+        },
+        "weights": {
+          "security-analyst": 3,
+          "cloud-engineer": 1,
+          "network-engineer": 1
+        }
+      },
+      {
+        "id": "cq_s3_02_c",
+        "key": "c",
+        "text": {
+          "id": "Kumpulin kronologi kejadian secara runtut, rapihin berkas bukti, dan susun laporan kronologis yang jelas."
+        },
+        "weights": {
+          "data-entry": 2,
+          "business-analyst": 2,
+          "project-manager": 2
+        }
+      },
+      {
+        "id": "cq_s3_02_d",
+        "key": "d",
+        "text": {
+          "id": "Pimpin tim buat komunikasi darurat ke anggota, atur langkah mitigasi, dan jelasin situasi ke pembina organisasi."
+        },
+        "weights": {
+          "it-consultant": 3,
+          "project-manager": 3
+        }
+      },
+      {
+        "id": "cq_s3_02_e",
+        "key": "e",
+        "text": {
+          "id": "Audit semua password dan sistem perangkat keras yang dipakai admin, cek apakah komputernya kena malware."
+        },
+        "weights": {
+          "it-support": 3,
+          "system-administrator": 2,
+          "quality-assurance": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "cq_s3_03",
+    "level": 3,
+    "theme": "Drama Teknologi & Masalah Nyata",
+    "type": "preference",
+    "text": {
+      "id": "Kamu diminta bikin aplikasi mobile untuk UMKM kantin kampus biar mahasiswa bisa pesan makanan tanpa antre. Fokus utamamu ada di mana?"
+    },
+    "tag": "campus_canteen_app",
+    "options": [
+      {
+        "id": "cq_s3_03_a",
+        "key": "a",
+        "text": {
+          "id": "Bikin aplikasi HP (Android/iOS) yang ringan, responsif, dan animasinya mulus waktu geser menu makanan."
+        },
+        "weights": {
+          "mobile-developer": 3,
+          "software-engineer": 2,
+          "uiux-designer": 1
+        }
+      },
+      {
+        "id": "cq_s3_03_b",
+        "key": "b",
+        "text": {
+          "id": "Menganalisis data pesanan: jam berapa kantin paling rame, menu apa yang paling laku, dan prediksi stok besok."
+        },
+        "weights": {
+          "data-analyst": 3,
+          "data-scientist": 3,
+          "aiml-engineer": 1
+        }
+      },
+      {
+        "id": "cq_s3_03_c",
+        "key": "c",
+        "text": {
+          "id": "Otomatisasi proses pengiriman kode update aplikasi dari laptop langsung terpasang di server tanpa repot manual."
+        },
+        "weights": {
+          "devops-engineer": 3,
+          "cloud-engineer": 2,
+          "software-engineer": 1
+        }
+      },
+      {
+        "id": "cq_s3_03_d",
+        "key": "d",
+        "text": {
+          "id": "Diskusi sama pedagang kantin buat memetakan alur jualan mereka ke sistem biar aplikasinya gampang dipahami pedagang sepuh."
+        },
+        "weights": {
+          "business-analyst": 3,
+          "it-consultant": 3,
+          "project-manager": 1
+        }
+      },
+      {
+        "id": "cq_s3_03_e",
+        "key": "e",
+        "text": {
+          "id": "Input seluruh daftar menu makanan, harga, foto, dan kategori ke database dengan rapi dan teliti tanpa ada salah harga."
+        },
+        "weights": {
+          "data-entry": 3,
+          "database-administrator": 2
+        }
+      }
+    ]
+  },
+  {
+    "id": "cq_s3_04",
+    "level": 3,
+    "theme": "Drama Teknologi & Masalah Nyata",
+    "type": "likert",
+    "text": {
+      "id": "Aku paling malas kalau harus ngulang-ngulang ngerjain hal manual yang sama setiap hari—mending aku luangkan waktu bikin skrip atau alat otomatis sekali, biar setelah itu mesin yang kerja sendiri."
+    },
+    "tag": "automation_mindset",
+    "weights": {
+      "devops-engineer": 3,
+      "cloud-engineer": 2,
+      "software-engineer": 2,
+      "system-administrator": 2,
+      "data-engineer": 2,
+      "network-engineer": 1,
+      "data-entry": -2
+    }
+  },
+  {
+    "id": "cq_s3_05",
+    "level": 3,
+    "theme": "Drama Teknologi & Masalah Nyata",
+    "type": "likert",
+    "text": {
+      "id": "Melihat kumpulan data penjualan atau survei yang berantakan, terus berhasil aku ubah jadi grafik tren yang estetik dan bisa ngejawab masalah penting, itu rasanya puas banget."
+    },
+    "tag": "data_insights_satisfaction",
     "weights": {
       "data-analyst": 3,
       "data-scientist": 3,
       "business-analyst": 2,
-      "data-entry": 1,
-      "it-consultant": 1
+      "data-engineer": 1,
+      "database-administrator": 1,
+      "game-developer": -1
     }
   },
   {
-    "id": "cq_l1_06",
-    "level": 1,
-    "theme": "Minat Umum",
-    "type": "likert",
-    "text": { "id": "Saya senang mengorganisir jadwal tugas, membagi peran tim, dan memantau agar proyek selesai tepat waktu." },
-    "tag": "leadership_management",
-    "weights": {
-      "project-manager": 3,
-      "it-consultant": 2,
-      "business-analyst": 2,
-      "software-engineer": -1,
-      "game-developer": 0
-    }
-  },
-  {
-    "id": "cq_l1_07",
-    "level": 1,
-    "theme": "Minat Umum",
-    "type": "preference",
-    "text": { "id": "Jika kamu diberi kebebasan memilih proyek akhir kuliah/portofolio, proyek mana yang paling ingin kamu kerjakan?" },
-    "tag": "project_preference",
-    "options": [
-      {
-        "id": "opt_a",
-        "key": "A",
-        "text": { "id": "Membangun aplikasi web sistem e-commerce berskala besar dengan database terdistribusi." },
-        "weights": { "software-engineer": 3, "data-engineer": 2, "cloud-engineer": 2 }
-      },
-      {
-        "id": "opt_b",
-        "key": "B",
-        "text": { "id": "Membuat prototipe aplikasi mobile interaktif dengan animasi visual yang memukau pengguna." },
-        "weights": { "mobile-developer": 3, "uiux-designer": 3, "software-engineer": 1 }
-      },
-      {
-        "id": "opt_c",
-        "key": "C",
-        "text": { "id": "Merancang pipeline otomasi deployment cloud menggunakan Docker, Kubernetes, dan CI/CD." },
-        "weights": { "devops-engineer": 3, "cloud-engineer": 3, "network-engineer": 1 }
-      },
-      {
-        "id": "opt_d",
-        "key": "D",
-        "text": { "id": "Membangun model deteksi kecurangan transaksi keuangan menggunakan algoritma Machine Learning." },
-        "weights": { "aiml-engineer": 3, "data-scientist": 3, "data-analyst": 2 }
-      },
-      {
-        "id": "opt_e",
-        "key": "E",
-        "text": { "id": "Melakukan uji penetrasi (pentest) dan simulasi peretasan untuk mengamankan server perusahaan." },
-        "weights": { "security-analyst": 3, "digital-forensics": 2, "network-engineer": 1 }
-      }
-    ]
-  },
-  {
-    "id": "cq_l2_01",
-    "level": 2,
-    "theme": "Gaya Kerja",
-    "type": "likert",
-    "text": { "id": "Saya lebih menikmati bekerja dalam keheningan fokus menulis kode berjam-jam daripada harus sering berinteraksi dengan klien." },
-    "tag": "deep_focus_vs_client",
-    "weights": {
-      "software-engineer": 3,
-      "game-developer": 3,
-      "data-engineer": 2,
-      "aiml-engineer": 2,
-      "it-consultant": -2,
-      "project-manager": -2
-    }
-  },
-  {
-    "id": "cq_l2_02",
-    "level": 2,
-    "theme": "Gaya Kerja",
-    "type": "likert",
-    "text": { "id": "Saya senang berkomunikasi, mendengarkan keluhan pengguna/klien, dan menerjemahkannya menjadi solusi nyata." },
-    "tag": "client_facing_empathy",
-    "weights": {
-      "business-analyst": 3,
-      "it-consultant": 3,
-      "it-support": 2,
-      "project-manager": 2,
-      "uiux-designer": 2,
-      "software-engineer": -1
-    }
-  },
-  {
-    "id": "cq_l2_03",
-    "level": 2,
-    "theme": "Gaya Kerja",
-    "type": "likert",
-    "text": { "id": "Saya orang yang sangat teliti, menyukai keteraturan data berulang, dan jarang membuat kesalahan ketik." },
-    "tag": "detail_orientation_accuracy",
-    "weights": {
-      "data-entry": 3,
-      "quality-assurance": 2,
-      "digital-forensics": 2,
-      "data-analyst": 1
-    }
-  },
-  {
-    "id": "cq_l2_04",
-    "level": 2,
-    "theme": "Gaya Kerja",
-    "type": "preference",
-    "text": { "id": "Bagaimana caramu paling nyaman saat menghadapi suatu instruksi pekerjaan baru?" },
-    "tag": "work_preference_style",
-    "options": [
-      {
-        "id": "opt_2a",
-        "key": "A",
-        "text": { "id": "Diberi arsitektur teknis yang jelas lalu saya langsung eksekusi ke baris kode." },
-        "weights": { "software-engineer": 3, "mobile-developer": 2, "game-developer": 2 }
-      },
-      {
-        "id": "opt_2b",
-        "key": "B",
-        "text": { "id": "Diberi dataset mentah lalu saya cari insight dan buat dashboard laporannya." },
-        "weights": { "data-analyst": 3, "data-scientist": 2, "data-entry": 2 }
-      },
-      {
-        "id": "opt_2c",
-        "key": "C",
-        "text": { "id": "Membedah masalah bisnis klien, membuat diagram alur, dan menyusun dokumen spesifikasi." },
-        "weights": { "business-analyst": 3, "it-consultant": 3, "project-manager": 2 }
-      },
-      {
-        "id": "opt_2d",
-        "key": "D",
-        "text": { "id": "Diberi aplikasi jadi untuk saya 'rusak' dan uji semua skenario ekstrimnya." },
-        "weights": { "quality-assurance": 3, "security-analyst": 2 }
-      },
-      {
-        "id": "opt_2e",
-        "key": "E",
-        "text": { "id": "Membantu orang lain secara langsung yang sedang kesulitan dengan laptop atau jaringannya." },
-        "weights": { "it-support": 3, "network-engineer": 2 }
-      }
-    ]
-  },
-  {
-    "id": "cq_l3_01",
-    "level": 3,
-    "theme": "Skenario Kasus",
-    "type": "preference",
-    "text": { "id": "Sebuah aplikasi startup mendadak down saat pengguna melonjak 10x lipat. Peran mana yang paling kamu ingin ambil?" },
-    "tag": "traffic_surge_incident",
-    "options": [
-      {
-        "id": "opt_3a",
-        "key": "A",
-        "text": { "id": "Menambah kapasitas server secara otomatis dan mengatur load balancer cloud." },
-        "weights": { "cloud-engineer": 3, "devops-engineer": 3, "network-engineer": 1 }
-      },
-      {
-        "id": "opt_3b",
-        "key": "B",
-        "text": { "id": "Memeriksa log error aplikasi dan mengoptimasi query database yang macet." },
-        "weights": { "software-engineer": 3, "data-engineer": 2 }
-      },
-      {
-        "id": "opt_3c",
-        "key": "C",
-        "text": { "id": "Memeriksa apakah lonjakan ini adalah serangan DDoS siber atau trafik asli." },
-        "weights": { "security-analyst": 3, "digital-forensics": 2 }
-      },
-      {
-        "id": "opt_3d",
-        "key": "D",
-        "text": { "id": "Mengoordinasikan tim developer dan menginformasikan status ke manajemen." },
-        "weights": { "project-manager": 3, "it-consultant": 2 }
-      },
-      {
-        "id": "opt_3e",
-        "key": "E",
-        "text": { "id": "Menganalisis dampak finansial dan tingkat retensi user akibat insiden ini." },
-        "weights": { "business-analyst": 3, "data-analyst": 2 }
-      }
-    ]
-  },
-  {
-    "id": "cq_l3_02",
-    "level": 3,
-    "theme": "Skenario Kasus",
-    "type": "preference",
-    "text": { "id": "Perusahaan ingin meluncurkan fitur baru. Bagian pekerjaan mana yang paling membuatmu bersemangat?" },
-    "tag": "feature_launch_role",
-    "options": [
-      {
-        "id": "opt_32a",
-        "key": "A",
-        "text": { "id": "Mewawancarai calon user dan membuat mockup prototipe interaktif di Figma." },
-        "weights": { "uiux-designer": 3, "business-analyst": 1 }
-      },
-      {
-        "id": "opt_32b",
-        "key": "B",
-        "text": { "id": "Mengembangkan algoritma rekomendasi otomatis berbasis perilaku pengguna." },
-        "weights": { "aiml-engineer": 3, "data-scientist": 3 }
-      },
-      {
-        "id": "opt_32c",
-        "key": "C",
-        "text": { "id": "Menulis kode fitur di sisi aplikasi mobile agar responsif di semua tipe smartphone." },
-        "weights": { "mobile-developer": 3, "software-engineer": 2 }
-      },
-      {
-        "id": "opt_32d",
-        "key": "D",
-        "text": { "id": "Membuat skrip otomatisasi pengujian fitur untuk memastikan tidak merusak fitur lama." },
-        "weights": { "quality-assurance": 3, "devops-engineer": 1 }
-      },
-      {
-        "id": "opt_32e",
-        "key": "E",
-        "text": { "id": "Menyusun timeline sprint mingguan dan mengawal delivery fitur tepat waktu." },
-        "weights": { "project-manager": 3, "it-consultant": 1 }
-      }
-    ]
-  },
-  {
-    "id": "cq_l4_01",
+    "id": "cq_s4_01",
     "level": 4,
-    "theme": "Ketertarikan Teknis",
+    "theme": "Ambisi & Obsesi Masa Depan",
     "type": "likert",
-    "text": { "id": "Saya tertarik mempelajari cara kerja neural network, model bahasa besar (LLM), dan kecerdasan buatan generatif." },
-    "tag": "ai_tech_interest",
+    "text": {
+      "id": "Di masa depan, aku pengen banget terlibat dalam pengembangan teknologi kecerdasan buatan (AI) yang bisa mengenali suara, wajah, atau ngobrol cerdas kayak manusia."
+    },
+    "tag": "ai_future_ambition",
     "weights": {
       "aiml-engineer": 3,
       "data-scientist": 3,
       "software-engineer": 1,
+      "data-engineer": 1,
       "it-support": -1,
       "data-entry": -1
     }
   },
   {
-    "id": "cq_l4_02",
+    "id": "cq_s4_02",
     "level": 4,
-    "theme": "Ketertarikan Teknis",
+    "theme": "Ambisi & Obsesi Masa Depan",
     "type": "likert",
-    "text": { "id": "Saya tertarik dengan dunia game 3D, physics engine, grafika komputer shader, dan controller permainan." },
-    "tag": "game_tech_interest",
+    "text": {
+      "id": "Aku tertantang untuk menjaga sistem komputer server dan jaringan agar tetap hidup stabil dan aman 24 jam sehari, bahkan saat terjadi kendala tak terduga."
+    },
+    "tag": "server_stability_resilience",
     "weights": {
-      "game-developer": 3,
-      "mobile-developer": 1,
-      "uiux-designer": 1,
-      "data-analyst": -1
-    }
-  },
-  {
-    "id": "cq_l4_03",
-    "level": 4,
-    "theme": "Ketertarikan Teknis",
-    "type": "likert",
-    "text": { "id": "Saya tertarik menyelidiki kasus peretasan, mencari bukti digital di hard drive, dan merekonstruksi serangan." },
-    "tag": "forensic_tech_interest",
-    "weights": {
-      "digital-forensics": 3,
-      "security-analyst": 3,
-      "network-engineer": 1
-    }
-  },
-  {
-    "id": "cq_l4_04",
-    "level": 4,
-    "theme": "Ketertarikan Teknis",
-    "type": "likert",
-    "text": { "id": "Saya tertarik mengonfigurasi arsitektur cloud server multi-region, Terraform, dan pipeline continuous delivery." },
-    "tag": "infra_tech_interest",
-    "weights": {
-      "devops-engineer": 3,
-      "cloud-engineer": 3,
-      "network-engineer": 2,
+      "system-administrator": 3,
+      "cloud-engineer": 2,
+      "devops-engineer": 2,
+      "database-administrator": 2,
+      "network-engineer": 1,
+      "security-analyst": 1,
       "uiux-designer": -1
     }
   },
   {
-    "id": "cq_l5_01",
-    "level": 5,
-    "theme": "Prioritas Karier",
+    "id": "cq_s4_03",
+    "level": 4,
+    "theme": "Ambisi & Obsesi Masa Depan",
     "type": "likert",
-    "text": { "id": "Dalam karier, saya lebih ingin diakui sebagai spesialis teknis mendalam yang ahli daripada manajer tim." },
-    "tag": "specialist_vs_generalist",
+    "text": {
+      "id": "Aku bermimpi bisa merancang dunia virtual, efek visual, atau mekanika gameplay yang seru dan bikin orang betah memainkannya berjam-jam."
+    },
+    "tag": "game_virtual_world_dream",
     "weights": {
-      "software-engineer": 2,
-      "data-scientist": 2,
-      "security-analyst": 2,
-      "digital-forensics": 2,
-      "aiml-engineer": 2,
-      "project-manager": -3,
-      "business-analyst": -1
+      "game-developer": 3,
+      "mobile-developer": 2,
+      "uiux-designer": 2,
+      "software-engineer": 1,
+      "database-administrator": -1,
+      "network-engineer": -1
     }
   },
   {
-    "id": "cq_l5_02",
-    "level": 5,
-    "theme": "Prioritas Karier",
+    "id": "cq_s4_04",
+    "level": 4,
+    "theme": "Ambisi & Obsesi Masa Depan",
     "type": "likert",
-    "text": { "id": "Saya berambisi untuk menjadi penasihat strategis perusahaan yang memadukan teknologi dan pertumbuhan bisnis." },
-    "tag": "strategic_business_leader",
+    "text": {
+      "id": "Bisa mendengarkan masalah rumit dari sebuah organisasi atau perusahaan, lalu merumuskan solusi teknologi yang bikin mereka sukses, adalah impian karierku."
+    },
+    "tag": "consulting_business_dream",
     "weights": {
       "it-consultant": 3,
       "business-analyst": 3,
       "project-manager": 2,
-      "data-entry": -2,
-      "game-developer": -1
+      "data-analyst": 1,
+      "game-developer": -1,
+      "quality-assurance": -1
     }
   },
   {
-    "id": "cq_l5_03",
-    "level": 5,
-    "theme": "Prioritas Karier",
-    "type": "likert",
-    "text": { "id": "Saya menyukai pekerjaan yang langsung berdampak pada kenyamanan hidup sehari-hari orang banyak melalui aplikasi di ponsel mereka." },
-    "tag": "consumer_product_impact",
-    "weights": {
-      "mobile-developer": 3,
-      "uiux-designer": 3,
-      "software-engineer": 2,
-      "game-developer": 2,
-      "network-engineer": 0
-    }
+    "id": "cq_s4_05",
+    "level": 4,
+    "theme": "Ambisi & Obsesi Masa Depan",
+    "type": "preference",
+    "text": {
+      "id": "Bayangkan kamu baru lulus kuliah IT nanti, proyek pertama mana yang paling bikin kamu bangga bilang: 'Ini hasil karya tanganku!'?"
+    },
+    "tag": "first_job_pride_project",
+    "options": [
+      {
+        "id": "cq_s4_05_a",
+        "key": "a",
+        "text": {
+          "id": "Aplikasi mobile keren di Google Play / App Store yang dipakai jutaan orang setiap hari."
+        },
+        "weights": {
+          "mobile-developer": 3,
+          "software-engineer": 2,
+          "uiux-designer": 2
+        }
+      },
+      {
+        "id": "cq_s4_05_b",
+        "key": "b",
+        "text": {
+          "id": "Sistem AI pintar yang bisa mendeteksi penyakit atau membantu belajar secara otomatis."
+        },
+        "weights": {
+          "aiml-engineer": 3,
+          "data-scientist": 3,
+          "data-engineer": 1
+        }
+      },
+      {
+        "id": "cq_s4_05_c",
+        "key": "c",
+        "text": {
+          "id": "Infrastruktur cloud canggih dan pipeline otomatis yang gak pernah bikin sistem aplikasi down sedetik pun."
+        },
+        "weights": {
+          "cloud-engineer": 3,
+          "devops-engineer": 3,
+          "system-administrator": 2
+        }
+      },
+      {
+        "id": "cq_s4_05_d",
+        "key": "d",
+        "text": {
+          "id": "Investigasi digital yang sukses membongkar kebocoran data besar dan menangkap peretasnya."
+        },
+        "weights": {
+          "digital-forensics": 3,
+          "security-analyst": 3,
+          "quality-assurance": 1
+        }
+      },
+      {
+        "id": "cq_s4_05_e",
+        "key": "e",
+        "text": {
+          "id": "Transformasi digital perusahaan besar yang sukses dipimpin dari nol sampai selesai tepat waktu."
+        },
+        "weights": {
+          "project-manager": 3,
+          "it-consultant": 3,
+          "business-analyst": 2
+        }
+      }
+    ]
   }
 ]

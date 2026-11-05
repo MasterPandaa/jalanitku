@@ -4,6 +4,7 @@ import type { NextRequest } from "next/server";
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const sessionCookie = request.cookies.get("jalanitku_session")?.value;
+  const needsOnboarding = request.cookies.get("jalanitku_needs_onboarding")?.value === "1";
 
   const protectedRoutes = ["/dashboard", "/profil", "/karir", "/rapor", "/loker"];
   const isProtected = protectedRoutes.some((route) => pathname.startsWith(route));
@@ -12,6 +13,11 @@ export function middleware(request: NextRequest) {
     const loginUrl = new URL("/login", request.url);
     loginUrl.searchParams.set("from", pathname);
     return NextResponse.redirect(loginUrl);
+  }
+
+  // Jika akun belum melengkapi username unik, kunci dan arahkan langsung ke /onboarding
+  if (isProtected && sessionCookie && needsOnboarding && pathname !== "/onboarding") {
+    return NextResponse.redirect(new URL("/onboarding", request.url));
   }
 
   return NextResponse.next();

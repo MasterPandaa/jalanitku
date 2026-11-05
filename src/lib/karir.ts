@@ -141,6 +141,15 @@ export const jalanIdsStore: PersistentStore<CareerResult> = getOrCreatePersisten
  * If user already has an active JalanID, the old session is replaced.
  */
 export function startCareerSession(userId: string): CareerSession {
+  // Arsipkan sesi in_progress lama milik user ini jika ada
+  for (const [sId, sess] of careerSessions.entries()) {
+    if (sess.user_id === userId && sess.status === "in_progress") {
+      sess.status = "completed";
+      careerSessions.set(sId, sess);
+      syncCareerSessionToSupabase(sess);
+    }
+  }
+
   const sessionId = `csess_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`;
   const seed = `${Date.now()}-${userId}`;
 
@@ -215,7 +224,7 @@ export function recordLevelAnswers(
     });
   }
 
-  if (session.current_level < 5) {
+  if (session.current_level < 4) {
     session.current_level += 1;
   }
 
@@ -245,6 +254,10 @@ function normalizeLikert(val: number): number {
 export function calculateCareerResult(sessionId: string): CareerResult {
   const session = careerSessions.get(sessionId);
   if (!session) throw new Error("Sesi tidak ditemukan");
+
+  if (!session.answers || session.answers.size === 0) {
+    throw new Error("Tidak dapat memproses hasil tes: belum ada pertanyaan yang dijawab.");
+  }
 
   const roles = getRoles();
   const rawScores: Record<string, number> = {};
@@ -301,8 +314,24 @@ export function calculateCareerResult(sessionId: string): CareerResult {
   // Calculate percentages (normalized to 0-100%, with base baseline)
   const ranked = roles.map((role) => {
     const raw = rawScores[role.slug] || 0;
-    const max = maxPossibleScores[role.slug] || 1;
-    // Percentage formula: baseline 50% + ratio of actual score to max score * 50%
+    const max = maxPossibleScores[role.slug] || 0;
+
+    // Jika suatu role sama sekali tidak memiliki bobot penilaian pada soal yang dijawab
+    if (max === 0) {
+      return {
+        slug: role.slug,
+        name: role.nama.id,
+        julukan: role.julukan,
+        score: 0,
+        percentage: 0,
+        color: role.warna,
+        tagline: role.tagline.id,
+        description: role.deskripsi.id,
+        mascot_key: role.mascot_key,
+      };
+    }
+
+    // Percentage formula: baseline 50% + ratio of actual score to max score * 45%
     const ratio = Math.max(-1, Math.min(1, raw / max));
     const percentage = Math.round((50 + ratio * 45) * 10) / 10; // e.g. 92.5%
 
@@ -457,6 +486,64 @@ export async function getCareerSessionAsync(sessionId: string): Promise<CareerSe
     }
   } catch (err) {
     console.warn("[Supabase] Fetch career_session fallback error:", err);
+  }
+
+  return null;
+}
+
+/**
+ * Mengambil sesi JalanKarir yang sedang aktif (in_progress) untuk seorang user.
+ */
+export function getActiveCareerSession(userId: string): CareerSession | undefined {
+  const userSessions = Array.from(careerSessions.values())
+    .filter((s) => s.user_id === userId && s.status === "in_progress");
+
+  if (userSessions.length === 0) return undefined;
+  // Urutkan berdasarkan waktu pembuatan terbaru
+  userSessions.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
+  return userSessions[0];
+}
+
+/**
+ * Mengambil sesi JalanKarir aktif dengan fallback sinkronisasi dari Supabase.
+ */
+export async function getActiveCareerSessionAsync(userId: string): Promise<CareerSession | null> {
+  const local = getActiveCareerSession(userId);
+  if (local) return local;
+
+  try {
+    const { data, error } = await supabase
+      .from("career_sessions")
+      .select("*")
+      .eq("user_id", userId)
+      .eq("status", "in_progress")
+      .order("created_at", { ascending: false })
+      .limit(1)
+      .maybeSingle();
+
+    if (!error && data) {
+      const answersMap = new Map();
+      if (data.answers && typeof data.answers === "object") {
+        for (const [k, v] of Object.entries(data.answers)) {
+          answersMap.set(k, v);
+        }
+      }
+      const session: CareerSession = {
+        id: data.id,
+        user_id: data.user_id || userId,
+        status: (data.status as any) || "in_progress",
+        current_level: data.current_level || 1,
+        seed: data.seed || "",
+        answers: answersMap,
+        created_at: data.created_at || "",
+        completed_at: data.completed_at || undefined,
+        result: (data.result as any) || undefined,
+      };
+      careerSessions.set(session.id, session);
+      return session;
+    }
+  } catch (err) {
+    console.warn("[Supabase] Fetch active career_session fallback error:", err);
   }
 
   return null;

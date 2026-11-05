@@ -91,9 +91,9 @@ function LoginContent() {
         </Link>
       </div>
 
-      <div className="w-full max-w-md mx-auto my-12">
-        <Card variant="white" shadow="lg" borderWidth="5" className="flex flex-col items-center text-center gap-6 p-8">
-          <div className="relative">
+      <div className="animate-fade-up w-full max-w-md mx-auto my-12">
+        <Card variant="white" shadow="lg" borderWidth="5" className="nb-card-hover flex flex-col items-center text-center gap-6 p-8">
+          <div className="relative transition-transform duration-200 hover:scale-105">
             <JalanMin state="idle" size={140} />
           </div>
 

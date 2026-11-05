@@ -310,6 +310,28 @@ export function submitRaporLevelAnswers(
   if (!session) throw new Error("Sesi tidak ditemukan.");
   if (session.isFinished) throw new Error("Sesi sudah selesai.");
 
+  if (!answers || typeof answers !== "object" || Array.isArray(answers)) {
+    throw new Error("Format jawaban tidak valid.");
+  }
+
+  // Verifikasi bahwa level yang disubmit sesuai dengan level aktif sesi
+  if (level !== session.currentLevel) {
+    throw new Error(`Level tidak sesuai. Level aktif saat ini adalah Level ${session.currentLevel}.`);
+  }
+
+  // Verifikasi bahwa semua pertanyaan untuk level ini telah dijawab
+  const levelQuestions = session.assignedQuestions.filter((q) => q.level === level);
+  if (levelQuestions.length === 0) {
+    throw new Error(`Tidak ada pertanyaan terdaftar untuk Level ${level}.`);
+  }
+
+  for (const q of levelQuestions) {
+    const ans = answers[q.id];
+    if (typeof ans !== "string" || !ans.trim()) {
+      throw new Error(`Pertanyaan '${q.id}' belum dijawab.`);
+    }
+  }
+
   session.answers[level] = {
     ...(session.answers[level] || {}),
     ...answers,
@@ -335,6 +357,18 @@ export function submitRaporLevelAnswers(
 export function finishRaporSession(sessionId: string, username: string, roleName: string): CocoklogikuRecord {
   const session = raporSessions.get(sessionId);
   if (!session) throw new Error("Sesi tidak ditemukan.");
+
+  // Validasi: Pastikan sesi sudah mencapai level 5 dan semua soal telah dijawab
+  const allAnswered = session.assignedQuestions.every((q) => {
+    return session.answers[q.level] && typeof session.answers[q.level][q.id] === "string";
+  });
+
+  if (!allAnswered || (!session.isFinished && session.currentLevel < session.totalLevels)) {
+    throw new Error("Tidak dapat menyelesaikan tes: seluruh pertanyaan dari Level 1 hingga 5 harus dijawab terlebih dahulu.");
+  }
+
+  // Tandai sesi sebagai selesai
+  session.isFinished = true;
 
   // Hitung skor per level
   const levelScores: LevelScore[] = [];

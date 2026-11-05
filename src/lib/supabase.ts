@@ -1,10 +1,8 @@
 import { createClient, SupabaseClient } from "@supabase/supabase-js";
 import { Database } from "@/types/database.types";
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "https://flpknqwjnlinjjqgpjoo.supabase.co";
-const supabaseAnonKey =
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ||
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZscGtucXdqbmxpbmpqcWdwam9vIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI1MTMyNjIsImV4cCI6MjEwODA4OTI2Mn0.lrtWV2Zf_mk0di_KW7hPSpcHiNh1xxn4IjeaItOwl-M";
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "";
 
 export function isSupabaseConfigured(): boolean {
   return Boolean(supabaseUrl && supabaseAnonKey);
@@ -17,14 +15,16 @@ const globalForSupabase = globalThis as unknown as {
 
 export const supabase: SupabaseClient<Database> =
   globalForSupabase.__supabaseClient ??
-  createClient<Database>(supabaseUrl, supabaseAnonKey, {
-    auth: {
-      persistSession: false,
-      autoRefreshToken: false,
-    },
-  });
+  (isSupabaseConfigured()
+    ? createClient<Database>(supabaseUrl, supabaseAnonKey, {
+        auth: {
+          persistSession: false,
+          autoRefreshToken: false,
+        },
+      })
+    : (null as unknown as SupabaseClient<Database>));
 
-if (process.env.NODE_ENV !== "production") {
+if (process.env.NODE_ENV !== "production" && isSupabaseConfigured()) {
   globalForSupabase.__supabaseClient = supabase;
 }
 
@@ -36,7 +36,7 @@ export async function safeSupabaseSync<T>(
   operationName: string,
   fn: (client: SupabaseClient<Database>) => Promise<T>
 ): Promise<T | null> {
-  if (!isSupabaseConfigured()) return null;
+  if (!isSupabaseConfigured() || !supabase) return null;
   try {
     return await fn(supabase);
   } catch (err) {

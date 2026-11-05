@@ -38,3 +38,7 @@ next-env.d.ts
 *.tmp.*
 src/data/runtime/*.tmp.*
 
+# dev artifacts & previews
+graphify-out/
+public/mascot-*-preview.html
+

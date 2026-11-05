@@ -13,9 +13,13 @@ export interface SecurityAnalystMascotProps {
 /**
  * Maskot Role: Cybersecurity / Security Analyst — "The Warden"
  * Identitas: Sang Penjaga Benteng Data & Tameng Pertahanan Siber
- * Ciri Khas: Helm baja cyber warden ungu bertanduk, visor pemindai ancaman hijau terminal,
- * perisai firewall berlapis baja dengan gembok enkripsi AES berpijar,
- * pedang kunci siber (Cyber Key Blade), dan badge status SECURED.
+ * Patuh 4 Aturan Baku:
+ * 1. Base Body Kuning Rambu (#FFD60A) 106x94 rx=4 di (42,50) dengan hard shadow (48,56)
+ *    dan rompi/armor benteng cyber ungu (#7C3AED) terpasang kokoh di atas badan.
+ * 2. Zero-Float Batch 3: Tanpa badge melayang AES-256 di angkasa.
+ * 3. Mata Baku JalanMin 22x24 rx=4 di x=58 & 102 y=76, pupil 11x13 dengan kilau putih & cyan,
+ *    pipi merona pink (#FF5C8A) di y=104, serta tactical HUD visor hijau terminal transparan (opacity ~0.32).
+ * 4. Helm tantangan cyber bertanduk, perisai firewall Aegis bergembok emas, dan Cyber Key Blade.
  */
 export function SecurityAnalystMascot({
   size = 200,
@@ -31,7 +35,7 @@ export function SecurityAnalystMascot({
       className={`relative inline-flex items-center justify-center select-none group ${className}`}
       style={{ width: size, height: size }}
       role="img"
-      aria-label="Maskot Cybersecurity — The Warden: Papan rambu ungu siber dengan helm baja bertanduk, visor radar hijau terminal, perisai firewall berlogo gembok enkripsi, dan pedang kunci siber"
+      aria-label="Maskot Cybersecurity — The Warden: Papan rambu kuning base JalanMin dengan rompi armor benteng ungu cyber, helm baja bertanduk, kacamata taktis HUD hijau terminal transparan, mata binar baku, perisai firewall Aegis, dan pedang kunci siber"
     >
       <svg
         viewBox="0 0 200 200"
@@ -74,40 +78,211 @@ export function SecurityAnalystMascot({
               animation: ${isAnimated ? "sec-blade-shimmer 2.4s ease-in-out infinite" : "none"};
               transform-origin: 168px 115px;
             }
+            @media (prefers-reduced-motion: reduce) {
+              .sec-animated, .sec-shield, .sec-lock, .sec-blade {
+                animation: none !important;
+              }
+            }
           `}</style>
         </defs>
 
         <g className="sec-animated transition-transform duration-300 group-hover:scale-105">
-          {/* 1. SEPATU BAJA BENTENG NEO-BRUTALISM */}
-          <rect x="66" y="162" width="22" height="24" fill="#0A0A0A" />
-          <rect x="112" y="162" width="22" height="24" fill="#0A0A0A" />
-          <rect x="62" y="160" width="22" height="24" fill="#0A0A0A" rx="2" />
-          <rect x="108" y="160" width="22" height="24" fill="#0A0A0A" rx="2" />
-          {/* Pelat Baja Sol Sepatu Ungu */}
-          <line x1="62" y1="180" x2="84" y2="180" stroke="#7C3AED" strokeWidth="3.5" />
-          <line x1="108" y1="180" x2="130" y2="180" stroke="#7C3AED" strokeWidth="3.5" />
+          {/* ============================================================== */}
+          {/* LAYER 1: SEPATU BAJA BENTENG NEO-BRUTALISM DENGAN SOL UNGU     */}
+          {/* ============================================================== */}
+          {/* Hard Shadow Kaki */}
+          <rect x="68" y="154" width="22" height="24" fill="#0A0A0A" />
+          <rect x="114" y="154" width="22" height="24" fill="#0A0A0A" />
 
-          {/* 2. BAYANGAN BADAN KERAS (HARD DROP SHADOW) */}
-          <rect x="46" y="52" width="112" height="110" rx="10" fill="#0A0A0A" />
-
-          {/* 3. BADAN UTAMA RAMBU (UNGU CYBER #7C3AED) */}
+          {/* Kaki Kiri */}
           <rect
-            x="38"
-            y="44"
-            width="112"
-            height="110"
-            rx="10"
-            fill="#7C3AED"
+            x="64"
+            y="148"
+            width="22"
+            height="26"
+            fill="#0A0A0A"
+            rx="2"
             stroke="#0A0A0A"
-            strokeWidth="5"
-            strokeLinejoin="round"
+            strokeWidth="3.5"
+          />
+          <line x1="64" y1="170" x2="86" y2="170" stroke="#7C3AED" strokeWidth="3.5" strokeLinecap="square" />
+
+          {/* Kaki Kanan */}
+          <rect
+            x="110"
+            y="148"
+            width="22"
+            height="26"
+            fill="#0A0A0A"
+            rx="2"
+            stroke="#0A0A0A"
+            strokeWidth="3.5"
+          />
+          <line x1="110" y1="170" x2="132" y2="170" stroke="#7C3AED" strokeWidth="3.5" strokeLinecap="square" />
+
+          {/* ============================================================== */}
+          {/* LAYER 2: BADAN UTAMA KUNING RAMBU BASE JALANMIN (106x94 rx=4)  */}
+          {/* ============================================================== */}
+          {/* Hard Drop Shadow Badan Rambu */}
+          <rect x="48" y="56" width="106" height="94" rx="4" fill="#0A0A0A" />
+
+          {/* Badan Utama Kuning Rambu Standar (#FFD60A) */}
+          <rect
+            x="42"
+            y="50"
+            width="106"
+            height="94"
+            rx="4"
+            fill="#FFD60A"
+            stroke="#0A0A0A"
+            strokeWidth="4"
           />
 
-          {/* 4. GARIS DEKORATIF DINDING BENTENG CYBER */}
-          <line x1="48" y1="142" x2="140" y2="142" stroke="#0A0A0A" strokeWidth="4" strokeDasharray="8 6" />
+          {/* Marka Jalan Putus-Putus Perut */}
+          <line
+            x1="54"
+            y1="134"
+            x2="136"
+            y2="134"
+            stroke="#0A0A0A"
+            strokeWidth="3.5"
+            strokeDasharray="8 6"
+          />
 
-          {/* 5. HELM TANTANGAN CYBER WARDEN BERTANDUK BAJA */}
-          <g transform="translate(24, 6)">
+          {/* Pipi Merona Pink (#FF5C8A) */}
+          <rect x="52" y="104" width="12" height="7" rx="2" fill="#FF5C8A" />
+          <rect x="124" y="104" width="12" height="7" rx="2" fill="#FF5C8A" />
+
+          {/* ============================================================== */}
+          {/* LAYER 3: ROMPI / ARMOR BENTENG CYBER UNGU (#7C3AED)             */}
+          {/* ============================================================== */}
+          {/* Flap Armor Dada Kiri Ungu Cyber */}
+          <polygon
+            points="42,122 84,124 78,144 42,144"
+            fill="#7C3AED"
+            stroke="#0A0A0A"
+            strokeWidth="3.5"
+            strokeLinejoin="round"
+          />
+          {/* Flap Armor Dada Kanan Ungu Cyber */}
+          <polygon
+            points="106,124 148,122 148,144 112,144"
+            fill="#7C3AED"
+            stroke="#0A0A0A"
+            strokeWidth="3.5"
+            strokeLinejoin="round"
+          />
+          {/* Panel Inti Pelindung Sentral */}
+          <polygon
+            points="84,124 106,124 102,144 88,144"
+            fill="#5B21B6"
+            stroke="#0A0A0A"
+            strokeWidth="2.5"
+            strokeLinejoin="round"
+          />
+          {/* Alur Sirkuit Neon Hijau Terminal di Armor */}
+          <line x1="48" y1="133" x2="72" y2="133" stroke="#10B981" strokeWidth="2" strokeDasharray="4 2" />
+          <line x1="118" y1="133" x2="142" y2="133" stroke="#10B981" strokeWidth="2" strokeDasharray="4 2" />
+          {/* Indikator Status Firewall Hijau Neon */}
+          <circle cx="95" cy="134" r="2.5" fill="#10B981" stroke="#0A0A0A" strokeWidth="1" />
+
+          {/* ============================================================== */}
+          {/* LAYER 4: MATA BAKU JALANMIN (22x24 rx=4) & ALIS WASPADA        */}
+          {/* ============================================================== */}
+          {/* Sklera Putih Mata Kiri */}
+          <rect
+            x="58"
+            y="76"
+            width="22"
+            height="24"
+            rx="4"
+            fill="#FFFFFF"
+            stroke="#0A0A0A"
+            strokeWidth="3.5"
+          />
+          {/* Pupil Hitam Kiri */}
+          <rect x="64" y="81" width="11" height="13" rx="2" fill="#0A0A0A" />
+          {/* Kilau Putih Utama */}
+          <circle cx="67" cy="84" r="1.5" fill="#FFFFFF" />
+          {/* Kilau Cyan Sekunder */}
+          <circle cx="70" cy="88" r="1.2" fill="#00F0FF" />
+
+          {/* Sklera Putih Mata Kanan */}
+          <rect
+            x="102"
+            y="76"
+            width="22"
+            height="24"
+            rx="4"
+            fill="#FFFFFF"
+            stroke="#0A0A0A"
+            strokeWidth="3.5"
+          />
+          {/* Pupil Hitam Kanan */}
+          <rect x="108" y="81" width="11" height="13" rx="2" fill="#0A0A0A" />
+          {/* Kilau Putih Utama */}
+          <circle cx="111" cy="84" r="1.5" fill="#FFFFFF" />
+          {/* Kilau Cyan Sekunder */}
+          <circle cx="114" cy="88" r="1.2" fill="#00F0FF" />
+
+          {/* Alis Tegas Waspada Penjaga Benteng */}
+          <line x1="56" y1="67" x2="80" y2="70" stroke="#0A0A0A" strokeWidth="4.5" strokeLinecap="round" />
+          <line x1="102" y1="70" x2="126" y2="67" stroke="#0A0A0A" strokeWidth="4.5" strokeLinecap="round" />
+
+          {/* Mulut Senyum Waspada & Tegap */}
+          <path
+            d="M 85,114 Q 95,122 105,114"
+            stroke="#0A0A0A"
+            strokeWidth="3.5"
+            strokeLinecap="round"
+            fill="none"
+          />
+
+          {/* ============================================================== */}
+          {/* LAYER 5: KACAMATA TAKTIS HUD VISOR HIJAU TERMINAL TRANSPARAN   */}
+          {/* ============================================================== */}
+          <g id="tactical-hud-glasses">
+            {/* Lensa Transparan Hijau Terminal (Mata di baliknya tetap terlihat jelas) */}
+            <rect
+              x="52"
+              y="72"
+              width="84"
+              height="28"
+              rx="4"
+              fill="#10B981"
+              fillOpacity="0.32"
+            />
+            {/* Bingkai Luar Kacamata Taktis */}
+            <rect
+              x="50"
+              y="70"
+              width="88"
+              height="32"
+              rx="5"
+              fill="none"
+              stroke="#0A0A0A"
+              strokeWidth="3.5"
+            />
+            {/* Bridge Kacamata Taktis di Hidung */}
+            <rect x="88" y="74" width="12" height="6" rx="1.5" fill="#0A0A0A" />
+            <circle cx="94" cy="77" r="1.5" fill="#10B981" />
+
+            {/* Scanline & Grid Terminal Digital */}
+            <line x1="54" y1="78" x2="134" y2="78" stroke="#10B981" strokeWidth="1" strokeDasharray="3 2" opacity="0.8" />
+            <line x1="54" y1="92" x2="134" y2="92" stroke="#10B981" strokeWidth="1" strokeDasharray="3 2" opacity="0.8" />
+
+            {/* Teks Mini HUD Radar: "0_THREAT" */}
+            <text x="56" y="86" fontFamily="monospace" fontSize="6.5" fontWeight="900" fill="#10B981" opacity="0.95">0_THREAT</text>
+
+            {/* Reticle Pemindai Radar di Lensa Kanan */}
+            <circle cx="124" cy="86" r="4.5" fill="none" stroke="#10B981" strokeWidth="1" strokeDasharray="2 2" opacity="0.85" />
+            <circle cx="124" cy="86" r="1.5" fill="#10B981" opacity="0.95" />
+          </g>
+
+          {/* ============================================================== */}
+          {/* LAYER 6: HELM TANTANGAN CYBER WARDEN BERTANDUK BAJA            */}
+          {/* ============================================================== */}
+          <g transform="translate(25, 8)">
             {/* Hard Shadow Helm */}
             <path
               d="M 12,46 L 24,14 L 38,26 L 102,26 L 116,14 L 128,46 Z"
@@ -124,34 +299,16 @@ export function SecurityAnalystMascot({
             {/* Tanduk Baja Kiri & Kanan */}
             <polygon points="12,24 22,12 20,28" fill="#10B981" stroke="#0A0A0A" strokeWidth="2.5" />
             <polygon points="124,24 114,12 116,28" fill="#10B981" stroke="#0A0A0A" strokeWidth="2.5" />
-            {/* Pelat Dahi Baja Abu-abu Perak */}
+            {/* Pelat Dahi Baja Perak */}
             <polygon points="46,24 90,24 82,34 54,34" fill="#FFFFFF" stroke="#0A0A0A" strokeWidth="2.5" />
           </g>
 
-          {/* 6. VISOR PEMINDAI ANCAMAN HIJAU TERMINAL (#10B981) */}
-          <rect x="52" y="66" width="86" height="26" rx="6" fill="#0A0A0A" />
-          <rect x="50" y="64" width="86" height="26" rx="6" fill="#10B981" stroke="#0A0A0A" strokeWidth="4" />
-          {/* Garis Scanline Terminal & Radar Grid */}
-          <line x1="56" y1="72" x2="130" y2="72" stroke="#0A0A0A" strokeWidth="1.5" strokeDasharray="4 2" />
-          <line x1="56" y1="82" x2="130" y2="82" stroke="#0A0A0A" strokeWidth="1.5" strokeDasharray="4 2" />
-          {/* Teks Mini HUD Radar: "0 THREAT" */}
-          <text x="56" y="80" fontFamily="monospace" fontSize="8" fontWeight="900" fill="#0A0A0A">0_THREAT</text>
-
-          {/* Pupil Target Visor */}
-          <circle cx="118" cy="77" r="4.5" fill="#0A0A0A" />
-          <circle cx="119.5" cy="75.5" r="1.5" fill="#FFFFFF" />
-
-          {/* 7. ALIS BAJA TEGAS & SENYUM WASPADA */}
-          <line x1="56" y1="56" x2="80" y2="58" stroke="#0A0A0A" strokeWidth="4.5" strokeLinecap="round" />
-          <line x1="108" y1="58" x2="132" y2="56" stroke="#0A0A0A" strokeWidth="4.5" strokeLinecap="round" />
-          <path d="M84,114 Q94,122 104,114" stroke="#0A0A0A" strokeWidth="3.5" strokeLinecap="round" fill="none" />
-          <rect x="46" y="106" width="10" height="6" rx="2" fill="#FF5C8A" />
-          <rect x="132" y="106" width="10" height="6" rx="2" fill="#FF5C8A" />
-
-          {/* 8. TANGAN KIRI MEMEGANG PERISAI FIREWALL (THE AEGIS SHIELD) */}
+          {/* ============================================================== */}
+          {/* LAYER 7: TANGAN KIRI MEMEGANG PERISAI FIREWALL (AEGIS SHIELD)   */}
+          {/* ============================================================== */}
           <g className="sec-shield" transform="translate(6, 78)">
             <line x1="32" y1="38" x2="18" y2="44" stroke="#0A0A0A" strokeWidth="6" strokeLinecap="round" />
-            <circle cx="18" cy="44" r="6" fill="#7C3AED" stroke="#0A0A0A" strokeWidth="3.5" />
+            <circle cx="18" cy="44" r="6" fill="#FFD60A" stroke="#0A0A0A" strokeWidth="3.5" />
             {/* Perisai Heksagonal Kokoh Baja */}
             <g transform="translate(-10, 10)">
               {/* Shadow Perisai */}
@@ -185,10 +342,12 @@ export function SecurityAnalystMascot({
             </g>
           </g>
 
-          {/* 9. TANGAN KANAN MEMEGANG PEDANG KUNCI ENKRIPSI (CYBER KEY BLADE) */}
+          {/* ============================================================== */}
+          {/* LAYER 8: TANGAN KANAN MEMEGANG CYBER KEY BLADE                 */}
+          {/* ============================================================== */}
           <g className="sec-blade" transform="translate(148, 92)">
             <line x1="-2" y1="28" x2="16" y2="34" stroke="#0A0A0A" strokeWidth="6" strokeLinecap="round" />
-            <circle cx="16" cy="34" r="6" fill="#7C3AED" stroke="#0A0A0A" strokeWidth="3.5" />
+            <circle cx="16" cy="34" r="6" fill="#FFD60A" stroke="#0A0A0A" strokeWidth="3.5" />
             {/* Bilah Pedang Kunci Hijau Terminal */}
             <g transform="translate(18, 22) rotate(24)">
               {/* Shadow Blade */}
@@ -211,13 +370,6 @@ export function SecurityAnalystMascot({
               {/* Alur Garis Sirkuit Putih */}
               <line x1="6" y1="-2" x2="6" y2="-32" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" />
             </g>
-          </g>
-
-          {/* 10. BADGE "AES-256 🔒" DI KANAN ATAS */}
-          <g transform="translate(138, 28)">
-            <rect x="3" y="3" width="48" height="18" rx="4" fill="#0A0A0A" />
-            <rect x="0" y="0" width="48" height="18" rx="4" fill="#10B981" stroke="#0A0A0A" strokeWidth="2" />
-            <text x="4" y="13" fontFamily="monospace" fontSize="8" fontWeight="900" fill="#0A0A0A">AES-256🔒</text>
           </g>
         </g>
       </svg>

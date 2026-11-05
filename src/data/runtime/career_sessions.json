@@ -97,5 +97,1196 @@
       }
     },
     "created_at": "2026-10-20T19:22:40.585Z"
+  },
+  "csess_1793006692606_7zvzk": {
+    "id": "csess_1793006692606_7zvzk",
+    "user_id": "user_demo_1",
+    "status": "completed",
+    "current_level": 5,
+    "seed": "1793006692606-user_demo_1",
+    "answers": {
+      "cq_l1_01": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l1_02": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l1_03": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l1_04": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l1_05": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l1_06": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l1_07": {
+        "value": "opt_a",
+        "duration_ms": 1000
+      },
+      "cq_l2_01": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l2_02": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l2_03": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l2_04": {
+        "value": "opt_2a",
+        "duration_ms": 1000
+      },
+      "cq_l3_01": {
+        "value": "opt_3b",
+        "duration_ms": 1000
+      },
+      "cq_l3_02": {
+        "value": "opt_32b",
+        "duration_ms": 1000
+      },
+      "cq_l4_01": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l4_02": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l4_03": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l4_04": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l5_01": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l5_02": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l5_03": {
+        "value": 5,
+        "duration_ms": 1000
+      }
+    },
+    "created_at": "2026-10-26T09:24:52.606Z",
+    "completed_at": "2026-10-26T09:26:13.368Z",
+    "result": {
+      "card_code": "JID-320676",
+      "user_id": "user_demo_1",
+      "username": "budidev",
+      "top_role": {
+        "slug": "game-developer",
+        "name": "Game Developer",
+        "julukan": "The Pixel Mage",
+        "match_percentage": 90.9,
+        "tagline": "Menciptakan dunia virtual interaktif yang seru dan memikat pemain.",
+        "description": "Mengembangkan mekanika permainan, grafika 2D/3D, audio, dan sistem gameplay interaktif.",
+        "color": "#2EE59D",
+        "mascot_key": "game-developer"
+      },
+      "secondary_roles": [
+        {
+          "slug": "aiml-engineer",
+          "name": "AI/ML Engineer",
+          "julukan": "The Puppeteer",
+          "match_percentage": 89.8,
+          "color": "#FF5C8A"
+        },
+        {
+          "slug": "digital-forensics",
+          "name": "Digital Forensics",
+          "julukan": "The Archaeologist",
+          "match_percentage": 88.6,
+          "color": "#FFFFFF"
+        }
+      ],
+      "all_scores": [
+        {
+          "slug": "game-developer",
+          "name": "Game Developer",
+          "julukan": "The Pixel Mage",
+          "score": 20,
+          "percentage": 90.9,
+          "color": "#2EE59D",
+          "tagline": "Menciptakan dunia virtual interaktif yang seru dan memikat pemain.",
+          "description": "Mengembangkan mekanika permainan, grafika 2D/3D, audio, dan sistem gameplay interaktif.",
+          "mascot_key": "game-developer"
+        },
+        {
+          "slug": "aiml-engineer",
+          "name": "AI/ML Engineer",
+          "julukan": "The Puppeteer",
+          "score": 23,
+          "percentage": 89.8,
+          "color": "#FF5C8A",
+          "tagline": "Menghidupkan kecerdasan buatan dan neural network ke dalam aplikasi nyata.",
+          "description": "Melatih dan mengoptimasi model Deep Learning, NLP, Computer Vision, LLM, dan deployment model AI.",
+          "mascot_key": "aiml-engineer"
+        },
+        {
+          "slug": "digital-forensics",
+          "name": "Digital Forensics",
+          "julukan": "The Archaeologist",
+          "score": 24,
+          "percentage": 88.6,
+          "color": "#FFFFFF",
+          "tagline": "Detektif jejak digital yang menguak bukti kejahatan dan insiden siber.",
+          "description": "Analisis artefak memori, pemulihan data terhapus, reverse engineering malware, dan rantai bukti hukum.",
+          "mascot_key": "digital-forensics"
+        },
+        {
+          "slug": "software-engineer",
+          "name": "Software Engineer",
+          "julukan": "The Architect",
+          "score": 31,
+          "percentage": 87.7,
+          "color": "#FFD60A",
+          "tagline": "Merancang, menulis kode, dan membangun sistem digital dunia nyata.",
+          "description": "Fokus pada pembuatan aplikasi web dan sistem backend yang andal, scalable, dan berperforma tinggi.",
+          "mascot_key": "software-engineer"
+        },
+        {
+          "slug": "data-scientist",
+          "name": "Data Scientist",
+          "julukan": "The Alchemist",
+          "score": 25,
+          "percentage": 87.5,
+          "color": "#FFFFFF",
+          "tagline": "Menggabungkan matematika, statistika, dan algoritma prediktif masa depan.",
+          "description": "Membuat model prediktif machine learning, eksperimen A/B testing, dan pemodelan statistik mendalam.",
+          "mascot_key": "data-scientist"
+        },
+        {
+          "slug": "data-engineer",
+          "name": "Data Engineer",
+          "julukan": "The Plumber",
+          "score": 10,
+          "percentage": 87.5,
+          "color": "#FFD60A",
+          "tagline": "Membangun saluran pipa data raksasa yang mengalir cepat, bersih, dan stabil.",
+          "description": "Merancang arsitektur pipeline ETL/ELT, data warehouse, data lake, dan pengolahan data streaming.",
+          "mascot_key": "data-engineer"
+        },
+        {
+          "slug": "cloud-engineer",
+          "name": "Cloud Engineer",
+          "julukan": "The Ascender",
+          "score": 10,
+          "percentage": 82.1,
+          "color": "#FF5C8A",
+          "tagline": "Membangun dan mengelola arsitektur server di atas ekosistem awan modern.",
+          "description": "Mengelola infrastruktur cloud (AWS/GCP/Azure), auto-scaling, serverless, dan penyimpanan awan.",
+          "mascot_key": "cloud-engineer"
+        },
+        {
+          "slug": "mobile-developer",
+          "name": "Mobile Developer",
+          "julukan": "The Screen Tapper",
+          "score": 14,
+          "percentage": 81.5,
+          "color": "#FF5C8A",
+          "tagline": "Membawa pengalaman aplikasi canggih langsung ke genggaman tangan pengguna.",
+          "description": "Membangun aplikasi Android dan iOS yang responsif, mulus, dan terintegrasi dengan sensor gawai.",
+          "mascot_key": "mobile-developer"
+        },
+        {
+          "slug": "quality-assurance",
+          "name": "Quality Assurance",
+          "julukan": "The Bug Hunter",
+          "score": 12,
+          "percentage": 80,
+          "color": "#FF8A3D",
+          "tagline": "Garda terdepan penjaga keandalan sistem dari bug dan celah kegagalan.",
+          "description": "Menguji fungsionalitas, performa, otomatisasi pengujian, dan menjamin rilis bebas cacat.",
+          "mascot_key": "quality-assurance"
+        },
+        {
+          "slug": "it-support",
+          "name": "IT Support",
+          "julukan": "The Fixer",
+          "score": 10,
+          "percentage": 80,
+          "color": "#FFFFFF",
+          "tagline": "Penyelamat operasional harian perangkat keras, lunak, dan pengguna.",
+          "description": "Menangani troubleshooting perangkat, instalasi sistem, jaringan kantor, dan bantuan teknis pengguna.",
+          "mascot_key": "it-support"
+        },
+        {
+          "slug": "security-analyst",
+          "name": "Security Analyst",
+          "julukan": "The Warden",
+          "score": 16,
+          "percentage": 80,
+          "color": "#2EE59D",
+          "tagline": "Mendeteksi ancaman siber dan memperkuat pertahanan benteng digital.",
+          "description": "Penetration testing, analisis insiden keamanan SOC, audit vulnerability, dan hardening sistem.",
+          "mascot_key": "security-analyst"
+        },
+        {
+          "slug": "business-analyst",
+          "name": "Business Analyst",
+          "julukan": "The Translator",
+          "score": 18,
+          "percentage": 80,
+          "color": "#FF5C8A",
+          "tagline": "Penerjemah kebutuhan bisnis menjadi spesifikasi teknis yang siap dieksekusi.",
+          "description": "Penyusunan BRD/SRS, pemodelan proses bisnis BPMN, analisis gap sistem, dan user acceptance testing.",
+          "mascot_key": "business-analyst"
+        },
+        {
+          "slug": "network-engineer",
+          "name": "Network Engineer",
+          "julukan": "The Connector",
+          "score": 10,
+          "percentage": 78.1,
+          "color": "#FFD60A",
+          "tagline": "Menghubungkan dunia lewat infrastruktur routing, switching, dan transmisi sinyal.",
+          "description": "Merancang topologi jaringan komputer, konfigurasi router/switch, firewall, dan bandwidth management.",
+          "mascot_key": "network-engineer"
+        },
+        {
+          "slug": "it-consultant",
+          "name": "IT Consultant",
+          "julukan": "The Oracle",
+          "score": 14,
+          "percentage": 76.3,
+          "color": "#FF8A3D",
+          "tagline": "Penasihat strategis transformasi teknologi untuk akselerasi pertumbuhan bisnis.",
+          "description": "Audit arsitektur enterprise, evaluasi vendor software, formulasi roadmap TI, dan tata kelola teknologi.",
+          "mascot_key": "it-consultant"
+        },
+        {
+          "slug": "devops-engineer",
+          "name": "DevOps Engineer",
+          "julukan": "The Cyclist",
+          "score": 8,
+          "percentage": 74,
+          "color": "#2EE59D",
+          "tagline": "Menjembatani kode developer dengan operasional server tanpa jeda.",
+          "description": "Otomasi pipeline CI/CD, orkestrasi container (Docker/K8s), monitoring, dan infrastructure-as-code.",
+          "mascot_key": "devops-engineer"
+        },
+        {
+          "slug": "uiux-designer",
+          "name": "UI/UX Designer",
+          "julukan": "The Sculptor",
+          "score": 12,
+          "percentage": 72.5,
+          "color": "#FF8A3D",
+          "tagline": "Menghubungkan empati manusia dengan keindahan visual produk digital.",
+          "description": "Riset pengguna, pembuatan wireframe, user flow, prototyping interaktif, dan design system Figma.",
+          "mascot_key": "uiux-designer"
+        },
+        {
+          "slug": "data-analyst",
+          "name": "Data Analyst",
+          "julukan": "The Seer",
+          "score": 6,
+          "percentage": 68,
+          "color": "#FF8A3D",
+          "tagline": "Mengubah lautan angka mentah menjadi wawasan bisnis yang tajam dan bernilai.",
+          "description": "Eksplorasi SQL, pembersihan data, visualisasi dashboard (Tableau/PowerBI), dan analisis tren bisnis.",
+          "mascot_key": "data-analyst"
+        },
+        {
+          "slug": "data-entry",
+          "name": "Data Entry",
+          "julukan": "The Scribe",
+          "score": 2,
+          "percentage": 59,
+          "color": "#2EE59D",
+          "tagline": "Ketelitian tinggi dalam input, validasi, dan pengelolaan basis data operasional.",
+          "description": "Penginputan data massal, verifikasi akurasi informasi, pengarsipan digital, dan rekonsiliasi berkas.",
+          "mascot_key": "data-entry"
+        },
+        {
+          "slug": "project-manager",
+          "name": "Project Manager",
+          "julukan": "The Navigator",
+          "score": 4,
+          "percentage": 58.2,
+          "color": "#FFD60A",
+          "tagline": "Nahkoda proyek yang memastikan target, tim, dan jadwal sampai di tujuan.",
+          "description": "Manajemen sprint Agile/Scrum, alokasi sumber daya, mitigasi risiko, dan komunikasi lintas divisi.",
+          "mascot_key": "project-manager"
+        },
+        {
+          "slug": "system-administrator",
+          "name": "System Administrator",
+          "julukan": "The Groundskeeper",
+          "score": 0,
+          "percentage": 50,
+          "color": "#15803D",
+          "tagline": "Menjaga kesehatan, konfigurasi, dan kestabilan sistem operasi server 24/7.",
+          "description": "Bertanggung jawab atas instalasi, pemeliharaan OS, monitoring kesehatan server, dan manajemen patch.",
+          "mascot_key": "system-administrator"
+        },
+        {
+          "slug": "database-administrator",
+          "name": "Database Administrator",
+          "julukan": "The Librarian",
+          "score": 0,
+          "percentage": 50,
+          "color": "#1E3A8A",
+          "tagline": "Menjaga integritas data, kueri berkecepatan tinggi, dan replikasi tanpa henti.",
+          "description": "Mengelola database relational dan non-relational, tuning indeks, backup pemulihan bencana, dan keamanan data.",
+          "mascot_key": "database-administrator"
+        }
+      ],
+      "is_tie": true,
+      "issued_at": "2026-10-26"
+    }
+  },
+  "csess_1793080178352_x5d1t": {
+    "id": "csess_1793080178352_x5d1t",
+    "user_id": "user_demo_1",
+    "status": "completed",
+    "current_level": 5,
+    "seed": "1793080178352-user_demo_1",
+    "answers": {
+      "cq_l1_01": {
+        "value": 3,
+        "duration_ms": 1000
+      },
+      "cq_l1_02": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l1_03": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l1_04": {
+        "value": 4,
+        "duration_ms": 1000
+      },
+      "cq_l1_05": {
+        "value": 2,
+        "duration_ms": 1000
+      },
+      "cq_l1_06": {
+        "value": 3,
+        "duration_ms": 1000
+      },
+      "cq_l1_07": {
+        "value": 4,
+        "duration_ms": 1000
+      },
+      "cq_l1_08": {
+        "value": 3,
+        "duration_ms": 1000
+      },
+      "cq_l1_09": {
+        "value": "opt_1a",
+        "duration_ms": 1000
+      },
+      "cq_l1_10": {
+        "value": "opt_10c",
+        "duration_ms": 1000
+      },
+      "cq_l2_01": {
+        "value": 3,
+        "duration_ms": 1000
+      },
+      "cq_l2_02": {
+        "value": 2,
+        "duration_ms": 1000
+      },
+      "cq_l2_03": {
+        "value": 3,
+        "duration_ms": 1000
+      },
+      "cq_l2_04": {
+        "value": 1,
+        "duration_ms": 1000
+      },
+      "cq_l2_05": {
+        "value": 4,
+        "duration_ms": 1000
+      },
+      "cq_l2_06": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l2_07": {
+        "value": 4,
+        "duration_ms": 1000
+      },
+      "cq_l2_08": {
+        "value": 2,
+        "duration_ms": 1000
+      },
+      "cq_l2_09": {
+        "value": "opt_2a",
+        "duration_ms": 1000
+      },
+      "cq_l2_10": {
+        "value": "opt_20c",
+        "duration_ms": 1000
+      },
+      "cq_l3_01": {
+        "value": "opt_3b",
+        "duration_ms": 1000
+      },
+      "cq_l3_02": {
+        "value": "opt_32c",
+        "duration_ms": 1000
+      },
+      "cq_l3_03": {
+        "value": "opt_33a",
+        "duration_ms": 1000
+      },
+      "cq_l3_04": {
+        "value": "opt_34d",
+        "duration_ms": 1000
+      },
+      "cq_l3_05": {
+        "value": "opt_35a",
+        "duration_ms": 1000
+      },
+      "cq_l3_06": {
+        "value": "opt_36c",
+        "duration_ms": 1000
+      },
+      "cq_l3_07": {
+        "value": "opt_37c",
+        "duration_ms": 1000
+      },
+      "cq_l3_08": {
+        "value": "opt_38c",
+        "duration_ms": 1000
+      },
+      "cq_l3_09": {
+        "value": "opt_39e",
+        "duration_ms": 1000
+      },
+      "cq_l3_10": {
+        "value": "opt_310c",
+        "duration_ms": 1000
+      },
+      "cq_l4_01": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l4_02": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l4_03": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l4_04": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l4_05": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l4_06": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l4_07": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l4_08": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l4_09": {
+        "value": "opt_4a",
+        "duration_ms": 1000
+      },
+      "cq_l4_10": {
+        "value": "opt_410e",
+        "duration_ms": 1000
+      },
+      "cq_l5_01": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l5_02": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l5_03": {
+        "value": 4,
+        "duration_ms": 1000
+      },
+      "cq_l5_04": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l5_05": {
+        "value": 4,
+        "duration_ms": 1000
+      },
+      "cq_l5_06": {
+        "value": 4,
+        "duration_ms": 1000
+      },
+      "cq_l5_07": {
+        "value": 3,
+        "duration_ms": 1000
+      },
+      "cq_l5_08": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_l5_09": {
+        "value": "opt_5d",
+        "duration_ms": 1000
+      },
+      "cq_l5_10": {
+        "value": "opt_510b",
+        "duration_ms": 1000
+      }
+    },
+    "created_at": "2026-10-27T05:49:38.352Z",
+    "completed_at": "2026-10-27T05:55:38.463Z",
+    "result": {
+      "card_code": "JID-504519",
+      "user_id": "user_demo_1",
+      "username": "budidev",
+      "top_role": {
+        "slug": "software-engineer",
+        "name": "Software Engineer",
+        "julukan": "The Architect",
+        "match_percentage": 73.9,
+        "tagline": "Merancang, menulis kode, dan membangun sistem digital dunia nyata.",
+        "description": "Fokus pada pembuatan aplikasi web dan sistem backend yang andal, scalable, dan berperforma tinggi.",
+        "color": "#FFD60A",
+        "mascot_key": "software-engineer"
+      },
+      "secondary_roles": [
+        {
+          "slug": "security-analyst",
+          "name": "Security Analyst",
+          "julukan": "The Warden",
+          "match_percentage": 72.9,
+          "color": "#2EE59D"
+        },
+        {
+          "slug": "mobile-developer",
+          "name": "Mobile Developer",
+          "julukan": "The Screen Tapper",
+          "match_percentage": 70.3,
+          "color": "#FF5C8A"
+        }
+      ],
+      "all_scores": [
+        {
+          "slug": "software-engineer",
+          "name": "Software Engineer",
+          "julukan": "The Architect",
+          "score": 34,
+          "percentage": 73.9,
+          "color": "#FFD60A",
+          "tagline": "Merancang, menulis kode, dan membangun sistem digital dunia nyata.",
+          "description": "Fokus pada pembuatan aplikasi web dan sistem backend yang andal, scalable, dan berperforma tinggi.",
+          "mascot_key": "software-engineer"
+        },
+        {
+          "slug": "security-analyst",
+          "name": "Security Analyst",
+          "julukan": "The Warden",
+          "score": 30,
+          "percentage": 72.9,
+          "color": "#2EE59D",
+          "tagline": "Mendeteksi ancaman siber dan memperkuat pertahanan benteng digital.",
+          "description": "Penetration testing, analisis insiden keamanan SOC, audit vulnerability, dan hardening sistem.",
+          "mascot_key": "security-analyst"
+        },
+        {
+          "slug": "mobile-developer",
+          "name": "Mobile Developer",
+          "julukan": "The Screen Tapper",
+          "score": 18,
+          "percentage": 70.3,
+          "color": "#FF5C8A",
+          "tagline": "Membawa pengalaman aplikasi canggih langsung ke genggaman tangan pengguna.",
+          "description": "Membangun aplikasi Android dan iOS yang responsif, mulus, dan terintegrasi dengan sensor gawai.",
+          "mascot_key": "mobile-developer"
+        },
+        {
+          "slug": "digital-forensics",
+          "name": "Digital Forensics",
+          "julukan": "The Archaeologist",
+          "score": 22,
+          "percentage": 69.8,
+          "color": "#FFFFFF",
+          "tagline": "Detektif jejak digital yang menguak bukti kejahatan dan insiden siber.",
+          "description": "Analisis artefak memori, pemulihan data terhapus, reverse engineering malware, dan rantai bukti hukum.",
+          "mascot_key": "digital-forensics"
+        },
+        {
+          "slug": "data-engineer",
+          "name": "Data Engineer",
+          "julukan": "The Plumber",
+          "score": 21,
+          "percentage": 69.3,
+          "color": "#FFD60A",
+          "tagline": "Membangun saluran pipa data raksasa yang mengalir cepat, bersih, dan stabil.",
+          "description": "Merancang arsitektur pipeline ETL/ELT, data warehouse, data lake, dan pengolahan data streaming.",
+          "mascot_key": "data-engineer"
+        },
+        {
+          "slug": "aiml-engineer",
+          "name": "AI/ML Engineer",
+          "julukan": "The Puppeteer",
+          "score": 16,
+          "percentage": 68.9,
+          "color": "#FF5C8A",
+          "tagline": "Menghidupkan kecerdasan buatan dan neural network ke dalam aplikasi nyata.",
+          "description": "Melatih dan mengoptimasi model Deep Learning, NLP, Computer Vision, LLM, dan deployment model AI.",
+          "mascot_key": "aiml-engineer"
+        },
+        {
+          "slug": "system-administrator",
+          "name": "System Administrator",
+          "julukan": "The Groundskeeper",
+          "score": 36,
+          "percentage": 67.6,
+          "color": "#15803D",
+          "tagline": "Menjaga kesehatan, konfigurasi, dan kestabilan sistem operasi server 24/7.",
+          "description": "Bertanggung jawab atas instalasi, pemeliharaan OS, monitoring kesehatan server, dan manajemen patch.",
+          "mascot_key": "system-administrator"
+        },
+        {
+          "slug": "database-administrator",
+          "name": "Database Administrator",
+          "julukan": "The Librarian",
+          "score": 37,
+          "percentage": 67.5,
+          "color": "#1E3A8A",
+          "tagline": "Menjaga integritas data, kueri berkecepatan tinggi, dan replikasi tanpa henti.",
+          "description": "Mengelola database relational dan non-relational, tuning indeks, backup pemulihan bencana, dan keamanan data.",
+          "mascot_key": "database-administrator"
+        },
+        {
+          "slug": "quality-assurance",
+          "name": "Quality Assurance",
+          "julukan": "The Bug Hunter",
+          "score": 17,
+          "percentage": 66.6,
+          "color": "#FF8A3D",
+          "tagline": "Garda terdepan penjaga keandalan sistem dari bug dan celah kegagalan.",
+          "description": "Menguji fungsionalitas, performa, otomatisasi pengujian, dan menjamin rilis bebas cacat.",
+          "mascot_key": "quality-assurance"
+        },
+        {
+          "slug": "data-scientist",
+          "name": "Data Scientist",
+          "julukan": "The Alchemist",
+          "score": 17,
+          "percentage": 65.6,
+          "color": "#FFFFFF",
+          "tagline": "Menggabungkan matematika, statistika, dan algoritma prediktif masa depan.",
+          "description": "Membuat model prediktif machine learning, eksperimen A/B testing, dan pemodelan statistik mendalam.",
+          "mascot_key": "data-scientist"
+        },
+        {
+          "slug": "game-developer",
+          "name": "Game Developer",
+          "julukan": "The Pixel Mage",
+          "score": 12,
+          "percentage": 65.4,
+          "color": "#2EE59D",
+          "tagline": "Menciptakan dunia virtual interaktif yang seru dan memikat pemain.",
+          "description": "Mengembangkan mekanika permainan, grafika 2D/3D, audio, dan sistem gameplay interaktif.",
+          "mascot_key": "game-developer"
+        },
+        {
+          "slug": "uiux-designer",
+          "name": "UI/UX Designer",
+          "julukan": "The Sculptor",
+          "score": 16,
+          "percentage": 64.7,
+          "color": "#FF8A3D",
+          "tagline": "Menghubungkan empati manusia dengan keindahan visual produk digital.",
+          "description": "Riset pengguna, pembuatan wireframe, user flow, prototyping interaktif, dan design system Figma.",
+          "mascot_key": "uiux-designer"
+        },
+        {
+          "slug": "network-engineer",
+          "name": "Network Engineer",
+          "julukan": "The Connector",
+          "score": 16,
+          "percentage": 64.4,
+          "color": "#FFD60A",
+          "tagline": "Menghubungkan dunia lewat infrastruktur routing, switching, dan transmisi sinyal.",
+          "description": "Merancang topologi jaringan komputer, konfigurasi router/switch, firewall, dan bandwidth management.",
+          "mascot_key": "network-engineer"
+        },
+        {
+          "slug": "cloud-engineer",
+          "name": "Cloud Engineer",
+          "julukan": "The Ascender",
+          "score": 14,
+          "percentage": 63.7,
+          "color": "#FF5C8A",
+          "tagline": "Membangun dan mengelola arsitektur server di atas ekosistem awan modern.",
+          "description": "Mengelola infrastruktur cloud (AWS/GCP/Azure), auto-scaling, serverless, dan penyimpanan awan.",
+          "mascot_key": "cloud-engineer"
+        },
+        {
+          "slug": "devops-engineer",
+          "name": "DevOps Engineer",
+          "julukan": "The Cyclist",
+          "score": 16,
+          "percentage": 63.6,
+          "color": "#2EE59D",
+          "tagline": "Menjembatani kode developer dengan operasional server tanpa jeda.",
+          "description": "Otomasi pipeline CI/CD, orkestrasi container (Docker/K8s), monitoring, dan infrastructure-as-code.",
+          "mascot_key": "devops-engineer"
+        },
+        {
+          "slug": "it-support",
+          "name": "IT Support",
+          "julukan": "The Fixer",
+          "score": 6,
+          "percentage": 57.1,
+          "color": "#FFFFFF",
+          "tagline": "Penyelamat operasional harian perangkat keras, lunak, dan pengguna.",
+          "description": "Menangani troubleshooting perangkat, instalasi sistem, jaringan kantor, dan bantuan teknis pengguna.",
+          "mascot_key": "it-support"
+        },
+        {
+          "slug": "business-analyst",
+          "name": "Business Analyst",
+          "julukan": "The Translator",
+          "score": 5,
+          "percentage": 53.8,
+          "color": "#FF5C8A",
+          "tagline": "Penerjemah kebutuhan bisnis menjadi spesifikasi teknis yang siap dieksekusi.",
+          "description": "Penyusunan BRD/SRS, pemodelan proses bisnis BPMN, analisis gap sistem, dan user acceptance testing.",
+          "mascot_key": "business-analyst"
+        },
+        {
+          "slug": "data-analyst",
+          "name": "Data Analyst",
+          "julukan": "The Seer",
+          "score": 2,
+          "percentage": 52.6,
+          "color": "#FF8A3D",
+          "tagline": "Mengubah lautan angka mentah menjadi wawasan bisnis yang tajam dan bernilai.",
+          "description": "Eksplorasi SQL, pembersihan data, visualisasi dashboard (Tableau/PowerBI), dan analisis tren bisnis.",
+          "mascot_key": "data-analyst"
+        },
+        {
+          "slug": "it-consultant",
+          "name": "IT Consultant",
+          "julukan": "The Oracle",
+          "score": 3,
+          "percentage": 52.4,
+          "color": "#FF8A3D",
+          "tagline": "Penasihat strategis transformasi teknologi untuk akselerasi pertumbuhan bisnis.",
+          "description": "Audit arsitektur enterprise, evaluasi vendor software, formulasi roadmap TI, dan tata kelola teknologi.",
+          "mascot_key": "it-consultant"
+        },
+        {
+          "slug": "data-entry",
+          "name": "Data Entry",
+          "julukan": "The Scribe",
+          "score": 0,
+          "percentage": 50,
+          "color": "#2EE59D",
+          "tagline": "Ketelitian tinggi dalam input, validasi, dan pengelolaan basis data operasional.",
+          "description": "Penginputan data massal, verifikasi akurasi informasi, pengarsipan digital, dan rekonsiliasi berkas.",
+          "mascot_key": "data-entry"
+        },
+        {
+          "slug": "project-manager",
+          "name": "Project Manager",
+          "julukan": "The Navigator",
+          "score": -3,
+          "percentage": 46.9,
+          "color": "#FFD60A",
+          "tagline": "Nahkoda proyek yang memastikan target, tim, dan jadwal sampai di tujuan.",
+          "description": "Manajemen sprint Agile/Scrum, alokasi sumber daya, mitigasi risiko, dan komunikasi lintas divisi.",
+          "mascot_key": "project-manager"
+        }
+      ],
+      "is_tie": true,
+      "issued_at": "2026-10-27"
+    }
+  },
+  "csess_1793082127152_gfary": {
+    "id": "csess_1793082127152_gfary",
+    "user_id": "user_demo_1",
+    "status": "completed",
+    "current_level": 4,
+    "seed": "1793082127152-user_demo_1",
+    "answers": {
+      "cq_s1_01": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_s1_02": {
+        "value": 4,
+        "duration_ms": 1000
+      },
+      "cq_s1_03": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_s1_04": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_s1_05": {
+        "value": "cq_s1_05_b",
+        "duration_ms": 1000
+      },
+      "cq_s2_01": {
+        "value": 3,
+        "duration_ms": 1000
+      },
+      "cq_s2_02": {
+        "value": 4,
+        "duration_ms": 1000
+      },
+      "cq_s2_03": {
+        "value": 2,
+        "duration_ms": 1000
+      },
+      "cq_s2_04": {
+        "value": 1,
+        "duration_ms": 1000
+      },
+      "cq_s2_05": {
+        "value": "cq_s2_05_e",
+        "duration_ms": 1000
+      },
+      "cq_s3_01": {
+        "value": "cq_s3_01_e",
+        "duration_ms": 1000
+      },
+      "cq_s3_02": {
+        "value": "cq_s3_02_a",
+        "duration_ms": 1000
+      },
+      "cq_s3_03": {
+        "value": "cq_s3_03_e",
+        "duration_ms": 1000
+      },
+      "cq_s3_04": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_s3_05": {
+        "value": 2,
+        "duration_ms": 1000
+      },
+      "cq_s4_01": {
+        "value": 5,
+        "duration_ms": 1000
+      },
+      "cq_s4_02": {
+        "value": 1,
+        "duration_ms": 1000
+      },
+      "cq_s4_03": {
+        "value": 4,
+        "duration_ms": 1000
+      },
+      "cq_s4_04": {
+        "value": 2,
+        "duration_ms": 1000
+      },
+      "cq_s4_05": {
+        "value": "cq_s4_05_b",
+        "duration_ms": 1000
+      }
+    },
+    "created_at": "2026-10-27T06:22:07.152Z",
+    "completed_at": "2026-10-27T08:54:37.991Z",
+    "result": {
+      "card_code": "JID-243677",
+      "user_id": "user_demo_1",
+      "username": "budidev",
+      "top_role": {
+        "slug": "aiml-engineer",
+        "name": "AI/ML Engineer",
+        "julukan": "The Puppeteer",
+        "match_percentage": 92.6,
+        "tagline": "Menghidupkan kecerdasan buatan dan neural network ke dalam aplikasi nyata.",
+        "description": "Melatih dan mengoptimasi model Deep Learning, NLP, Computer Vision, LLM, dan deployment model AI.",
+        "color": "#FF5C8A",
+        "mascot_key": "aiml-engineer"
+      },
+      "secondary_roles": [
+        {
+          "slug": "software-engineer",
+          "name": "Software Engineer",
+          "julukan": "The Architect",
+          "match_percentage": 84.6,
+          "color": "#FFD60A"
+        },
+        {
+          "slug": "quality-assurance",
+          "name": "Quality Assurance",
+          "julukan": "The Bug Hunter",
+          "match_percentage": 82.5,
+          "color": "#FF8A3D"
+        }
+      ],
+      "all_scores": [
+        {
+          "slug": "aiml-engineer",
+          "name": "AI/ML Engineer",
+          "julukan": "The Puppeteer",
+          "score": 18,
+          "percentage": 92.6,
+          "color": "#FF5C8A",
+          "tagline": "Menghidupkan kecerdasan buatan dan neural network ke dalam aplikasi nyata.",
+          "description": "Melatih dan mengoptimasi model Deep Learning, NLP, Computer Vision, LLM, dan deployment model AI.",
+          "mascot_key": "aiml-engineer"
+        },
+        {
+          "slug": "software-engineer",
+          "name": "Software Engineer",
+          "julukan": "The Architect",
+          "score": 20,
+          "percentage": 84.6,
+          "color": "#FFD60A",
+          "tagline": "Merancang, menulis kode, dan membangun sistem digital dunia nyata.",
+          "description": "Fokus pada pembuatan aplikasi web dan sistem backend yang andal, scalable, dan berperforma tinggi.",
+          "mascot_key": "software-engineer"
+        },
+        {
+          "slug": "quality-assurance",
+          "name": "Quality Assurance",
+          "julukan": "The Bug Hunter",
+          "score": 13,
+          "percentage": 82.5,
+          "color": "#FF8A3D",
+          "tagline": "Garda terdepan penjaga keandalan sistem dari bug dan celah kegagalan.",
+          "description": "Menguji fungsionalitas, performa, otomatisasi pengujian, dan menjamin rilis bebas cacat.",
+          "mascot_key": "quality-assurance"
+        },
+        {
+          "slug": "data-engineer",
+          "name": "Data Engineer",
+          "julukan": "The Plumber",
+          "score": 12,
+          "percentage": 81.8,
+          "color": "#FFD60A",
+          "tagline": "Membangun saluran pipa data raksasa yang mengalir cepat, bersih, dan stabil.",
+          "description": "Merancang arsitektur pipeline ETL/ELT, data warehouse, data lake, dan pengolahan data streaming.",
+          "mascot_key": "data-engineer"
+        },
+        {
+          "slug": "game-developer",
+          "name": "Game Developer",
+          "julukan": "The Pixel Mage",
+          "score": 10,
+          "percentage": 78.1,
+          "color": "#2EE59D",
+          "tagline": "Menciptakan dunia virtual interaktif yang seru dan memikat pemain.",
+          "description": "Mengembangkan mekanika permainan, grafika 2D/3D, audio, dan sistem gameplay interaktif.",
+          "mascot_key": "game-developer"
+        },
+        {
+          "slug": "digital-forensics",
+          "name": "Digital Forensics",
+          "julukan": "The Archaeologist",
+          "score": 10,
+          "percentage": 78.1,
+          "color": "#FFFFFF",
+          "tagline": "Detektif jejak digital yang menguak bukti kejahatan dan insiden siber.",
+          "description": "Analisis artefak memori, pemulihan data terhapus, reverse engineering malware, dan rantai bukti hukum.",
+          "mascot_key": "digital-forensics"
+        },
+        {
+          "slug": "data-scientist",
+          "name": "Data Scientist",
+          "julukan": "The Alchemist",
+          "score": 14,
+          "percentage": 74.2,
+          "color": "#FFFFFF",
+          "tagline": "Menggabungkan matematika, statistika, dan algoritma prediktif masa depan.",
+          "description": "Membuat model prediktif machine learning, eksperimen A/B testing, dan pemodelan statistik mendalam.",
+          "mascot_key": "data-scientist"
+        },
+        {
+          "slug": "security-analyst",
+          "name": "Security Analyst",
+          "julukan": "The Warden",
+          "score": 12,
+          "percentage": 72.5,
+          "color": "#2EE59D",
+          "tagline": "Mendeteksi ancaman siber dan memperkuat pertahanan benteng digital.",
+          "description": "Penetration testing, analisis insiden keamanan SOC, audit vulnerability, dan hardening sistem.",
+          "mascot_key": "security-analyst"
+        },
+        {
+          "slug": "uiux-designer",
+          "name": "UI/UX Designer",
+          "julukan": "The Sculptor",
+          "score": 9,
+          "percentage": 70.3,
+          "color": "#FF8A3D",
+          "tagline": "Menghubungkan empati manusia dengan keindahan visual produk digital.",
+          "description": "Riset pengguna, pembuatan wireframe, user flow, prototyping interaktif, dan design system Figma.",
+          "mascot_key": "uiux-designer"
+        },
+        {
+          "slug": "mobile-developer",
+          "name": "Mobile Developer",
+          "julukan": "The Screen Tapper",
+          "score": 6,
+          "percentage": 64.2,
+          "color": "#FF5C8A",
+          "tagline": "Membawa pengalaman aplikasi canggih langsung ke genggaman tangan pengguna.",
+          "description": "Membangun aplikasi Android dan iOS yang responsif, mulus, dan terintegrasi dengan sensor gawai.",
+          "mascot_key": "mobile-developer"
+        },
+        {
+          "slug": "it-support",
+          "name": "IT Support",
+          "julukan": "The Fixer",
+          "score": 1,
+          "percentage": 53.2,
+          "color": "#FFFFFF",
+          "tagline": "Penyelamat operasional harian perangkat keras, lunak, dan pengguna.",
+          "description": "Menangani troubleshooting perangkat, instalasi sistem, jaringan kantor, dan bantuan teknis pengguna.",
+          "mascot_key": "it-support"
+        },
+        {
+          "slug": "devops-engineer",
+          "name": "DevOps Engineer",
+          "julukan": "The Cyclist",
+          "score": 0,
+          "percentage": 50,
+          "color": "#2EE59D",
+          "tagline": "Menjembatani kode developer dengan operasional server tanpa jeda.",
+          "description": "Otomasi pipeline CI/CD, orkestrasi container (Docker/K8s), monitoring, dan infrastructure-as-code.",
+          "mascot_key": "devops-engineer"
+        },
+        {
+          "slug": "data-analyst",
+          "name": "Data Analyst",
+          "julukan": "The Seer",
+          "score": 0,
+          "percentage": 50,
+          "color": "#FF8A3D",
+          "tagline": "Mengubah lautan angka mentah menjadi wawasan bisnis yang tajam dan bernilai.",
+          "description": "Eksplorasi SQL, pembersihan data, visualisasi dashboard (Tableau/PowerBI), dan analisis tren bisnis.",
+          "mascot_key": "data-analyst"
+        },
+        {
+          "slug": "system-administrator",
+          "name": "System Administrator",
+          "julukan": "The Groundskeeper",
+          "score": -1,
+          "percentage": 48.2,
+          "color": "#15803D",
+          "tagline": "Menjaga kesehatan, konfigurasi, dan kestabilan sistem operasi server 24/7.",
+          "description": "Bertanggung jawab atas instalasi, pemeliharaan OS, monitoring kesehatan server, dan manajemen patch.",
+          "mascot_key": "system-administrator"
+        },
+        {
+          "slug": "database-administrator",
+          "name": "Database Administrator",
+          "julukan": "The Librarian",
+          "score": -2,
+          "percentage": 45.5,
+          "color": "#1E3A8A",
+          "tagline": "Menjaga integritas data, kueri berkecepatan tinggi, dan replikasi tanpa henti.",
+          "description": "Mengelola database relational dan non-relational, tuning indeks, backup pemulihan bencana, dan keamanan data.",
+          "mascot_key": "database-administrator"
+        },
+        {
+          "slug": "cloud-engineer",
+          "name": "Cloud Engineer",
+          "julukan": "The Ascender",
+          "score": -3,
+          "percentage": 44.4,
+          "color": "#FF5C8A",
+          "tagline": "Membangun dan mengelola arsitektur server di atas ekosistem awan modern.",
+          "description": "Mengelola infrastruktur cloud (AWS/GCP/Azure), auto-scaling, serverless, dan penyimpanan awan.",
+          "mascot_key": "cloud-engineer"
+        },
+        {
+          "slug": "data-entry",
+          "name": "Data Entry",
+          "julukan": "The Scribe",
+          "score": -2,
+          "percentage": 44.4,
+          "color": "#2EE59D",
+          "tagline": "Ketelitian tinggi dalam input, validasi, dan pengelolaan basis data operasional.",
+          "description": "Penginputan data massal, verifikasi akurasi informasi, pengarsipan digital, dan rekonsiliasi berkas.",
+          "mascot_key": "data-entry"
+        },
+        {
+          "slug": "network-engineer",
+          "name": "Network Engineer",
+          "julukan": "The Connector",
+          "score": -4,
+          "percentage": 40,
+          "color": "#FFD60A",
+          "tagline": "Menghubungkan dunia lewat infrastruktur routing, switching, dan transmisi sinyal.",
+          "description": "Merancang topologi jaringan komputer, konfigurasi router/switch, firewall, dan bandwidth management.",
+          "mascot_key": "network-engineer"
+        },
+        {
+          "slug": "project-manager",
+          "name": "Project Manager",
+          "julukan": "The Navigator",
+          "score": -6,
+          "percentage": 38.8,
+          "color": "#FFD60A",
+          "tagline": "Nahkoda proyek yang memastikan target, tim, dan jadwal sampai di tujuan.",
+          "description": "Manajemen sprint Agile/Scrum, alokasi sumber daya, mitigasi risiko, dan komunikasi lintas divisi.",
+          "mascot_key": "project-manager"
+        },
+        {
+          "slug": "it-consultant",
+          "name": "IT Consultant",
+          "julukan": "The Oracle",
+          "score": -9,
+          "percentage": 35,
+          "color": "#FF8A3D",
+          "tagline": "Penasihat strategis transformasi teknologi untuk akselerasi pertumbuhan bisnis.",
+          "description": "Audit arsitektur enterprise, evaluasi vendor software, formulasi roadmap TI, dan tata kelola teknologi.",
+          "mascot_key": "it-consultant"
+        },
+        {
+          "slug": "business-analyst",
+          "name": "Business Analyst",
+          "julukan": "The Translator",
+          "score": -11,
+          "percentage": 33.5,
+          "color": "#FF5C8A",
+          "tagline": "Penerjemah kebutuhan bisnis menjadi spesifikasi teknis yang siap dieksekusi.",
+          "description": "Penyusunan BRD/SRS, pemodelan proses bisnis BPMN, analisis gap sistem, dan user acceptance testing.",
+          "mascot_key": "business-analyst"
+        }
+      ],
+      "is_tie": false,
+      "issued_at": "2026-10-27"
+    }
   }
 }

@@ -1,139 +1,298 @@
 <svg viewBox="0 0 200 200" width="200" height="200" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- MASKOT MOBILE DEVELOPER — "THE ARTISAN" -->
+  <!-- MASKOT MOBILE DEVELOPER — "THE SCREEN TAPPER" -->
   <!-- Proyek: JalanITku · Sutradara Visual: Matatabi -->
-  <!-- Edisi: Topi Snapback Miring Pink-Cyan (Desain Lama), Jaket Jeans Denim Keren, Tangan Kanan Menggenggam Kanan HP, Tangan Kiri Mengklik Layar Ponsel dengan Efek Touch Ripple, Tanpa Bintang 4 Sisi -->
+  <!-- Edisi: Topi Snapback Miring Pink-Cyan (Desain Lama), Jaket Jeans Denim Keren, Mata Berkedip Natural, Layar Smartphone Scrolling Feed Interaktif, Push Notifikasi Melayang di Atas Ponsel -->
 
-  <!-- LAYER 1: KAKI & SEPATU HITAM DENGAN SOL PUTIH -->
-  <rect x="68" y="154" width="22" height="24" fill="#0A0A0A" />
-  <rect x="114" y="154" width="22" height="24" fill="#0A0A0A" />
+  <defs>
+    <style>
+      @keyframes mob-float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-3.5px); }
+      }
+      @keyframes mob-phone-sway {
+        0%, 100% { transform: rotate(0deg); }
+        50% { transform: rotate(2deg) translateY(-1px); }
+      }
+      @keyframes mob-notify-pop {
+        0%, 100% { transform: translateY(0px) scale(1); }
+        50% { transform: translateY(-3.5px) scale(1.04); }
+      }
+      @keyframes mob-left-click {
+        0%, 100% { transform: translateY(0px) scale(1); }
+        50% { transform: translateY(2px) scale(0.98); }
+      }
+      @keyframes mob-ripple-1 {
+        0% { r: 4px; opacity: 1; stroke-width: 3px; }
+        100% { r: 20px; opacity: 0; stroke-width: 0.5px; }
+      }
+      @keyframes mob-ripple-2 {
+        0% { r: 4px; opacity: 0; stroke-width: 2.5px; }
+        30% { opacity: 0.8; stroke-width: 2px; }
+        100% { r: 28px; opacity: 0; stroke-width: 0.5px; }
+      }
+      @keyframes mob-eye-blink {
+        0%, 88%, 94%, 100% { transform: scaleY(1); }
+        91% { transform: scaleY(0.08); }
+      }
+      @keyframes mob-screen-scroll {
+        0%, 16% { transform: translateY(0px); }
+        30%, 48% { transform: translateY(-24px); }
+        62%, 80% { transform: translateY(-48px); }
+        94%, 100% { transform: translateY(-72px); }
+      }
+      @keyframes mob-scrollbar-glide {
+        0%, 16% { transform: translateY(0px); }
+        30%, 48% { transform: translateY(14px); }
+        62%, 80% { transform: translateY(28px); }
+        94%, 100% { transform: translateY(42px); }
+      }
+      .mob-animated-body {
+        animation: mob-float 3.5s ease-in-out infinite;
+        transform-origin: center bottom;
+      }
+      .mob-animated-phone {
+        animation: mob-phone-sway 3.2s ease-in-out infinite;
+        transform-origin: 154px 138px;
+      }
+      .mob-animated-notify {
+        animation: mob-notify-pop 2.8s ease-in-out infinite;
+        transform-origin: 17px 12px;
+      }
+      .mob-animated-click {
+        animation: mob-left-click 1.6s ease-in-out infinite;
+        transform-origin: 130px 115px;
+      }
+      .mob-animated-ripple1 {
+        animation: mob-ripple-1 1.6s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
+        transform-origin: 154px 110px;
+      }
+      .mob-animated-ripple2 {
+        animation: mob-ripple-2 1.6s cubic-bezier(0.1, 0.8, 0.3, 1) 0.35s infinite;
+        transform-origin: 154px 110px;
+      }
+      .mob-animated-eye-left {
+        animation: mob-eye-blink 4s ease-in-out infinite;
+        transform-origin: 68px 86px;
+      }
+      .mob-animated-eye-right {
+        animation: mob-eye-blink 4s ease-in-out infinite;
+        transform-origin: 106px 86px;
+      }
+      .mob-animated-feed {
+        animation: mob-screen-scroll 4.8s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+      }
+      .mob-animated-scrollbar {
+        animation: mob-scrollbar-glide 4.8s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+        transform-origin: 172px 68px;
+      }
+    </style>
+    <clipPath id="mob-screen-viewport">
+      <rect x="134" y="66" width="40" height="68" rx="3" />
+    </clipPath>
+  </defs>
 
-  <rect x="64" y="148" width="22" height="26" fill="#0A0A0A" rx="2" stroke="#0A0A0A" stroke-width="3.5" />
-  <line x1="64" y1="170" x2="86" y2="170" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="square" />
+  <g class="mob-animated-body">
+    <!-- LAYER 1: KAKI & SEPATU HITAM DENGAN SOL PUTIH -->
+    <rect x="68" y="154" width="22" height="24" fill="#0A0A0A" />
+    <rect x="114" y="154" width="22" height="24" fill="#0A0A0A" />
 
-  <rect x="110" y="148" width="22" height="26" fill="#0A0A0A" rx="2" stroke="#0A0A0A" stroke-width="3.5" />
-  <line x1="110" y1="170" x2="132" y2="170" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="square" />
+    <rect x="64" y="148" width="22" height="26" fill="#0A0A0A" rx="2" stroke="#0A0A0A" stroke-width="3.5" />
+    <line x1="64" y1="170" x2="86" y2="170" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="square" />
 
-  <!-- LAYER 2: BADAN PAPAN RAMBU KUNING NEO-BRUTALISM -->
-  <rect x="48" y="56" width="106" height="94" rx="4" fill="#0A0A0A" />
-  <rect x="42" y="50" width="106" height="94" rx="4" fill="#FFD60A" stroke="#0A0A0A" stroke-width="4" />
+    <rect x="110" y="148" width="22" height="26" fill="#0A0A0A" rx="2" stroke="#0A0A0A" stroke-width="3.5" />
+    <line x1="110" y1="170" x2="132" y2="170" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="square" />
 
-  <!-- Pipi Merona Pink -->
-  <rect x="50" y="102" width="12" height="7" rx="2" fill="#FF5C8A" />
-  <rect x="122" y="102" width="12" height="7" rx="2" fill="#FF5C8A" />
+    <!-- LAYER 2: BADAN PAPAN RAMBU KUNING NEO-BRUTALISM -->
+    <rect x="48" y="56" width="106" height="94" rx="4" fill="#0A0A0A" />
+    <rect x="42" y="50" width="106" height="94" rx="4" fill="#FFD60A" stroke="#0A0A0A" stroke-width="4" />
 
-  <!-- Mata Kiri & Kanan (Fokus Antusias ke Titik Tap Layar) -->
-  <rect x="58" y="74" width="20" height="24" rx="4" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3.5" />
-  <rect x="66" y="80" width="9" height="12" rx="2" fill="#0A0A0A" />
-  <circle cx="68.5" cy="82.5" r="1.5" fill="#FFFFFF" />
-  <circle cx="72" cy="87.5" r="1.2" fill="#00F0FF" />
+    <!-- Pipi Merona Pink -->
+    <rect x="50" y="102" width="12" height="7" rx="2" fill="#FF5C8A" />
+    <rect x="122" y="102" width="12" height="7" rx="2" fill="#FF5C8A" />
 
-  <rect x="96" y="74" width="20" height="24" rx="4" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3.5" />
-  <rect x="105" y="80" width="9" height="12" rx="2" fill="#0A0A0A" />
-  <circle cx="107.5" cy="82.5" r="1.5" fill="#FFFFFF" />
-  <circle cx="111" cy="87.5" r="1.2" fill="#00F0FF" />
-
-  <path d="M 56 68 L 78 70" stroke="#0A0A0A" stroke-width="4" stroke-linecap="round" />
-  <path d="M 98 70 L 118 67" stroke="#0A0A0A" stroke-width="4" stroke-linecap="round" />
-
-  <!-- Mulut Senyum Bahagia Terbuka -->
-  <path d="M 82 108 Q 90 118 98 108 Z" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="3" stroke-linejoin="round" />
-  <rect x="85" y="108" width="10" height="3" fill="#FFFFFF" />
-
-  <!-- LAYER 3: JAKET JEANS KEREN (DENIM TRUCKER JACKET) -->
-  <polygon points="84,118 104,118 101,144 87,144" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
-  <line x1="94" y1="124" x2="94" y2="140" stroke="#E2E8F0" stroke-width="2" stroke-linecap="round" />
-
-  <path d="M 42 118 L 84 120 L 87 144 L 42 144 Z" fill="#3A6B9B" stroke="#0A0A0A" stroke-width="3.5" stroke-linejoin="round" />
-  <path d="M 104 120 L 148 118 L 148 144 L 101 144 Z" fill="#3A6B9B" stroke="#0A0A0A" stroke-width="3.5" stroke-linejoin="round" />
-
-  <!-- Kerah Jaket Jeans (Denim Collar) -->
-  <polygon points="68,114 88,118 84,129 66,124" fill="#4B7EAE" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
-  <polygon points="120,114 100,118 104,129 122,124" fill="#4B7EAE" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
-
-  <!-- Saku Dada Jaket Jeans Kiri & Kanan -->
-  <polygon points="50,126 68,127 67,133 59,136 49,132" fill="#2D547C" stroke="#0A0A0A" stroke-width="2" stroke-linejoin="round" />
-  <circle cx="58" cy="131" r="1.6" fill="#E2E8F0" stroke="#0A0A0A" stroke-width="1" />
-
-  <polygon points="122,127 140,126 141,132 131,136 123,133" fill="#2D547C" stroke="#0A0A0A" stroke-width="2" stroke-linejoin="round" />
-  <circle cx="132" cy="131" r="1.6" fill="#E2E8F0" stroke="#0A0A0A" stroke-width="1" />
-
-  <!-- Jahitan Vertikal Emas Khas Jeans -->
-  <line x1="58" y1="136" x2="58" y2="144" stroke="#FFD60A" stroke-width="1.5" stroke-dasharray="3 2" />
-  <line x1="132" y1="136" x2="132" y2="144" stroke="#FFD60A" stroke-width="1.5" stroke-dasharray="3 2" />
-
-  <!-- Kancing Logam Perak Depan & Keliman Jaket -->
-  <circle cx="86" cy="126" r="2.2" fill="#E2E8F0" stroke="#0A0A0A" stroke-width="1.2" />
-  <circle cx="87.5" cy="136" r="2.2" fill="#E2E8F0" stroke="#0A0A0A" stroke-width="1.2" />
-  <rect x="42" y="140" width="106" height="4" fill="#2D547C" stroke="#0A0A0A" stroke-width="1.5" />
-
-  <!-- LAYER 4: TOPI SNAPBACK MIRING PINK & CYAN (DESAIN LAMA FAVORIT USER) -->
-  <path d="M 44 46 C 44 22 136 22 136 46 Z" fill="#0A0A0A" />
-  <path d="M 44 42 C 44 18 134 18 134 42 Z" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="4" />
-  <polygon points="24,38 92,38 88,46 20,46" fill="#00F0FF" stroke="#0A0A0A" stroke-width="3.5" stroke-linejoin="round" />
-  <circle cx="89" cy="18" r="4.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
-  <rect x="84" y="26" width="10" height="13" rx="2" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2" />
-  <circle cx="89" cy="35" r="1" fill="#0A0A0A" />
-
-  <!-- LAYER 5: SMARTPHONE MODERN DI SISI KANAN -->
-  <g>
-    <rect x="134" y="58" width="52" height="94" rx="8" fill="#0A0A0A" />
-    <rect x="128" y="52" width="52" height="94" rx="8" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="4" />
-    <rect x="132" y="56" width="44" height="86" rx="5" fill="#18181B" stroke="#0A0A0A" stroke-width="2" />
-
-    <rect x="146" y="60" width="16" height="4.5" rx="2.2" fill="#0A0A0A" />
-
-    <rect x="135" y="68" width="38" height="16" rx="3" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="1.5" />
-    <line x1="139" y1="73" x2="155" y2="73" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
-    <line x1="139" y1="78" x2="163" y2="78" stroke="#FFD60A" stroke-width="1.5" stroke-linecap="round" />
-
-    <rect x="136" y="89" width="10" height="10" rx="2.5" fill="#2EE59D" stroke="#0A0A0A" stroke-width="1.5" />
-    <rect x="150" y="89" width="10" height="10" rx="2.5" fill="#00F0FF" stroke="#0A0A0A" stroke-width="1.5" />
-    <rect x="164" y="89" width="8" height="10" rx="2.5" fill="#FF8A3D" stroke="#0A0A0A" stroke-width="1.5" />
-
-    <rect x="136" y="104" width="36" height="18" rx="3" fill="#00F0FF" stroke="#0A0A0A" stroke-width="1.5" />
-    <rect x="139" y="108" width="16" height="4" rx="1" fill="#0A0A0A" />
-    <circle cx="163" cy="113" r="3.5" fill="#2EE59D" stroke="#0A0A0A" stroke-width="1" />
-    <line x1="146" y1="136" x2="162" y2="136" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
-
-    <!-- EFEK TAP LAYAR: TOUCH RIPPLE DI TITIK KLIK JARI TELUNJUK TANGAN KIRI (x=154, y=110) -->
-    <circle cx="154" cy="110" r="8" fill="none" stroke="#00F0FF" stroke-width="2.5" />
-    <circle cx="154" cy="110" r="16" fill="none" stroke="#2EE59D" stroke-width="2" stroke-dasharray="4 3" />
-
-    <!-- TANGAN KANAN MENGGENGGAM SISI KANAN HP (KANAN POV USER) -->
-    <path d="M 136 142 Q 166 150 182 134" stroke="#0A0A0A" stroke-width="8" stroke-linecap="round" fill="none" />
-    <path d="M 136 142 Q 166 150 182 134" stroke="#3A6B9B" stroke-width="5" stroke-linecap="round" fill="none" />
-    <rect x="176" y="126" width="6" height="11" rx="1.5" fill="#244265" stroke="#0A0A0A" stroke-width="2" transform="rotate(-15 176 126)" />
-    <circle cx="180" cy="130" r="1.2" fill="#E2E8F0" />
-
-    <g transform="translate(177, 98)">
-      <rect x="0" y="2" width="7" height="6" rx="2.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
-      <rect x="0" y="9" width="7" height="6" rx="2.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
-      <rect x="0" y="16" width="7" height="6" rx="2.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
-      <rect x="0" y="23" width="6.5" height="5.5" rx="2.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
-      <ellipse cx="-1" cy="15" rx="3.5" ry="5.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2" />
+    <!-- Mata Kiri (Fokus Antusias ke Titik Tap Layar - Efek Kedip) -->
+    <g class="mob-animated-eye-left">
+      <rect x="58" y="74" width="20" height="24" rx="4" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3.5" />
+      <rect x="66" y="80" width="9" height="12" rx="2" fill="#0A0A0A" />
+      <circle cx="68.5" cy="82.5" r="1.5" fill="#FFFFFF" />
+      <circle cx="72" cy="87.5" r="1.2" fill="#00F0FF" />
     </g>
 
-    <!-- TANGAN KIRI MENGKLIK LAYAR PONSEL (TAPPING GESTURE) -->
-    <g>
-      <path d="M 66 128 Q 106 136 134 118" stroke="#0A0A0A" stroke-width="7" stroke-linecap="round" fill="none" />
-      <path d="M 66 128 Q 106 136 134 118" stroke="#3A6B9B" stroke-width="4.5" stroke-linecap="round" fill="none" />
-      <rect x="128" y="112" width="6" height="11" rx="1.5" fill="#244265" stroke="#0A0A0A" stroke-width="2" transform="rotate(-15 128 112)" />
-      <circle cx="131" cy="117" r="1.2" fill="#E2E8F0" />
-
-      <circle cx="138" cy="114" r="7" fill="#FFD60A" stroke="#0A0A0A" stroke-width="3" />
-      <path d="M 142 112 L 154 110 L 152 115 L 141 117 Z" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
-      <path d="M 134 108 Q 138 103 144 106" stroke="#0A0A0A" stroke-width="2.5" stroke-linecap="round" fill="none" />
+    <!-- Mata Kanan (Melirik Semangat ke Smartphone - Efek Kedip) -->
+    <g class="mob-animated-eye-right">
+      <rect x="96" y="74" width="20" height="24" rx="4" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3.5" />
+      <rect x="105" y="80" width="9" height="12" rx="2" fill="#0A0A0A" />
+      <circle cx="107.5" cy="82.5" r="1.5" fill="#FFFFFF" />
+      <circle cx="111" cy="87.5" r="1.2" fill="#00F0FF" />
     </g>
-  </g>
 
-  <!-- LAYER 6: PUSH NOTIFICATION CARD (BERSIH, TANPA BINTANG 4 SISI) -->
-  <g transform="translate(14, 52)">
-    <rect x="3" y="3" width="34" height="24" rx="4" fill="#0A0A0A" />
-    <rect x="0" y="0" width="34" height="24" rx="4" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.5" />
-    <rect x="4" y="4" width="12" height="4" rx="1.5" fill="#FF5C8A" />
-    <path d="M 6 13 Q 6 10 10 10 Q 14 10 14 13 Q 14 15 12 16 L 13 18 L 10 16 Q 6 16 6 13 Z" fill="#2EE59D" stroke="#0A0A0A" stroke-width="1.2" stroke-linejoin="round" />
-    <circle cx="25" cy="12" r="5.5" fill="#F43F5E" stroke="#0A0A0A" stroke-width="1.5" />
-    <text x="22" y="14.5" font-family="monospace" font-size="6.5" font-weight="900" fill="#FFFFFF">1</text>
-    <polygon points="14,24 20,24 16,28" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.5" />
+    <!-- Alis Energik Keren -->
+    <path d="M 56 68 L 78 70" stroke="#0A0A0A" stroke-width="4" stroke-linecap="round" />
+    <path d="M 98 70 L 118 67" stroke="#0A0A0A" stroke-width="4" stroke-linecap="round" />
+
+    <!-- Mulut Senyum Bahagia Terbuka -->
+    <path d="M 82 108 Q 90 118 98 108 Z" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="3" stroke-linejoin="round" />
+    <rect x="85" y="108" width="10" height="3" fill="#FFFFFF" />
+
+    <!-- LAYER 3: JAKET JEANS KEREN (DENIM TRUCKER JACKET) -->
+    <polygon points="84,118 104,118 101,144 87,144" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
+    <line x1="94" y1="124" x2="94" y2="140" stroke="#E2E8F0" stroke-width="2" stroke-linecap="round" />
+
+    <path d="M 42 118 L 84 120 L 87 144 L 42 144 Z" fill="#3A6B9B" stroke="#0A0A0A" stroke-width="3.5" stroke-linejoin="round" />
+    <path d="M 104 120 L 148 118 L 148 144 L 101 144 Z" fill="#3A6B9B" stroke="#0A0A0A" stroke-width="3.5" stroke-linejoin="round" />
+
+    <!-- Kerah Jaket Jeans (Denim Collar) -->
+    <polygon points="68,114 88,118 84,129 66,124" fill="#4B7EAE" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
+    <polygon points="120,114 100,118 104,129 122,124" fill="#4B7EAE" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
+
+    <!-- Saku Dada Jaket Jeans Kiri & Kanan -->
+    <polygon points="50,126 68,127 67,133 59,136 49,132" fill="#2D547C" stroke="#0A0A0A" stroke-width="2" stroke-linejoin="round" />
+    <circle cx="58" cy="131" r="1.6" fill="#E2E8F0" stroke="#0A0A0A" stroke-width="1" />
+
+    <polygon points="122,127 140,126 141,132 131,136 123,133" fill="#2D547C" stroke="#0A0A0A" stroke-width="2" stroke-linejoin="round" />
+    <circle cx="132" cy="131" r="1.6" fill="#E2E8F0" stroke="#0A0A0A" stroke-width="1" />
+
+    <!-- Jahitan Vertikal Emas Khas Jeans -->
+    <line x1="58" y1="136" x2="58" y2="144" stroke="#FFD60A" stroke-width="1.5" stroke-dasharray="3 2" />
+    <line x1="132" y1="136" x2="132" y2="144" stroke="#FFD60A" stroke-width="1.5" stroke-dasharray="3 2" />
+
+    <!-- Kancing Logam Perak Depan & Keliman Jaket -->
+    <circle cx="86" cy="126" r="2.2" fill="#E2E8F0" stroke="#0A0A0A" stroke-width="1.2" />
+    <circle cx="87.5" cy="136" r="2.2" fill="#E2E8F0" stroke="#0A0A0A" stroke-width="1.2" />
+    <rect x="42" y="140" width="106" height="4" fill="#2D547C" stroke="#0A0A0A" stroke-width="1.5" />
+
+    <!-- LAYER 4: TOPI SNAPBACK MIRING PINK & CYAN (DESAIN LAMA FAVORIT USER) -->
+    <path d="M 44 46 C 44 22 136 22 136 46 Z" fill="#0A0A0A" />
+    <path d="M 44 42 C 44 18 134 18 134 42 Z" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="4" />
+    <polygon points="24,38 92,38 88,46 20,46" fill="#00F0FF" stroke="#0A0A0A" stroke-width="3.5" stroke-linejoin="round" />
+    <circle cx="89" cy="18" r="4.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
+    <rect x="84" y="26" width="10" height="13" rx="2" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2" />
+    <circle cx="89" cy="35" r="1" fill="#0A0A0A" />
+
+    <!-- LAYER 5: SMARTPHONE MODERN DI SISI KANAN -->
+    <g class="mob-animated-phone">
+      <rect x="134" y="58" width="52" height="94" rx="8" fill="#0A0A0A" />
+      <rect x="128" y="52" width="52" height="94" rx="8" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="4" />
+      <rect x="132" y="56" width="44" height="86" rx="5" fill="#18181B" stroke="#0A0A0A" stroke-width="2" />
+
+      <!-- Dynamic Island / Notch Sensor -->
+      <rect x="146" y="60" width="16" height="4.5" rx="2.2" fill="#0A0A0A" />
+
+      <!-- Scrollbar Indicator di Sisi Kanan Bezel Layar -->
+      <rect x="171.5" y="68" width="1.5" height="10" rx="0.75" fill="#FFFFFF" opacity="0.6" class="mob-animated-scrollbar" />
+
+      <!-- Konten Feed Layar Interaktif yang Sedang Aktif Scrolling -->
+      <g clip-path="url(#mob-screen-viewport)">
+        <g class="mob-animated-feed">
+          <!-- ITEM 1 (y=67..87): Hero / Story Header Card -->
+          <g id="mob-feed-item-1">
+            <rect x="135" y="67" width="38" height="20" rx="3" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="1.2" />
+            <circle cx="142" cy="74" r="3" fill="#FFFFFF" />
+            <line x1="147" y1="73" x2="168" y2="73" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" />
+            <line x1="147" y1="77" x2="162" y2="77" stroke="#FFD60A" stroke-width="1.2" stroke-linecap="round" />
+            <rect x="139" y="81" width="16" height="3.5" rx="1" fill="#0A0A0A" />
+            <circle cx="166" cy="82" r="1.8" fill="#FFFFFF" />
+          </g>
+
+          <!-- ITEM 2 (y=91..111): Cyan Interactive Card (Titik Tap Terjadi x=154, y=106.5) -->
+          <g id="mob-feed-item-2">
+            <rect x="135" y="91" width="38" height="20" rx="3" fill="#00F0FF" stroke="#0A0A0A" stroke-width="1.2" />
+            <rect x="138" y="94" width="6" height="6" rx="1.5" fill="#0A0A0A" />
+            <line x1="147" y1="96" x2="168" y2="96" stroke="#0A0A0A" stroke-width="1.5" stroke-linecap="round" />
+            <line x1="147" y1="100" x2="160" y2="100" stroke="#0A0A0A" stroke-width="1.2" stroke-linecap="round" />
+            <rect x="138" y="104" width="22" height="5" rx="1.5" fill="#0A0A0A" />
+            <circle cx="154" cy="106.5" r="1.8" fill="#2EE59D" />
+            <circle cx="166" cy="106" r="2.5" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="0.8" />
+          </g>
+
+          <!-- ITEM 3 (y=115..135): Modern Code & Terminal Card -->
+          <g id="mob-feed-item-3">
+            <rect x="135" y="115" width="38" height="20" rx="3" fill="#27272A" stroke="#0A0A0A" stroke-width="1.2" />
+            <text x="138" y="123" fill="#2EE59D" font-size="6" font-family="monospace" font-weight="bold">&gt;</text>
+            <line x1="145" y1="121" x2="168" y2="121" stroke="#00F0FF" stroke-width="1.5" stroke-linecap="round" />
+            <line x1="138" y1="126" x2="158" y2="126" stroke="#FFD60A" stroke-width="1.2" stroke-linecap="round" />
+            <rect x="138" y="129" width="14" height="4" rx="1" fill="#FF8A3D" />
+            <circle cx="166" cy="131" r="2" fill="#2EE59D" />
+          </g>
+
+          <!-- ITEM 1 DUPLIKAT (y=139..159): Loop Mulus Tanpa Sambungan -->
+          <g id="mob-feed-item-1-dup">
+            <rect x="135" y="139" width="38" height="20" rx="3" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="1.2" />
+            <circle cx="142" cy="146" r="3" fill="#FFFFFF" />
+            <line x1="147" y1="145" x2="168" y2="145" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" />
+            <line x1="147" y1="149" x2="162" y2="149" stroke="#FFD60A" stroke-width="1.2" stroke-linecap="round" />
+            <rect x="139" y="153" width="16" height="3.5" rx="1" fill="#0A0A0A" />
+            <circle cx="166" cy="154" r="1.8" fill="#FFFFFF" />
+          </g>
+
+          <!-- ITEM 2 DUPLIKAT (y=163..183): Loop Mulus Tanpa Sambungan -->
+          <g id="mob-feed-item-2-dup">
+            <rect x="135" y="163" width="38" height="20" rx="3" fill="#00F0FF" stroke="#0A0A0A" stroke-width="1.2" />
+            <rect x="138" y="166" width="6" height="6" rx="1.5" fill="#0A0A0A" />
+            <line x1="147" y1="168" x2="168" y2="168" stroke="#0A0A0A" stroke-width="1.5" stroke-linecap="round" />
+            <line x1="147" y1="172" x2="160" y2="172" stroke="#0A0A0A" stroke-width="1.2" stroke-linecap="round" />
+            <rect x="138" y="176" width="22" height="5" rx="1.5" fill="#0A0A0A" />
+            <circle cx="154" cy="178.5" r="1.8" fill="#2EE59D" />
+            <circle cx="166" cy="178" r="2.5" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="0.8" />
+          </g>
+
+          <!-- ITEM 3 DUPLIKAT (y=187..207): Loop Mulus Tanpa Sambungan -->
+          <g id="mob-feed-item-3-dup">
+            <rect x="135" y="187" width="38" height="20" rx="3" fill="#27272A" stroke="#0A0A0A" stroke-width="1.2" />
+            <text x="138" y="195" fill="#2EE59D" font-size="6" font-family="monospace" font-weight="bold">&gt;</text>
+            <line x1="145" y1="193" x2="168" y2="193" stroke="#00F0FF" stroke-width="1.5" stroke-linecap="round" />
+            <line x1="138" y1="198" x2="158" y2="198" stroke="#FFD60A" stroke-width="1.2" stroke-linecap="round" />
+            <rect x="138" y="201" width="14" height="4" rx="1" fill="#FF8A3D" />
+            <circle cx="166" cy="203" r="2" fill="#2EE59D" />
+          </g>
+        </g>
+      </g>
+
+      <!-- Home Indicator Bar Putih (Fixed di Bawah) -->
+      <line x1="146" y1="136" x2="162" y2="136" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+
+      <!-- EFEK TAP LAYAR: TOUCH RIPPLE DI TITIK KLIK JARI TELUNJUK TANGAN KIRI (x=154, y=110) -->
+      <circle cx="154" cy="110" r="8" fill="none" stroke="#00F0FF" stroke-width="2.5" class="mob-animated-ripple1" />
+      <circle cx="154" cy="110" r="16" fill="none" stroke="#2EE59D" stroke-width="2" stroke-dasharray="4 3" class="mob-animated-ripple2" />
+
+      <!-- TANGAN KANAN MENGGENGGAM SISI KANAN HP (KANAN POV USER) -->
+      <path d="M 136 142 Q 166 150 182 134" stroke="#0A0A0A" stroke-width="8" stroke-linecap="round" fill="none" />
+      <path d="M 136 142 Q 166 150 182 134" stroke="#3A6B9B" stroke-width="5" stroke-linecap="round" fill="none" />
+      <rect x="176" y="126" width="6" height="11" rx="1.5" fill="#244265" stroke="#0A0A0A" stroke-width="2" transform="rotate(-15 176 126)" />
+      <circle cx="180" cy="130" r="1.2" fill="#E2E8F0" />
+
+      <g transform="translate(177, 98)">
+        <rect x="0" y="2" width="7" height="6" rx="2.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
+        <rect x="0" y="9" width="7" height="6" rx="2.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
+        <rect x="0" y="16" width="7" height="6" rx="2.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
+        <rect x="0" y="23" width="6.5" height="5.5" rx="2.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
+        <ellipse cx="-1" cy="15" rx="3.5" ry="5.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2" />
+      </g>
+
+      <!-- TANGAN KIRI MENGKLIK LAYAR PONSEL (TAPPING GESTURE) -->
+      <g class="mob-animated-click">
+        <path d="M 66 128 Q 106 136 134 118" stroke="#0A0A0A" stroke-width="7" stroke-linecap="round" fill="none" />
+        <path d="M 66 128 Q 106 136 134 118" stroke="#3A6B9B" stroke-width="4.5" stroke-linecap="round" fill="none" />
+        <rect x="128" y="112" width="6" height="11" rx="1.5" fill="#244265" stroke="#0A0A0A" stroke-width="2" transform="rotate(-15 128 112)" />
+        <circle cx="131" cy="117" r="1.2" fill="#E2E8F0" />
+
+        <circle cx="138" cy="114" r="7" fill="#FFD60A" stroke="#0A0A0A" stroke-width="3" />
+        <path d="M 142 112 L 154 110 L 152 115 L 141 117 Z" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
+        <path d="M 134 108 Q 138 103 144 106" stroke="#0A0A0A" stroke-width="2.5" stroke-linecap="round" fill="none" />
+      </g>
+    </g>
+
+    <!-- LAYER 6: PUSH NOTIFICATION CARD DI ATAS PONSEL -->
+    <g transform="translate(137, 16)">
+      <g class="mob-animated-notify">
+      <rect x="3" y="3" width="34" height="24" rx="4" fill="#0A0A0A" />
+      <rect x="0" y="0" width="34" height="24" rx="4" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.5" />
+      <rect x="4" y="4" width="12" height="4" rx="1.5" fill="#FF5C8A" />
+      <path d="M 6 13 Q 6 10 10 10 Q 14 10 14 13 Q 14 15 12 16 L 13 18 L 10 16 Q 6 16 6 13 Z" fill="#2EE59D" stroke="#0A0A0A" stroke-width="1.2" stroke-linejoin="round" />
+      <circle cx="25" cy="12" r="5.5" fill="#F43F5E" stroke="#0A0A0A" stroke-width="1.5" />
+      <text x="22" y="14.5" font-family="monospace" font-size="6.5" font-weight="900" fill="#FFFFFF">1</text>
+      <polygon points="14,24 20,24 17,29" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.5" />
+      </g>
+    </g>
   </g>
 </svg>

@@ -1,111 +1,515 @@
 <svg viewBox="0 0 200 200" width="200" height="200" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- MASKOT NETWORK ENGINEER — "THE CONNECTOR / THE SPLICER" -->
-  <!-- Proyek: JalanITku · Sutradara Visual: Matatabi -->
-  <!-- Standar: 100% Konsisten Base Model Batch 1 dengan Gelombang Shockwave Murni Keluar Karakter Tanpa Garis-Garis Penutup -->
-
-  <!-- LAYER 1: KAKI & SEPATU HITAM DENGAN SOL PUTIH (IDENTIK BATCH 1) -->
-  <rect x="68" y="154" width="22" height="24" fill="#0A0A0A" />
-  <rect x="114" y="154" width="22" height="24" fill="#0A0A0A" />
-
-  <rect x="64" y="148" width="22" height="26" fill="#0A0A0A" rx="2" stroke="#0A0A0A" stroke-width="3.5" />
-  <line x1="64" y1="170" x2="86" y2="170" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="square" />
-
-  <rect x="110" y="148" width="22" height="26" fill="#0A0A0A" rx="2" stroke="#0A0A0A" stroke-width="3.5" />
-  <line x1="110" y1="170" x2="132" y2="170" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="square" />
-
-  <!-- LAYER 2: BADAN PAPAN RAMBU KUNING NEO-BRUTALISM (IDENTIK BATCH 1) -->
-  <rect x="48" y="56" width="106" height="94" rx="4" fill="#0A0A0A" />
-  <rect x="42" y="50" width="106" height="94" rx="4" fill="#FFD60A" stroke="#0A0A0A" stroke-width="4" />
-
-  <!-- Marka Jalan Putus-Putus Perut -->
-  <line x1="54" y1="134" x2="136" y2="134" stroke="#0A0A0A" stroke-width="3.5" stroke-dasharray="8 6" />
-
-  <!-- Pipi Merona Pink -->
-  <rect x="52" y="106" width="12" height="7" rx="2" fill="#FF5C8A" />
-  <rect x="124" y="106" width="12" height="7" rx="2" fill="#FF5C8A" />
-
-  <!-- LAYER 3: MATA & MULUT (IDENTIK BATCH 1) -->
-  <rect x="58" y="76" width="22" height="24" rx="4" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3.5" />
-  <rect x="64" y="81" width="11" height="13" rx="2" fill="#0A0A0A" />
-  <circle cx="67" cy="84" r="1.5" fill="#FFFFFF" />
-  <circle cx="70" cy="88" r="1.2" fill="#00F0FF" />
-
-  <rect x="102" y="76" width="22" height="24" rx="4" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3.5" />
-  <rect x="108" y="81" width="11" height="13" rx="2" fill="#0A0A0A" />
-  <circle cx="111" cy="84" r="1.5" fill="#FFFFFF" />
-  <circle cx="114" cy="88" r="1.2" fill="#00F0FF" />
-
-  <line x1="58" y1="71" x2="78" y2="72" stroke="#0A0A0A" stroke-width="3.5" stroke-linecap="round" />
-  <line x1="102" y1="72" x2="122" y2="71" stroke="#0A0A0A" stroke-width="3.5" stroke-linecap="round" />
-
-  <path d="M 87 114 Q 94 123 102 114" stroke="#0A0A0A" stroke-width="3.5" fill="none" stroke-linecap="round" />
-
-  <!-- LAYER 4: KACAMATA VISOR SERAT OPTIK HUD DATA STREAM CYAN -->
-  <line x1="42" y1="84" x2="52" y2="84" stroke="#0A0A0A" stroke-width="4" />
-  <line x1="138" y1="84" x2="148" y2="84" stroke="#0A0A0A" stroke-width="4" />
-
-  <rect x="54" y="72" width="86" height="34" rx="4" fill="#0A0A0A" fill-opacity="0.4" />
-  <rect x="50" y="69" width="88" height="34" rx="4" fill="#00F0FF" fill-opacity="0.25" stroke="#0A0A0A" stroke-width="3.5" />
-  <rect x="50" y="69" width="88" height="7" rx="2" fill="#00F0FF" stroke="#0A0A0A" stroke-width="2" />
-
-  <rect x="56" y="71" width="3" height="3" fill="#2EE59D" />
-  <rect x="61" y="71" width="5" height="3" fill="#2EE59D" />
-  <rect x="68" y="71" width="7" height="3" fill="#2EE59D" />
-  <text x="126" y="75" fill="#0A0A0A" font-size="5" font-weight="bold" font-family="monospace">10G</text>
-
-  <line x1="55" y1="75" x2="65" y2="100" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-opacity="0.8" />
-  <line x1="123" y1="75" x2="133" y2="100" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-opacity="0.8" />
-
-  <!-- LAYER 5: ANTENA ROUTER KEMBAR DI KEPALA -->
-  <line x1="68" y1="50" x2="62" y2="24" stroke="#0A0A0A" stroke-width="5" stroke-linecap="round" />
-  <circle cx="62" cy="22" r="5" fill="#00F0FF" stroke="#0A0A0A" stroke-width="2.5" />
-  <circle cx="62" cy="22" r="1.5" fill="#FFFFFF" />
-
-  <line x1="122" y1="50" x2="128" y2="24" stroke="#0A0A0A" stroke-width="5" stroke-linecap="round" />
-  <circle cx="128" cy="22" r="5" fill="#00F0FF" stroke="#0A0A0A" stroke-width="2.5" />
-  <circle cx="128" cy="22" r="1.5" fill="#FFFFFF" />
-
-  <!-- Kerah Kemeja Teknisi Cyan -->
-  <polygon points="78,144 94,144 88,132" fill="#00F0FF" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
-  <polygon points="110,144 94,144 100,132" fill="#00F0FF" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
-  <rect x="91" y="132" width="7" height="6" fill="#2EE59D" stroke="#0A0A0A" stroke-width="2" />
-
-  <!-- LAYER 6: EFEK SHOCKWAVE MURNI KELUAR DARI KARAKTER (TANPA GARIS LAIN) -->
-  <circle cx="94" cy="123" r="48" fill="none" stroke="#00F0FF" stroke-width="3.5" />
-  <circle cx="94" cy="123" r="72" fill="none" stroke="#2EE59D" stroke-width="2.8" stroke-dasharray="6 4" />
-  <circle cx="94" cy="123" r="94" fill="none" stroke="#FFD60A" stroke-width="2" stroke-dasharray="4 6" />
-
-  <!-- LAYER 7: TANGAN KIRI & KABEL TERPUTUS SISI A -->
-  <path d="M 44 136 C 30 136 28 126 62 122" stroke="#0A0A0A" stroke-width="7" fill="none" stroke-linecap="round" />
-  <path d="M 44 136 C 30 136 28 126 62 122" stroke="#00F0FF" stroke-width="4.5" fill="none" stroke-linecap="round" />
-
-  <path d="M 62 122 L 80 123" stroke="#0A0A0A" stroke-width="6" fill="none" />
-  <path d="M 62 122 L 80 123" stroke="#00F0FF" stroke-width="3.5" fill="none" />
-
-  <line x1="80" y1="121" x2="88" y2="119" stroke="#FFD60A" stroke-width="1.8" stroke-linecap="round" />
-  <line x1="80" y1="123" x2="90" y2="123" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" />
-  <line x1="80" y1="125" x2="87" y2="127" stroke="#00F0FF" stroke-width="1.8" stroke-linecap="round" />
-
-  <path d="M 42 110 Q 52 116 68 122" stroke="#0A0A0A" stroke-width="6" stroke-linecap="round" fill="none" />
-  <circle cx="68" cy="122" r="6.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="3.5" />
-
-  <!-- LAYER 8: TANGAN KANAN & KABEL TERPUTUS SISI B -->
-  <path d="M 144 136 C 158 136 160 126 126 122" stroke="#0A0A0A" stroke-width="7" fill="none" stroke-linecap="round" />
-  <path d="M 144 136 C 158 136 160 126 126 122" stroke="#00F0FF" stroke-width="4.5" fill="none" stroke-linecap="round" />
-
-  <path d="M 126 122 L 108 123" stroke="#0A0A0A" stroke-width="6" fill="none" />
-  <path d="M 126 122 L 108 123" stroke="#00F0FF" stroke-width="3.5" fill="none" />
-
-  <line x1="108" y1="121" x2="100" y2="119" stroke="#FFD60A" stroke-width="1.8" stroke-linecap="round" />
-  <line x1="108" y1="123" x2="98" y2="123" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" />
-  <line x1="108" y1="125" x2="101" y2="127" stroke="#00F0FF" stroke-width="1.8" stroke-linecap="round" />
-
-  <path d="M 148 110 Q 138 116 122 122" stroke="#0A0A0A" stroke-width="6" stroke-linecap="round" fill="none" />
-  <circle cx="122" cy="122" r="6.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="3.5" />
-
-  <!-- LAYER 9: PERCIKAN SPARK LISTRIK DI PUSAT PERTEMUAN KABEL -->
-  <polygon points="94,116 96,122 102,123 96,125 94,131 92,125 86,123 92,122" fill="#FFD60A" stroke="#0A0A0A" stroke-width="1.2" />
-  <circle cx="94" cy="123.5" r="2.4" fill="#FFFFFF" />
-  <polygon points="99,117 100,119 103,119.5 100,120.5 99,122.5 98,120.5 96,119.5 98,119" fill="#00F0FF" />
-  <polygon points="89,126 90,128 92,128.5 90,129.5 89,131.5 88,129.5 86,128.5 88,128" fill="#FF8A3D" />
-</svg>
+          <!-- MASKOT NETWORK ENGINEER — "THE OCTO-ROUTER" -->
+          <!-- Proyek: JalanITku · Sutradara Visual: Matatabi (Ekor Dua) -->
+          <!-- Konsep Visual: Non-Futuristik Rogue Network Mastermind · 4 Tentakel Kabel Putus Coklat Tua (#381E0D) · Klem Ferrule & 3 Capit Baja Dr. Octopus (Spider-Man) · Kabel Inti RGB (#EF4444, #10B981, #2563EB) & Tembaga Terbuka · Efek Petir Listrik Konslet Bertegangan Tinggi · Baju Kerja Kemeja Coklat Klasik · Senyum Seringai Jahat & Tanpa Kacamata · Base Model JalanMin Neo-Brutalism -->
+        
+          <defs>
+            <style>
+              @keyframes net-float {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-3.5px); }
+              }
+              @keyframes net-tentacle-tl {
+                0%, 100% { transform: rotate(0deg); }
+                50% { transform: rotate(-3deg) scale(1.02); }
+              }
+              @keyframes net-tentacle-tr {
+                0%, 100% { transform: rotate(0deg); }
+                50% { transform: rotate(3deg) scale(1.02); }
+              }
+              @keyframes net-tentacle-bl {
+                0%, 100% { transform: rotate(0deg); }
+                50% { transform: rotate(-2.5deg); }
+              }
+              @keyframes net-tentacle-br {
+                0%, 100% { transform: rotate(0deg); }
+                50% { transform: rotate(2.5deg); }
+              }
+              @keyframes net-short-circuit-1 {
+                0%, 100% { opacity: 0.95; transform: scale(1) rotate(0deg); }
+                20% { opacity: 0.25; transform: scale(0.85) rotate(-6deg); }
+                40% { opacity: 1; transform: scale(1.22) rotate(7deg); }
+                60% { opacity: 0.35; transform: scale(0.9) rotate(-3deg); }
+                80% { opacity: 1; transform: scale(1.28) rotate(5deg); }
+              }
+              @keyframes net-short-circuit-2 {
+                0%, 100% { opacity: 0.35; transform: scale(0.9) rotate(5deg); }
+                25% { opacity: 1; transform: scale(1.25) rotate(-7deg); }
+                50% { opacity: 0.25; transform: scale(0.85) rotate(4deg); }
+                75% { opacity: 1; transform: scale(1.2) rotate(-5deg); }
+              }
+              @keyframes net-spark-pop {
+                0%, 100% { opacity: 0.2; transform: scale(0.6); }
+                50% { opacity: 1; transform: scale(1.35); }
+              }
+              .net-animated-body {
+                animation: net-float 3.5s ease-in-out infinite;
+                transform-origin: center bottom;
+              }
+              .net-anim-tentacle-tl {
+                animation: net-tentacle-tl 4s ease-in-out infinite;
+                transform-origin: 68px 86px;
+              }
+              .net-anim-tentacle-tr {
+                animation: net-tentacle-tr 4s ease-in-out infinite 0.5s;
+                transform-origin: 122px 86px;
+              }
+              .net-anim-tentacle-bl {
+                animation: net-tentacle-bl 3.8s ease-in-out infinite 0.25s;
+                transform-origin: 65px 116px;
+              }
+              .net-anim-tentacle-br {
+                animation: net-tentacle-br 3.8s ease-in-out infinite 0.75s;
+                transform-origin: 125px 116px;
+              }
+              .net-anim-zap-tl {
+                animation: net-short-circuit-1 0.28s steps(2, start) infinite;
+                transform-origin: 28px 24px;
+              }
+              .net-anim-zap-tr {
+                animation: net-short-circuit-2 0.24s steps(2, start) infinite;
+                transform-origin: 162px 24px;
+              }
+              .net-anim-zap-bl {
+                animation: net-short-circuit-2 0.3s steps(2, start) infinite;
+                transform-origin: 30px 165px;
+              }
+              .net-anim-zap-br {
+                animation: net-short-circuit-1 0.26s steps(2, start) infinite;
+                transform-origin: 160px 165px;
+              }
+              .net-anim-spark {
+                animation: net-spark-pop 0.6s ease-in-out infinite;
+              }
+            </style>
+          </defs>
+        
+          <!-- CONTAINER UTAMA -->
+          <g class="net-animated-body">
+            <!-- ============================================================== -->
+            <!-- LAYER 0: 4 TENTAKEL KABEL PUTUS COKLAT TUA DENGAN CAPIT 3 TITIK -->
+            <!-- ============================================================== -->
+            <g id="octo-cable-tentacles">
+              <!-- - TENTAKEL 1: KIRI ATAS (TOP-LEFT) - -->
+              <g class="net-anim-tentacle-tl">
+                <!-- Hard Drop Shadow Kabel -->
+                <path d="M 72 90 C 46 90 20 76 24 54 C 26 44 32 38 38 35" stroke="#0A0A0A" stroke-width="14" fill="none" stroke-linecap="round" />
+                <!-- Outline Hitam Tebal Kabel -->
+                <path d="M 68 86 C 42 86 16 72 20 50 C 22 40 28 34 34 31" stroke="#0A0A0A" stroke-width="12" fill="none" stroke-linecap="round" />
+                <!-- Selongsong Luar Kabel Coklat Tua Pekat (#381E0D - Lebih Gelap dari Baju) -->
+                <path d="M 68 86 C 42 86 16 72 20 50 C 22 40 28 34 34 31" stroke="#381E0D" stroke-width="7.5" fill="none" stroke-linecap="round" />
+                <!-- Gelang Spiral / Ribbed Industrial Conduit (#241208) -->
+                <path d="M 68 86 C 42 86 16 72 20 50 C 22 40 28 34 34 31" stroke="#241208" stroke-width="7.5" fill="none" stroke-linecap="round" stroke-dasharray="3 4.5" />
+                <!-- Highlight Punggung Kabel Coklat (#522D16) -->
+                <path d="M 68 86 C 42 86 16 72 20 50 C 22 40 28 34 34 31" stroke="#522D16" stroke-width="1.6" fill="none" stroke-linecap="round" />
+        
+                <!-- SELONGSONG KLEM LOGAM KABEL TERPOTONG (Severed Ferrule Sleeve) -->
+                <polygon points="26,37 36,32 33,25 23,30" fill="#262626" stroke="#0A0A0A" stroke-width="2.5" />
+                <!-- Cincin Klem Tembaga Industri -->
+                <line x1="25" y1="34" x2="34" y2="29.5" stroke="#B45309" stroke-width="2" />
+                <!-- Bukaan Ujung Kabel Terpotong -->
+                <ellipse cx="28.5" cy="27.5" rx="4.8" ry="2.8" fill="#18181B" stroke="#0A0A0A" stroke-width="1.8" transform="rotate(-30 28.5 27.5)" />
+        
+                <!-- CAPIT 3 TITIK DR. OCTOPUS (Spider-Man 3-Prong Claws - Bilah Baja Solid) -->
+                <!-- Capit 1: Cakar Luar/Kiri (Upper-Outer Claw) -->
+                <g id="tl-claw-1">
+                  <polygon points="24,27 16,23 13,17 19,20 25,25" fill="#475569" stroke="#0A0A0A" stroke-width="2.2" stroke-linejoin="round" />
+                  <polygon points="19,20 13,17 18,22" fill="#94A3B8" />
+                  <circle cx="24.5" cy="26.5" r="2" fill="#CBD5E1" stroke="#0A0A0A" stroke-width="1.2" />
+                </g>
+        
+                <!-- Capit 2: Cakar Puncak/Tengah (Top-Center Claw) -->
+                <g id="tl-claw-2">
+                  <polygon points="27,24 26,14 29,9 31,16 29,24" fill="#475569" stroke="#0A0A0A" stroke-width="2.2" stroke-linejoin="round" />
+                  <polygon points="31,16 29,9 28,15" fill="#94A3B8" />
+                  <circle cx="28" cy="24.5" r="2" fill="#CBD5E1" stroke="#0A0A0A" stroke-width="1.2" />
+                </g>
+        
+                <!-- Capit 3: Cakar Dalam/Kanan (Inner-Right Claw) -->
+                <g id="tl-claw-3">
+                  <polygon points="31,27 38,22 43,18 41,24 33,28" fill="#475569" stroke="#0A0A0A" stroke-width="2.2" stroke-linejoin="round" />
+                  <polygon points="41,24 43,18 37,23" fill="#94A3B8" />
+                  <circle cx="31.5" cy="27" r="2" fill="#CBD5E1" stroke="#0A0A0A" stroke-width="1.2" />
+                </g>
+        
+                <!-- KABEL SERABUT INTI RGB (Red, Green, Blue) DALAM CAPIT -->
+                <!-- Kawat 1: MERAH (#EF4444) ke Capit Luar -->
+                <path d="M 27 27 Q 20 26 17 21" stroke="#EF4444" stroke-width="2.6" stroke-linecap="round" fill="none" />
+                <path d="M 27 27 Q 20 26 17 21" stroke="#F87171" stroke-width="0.8" stroke-linecap="round" fill="none" />
+                <circle cx="16" cy="20" r="1.5" fill="#F59E0B" stroke="#0A0A0A" stroke-width="0.8" />
+                <circle cx="15.7" cy="19.7" r="0.6" fill="#FEF08A" />
+        
+                <!-- Kawat 2: HIJAU (#10B981) ke Capit Tengah -->
+                <path d="M 28 26 L 28 15" stroke="#10B981" stroke-width="2.6" stroke-linecap="round" fill="none" />
+                <path d="M 28 26 L 28 15" stroke="#34D399" stroke-width="0.8" stroke-linecap="round" fill="none" />
+                <circle cx="28" cy="14" r="1.5" fill="#F59E0B" stroke="#0A0A0A" stroke-width="0.8" />
+                <circle cx="27.7" cy="13.7" r="0.6" fill="#FEF08A" />
+        
+                <!-- Kawat 3: BIRU (#2563EB) ke Capit Dalam -->
+                <path d="M 30 27 Q 36 25 39 21" stroke="#2563EB" stroke-width="2.6" stroke-linecap="round" fill="none" />
+                <path d="M 30 27 Q 36 25 39 21" stroke="#60A5FA" stroke-width="0.8" stroke-linecap="round" fill="none" />
+                <circle cx="40" cy="20" r="1.5" fill="#F59E0B" stroke="#0A0A0A" stroke-width="0.8" />
+                <circle cx="39.7" cy="19.7" r="0.6" fill="#FEF08A" />
+        
+                <!-- EFEK PETIR KONSLET (Short-Circuit Lightning Arcs & Sparks) -->
+                <g class="net-anim-zap-tl">
+                  <path d="M 14 18 L 19 22 L 16 25 L 23 23 L 28 14 L 32 20 L 37 17 L 43 18" stroke="#FFD60A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                  <path d="M 16 19 L 20 22 L 23 21 L 28 15 L 32 19 L 36 18 L 40 19" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                  <polygon points="22,15 23,17 25,18 23,19 22,21 21,19 19,18 21,17" fill="#FFFFFF" />
+                  <polygon points="35,12 36,14 38,15 36,16 35,18 34,16 32,15 34,14" fill="#FFD60A" />
+                  <circle cx="17" cy="14" r="1.3" fill="#FFD60A" />
+                  <circle cx="42" cy="14" r="1.3" fill="#FFFFFF" />
+                </g>
+              </g>
+        
+              <!-- - TENTAKEL 2: KANAN ATAS (TOP-RIGHT) - -->
+              <g class="net-anim-tentacle-tr">
+                <!-- Hard Drop Shadow Kabel -->
+                <path d="M 126 90 C 152 90 178 76 174 54 C 172 44 166 38 160 35" stroke="#0A0A0A" stroke-width="14" fill="none" stroke-linecap="round" />
+                <!-- Outline Hitam Tebal Kabel -->
+                <path d="M 122 86 C 148 86 174 72 170 50 C 168 40 162 34 156 31" stroke="#0A0A0A" stroke-width="12" fill="none" stroke-linecap="round" />
+                <!-- Selongsong Luar Kabel Coklat Tua Pekat (#381E0D) -->
+                <path d="M 122 86 C 148 86 174 72 170 50 C 168 40 162 34 156 31" stroke="#381E0D" stroke-width="7.5" fill="none" stroke-linecap="round" />
+                <!-- Gelang Spiral / Ribbed Conduit (#241208) -->
+                <path d="M 122 86 C 148 86 174 72 170 50 C 168 40 162 34 156 31" stroke="#241208" stroke-width="7.5" fill="none" stroke-linecap="round" stroke-dasharray="3 4.5" />
+                <!-- Highlight Punggung Kabel (#522D16) -->
+                <path d="M 122 86 C 148 86 174 72 170 50 C 168 40 162 34 156 31" stroke="#522D16" stroke-width="1.6" fill="none" stroke-linecap="round" />
+        
+                <!-- SELONGSONG KLEM LOGAM KABEL TERPOTONG -->
+                <polygon points="164,37 154,32 157,25 167,30" fill="#262626" stroke="#0A0A0A" stroke-width="2.5" />
+                <!-- Cincin Klem Tembaga Industri -->
+                <line x1="165" y1="34" x2="156" y2="29.5" stroke="#B45309" stroke-width="2" />
+                <!-- Bukaan Ujung Kabel Terpotong -->
+                <ellipse cx="161.5" cy="27.5" rx="4.8" ry="2.8" fill="#18181B" stroke="#0A0A0A" stroke-width="1.8" transform="rotate(30 161.5 27.5)" />
+        
+                <!-- CAPIT 3 TITIK DR. OCTOPUS (Bilah Baja Solid) -->
+                <!-- Capit 1: Cakar Luar/Kanan (Upper-Outer Claw) -->
+                <g id="tr-claw-1">
+                  <polygon points="166,27 174,23 177,17 171,20 165,25" fill="#475569" stroke="#0A0A0A" stroke-width="2.2" stroke-linejoin="round" />
+                  <polygon points="171,20 177,17 172,22" fill="#94A3B8" />
+                  <circle cx="165.5" cy="26.5" r="2" fill="#CBD5E1" stroke="#0A0A0A" stroke-width="1.2" />
+                </g>
+        
+                <!-- Capit 2: Cakar Puncak/Tengah (Top-Center Claw) -->
+                <g id="tr-claw-2">
+                  <polygon points="163,24 164,14 161,9 159,16 161,24" fill="#475569" stroke="#0A0A0A" stroke-width="2.2" stroke-linejoin="round" />
+                  <polygon points="159,16 161,9 162,15" fill="#94A3B8" />
+                  <circle cx="162" cy="24.5" r="2" fill="#CBD5E1" stroke="#0A0A0A" stroke-width="1.2" />
+                </g>
+        
+                <!-- Capit 3: Cakar Dalam/Kiri (Inner-Left Claw) -->
+                <g id="tr-claw-3">
+                  <polygon points="159,27 152,22 147,18 149,24 157,28" fill="#475569" stroke="#0A0A0A" stroke-width="2.2" stroke-linejoin="round" />
+                  <polygon points="149,24 147,18 153,23" fill="#94A3B8" />
+                  <circle cx="158.5" cy="27" r="2" fill="#CBD5E1" stroke="#0A0A0A" stroke-width="1.2" />
+                </g>
+        
+                <!-- KABEL SERABUT INTI RGB DALAM CAPIT -->
+                <!-- Kawat 1: MERAH (#EF4444) ke Capit Luar -->
+                <path d="M 163 27 Q 170 26 173 21" stroke="#EF4444" stroke-width="2.6" stroke-linecap="round" fill="none" />
+                <path d="M 163 27 Q 170 26 173 21" stroke="#F87171" stroke-width="0.8" stroke-linecap="round" fill="none" />
+                <circle cx="174" cy="20" r="1.5" fill="#F59E0B" stroke="#0A0A0A" stroke-width="0.8" />
+                <circle cx="174.3" cy="19.7" r="0.6" fill="#FEF08A" />
+        
+                <!-- Kawat 2: HIJAU (#10B981) ke Capit Tengah -->
+                <path d="M 162 26 L 162 15" stroke="#10B981" stroke-width="2.6" stroke-linecap="round" fill="none" />
+                <path d="M 162 26 L 162 15" stroke="#34D399" stroke-width="0.8" stroke-linecap="round" fill="none" />
+                <circle cx="162" cy="14" r="1.5" fill="#F59E0B" stroke="#0A0A0A" stroke-width="0.8" />
+                <circle cx="162.3" cy="13.7" r="0.6" fill="#FEF08A" />
+        
+                <!-- Kawat 3: BIRU (#2563EB) ke Capit Dalam -->
+                <path d="M 160 27 Q 154 25 151 21" stroke="#2563EB" stroke-width="2.6" stroke-linecap="round" fill="none" />
+                <path d="M 160 27 Q 154 25 151 21" stroke="#60A5FA" stroke-width="0.8" stroke-linecap="round" fill="none" />
+                <circle cx="150" cy="20" r="1.5" fill="#F59E0B" stroke="#0A0A0A" stroke-width="0.8" />
+                <circle cx="150.3" cy="19.7" r="0.6" fill="#FEF08A" />
+        
+                <!-- EFEK PETIR KONSLET -->
+                <g class="net-anim-zap-tr">
+                  <path d="M 176 18 L 171 22 L 174 25 L 167 23 L 162 14 L 158 20 L 153 17 L 147 18" stroke="#FFD60A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                  <path d="M 174 19 L 170 22 L 167 21 L 162 15 L 158 19 L 154 18 L 150 19" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                  <polygon points="168,15 169,17 171,18 169,19 168,21 167,19 165,18 167,17" fill="#FFFFFF" />
+                  <polygon points="155,12 156,14 158,15 156,16 155,18 154,16 152,15 154,14" fill="#FFD60A" />
+                  <circle cx="173" cy="14" r="1.3" fill="#FFD60A" />
+                  <circle cx="148" cy="14" r="1.3" fill="#FFFFFF" />
+                </g>
+              </g>
+        
+              <!-- - TENTAKEL 3: KIRI BAWAH (BOTTOM-LEFT) - -->
+              <g class="net-anim-tentacle-bl">
+                <!-- Hard Drop Shadow Kabel -->
+                <path d="M 69 120 C 40 124 16 134 20 152 C 22 160 26 164 34 162" stroke="#0A0A0A" stroke-width="14" fill="none" stroke-linecap="round" />
+                <!-- Outline Hitam Tebal Kabel -->
+                <path d="M 65 116 C 36 120 12 130 16 148 C 18 156 22 160 30 158" stroke="#0A0A0A" stroke-width="12" fill="none" stroke-linecap="round" />
+                <!-- Selongsong Luar Kabel Coklat Tua Pekat (#381E0D) -->
+                <path d="M 65 116 C 36 120 12 130 16 148 C 18 156 22 160 30 158" stroke="#381E0D" stroke-width="7.5" fill="none" stroke-linecap="round" />
+                <!-- Gelang Spiral / Ribbed Conduit (#241208) -->
+                <path d="M 65 116 C 36 120 12 130 16 148 C 18 156 22 160 30 158" stroke="#241208" stroke-width="7.5" fill="none" stroke-linecap="round" stroke-dasharray="3 4.5" />
+                <!-- Highlight Punggung Kabel (#522D16) -->
+                <path d="M 65 116 C 36 120 12 130 16 148 C 18 156 22 160 30 158" stroke="#522D16" stroke-width="1.6" fill="none" stroke-linecap="round" />
+        
+                <!-- SELONGSONG KLEM LOGAM KABEL TERPOTONG -->
+                <polygon points="24,152 33,147 36,155 27,160" fill="#262626" stroke="#0A0A0A" stroke-width="2.5" />
+                <!-- Cincin Klem Tembaga Industri -->
+                <line x1="25" y1="154" x2="34" y2="149" stroke="#B45309" stroke-width="2" />
+                <!-- Bukaan Ujung Kabel Terpotong -->
+                <ellipse cx="30" cy="158" rx="4.8" ry="2.8" fill="#18181B" stroke="#0A0A0A" stroke-width="1.8" transform="rotate(30 30 158)" />
+        
+                <!-- CAPIT 3 TITIK DR. OCTOPUS (Bilah Baja Solid Menopang) -->
+                <!-- Capit 1: Cakar Luar/Kiri -->
+                <g id="bl-claw-1">
+                  <polygon points="27,157 18,162 14,168 20,166 26,160" fill="#475569" stroke="#0A0A0A" stroke-width="2.2" stroke-linejoin="round" />
+                  <polygon points="20,166 14,168 18,164" fill="#94A3B8" />
+                  <circle cx="26.5" cy="158.5" r="2" fill="#CBD5E1" stroke="#0A0A0A" stroke-width="1.2" />
+                </g>
+        
+                <!-- Capit 2: Cakar Bawah/Tengah -->
+                <g id="bl-claw-2">
+                  <polygon points="29,159 28,169 31,176 33,169 31,159" fill="#475569" stroke="#0A0A0A" stroke-width="2.2" stroke-linejoin="round" />
+                  <polygon points="33,169 31,176 30,170" fill="#94A3B8" />
+                  <circle cx="30" cy="160" r="2" fill="#CBD5E1" stroke="#0A0A0A" stroke-width="1.2" />
+                </g>
+        
+                <!-- Capit 3: Cakar Dalam/Kanan -->
+                <g id="bl-claw-3">
+                  <polygon points="33,156 40,160 45,166 42,163 35,159" fill="#475569" stroke="#0A0A0A" stroke-width="2.2" stroke-linejoin="round" />
+                  <polygon points="42,163 45,166 39,161" fill="#94A3B8" />
+                  <circle cx="33.5" cy="157.5" r="2" fill="#CBD5E1" stroke="#0A0A0A" stroke-width="1.2" />
+                </g>
+        
+                <!-- KABEL SERABUT INTI RGB DALAM CAPIT -->
+                <!-- Kawat 1: MERAH (#EF4444) ke Capit Luar -->
+                <path d="M 28 158 Q 21 161 17 165" stroke="#EF4444" stroke-width="2.6" stroke-linecap="round" fill="none" />
+                <path d="M 28 158 Q 21 161 17 165" stroke="#F87171" stroke-width="0.8" stroke-linecap="round" fill="none" />
+                <circle cx="16" cy="166" r="1.5" fill="#F59E0B" stroke="#0A0A0A" stroke-width="0.8" />
+                <circle cx="15.7" cy="165.7" r="0.6" fill="#FEF08A" />
+        
+                <!-- Kawat 2: HIJAU (#10B981) ke Capit Bawah -->
+                <path d="M 30 159 L 30 171" stroke="#10B981" stroke-width="2.6" stroke-linecap="round" fill="none" />
+                <path d="M 30 159 L 30 171" stroke="#34D399" stroke-width="0.8" stroke-linecap="round" fill="none" />
+                <circle cx="30" cy="172" r="1.5" fill="#F59E0B" stroke="#0A0A0A" stroke-width="0.8" />
+                <circle cx="29.7" cy="171.7" r="0.6" fill="#FEF08A" />
+        
+                <!-- Kawat 3: BIRU (#2563EB) ke Capit Dalam -->
+                <path d="M 32 158 Q 38 160 41 164" stroke="#2563EB" stroke-width="2.6" stroke-linecap="round" fill="none" />
+                <path d="M 32 158 Q 38 160 41 164" stroke="#60A5FA" stroke-width="0.8" stroke-linecap="round" fill="none" />
+                <circle cx="42" cy="165" r="1.5" fill="#F59E0B" stroke="#0A0A0A" stroke-width="0.8" />
+                <circle cx="41.7" cy="164.7" r="0.6" fill="#FEF08A" />
+        
+                <!-- EFEK PETIR KONSLET -->
+                <g class="net-anim-zap-bl">
+                  <path d="M 15 167 L 20 163 L 18 160 L 25 164 L 30 172 L 34 167 L 39 169 L 45 166" stroke="#FFD60A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                  <path d="M 17 166 L 21 163 L 24 165 L 30 171 L 34 168 L 38 169 L 43 166" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                  <polygon points="21,164 22,166 24,167 22,168 21,170 20,168 18,167 20,166" fill="#FFFFFF" />
+                  <polygon points="36,168 37,170 39,171 37,172 36,174 35,172 33,171 35,170" fill="#FFD60A" />
+                  <circle cx="16" cy="169" r="1.3" fill="#FFD60A" />
+                  <circle cx="44" cy="168" r="1.3" fill="#FFFFFF" />
+                </g>
+              </g>
+        
+              <!-- - TENTAKEL 4: KANAN BAWAH (BOTTOM-RIGHT) - -->
+              <g class="net-anim-tentacle-br">
+                <!-- Hard Drop Shadow Kabel -->
+                <path d="M 129 120 C 158 124 182 134 178 152 C 176 160 172 164 164 162" stroke="#0A0A0A" stroke-width="14" fill="none" stroke-linecap="round" />
+                <!-- Outline Hitam Tebal Kabel -->
+                <path d="M 125 116 C 154 120 178 130 174 148 C 172 156 168 160 160 158" stroke="#0A0A0A" stroke-width="12" fill="none" stroke-linecap="round" />
+                <!-- Selongsong Luar Kabel Coklat Tua Pekat (#381E0D) -->
+                <path d="M 125 116 C 154 120 178 130 174 148 C 172 156 168 160 160 158" stroke="#381E0D" stroke-width="7.5" fill="none" stroke-linecap="round" />
+                <!-- Gelang Spiral / Ribbed Conduit (#241208) -->
+                <path d="M 125 116 C 154 120 178 130 174 148 C 172 156 168 160 160 158" stroke="#241208" stroke-width="7.5" fill="none" stroke-linecap="round" stroke-dasharray="3 4.5" />
+                <!-- Highlight Punggung Kabel (#522D16) -->
+                <path d="M 125 116 C 154 120 178 130 174 148 C 172 156 168 160 160 158" stroke="#522D16" stroke-width="1.6" fill="none" stroke-linecap="round" />
+        
+                <!-- SELONGSONG KLEM LOGAM KABEL TERPOTONG -->
+                <polygon points="166,152 157,147 154,155 163,160" fill="#262626" stroke="#0A0A0A" stroke-width="2.5" />
+                <!-- Cincin Klem Tembaga Industri -->
+                <line x1="165" y1="154" x2="156" y2="149" stroke="#B45309" stroke-width="2" />
+                <!-- Bukaan Ujung Kabel Terpotong -->
+                <ellipse cx="160" cy="158" rx="4.8" ry="2.8" fill="#18181B" stroke="#0A0A0A" stroke-width="1.8" transform="rotate(-30 160 158)" />
+        
+                <!-- CAPIT 3 TITIK DR. OCTOPUS (Bilah Baja Solid Menopang) -->
+                <!-- Capit 1: Cakar Luar/Kanan -->
+                <g id="br-claw-1">
+                  <polygon points="163,157 172,162 176,168 170,166 164,160" fill="#475569" stroke="#0A0A0A" stroke-width="2.2" stroke-linejoin="round" />
+                  <polygon points="170,166 176,168 172,164" fill="#94A3B8" />
+                  <circle cx="163.5" cy="158.5" r="2" fill="#CBD5E1" stroke="#0A0A0A" stroke-width="1.2" />
+                </g>
+        
+                <!-- Capit 2: Cakar Bawah/Tengah -->
+                <g id="br-claw-2">
+                  <polygon points="161,159 162,169 159,176 157,169 159,159" fill="#475569" stroke="#0A0A0A" stroke-width="2.2" stroke-linejoin="round" />
+                  <polygon points="157,169 159,176 160,170" fill="#94A3B8" />
+                  <circle cx="160" cy="160" r="2" fill="#CBD5E1" stroke="#0A0A0A" stroke-width="1.2" />
+                </g>
+        
+                <!-- Capit 3: Cakar Dalam/Kiri -->
+                <g id="br-claw-3">
+                  <polygon points="157,156 150,160 145,166 148,163 155,159" fill="#475569" stroke="#0A0A0A" stroke-width="2.2" stroke-linejoin="round" />
+                  <polygon points="148,163 145,166 151,161" fill="#94A3B8" />
+                  <circle cx="156.5" cy="157.5" r="2" fill="#CBD5E1" stroke="#0A0A0A" stroke-width="1.2" />
+                </g>
+        
+                <!-- KABEL SERABUT INTI RGB DALAM CAPIT -->
+                <!-- Kawat 1: MERAH (#EF4444) ke Capit Luar -->
+                <path d="M 162 158 Q 169 161 173 165" stroke="#EF4444" stroke-width="2.6" stroke-linecap="round" fill="none" />
+                <path d="M 162 158 Q 169 161 173 165" stroke="#F87171" stroke-width="0.8" stroke-linecap="round" fill="none" />
+                <circle cx="174" cy="166" r="1.5" fill="#F59E0B" stroke="#0A0A0A" stroke-width="0.8" />
+                <circle cx="174.3" cy="165.7" r="0.6" fill="#FEF08A" />
+        
+                <!-- Kawat 2: HIJAU (#10B981) ke Capit Bawah -->
+                <path d="M 160 159 L 160 171" stroke="#10B981" stroke-width="2.6" stroke-linecap="round" fill="none" />
+                <path d="M 160 159 L 160 171" stroke="#34D399" stroke-width="0.8" stroke-linecap="round" fill="none" />
+                <circle cx="160" cy="172" r="1.5" fill="#F59E0B" stroke="#0A0A0A" stroke-width="0.8" />
+                <circle cx="160.3" cy="171.7" r="0.6" fill="#FEF08A" />
+        
+                <!-- Kawat 3: BIRU (#2563EB) ke Capit Dalam -->
+                <path d="M 158 158 Q 152 160 149 164" stroke="#2563EB" stroke-width="2.6" stroke-linecap="round" fill="none" />
+                <path d="M 158 158 Q 152 160 149 164" stroke="#60A5FA" stroke-width="0.8" stroke-linecap="round" fill="none" />
+                <circle cx="148" cy="165" r="1.5" fill="#F59E0B" stroke="#0A0A0A" stroke-width="0.8" />
+                <circle cx="148.3" cy="164.7" r="0.6" fill="#FEF08A" />
+        
+                <!-- EFEK PETIR KONSLET -->
+                <g class="net-anim-zap-br">
+                  <path d="M 175 167 L 170 163 L 172 160 L 165 164 L 160 172 L 156 167 L 151 169 L 145 166" stroke="#FFD60A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                  <path d="M 173 166 L 169 163 L 166 165 L 160 171 L 156 168 L 152 169 L 147 166" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                  <polygon points="169,164 170,166 172,167 170,168 169,170 168,168 166,167 168,166" fill="#FFFFFF" />
+                  <polygon points="154,168 155,170 157,171 155,172 154,174 153,172 151,171 153,170" fill="#FFD60A" />
+                  <circle cx="174" cy="169" r="1.3" fill="#FFD60A" />
+                  <circle cx="146" cy="168" r="1.3" fill="#FFFFFF" />
+                </g>
+              </g>
+            </g>
+        
+            <!-- ============================================================== -->
+            <!-- LAYER 1: KAKI & SEPATU HITAM DENGAN SOL PUTIH (BATCH 1 ASLI)  -->
+            <!-- ============================================================== -->
+            <!-- Kaki Kiri -->
+            <rect x="68" y="154" width="22" height="24" fill="#0A0A0A" />
+            <rect x="64" y="148" width="22" height="26" fill="#0A0A0A" rx="2" stroke="#0A0A0A" stroke-width="3.5" />
+            <line x1="64" y1="170" x2="86" y2="170" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="square" />
+        
+            <!-- Kaki Kanan -->
+            <rect x="114" y="154" width="22" height="24" fill="#0A0A0A" />
+            <rect x="110" y="148" width="22" height="26" fill="#0A0A0A" rx="2" stroke="#0A0A0A" stroke-width="3.5" />
+            <line x1="110" y1="170" x2="132" y2="170" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="square" />
+        
+            <!-- ============================================================== -->
+            <!-- LAYER 2: BADAN PAPAN RAMBU KUNING NEO-BRUTALISM (BATCH 1 ASLI)-->
+            <!-- ============================================================== -->
+            <!-- Hard Drop Shadow Badan Rambu -->
+            <rect x="48" y="56" width="106" height="94" rx="4" fill="#0A0A0A" />
+        
+            <!-- Papan Rambu Utama Kuning (#FFD60A) -->
+            <rect x="42" y="50" width="106" height="94" rx="4" fill="#FFD60A" stroke="#0A0A0A" stroke-width="4" />
+        
+            <!-- Rambut Acak-acakan Teknisi Rogue (#2A180E) - Non-Futuristik -->
+            <path d="M 66 50 Q 72 40 82 45 Q 92 38 100 44 Q 112 39 122 46 Q 130 42 134 50 Z" fill="#2A180E" stroke="#0A0A0A" stroke-width="3" stroke-linejoin="round" />
+            <path d="M 80 44 L 84 48 M 98 42 L 102 47 M 116 43 L 118 48" stroke="#4A2B18" stroke-width="1.8" stroke-linecap="round" />
+        
+            <!-- Marka Jalan Putus-Putus Perut -->
+            <line x1="54" y1="134" x2="136" y2="134" stroke="#0A0A0A" stroke-width="3.5" stroke-dasharray="8 6" opacity="0.25" />
+        
+            <!-- Pipi Merona Pink (#FF5C8A) Khas Neo-Brutalism -->
+            <rect x="52" y="106" width="12" height="7" rx="2" fill="#FF5C8A" />
+            <rect x="124" y="106" width="12" height="7" rx="2" fill="#FF5C8A" />
+        
+            <!-- ============================================================== -->
+            <!-- LAYER 3: WAJAH TANPA KACAMATA & SENYUM SERINGAI JAHAT          -->
+            <!-- ============================================================== -->
+            <!-- Alis Tajam Menukik Licik Doctor Octopus -->
+            <line x1="52" y1="67" x2="80" y2="75" stroke="#0A0A0A" stroke-width="4.5" stroke-linecap="round" />
+            <line x1="130" y1="67" x2="102" y2="75" stroke="#0A0A0A" stroke-width="4.5" stroke-linecap="round" />
+        
+            <!-- Garis Kerut Dahi Antagonis Mastermind -->
+            <line x1="93" y1="71" x2="93" y2="77" stroke="#0A0A0A" stroke-width="2.2" stroke-linecap="round" />
+            <line x1="97" y1="71" x2="97" y2="77" stroke="#0A0A0A" stroke-width="2.2" stroke-linecap="round" />
+        
+            <!-- MATA KIRI (Sklera Baku JalanMin 22x24 rx=4 dengan Kelopak Menukik Licik) -->
+            <rect x="58" y="76" width="22" height="24" rx="4" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3.5" />
+            <rect x="64" y="81" width="11" height="13" rx="2" fill="#0A0A0A" />
+            <circle cx="67" cy="84" r="1.5" fill="#FFFFFF" />
+            <circle cx="70" cy="88" r="1.2" fill="#00F0FF" />
+            <polygon points="57,75 81,75 81,81 57,76" fill="#FFD60A" />
+            <line x1="57" y1="76" x2="81" y2="82" stroke="#0A0A0A" stroke-width="3" stroke-linecap="round" />
+        
+            <!-- MATA KANAN (Sklera Baku JalanMin 22x24 rx=4 dengan Kelopak Menukik Licik) -->
+            <rect x="102" y="76" width="22" height="24" rx="4" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3.5" />
+            <rect x="108" y="81" width="11" height="13" rx="2" fill="#0A0A0A" />
+            <circle cx="111" cy="84" r="1.5" fill="#FFFFFF" />
+            <circle cx="114" cy="88" r="1.2" fill="#00F0FF" />
+            <polygon points="101,75 125,75 125,76 101,81" fill="#FFD60A" />
+            <line x1="125" y1="76" x2="101" y2="82" stroke="#0A0A0A" stroke-width="3" stroke-linecap="round" />
+        
+            <!-- Hidung Garis Minimalis -->
+            <path d="M 92 88 L 96 93 L 93 94" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+        
+            <!-- MULUT: SENYUM SERINGAI JAHAT (Sinister Evil Smirk/Grin with Fangs) -->
+            <g id="sinister-evil-smile">
+              <!-- Hard Drop Shadow Mulut Seringai -->
+              <path d="M 83 107 Q 95 111 110 102 Q 107 122 95 122 Q 83 118 83 107 Z" fill="#0A0A0A" />
+              <!-- Rongga Mulut Gelap Bergaris Tebal -->
+              <path d="M 82 105 Q 95 109 109 100 Q 106 121 94 121 Q 82 117 82 105 Z" fill="#180B05" stroke="#0A0A0A" stroke-width="3" />
+              <!-- Deretan Gigi Taring Putih Atas (Sharp Fangs) -->
+              <path d="M 83 106 L 86 111 L 89 107 L 93 112 L 97 108 L 102 113 L 108 101" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.4" stroke-linejoin="round" />
+              <!-- Deretan Gigi Taring Bawah -->
+              <path d="M 88 118 L 91 114 L 94 118 L 98 114 L 101 119" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.2" stroke-linejoin="round" />
+              <!-- Lidah Merah Pink -->
+              <path d="M 91 118 Q 96 114 102 117 Q 96 120 91 118 Z" fill="#FF5C8A" />
+              <!-- Lipatan Seringai Tawa Licik di Sudut Kanan Bibir -->
+              <path d="M 109 98 Q 115 102 112 109" stroke="#0A0A0A" stroke-width="2.8" stroke-linecap="round" fill="none" />
+              <!-- Lipatan Sudut Kiri Bibir -->
+              <path d="M 82 103 Q 79 106 80 110" stroke="#0A0A0A" stroke-width="2.2" stroke-linecap="round" fill="none" />
+            </g>
+        
+            <!-- ============================================================== -->
+            <!-- LAYER 4: BAJU KERJA BIASA WARNA COKLAT (KEMEJA TEKNISI)        -->
+            <!-- ============================================================== -->
+            <!-- Hard Shadow Baju Kemeja Coklat -->
+            <path d="M 44 126 L 150 126 L 150 144 L 44 144 Z" fill="#0A0A0A" />
+        
+            <!-- Bodi Kemeja Coklat Kerja (#784421) -->
+            <path d="M 42 124 L 78 124 L 86 130 L 104 130 L 112 124 L 148 124 L 148 144 L 42 144 Z" fill="#784421" stroke="#0A0A0A" stroke-width="3.5" stroke-linejoin="round" />
+        
+            <!-- Lipatan Bayangan Bawah Kemeja (#6B3F23) -->
+            <path d="M 42 140 L 148 140 L 148 144 L 42 144 Z" fill="#6B3F23" />
+        
+            <!-- Kerah Berlipat Kemeja Coklat Karamel (#94552A) -->
+            <!-- Kerah Kiri -->
+            <polygon points="76,124 92,132 84,124" fill="#94552A" stroke="#0A0A0A" stroke-width="2.4" stroke-linejoin="round" />
+            <!-- Kerah Kanan -->
+            <polygon points="114,124 98,132 106,124" fill="#94552A" stroke="#0A0A0A" stroke-width="2.4" stroke-linejoin="round" />
+        
+            <!-- Garis Placket Kancing Depan Kemeja -->
+            <line x1="95" y1="126" x2="95" y2="144" stroke="#0A0A0A" stroke-width="2.8" />
+            <circle cx="95" cy="131" r="1.5" fill="#E2C499" stroke="#0A0A0A" stroke-width="1" />
+            <circle cx="95" cy="137" r="1.5" fill="#E2C499" stroke="#0A0A0A" stroke-width="1" />
+            <circle cx="95" cy="142" r="1.5" fill="#E2C499" stroke="#0A0A0A" stroke-width="1" />
+        
+            <!-- Saku Dada Kiri Berflap Kancing (#5E351A) -->
+            <rect x="52" y="128" width="17" height="14" rx="1.5" fill="#5E351A" stroke="#0A0A0A" stroke-width="2" />
+            <line x1="52" y1="131" x2="69" y2="131" stroke="#0A0A0A" stroke-width="1.5" />
+            <circle cx="60.5" cy="134" r="1.2" fill="#E2C499" />
+        
+            <!-- Saku Dada Kanan Berflap Kancing (#5E351A) -->
+            <rect x="121" y="128" width="17" height="14" rx="1.5" fill="#5E351A" stroke="#0A0A0A" stroke-width="2" />
+            <line x1="121" y1="131" x2="138" y2="131" stroke="#0A0A0A" stroke-width="1.5" />
+            <circle cx="129.5" cy="134" r="1.2" fill="#E2C499" />
+        
+            <!-- ============================================================== -->
+            <!-- LAYER 5: LENGAN COKLAT TERGULUNG & TANGAN KUNING BERTOLAK PINGGANG -->
+            <!-- ============================================================== -->
+            <!-- Lengan Baju Coklat Tergulung Kiri -->
+            <rect x="32" y="124" width="14" height="16" rx="2.5" fill="#784421" stroke="#0A0A0A" stroke-width="3.2" />
+            <line x1="32" y1="134" x2="46" y2="134" stroke="#0A0A0A" stroke-width="1.8" />
+            <!-- Kepalan Tangan Kuning Kiri (#FFD60A) -->
+            <circle cx="37" cy="140" r="7.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="3.5" />
+            <rect x="38" y="135" width="4.5" height="7" rx="1.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="1.6" />
+        
+            <!-- Lengan Baju Coklat Tergulung Kanan -->
+            <rect x="144" y="124" width="14" height="16" rx="2.5" fill="#784421" stroke="#0A0A0A" stroke-width="3.2" />
+            <line x1="144" y1="134" x2="158" y2="134" stroke="#0A0A0A" stroke-width="1.8" />
+            <!-- Kepalan Tangan Kuning Kanan (#FFD60A) -->
+            <circle cx="153" cy="140" r="7.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="3.5" />
+            <rect x="147.5" y="135" width="4.5" height="7" rx="1.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="1.6" />
+          </g>
+        </svg>
+        

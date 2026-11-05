@@ -15,11 +15,13 @@ export interface JalanIDCardProps {
 export function JalanIDCard({ data, showActions = true }: JalanIDCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
   const [downloading, setDownloading] = useState(false);
+  const [downloadError, setDownloadError] = useState("");
   const [shareSuccess, setShareSuccess] = useState(false);
 
   // SVG download as PNG canvas renderer
   const handleDownloadImage = (ratio: "card" | "square" | "story") => {
     setDownloading(true);
+    setDownloadError("");
     try {
       // Create canvas representation for instant client-side download without server dependency
       const canvas = document.createElement("canvas");
@@ -94,7 +96,7 @@ export function JalanIDCard({ data, showActions = true }: JalanIDCardProps) {
         a.click();
       }
     } catch {
-      alert("Gagal mengunduh gambar.");
+      setDownloadError("Gagal merender dan mengunduh gambar kartu. Silakan coba lagi.");
     } finally {
       setDownloading(false);
     }
@@ -146,13 +148,13 @@ export function JalanIDCard({ data, showActions = true }: JalanIDCardProps) {
           {/* Official Role Mascot */}
           <div className="relative flex-none">
             <div
-              className="w-24 h-24 md:w-28 md:h-28 border-4 border-ink shadow-nb-sm flex items-center justify-center p-1 relative overflow-hidden rounded-xl"
+              className="w-24 h-24 md:w-28 md:h-28 border-4 border-ink shadow-nb-sm flex items-center justify-center p-1 relative overflow-hidden"
               style={{ backgroundColor: data.top_role.color || "#FFD60A" }}
             >
               <RoleMascot roleSlug={data.top_role.slug} size={105} animate={true} />
             </div>
             {/* Match Percentage Pill */}
-            <div className="absolute -bottom-2 -right-2 bg-ink text-paper font-heading text-xs md:text-sm font-bold px-2 py-0.5 border-2 border-paper shadow-[2px_2px_0_#0A0A0A] rounded-md">
+            <div className="absolute -bottom-2 -right-2 bg-ink text-paper font-heading text-xs md:text-sm font-bold px-2 py-0.5 border-2 border-paper shadow-[2px_2px_0_#0A0A0A]">
               {data.top_role.match_percentage}%
             </div>
           </div>
@@ -161,12 +163,12 @@ export function JalanIDCard({ data, showActions = true }: JalanIDCardProps) {
             <div className="flex items-center gap-2 mb-1 flex-wrap">
               <span className="font-mono text-xs md:text-sm font-bold text-ink/75">@{data.username}</span>
               {data.top_role.julukan && (
-                <span className="inline-block bg-accent-yellow text-ink border-2 border-ink px-2 py-0.2 font-mono text-[11px] font-black uppercase shadow-[2px_2px_0_#0A0A0A]">
+                <span className="inline-block bg-accent-yellow text-ink border-2 border-ink px-2 py-0.5 font-mono text-[11px] font-black uppercase shadow-nb-sm">
                   &quot;{data.top_role.julukan}&quot;
                 </span>
               )}
             </div>
-            <h2 className="font-heading text-2xl md:text-4xl text-ink leading-tight truncate">
+            <h2 className="font-heading text-2xl md:text-4xl text-ink leading-tight line-clamp-2">
               {data.top_role.name}
             </h2>
             <p className="font-sans text-xs md:text-sm font-medium text-ink/80 mt-1 italic line-clamp-2">
@@ -222,7 +224,24 @@ export function JalanIDCard({ data, showActions = true }: JalanIDCardProps) {
       {/* Action Buttons: Download PNG (3 ratios) & PDF & Share */}
       {showActions && (
         <div className="w-full max-w-xl flex flex-col gap-3">
-          <div className="grid grid-cols-3 gap-2">
+          {downloadError && (
+            <div
+              className="bg-red-50 border-3 border-accent-danger p-3 font-mono text-xs text-accent-danger font-bold flex items-center justify-between shadow-nb-sm animate-fadeIn"
+              role="alert"
+            >
+              <span>⚠️ {downloadError}</span>
+              <button
+                type="button"
+                onClick={() => setDownloadError("")}
+                className="text-ink font-bold hover:underline cursor-pointer ml-2"
+                aria-label="Tutup pesan error"
+              >
+                ✕
+              </button>
+            </div>
+          )}
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
             <Button
               variant="white"
               size="sm"

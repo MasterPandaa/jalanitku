@@ -8,13 +8,13 @@ function validateQuestions() {
   console.log(`Total Soal ditemukan: ${questions.length}`);
 
   let hasError = false;
-  const levelCounts: Record<number, number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+  const levelCounts: Record<number, number> = { 1: 0, 2: 0, 3: 0, 4: 0 };
   const roleWeightTotals: Record<string, number> = {};
   roles.forEach((r) => (roleWeightTotals[r.slug] = 0));
 
   questions.forEach((q: any, idx: number) => {
     // 1. Level check
-    if (!q.level || q.level < 1 || q.level > 5) {
+    if (!q.level || q.level < 1 || q.level > 4) {
       console.error(`[Error Soal #${idx + 1}] Level tidak valid: ${q.level}`);
       hasError = true;
     } else {
@@ -72,7 +72,7 @@ function validateQuestions() {
     console.log(`- Level ${lvl}: ${count} soal`);
   });
 
-  console.log("\nLaporan Distribusi Bobot ke 19 Role:");
+  console.log("\nLaporan Distribusi Bobot ke 21 Role:");
   const sortedWeights = Object.entries(roleWeightTotals).sort((a, b) => b[1] - a[1]);
   sortedWeights.forEach(([rSlug, total]) => {
     console.log(`• ${rSlug.padEnd(20)} : ${total} poin`);

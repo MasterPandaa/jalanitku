@@ -95,7 +95,7 @@ export function RoleMascot({
         {/* Badge Julukan Melayang (Opsional) */}
         {showBadge && (
           <div
-            className="absolute -top-1 right-0 px-2 py-0.5 border-2 border-ink text-[11px] font-heading uppercase tracking-wide bg-accent-pink text-white shadow-[2px_2px_0_#0A0A0A] rotate-3"
+            className="absolute -top-1 right-0 px-2 py-0.5 border-2 border-ink text-[11px] font-heading uppercase tracking-wide bg-accent-pink text-ink shadow-[2px_2px_0_#0A0A0A] rotate-3"
           >
             {julukan}
           </div>

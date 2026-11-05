@@ -1,136 +1,236 @@
 <svg viewBox="0 0 200 200" width="200" height="200" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- MASKOT SOFTWARE ENGINEER — "THE ARCHITECT" -->
   <!-- Proyek: JalanITku · Sutradara Visual: Matatabi -->
+  <!-- Ciri Khas: Alis V-shape berpikir keras, kerutan dahi, smirk asimetris, mata berkedip natural, genggaman tangan kiri realistis memegang cetak biru, dan kubus 3D dinamis berganti warna -->
 
-  <!-- Kubus Fondasi Modular 3D Isometrik Kanan Atas (Layer Belakang Karakter) -->
-  <polygon points="164,52 174,47 174,59 164,64" fill="#0A0A0A" />
-  <polygon points="160,36 172,30 184,36 172,42" fill="#2EE59D" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
-  <polygon points="160,36 172,42 172,54 160,48" fill="#00F0FF" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
-  <polygon points="172,42 184,36 184,48 172,54" fill="#FF8A3D" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
-  <circle cx="172" cy="36" r="2" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1" />
+    <defs>
+    <style>
+      @keyframes se-float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-3.5px); }
+      }
+      @keyframes se-blueprint {
+        0%, 100% { transform: rotate(-8deg); }
+        50% { transform: rotate(-5deg) translateY(-2px); }
+      }
+      @keyframes se-cube-float-left {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-4px) rotate(3deg); }
+      }
+      @keyframes se-cube-float-right {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-3.5px) rotate(-3deg); }
+      }
+      @keyframes se-eye-blink {
+        0%, 88%, 94%, 100% { transform: scaleY(1); }
+        91% { transform: scaleY(0.08); }
+      }
+      @keyframes se-cube-color-cycle {
+        0% { filter: hue-rotate(0deg) saturate(1.1); }
+        50% { filter: hue-rotate(180deg) saturate(1.3); }
+        100% { filter: hue-rotate(360deg) saturate(1.1); }
+      }
+      @keyframes se-cube-color-cycle-alt {
+        0% { filter: hue-rotate(120deg) saturate(1.2); }
+        50% { filter: hue-rotate(300deg) saturate(1.4); }
+        100% { filter: hue-rotate(480deg) saturate(1.2); }
+      }
+      .se-animated-body {
+        animation: se-float 3.5s ease-in-out infinite;
+        transform-origin: center bottom;
+      }
+      .se-animated-blueprint {
+        animation: se-blueprint 3s ease-in-out infinite;
+        transform-origin: 28px 120px;
+      }
+      .se-animated-cube {
+        animation: se-cube-float-left 4s ease-in-out infinite;
+        transform-origin: 28px 42px;
+      }
+      .se-animated-cube-right {
+        animation: se-cube-float-right 4s ease-in-out 0.8s infinite;
+        transform-origin: 172px 42px;
+      }
+      .se-animated-eye-left {
+        animation: se-eye-blink 3.8s ease-in-out infinite;
+        transform-origin: 69px 88px;
+      }
+      .se-animated-eye-right {
+        animation: se-eye-blink 3.8s ease-in-out infinite;
+        transform-origin: 113px 88px;
+      }
+      .se-cube-color-left {
+        animation: se-cube-color-cycle 5s linear infinite;
+      }
+      .se-cube-color-right {
+        animation: se-cube-color-cycle-alt 5s linear infinite;
+      }
+    </style>
+  </defs>
 
-  <!-- Hard Shadow Kaki -->
-  <rect x="68" y="154" width="22" height="24" fill="#0A0A0A" />
-  <rect x="114" y="154" width="22" height="24" fill="#0A0A0A" />
-
-  <!-- Kaki Kiri -->
-  <rect x="64" y="148" width="22" height="26" fill="#0A0A0A" rx="2" stroke="#0A0A0A" stroke-width="3.5" />
-  <line x1="64" y1="170" x2="86" y2="170" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="square" />
-
-  <!-- Kaki Kanan -->
-  <rect x="110" y="148" width="22" height="26" fill="#0A0A0A" rx="2" stroke="#0A0A0A" stroke-width="3.5" />
-  <line x1="110" y1="170" x2="132" y2="170" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="square" />
-
-  <!-- Hard Shadow Badan -->
-  <rect x="48" y="56" width="106" height="94" rx="4" fill="#0A0A0A" />
-
-  <!-- Badan Papan Rambu Kuning -->
-  <rect x="42" y="50" width="106" height="94" rx="4" fill="#FFD60A" stroke="#0A0A0A" stroke-width="4" />
-
-  <!-- Marka Jalan Putus-Putus -->
-  <line x1="54" y1="134" x2="136" y2="134" stroke="#0A0A0A" stroke-width="3.5" stroke-dasharray="8 6" />
-
-  <!-- Pipi Merona Pink -->
-  <rect x="52" y="106" width="12" height="7" rx="2" fill="#FF5C8A" />
-  <rect x="124" y="106" width="12" height="7" rx="2" fill="#FF5C8A" />
-
-  <!-- Kerah Mantel & Dasi Arsitek -->
-  <polygon points="78,144 94,144 88,132" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
-  <polygon points="110,144 94,144 100,132" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
-  <rect x="91" y="132" width="7" height="5" fill="#00F0FF" stroke="#0A0A0A" stroke-width="2" />
-  <polygon points="91,137 98,137 100,145 94.5,148 89,145" fill="#00F0FF" stroke="#0A0A0A" stroke-width="2" />
-
-  <!-- Rompi Arsitektur / Safety Vest Hi-Vis (Oranye & Pita Neon) -->
-  <polygon points="42,126 84,126 78,144 42,144" fill="#FF8A3D" stroke="#0A0A0A" stroke-width="3.5" stroke-linejoin="round" />
-  <polygon points="54,126 68,126 64,144 50,144" fill="#2EE59D" stroke="#0A0A0A" stroke-width="2" stroke-linejoin="round" />
-  <rect x="45" y="133" width="8" height="9" rx="1" fill="#FF7722" stroke="#0A0A0A" stroke-width="1.5" />
-  <line x1="47" y1="130" x2="47" y2="134" stroke="#00F0FF" stroke-width="1.5" stroke-linecap="round" />
-
-  <polygon points="106,126 148,126 148,144 112,144" fill="#FF8A3D" stroke="#0A0A0A" stroke-width="3.5" stroke-linejoin="round" />
-  <polygon points="122,126 136,126 140,144 126,144" fill="#2EE59D" stroke="#0A0A0A" stroke-width="2" stroke-linejoin="round" />
-  <rect x="137" y="131" width="8" height="11" rx="1" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.5" />
-  <rect x="139" y="133" width="4" height="3" fill="#00F0FF" />
-  <line x1="138.5" y1="138" x2="143.5" y2="138" stroke="#0A0A0A" stroke-width="1" />
-
-  <line x1="84" y1="126" x2="78" y2="144" stroke="#0A0A0A" stroke-width="3" />
-  <line x1="106" y1="126" x2="112" y2="144" stroke="#0A0A0A" stroke-width="3" />
-
-  <!-- Mulut Senyum Bangga Arsitek (Percaya Diri, Ramah & Berwibawa) -->
-  <path d="M 87 114 Q 94.5 123 102 114" stroke="#0A0A0A" stroke-width="3.5" fill="none" stroke-linecap="round" />
-
-  <!-- Mata & Ekspresi Cerdas Arsitek (Tanpa Kacamata) -->
-  <rect x="58" y="76" width="22" height="24" rx="4" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3.5" />
-  <rect x="64" y="81" width="11" height="13" rx="2" fill="#0A0A0A" />
-  <circle cx="67" cy="84" r="1.5" fill="#FFFFFF" />
-  <circle cx="70" cy="88" r="1.2" fill="#00F0FF" />
-
-  <rect x="102" y="76" width="22" height="24" rx="4" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3.5" />
-  <rect x="108" y="81" width="11" height="13" rx="2" fill="#0A0A0A" />
-  <circle cx="111" cy="84" r="1.5" fill="#FFFFFF" />
-  <circle cx="114" cy="88" r="1.2" fill="#00F0FF" />
-
-  <path d="M 57 69 Q 69 64 80 68" stroke="#0A0A0A" stroke-width="3.5" stroke-linecap="round" fill="none" />
-  <path d="M 102 68 Q 113 64 125 69" stroke="#0A0A0A" stroke-width="3.5" stroke-linecap="round" fill="none" />
-
-  <!-- Helm Konstruksi Arsitek Improved -->
-  <path d="M 44 48 C 44 22 146 22 146 48 Z" fill="#0A0A0A" />
-  <path d="M 44 44 C 44 18 144 18 144 44 Z" fill="#FF8A3D" stroke="#0A0A0A" stroke-width="4" />
-  <line x1="56" y1="36" x2="68" y2="36" stroke="#0A0A0A" stroke-width="2.5" stroke-linecap="round" />
-  <line x1="120" y1="36" x2="132" y2="36" stroke="#0A0A0A" stroke-width="2.5" stroke-linecap="round" />
-  <line x1="60" y1="30" x2="70" y2="30" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round" />
-  <line x1="118" y1="30" x2="128" y2="30" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round" />
-  <path d="M 88 19 C 88 17 100 17 100 19 L 102 44 L 86 44 Z" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
-  <line x1="91" y1="21" x2="91" y2="41" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" />
-  <rect x="32" y="41" width="124" height="11" rx="3" fill="#FFD60A" stroke="#0A0A0A" stroke-width="4" />
-  <line x1="36" y1="48" x2="152" y2="48" stroke="#0A0A0A" stroke-width="1.5" />
-  <rect x="87" y="26" width="14" height="12" rx="2.5" fill="#00F0FF" stroke="#0A0A0A" stroke-width="2.5" />
-  <circle cx="94" cy="32" r="3" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.5" />
-  <line x1="94" y1="23" x2="94" y2="26" stroke="#0A0A0A" stroke-width="2" />
-
-  <!-- Lengan Kanan & Pensil Teknikal Arsitek (Ujung Atas Runcing) -->
-  <path d="M 148 108 Q 164 106 172 100" stroke="#0A0A0A" stroke-width="6" stroke-linecap="round" fill="none" />
-  <g transform="rotate(15 170 96)">
-    <rect x="171" y="55" width="8" height="66" rx="2" fill="#0A0A0A" />
-    <polygon points="169.5,57 172.5,57 171,52" fill="#0A0A0A" />
-    <polygon points="167,66 175,66 171,52" fill="#FFE8A3" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
-    <rect x="167" y="66" width="8" height="38" fill="#FF8A3D" stroke="#0A0A0A" stroke-width="2.5" />
-    <line x1="171" y1="66" x2="171" y2="104" stroke="#FFD60A" stroke-width="2" />
-    <rect x="166.5" y="104" width="9" height="5" rx="1" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2" />
-    <line x1="168" y1="106.5" x2="174" y2="106.5" stroke="#0A0A0A" stroke-width="1" />
-    <rect x="167" y="109" width="8" height="9" rx="2" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="2.5" />
-  </g>
-  <circle cx="170" cy="100" r="7.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="3.5" />
-
-  <!-- Lengan Kiri & Blueprint Cetak Biru Sistem Terbuka -->
-  <g>
-    <path d="M 42 110 Q 24 116 28 126" stroke="#0A0A0A" stroke-width="6" stroke-linecap="round" fill="none" />
-    <rect x="10" y="74" width="44" height="58" rx="2.5" fill="#0A0A0A" transform="rotate(-5 32 103)" />
-    <rect x="6" y="70" width="44" height="58" rx="2.5" fill="#05B6D4" stroke="#0A0A0A" stroke-width="3.5" transform="rotate(-5 28 99)" />
-
-    <g transform="rotate(-5 28 99)">
-      <rect x="10" y="74" width="36" height="6" fill="#0369A1" />
-      <line x1="12" y1="77" x2="26" y2="77" stroke="#FFFFFF" stroke-width="1.5" />
-      <rect x="20" y="84" width="16" height="8" rx="1" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.5" />
-      <line x1="28" y1="92" x2="28" y2="98" stroke="#FFFFFF" stroke-width="2" />
-      <line x1="16" y1="98" x2="40" y2="98" stroke="#FFFFFF" stroke-width="1.5" />
-      <line x1="16" y1="98" x2="16" y2="103" stroke="#FFFFFF" stroke-width="1.5" />
-      <line x1="40" y1="98" x2="40" y2="103" stroke="#FFFFFF" stroke-width="1.5" />
-      <rect x="10" y="103" width="12" height="7" rx="1" fill="#FFD60A" stroke="#0A0A0A" stroke-width="1.5" />
-      <rect x="34" y="103" width="12" height="7" rx="1" fill="#2EE59D" stroke="#0A0A0A" stroke-width="1.5" />
-      <line x1="22" y1="110" x2="28" y2="114" stroke="#FFFFFF" stroke-width="1.5" />
-      <line x1="34" y1="110" x2="28" y2="114" stroke="#FFFFFF" stroke-width="1.5" />
-      <rect x="21" y="114" width="14" height="8" rx="2" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="1.5" />
+  <g class="se-animated-body">
+    <!-- LAYER 0: KUBUS MODULAR 3D ISOMETRIK KANAN ATAS (LAYER BELAKANG, WARNA BERGANTI DINAMIS) -->
+    <g class="se-animated-cube-right">
+      <polygon points="164,52 174,47 174,59 164,64" fill="#0A0A0A" />
+      <g class="se-cube-color-right">
+        <polygon points="160,36 172,30 184,36 172,42" fill="#2EE59D" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
+        <polygon points="160,36 172,42 172,54 160,48" fill="#00F0FF" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
+        <polygon points="172,42 184,36 184,48 172,54" fill="#FF8A3D" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
+        <circle cx="172" cy="36" r="2" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1" />
+      </g>
     </g>
 
-    <path d="M 5 125 Q 26 128 47 125" stroke="#0369A1" stroke-width="3.5" stroke-linecap="round" fill="none" transform="rotate(-5 26 125)" />
-    <path d="M 34 128 Q 28 126 24 122" stroke="#0A0A0A" stroke-width="5" stroke-linecap="round" fill="none" />
-    <circle cx="27" cy="120" r="7.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="3.5" />
-    <ellipse cx="25" cy="116" rx="4.5" ry="3" transform="rotate(-20 25 116)" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
-  </g>
+    <!-- LAYER 1: KAKI & SEPATU HITAM DENGAN SOL PUTIH -->
+    <rect x="68" y="154" width="22" height="24" fill="#0A0A0A" />
+    <rect x="114" y="154" width="22" height="24" fill="#0A0A0A" />
 
-  <!-- Kubus Fondasi Modular 3D Isometrik (Kiri Atas) -->
-  <polygon points="16,36 28,30 40,36 28,42" fill="#00F0FF" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
-  <polygon points="16,36 28,42 28,54 16,48" fill="#FF8A3D" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
-  <polygon points="28,42 40,36 40,48 28,54" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
-  <circle cx="28" cy="36" r="2" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1" />
+    <rect x="64" y="148" width="22" height="26" fill="#0A0A0A" rx="2" stroke="#0A0A0A" stroke-width="3.5" />
+    <line x1="64" y1="170" x2="86" y2="170" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="square" />
+
+    <rect x="110" y="148" width="22" height="26" fill="#0A0A0A" rx="2" stroke="#0A0A0A" stroke-width="3.5" />
+    <line x1="110" y1="170" x2="132" y2="170" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="square" />
+
+    <!-- LAYER 2: BADAN UTAMA PAPAN RAMBU (KUNING NEO-BRUTALISM 106x94) -->
+    <rect x="48" y="56" width="106" height="94" rx="4" fill="#0A0A0A" />
+    <rect x="42" y="50" width="106" height="94" rx="4" fill="#FFD60A" stroke="#0A0A0A" stroke-width="4" />
+
+    <!-- Marka Jalan Putus-Putus Perut -->
+    <line x1="54" y1="134" x2="136" y2="134" stroke="#0A0A0A" stroke-width="3.5" stroke-dasharray="8 6" />
+
+    <!-- Pipi Merona Pink (#FF5C8A) -->
+    <rect x="52" y="106" width="12" height="7" rx="2" fill="#FF5C8A" />
+    <rect x="124" y="106" width="12" height="7" rx="2" fill="#FF5C8A" />
+
+    <!-- Kerah Mantel & Dasi Arsitek -->
+    <polygon points="78,144 94,144 88,132" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
+    <polygon points="110,144 94,144 100,132" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
+    <rect x="91" y="132" width="7" height="5" fill="#00F0FF" stroke="#0A0A0A" stroke-width="2" />
+    <polygon points="91,137 98,137 100,145 94.5,148 89,145" fill="#00F0FF" stroke="#0A0A0A" stroke-width="2" />
+
+    <!-- Rompi Arsitektur / Safety Vest Hi-Vis (Oranye & Pita Neon) -->
+    <polygon points="42,126 84,126 78,144 42,144" fill="#FF8A3D" stroke="#0A0A0A" stroke-width="3.5" stroke-linejoin="round" />
+    <polygon points="54,126 68,126 64,144 50,144" fill="#2EE59D" stroke="#0A0A0A" stroke-width="2" stroke-linejoin="round" />
+    <rect x="45" y="133" width="8" height="9" rx="1" fill="#FF7722" stroke="#0A0A0A" stroke-width="1.5" />
+    <line x1="47" y1="130" x2="47" y2="134" stroke="#00F0FF" stroke-width="1.5" stroke-linecap="round" />
+
+    <polygon points="106,126 148,126 148,144 112,144" fill="#FF8A3D" stroke="#0A0A0A" stroke-width="3.5" stroke-linejoin="round" />
+    <polygon points="122,126 136,126 140,144 126,144" fill="#2EE59D" stroke="#0A0A0A" stroke-width="2" stroke-linejoin="round" />
+    <rect x="137" y="131" width="8" height="11" rx="1" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.5" />
+    <rect x="139" y="133" width="4" height="3" fill="#00F0FF" />
+    <line x1="138.5" y1="138" x2="143.5" y2="138" stroke="#0A0A0A" stroke-width="1" />
+
+    <line x1="84" y1="126" x2="78" y2="144" stroke="#0A0A0A" stroke-width="3" />
+    <line x1="106" y1="126" x2="112" y2="144" stroke="#0A0A0A" stroke-width="3" />
+
+    <!-- Mulut Pemikir Aktif (Senyum Seringai Tipis Penasaran) -->
+    <path d="M 86 114 Q 97 117 108 111" stroke="#0A0A0A" stroke-width="3.5" fill="none" stroke-linecap="round" />
+    <path d="M 108 111 Q 112 108 111 114" stroke="#0A0A0A" stroke-width="2.5" fill="none" stroke-linecap="round" />
+
+    <!-- Mata Pemikir Aktif (Baku JalanMin 22x24 rx=4) — Efek Kedip Natural -->
+    <g class="se-animated-eye-left">
+      <rect x="58" y="76" width="22" height="24" rx="4" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3.5" />
+      <rect x="67" y="79" width="11" height="13" rx="2" fill="#0A0A0A" />
+      <circle cx="70" cy="82" r="1.8" fill="#FFFFFF" />
+      <circle cx="74" cy="87" r="1.4" fill="#00F0FF" />
+    </g>
+
+    <g class="se-animated-eye-right">
+      <rect x="102" y="76" width="22" height="24" rx="4" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3.5" />
+      <rect x="111" y="79" width="11" height="13" rx="2" fill="#0A0A0A" />
+      <circle cx="114" cy="82" r="1.8" fill="#FFFFFF" />
+      <circle cx="118" cy="87" r="1.4" fill="#00F0FF" />
+    </g>
+
+    <!-- Alis Pemikir Aktif (Kiri Menimbang Ide, Kanan Terangkat Penasaran) -->
+    <path d="M 56 68 Q 68 64 78 67" stroke="#0A0A0A" stroke-width="4.5" stroke-linecap="round" fill="none" />
+    <path d="M 102 67 Q 114 60 128 62" stroke="#0A0A0A" stroke-width="4.5" stroke-linecap="round" fill="none" />
+    <line x1="97" y1="72" x2="98" y2="66" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round" />
+
+    <!-- Helm Konstruksi Arsitek Improved (#FF8A3D) -->
+    <path d="M 44 48 C 44 22 146 22 146 48 Z" fill="#0A0A0A" />
+    <path d="M 44 44 C 44 18 144 18 144 44 Z" fill="#FF8A3D" stroke="#0A0A0A" stroke-width="4" />
+    <line x1="56" y1="36" x2="68" y2="36" stroke="#0A0A0A" stroke-width="2.5" stroke-linecap="round" />
+    <line x1="120" y1="36" x2="132" y2="36" stroke="#0A0A0A" stroke-width="2.5" stroke-linecap="round" />
+    <line x1="60" y1="30" x2="70" y2="30" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round" />
+    <line x1="118" y1="30" x2="128" y2="30" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round" />
+    <path d="M 88 19 C 88 17 100 17 100 19 L 102 44 L 86 44 Z" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
+    <line x1="91" y1="21" x2="91" y2="41" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" />
+    <rect x="32" y="41" width="124" height="11" rx="3" fill="#FFD60A" stroke="#0A0A0A" stroke-width="4" />
+    <line x1="36" y1="48" x2="152" y2="48" stroke="#0A0A0A" stroke-width="1.5" />
+    <rect x="87" y="26" width="14" height="12" rx="2.5" fill="#00F0FF" stroke="#0A0A0A" stroke-width="2.5" />
+    <circle cx="94" cy="32" r="3" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.5" />
+    <line x1="94" y1="23" x2="94" y2="26" stroke="#0A0A0A" stroke-width="2" />
+
+    <!-- Lengan Kanan & Pensil Teknikal Arsitek (Ujung Atas Runcing) -->
+    <path d="M 148 108 Q 164 106 172 100" stroke="#0A0A0A" stroke-width="6" stroke-linecap="round" fill="none" />
+    <g transform="rotate(15 170 96)">
+      <rect x="171" y="55" width="8" height="66" rx="2" fill="#0A0A0A" />
+      <polygon points="169.5,57 172.5,57 171,52" fill="#0A0A0A" />
+      <polygon points="167,66 175,66 171,52" fill="#FFE8A3" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
+      <rect x="167" y="66" width="8" height="38" fill="#FF8A3D" stroke="#0A0A0A" stroke-width="2.5" />
+      <line x1="171" y1="66" x2="171" y2="104" stroke="#FFD60A" stroke-width="2" />
+      <rect x="166.5" y="104" width="9" height="5" rx="1" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2" />
+      <line x1="168" y1="106.5" x2="174" y2="106.5" stroke="#0A0A0A" stroke-width="1" />
+      <rect x="167" y="109" width="8" height="9" rx="2" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="2.5" />
+    </g>
+    <circle cx="170" cy="100" r="7.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="3.5" />
+
+    <!-- LAYER 7: BLUEPRINT CETAK BIRU DIGITAL & GENGGAMAN TANGAN KIRI -->
+    <g class="se-animated-blueprint">
+      <!-- Lengan Kiri Menyambung dari Rompi ke Bawah Kertas -->
+      <path d="M 42 116 Q 34 128 26 128" stroke="#0A0A0A" stroke-width="8" stroke-linecap="round" fill="none" />
+      <path d="M 42 116 Q 34 128 26 128" stroke="#FF8A3D" stroke-width="5" stroke-linecap="round" fill="none" />
+      <circle cx="28" cy="128" r="3.5" fill="#2EE59D" stroke="#0A0A0A" stroke-width="1.5" />
+
+      <!-- Hard Shadow Lembar Blueprint -->
+      <rect x="10" y="74" width="44" height="58" rx="2.5" fill="#0A0A0A" transform="rotate(-5 32 103)" />
+      <!-- Lembar Cetak Biru Cyan (#05B6D4) -->
+      <rect x="6" y="70" width="44" height="58" rx="2.5" fill="#05B6D4" stroke="#0A0A0A" stroke-width="3.5" transform="rotate(-5 28 99)" />
+
+      <!-- Diagram Arsitektur Microservices & Sirkuit di Atas Blueprint -->
+      <g transform="rotate(-5 28 99)">
+        <rect x="10" y="74" width="36" height="6" fill="#0369A1" />
+        <line x1="12" y1="77" x2="26" y2="77" stroke="#FFFFFF" stroke-width="1.5" />
+        <rect x="20" y="84" width="16" height="8" rx="1" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.5" />
+        <line x1="28" y1="92" x2="28" y2="98" stroke="#FFFFFF" stroke-width="2" />
+        <line x1="16" y1="98" x2="40" y2="98" stroke="#FFFFFF" stroke-width="1.5" />
+        <line x1="16" y1="98" x2="16" y2="103" stroke="#FFFFFF" stroke-width="1.5" />
+        <line x1="40" y1="98" x2="40" y2="103" stroke="#FFFFFF" stroke-width="1.5" />
+        <rect x="10" y="103" width="12" height="7" rx="1" fill="#FFD60A" stroke="#0A0A0A" stroke-width="1.5" />
+        <rect x="34" y="103" width="12" height="7" rx="1" fill="#2EE59D" stroke="#0A0A0A" stroke-width="1.5" />
+        <line x1="22" y1="110" x2="28" y2="114" stroke="#FFFFFF" stroke-width="1.5" />
+        <line x1="34" y1="110" x2="28" y2="114" stroke="#FFFFFF" stroke-width="1.5" />
+        <rect x="21" y="114" width="14" height="8" rx="2" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="1.5" />
+
+        <!-- Garis Lipatan Kertas di Bawah Tekanan Jempol -->
+        <path d="M 18 123 Q 28 126 38 122" stroke="#0369A1" stroke-width="2" stroke-linecap="round" fill="none" />
+
+        <!-- GENGGAMAN TANGAN KIRI REALISTIS: 4 Jari Melingkar dari Belakang Bawah Kertas -->
+        <g id="se-fingers-grip">
+          <rect x="17" y="125" width="5.5" height="8" rx="2.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
+          <rect x="22" y="124" width="6" height="9" rx="2.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
+          <rect x="27.5" y="124" width="6" height="9" rx="2.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
+          <rect x="33" y="125" width="5.5" height="8" rx="2.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
+
+          <!-- Ibu Jari (Thumb) Menekan Mantap Permukaan Depan Blueprint -->
+          <ellipse cx="28" cy="118" rx="6.5" ry="4.5" fill="#FFD60A" stroke="#0A0A0A" stroke-width="2.5" />
+          <path d="M 25 116 Q 28 114 31 116" stroke="#0A0A0A" stroke-width="1.5" stroke-linecap="round" fill="none" />
+        </g>
+      </g>
+
+      <!-- Garis Gulungan Dasar Kertas Blueprint -->
+      <path d="M 5 125 Q 26 128 47 125" stroke="#0369A1" stroke-width="3.5" stroke-linecap="round" fill="none" transform="rotate(-5 26 125)" />
+    </g>
+
+    <!-- LAYER 8: KUBUS MODULAR 3D ISOMETRIK KIRI (WARNA BERGANTI DINAMIS) -->
+    <g class="se-animated-cube">
+      <polygon points="20,52 30,47 30,59 20,64" fill="#0A0A0A" />
+      <g class="se-cube-color-left">
+        <polygon points="16,36 28,30 40,36 28,42" fill="#00F0FF" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
+        <polygon points="16,36 28,42 28,54 16,48" fill="#FF8A3D" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
+        <polygon points="28,42 40,36 40,48 28,54" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round" />
+        <circle cx="28" cy="36" r="2" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1" />
+      </g>
+    </g>
+  </g>
 </svg>

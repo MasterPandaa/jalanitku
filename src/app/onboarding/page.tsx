@@ -126,15 +126,18 @@ export default function OnboardingPage() {
                 label="Username Pilihan"
                 placeholder="misal: dev_hebat"
                 value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                onChange={(e) => setUsername(e.target.value.toLowerCase())}
                 error={errorMsg}
                 helperText="Hanya boleh huruf (a-z), angka (0-9), titik (.), dan garis bawah (_)."
                 required
                 autoFocus
+                autoComplete="username"
+                spellCheck={false}
+                autoCapitalize="none"
               />
 
               <div className="mt-2 min-h-[24px] font-mono text-xs">
-                {checking && <span className="text-ink/60">Sedang memeriksa ketersediaan...</span>}
+                {checking && <span className="text-ink/60">Sedang memeriksa ketersediaan…</span>}
                 {!checking && available === true && (
                   <span className="text-accent-green font-bold bg-ink px-2 py-0.5">
                     ✓ Username &quot;{username}&quot; tersedia!
@@ -150,7 +153,7 @@ export default function OnboardingPage() {
               fullWidth
               disabled={!available || submitting || checking}
             >
-              {submitting ? "Menyimpan..." : "Lanjut ke Dashboard →"}
+              {submitting ? "Menyimpan…" : "Lanjut ke Dashboard →"}
             </Button>
           </form>
 

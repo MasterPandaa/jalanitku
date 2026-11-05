@@ -17,7 +17,7 @@ export function Card({
   const bgStyles = {
     white: "bg-surface text-ink",
     yellow: "bg-accent-yellow text-ink",
-    pink: "bg-accent-pink text-surface",
+    pink: "bg-accent-pink text-ink",
     blue: "bg-accent-blue text-surface",
     paper: "bg-paper text-ink",
   };
