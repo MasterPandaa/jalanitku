@@ -7,6 +7,7 @@ import { JalanMin } from "@/components/mascot/JalanMin";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
+import { BookOpen, Zap, FlaskConical, ArrowRight, ArrowLeft, ExternalLink } from "lucide-react";
 
 export interface HttpStatusViewerProps {
   status: HttpStatusDetail;
@@ -146,35 +147,38 @@ export function HttpStatusViewer({ status, isStandalone = false }: HttpStatusVie
             <button
               type="button"
               onClick={() => setActiveTab("penjelasan")}
-              className={`px-3 py-1.5 font-display font-bold text-xs md:text-sm border-2 border-ink cursor-pointer transition-all ${
+              className={`px-3 py-1.5 font-display font-bold text-xs md:text-sm border-2 border-ink cursor-pointer transition-all inline-flex items-center gap-1.5 ${
                 activeTab === "penjelasan"
                   ? "bg-accent-yellow text-ink shadow-[2px_2px_0_#0A0A0A] -translate-y-0.5"
                   : "bg-surface hover:bg-paper"
               }`}
             >
-              📖 Wawasan Arsitektur IT
+              <BookOpen className="w-3.5 h-3.5 stroke-[2.5]" />
+              <span>Wawasan Arsitektur IT</span>
             </button>
             <button
               type="button"
               onClick={() => setActiveTab("headers")}
-              className={`px-3 py-1.5 font-display font-bold text-xs md:text-sm border-2 border-ink cursor-pointer transition-all ${
+              className={`px-3 py-1.5 font-display font-bold text-xs md:text-sm border-2 border-ink cursor-pointer transition-all inline-flex items-center gap-1.5 ${
                 activeTab === "headers"
                   ? "bg-accent-yellow text-ink shadow-[2px_2px_0_#0A0A0A] -translate-y-0.5"
                   : "bg-surface hover:bg-paper"
               }`}
             >
-              ⚡ Header &amp; Payload
+              <Zap className="w-3.5 h-3.5 stroke-[2.5]" />
+              <span>Header &amp; Payload</span>
             </button>
             <button
               type="button"
               onClick={() => setActiveTab("simulator")}
-              className={`px-3 py-1.5 font-display font-bold text-xs md:text-sm border-2 border-ink cursor-pointer transition-all ${
+              className={`px-3 py-1.5 font-display font-bold text-xs md:text-sm border-2 border-ink cursor-pointer transition-all inline-flex items-center gap-1.5 ${
                 activeTab === "simulator"
                   ? "bg-accent-yellow text-ink shadow-[2px_2px_0_#0A0A0A] -translate-y-0.5"
                   : "bg-surface hover:bg-paper"
               }`}
             >
-              🧪 Uji Live Endpoint {simResult && `(${simResult.status})`}
+              <FlaskConical className="w-3.5 h-3.5 stroke-[2.5]" />
+              <span>Uji Live Endpoint {simResult && `(${simResult.status})`}</span>
             </button>
           </div>
 
@@ -199,9 +203,10 @@ export function HttpStatusViewer({ status, isStandalone = false }: HttpStatusVie
                 </div>
                 <Link
                   href="/karir"
-                  className="font-mono text-xs font-bold text-accent-blue hover:underline"
+                  className="font-mono text-xs font-bold text-accent-blue hover:underline inline-flex items-center gap-1"
                 >
-                  Uji kecocokanmu untuk role ini →
+                  <span>Uji kecocokanmu untuk role ini</span>
+                  <ArrowRight className="w-3 h-3 stroke-[2.5]" />
                 </Link>
               </div>
             </div>
@@ -307,7 +312,8 @@ export function HttpStatusViewer({ status, isStandalone = false }: HttpStatusVie
           <div className="flex items-center gap-2">
             {!isStandalone && (
               <Button href={`/status/${status.code}`} variant="white" size="sm">
-                Lihat Halaman Penuh ↗
+                <span>Lihat Halaman Penuh</span>
+                <ExternalLink className="w-4 h-4 stroke-[2.5]" />
               </Button>
             )}
             <Button
@@ -321,12 +327,14 @@ export function HttpStatusViewer({ status, isStandalone = false }: HttpStatusVie
           </div>
 
           <div className="flex items-center gap-2">
-            <Button href="/" variant="ghost" size="sm">
-              ← Ke Beranda
+            <Button href="/" variant="ghost" size="sm" className="inline-flex items-center gap-1.5">
+              <ArrowLeft className="w-3.5 h-3.5 stroke-[2.5]" />
+              <span>Ke Beranda</span>
             </Button>
             {isStandalone && (
-              <Button href="/status" variant="primary" size="sm">
-                Buka Katalog 3xx/4xx/5xx →
+              <Button href="/status" variant="primary" size="sm" className="inline-flex items-center gap-1.5">
+                <span>Buka Katalog 3xx/4xx/5xx</span>
+                <ArrowRight className="w-3.5 h-3.5 stroke-[2.5]" />
               </Button>
             )}
           </div>

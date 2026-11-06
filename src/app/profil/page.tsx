@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { RotateCcw, ArrowLeft } from "lucide-react";
 import { AppNavbar } from "@/components/ui/AppNavbar";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
@@ -120,8 +121,9 @@ export default function ProfilePage() {
           <h2 className="font-heading font-black text-2xl text-ink">Gagal Memuat Profil</h2>
           <p className="font-sans text-sm text-ink/80 leading-relaxed">{loadError}</p>
           <div className="flex flex-col sm:flex-row gap-3 mt-2 w-full">
-            <Button variant="primary" size="md" fullWidth onClick={loadProfile}>
-              Coba Lagi ↺
+            <Button variant="primary" size="md" fullWidth onClick={loadProfile} className="inline-flex items-center justify-center gap-2">
+              <span>Coba Lagi</span>
+              <RotateCcw className="w-4 h-4 stroke-[2.5]" />
             </Button>
             <Button variant="white" size="md" fullWidth href="/login">
               Ke Halaman Masuk
@@ -144,7 +146,7 @@ export default function ProfilePage() {
             href="/dashboard"
             className="nb-btn px-4 py-2 bg-surface text-ink border-3 border-ink shadow-nb-sm font-display font-bold text-sm hover:bg-accent-yellow inline-flex items-center gap-2 transition-all hover:-translate-x-0.5"
           >
-            <span>←</span>
+            <ArrowLeft className="w-4 h-4 stroke-[2.5]" />
             <span>Kembali ke Dashboard</span>
           </Link>
         </div>
@@ -202,7 +204,7 @@ export default function ProfilePage() {
             <h3 className="font-display font-bold text-lg text-accent-danger">
               Zona Bahaya · Hapus Akun
             </h3>
-            <span className="font-mono text-xs bg-red-100 text-accent-danger px-2 py-0.5 font-bold">
+            <span className="font-mono text-xs bg-accent-danger/15 text-accent-danger border border-accent-danger px-2 py-0.5 font-bold">
               Permanen
             </span>
           </div>

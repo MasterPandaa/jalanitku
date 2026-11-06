@@ -3,6 +3,17 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { 
+  RotateCcw, 
+  ArrowRight, 
+  Clock, 
+  BarChart3, 
+  Briefcase, 
+  Compass, 
+  GraduationCap,
+  BadgeCheck,
+  ClipboardCheck
+} from "lucide-react";
 import { AppNavbar } from "@/components/ui/AppNavbar";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
@@ -73,8 +84,9 @@ export default function DashboardPage() {
           <h2 className="font-heading font-black text-2xl text-ink">Gagal Memuat Dashboard</h2>
           <p className="font-sans text-sm text-ink/80 leading-relaxed">{loadError}</p>
           <div className="flex flex-col sm:flex-row gap-3 mt-2 w-full">
-            <Button variant="primary" size="md" fullWidth onClick={loadUser}>
-              Coba Lagi ↺
+            <Button variant="primary" size="md" fullWidth onClick={loadUser} className="inline-flex items-center justify-center gap-2">
+              <span>Coba Lagi</span>
+              <RotateCcw className="w-4 h-4 stroke-[2.5]" />
             </Button>
             <Button variant="white" size="md" fullWidth href="/login">
               Ke Halaman Masuk
@@ -99,7 +111,7 @@ export default function DashboardPage() {
               Dashboard Pengguna
             </div>
             <h1 className="font-heading text-3xl md:text-5xl text-ink leading-tight">
-              Halo, @{user?.username}! 👋
+              Halo, @{user?.username}!
             </h1>
             <p className="font-sans text-base md:text-lg text-ink/80 max-w-xl leading-relaxed">
               Selamat datang di pusat kendali karier IT-mu. Pilih langkah berikutnya untuk mengeksplorasi
@@ -107,7 +119,7 @@ export default function DashboardPage() {
             </p>
           </div>
 
-          <div className="flex-none bg-paper border-3 border-ink p-4 shadow-nb-sm flex flex-col items-center gap-2 transition-transform duration-200 hover:scale-105">
+          <div className="flex-none bg-paper border-3 border-ink p-4 shadow-nb-sm flex flex-col items-center gap-2 rotate-2 transition-transform duration-200 hover:rotate-0 hover:scale-105">
             <JalanMin state="happy" size={130} />
             <span className="font-mono text-xs font-bold text-ink/70">Pemandu: JalanMin</span>
           </div>
@@ -116,10 +128,15 @@ export default function DashboardPage() {
         {/* Status Ringkasan */}
         <div className="animate-fade-up-1 grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Card Status JalanID */}
-          <Card variant="white" shadow="md" borderWidth="4" className="nb-card-hover flex flex-col justify-between gap-4">
+          <Card variant="white" shadow="md" borderWidth="4" className="group nb-card-hover flex flex-col justify-between gap-4">
             <div className="space-y-2">
-              <div className="flex items-center justify-between">
-                <span className="font-display font-bold text-lg">Status JalanID</span>
+              <div className="flex items-center justify-between gap-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 border-2 border-ink bg-accent-yellow shadow-[2px_2px_0_#0A0A0A] flex items-center justify-center text-ink flex-none transition-transform duration-150 group-hover:-rotate-3">
+                    <BadgeCheck className="w-5 h-5 stroke-[2.5]" />
+                  </div>
+                  <span className="font-display font-bold text-lg">Status JalanID</span>
+                </div>
                 <Badge variant={user?.has_jalan_id ? "green" : "ink"}>
                   {user?.has_jalan_id ? "Aktif" : "Belum Ada"}
                 </Badge>
@@ -131,21 +148,28 @@ export default function DashboardPage() {
               </p>
             </div>
             {user?.has_jalan_id ? (
-              <Button href="/karir/hasil" variant="secondary" size="sm" fullWidth>
-                Lihat &amp; Unduh JalanID →
+              <Button href="/karir/hasil" variant="secondary" size="sm" fullWidth className="inline-flex items-center justify-center gap-2">
+                <span>Lihat &amp; Unduh JalanID</span>
+                <ArrowRight className="w-4 h-4 stroke-[2.5]" />
               </Button>
             ) : (
-              <Button href="/karir" variant="primary" size="sm" fullWidth>
-                Mulai Tes JalanKarir →
+              <Button href="/karir" variant="primary" size="sm" fullWidth className="inline-flex items-center justify-center gap-2">
+                <span>Mulai Tes JalanKarir</span>
+                <ArrowRight className="w-4 h-4 stroke-[2.5]" />
               </Button>
             )}
           </Card>
 
           {/* Card Status Cocoklogiku */}
-          <Card variant="white" shadow="md" borderWidth="4" className="nb-card-hover flex flex-col justify-between gap-4">
+          <Card variant="white" shadow="md" borderWidth="4" className="group nb-card-hover flex flex-col justify-between gap-4">
             <div className="space-y-2">
-              <div className="flex items-center justify-between">
-                <span className="font-display font-bold text-lg">Status Cocoklogiku</span>
+              <div className="flex items-center justify-between gap-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 border-2 border-ink bg-accent-pink shadow-[2px_2px_0_#0A0A0A] flex items-center justify-center text-ink flex-none transition-transform duration-150 group-hover:-rotate-3">
+                    <ClipboardCheck className="w-5 h-5 stroke-[2.5]" />
+                  </div>
+                  <span className="font-display font-bold text-lg">Status Cocoklogiku</span>
+                </div>
                 <Badge variant={user?.has_cocoklogiku ? "green" : "ink"}>
                   {user?.has_cocoklogiku ? "Aktif" : "Belum Ada"}
                 </Badge>
@@ -157,12 +181,14 @@ export default function DashboardPage() {
               </p>
             </div>
             {user?.has_cocoklogiku ? (
-              <Button href="/rapor/hasil" variant="secondary" size="sm" fullWidth>
-                Lihat Rapor Cocoklogiku →
+              <Button href="/rapor/hasil" variant="secondary" size="sm" fullWidth className="inline-flex items-center justify-center gap-2">
+                <span>Lihat Rapor Cocoklogiku</span>
+                <ArrowRight className="w-4 h-4 stroke-[2.5]" />
               </Button>
             ) : (
-              <Button href="/rapor" variant="primary" size="sm" fullWidth>
-                Mulai Tes JalanRapor →
+              <Button href="/rapor" variant="primary" size="sm" fullWidth className="inline-flex items-center justify-center gap-2">
+                <span>Mulai Tes JalanRapor</span>
+                <ArrowRight className="w-4 h-4 stroke-[2.5]" />
               </Button>
             )}
           </Card>
@@ -178,49 +204,68 @@ export default function DashboardPage() {
             {/* Fitur A */}
             <div className="group nb-card-hover bg-accent-yellow border-4 md:border-5 border-ink shadow-nb-lg p-6 md:p-8 flex flex-col justify-between items-start gap-6">
               <div className="space-y-3">
-                <div className="inline-block bg-ink text-paper px-2.5 py-0.5 font-mono font-bold text-xs transition-transform duration-200 group-hover:-rotate-3">
-                  FITUR A
+                <div className="flex items-center gap-2">
+                  <div className="w-7 h-7 border-2 border-ink bg-ink text-accent-yellow shadow-[2px_2px_0_#0A0A0A] flex items-center justify-center flex-none">
+                    <Compass className="w-4 h-4 stroke-[2.5]" />
+                  </div>
+                  <div className="inline-block bg-ink text-paper px-2.5 py-0.5 font-mono font-bold text-xs transition-transform duration-200 group-hover:-rotate-3">
+                    FITUR A
+                  </div>
                 </div>
                 <h3 className="font-heading text-3xl leading-none">JalanKarir</h3>
                 <p className="font-sans text-base leading-snug">
                   Cari tahu role IT yang paling cocok dengan minat, cara kerja, dan preferensimu.
                 </p>
-                <div className="font-mono text-xs text-ink/80 pt-1">
-                  ⏱️ 5 Level · Tanpa batas waktu
+                <div className="font-mono text-xs text-ink/80 pt-1 flex items-center gap-1.5">
+                  <Clock className="w-3.5 h-3.5 stroke-[2.5] flex-none" />
+                  <span>5 Level · Tanpa batas waktu</span>
                 </div>
               </div>
 
-              <Button href="/karir" variant="white" size="md" fullWidth>
-                {user?.has_jalan_id ? "Ulangi Tes JalanKarir" : "Mulai JalanKarir →"}
+              <Button href="/karir" variant="white" size="md" fullWidth className="inline-flex items-center justify-center gap-2">
+                <span>{user?.has_jalan_id ? "Ulangi Tes JalanKarir" : "Mulai JalanKarir"}</span>
+                <ArrowRight className="w-4 h-4 stroke-[2.5]" />
               </Button>
             </div>
 
             {/* Fitur B */}
             <div className="group nb-card-hover bg-accent-pink text-ink border-4 md:border-5 border-ink shadow-nb-lg p-6 md:p-8 flex flex-col justify-between items-start gap-6">
               <div className="space-y-3">
-                <div className="inline-block bg-ink text-paper px-2.5 py-0.5 font-mono font-bold text-xs transition-transform duration-200 group-hover:-rotate-3">
-                  FITUR B
+                <div className="flex items-center gap-2">
+                  <div className="w-7 h-7 border-2 border-ink bg-ink text-accent-pink shadow-[2px_2px_0_#0A0A0A] flex items-center justify-center flex-none">
+                    <GraduationCap className="w-4 h-4 stroke-[2.5]" />
+                  </div>
+                  <div className="inline-block bg-ink text-paper px-2.5 py-0.5 font-mono font-bold text-xs transition-transform duration-200 group-hover:-rotate-3">
+                    FITUR B
+                  </div>
                 </div>
                 <h3 className="font-heading text-3xl leading-none">JalanRapor</h3>
                 <p className="font-sans text-base leading-snug">
                   Uji kecocokanmu dengan role pilihan lewat soal teknis bertingkat.
                 </p>
-                <div className="font-mono text-xs text-ink/80 pt-1">
-                  📊 5 Level kesulitan · 50 Soal teknis
+                <div className="font-mono text-xs text-ink/80 pt-1 flex items-center gap-1.5">
+                  <BarChart3 className="w-3.5 h-3.5 stroke-[2.5] flex-none" />
+                  <span>5 Level kesulitan · 50 Soal teknis</span>
                 </div>
               </div>
 
-              <Button href="/rapor" variant="white" size="md" fullWidth>
-                {user?.has_cocoklogiku ? "Ulangi / Ganti Role" : "Mulai JalanRapor →"}
+              <Button href="/rapor" variant="white" size="md" fullWidth className="inline-flex items-center justify-center gap-2">
+                <span>{user?.has_cocoklogiku ? "Ulangi / Ganti Role" : "Mulai JalanRapor"}</span>
+                <ArrowRight className="w-4 h-4 stroke-[2.5]" />
               </Button>
             </div>
 
             {/* Fitur C */}
-            <div className="group bg-accent-green text-ink border-4 md:border-5 border-ink shadow-nb-lg p-6 md:p-8 flex flex-col justify-between items-start gap-6 opacity-85 transition-opacity hover:opacity-100">
+            <div className="group bg-accent-green text-ink border-4 md:border-5 border-ink shadow-nb-lg p-6 md:p-8 flex flex-col justify-between items-start gap-6 opacity-90 transition-opacity hover:opacity-100">
               <div className="space-y-3">
                 <div className="flex items-center justify-between w-full">
-                  <div className="inline-block bg-ink text-paper px-2.5 py-0.5 font-mono font-bold text-xs">
-                    FITUR C
+                  <div className="flex items-center gap-2">
+                    <div className="w-7 h-7 border-2 border-ink bg-ink text-accent-green shadow-[2px_2px_0_#0A0A0A] flex items-center justify-center flex-none">
+                      <Briefcase className="w-4 h-4 stroke-[2.5]" />
+                    </div>
+                    <div className="inline-block bg-ink text-paper px-2.5 py-0.5 font-mono font-bold text-xs">
+                      FITUR C
+                    </div>
                   </div>
                   <Badge variant="orange" size="sm">
                     Segera Hadir
@@ -230,8 +275,9 @@ export default function DashboardPage() {
                 <p className="font-sans text-base leading-snug">
                   Cari lowongan kerja IT yang relevan dengan role dan kompetensi rapormu.
                 </p>
-                <div className="font-mono text-xs text-ink/80 pt-1">
-                  💼 Tahap perencanaan lanjutan
+                <div className="font-mono text-xs text-ink/80 pt-1 flex items-center gap-1.5">
+                  <Briefcase className="w-3.5 h-3.5 stroke-[2.5] flex-none" />
+                  <span>Tahap perencanaan lanjutan</span>
                 </div>
               </div>
 

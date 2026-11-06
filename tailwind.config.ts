@@ -21,6 +21,7 @@ const config: Config = {
           orange: "#FF8A3D",
           purple: "#9B5CFF",
           danger: "#FF3B3B",
+          cyan: "#00F0FF",
         },
       },
       boxShadow: {

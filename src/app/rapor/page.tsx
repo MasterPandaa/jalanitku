@@ -11,6 +11,7 @@ import { ProgressBar } from "@/components/ui/ProgressBar";
 import { ChoiceCard } from "@/components/ui/ChoiceCard";
 import { Dialog } from "@/components/ui/Dialog";
 import { JalanMin } from "@/components/mascot/JalanMin";
+import { Sparkles, ArrowRight, ArrowLeft, RotateCcw, AlertCircle } from "lucide-react";
 import { ClientRaporQuestion, CocoklogikuRecord } from "@/lib/rapor";
 import Link from "next/link";
 
@@ -281,8 +282,9 @@ export default function JalanRaporPage() {
             <h2 className="font-heading font-black text-2xl text-ink">Gagal Memuat JalanRapor</h2>
             <p className="font-sans text-sm text-ink/80 leading-relaxed font-medium">{initError}</p>
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
-              <Button variant="primary" size="md" fullWidth onClick={initData}>
-                Coba Lagi ↺
+              <Button variant="primary" size="md" fullWidth onClick={initData} className="inline-flex items-center justify-center gap-2">
+                <span>Coba Lagi</span>
+                <RotateCcw className="w-4 h-4 stroke-[2.5]" />
               </Button>
               <Button href="/dashboard" variant="white" size="md" fullWidth>
                 Ke Dashboard
@@ -309,7 +311,7 @@ export default function JalanRaporPage() {
                 href="/dashboard"
                 className="nb-btn px-4 py-2 bg-surface text-ink border-3 border-ink shadow-nb-sm font-display font-bold text-sm hover:bg-accent-yellow inline-flex items-center gap-2 transition-all hover:-translate-x-0.5"
               >
-                <span>←</span>
+                <ArrowLeft className="w-4 h-4 stroke-[2.5]" />
                 <span>Kembali ke Dashboard</span>
               </Link>
             </div>
@@ -351,8 +353,9 @@ export default function JalanRaporPage() {
                 </div>
 
                 <div className="flex items-center gap-3 w-full sm:w-auto">
-                  <Button href="/rapor/hasil" variant="primary" className="w-full flex-1 sm:flex-initial">
-                    Lihat Kartu Hasil ➔
+                  <Button href="/rapor/hasil" variant="primary" className="w-full flex-1 sm:flex-initial inline-flex items-center justify-center gap-2">
+                    <span>Lihat Kartu Hasil</span>
+                    <ArrowRight className="w-4 h-4 stroke-[2.5]" />
                   </Button>
                 </div>
               </Card>
@@ -365,17 +368,17 @@ export default function JalanRaporPage() {
                   <h2 className="font-heading font-black text-xl text-ink">
                     Pilih Role Pengujian:
                   </h2>
-                  <span className="text-xs font-mono font-bold text-gray-600">
+                  <span className="text-xs font-mono font-bold text-ink/70">
                     21 Role Profesi IT (Hick&apos;s Law Filter)
                   </span>
                 </div>
 
                 {/* Filter Tabs Hick's Law */}
-                <div className="flex items-center gap-1.5 bg-paper p-1 border-2 border-ink shadow-nb-sm">
+                <div className="flex flex-wrap items-center gap-1.5 bg-paper p-1 border-2 border-ink shadow-nb-sm w-full sm:w-auto">
                   <button
                     type="button"
                     onClick={() => setRoleFilter("all")}
-                    className={`px-3 py-1 font-mono text-xs font-bold border-2 transition-all ${
+                    className={`flex-1 sm:flex-initial px-3 py-1 font-mono text-xs font-bold border-2 transition-all ${
                       roleFilter === "all"
                         ? "bg-accent-yellow text-ink border-ink shadow-nb-sm"
                         : "bg-transparent text-ink/70 border-transparent hover:text-ink"
@@ -386,7 +389,7 @@ export default function JalanRaporPage() {
                   <button
                     type="button"
                     onClick={() => setRoleFilter("available")}
-                    className={`px-3 py-1 font-mono text-xs font-bold border-2 transition-all ${
+                    className={`flex-1 sm:flex-initial px-3 py-1 font-mono text-xs font-bold border-2 transition-all ${
                       roleFilter === "available"
                         ? "bg-accent-green text-ink border-ink shadow-nb-sm"
                         : "bg-transparent text-ink/70 border-transparent hover:text-ink"
@@ -397,7 +400,7 @@ export default function JalanRaporPage() {
                   <button
                     type="button"
                     onClick={() => setRoleFilter("upcoming")}
-                    className={`px-3 py-1 font-mono text-xs font-bold border-2 transition-all ${
+                    className={`flex-1 sm:flex-initial px-3 py-1 font-mono text-xs font-bold border-2 transition-all ${
                       roleFilter === "upcoming"
                         ? "bg-white text-ink border-ink shadow-nb-sm"
                         : "bg-transparent text-ink/70 border-transparent hover:text-ink"
@@ -442,7 +445,7 @@ export default function JalanRaporPage() {
                         className={`relative border-3 border-ink p-5 transition-all text-left w-full flex flex-col justify-between ${
                           role.isAvailable
                             ? "bg-white shadow-nb-md hover:-translate-x-0.5 hover:-translate-y-1 hover:shadow-nb-lg active:translate-x-0.5 active:translate-y-0.5 active:shadow-nb-sm cursor-pointer focus-visible:outline-4 focus-visible:outline-accent-blue"
-                            : "bg-gray-100 opacity-60 cursor-not-allowed shadow-nb-sm"
+                            : "bg-paper/70 opacity-70 cursor-not-allowed shadow-nb-sm border-ink/40"
                         }`}
                         onClick={() => {
                           if (role.isAvailable) handleSelectRole(role.slug);
@@ -451,13 +454,14 @@ export default function JalanRaporPage() {
                         <div>
                           {/* Badge Rekomendasi JalanKarir */}
                           {isRecommendedByKarir && (
-                            <div className="absolute -top-3 -right-2 bg-accent-cyan text-ink border-2 border-ink px-2 py-0.5 text-[10px] font-black font-mono shadow-nb-sm">
-                              ★ SARAN JALANKARIR
+                            <div className="absolute -top-3 -right-2 bg-accent-cyan text-ink border-2 border-ink px-2 py-0.5 text-[10px] font-black font-mono shadow-nb-sm inline-flex items-center gap-1">
+                              <Sparkles className="w-3 h-3 stroke-[2.5]" />
+                              <span>SARAN JALANKARIR</span>
                             </div>
                           )}
 
                           <div className="flex items-start justify-between mb-2">
-                            <span className="text-[10px] font-mono font-bold uppercase px-2 py-0.5 bg-gray-100 border border-ink">
+                            <span className="text-[10px] font-mono font-bold uppercase px-2 py-0.5 bg-paper border border-ink text-ink">
                               {role.kategori}
                             </span>
                             <Badge variant={role.isAvailable ? "green" : "white"} className="text-[10px]">
@@ -468,20 +472,27 @@ export default function JalanRaporPage() {
                           <h3 className="font-heading font-black text-lg text-ink mt-2 mb-1">
                             {role.nama}
                           </h3>
-                          <p className="text-xs text-gray-600 line-clamp-2 leading-relaxed mb-4">
+                          <p className="text-xs text-ink/75 line-clamp-2 leading-relaxed mb-4">
                             {role.deskripsi}
                           </p>
                         </div>
 
                         {/* Visual CTA Indicator */}
                         <div
-                          className={`w-full py-2 px-3 border-2 border-ink text-xs font-display font-bold text-center shadow-nb-sm ${
+                          className={`w-full py-2 px-3 border-2 border-ink text-xs font-display font-bold text-center shadow-nb-sm flex items-center justify-center gap-1.5 ${
                             role.isAvailable
                               ? "bg-accent-yellow text-ink"
-                              : "bg-white text-gray-400 border-gray-400"
+                              : "bg-surface text-ink/40 border-ink/40"
                           }`}
                         >
-                          {role.isAvailable ? "Mulai Uji Kompetensi ➔" : "Segera Hadir"}
+                          {role.isAvailable ? (
+                            <>
+                              <span>Mulai Uji Kompetensi</span>
+                              <ArrowRight className="w-3.5 h-3.5 stroke-[2.5]" />
+                            </>
+                          ) : (
+                            "Segera Hadir"
+                          )}
                         </div>
                       </button>
                     );
@@ -501,7 +512,7 @@ export default function JalanRaporPage() {
                     <span className="bg-accent-yellow px-2 py-0.5 border border-ink text-[10px] font-black uppercase">
                       JALANRAPOR
                     </span>
-                    <span className="text-xs font-mono font-bold text-gray-600">
+                    <span className="text-xs font-mono font-bold text-ink/70">
                       Evaluasi Role:
                     </span>
                   </div>
@@ -529,8 +540,9 @@ export default function JalanRaporPage() {
 
             {/* Error Message */}
             {errorMsg && (
-              <div className="bg-red-50 border-3 border-red-500 p-4 font-mono font-bold text-xs text-red-700 shadow-nb-sm animate-fade-up">
-                ⚠️ {errorMsg}
+              <div className="bg-accent-danger/10 border-3 border-accent-danger p-4 font-mono font-bold text-xs text-accent-danger shadow-nb-sm animate-fade-up flex items-center gap-2">
+                <AlertCircle className="w-4 h-4 stroke-[2.5] flex-none text-accent-danger" />
+                <span>{errorMsg}</span>
               </div>
             )}
 
@@ -544,11 +556,11 @@ export default function JalanRaporPage() {
                     key={question.id}
                     className="p-6 bg-white border-3 border-ink shadow-nb-md space-y-4 nb-card-hover transition-all"
                   >
-                    <div className="flex items-center justify-between pb-2 border-b-2 border-gray-100">
+                    <div className="flex items-center justify-between pb-2 border-b-2 border-ink/15">
                       <span className="text-xs font-mono font-bold px-2 py-0.5 bg-ink text-white">
                         Soal #{qIdx + 1}
                       </span>
-                      <span className="text-xs font-mono font-bold text-gray-500">
+                      <span className="text-xs font-mono font-bold text-ink/70">
                         Pilar: {question.competency_name}
                       </span>
                     </div>
@@ -576,8 +588,8 @@ export default function JalanRaporPage() {
             </div>
 
             {/* Tombol Kirim Level */}
-            <div className="flex items-center justify-between pt-4">
-              <span className="text-xs font-mono text-gray-500">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 pt-4 border-t-3 border-ink">
+              <span className="text-xs font-mono text-ink/70 text-center sm:text-left">
                 {Object.keys(currentAnswers).length} dari {levelQuestions.length} soal terjawab
               </span>
 
@@ -586,13 +598,21 @@ export default function JalanRaporPage() {
                 size="lg"
                 onClick={handleSubmitLevel}
                 disabled={submittingLevel}
-                className="min-w-[200px]"
+                className="w-full sm:w-auto min-w-[200px] inline-flex items-center justify-center gap-2"
               >
-                {submittingLevel
-                  ? "Menilai..."
-                  : currentLevel === totalLevels
-                  ? "Selesaikan & Lihat Cocoklogiku ➔"
-                  : `Lanjut ke Level ${currentLevel + 1} ➔`}
+                {submittingLevel ? (
+                  "Menilai..."
+                ) : currentLevel === totalLevels ? (
+                  <>
+                    <span>Selesaikan &amp; Lihat Cocoklogiku</span>
+                    <Sparkles className="w-5 h-5 stroke-[2.5]" />
+                  </>
+                ) : (
+                  <>
+                    <span>Lanjut ke Level {currentLevel + 1}</span>
+                    <ArrowRight className="w-5 h-5 stroke-[2.5]" />
+                  </>
+                )}
               </Button>
             </div>
           </div>
@@ -605,7 +625,7 @@ export default function JalanRaporPage() {
           onConfirm={() => {
             if (selectedRoleToTest) executeStartSession(selectedRoleToTest);
           }}
-          title="⚠️ PERINGATAN: HASIL LAMA AKAN TIMPA"
+          title="PERINGATAN: HASIL LAMA AKAN DITIMPA"
           description={`Sesuai aturan sistem JalanITku, setiap akun hanya memiliki 1 Cocoklogiku aktif. Memulai tes baru ini akan menghapus dan menimpa skor Cocoklogiku ${existingCocoklogiku?.roleName || ""} yang sudah ada!`}
           confirmLabel="Ya, Mulai Tes Baru"
           cancelLabel="Batal"

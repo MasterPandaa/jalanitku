@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { Trophy, ArrowRight, ArrowLeft, RotateCcw, Pin, Lightbulb } from "lucide-react";
 import { AppNavbar } from "@/components/ui/AppNavbar";
 import { Button } from "@/components/ui/Button";
 import { JalanIDCard } from "@/components/features/JalanIDCard";
@@ -82,21 +83,27 @@ export default function KarirHasilPage() {
                 variant="primary"
                 size="md"
                 onClick={loadData}
+                className="inline-flex items-center justify-center gap-2"
               >
-                Coba Lagi ↺
+                <span>Coba Lagi</span>
+                <RotateCcw className="w-4 h-4 stroke-[2.5]" />
               </Button>
-              <Link
+              <Button
                 href="/karir"
-                className="nb-btn px-5 py-2.5 bg-accent-blue text-surface border-3 border-ink font-display font-bold text-sm shadow-nb-sm hover:bg-[#2b44ea]"
+                variant="primary"
+                size="md"
+                className="inline-flex items-center justify-center gap-2"
               >
-                Mulai Tes JalanKarir Sekarang →
-              </Link>
-              <Link
+                <span>Mulai Tes JalanKarir Sekarang</span>
+                <ArrowRight className="w-4 h-4 stroke-[2.5]" />
+              </Button>
+              <Button
                 href="/dashboard"
-                className="nb-btn px-5 py-2.5 bg-surface text-ink border-3 border-ink font-display font-bold text-sm shadow-nb-sm hover:bg-accent-yellow"
+                variant="white"
+                size="md"
               >
                 Kembali ke Dashboard
-              </Link>
+              </Button>
             </div>
           </div>
         </main>
@@ -120,15 +127,16 @@ export default function KarirHasilPage() {
             href="/dashboard"
             className="nb-btn px-4 py-2 bg-surface text-ink border-3 border-ink shadow-nb-sm font-display font-bold text-sm hover:bg-accent-yellow inline-flex items-center gap-2 transition-all hover:-translate-x-0.5"
           >
-            <span>←</span>
+            <ArrowLeft className="w-4 h-4 stroke-[2.5]" />
             <span>Kembali ke Dashboard</span>
           </Link>
         </div>
 
         {/* Celebration Banner */}
         <div className="space-y-3">
-          <div className="inline-block bg-accent-green text-ink border-3 border-ink px-3 py-1 font-mono text-xs font-bold uppercase shadow-nb-sm">
-            Tes JalanKarir Selesai 🎉
+          <div className="inline-flex items-center gap-2 bg-accent-green text-ink border-3 border-ink px-3 py-1 font-mono text-xs font-bold uppercase shadow-nb-sm">
+            <Trophy className="w-4 h-4 stroke-[2.5]" />
+            <span>Tes JalanKarir Selesai</span>
           </div>
           <h1 className="font-heading text-3xl md:text-5xl text-ink leading-tight">
             Selamat! Ini Kartu JalanID Milikmu
@@ -160,12 +168,16 @@ export default function KarirHasilPage() {
                 <strong>Cocoklogiku</strong>.
               </p>
               <div className="pt-2">
-                <Link
+                <Button
                   href={`/rapor?role=${result.top_role.slug}`}
-                  className="nb-btn w-full inline-flex items-center justify-center px-6 py-3 bg-accent-blue text-surface font-display font-bold text-base border-4 border-ink shadow-nb-md hover:bg-[#2b44ea] transition-all"
+                  variant="primary"
+                  size="md"
+                  fullWidth
+                  className="inline-flex items-center justify-center gap-2"
                 >
-                  Uji di JalanRapor Sekarang →
-                </Link>
+                  <span>Uji di JalanRapor Sekarang</span>
+                  <ArrowRight className="w-4 h-4 stroke-[2.5]" />
+                </Button>
               </div>
             </>
           ) : (
@@ -173,16 +185,23 @@ export default function KarirHasilPage() {
               <h3 className="font-heading text-2xl text-ink leading-snug">
                 Bank Soal Teknis {result.top_role.name} Segera Hadir!
               </h3>
-              <div className="bg-surface border-3 border-ink p-3 font-mono text-xs space-y-1 text-ink/80">
-                <div>📌 <strong>Status Kurasi:</strong> Role {result.top_role.name} sedang dalam penyusunan bank soal teknis komprehensif.</div>
-                <div>💡 Kamu dapat menjelajahi dan menguji kemampuanmu di 5 role prioritas yang telah aktif saat ini.</div>
+              <div className="bg-surface border-3 border-ink p-3 font-mono text-xs space-y-2 text-ink/80">
+                <div className="flex items-start gap-2">
+                  <Pin className="w-4 h-4 stroke-[2.5] text-accent-blue flex-none mt-0.5" />
+                  <div><strong>Status Kurasi:</strong> Role {result.top_role.name} sedang dalam penyusunan bank soal teknis komprehensif.</div>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Lightbulb className="w-4 h-4 stroke-[2.5] text-accent-yellow flex-none mt-0.5" />
+                  <div>Kamu dapat menjelajahi dan menguji kemampuanmu di 5 role prioritas yang telah aktif saat ini.</div>
+                </div>
               </div>
               <div className="pt-2">
                 <Link
                   href="/rapor"
-                  className="nb-btn w-full inline-flex items-center justify-center px-6 py-3 bg-surface text-ink font-display font-bold text-base border-4 border-ink shadow-nb-md hover:bg-paper transition-all"
+                  className="nb-btn w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-surface text-ink font-display font-bold text-base border-4 border-ink shadow-nb-md hover:bg-paper transition-all"
                 >
-                  Jelajahi Role JalanRapor yang Aktif →
+                  <span>Jelajahi Role JalanRapor yang Aktif</span>
+                  <ArrowRight className="w-4 h-4 stroke-[2.5]" />
                 </Link>
               </div>
             </>

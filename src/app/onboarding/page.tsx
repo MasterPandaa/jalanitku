@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
+import { Check, ArrowRight, Lightbulb } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
@@ -139,8 +140,9 @@ export default function OnboardingPage() {
               <div className="mt-2 min-h-[24px] font-mono text-xs">
                 {checking && <span className="text-ink/60">Sedang memeriksa ketersediaan…</span>}
                 {!checking && available === true && (
-                  <span className="text-accent-green font-bold bg-ink px-2 py-0.5">
-                    ✓ Username &quot;{username}&quot; tersedia!
+                  <span className="text-accent-green font-bold bg-ink px-2 py-0.5 inline-flex items-center gap-1">
+                    <Check className="w-3.5 h-3.5 stroke-[3]" />
+                    <span>Username &quot;{username}&quot; tersedia!</span>
                   </span>
                 )}
               </div>
@@ -152,14 +154,19 @@ export default function OnboardingPage() {
               size="lg"
               fullWidth
               disabled={!available || submitting || checking}
+              className="inline-flex items-center justify-center gap-2"
             >
-              {submitting ? "Menyimpan…" : "Lanjut ke Dashboard →"}
+              <span>{submitting ? "Menyimpan…" : "Lanjut ke Dashboard"}</span>
+              <ArrowRight className="w-5 h-5 stroke-[2.5]" />
             </Button>
           </form>
 
-          <div className="bg-paper border-2 border-ink p-3 font-mono text-xs text-ink/70">
-            💡 <strong>Info:</strong> Email Google milikmu tidak akan pernah ditampilkan di kartu JalanID
-            maupun dibagikan kepada publik.
+          <div className="bg-paper border-2 border-ink p-3 font-mono text-xs text-ink/70 flex items-start gap-2">
+            <Lightbulb className="w-4 h-4 stroke-[2.5] text-accent-yellow flex-none mt-0.5" />
+            <div>
+              <strong>Info:</strong> Email Google milikmu tidak akan pernah ditampilkan di kartu JalanID
+              maupun dibagikan kepada publik.
+            </div>
           </div>
         </Card>
       </div>

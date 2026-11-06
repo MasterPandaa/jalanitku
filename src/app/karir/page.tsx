@@ -3,6 +3,7 @@
 import React, { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { AlertCircle, ArrowRight, ArrowLeft, X, Trophy } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { AppNavbar } from "@/components/ui/AppNavbar";
 import { Button } from "@/components/ui/Button";
@@ -293,7 +294,7 @@ export default function KarirPage() {
               href="/dashboard"
               className="nb-btn px-4 py-2 bg-surface text-ink border-3 border-ink shadow-nb-sm font-display font-bold text-sm hover:bg-accent-yellow inline-flex items-center gap-2 transition-all hover:-translate-x-0.5"
             >
-              <span>←</span>
+              <ArrowLeft className="w-4 h-4 stroke-[2.5]" />
               <span>Kembali ke Dashboard</span>
             </Link>
           </div>
@@ -337,8 +338,10 @@ export default function KarirPage() {
                   variant="primary"
                   size="sm"
                   onClick={() => startSession(false)}
+                  className="inline-flex items-center justify-center gap-2"
                 >
-                  Lanjutkan Step {activeSessionInfo.level} →
+                  <span>Lanjutkan Step {activeSessionInfo.level}</span>
+                  <ArrowRight className="w-4 h-4 stroke-[2.5]" />
                 </Button>
               </div>
             )}
@@ -355,8 +358,10 @@ export default function KarirPage() {
                     startSession(false);
                   }
                 }}
+                className="inline-flex items-center justify-center gap-2"
               >
-                {activeSessionInfo ? "Ulangi Tes dari Awal" : "Mulai Tes JalanKarir Sekarang →"}
+                <span>{activeSessionInfo ? "Ulangi Tes dari Awal" : "Mulai Tes JalanKarir Sekarang"}</span>
+                <ArrowRight className="w-5 h-5 stroke-[2.5]" />
               </Button>
             </div>
           </Card>
@@ -436,17 +441,20 @@ export default function KarirPage() {
         {/* Inline Error Banner */}
         {errorMessage && (
           <div
-            className="bg-red-50 border-3 border-accent-danger p-4 font-mono font-bold text-xs md:text-sm text-accent-danger shadow-nb-sm flex items-center justify-between gap-3 animate-fade-up sticky top-4 z-40"
+            className="bg-accent-danger/10 border-3 border-accent-danger p-4 font-mono font-bold text-xs md:text-sm text-accent-danger shadow-nb-sm flex items-center justify-between gap-3 animate-fade-up sticky top-4 z-40"
             role="alert"
           >
-            <span>⚠️ {errorMessage}</span>
+            <div className="flex items-center gap-2">
+              <AlertCircle className="w-4 h-4 stroke-[2.5] flex-none" />
+              <span>{errorMessage}</span>
+            </div>
             <button
               type="button"
               onClick={() => setErrorMessage("")}
-              className="text-ink font-bold hover:underline cursor-pointer"
+              className="p-1 hover:bg-accent-danger/20 transition-colors cursor-pointer flex items-center justify-center text-ink"
               aria-label="Tutup pesan peringatan"
             >
-              ✕
+              <X className="w-4 h-4 stroke-[2.5]" />
             </button>
           </div>
         )}
@@ -471,7 +479,7 @@ export default function KarirPage() {
                   borderWidth="4"
                   className={`p-6 md:p-8 space-y-5 text-left nb-card-hover transition-all duration-300 ${
                     isUnanswered
-                      ? "!border-accent-danger !border-4 !shadow-[4px_4px_0px_#E63946] ring-4 ring-accent-danger/20"
+                      ? "!border-accent-danger !border-4 !shadow-[4px_4px_0_#FF3B3B] ring-4 ring-accent-danger/20"
                       : ""
                   }`}
                 >
@@ -479,14 +487,15 @@ export default function KarirPage() {
                     <div className="flex items-center gap-2">
                       <span
                         className={`px-2.5 py-0.5 font-mono text-xs font-bold transition-colors ${
-                          isUnanswered ? "bg-accent-danger text-white" : "bg-ink text-paper"
+                          isUnanswered ? "bg-accent-danger text-surface" : "bg-ink text-paper"
                         }`}
                       >
                         Soal #{idx + 1}
                       </span>
                       {isUnanswered && (
-                        <span className="bg-red-100 text-accent-danger border border-accent-danger px-2 py-0.5 font-mono text-xs font-bold animate-pulse">
-                          ⚠️ Wajib Dijawab
+                        <span className="bg-accent-danger/15 text-accent-danger border border-accent-danger px-2 py-0.5 font-mono text-xs font-bold animate-pulse inline-flex items-center gap-1">
+                          <AlertCircle className="w-3.5 h-3.5 stroke-[2.5]" />
+                          <span>Wajib Dijawab</span>
                         </span>
                       )}
                     </div>
@@ -532,8 +541,8 @@ export default function KarirPage() {
         )}
 
         {/* Navigation Button */}
-        <div className="flex items-center justify-between pt-6 border-t-3 border-ink">
-          <Link href="/dashboard" className="nb-btn px-4 py-2 border-2 border-ink bg-surface font-mono text-xs font-bold">
+        <div className="flex flex-col-reverse sm:flex-row items-stretch sm:items-center justify-between gap-3 pt-6 border-t-3 border-ink">
+          <Link href="/dashboard" className="nb-btn px-4 py-2.5 border-2 border-ink bg-surface font-mono text-xs font-bold inline-flex items-center justify-center text-center">
             Simpan &amp; Lanjut Nanti
           </Link>
 
@@ -542,12 +551,21 @@ export default function KarirPage() {
             size="lg"
             disabled={submitting || loading}
             onClick={handleNextLevel}
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2"
           >
-            {submitting
-              ? "Menyimpan…"
-              : currentLevel < 4
-              ? `Lanjut ke Step ${currentLevel + 1} →`
-              : "Selesaikan & Lihat JalanID 🎉"}
+            {submitting ? (
+              "Menyimpan…"
+            ) : currentLevel < 4 ? (
+              <>
+                <span>Lanjut ke Step {currentLevel + 1}</span>
+                <ArrowRight className="w-5 h-5 stroke-[2.5]" />
+              </>
+            ) : (
+              <>
+                <span>Selesaikan &amp; Lihat JalanID</span>
+                <Trophy className="w-5 h-5 stroke-[2.5]" />
+              </>
+            )}
           </Button>
         </div>
       </main>

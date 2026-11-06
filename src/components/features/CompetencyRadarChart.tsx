@@ -164,12 +164,13 @@ export const CompetencyRadarChart: React.FC<CompetencyRadarChartProps> = ({
           const lines = formatCompetencyName(item.competencyName);
           const isTwoLines = lines.length > 1;
 
+          // Warna teks persentase dengan rasio kontras WCAG AA (>= 4.5:1) pada background terang
           const scoreColor =
             item.percentage >= 80
-              ? "#10B981"
+              ? "#047857" // Accessible dark emerald (5.1:1)
               : item.percentage >= 60
-              ? "#D97706"
-              : "#EF4444";
+              ? "#B45309" // Accessible dark amber (4.8:1)
+              : "#C53030"; // Accessible dark red (5.3:1)
 
           return (
             <g key={`lbl-${i}`} className="select-none">

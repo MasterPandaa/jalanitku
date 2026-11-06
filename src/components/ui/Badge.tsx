@@ -1,7 +1,7 @@
 import React from "react";
 
 export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
-  variant?: "yellow" | "pink" | "blue" | "green" | "orange" | "ink" | "white";
+  variant?: "yellow" | "pink" | "blue" | "green" | "orange" | "ink" | "white" | "cyan";
   size?: "sm" | "md";
 }
 
@@ -20,6 +20,7 @@ export function Badge({
     orange: "bg-accent-orange text-ink border-ink",
     ink: "bg-ink text-paper border-ink",
     white: "bg-surface text-ink border-ink",
+    cyan: "bg-accent-cyan text-ink border-ink",
   };
 
   const sizeStyles = {

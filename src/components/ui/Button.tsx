@@ -26,9 +26,9 @@ export function getButtonStyles({
   };
 
   const sizeStyles: Record<ButtonSize, string> = {
-    sm: "px-3 py-1.5 text-sm border-3 shadow-nb-sm",
-    md: "px-5 py-2.5 text-base border-4 shadow-nb-md font-bold",
-    lg: "px-7 py-3.5 text-lg md:text-xl border-4 shadow-nb-md font-bold",
+    sm: "min-h-[40px] px-3.5 py-1.5 text-sm border-3 shadow-nb-sm font-bold",
+    md: "min-h-[44px] px-5 py-2.5 text-base border-4 shadow-nb-md font-bold",
+    lg: "min-h-[48px] px-7 py-3.5 text-lg md:text-xl border-4 shadow-nb-md font-bold",
   };
 
   return `nb-btn inline-flex items-center justify-center gap-2 font-display tracking-tight text-center border-ink transition-all ${

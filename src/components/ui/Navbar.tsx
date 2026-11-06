@@ -3,6 +3,7 @@
 import React, { useCallback, useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Menu, X, ArrowRight } from "lucide-react";
 import { Logo } from "./Logo";
 import { Button } from "./Button";
 import { getDictionary } from "@/lib/i18n";
@@ -20,6 +21,21 @@ export function Navbar({ user: propUser, onLoginClick }: NavbarProps) {
   const dict = getDictionary();
   const pathname = usePathname();
   const [currentUser, setCurrentUser] = useState<NavbarProps["user"]>(propUser ?? null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && mobileMenuOpen) {
+        setMobileMenuOpen(false);
+      }
+    };
+    if (mobileMenuOpen) {
+      window.addEventListener("keydown", handleKeyDown);
+    }
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [mobileMenuOpen]);
 
   useEffect(() => {
     if (propUser !== undefined) {
@@ -57,8 +73,17 @@ export function Navbar({ user: propUser, onLoginClick }: NavbarProps) {
     [pathname]
   );
 
+  const handleMobileNavClick = useCallback(
+    (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+      setMobileMenuOpen(false);
+      handleSmoothScroll(e, targetId);
+    },
+    [handleSmoothScroll]
+  );
+
   const handleLogoClick = useCallback(
     (e: React.MouseEvent<HTMLAnchorElement>) => {
+      setMobileMenuOpen(false);
       if (pathname === "/" || pathname === "") {
         e.preventDefault();
         window.history.pushState(null, "", "/");
@@ -70,14 +95,14 @@ export function Navbar({ user: propUser, onLoginClick }: NavbarProps) {
 
   return (
     <header className="w-full bg-paper border-b-4 md:border-b-5 border-ink sticky top-0 z-40">
-      <div className="max-w-7xl mx-auto px-4 md:px-8 py-3.5 md:py-4 flex flex-wrap items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-3.5 md:py-4 flex items-center justify-between gap-4">
         {/* Logo */}
         <Logo size="md" onClick={handleLogoClick} />
 
-        {/* Navigation Links */}
+        {/* Desktop Navigation Links */}
         <nav
-          aria-label="Menu Utama"
-          className="flex flex-wrap items-center gap-2 md:gap-4 font-display font-bold text-base md:text-lg"
+          aria-label="Menu Utama Desktop"
+          className="hidden lg:flex items-center gap-3 xl:gap-5 font-display font-bold text-base xl:text-lg"
         >
           <Link
             href="/#fitur"
@@ -124,7 +149,7 @@ export function Navbar({ user: propUser, onLoginClick }: NavbarProps) {
                     (@{currentUser.username})
                   </span>
                 )}
-                <span aria-hidden="true">➔</span>
+                <ArrowRight className="w-4 h-4 stroke-[2.5]" aria-hidden="true" />
               </Link>
             </div>
           ) : onLoginClick ? (
@@ -137,15 +162,91 @@ export function Navbar({ user: propUser, onLoginClick }: NavbarProps) {
               {dict.nav.login}
             </Button>
           ) : (
-            <Link
+            <Button
               href="/login"
-              className="nb-btn inline-flex items-center justify-center gap-2 font-display tracking-tight text-center border-ink transition-all bg-accent-blue text-surface hover:bg-[#2b44ea] px-3 py-1.5 text-sm md:text-base border-3 shadow-nb-sm"
+              variant="primary"
+              size="sm"
+              className="text-sm md:text-base"
             >
               {dict.nav.login}
-            </Link>
+            </Button>
           )}
         </nav>
+
+        {/* Mobile Header Right Controls: Fast Action CTA + Hamburger Toggle */}
+        <div className="flex lg:hidden items-center gap-2">
+          {currentUser ? (
+            <Link
+              href="/dashboard"
+              className="nb-btn min-h-[44px] px-3 py-2 bg-accent-yellow text-ink border-3 border-ink shadow-nb-sm font-display font-bold text-xs flex items-center gap-1.5"
+            >
+              <span>Dashboard</span>
+              <ArrowRight className="w-3.5 h-3.5 stroke-[2.5]" aria-hidden="true" />
+            </Link>
+          ) : (
+            <Link
+              href="/login"
+              aria-label={dict.nav.login}
+              className="nb-btn min-h-[44px] px-3.5 py-2 bg-accent-blue text-surface border-3 border-ink shadow-nb-sm font-display font-bold text-xs sm:text-sm flex items-center whitespace-nowrap"
+            >
+              <span className="sm:hidden" aria-hidden="true">Masuk</span>
+              <span className="hidden sm:inline">{dict.nav.login}</span>
+            </Link>
+          )}
+
+          <button
+            type="button"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="min-h-[44px] min-w-[44px] border-3 border-ink bg-surface text-ink p-2 shadow-nb-sm font-bold text-lg flex items-center justify-center cursor-pointer transition-colors hover:bg-accent-yellow"
+            aria-label={mobileMenuOpen ? "Tutup menu navigasi" : "Buka menu navigasi"}
+            aria-expanded={mobileMenuOpen}
+          >
+            {mobileMenuOpen ? (
+              <X className="w-6 h-6 stroke-[2.5]" />
+            ) : (
+              <Menu className="w-6 h-6 stroke-[2.5]" />
+            )}
+          </button>
+        </div>
       </div>
+
+      {/* Mobile Nav Drawer */}
+      {mobileMenuOpen && (
+        <div className="lg:hidden border-t-4 border-ink bg-paper px-4 py-4 flex flex-col gap-2.5 animate-fade-in shadow-[0_8px_0_#0A0A0A]">
+          <Link
+            href="/#fitur"
+            scroll={false}
+            onClick={(e) => handleMobileNavClick(e, "fitur")}
+            className="min-h-[44px] px-4 py-2.5 flex items-center font-display font-bold text-base text-ink bg-surface border-3 border-ink shadow-nb-sm hover:bg-accent-yellow transition-colors"
+          >
+            {dict.nav.features}
+          </Link>
+          <Link
+            href="/#cara"
+            scroll={false}
+            onClick={(e) => handleMobileNavClick(e, "cara")}
+            className="min-h-[44px] px-4 py-2.5 flex items-center font-display font-bold text-base text-ink bg-surface border-3 border-ink shadow-nb-sm hover:bg-accent-yellow transition-colors"
+          >
+            {dict.nav.howItWorks}
+          </Link>
+          <Link
+            href="/#maskot"
+            scroll={false}
+            onClick={(e) => handleMobileNavClick(e, "maskot")}
+            className="min-h-[44px] px-4 py-2.5 flex items-center font-display font-bold text-base text-ink bg-surface border-3 border-ink shadow-nb-sm hover:bg-accent-yellow transition-colors"
+          >
+            {dict.nav.mascot}
+          </Link>
+          <Link
+            href="/#faq"
+            scroll={false}
+            onClick={(e) => handleMobileNavClick(e, "faq")}
+            className="min-h-[44px] px-4 py-2.5 flex items-center font-display font-bold text-base text-ink bg-surface border-3 border-ink shadow-nb-sm hover:bg-accent-yellow transition-colors"
+          >
+            {dict.nav.faq}
+          </Link>
+        </div>
+      )}
     </header>
   );
 }

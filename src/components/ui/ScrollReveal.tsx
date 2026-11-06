@@ -48,6 +48,12 @@ export function ScrollReveal({
 
     const currentEl = ref.current;
     if (currentEl) {
+      // Jika elemen sudah berada dalam viewport sejak awal, aktifkan segera untuk mencegah FOIC
+      const rect = currentEl.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        setIsVisible(true);
+        return;
+      }
       observer.observe(currentEl);
     }
 

@@ -10,6 +10,7 @@ import { Input } from "@/components/ui/Input";
 import { HTTP_STATUS_CATALOG, HttpStatusDetail } from "@/lib/http-status";
 import { HttpStatusViewer } from "@/components/features/HttpStatusViewer";
 import { JalanMin } from "@/components/mascot/JalanMin";
+import { ListFilter, Microscope } from "lucide-react";
 
 export default function HttpStatusHubPage() {
   const [activeSeries, setActiveSeries] = useState<"all" | "3xx" | "4xx" | "5xx">("all");
@@ -96,7 +97,7 @@ export default function HttpStatusHubPage() {
               onClick={() => setActiveSeries("3xx")}
               className={`px-4 py-2 font-display font-bold text-sm md:text-base border-3 border-ink transition-all cursor-pointer ${
                 activeSeries === "3xx"
-                  ? "bg-accent-blue text-white shadow-nb-sm -translate-y-0.5"
+                  ? "bg-accent-blue text-surface shadow-nb-sm -translate-y-0.5"
                   : "bg-surface hover:bg-paper"
               }`}
             >
@@ -142,24 +143,26 @@ export default function HttpStatusHubPage() {
           <button
             type="button"
             onClick={() => setMobileTab("catalog")}
-            className={`flex-1 py-2 font-display font-bold text-xs sm:text-sm text-center border-2 transition-all cursor-pointer ${
+            className={`flex-1 py-2 font-display font-bold text-xs sm:text-sm text-center border-2 transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
               mobileTab === "catalog"
                 ? "bg-accent-yellow text-ink border-ink shadow-nb-sm"
                 : "border-transparent text-ink/70 hover:text-ink"
             }`}
           >
-            📋 Daftar Kode ({filteredCatalog.length})
+            <ListFilter className="w-4 h-4 stroke-[2.5]" />
+            <span>Daftar Kode ({filteredCatalog.length})</span>
           </button>
           <button
             type="button"
             onClick={() => setMobileTab("detail")}
-            className={`flex-1 py-2 font-display font-bold text-xs sm:text-sm text-center border-2 transition-all cursor-pointer ${
+            className={`flex-1 py-2 font-display font-bold text-xs sm:text-sm text-center border-2 transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
               mobileTab === "detail"
                 ? "bg-accent-yellow text-ink border-ink shadow-nb-sm"
                 : "border-transparent text-ink/70 hover:text-ink"
             }`}
           >
-            🔬 Simulator ({selectedCode})
+            <Microscope className="w-4 h-4 stroke-[2.5]" />
+            <span>Simulator ({selectedCode})</span>
           </button>
         </div>
 

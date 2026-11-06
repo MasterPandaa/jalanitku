@@ -6,6 +6,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { Logo } from "@/components/ui/Logo";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
+import { AlertCircle, ArrowLeft, Lightbulb, Loader2, UserCog } from "lucide-react";
 import { JalanMin } from "@/components/mascot/JalanMin";
 import { GoogleAccountModal } from "@/components/auth/GoogleAccountModal";
 
@@ -85,14 +86,15 @@ function LoginContent() {
         <Logo size="md" />
         <Link
           href="/"
-          className="nb-link font-display font-bold text-sm md:text-base px-3 py-1.5 border-3 border-ink bg-surface"
+          className="nb-link inline-flex items-center gap-2 font-display font-bold text-sm md:text-base px-3 py-1.5 border-3 border-ink bg-surface shadow-nb-sm"
         >
-          ← Kembali ke Beranda
+          <ArrowLeft className="w-4 h-4 stroke-[2.5]" />
+          Kembali ke Beranda
         </Link>
       </div>
 
       <div className="animate-fade-up w-full max-w-md mx-auto my-12">
-        <Card variant="white" shadow="lg" borderWidth="5" className="nb-card-hover flex flex-col items-center text-center gap-6 p-8">
+        <Card variant="white" shadow="lg" borderWidth="5" className="flex flex-col items-center text-center gap-6 p-6 sm:p-8">
           <div className="relative transition-transform duration-200 hover:scale-105">
             <JalanMin state="idle" size={140} />
           </div>
@@ -107,8 +109,14 @@ function LoginContent() {
           </div>
 
           {errorMessage && (
-            <div className="w-full bg-[#FF4B4B]/15 border-2 border-[#FF4B4B] p-3 text-left font-mono text-xs text-[#0A0A0A] font-bold">
-              ⚠️ {errorMessage}
+            <div
+              role="alert"
+              className="animate-scaleUp w-full bg-accent-danger text-surface border-3 border-ink shadow-nb-sm p-3 text-left font-mono text-xs font-bold flex items-start gap-3 -rotate-1"
+            >
+              <div className="w-7 h-7 border-2 border-ink bg-surface text-accent-danger flex items-center justify-center flex-none">
+                <AlertCircle className="w-4 h-4 stroke-[3]" />
+              </div>
+              <span className="pt-1 leading-snug">{errorMessage}</span>
             </div>
           )}
 
@@ -121,7 +129,10 @@ function LoginContent() {
               onClick={handleStartLogin}
               className="flex items-center justify-center gap-3 py-3 border-4 hover:bg-white"
             >
-              {/* Google G Icon */}
+              {loading ? (
+                <Loader2 className="w-6 h-6 stroke-[2.5] animate-spin flex-none" />
+              ) : (
+              /* Google G Icon */
               <svg width="24" height="24" viewBox="0 0 24 24" className="flex-none">
                 <path
                   fill="#4285F4"
@@ -140,24 +151,32 @@ function LoginContent() {
                   d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"
                 />
               </svg>
+              )}
               <span>{loading ? "Memproses..." : "Masuk dengan Google"}</span>
             </Button>
           </div>
 
-          <div className="w-full border-t-2 border-ink/20 pt-4 flex flex-col items-center gap-2">
-            <span className="font-mono text-xs text-ink/70">
-              💡 {realOAuthEnabled ? "Mode Google OAuth GCP Aktif" : "Mode Google Account Chooser Aktif"}
-            </span>
-            <button
-              type="button"
+          <div className="w-full border-t-3 border-dashed border-ink pt-4 flex flex-col items-center gap-3">
+            <div className="inline-flex items-center gap-2 font-mono text-xs font-bold text-ink/80">
+              <div className="w-6 h-6 border-2 border-ink bg-accent-yellow shadow-[2px_2px_0_#0A0A0A] flex items-center justify-center text-ink flex-none">
+                <Lightbulb className="w-3.5 h-3.5 stroke-[2.5]" />
+              </div>
+              <span>{realOAuthEnabled ? "Mode Google OAuth GCP Aktif" : "Mode Google Account Chooser Aktif"}</span>
+            </div>
+            <Button
+              variant="secondary"
+              size="sm"
+              fullWidth
+              disabled={loading}
               onClick={() => setIsModalOpen(true)}
-              className="text-xs font-mono font-bold text-ink underline hover:text-accent-blue cursor-pointer"
+              className="text-xs sm:text-sm"
             >
-              Pilih Profil Cepat (Demo &amp; Onboarding Baru)
-            </button>
+              <UserCog className="w-4 h-4 stroke-[2.5] flex-none" />
+              <span>Pilih Profil Cepat (Demo &amp; Onboarding Baru)</span>
+            </Button>
           </div>
 
-          <div className="font-mono text-xs text-ink/60">
+          <div className="font-mono text-xs text-ink/70">
             Gratis penuh · Privasi terjaga · Email tidak dipublikasikan
           </div>
         </Card>
@@ -182,8 +201,11 @@ export default function LoginPage() {
   return (
     <Suspense
       fallback={
-        <div className="min-h-screen bg-paper flex items-center justify-center font-mono text-sm">
-          Menyiapkan Halaman Masuk...
+        <div className="min-h-screen bg-paper flex items-center justify-center p-6">
+          <div className="bg-surface border-4 border-ink shadow-nb-md p-8 flex flex-col items-center gap-4">
+            <JalanMin state="idle" size={100} />
+            <div className="font-mono text-sm font-bold animate-pulse">Menyiapkan Halaman Masuk...</div>
+          </div>
         </div>
       }
     >

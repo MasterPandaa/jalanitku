@@ -1,7 +1,7 @@
 "use client";
         
         import React, { useState, useEffect } from "react";
-        import { User as UserIcon, Plus, Check, ArrowRight, X, Loader2 } from "lucide-react";
+        import { User as UserIcon, Plus, Check, ArrowRight, ArrowLeft, X, Loader2, ShieldCheck } from "lucide-react";
         import { Button } from "@/components/ui/Button";
         
         export interface GoogleAccountOption {
@@ -104,7 +104,7 @@
         
           return (
             <div
-              className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-ink/75 backdrop-blur-[2px] animate-fadeIn"
+              className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-ink/75 animate-fadeIn"
               role="dialog"
               aria-modal="true"
             >
@@ -194,7 +194,7 @@
                                   <span
                                     className={`text-[10px] font-mono font-bold px-1.5 py-0.2 border border-ink ${
                                       acc.badgeVariant === "demo"
-                                        ? "bg-accent-green text-paper"
+                                        ? "bg-accent-green text-ink"
                                         : "bg-accent-pink text-ink"
                                     }`}
                                   >
@@ -240,9 +240,10 @@
                         <button
                           type="button"
                           onClick={() => setShowCustomForm(false)}
-                          className="font-mono text-xs text-ink/70 hover:underline cursor-pointer"
+                          className="inline-flex items-center gap-1 font-mono text-xs text-ink/70 hover:underline cursor-pointer"
                         >
-                          ← Kembali ke pilihan cepat
+                          <ArrowLeft className="w-3.5 h-3.5 stroke-[3]" />
+                          Kembali ke pilihan cepat
                         </button>
                       </div>
         
@@ -295,7 +296,8 @@
                         size="sm"
                         disabled={!customEmail.trim() || isProcessing}
                       >
-                        Lanjutkan Masuk →
+                        <span>Lanjutkan Masuk</span>
+                        <ArrowRight className="w-4 h-4 stroke-[2.5]" />
                       </Button>
                     </div>
                   </form>
@@ -303,7 +305,8 @@
         
                 {/* Modal Footer Note */}
                 <div className="border-t-2 border-ink/20 pt-3 text-[11px] font-sans text-ink/60 leading-relaxed">
-                  🔒 Untuk memverifikasi akun Anda, Google akan membagikan nama, email, dan foto profil Anda ke <strong>JalanITku</strong>. Kami menjamin kerahasiaan dan privasi data Anda.
+                  <ShieldCheck className="w-4 h-4 stroke-[2.5] text-accent-green inline-block mr-1 align-sub" />
+                  Untuk memverifikasi akun Anda, Google akan membagikan nama, email, dan foto profil Anda ke <strong>JalanITku</strong>. Kami menjamin kerahasiaan dan privasi data Anda.
                 </div>
               </div>
             </div>

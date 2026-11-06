@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/Button";
 import { JalanMin } from "@/components/mascot/JalanMin";
 import { CocoklogikuCard } from "@/components/features/CocoklogikuCard";
 import { CocoklogikuRecord } from "@/lib/rapor";
+import { Target, ArrowLeft, ArrowRight, RotateCcw } from "lucide-react";
 import Link from "next/link";
 
 function HasilContent() {
@@ -82,14 +83,14 @@ function HasilContent() {
             href="/dashboard"
             className="nb-btn px-4 py-2 bg-surface text-ink border-3 border-ink shadow-nb-sm font-display font-bold text-sm hover:bg-accent-yellow inline-flex items-center gap-2 transition-all hover:-translate-x-0.5"
           >
-            <span>←</span>
+            <ArrowLeft className="w-4 h-4 stroke-[2.5]" />
             <span>Kembali ke Dashboard</span>
           </Link>
           <Link
             href="/rapor"
             className="nb-btn px-4 py-2 bg-paper text-ink border-3 border-ink shadow-nb-sm font-display font-bold text-sm hover:bg-accent-yellow inline-flex items-center gap-2 transition-all hover:translate-x-0.5"
           >
-            <span>🎯</span>
+            <Target className="w-4 h-4 stroke-[2.5] text-accent-blue" />
             <span>Uji Role Lain di JalanRapor</span>
           </Link>
         </div>
@@ -108,7 +109,7 @@ function HasilContent() {
               <Button
                 variant="primary"
                 size="lg"
-                className="w-full"
+                className="w-full inline-flex items-center justify-center gap-2"
                 onClick={() => {
                   setErrorMsg("");
                   setLoading(true);
@@ -122,7 +123,8 @@ function HasilContent() {
                     .finally(() => setLoading(false));
                 }}
               >
-                Coba Muat Ulang ↺
+                <span>Coba Muat Ulang</span>
+                <RotateCcw className="w-4 h-4 stroke-[2.5]" />
               </Button>
               <Button href="/rapor" variant="white" size="md" className="w-full">
                 Kembali ke Menu JalanRapor
@@ -139,8 +141,9 @@ function HasilContent() {
             <p className="text-sm text-ink/80 leading-relaxed font-medium">
               Kamu belum memiliki hasil uji kompetensi teknis JalanRapor. Uji kemampuanmu dan raih kartu Cocoklogiku resmi!
             </p>
-            <Button href="/rapor" variant="primary" size="lg" className="w-full">
-              Mulai Uji Kompetensi ➔
+            <Button href="/rapor" variant="primary" size="lg" className="w-full inline-flex items-center justify-center gap-2">
+              <span>Mulai Uji Kompetensi</span>
+              <ArrowRight className="w-5 h-5 stroke-[2.5]" />
             </Button>
           </div>
         ) : (

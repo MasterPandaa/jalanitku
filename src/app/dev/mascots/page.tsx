@@ -85,7 +85,7 @@ const BATCH_2_ROLES = [
       { name: "Topi Safari & Senter PASS", desc: "Topi petualang safari oranye dengan senter kepala berstatus hijau checklist PASS" },
       { name: "Toples Kaca Digenggam Erat", desc: "Toples kaca bening berulir digenggam tangan kanan dengan robot kepik merah siber terkurung di dalamnya" },
       { name: "Lalat Bug Berterbangan", desc: "Lalat-lalat siber kecil berterbangan kesana kemari di sekeliling maskot" },
-      { name: "Jaring Hunter & Badge TEST✓", desc: "Jaring kawat digital pemburu bug dan pin badge checklist verifikasi sistem" },
+      { name: "Jaring Hunter & Badge TEST", desc: "Jaring kawat digital pemburu bug dan pin badge checklist verifikasi sistem" },
     ],
   },
   {
@@ -179,13 +179,13 @@ const BATCH_3_ROLES = [
 ];
 
 const ROADMAP_BATCHES = [
-  { batch: 1, title: "Batch 1: Core Engineering & Creators", roles: "Software Engineer, Mobile Developer, Game Developer", status: "Active Release 🚀" },
-  { batch: 2, title: "Batch 2: Reliability, Support & Connectivity", roles: "Quality Assurance, IT Support, Network Engineer", status: "Active Release 🚀" },
-  { batch: 3, title: "Batch 3: Cloud, Platform, CI/CD & Security", roles: "Cloud Engineer, DevOps Engineer, Security Analyst", status: "Active Release 🚀" },
-  { batch: 4, title: "Batch 4: Data & Machine Intelligence", roles: "Data Analyst, Data Scientist, AI/ML Engineer", status: "Planned 📋" },
-  { batch: 5, title: "Batch 5: Data Foundation & Ops", roles: "Data Engineer, Database Administrator, System Administrator", status: "Planned 📋" },
-  { batch: 6, title: "Batch 6: Product, Design & Delivery", roles: "UI/UX Designer, Project Manager, Business Analyst", status: "Planned 📋" },
-  { batch: 7, title: "Batch 7: Enterprise, Strategy & Forensics", roles: "IT Consultant, Digital Forensics, Enterprise Architect", status: "Planned 📋" },
+  { batch: 1, title: "Batch 1: Core Engineering & Creators", roles: "Software Engineer, Mobile Developer, Game Developer", status: "Active Release" },
+  { batch: 2, title: "Batch 2: Reliability, Support & Connectivity", roles: "Quality Assurance, IT Support, Network Engineer", status: "Active Release" },
+  { batch: 3, title: "Batch 3: Cloud, Platform, CI/CD & Security", roles: "Cloud Engineer, DevOps Engineer, Security Analyst", status: "Active Release" },
+  { batch: 4, title: "Batch 4: Data & Machine Intelligence", roles: "Data Analyst, Data Scientist, AI/ML Engineer", status: "Planned" },
+  { batch: 5, title: "Batch 5: Data Foundation & Ops", roles: "Data Engineer, Database Administrator, System Administrator", status: "Planned" },
+  { batch: 6, title: "Batch 6: Product, Design & Delivery", roles: "UI/UX Designer, Project Manager, Business Analyst", status: "Planned" },
+  { batch: 7, title: "Batch 7: Enterprise, Strategy & Forensics", roles: "IT Consultant, Digital Forensics, Enterprise Architect", status: "Planned" },
 ];
 
 export default function MascotsDevPage() {
@@ -280,7 +280,7 @@ export default function MascotsDevPage() {
                   rel="noreferrer"
                   className="font-mono text-xs font-bold text-accent-pink hover:underline"
                 >
-                  Buka Standalone ↗
+                  Buka Standalone
                 </a>
               </div>
             </div>
@@ -300,12 +300,12 @@ export default function MascotsDevPage() {
               href="/"
               className="px-3 py-1 bg-surface border-3 border-ink font-heading text-xs uppercase shadow-nb-sm hover:translate-x-0.5 hover:translate-y-0.5"
             >
-              ← Beranda
+              Beranda
             </Link>
             <span className="font-mono text-sm font-bold text-ink/70">/dev/mascots</span>
           </div>
           <span className="px-3 py-1 bg-accent-green border-3 border-ink font-heading text-xs uppercase shadow-nb-sm">
-            9 OF 21 ROLES COMPLETED 🚀
+            9 OF 21 ROLES COMPLETED
           </span>
         </div>
 
@@ -480,7 +480,7 @@ import { RoleMascot } from "@/components/mascot/RoleMascot";
                   Status Handler:{" "}
                   {releasedRoles.some((r) => r.slug === selectedRoleSlug) ? (
                     <span className="text-accent-green font-black">
-                      KOMPONEN ASLI PRODUKSI (AKTIF 🚀)
+                      KOMPONEN ASLI PRODUKSI (AKTIF)
                     </span>
                   ) : (
                     <span className="text-accent-pink font-black">
@@ -543,7 +543,7 @@ import { RoleMascot } from "@/components/mascot/RoleMascot";
           <div className="pt-2 flex justify-between items-center text-xs font-mono text-ink/70">
             <span>Standar Desain: SVG Ortogonal 200x200 · Stroke 3.5-5px #0A0A0A · Neo-Brutalism</span>
             <Link href="/dev/roles" className="text-accent-pink font-bold hover:underline">
-              Lihat Katalog 21 Role IT ↗
+              Lihat Katalog 21 Role IT
             </Link>
           </div>
         </div>

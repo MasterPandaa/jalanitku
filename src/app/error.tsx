@@ -2,6 +2,7 @@
 
 import React, { useEffect } from "react";
 import Link from "next/link";
+import { RotateCcw, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { JalanMin } from "@/components/mascot/JalanMin";
@@ -67,7 +68,7 @@ export default function ErrorBoundary({
           </p>
         </div>
 
-        <div className="text-left p-3 bg-red-50 border-2 border-accent-danger font-mono text-xs text-accent-danger break-words max-h-32 overflow-y-auto">
+        <div className="text-left p-3 bg-accent-danger/10 border-2 border-accent-danger font-mono text-xs text-accent-danger break-words max-h-32 overflow-y-auto">
           <span className="font-bold block mb-0.5">Detail Kendala:</span>
           {displayMessage === "[object Event]"
             ? "Event browser tidak terduga terdeteksi. Silakan muat ulang halaman."
@@ -75,14 +76,16 @@ export default function ErrorBoundary({
         </div>
 
         <div className="pt-2 flex flex-wrap gap-3 justify-center">
-          <Button variant="primary" size="md" onClick={() => reset()}>
-            Coba Lagi ↺
+          <Button variant="primary" size="md" onClick={() => reset()} className="inline-flex items-center justify-center gap-1.5">
+            <span>Coba Lagi</span>
+            <RotateCcw className="w-4 h-4 stroke-[2.5]" />
           </Button>
           <Button variant="white" size="md" onClick={() => window.location.reload()}>
             Muat Ulang Halaman
           </Button>
-          <Button href="/status/500" variant="ghost" size="md">
-            Wawasan Error 500 ↗
+          <Button href="/status/500" variant="ghost" size="md" className="inline-flex items-center justify-center gap-1.5">
+            <span>Wawasan Error 500</span>
+            <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
           </Button>
         </div>
       </div>

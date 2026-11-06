@@ -1,4 +1,5 @@
 import React from "react";
+import { Check } from "lucide-react";
 
 export interface ChoiceCardProps {
   id: string;
@@ -22,7 +23,7 @@ export function ChoiceCard({
       type="button"
       onClick={() => !disabled && onSelect(id)}
       disabled={disabled}
-      className={`nb-btn w-full text-left p-4 md:p-5 border-3 md:border-4 border-ink transition-all flex items-start gap-4 ${
+      className={`nb-btn min-h-[48px] w-full text-left p-4 md:p-5 border-3 md:border-4 border-ink transition-all flex items-start gap-3.5 sm:gap-4 ${
         selected
           ? "bg-accent-yellow shadow-nb-md translate-x-1"
           : "bg-surface shadow-nb-sm hover:bg-paper"
@@ -40,8 +41,8 @@ export function ChoiceCard({
         {text}
       </span>
       {selected && (
-        <span className="flex-none font-mono font-bold text-lg text-ink px-1.5 bg-white border border-ink">
-          ✓
+        <span className="flex-none w-6 h-6 flex items-center justify-center bg-ink text-surface border-2 border-ink shadow-[1px_1px_0_#0A0A0A] mt-1.5">
+          <Check className="w-4 h-4 stroke-[3]" />
         </span>
       )}
     </button>

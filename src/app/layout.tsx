@@ -53,9 +53,13 @@ export default function RootLayout({
   return (
     <html
       lang="id"
+      suppressHydrationWarning
       className={`scroll-smooth ${archivo.variable} ${space.variable} ${dm.variable} ${jetbrains.variable}`}
     >
-      <body className="min-h-screen bg-paper text-ink font-sans selection:bg-accent-yellow selection:text-ink">
+      <body
+        suppressHydrationWarning
+        className="min-h-screen bg-paper text-ink font-sans selection:bg-accent-yellow selection:text-ink"
+      >
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-accent-yellow focus:text-ink focus:border-3 focus:border-ink focus:shadow-nb-sm focus:font-mono focus:font-bold focus:text-sm"

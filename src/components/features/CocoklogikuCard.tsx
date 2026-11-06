@@ -7,6 +7,18 @@ import { Card } from "@/components/ui/Card";
 import { JalanMin } from "@/components/mascot/JalanMin";
 import { CompetencyRadarChart } from "./CompetencyRadarChart";
 import { LevelBarChart } from "./LevelBarChart";
+import { 
+  Lightbulb, 
+  Target, 
+  Compass, 
+  Download, 
+  Share2, 
+  FileText, 
+  RotateCcw, 
+  Check, 
+  X, 
+  BookOpen 
+} from "lucide-react";
 import { CocoklogikuRecord, QuestionReviewItem } from "@/lib/rapor";
 
 interface CocoklogikuCardProps {
@@ -270,7 +282,7 @@ export const CocoklogikuCard: React.FC<CocoklogikuCardProps> = ({
                 <span className="bg-accent-yellow px-2.5 py-0.5 border-2 border-ink font-black text-xs uppercase tracking-wider">
                   COCOKLOGIKU
                 </span>
-                <span className="text-xs font-mono font-bold text-gray-600">
+                <span className="text-xs font-mono font-bold text-ink/70">
                   {new Date(record.completedAt).toLocaleDateString("id-ID", {
                     year: "numeric",
                     month: "short",
@@ -285,7 +297,7 @@ export const CocoklogikuCard: React.FC<CocoklogikuCardProps> = ({
           </div>
 
           <div className="text-left sm:text-right">
-            <span className="text-xs font-mono font-bold text-gray-500 block">
+            <span className="text-xs font-mono font-bold text-ink/70 block">
               PENGUJI / AKUN
             </span>
             <span className="text-lg font-black font-mono text-ink">
@@ -297,12 +309,12 @@ export const CocoklogikuCard: React.FC<CocoklogikuCardProps> = ({
         {/* Skor & Status Match */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <div className="bg-paper border-3 border-ink shadow-nb-md p-6 flex flex-col items-center justify-center text-center">
-            <span className="text-xs font-mono font-bold text-gray-700 uppercase tracking-widest mb-1">
+            <span className="text-xs font-mono font-bold text-ink/75 uppercase tracking-widest mb-1">
               SKOR KECOCOKAN
             </span>
             <div className="text-5xl sm:text-6xl font-black font-mono text-ink">
               {record.finalScore}
-              <span className="text-2xl text-gray-500 font-bold">/100</span>
+              <span className="text-2xl text-ink/60 font-bold">/100</span>
             </div>
             <div className="mt-3">
               <Badge variant={getBadgeVariant(record.matchLabel)} className="text-sm px-3 py-1">
@@ -316,11 +328,12 @@ export const CocoklogikuCard: React.FC<CocoklogikuCardProps> = ({
               <span className="w-3 h-3 bg-accent-cyan border border-ink" />
               Ringkasan Evaluasi
             </h3>
-            <p className="text-sm font-medium text-gray-800 leading-relaxed">
+            <p className="text-sm font-medium text-ink/85 leading-relaxed">
               {record.reason.summary}
             </p>
-            <div className="mt-3 text-xs font-mono font-bold text-accent-danger">
-              💡 {record.reason.levelInsight}
+            <div className="mt-3 text-xs font-mono font-bold text-accent-danger flex items-center gap-1.5">
+              <Lightbulb className="w-3.5 h-3.5 stroke-[2.5] text-accent-yellow flex-none" />
+              <span>{record.reason.levelInsight}</span>
             </div>
           </div>
         </div>
@@ -333,7 +346,7 @@ export const CocoklogikuCard: React.FC<CocoklogikuCardProps> = ({
               <h4 className="font-heading font-black text-sm text-ink">
                 PETA RADAR KOMPETENSI
               </h4>
-              <span className="text-[10px] font-mono font-bold text-gray-500">
+              <span className="text-[10px] font-mono font-bold text-ink/70">
                 Akurasi Jawaban
               </span>
             </div>
@@ -346,7 +359,7 @@ export const CocoklogikuCard: React.FC<CocoklogikuCardProps> = ({
               <h4 className="font-heading font-black text-sm text-ink">
                 PENCAPAIAN PER LEVEL (1 - 5)
               </h4>
-              <span className="text-[10px] font-mono font-bold text-gray-500">
+              <span className="text-[10px] font-mono font-bold text-ink/70">
                 Bobot Terakumulasi
               </span>
             </div>
@@ -358,20 +371,20 @@ export const CocoklogikuCard: React.FC<CocoklogikuCardProps> = ({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           <div className="border-3 border-ink bg-accent-cyan/15 p-5 shadow-nb-md">
             <h4 className="font-heading font-black text-sm text-ink mb-2 flex items-center gap-2">
-              <span className="w-2.5 h-2.5 bg-green-500 border border-ink" />
+              <span className="w-2.5 h-2.5 bg-accent-green border border-ink" />
               Kekuatan Utamamu
             </h4>
-            <p className="text-xs sm:text-sm text-gray-800 leading-relaxed">
+            <p className="text-xs sm:text-sm text-ink/85 leading-relaxed">
               {record.reason.strengths}
             </p>
           </div>
 
           <div className="border-3 border-ink bg-accent-orange/15 p-5 shadow-nb-md">
             <h4 className="font-heading font-black text-sm text-ink mb-2 flex items-center gap-2">
-              <span className="w-2.5 h-2.5 bg-orange-500 border border-ink" />
+              <span className="w-2.5 h-2.5 bg-accent-orange border border-ink" />
               Ruang Akselerasi Belajar
             </h4>
-            <p className="text-xs sm:text-sm text-gray-800 leading-relaxed">
+            <p className="text-xs sm:text-sm text-ink/85 leading-relaxed">
               {record.reason.weaknesses}
             </p>
           </div>
@@ -380,7 +393,8 @@ export const CocoklogikuCard: React.FC<CocoklogikuCardProps> = ({
         {/* Rekomendasi Belajar Prioritas */}
         <div className="bg-accent-yellow/20 border-3 border-ink p-6 shadow-nb-md mb-8">
           <h4 className="font-heading font-black text-base text-ink mb-3 flex items-center gap-2">
-            <span>🎯</span> Rekomendasi Aksi Belajar Prioritas
+            <Target className="w-5 h-5 stroke-[2.5] text-accent-danger flex-none" />
+            <span>Rekomendasi Aksi Belajar Prioritas</span>
           </h4>
           <div className="space-y-3">
             {record.recommendations.map((rec, i) => (
@@ -391,7 +405,7 @@ export const CocoklogikuCard: React.FC<CocoklogikuCardProps> = ({
                 <div className="font-bold text-xs font-mono text-accent-danger uppercase">
                   {rec.topic}
                 </div>
-                <div className="text-xs text-gray-800 mt-0.5">{rec.action}</div>
+                <div className="text-xs text-ink/85 mt-0.5">{rec.action}</div>
               </div>
             ))}
           </div>
@@ -400,8 +414,9 @@ export const CocoklogikuCard: React.FC<CocoklogikuCardProps> = ({
         {/* Alternatif Role Karir jika ada */}
         {record.alternativeRoles && record.alternativeRoles.length > 0 && (
           <div className="bg-paper border-3 border-ink p-6 shadow-nb-md">
-            <h4 className="font-heading font-black text-sm text-ink mb-2">
-              🧭 Alternatif Jalur Karir yang Berpotensi Relevan:
+            <h4 className="font-heading font-black text-sm text-ink mb-2 flex items-center gap-2">
+              <Compass className="w-4 h-4 stroke-[2.5] text-accent-blue flex-none" />
+              <span>Alternatif Jalur Karir yang Berpotensi Relevan:</span>
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
               {record.alternativeRoles.map((alt, i) => (
@@ -412,7 +427,7 @@ export const CocoklogikuCard: React.FC<CocoklogikuCardProps> = ({
                   <div className="font-heading font-bold text-sm text-ink">
                     {alt.roleName}
                   </div>
-                  <div className="text-xs text-gray-600 mt-1 leading-snug">
+                  <div className="text-xs text-ink/75 mt-1 leading-snug">
                     {alt.reason}
                   </div>
                 </div>
@@ -429,39 +444,39 @@ export const CocoklogikuCard: React.FC<CocoklogikuCardProps> = ({
             <h3 className="font-heading font-black text-lg text-ink">
               Simpan & Bagikan Hasil Cocoklogiku
             </h3>
-            <p className="text-xs text-gray-600 mt-1">
+            <p className="text-xs text-ink/75 mt-1">
               Bagikan langsung berupa file gambar PNG (privasi terjaga, tanpa link profil publik).
             </p>
           </div>
 
           {/* Rasio Selector */}
-          <div className="flex items-center gap-1.5 border-2 border-ink bg-white p-1">
+          <div className="flex flex-wrap sm:flex-nowrap items-center justify-center gap-1.5 border-2 border-ink bg-white p-1 w-full sm:w-auto">
             <button
               onClick={() => setRatio("card")}
-              className={`px-2.5 py-1 text-xs font-mono font-bold transition-colors ${
+              className={`flex-1 sm:flex-initial px-2.5 py-1 text-xs font-mono font-bold transition-colors ${
                 ratio === "card"
                   ? "bg-ink text-white"
-                  : "text-gray-700 hover:bg-gray-100"
+                  : "text-ink/80 hover:bg-paper"
               }`}
             >
               Card (16:9)
             </button>
             <button
               onClick={() => setRatio("square")}
-              className={`px-2.5 py-1 text-xs font-mono font-bold transition-colors ${
+              className={`flex-1 sm:flex-initial px-2.5 py-1 text-xs font-mono font-bold transition-colors ${
                 ratio === "square"
                   ? "bg-ink text-white"
-                  : "text-gray-700 hover:bg-gray-100"
+                  : "text-ink/80 hover:bg-paper"
               }`}
             >
               Square (1:1)
             </button>
             <button
               onClick={() => setRatio("story")}
-              className={`px-2.5 py-1 text-xs font-mono font-bold transition-colors ${
+              className={`flex-1 sm:flex-initial px-2.5 py-1 text-xs font-mono font-bold transition-colors ${
                 ratio === "story"
                   ? "bg-ink text-white"
-                  : "text-gray-700 hover:bg-gray-100"
+                  : "text-ink/80 hover:bg-paper"
               }`}
             >
               Story (9:16)
@@ -474,18 +489,20 @@ export const CocoklogikuCard: React.FC<CocoklogikuCardProps> = ({
             variant="primary"
             onClick={handleDownload}
             disabled={downloading}
-            className="flex-1 min-w-[160px]"
+            className="flex-1 min-w-[160px] inline-flex items-center justify-center gap-2"
           >
-            {downloading ? "Membuat Gambar..." : "📥 Unduh File PNG"}
+            <Download className="w-4 h-4 stroke-[2.5]" />
+            <span>{downloading ? "Membuat Gambar..." : "Unduh File PNG"}</span>
           </Button>
 
           <Button
             variant="secondary"
             onClick={handleShare}
             disabled={sharing}
-            className="flex-1 min-w-[160px]"
+            className="flex-1 min-w-[160px] inline-flex items-center justify-center gap-2"
           >
-            {sharing ? "Menyiapkan File..." : "📤 Bagikan File (Web Share)"}
+            <Share2 className="w-4 h-4 stroke-[2.5]" />
+            <span>{sharing ? "Menyiapkan File..." : "Bagikan File (Web Share)"}</span>
           </Button>
 
           {sessionId && (
@@ -493,13 +510,16 @@ export const CocoklogikuCard: React.FC<CocoklogikuCardProps> = ({
               variant="white"
               onClick={handleToggleReview}
               disabled={loadingReview}
-              className="flex-1 min-w-[180px]"
+              className="flex-1 min-w-[180px] inline-flex items-center justify-center gap-2"
             >
-              {showReview
-                ? "Tutup Pembahasan"
-                : loadingReview
-                ? "Memuat Pembahasan..."
-                : "📝 Tinjau Pembahasan Soal"}
+              <FileText className="w-4 h-4 stroke-[2.5]" />
+              <span>
+                {showReview
+                  ? "Tutup Pembahasan"
+                  : loadingReview
+                  ? "Memuat Pembahasan..."
+                  : "Tinjau Pembahasan Soal"}
+              </span>
             </Button>
           )}
 
@@ -507,16 +527,18 @@ export const CocoklogikuCard: React.FC<CocoklogikuCardProps> = ({
             <Button
               variant="ghost"
               onClick={onRetest}
-              className="text-accent-danger hover:bg-red-50"
+              className="text-accent-danger hover:bg-red-50 inline-flex items-center gap-1.5"
             >
-              🔄 Tes Ulang / Ganti Role
+              <RotateCcw className="w-4 h-4 stroke-[2.5]" />
+              <span>Tes Ulang / Ganti Role</span>
             </Button>
           )}
         </div>
 
         {shareSuccess && (
-          <div className="mt-3 text-xs font-mono font-bold text-green-700">
-            ✓ Berhasil dibagikan melalui Web Share API!
+          <div className="mt-3 text-xs font-mono font-bold text-ink bg-accent-green border-2 border-ink px-3 py-1.5 inline-flex items-center gap-1.5 shadow-nb-sm">
+            <Check className="w-3.5 h-3.5 stroke-[3]" />
+            <span>Berhasil dibagikan melalui Web Share API!</span>
           </div>
         )}
       </Card>
@@ -529,7 +551,7 @@ export const CocoklogikuCard: React.FC<CocoklogikuCardProps> = ({
               <h3 className="font-heading font-black text-xl text-ink">
                 Pembahasan Soal Tes JalanRapor
               </h3>
-              <p className="text-xs text-gray-600 mt-0.5">
+              <p className="text-xs text-ink/75 mt-0.5">
                 Evaluasi jawabanmu untuk mempertajam wawasan teknis.
               </p>
             </div>
@@ -543,7 +565,7 @@ export const CocoklogikuCard: React.FC<CocoklogikuCardProps> = ({
               <div
                 key={`rev-${item.id}`}
                 className={`border-3 border-ink p-4 shadow-nb-sm ${
-                  item.isCorrect ? "bg-green-50/60" : "bg-red-50/60"
+                  item.isCorrect ? "bg-accent-green/10" : "bg-red-50/60"
                 }`}
               >
                 <div className="flex items-center justify-between mb-2">
@@ -569,7 +591,7 @@ export const CocoklogikuCard: React.FC<CocoklogikuCardProps> = ({
                     if (isTheCorrectOne) {
                       optBg = "bg-accent-cyan/30 font-bold";
                     } else if (isSelected && !item.isCorrect) {
-                      optBg = "bg-accent-danger/20 line-through text-red-700";
+                      optBg = "bg-accent-danger/20 line-through text-accent-danger";
                     }
 
                     return (
@@ -577,20 +599,31 @@ export const CocoklogikuCard: React.FC<CocoklogikuCardProps> = ({
                         key={opt.key}
                         className={`p-2 border-2 ${optBorder} ${optBg} flex items-center gap-2`}
                       >
-                        <span className="font-mono font-bold uppercase w-5 h-5 flex items-center justify-center bg-gray-200 border border-ink text-[10px]">
+                        <span className="font-mono font-bold uppercase w-5 h-5 flex items-center justify-center bg-paper border border-ink text-[10px]">
                           {opt.key}
                         </span>
                         <span className="flex-1">{opt.text}</span>
-                        {isTheCorrectOne && <span className="text-green-700 font-bold">✓ Kunci</span>}
-                        {isSelected && !isTheCorrectOne && <span className="text-red-600 font-bold">✗ Pilihanmu</span>}
+                        {isTheCorrectOne && (
+                          <span className="text-ink bg-accent-green px-1.5 py-0.5 border border-ink font-bold font-mono text-[10px] inline-flex items-center gap-1">
+                            <Check className="w-3 h-3 stroke-[3]" />
+                            <span>Kunci</span>
+                          </span>
+                        )}
+                        {isSelected && !isTheCorrectOne && (
+                          <span className="text-surface bg-accent-danger px-1.5 py-0.5 border border-ink font-bold font-mono text-[10px] inline-flex items-center gap-1">
+                            <X className="w-3 h-3 stroke-[3]" />
+                            <span>Pilihanmu</span>
+                          </span>
+                        )}
                       </div>
                     );
                   })}
                 </div>
 
-                <div className="bg-white border-2 border-ink p-3 text-xs text-gray-800">
-                  <span className="font-mono font-bold text-ink block mb-1">
-                    📖 Penjelasan Teknis:
+                <div className="bg-white border-2 border-ink p-3 text-xs text-ink/85">
+                  <span className="font-mono font-bold text-ink flex items-center gap-1.5 mb-1">
+                    <BookOpen className="w-3.5 h-3.5 stroke-[2.5] text-accent-blue flex-none" />
+                    <span>Penjelasan Teknis:</span>
                   </span>
                   {item.explanation}
                 </div>

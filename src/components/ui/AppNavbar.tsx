@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Menu, X, LogOut, User } from "lucide-react";
 import { Logo } from "./Logo";
 
 export interface AppNavbarProps {
@@ -21,6 +22,20 @@ export function AppNavbar({ user: initialUser, onLogout }: AppNavbarProps) {
     initialUser ? { username: initialUser.username, name: initialUser.name } : null
   );
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && mobileMenuOpen) {
+        setMobileMenuOpen(false);
+      }
+    };
+    if (mobileMenuOpen) {
+      window.addEventListener("keydown", handleKeyDown);
+    }
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [mobileMenuOpen]);
 
   useEffect(() => {
     if (initialUser !== undefined) {
@@ -101,14 +116,16 @@ export function AppNavbar({ user: initialUser, onLogout }: AppNavbarProps) {
                 pathname === "/profil" ? "bg-accent-yellow" : "bg-paper"
               }`}
             >
-              <span className="font-mono text-ink">@{user.username}</span>
+              <User className="w-4 h-4 stroke-[2.5] flex-none" aria-hidden="true" />
+              <span className="font-mono text-ink max-w-[110px] sm:max-w-none truncate">@{user.username}</span>
               <span className="hidden sm:inline text-xs text-ink/75">(Profil)</span>
             </Link>
           ) : (
             <Link
               href="/profil"
-              className="nb-btn min-h-[44px] px-3 py-2 bg-paper text-ink border-3 border-ink shadow-nb-sm font-display font-bold text-xs md:text-sm hover:bg-accent-yellow flex items-center"
+              className="nb-btn min-h-[44px] px-3 py-2 bg-paper text-ink border-3 border-ink shadow-nb-sm font-display font-bold text-xs md:text-sm hover:bg-accent-yellow flex items-center gap-1.5"
             >
+              <User className="w-4 h-4 stroke-[2.5] flex-none" aria-hidden="true" />
               Profil
             </Link>
           )}
@@ -116,35 +133,42 @@ export function AppNavbar({ user: initialUser, onLogout }: AppNavbarProps) {
           <button
             type="button"
             onClick={handleLogout}
-            className="min-h-[44px] min-w-[44px] border-2 md:border-3 border-ink bg-surface text-ink font-mono text-xs md:text-sm font-bold px-3 py-2 shadow-nb-sm hover:bg-accent-danger hover:text-surface transition-colors cursor-pointer flex items-center justify-center"
+            aria-label="Keluar dari akun"
+            className="nb-btn min-h-[44px] min-w-[44px] border-3 border-ink bg-surface text-ink font-mono text-xs md:text-sm font-bold px-3 py-2 shadow-nb-sm hover:bg-accent-danger hover:text-surface transition-colors cursor-pointer flex items-center justify-center gap-1.5"
           >
-            Keluar
+            <LogOut className="w-4 h-4 stroke-[2.5] flex-none" aria-hidden="true" />
+            <span className="hidden sm:inline">Keluar</span>
           </button>
 
           {/* Mobile Menu Toggle Button */}
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden min-h-[44px] min-w-[44px] border-2 border-ink p-2.5 bg-paper shadow-nb-sm font-bold text-base cursor-pointer flex items-center justify-center"
-            aria-label="Toggle menu"
+            className="nb-btn md:hidden min-h-[44px] min-w-[44px] border-3 border-ink p-2.5 bg-paper shadow-nb-sm font-bold text-base cursor-pointer flex items-center justify-center hover:bg-accent-yellow transition-colors"
+            aria-label={mobileMenuOpen ? "Tutup menu navigasi" : "Buka menu navigasi"}
+            aria-expanded={mobileMenuOpen}
           >
-            {mobileMenuOpen ? "✕" : "☰"}
+            {mobileMenuOpen ? (
+              <X className="w-5 h-5 stroke-[2.5]" />
+            ) : (
+              <Menu className="w-5 h-5 stroke-[2.5]" />
+            )}
           </button>
         </div>
       </div>
 
       {/* Mobile Nav Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t-3 border-ink bg-paper px-4 py-3 flex flex-col gap-2 animate-fade-in">
+        <div className="md:hidden border-t-3 border-ink bg-paper px-4 py-3.5 flex flex-col gap-2.5 animate-fade-in shadow-[0_6px_0_#0A0A0A]">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               onClick={() => setMobileMenuOpen(false)}
-              className={`min-h-[44px] px-3 py-2.5 flex items-center font-display font-bold text-sm ${
+              className={`min-h-[44px] px-3.5 py-2.5 flex items-center font-display font-bold text-sm transition-colors ${
                 item.active
-                  ? "bg-accent-yellow text-ink border-2 border-ink shadow-nb-sm"
-                  : "bg-surface text-ink border-2 border-ink/40"
+                  ? "bg-accent-yellow text-ink border-3 border-ink shadow-nb-sm"
+                  : "bg-surface text-ink border-3 border-ink hover:bg-accent-yellow"
               }`}
             >
               {item.label}

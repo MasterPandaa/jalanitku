@@ -1,430 +1,553 @@
 <!doctype html>
-        <html lang="id">
-        <head>
-          <meta charset="utf-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Preview Detektif JalanMin — Neo-Brutalism Interactive Mascot</title>
-          <link rel="preconnect" href="https://fonts.googleapis.com">
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-          <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@500;700&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-          <style>
-            :root {
-              --ink: #0A0A0A;
-              --paper: #FFF8E7;
-              --surface: #FFFFFF;
-              --yellow: #FFD60A;
-              --pink: #FF5C8A;
-              --cyan: #00F0FF;
-              --green: #2EE59D;
-              --blue: #3D5AFE;
-            }
-        
-            * { box-sizing: border-box; margin: 0; padding: 0; }
-        
-            body {
-              background-color: var(--paper);
-              color: var(--ink);
-              font-family: 'DM Sans', sans-serif;
-              min-height: 100vh;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              padding: 40px 20px;
-            }
-        
-            .nb-box {
-              background: var(--surface);
-              border: 4px solid var(--ink);
-              box-shadow: 8px 8px 0 var(--ink);
-            }
-        
-            .nb-btn {
-              background: var(--surface);
-              border: 3px solid var(--ink);
-              box-shadow: 4px 4px 0 var(--ink);
-              padding: 10px 18px;
-              font-family: 'Space Grotesk', sans-serif;
-              font-weight: 700;
-              font-size: 14px;
-              text-transform: uppercase;
-              cursor: pointer;
-              transition: transform 0.08s ease, box-shadow 0.08s ease;
-              user-select: none;
-            }
-            .nb-btn:hover {
-              transform: translate(-2px, -2px);
-              box-shadow: 6px 6px 0 var(--ink);
-              background: #FFFFFF;
-            }
-            .nb-btn:active, .nb-btn.active {
-              transform: translate(2px, 2px);
-              box-shadow: 2px 2px 0 var(--ink);
-              background: var(--yellow);
-            }
-        
-            /* Keyframes */
-            .jm-bob { animation: jm-bob 2.4s ease-in-out infinite; }
-            .jm-jump { animation: jm-jump 0.9s ease-in-out infinite; }
-            .jm-pump { animation: jm-pump 1.1s ease-in-out infinite; }
-            .jm-hat { transform-origin: 95px 44px; animation: jm-hat 2.4s ease-in-out infinite; }
-            .jm-hat-happy { transform-origin: 95px 44px; animation: jm-hat-happy 0.9s ease-in-out infinite; }
-        
-            @keyframes jm-bob {
-              0%, 100% { transform: translateY(0); }
-              50% { transform: translateY(-5px); }
-            }
-            @keyframes jm-jump {
-              0%, 100% { transform: translateY(0) scale(1, 1); }
-              20% { transform: translateY(3px) scale(1.04, 0.95); }
-              50% { transform: translateY(-16px) scale(0.96, 1.04); }
-              75% { transform: translateY(1px) scale(1.02, 0.98); }
-            }
-            @keyframes jm-pump {
-              0%, 100% { transform: translateY(0) rotate(0deg); }
-              50% { transform: translateY(-6px) rotate(2.5deg); }
-            }
-            @keyframes jm-hat {
-              0%, 100% { transform: rotate(-2deg); }
-              50% { transform: rotate(3deg); }
-            }
-            @keyframes jm-hat-happy {
-              0%, 100% { transform: translateY(0) rotate(0deg); }
-              50% { transform: translateY(-14px) rotate(8deg); }
-            }
-        
-            @media (prefers-reduced-motion: reduce) {
-              .jm-bob, .jm-jump, .jm-pump, .jm-hat, .jm-hat-happy {
-                animation: none !important;
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preview Detektif JalanMin — Master Vector Edition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@500;700&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #080808;
+      --paper: #FDF5E2;
+      --surface: #FFFFFF;
+      --yellow: #FFD21E;
+      --yellow-light: #FFF24B;
+      --pink: #FF4B72;
+      --orange: #F26419;
+      --orange-coat: #DE6C18;
+      --brown: #9A4B1A;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--paper);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .nb-box {
+      background: var(--surface);
+      border: 4px solid var(--ink);
+      box-shadow: 8px 8px 0 var(--ink);
+    }
+
+    .nb-btn {
+      background: var(--surface);
+      border: 3px solid var(--ink);
+      box-shadow: 4px 4px 0 var(--ink);
+      padding: 10px 18px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: transform 0.08s ease, box-shadow 0.08s ease;
+      user-select: none;
+    }
+    .nb-btn:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0 var(--ink);
+      background: #FFFFFF;
+    }
+    .nb-btn:active, .nb-btn.active {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0 var(--ink);
+      background: var(--yellow);
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--ink);
+      color: var(--paper);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+  </style>
+</head>
+<body>
+  <div style="max-width: 1020px; width: 100%; display: flex; flex-direction: column; gap: 24px;">
+    
+    <!-- Header -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 12px; border-bottom: 4px solid var(--ink); padding-bottom: 16px;">
+      <div>
+        <div class="badge" style="background: var(--pink); color: #FFF; border: 2px solid var(--ink);">MASTER VECTOR SPECIFICATION & LAB</div>
+        <h1 style="font-family: 'Archivo Black', sans-serif; font-size: 38px; line-height: 1.1; margin-top: 6px;">Detektif JalanMin</h1>
+        <p style="font-size: 16px; font-weight: 500; color: #333; margin-top: 4px;">Penyelidik Potensi IT: Master Vector Art 1000×1000 dengan Filter Bayangan Komik Real-Time &amp; Animasi CSS Halus</p>
+      </div>
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700; background: var(--yellow); border: 3px solid var(--ink); padding: 8px 14px; box-shadow: 3px 3px 0 var(--ink);">
+        STATUS: 60 FPS INTERACTIVE
+      </div>
+    </div>
+
+    <!-- Main Canvas Box -->
+    <div class="nb-box" style="padding: 32px; display: flex; flex-direction: column; align-items: center; position: relative; overflow: hidden;">
+      
+      <!-- Controls Top -->
+      <div style="width: 100%; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 24px;">
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <button class="nb-btn active" onclick="setState('idle', this)">Idle</button>
+          <button class="nb-btn" onclick="setState('hover', this)">Hover</button>
+          <button class="nb-btn" onclick="setState('happy', this)">Happy</button>
+          <button class="nb-btn" onclick="setState('neutral', this)">Neutral</button>
+          <button class="nb-btn" onclick="setState('encourage', this)">Encourage</button>
+          <button class="nb-btn" style="background: #FFE494;" onclick="triggerAction('inspect')">🔍 Inspect</button>
+          <button class="nb-btn" style="background: #FFB3C6;" onclick="triggerAction('jump')">⭐ Jump</button>
+        </div>
+        <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
+          <label style="font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700; display: flex; align-items: center; gap: 6px; cursor: pointer;">
+            <input type="checkbox" id="trackToggle" checked style="width: 18px; height: 18px; accent-color: var(--ink);"> Track Mouse
+          </label>
+          <label style="font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700; display: flex; align-items: center; gap: 6px; cursor: pointer;">
+            <input type="checkbox" id="bgToggle" checked style="width: 18px; height: 18px; accent-color: var(--ink);" onchange="toggleBg(this)"> Background
+          </label>
+        </div>
+      </div>
+
+      <!-- Mascot Interactive Container -->
+      <div id="mascotWrapper" style="width: 380px; height: 380px; position: relative; user-select: none;">
+        <svg id="detectiveSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+          <defs>
+            <!-- Filter Bayangan Blok Hitam Komik Presisi & Mendukung Animasi Real-time -->
+            <filter id="comic-shadow" x="-20%" y="-20%" width="140%" height="140%">
+              <feDropShadow dx="18" dy="18" stdDeviation="0" flood-color="#080808" flood-opacity="1"></feDropShadow>
+            </filter>
+
+            <style id="svgInternalStyle">
+              #detectiveSvg {
+                --anim-speed: 1;
               }
-            }
-        
-            .badge {
-              display: inline-block;
-              background: var(--ink);
-              color: var(--paper);
-              font-family: 'JetBrains Mono', monospace;
-              font-size: 11px;
-              font-weight: 700;
-              padding: 3px 8px;
-              text-transform: uppercase;
-              letter-spacing: 0.08em;
-            }
-          </style>
-        </head>
-        <body>
-          <div style="max-width: 980px; width: 100%; display: flex; flex-direction: column; gap: 24px;">
-            
-            <!-- Header -->
-            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 12px; border-bottom: 4px solid var(--ink); padding-bottom: 16px;">
-              <div>
-                <div class="badge" style="background: var(--pink); color: var(--ink); border: 2px solid var(--ink);">VISUAL SPECIFICATION & LAB</div>
-                <h1 style="font-family: 'Archivo Black', sans-serif; font-size: 38px; line-height: 1.1; margin-top: 6px;">Detektif JalanMin</h1>
-                <p style="font-size: 16px; font-weight: 500; color: #333; margin-top: 4px;">Papan Rambu Penyelidik Potensi IT dengan Kaca Pembesar Pelacak Kursor di Samping Tubuh (Mata Bebas & Jelas)</p>
-              </div>
-              <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700; background: var(--yellow); border: 3px solid var(--ink); padding: 6px 12px; box-shadow: 3px 3px 0 var(--ink);">
-                STATUS: LIVE TRACKING ACTIVE
-              </div>
-            </div>
-        
-            <!-- Main Canvas Box -->
-            <div class="nb-box" style="padding: 32px; display: flex; flex-direction: column; align-items: center; position: relative; overflow: hidden;">
-              
-              <!-- Controls Top -->
-              <div style="width: 100%; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 24px;">
-                <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                  <button class="nb-btn active" onclick="setState('idle', this)">Idle</button>
-                  <button class="nb-btn" onclick="setState('hover', this)">Hover</button>
-                  <button class="nb-btn" onclick="setState('happy', this)">Happy</button>
-                  <button class="nb-btn" onclick="setState('neutral', this)">Neutral</button>
-                  <button class="nb-btn" onclick="setState('encourage', this)">Encourage</button>
-                </div>
-                <div style="display: flex; gap: 12px; align-items: center;">
-                  <label style="font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700; display: flex; align-items: center; gap: 6px; cursor: pointer;">
-                    <input type="checkbox" id="trackToggle" checked style="width: 18px; height: 18px; accent-color: var(--ink);"> Track Mouse
-                  </label>
-                </div>
-              </div>
-        
-              <!-- Mascot Interactive Container -->
-              <div id="mascotWrapper" style="width: 280px; height: 280px; position: relative; user-select: none;">
-                <svg id="mascotSvg" width="280" height="280" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Detektif JalanMin">
-                  <g id="bodyGroup" class="jm-bob">
-                    <!-- 1. KAKI & HARD SHADOW SEPATU -->
-                    <rect x="66" y="154" width="22" height="26" fill="#0A0A0A" />
-                    <rect x="120" y="154" width="22" height="26" fill="#0A0A0A" />
-                    <rect x="62" y="150" width="22" height="26" fill="#0A0A0A" rx="2" />
-                    <rect x="116" y="150" width="22" height="26" fill="#0A0A0A" rx="2" />
-                    <line x1="62" y1="172" x2="84" y2="172" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square" />
-                    <line x1="116" y1="172" x2="138" y2="172" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square" />
-        
-                    <!-- 2. LENGAN KIRI -->
-                    <g id="leftArmGroup">
-                      <line id="leftArmLine" x1="40" y1="104" x2="18" y2="124" stroke="#0A0A0A" stroke-width="6" stroke-linecap="round" />
-                      <circle id="leftHandCircle" cx="16" cy="126" r="6" fill="#FFD60A" stroke="#0A0A0A" stroke-width="4" />
-                      <path id="leftThumb" d="M16 83 L16 88" stroke="#0A0A0A" stroke-width="3" stroke-linecap="round" style="display:none;" />
-                    </g>
-        
-                    <!-- 3. LENGAN KANAN KE GAGANG DI SAMPING -->
-                    <line id="rightArmLine" x1="144" y1="106" x2="158" y2="112" stroke="#0A0A0A" stroke-width="6" stroke-linecap="round" />
-        
-                    <!-- 4. BADAN RAMBU KUNING & HARD SHADOW -->
-                    <rect x="48" y="58" width="110" height="96" fill="#0A0A0A" />
-                    <rect x="40" y="50" width="110" height="96" fill="#FFD60A" stroke="#0A0A0A" stroke-width="5" />
-                    <line x1="52" y1="134" x2="138" y2="134" stroke="#0A0A0A" stroke-width="4" stroke-dasharray="10 8" />
-                    <rect x="54" y="104" width="12" height="8" rx="2" fill="#FF5C8A" />
-                    <rect x="124" y="104" width="12" height="8" rx="2" fill="#FF5C8A" />
-        
-                    <!-- 5. KERAH MANTEL & DASI CYAN -->
-                    <polygon points="74,146 88,146 82,132" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3" stroke-linejoin="round" />
-                    <polygon points="116,146 102,146 108,132" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3" stroke-linejoin="round" />
-                    <rect x="91" y="132" width="8" height="5" fill="#00F0FF" stroke="#0A0A0A" stroke-width="2.5" />
-                    <polygon points="91,137 99,137 101,146 95,150 89,146" fill="#00F0FF" stroke="#0A0A0A" stroke-width="2.5" />
-        
-                    <!-- 6. ALIS DETEKTIF -->
-                    <g id="eyebrowGroup">
-                      <line id="browLeft" x1="64" y1="72" x2="84" y2="74" stroke="#0A0A0A" stroke-width="4" stroke-linecap="round" />
-                      <line id="browRight" x1="106" y1="70" x2="126" y2="72" stroke="#0A0A0A" stroke-width="4" stroke-linecap="round" />
-                    </g>
-        
-                    <!-- 7. MATA KIRI (BEBAS TANPA HALANGAN) -->
-                    <rect x="66" y="78" width="18" height="22" rx="4" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="4" />
-                    <g id="pupilLeft" style="transition: transform 0.12s ease-out;">
-                      <rect x="71" y="84" width="8" height="10" rx="2" fill="#0A0A0A" />
-                      <circle cx="73.5" cy="86.5" r="1.5" fill="#FFFFFF" />
-                    </g>
-        
-                    <!-- 8. MATA KANAN (BEBAS TANPA HALANGAN, SIMETRIS & EKSPRESIF) -->
-                    <rect x="106" y="78" width="18" height="22" rx="4" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="4" />
-                    <g id="pupilRight" style="transition: transform 0.12s ease-out;">
-                      <rect x="111" y="84" width="8" height="10" rx="2" fill="#0A0A0A" />
-                      <circle cx="113.5" cy="86.5" r="1.5" fill="#FFFFFF" />
-                      <circle cx="116.5" cy="90.5" r="1.2" fill="#00F0FF" />
-                    </g>
-        
-                    <!-- 9. MULUT DETEKTIF -->
-                    <g id="mouthGroup">
-                      <path id="mouthPath" d="M78 116 Q94 126 110 116" stroke="#0A0A0A" stroke-width="5" fill="none" stroke-linecap="round" />
-                    </g>
-        
-                    <!-- 10. KACA PEMBESAR NEO-BRUTALISM DI SAMPING (TIDAK MENUTUPI MATA) -->
-                    <g id="magnifierGroup" style="transform-origin: 158px 84px; transition: transform 0.14s cubic-bezier(0.2, 0.8, 0.2, 1);">
-                      <!-- Bayangan Kaca & Gagang -->
-                      <circle cx="162" cy="88" r="19" fill="#0A0A0A" />
-                      <rect x="156" y="102" width="11" height="28" rx="3" transform="rotate(-25 156 102)" fill="#0A0A0A" />
-        
-                      <!-- Gagang Pink -->
-                      <rect x="152" y="98" width="11" height="28" rx="3" transform="rotate(-25 152 98)" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="4" />
-                      <line x1="155" y1="107" x2="164" y2="103" stroke="#0A0A0A" stroke-width="2.5" stroke-linecap="round" />
-                      <line x1="158" y1="113" x2="167" y2="109" stroke="#0A0A0A" stroke-width="2.5" stroke-linecap="round" />
-        
-                      <!-- Bingkai Lensa & Kaca Cyan -->
-                      <circle cx="158" cy="84" r="19" fill="#FFFFFF" fill-opacity="0.12" stroke="#0A0A0A" stroke-width="4.5" />
-                      <circle cx="158" cy="84" r="15.5" fill="#00F0FF" fill-opacity="0.28" />
-        
-                      <!-- Glint Refleksi Lensa -->
-                      <path d="M147 75 A13 13 0 0 1 167 72" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="none" />
-                      <circle cx="166" cy="92" r="1.8" fill="#FFFFFF" />
-        
-                      <!-- Tangan Kanan Mencengkeram Gagang -->
-                      <circle cx="158" cy="112" r="6" fill="#FFD60A" stroke="#0A0A0A" stroke-width="4" />
-                    </g>
-        
-                    <!-- 11. TOPI DEERSTALKER NEO-BRUTALISM -->
-                    <g id="hatGroup" class="jm-hat">
-                      <path d="M46 48 C46 22 70 12 95 12 C120 12 144 22 144 48 Z" fill="#0A0A0A" />
-                      <path d="M42 44 C42 18 68 8 95 8 C122 8 148 18 148 44 Z" fill="#FF5C8A" stroke="#0A0A0A" stroke-width="5" />
-                      <path d="M142 40 L168 46 L142 50 Z" fill="#FFD60A" stroke="#0A0A0A" stroke-width="4.5" stroke-linejoin="miter" />
-                      <path d="M48 40 L22 46 L48 50 Z" fill="#FFD60A" stroke="#0A0A0A" stroke-width="4.5" stroke-linejoin="miter" />
-                      <rect x="42" y="38" width="106" height="8" fill="#00F0FF" stroke="#0A0A0A" stroke-width="3" />
-                      <path d="M68 38 C68 22 80 14 93 11" stroke="#0A0A0A" stroke-width="4" fill="none" />
-                      <path d="M122 38 C122 22 110 14 97 11" stroke="#0A0A0A" stroke-width="4" fill="none" />
-                      <circle cx="95" cy="8" r="4.5" fill="#00F0FF" stroke="#0A0A0A" stroke-width="2.5" />
-                      <path d="M92 8 Q86 3 88 12" stroke="#00F0FF" stroke-width="3" fill="none" />
-                      <path d="M98 8 Q104 3 102 12" stroke="#00F0FF" stroke-width="3" fill="none" />
-                    </g>
+              #detectiveSvg.paused * {
+                animation-play-state: paused !important;
+              }
+
+              .stk {
+                stroke: #080808;
+                stroke-width: 14px;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+              }
+              .stk-med {
+                stroke: #080808;
+                stroke-width: 12.5px;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+              }
+              .comic-drop-shadow {
+                filter: url(#comic-shadow);
+              }
+
+              @keyframes detectiveBounce {
+                0%, 100% { transform: translateY(0px) scaleY(1) scaleX(1); }
+                50% { transform: translateY(9px) scaleY(0.986) scaleX(1.014); }
+              }
+              @keyframes capeWave {
+                0%, 100% { transform: rotate(0deg) scaleX(1); }
+                50% { transform: rotate(-1.2deg) scaleX(1.024); }
+              }
+              @keyframes hatBob {
+                0%, 100% { transform: translateY(0px) rotate(0deg); }
+                50% { transform: translateY(-5px) rotate(-1deg); }
+              }
+              @keyframes bowWiggle {
+                0%, 100% { transform: rotate(0deg) scale(1); }
+                50% { transform: rotate(6deg) scale(1.06); }
+              }
+              @keyframes leftArmSwing {
+                0%, 100% { transform: rotate(0deg); }
+                50% { transform: rotate(4deg); }
+              }
+              @keyframes magnifySearch {
+                0%, 100% { transform: rotate(0deg); }
+                35% { transform: rotate(-5.5deg); }
+                70% { transform: rotate(3.5deg); }
+              }
+              @keyframes eyeBlink {
+                0%, 44%, 48%, 94%, 98%, 100% { transform: scaleY(1); }
+                46%, 96% { transform: scaleY(0.06); }
+              }
+              @keyframes pupilLookAround {
+                0%, 20%, 100% { transform: translate(0px, 0px); }
+                30%, 45% { transform: translate(9px, -4px); }
+                55%, 70% { transform: translate(-8px, 2px); }
+                80%, 90% { transform: translate(6px, 5px); }
+              }
+              @keyframes lensGlint {
+                0%, 100% { opacity: 1; transform: scale(1); }
+                50% { opacity: 0.75; transform: scale(0.96); }
+              }
+              @keyframes actionInspectZoom {
+                0% { transform: rotate(0deg) scale(1); }
+                30% { transform: rotate(-12deg) scale(1.12); }
+                65% { transform: rotate(6deg) scale(1.06); }
+                100% { transform: rotate(0deg) scale(1); }
+              }
+              @keyframes actionHappyJump {
+                0%, 100% { transform: translateY(0) scale(1, 1); }
+                20% { transform: translateY(22px) scale(1.06, 0.92); }
+                45% { transform: translateY(-54px) scale(0.95, 1.06); }
+                75% { transform: translateY(10px) scale(1.03, 0.97); }
+              }
+
+              .anim-character-body {
+                transform-box: view-box;
+                transform-origin: 505px 860px;
+                animation: detectiveBounce calc(2.4s / var(--anim-speed, 1)) ease-in-out infinite;
+              }
+              .anim-cape {
+                transform-box: view-box;
+                transform-origin: 505px 480px;
+                animation: capeWave calc(2.4s / var(--anim-speed, 1)) ease-in-out infinite;
+              }
+              .anim-hat {
+                transform-box: view-box;
+                transform-origin: 485px 295px;
+                animation: hatBob calc(2.4s / var(--anim-speed, 1)) ease-in-out infinite;
+              }
+              .anim-bow {
+                transform-box: view-box;
+                transform-origin: 438px 124px;
+                animation: bowWiggle calc(1.8s / var(--anim-speed, 1)) ease-in-out infinite;
+              }
+              .anim-left-arm {
+                transform-box: view-box;
+                transform-origin: 295px 590px;
+                animation: leftArmSwing calc(2.4s / var(--anim-speed, 1)) ease-in-out infinite;
+              }
+              .anim-magnifier-arm {
+                transform-box: view-box;
+                transform-origin: 685px 490px;
+                animation: magnifySearch calc(3.2s / var(--anim-speed, 1)) ease-in-out infinite;
+              }
+              .anim-eyes-blink {
+                transform-box: view-box;
+                transform-origin: 514px 396px;
+                animation: eyeBlink calc(4.8s / var(--anim-speed, 1)) infinite;
+              }
+              .anim-pupils-auto {
+                animation: pupilLookAround calc(5.8s / var(--anim-speed, 1)) ease-in-out infinite;
+              }
+              .anim-glint {
+                transform-box: view-box;
+                transform-origin: 780px 275px;
+                animation: lensGlint calc(2.4s / var(--anim-speed, 1)) ease-in-out infinite;
+              }
+
+              .trigger-inspect {
+                animation: actionInspectZoom 1.05s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+              }
+              .trigger-jump {
+                animation: actionHappyJump 0.85s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+              }
+            </style>
+
+            <clipPath id="clipCoatLeft">
+              <path d="M 505,550 C 425,565 340,562 258,552 L 222,646 L 312,676 L 336,602 L 315,692 C 368,714 438,716 488,708 C 504,705 508,685 508,668 L 505,550 Z"></path>
+            </clipPath>
+
+            <clipPath id="clipCoatRight">
+              <path d="M 505,550 C 580,562 662,538 724,462 L 796,534 L 710,606 L 726,672 C 668,700 595,708 538,704 C 518,702 510,684 510,668 L 505,550 Z"></path>
+            </clipPath>
+          </defs>
+
+          <!-- Latar Belakang -->
+          <rect id="svgBgRect" width="1000" height="1000" rx="48" fill="#FDF5E2"></rect>
+
+          <!-- GRUP UTAMA KARAKTER DENGAN BAYANGAN KOMIK -->
+          <g id="characterShadowWrapper" class="comic-drop-shadow">
+            <g id="mainCharacterGroup" class="anim-character-body">
+
+              <!-- 1. JUBAH BELAKANG PINK -->
+              <g id="pinkBackCape" class="anim-cape">
+                <path class="stk" fill="#FF4B72" d="M 278,492 C 208,548 156,648 115,765 C 98,805 152,828 192,794 C 202,838 262,844 292,806 C 312,844 368,844 392,808 L 642,808 C 682,832 732,822 740,782 C 786,796 822,762 802,718 C 782,652 756,585 730,535 Z"></path>
+                <path class="stk" fill="#FF4B72" d="M 476,775 C 488,850 536,850 548,775 Z"></path>
+              </g>
+
+              <!-- 2. KAKI & SEPATU BOT -->
+              <g id="legsAndBoots">
+                <rect class="stk" x="396" y="755" width="88" height="72" rx="12" fill="#FFD21E"></rect>
+                <rect class="stk" x="536" y="755" width="88" height="72" rx="12" fill="#FFD21E"></rect>
+                <path d="M 402,786 L 478,790" stroke="#080808" stroke-width="11" stroke-linecap="round"></path>
+                <path d="M 542,790 L 618,786" stroke="#080808" stroke-width="11" stroke-linecap="round"></path>
+
+                <path class="stk" fill="#F26419" d="M 386,805 L 382,846 C 338,856 324,894 352,912 C 392,922 462,920 492,908 C 500,894 498,822 494,808 C 458,816 420,814 386,805 Z"></path>
+                <path d="M 382,846 L 410,852" stroke="#080808" stroke-width="12" stroke-linecap="round"></path>
+
+                <path class="stk" fill="#F26419" d="M 528,808 C 524,824 524,892 532,908 C 562,920 636,920 674,908 C 700,894 686,854 642,844 L 636,805 C 600,814 562,816 528,808 Z"></path>
+                <path d="M 642,844 L 614,852" stroke="#080808" stroke-width="12" stroke-linecap="round"></path>
+              </g>
+
+              <!-- 3. BADAN KUNING & PERUT -->
+              <g id="yellowBody">
+                <path class="stk" fill="#FFD21E" d="M 312,445 C 326,315 395,265 505,265 C 615,265 656,325 674,448 C 700,590 765,680 724,742 C 684,804 598,800 505,800 C 412,800 315,778 290,710 C 268,648 296,548 312,445 Z"></path>
+                <path class="stk" fill="#FFF24B" d="M 378,778 C 406,690 456,648 514,646 C 574,648 626,690 656,778 C 572,800 460,800 378,778 Z"></path>
+              </g>
+
+              <!-- 4. WAJAH -->
+              <g id="faceFeatures">
+                <g class="anim-eyes-blink">
+                  <circle class="stk-med" cx="454" cy="396" r="52" fill="#FFFFFF"></circle>
+                  <circle class="stk-med" cx="574" cy="396" r="52" fill="#FFFFFF"></circle>
+                  <g id="pupilsGroup" class="anim-pupils-auto">
+                    <circle cx="458" cy="396" r="32" fill="#080808"></circle>
+                    <circle cx="440" cy="384" r="11" fill="#FFFFFF"></circle>
+                    <circle cx="578" cy="396" r="32" fill="#080808"></circle>
+                    <circle cx="560" cy="384" r="11" fill="#FFFFFF"></circle>
                   </g>
-                </svg>
-              </div>
-        
-              <!-- Telemetry Live Bar -->
-              <div style="margin-top: 24px; width: 100%; max-width: 500px; background: var(--paper); border: 3px solid var(--ink); padding: 12px 16px; font-family: 'JetBrains Mono', monospace; font-size: 12px; display: flex; justify-content: space-between; box-shadow: 4px 4px 0 var(--ink);">
-                <div>Delta Mouse: <span id="telMouse">0, 0</span></div>
-                <div>Pupil: <span id="telPupil">0px, 0px</span></div>
-                <div>Kaca Tilt: <span id="telTilt">0°</span></div>
-              </div>
-            </div>
-        
-            <!-- 5 States Matrix Showcase -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 16px;">
-              <div class="nb-box" style="padding: 16px; display: flex; flex-direction: column; align-items: center; gap: 8px;">
-                <img src="./assets/mascot/jalanmin-detective-idle.svg" width="110" height="110" alt="Idle state">
-                <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 15px;">Idle</div>
-                <div style="font-size: 11px; text-align: center; color: #555;">Mengamati tenang, mata jelas & bebas</div>
-              </div>
-              <div class="nb-box" style="padding: 16px; display: flex; flex-direction: column; align-items: center; gap: 8px;">
-                <img src="./assets/mascot/jalanmin-detective-hover.svg" width="110" height="110" alt="Hover state">
-                <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 15px;">Hover</div>
-                <div style="font-size: 11px; text-align: center; color: #555;">Mengintip dekat & penasaran</div>
-              </div>
-              <div class="nb-box" style="padding: 16px; display: flex; flex-direction: column; align-items: center; gap: 8px;">
-                <img src="./assets/mascot/jalanmin-detective-happy.svg" width="110" height="110" alt="Happy state">
-                <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 15px;">Happy</div>
-                <div style="font-size: 11px; text-align: center; color: #555;">Eureka! Kasus terpecahkan!</div>
-              </div>
-              <div class="nb-box" style="padding: 16px; display: flex; flex-direction: column; align-items: center; gap: 8px;">
-                <img src="./assets/mascot/jalanmin-detective-neutral.svg" width="110" height="110" alt="Neutral state">
-                <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 15px;">Neutral</div>
-                <div style="font-size: 11px; text-align: center; color: #555;">Menganalisis data & petunjuk</div>
-              </div>
-              <div class="nb-box" style="padding: 16px; display: flex; flex-direction: column; align-items: center; gap: 8px;">
-                <img src="./assets/mascot/jalanmin-detective-encourage.svg" width="110" height="110" alt="Encourage state">
-                <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 15px;">Encourage</div>
-                <div style="font-size: 11px; text-align: center; color: #555;">Memberi dorongan semangat</div>
-              </div>
-            </div>
-        
-          </div>
-        
-          <script>
-            let currentState = 'idle';
-            const bodyGroup = document.getElementById('bodyGroup');
-            const hatGroup = document.getElementById('hatGroup');
-            const leftArmLine = document.getElementById('leftArmLine');
-            const leftHandCircle = document.getElementById('leftHandCircle');
-            const leftThumb = document.getElementById('leftThumb');
-            const rightArmLine = document.getElementById('rightArmLine');
-            const browLeft = document.getElementById('browLeft');
-            const browRight = document.getElementById('browRight');
-            const mouthGroup = document.getElementById('mouthGroup');
-            const pupilLeft = document.getElementById('pupilLeft');
-            const pupilRight = document.getElementById('pupilRight');
-            const magnifierGroup = document.getElementById('magnifierGroup');
-            const trackToggle = document.getElementById('trackToggle');
-            const mascotWrapper = document.getElementById('mascotWrapper');
-        
-            const telMouse = document.getElementById('telMouse');
-            const telPupil = document.getElementById('telPupil');
-            const telTilt = document.getElementById('telTilt');
-        
-            function setState(st, btn) {
-              currentState = st;
-              document.querySelectorAll('.nb-btn').forEach(b => b.classList.remove('active'));
-              if (btn) btn.classList.add('active');
-        
-              // Reset base animations
-              bodyGroup.className = st === 'happy' ? 'jm-jump' : (st === 'encourage' ? 'jm-pump' : 'jm-bob');
-              hatGroup.className = st === 'happy' ? 'jm-hat-happy' : 'jm-hat';
-        
-              // Left Arm variations
-              if (st === 'happy') {
-                leftArmLine.setAttribute('x1', '40'); leftArmLine.setAttribute('y1', '100');
-                leftArmLine.setAttribute('x2', '16'); leftArmLine.setAttribute('y2', '76');
-                leftHandCircle.setAttribute('cx', '14'); leftHandCircle.setAttribute('cy', '74');
-                leftThumb.style.display = 'none';
-        
-                rightArmLine.setAttribute('x1', '144'); rightArmLine.setAttribute('y1', '102');
-                rightArmLine.setAttribute('x2', '162'); rightArmLine.setAttribute('y2', '98');
-              } else if (st === 'encourage') {
-                leftArmLine.setAttribute('x1', '40'); leftArmLine.setAttribute('y1', '104');
-                leftArmLine.setAttribute('x2', '18'); leftArmLine.setAttribute('y2', '92');
-                leftHandCircle.setAttribute('cx', '16'); leftHandCircle.setAttribute('cy', '90');
-                leftThumb.style.display = 'block';
-        
-                rightArmLine.setAttribute('x1', '144'); rightArmLine.setAttribute('y1', '106');
-                rightArmLine.setAttribute('x2', '158'); rightArmLine.setAttribute('y2', '112');
-              } else {
-                leftArmLine.setAttribute('x1', '40'); leftArmLine.setAttribute('y1', '104');
-                leftArmLine.setAttribute('x2', '18'); leftArmLine.setAttribute('y2', '124');
-                leftHandCircle.setAttribute('cx', '16'); leftHandCircle.setAttribute('cy', '126');
-                leftThumb.style.display = 'none';
-        
-                rightArmLine.setAttribute('x1', '144'); rightArmLine.setAttribute('y1', '106');
-                rightArmLine.setAttribute('x2', '158'); rightArmLine.setAttribute('y2', '112');
-              }
-        
-              // Eyebrows
-              if (st === 'happy') {
-                browLeft.setAttribute('y1', '68'); browLeft.setAttribute('y2', '72');
-                browRight.setAttribute('x1', '106'); browRight.setAttribute('y1', '72');
-                browRight.setAttribute('x2', '126'); browRight.setAttribute('y2', '68');
-              } else if (st === 'neutral') {
-                browLeft.setAttribute('y1', '72'); browLeft.setAttribute('y2', '72');
-                browRight.setAttribute('x1', '106'); browRight.setAttribute('y1', '72');
-                browRight.setAttribute('x2', '126'); browRight.setAttribute('y2', '72');
-              } else if (st === 'encourage') {
-                browLeft.setAttribute('y1', '70'); browLeft.setAttribute('y2', '76');
-                browRight.setAttribute('x1', '106'); browRight.setAttribute('y1', '76');
-                browRight.setAttribute('x2', '128'); browRight.setAttribute('y2', '70');
-              } else {
-                browLeft.setAttribute('y1', '72'); browLeft.setAttribute('y2', '74');
-                browRight.setAttribute('x1', '106'); browRight.setAttribute('y1', '70');
-                browRight.setAttribute('x2', '126'); browRight.setAttribute('y2', '72');
-              }
-        
-              // Mouth
-              if (st === 'happy') {
-                mouthGroup.innerHTML = `
-                  <path d="M72 112 Q94 142 116 112 Z" fill="#0A0A0A" stroke="#0A0A0A" stroke-width="3" stroke-linejoin="round" />
-                  <path d="M84 124 Q94 118 104 124 Q94 132 84 124 Z" fill="#FF5C8A" />
-                `;
-              } else if (st === 'hover') {
-                mouthGroup.innerHTML = `
-                  <path d="M76 114 Q94 136 112 114" fill="#0A0A0A" stroke="#0A0A0A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M85 125 Q94 120 103 125 Q94 132 85 125 Z" fill="#FF5C8A" />
-                `;
-              } else if (st === 'neutral') {
-                mouthGroup.innerHTML = '<line x1="82" y1="118" x2="108" y2="118" stroke="#0A0A0A" stroke-width="5" stroke-linecap="round" />';
-              } else if (st === 'encourage') {
-                mouthGroup.innerHTML = '<path d="M76 118 Q94 130 114 112" stroke="#0A0A0A" stroke-width="5" fill="none" stroke-linecap="round" />';
-              } else {
-                mouthGroup.innerHTML = '<path d="M78 116 Q94 126 110 116" stroke="#0A0A0A" stroke-width="5" fill="none" stroke-linecap="round" />';
-              }
-            }
-        
-            // Mouse Tracking Logic
-            window.addEventListener('mousemove', (e) => {
-              if (!trackToggle.checked) return;
-        
-              const rect = mascotWrapper.getBoundingClientRect();
-              const cx = rect.left + rect.width / 2;
-              const cy = rect.top + rect.height / 2;
-        
-              const dx = e.clientX - cx;
-              const dy = e.clientY - cy;
-              const dist = Math.sqrt(dx * dx + dy * dy);
-        
-              const ux = dist > 0 ? dx / dist : 0;
-              const uy = dist > 0 ? dy / dist : 0;
-        
-              // Symmetrical pupil travel
-              const maxTravel = 5.0;
-              const travel = Math.min(maxTravel, dist / 40);
-        
-              const plx = (ux * travel).toFixed(1);
-              const ply = (uy * travel).toFixed(1);
-              const prx = (ux * travel).toFixed(1);
-              const pry = (uy * travel).toFixed(1);
-        
-              pupilLeft.style.transform = `translate(${plx}px, ${ply}px)`;
-              pupilRight.style.transform = `translate(${prx}px, ${pry}px)`;
-        
-              // Magnifier travel & tilt at side position
-              if (currentState !== 'happy') {
-                const gx = Math.max(-8, Math.min(8, ux * Math.min(8, dist / 32))).toFixed(1);
-                const gy = Math.max(-7, Math.min(7, uy * Math.min(7, dist / 35))).toFixed(1);
-                const rot = Math.max(-14, Math.min(14, dx / 40)).toFixed(1);
-                const scale = currentState === 'hover' ? 1.08 : 1.0;
-        
-                magnifierGroup.style.transform = `translate(${gx}px, ${gy}px) scale(${scale}) rotate(${rot}deg)`;
-                telTilt.textContent = `${rot}°`;
-              } else {
-                magnifierGroup.style.transform = 'translate(4px, -14px) rotate(-16deg)';
-                telTilt.textContent = '-16°';
-              }
-        
-              telMouse.textContent = `${Math.round(dx)}, ${Math.round(dy)}`;
-              telPupil.textContent = `${plx}px, ${ply}px`;
-            });
-          </script>
-        </body>
-        </html>
+                </g>
+
+                <g id="mouthGroup">
+                  <path class="stk-med" fill="#080808" d="M 490,454 C 502,460 526,460 538,454 C 548,450 552,466 542,478 C 528,492 500,492 486,478 C 476,466 480,450 490,454 Z"></path>
+                  <path d="M 495,474 C 506,466 522,466 533,474 C 526,485 502,485 495,474 Z" fill="#FF4B72"></path>
+                </g>
+              </g>
+
+              <!-- 5. TANGAN KIRI & MANTEL KIRI -->
+              <g id="leftArmGroup" class="anim-left-arm">
+                <path class="stk" fill="#FFD21E" d="M 230,638 C 198,678 202,732 242,746 C 270,755 290,736 294,718 C 308,728 322,718 320,698 C 318,680 306,660 292,648 Z"></path>
+              </g>
+              <g id="coatLeft">
+                <path class="stk" fill="#DE6C18" d="M 505,550 C 425,565 340,562 258,552 L 222,646 L 312,676 L 336,602 L 315,692 C 368,714 438,716 488,708 C 504,705 508,685 508,668 L 505,550 Z"></path>
+                <g clip-path="url(#clipCoatLeft)" fill="#FFD21E">
+                  <ellipse cx="256" cy="614" rx="10" ry="13" transform="rotate(18 256 614)"></ellipse>
+                  <ellipse cx="290" cy="574" rx="9" ry="12" transform="rotate(15 290 574)"></ellipse>
+                  <ellipse cx="298" cy="642" rx="9" ry="12" transform="rotate(-10 298 642)"></ellipse>
+                  <ellipse cx="372" cy="612" rx="10" ry="14" transform="rotate(18 372 612)"></ellipse>
+                  <ellipse cx="352" cy="676" rx="9" ry="13" transform="rotate(-14 352 676)"></ellipse>
+                  <ellipse cx="428" cy="582" rx="10" ry="13" transform="rotate(22 428 582)"></ellipse>
+                  <ellipse cx="436" cy="650" rx="10" ry="14" transform="rotate(12 436 650)"></ellipse>
+                  <ellipse cx="480" cy="610" rx="10" ry="13" transform="rotate(20 480 610)"></ellipse>
+                  <ellipse cx="476" cy="682" rx="10" ry="13" transform="rotate(24 476 682)"></ellipse>
+                </g>
+                <path class="stk" fill="none" d="M 505,550 C 425,565 340,562 258,552 L 222,646 L 312,676 L 336,602 L 315,692 C 368,714 438,716 488,708 C 504,705 508,685 508,668 L 505,550 Z"></path>
+              </g>
+
+              <!-- 6. KACA PEMBESAR & TANGAN KANAN -->
+              <g id="magnifierArmGroup" class="anim-magnifier-arm">
+                <path class="stk" fill="#FFD21E" d="M 718,478 L 762,412 C 776,392 802,394 812,416 L 832,492 L 774,536 Z"></path>
+                <g id="magnifyingGlass" transform="rotate(-15 780 275)">
+                  <rect class="stk" x="761" y="365" width="38" height="158" rx="19" fill="#9A4B1A"></rect>
+                  <circle class="stk" cx="780" cy="275" r="104" fill="#9A4B1A"></circle>
+                  <circle class="stk" cx="780" cy="275" r="78" fill="#FFFFFF"></circle>
+                  <path class="anim-glint" d="M 786,216 C 818,220 838,242 842,268" fill="none" stroke="#080808" stroke-width="13" stroke-linecap="round"></path>
+                </g>
+                <path class="stk" fill="#FFD21E" d="M 812,394 C 848,384 878,414 872,456 C 866,486 840,496 818,478 C 802,462 798,422 812,394 Z"></path>
+                <path class="stk" fill="#FFD21E" d="M 754,424 C 766,396 808,398 814,424 C 818,442 798,452 772,444"></path>
+
+                <g id="coatRight">
+                  <path class="stk" fill="#DE6C18" d="M 505,550 C 580,562 662,538 724,462 L 796,534 L 710,606 L 726,672 C 668,700 595,708 538,704 C 518,702 510,684 510,668 L 505,550 Z"></path>
+                  <g clip-path="url(#clipCoatRight)" fill="#FFD21E">
+                    <ellipse cx="552" cy="612" rx="10" ry="14" transform="rotate(-12 552 612)"></ellipse>
+                    <ellipse cx="564" cy="676" rx="10" ry="13" transform="rotate(14 564 676)"></ellipse>
+                    <ellipse cx="618" cy="638" rx="10" ry="14" transform="rotate(-8 618 638)"></ellipse>
+                    <ellipse cx="672" cy="604" rx="10" ry="13" transform="rotate(12 672 604)"></ellipse>
+                    <ellipse cx="688" cy="656" rx="10" ry="13" transform="rotate(-16 688 656)"></ellipse>
+                    <ellipse cx="704" cy="552" rx="9" ry="12" transform="rotate(-22 704 552)"></ellipse>
+                    <ellipse cx="730" cy="502" rx="9" ry="12" transform="rotate(-18 730 502)"></ellipse>
+                    <ellipse cx="756" cy="544" rx="9" ry="12" transform="rotate(15 756 544)"></ellipse>
+                  </g>
+                  <path class="stk" fill="none" d="M 505,550 C 580,562 662,538 724,462 L 796,534 L 710,606 L 726,672 C 668,700 595,708 538,704 C 518,702 510,684 510,668 L 505,550 Z"></path>
+                </g>
+              </g>
+
+              <!-- 7. KERAH & CAPELET -->
+              <g id="collarAndCapelet">
+                <path class="stk" fill="#8F4012" d="M 284,432 C 282,414 304,408 320,418 L 322,456 Z"></path>
+                <path class="stk" fill="#8F4012" d="M 692,422 C 694,406 674,400 660,410 L 658,448 Z"></path>
+                <path class="stk" fill="#FF7E26" d="M 284,492 C 226,528 190,584 176,648 C 218,582 288,566 378,582 C 442,592 484,580 505,550 C 425,550 338,530 284,492 Z"></path>
+                <path class="stk" fill="#FF7E26" d="M 505,550 C 548,590 628,588 674,552 C 702,530 718,494 724,462 C 690,478 638,518 505,550 Z"></path>
+                <path class="stk" fill="#D96B1B" d="M 284,432 C 314,458 368,476 436,482 C 464,485 476,496 484,518 L 498,550 C 412,552 332,534 290,498 L 284,432 Z"></path>
+                <path class="stk" fill="#D96B1B" d="M 692,422 C 664,448 614,468 564,476 C 538,480 526,492 520,516 L 512,550 C 594,548 660,530 688,490 L 692,422 Z"></path>
+              </g>
+
+              <!-- 8. TOPI DETEKTIF PINK -->
+              <g id="detectiveHat" class="anim-hat">
+                <path class="stk" fill="#FF4B72" d="M 318,314 C 282,340 264,368 272,384 C 280,398 312,394 330,368 C 336,350 332,328 318,314 Z"></path>
+                <path class="stk" fill="#FF4B72" d="M 312,318 C 308,192 388,120 490,122 C 578,124 620,192 624,264 C 535,258 415,280 312,318 Z"></path>
+                <path d="M 442,126 C 400,174 392,235 398,286" fill="none" stroke="#080808" stroke-width="14" stroke-linecap="round"></path>
+                <path class="stk" fill="#FF4B72" d="M 396,288 C 462,242 598,234 656,268 C 678,282 666,306 616,312 C 532,322 446,316 396,288 Z"></path>
+                <g class="anim-bow">
+                  <path class="stk" fill="#FF4B72" d="M 436,128 C 394,102 378,132 414,144 C 426,148 436,138 436,128 Z"></path>
+                  <path class="stk" fill="#FF4B72" d="M 440,126 C 448,88 484,78 480,112 C 478,126 458,132 440,126 Z"></path>
+                </g>
+              </g>
+
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Telemetry Live Bar -->
+      <div style="margin-top: 24px; width: 100%; max-width: 620px; background: var(--paper); border: 3px solid var(--ink); padding: 12px 16px; font-family: 'JetBrains Mono', monospace; font-size: 12px; display: flex; justify-content: space-between; box-shadow: 4px 4px 0 var(--ink); flex-wrap: wrap; gap: 8px;">
+        <div>Delta Mouse: <span id="telMouse">0, 0</span></div>
+        <div>Pupil: <span id="telPupil">0px, 0px</span></div>
+        <div>State: <span id="telState">idle</span></div>
+        <div>Speed: <span id="telSpeed">1.0x</span></div>
+      </div>
+    </div>
+
+    <!-- 5 States Matrix Showcase -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 16px;">
+      <div class="nb-box" style="padding: 16px; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+        <img src="./assets/mascot/jalanmin-detective-idle.svg" width="130" height="130" alt="Idle state">
+        <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 15px;">Idle</div>
+        <div style="font-size: 11px; text-align: center; color: #555;">Bernapas tenang, mata bulat berkedip &amp; melirik</div>
+      </div>
+      <div class="nb-box" style="padding: 16px; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+        <img src="./assets/mascot/jalanmin-detective-hover.svg" width="130" height="130" alt="Hover state">
+        <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 15px;">Hover</div>
+        <div style="font-size: 11px; text-align: center; color: #555;">Kaca pembesar aktif menyelidiki dekat</div>
+      </div>
+      <div class="nb-box" style="padding: 16px; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+        <img src="./assets/mascot/jalanmin-detective-happy.svg" width="130" height="130" alt="Happy state">
+        <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 15px;">Happy</div>
+        <div style="font-size: 11px; text-align: center; color: #555;">Melompat gembira, kasus terpecahkan!</div>
+      </div>
+      <div class="nb-box" style="padding: 16px; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+        <img src="./assets/mascot/jalanmin-detective-neutral.svg" width="130" height="130" alt="Neutral state">
+        <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 15px;">Neutral</div>
+        <div style="font-size: 11px; text-align: center; color: #555;">Fokus stabil menganalisis data</div>
+      </div>
+      <div class="nb-box" style="padding: 16px; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+        <img src="./assets/mascot/jalanmin-detective-encourage.svg" width="130" height="130" alt="Encourage state">
+        <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 15px;">Encourage</div>
+        <div style="font-size: 11px; text-align: center; color: #555;">Rasa percaya diri tinggi siap memandu</div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    let currentState = 'idle';
+    const detectiveSvg = document.getElementById('detectiveSvg');
+    const mainCharacterGroup = document.getElementById('mainCharacterGroup');
+    const magnifierArmGroup = document.getElementById('magnifierArmGroup');
+    const mouthGroup = document.getElementById('mouthGroup');
+    const pupilsGroup = document.getElementById('pupilsGroup');
+    const trackToggle = document.getElementById('trackToggle');
+    const mascotWrapper = document.getElementById('mascotWrapper');
+    const svgBgRect = document.getElementById('svgBgRect');
+
+    const telMouse = document.getElementById('telMouse');
+    const telPupil = document.getElementById('telPupil');
+    const telState = document.getElementById('telState');
+    const telSpeed = document.getElementById('telSpeed');
+
+    function toggleBg(chk) {
+      if (svgBgRect) {
+        svgBgRect.style.display = chk.checked ? 'block' : 'none';
+      }
+    }
+
+    function triggerAction(action) {
+      if (action === 'inspect') {
+        magnifierArmGroup.classList.remove('trigger-inspect');
+        void magnifierArmGroup.offsetWidth;
+        magnifierArmGroup.classList.add('trigger-inspect');
+      } else if (action === 'jump') {
+        mainCharacterGroup.classList.remove('trigger-jump');
+        void mainCharacterGroup.offsetWidth;
+        mainCharacterGroup.classList.add('trigger-jump');
+      }
+    }
+
+    function setState(st, btn) {
+      currentState = st;
+      document.querySelectorAll('.nb-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+
+      mainCharacterGroup.classList.remove('trigger-jump');
+      magnifierArmGroup.classList.remove('trigger-inspect');
+
+      if (st === 'happy') {
+        detectiveSvg.style.setProperty('--anim-speed', '1.25');
+        mainCharacterGroup.classList.add('trigger-jump');
+        telSpeed.textContent = '1.25x';
+        mouthGroup.innerHTML = `
+          <path class="stk-med" fill="#080808" d="M 482,452 C 498,460 530,460 546,452 C 558,446 564,468 550,484 C 532,504 496,504 478,484 C 464,468 470,446 482,452 Z"></path>
+          <path d="M 490,478 C 504,468 524,468 538,478 C 530,495 498,495 490,478 Z" fill="#FF4B72"></path>
+        `;
+      } else if (st === 'hover') {
+        detectiveSvg.style.setProperty('--anim-speed', '1.1');
+        magnifierArmGroup.classList.add('trigger-inspect');
+        telSpeed.textContent = '1.1x';
+        mouthGroup.innerHTML = `
+          <path class="stk-med" fill="#080808" d="M 490,454 C 502,460 526,460 538,454 C 548,450 552,466 542,478 C 528,492 500,492 486,478 C 476,466 480,450 490,454 Z"></path>
+          <path d="M 495,474 C 506,466 522,466 533,474 C 526,485 502,485 495,474 Z" fill="#FF4B72"></path>
+        `;
+      } else if (st === 'neutral') {
+        detectiveSvg.style.setProperty('--anim-speed', '0.8');
+        telSpeed.textContent = '0.8x';
+        mouthGroup.innerHTML = `
+          <path d="M 490,464 C 504,472 524,472 538,464" fill="none" stroke="#080808" stroke-width="11" stroke-linecap="round"></path>
+        `;
+      } else if (st === 'encourage') {
+        detectiveSvg.style.setProperty('--anim-speed', '1.3');
+        telSpeed.textContent = '1.3x';
+        mouthGroup.innerHTML = `
+          <path class="stk-med" fill="#080808" d="M 490,454 C 502,460 526,460 538,454 C 548,450 552,466 542,478 C 528,492 500,492 486,478 C 476,466 480,450 490,454 Z"></path>
+          <path d="M 495,474 C 506,466 522,466 533,474 C 526,485 502,485 495,474 Z" fill="#FF4B72"></path>
+        `;
+      } else {
+        detectiveSvg.style.setProperty('--anim-speed', '1');
+        telSpeed.textContent = '1.0x';
+        mouthGroup.innerHTML = `
+          <path class="stk-med" fill="#080808" d="M 490,454 C 502,460 526,460 538,454 C 548,450 552,466 542,478 C 528,492 500,492 486,478 C 476,466 480,450 490,454 Z"></path>
+          <path d="M 495,474 C 506,466 522,466 533,474 C 526,485 502,485 495,474 Z" fill="#FF4B72"></path>
+        `;
+      }
+
+      telState.textContent = st;
+    }
+
+    // Mouse Tracking Logic
+    let trackTimer;
+    window.addEventListener('mousemove', (e) => {
+      if (!trackToggle.checked || currentState === 'happy') return;
+
+      const rect = mascotWrapper.getBoundingClientRect();
+      const eyeX = rect.left + (514 / 1000) * rect.width;
+      const eyeY = rect.top + (396 / 1000) * rect.height;
+
+      const dx = e.clientX - eyeX;
+      const dy = e.clientY - eyeY;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+
+      const ux = dist > 0 ? dx / dist : 0;
+      const uy = dist > 0 ? dy / dist : 0;
+
+      // In 1000x1000 space, eye pupil max travel is 16px
+      const maxTravel = 16.0;
+      const travel = Math.min(maxTravel, dist / 18);
+
+      const plx = (ux * travel).toFixed(1);
+      const ply = (uy * travel).toFixed(1);
+
+      pupilsGroup.classList.remove('anim-pupils-auto');
+      pupilsGroup.style.transform = `translate(${plx}px, ${ply}px)`;
+
+      telMouse.textContent = `${Math.round(dx)}, ${Math.round(dy)}`;
+      telPupil.textContent = `${plx}px, ${ply}px`;
+
+      clearTimeout(trackTimer);
+      trackTimer = setTimeout(() => {
+        if (!pupilsGroup.classList.contains('anim-pupils-auto') && currentState !== 'happy') {
+          pupilsGroup.style.transform = 'translate(0px, 0px)';
+          pupilsGroup.classList.add('anim-pupils-auto');
+        }
+      }, 3500);
+    });
+  </script>
+</body>
+</html>

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Navbar } from "@/components/ui/Navbar";
 import { Footer } from "@/components/ui/Footer";
 import { Button } from "@/components/ui/Button";
+import { ArrowRight, ArrowLeft } from "lucide-react";
 import { getHttpStatusByCode } from "@/lib/http-status";
 import { HttpStatusViewer } from "@/components/features/HttpStatusViewer";
 import { JalanMin } from "@/components/mascot/JalanMin";
@@ -52,11 +53,13 @@ export default async function DynamicHttpStatusPage({
               Kode status HTTP yang kamu tuju belum terdaftar di katalog standar 3xx, 4xx, atau 5xx JalanITku.
             </p>
             <div className="pt-2 flex flex-wrap gap-3 justify-center">
-              <Button href="/status" variant="primary" size="md">
-                Buka Katalog Kode HTTP →
+              <Button href="/status" variant="primary" size="md" className="inline-flex items-center gap-1.5">
+                <span>Buka Katalog Kode HTTP</span>
+                <ArrowRight className="w-4 h-4 stroke-[2.5]" />
               </Button>
-              <Button href="/" variant="white" size="md">
-                Kembali ke Beranda
+              <Button href="/" variant="white" size="md" className="inline-flex items-center gap-1.5">
+                <ArrowLeft className="w-4 h-4 stroke-[2.5]" />
+                <span>Kembali ke Beranda</span>
               </Button>
             </div>
           </div>
@@ -73,8 +76,9 @@ export default async function DynamicHttpStatusPage({
 
       <main id="main-content" className="max-w-4xl mx-auto px-4 md:px-8 py-10 md:py-16 w-full space-y-6">
         <div className="flex items-center justify-between pb-2">
-          <Link href="/status" className="font-mono text-xs font-bold text-accent-blue hover:underline">
-            ← Kembali ke Pusat Kode HTTP
+          <Link href="/status" className="inline-flex items-center gap-1.5 font-mono text-xs font-bold text-accent-blue hover:underline">
+            <ArrowLeft className="w-3.5 h-3.5 stroke-[3]" />
+            Kembali ke Pusat Kode HTTP
           </Link>
           <span className="font-mono text-xs font-bold text-ink/60 uppercase">
             Standar Protokol IETF RFC

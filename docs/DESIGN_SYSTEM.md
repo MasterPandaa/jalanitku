@@ -19,6 +19,7 @@
 | `--orange` | `orange` | `#FF8A3D` | Peringatan ringan, aksen fitur |
 | `--purple` | `purple` | `#9B5CFF` | Aksen tambahan, variasi badge |
 | `--danger` | `danger` | `#FF3B3B` | Error, peringatan hapus/timpa hasil |
+| --cyan | cyan | #00F0FF | Aksen tersier, data point radar, badge saran karir |
 
 ### 1.2 Border & Hard Shadow
 | Token | Nilai CSS | Tailwind Utility / Custom Class |

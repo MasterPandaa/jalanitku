@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { JalanMin } from "@/components/mascot/JalanMin";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
@@ -42,11 +43,13 @@ export default function NotFound() {
 
         {/* Tombol Aksi */}
         <div className="pt-2 flex flex-col sm:flex-row items-center gap-3 w-full justify-center">
-          <Button href="/" variant="primary" size="md" className="w-full sm:w-auto">
-            ← Kembali ke Beranda
+          <Button href="/" variant="primary" size="md" className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5">
+            <ArrowLeft className="w-4 h-4 stroke-[2.5]" />
+            <span>Kembali ke Beranda</span>
           </Button>
-          <Button href="/status" variant="white" size="md" className="w-full sm:w-auto">
-            Pusat Kode HTTP (3xx/4xx/5xx) →
+          <Button href="/status" variant="white" size="md" className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5">
+            <span>Pusat Kode HTTP (3xx/4xx/5xx)</span>
+            <ArrowRight className="w-4 h-4 stroke-[2.5]" />
           </Button>
         </div>
       </div>

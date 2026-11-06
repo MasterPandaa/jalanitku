@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { Sparkles, ArrowRight, ArrowLeft } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { Badge } from "@/components/ui/Badge";
 import { Card } from "@/components/ui/Card";
@@ -26,15 +27,18 @@ export default function RolesGalleryPage() {
         <div className="flex flex-wrap items-center gap-4">
           <Link
             href="/dev/mascots"
-            className="nb-btn px-4 py-2 bg-accent-yellow border-3 border-ink font-display font-bold text-sm shadow-nb-sm hover:translate-x-[-2px] hover:translate-y-[-2px]"
+            className="nb-btn px-4 py-2 bg-accent-yellow border-3 border-ink font-display font-bold text-sm shadow-nb-sm hover:translate-x-[-2px] hover:translate-y-[-2px] inline-flex items-center gap-2"
           >
-            🎭 Galeri Maskot (Batch 1) →
+            <Sparkles className="w-4 h-4 stroke-[2.5]" />
+            <span>Galeri Maskot (Batch 1)</span>
+            <ArrowRight className="w-4 h-4 stroke-[2.5]" />
           </Link>
           <Link
             href="/dev/components"
-            className="nb-btn px-4 py-2 bg-surface border-3 border-ink font-display font-bold text-sm shadow-nb-sm"
+            className="nb-btn px-4 py-2 bg-surface border-3 border-ink font-display font-bold text-sm shadow-nb-sm inline-flex items-center gap-2"
           >
-            ← Galeri Komponen
+            <ArrowLeft className="w-4 h-4 stroke-[2.5]" />
+            <span>Galeri Komponen</span>
           </Link>
           <Logo size="md" />
         </div>
@@ -54,7 +58,7 @@ export default function RolesGalleryPage() {
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <span
-                    className="border-2 border-ink px-2.5 py-0.5 font-mono text-xs font-bold uppercase shadow-[2px_2px_0_#0A0A0A]"
+                    className="border-2 border-ink px-2.5 py-0.5 font-mono text-xs font-bold uppercase text-ink shadow-[2px_2px_0_#0A0A0A]"
                     style={{ backgroundColor: role.warna }}
                   >
                     Role #{role.urutan}

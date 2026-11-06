@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { RoleMascot } from "@/components/mascot/RoleMascot";
 import { CareerResult } from "@/lib/karir";
+import { Download, Share2, AlertCircle, X, Lightbulb, Check } from "lucide-react";
 
 export interface JalanIDCardProps {
   data: CareerResult;
@@ -126,7 +127,6 @@ export function JalanIDCard({ data, showActions = true }: JalanIDCardProps) {
       {/* Neo-brutalism Digital Identity Card */}
       <div
         ref={cardRef}
-        style={{ borderColor: "#0A0A0A" }}
         className="w-full max-w-xl bg-surface border-4 md:border-5 border-ink shadow-nb-lg p-6 md:p-8 flex flex-col justify-between gap-6 relative overflow-hidden"
       >
         {/* Top Header Row */}
@@ -134,7 +134,7 @@ export function JalanIDCard({ data, showActions = true }: JalanIDCardProps) {
           <Logo size="sm" />
           <div className="flex items-center gap-2">
             <span
-              className="px-2.5 py-0.5 border-2 border-ink font-heading text-xs uppercase shadow-[2px_2px_0_#0A0A0A]"
+              className="px-2.5 py-0.5 border-2 border-ink font-heading text-xs uppercase text-ink shadow-[2px_2px_0_#0A0A0A]"
               style={{ backgroundColor: data.top_role.color }}
             >
               JalanID
@@ -144,7 +144,7 @@ export function JalanIDCard({ data, showActions = true }: JalanIDCardProps) {
         </div>
 
         {/* User Identity & Top Role */}
-        <div className="flex items-center gap-5">
+        <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 sm:gap-5">
           {/* Official Role Mascot */}
           <div className="relative flex-none">
             <div
@@ -159,8 +159,8 @@ export function JalanIDCard({ data, showActions = true }: JalanIDCardProps) {
             </div>
           </div>
 
-          <div className="flex-1 min-w-0">
-            <div className="flex items-center gap-2 mb-1 flex-wrap">
+          <div className="flex-1 min-w-0 w-full">
+            <div className="flex items-center justify-center sm:justify-start gap-2 mb-1 flex-wrap">
               <span className="font-mono text-xs md:text-sm font-bold text-ink/75">@{data.username}</span>
               {data.top_role.julukan && (
                 <span className="inline-block bg-accent-yellow text-ink border-2 border-ink px-2 py-0.5 font-mono text-[11px] font-black uppercase shadow-nb-sm">
@@ -168,7 +168,7 @@ export function JalanIDCard({ data, showActions = true }: JalanIDCardProps) {
                 </span>
               )}
             </div>
-            <h2 className="font-heading text-2xl md:text-4xl text-ink leading-tight line-clamp-2">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl text-ink leading-tight line-clamp-2">
               {data.top_role.name}
             </h2>
             <p className="font-sans text-xs md:text-sm font-medium text-ink/80 mt-1 italic line-clamp-2">
@@ -226,17 +226,20 @@ export function JalanIDCard({ data, showActions = true }: JalanIDCardProps) {
         <div className="w-full max-w-xl flex flex-col gap-3">
           {downloadError && (
             <div
-              className="bg-red-50 border-3 border-accent-danger p-3 font-mono text-xs text-accent-danger font-bold flex items-center justify-between shadow-nb-sm animate-fadeIn"
+              className="bg-accent-danger/10 border-3 border-accent-danger p-3 font-mono text-xs text-accent-danger font-bold flex items-center justify-between shadow-nb-sm animate-fadeIn"
               role="alert"
             >
-              <span>⚠️ {downloadError}</span>
+              <div className="flex items-center gap-2">
+                <AlertCircle className="w-4 h-4 stroke-[2.5] flex-none" />
+                <span>{downloadError}</span>
+              </div>
               <button
                 type="button"
                 onClick={() => setDownloadError("")}
-                className="text-ink font-bold hover:underline cursor-pointer ml-2"
+                className="p-1 hover:bg-accent-danger/20 transition-colors cursor-pointer ml-2 text-ink"
                 aria-label="Tutup pesan error"
               >
-                ✕
+                <X className="w-4 h-4 stroke-[2.5]" />
               </button>
             </div>
           )}
@@ -247,24 +250,30 @@ export function JalanIDCard({ data, showActions = true }: JalanIDCardProps) {
               size="sm"
               disabled={downloading}
               onClick={() => handleDownloadImage("card")}
+              className="inline-flex items-center justify-center gap-1.5"
             >
-              Unduh Kartu (PNG)
+              <Download className="w-3.5 h-3.5 stroke-[2.5]" />
+              <span>Unduh Kartu</span>
             </Button>
             <Button
               variant="white"
               size="sm"
               disabled={downloading}
               onClick={() => handleDownloadImage("square")}
+              className="inline-flex items-center justify-center gap-1.5"
             >
-              Format 1:1 (Medsos)
+              <Download className="w-3.5 h-3.5 stroke-[2.5]" />
+              <span>Format 1:1 (Feed)</span>
             </Button>
             <Button
               variant="white"
               size="sm"
               disabled={downloading}
               onClick={() => handleDownloadImage("story")}
+              className="inline-flex items-center justify-center gap-1.5"
             >
-              Format 9:16 (Story)
+              <Download className="w-3.5 h-3.5 stroke-[2.5]" />
+              <span>Format 9:16 (Story)</span>
             </Button>
           </div>
 
@@ -276,15 +285,19 @@ export function JalanIDCard({ data, showActions = true }: JalanIDCardProps) {
               onClick={handleWebShare}
               className="flex items-center justify-center gap-2"
             >
-              <span>📤</span>
+              {shareSuccess ? (
+                <Check className="w-4 h-4 stroke-[3]" />
+              ) : (
+                <Share2 className="w-4 h-4 stroke-[2.5]" />
+              )}
               <span>{shareSuccess ? "Berhasil Dibagikan!" : "Bagikan Gambar Kartu"}</span>
             </Button>
           </div>
 
-          <p className="font-mono text-xs text-ink/60 text-center">
-            💡 Kartu disimpan sebagai file gambar di perangkatmu. JalanITku tidak memiliki halaman
-            profil publik demi menjaga privasimu.
-          </p>
+          <div className="font-mono text-xs text-ink/70 flex items-center justify-center gap-1.5 text-center">
+            <Lightbulb className="w-3.5 h-3.5 stroke-[2.5] text-accent-yellow flex-none" />
+            <span>Kartu disimpan sebagai file gambar di perangkatmu demi menjaga privasimu.</span>
+          </div>
         </div>
       )}
     </div>
